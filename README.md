@@ -2,10 +2,10 @@
 
 ## Project information
 
--   Project name: [Project name]
--   Project description: [Project description]
--   Technology used: Nextjs, TailwindCSS, i18next, Husky, Prettier, Eslint, Commitlinter (Conventional Commits)
--   Team members: Member1, Member2, etc,
+-   Project name: [Student Store]
+-   Project description: [Student marketplace for affordable, second hand products.]
+-   Technology used: Nextjs, TailwindCSS, i18next, Husky, Prettier, Eslint, Commitlinter (Conventional Commits), Storybooks
+-   Team members: Abdulrahman Abdullah, Abobakr Mahdi, Marwan Bazghifan, Mohammed Al-Qershi, Nabil Al Ashbat
 -   Bootcamp: GIZ YE 2022
 
 ## Installation
