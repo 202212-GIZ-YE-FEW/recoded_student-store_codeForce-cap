@@ -61,7 +61,7 @@ module.exports = {
             "^\\.\\./\\.\\./\\.\\./?$",
             "^\\.\\./\\.\\./\\.\\.(?!/?$)",
           ],
-          // other that didnt fit in
+          // other that didn't fit in
           ["^"],
         ],
       },
