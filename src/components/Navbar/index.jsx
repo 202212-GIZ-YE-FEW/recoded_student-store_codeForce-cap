@@ -1,7 +1,7 @@
 export default function Navbar() {
   return (
     <>
-      <nav>Navbar</nav>
+      <nav className=' hover:text-teal-300'>Navbar</nav>
     </>
   )
 }
