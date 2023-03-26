@@ -8,7 +8,7 @@ module.exports = {
   plugins: ["simple-import-sort", "unused-imports"],
   extends: ["eslint:recommended", "next", "next/core-web-vitals", "prettier"],
   rules: {
-    "no-unused-vars": "off",
+    "no-unused-vars": [1, { args: "after-used", argsIgnorePattern: "^_" }],
     "no-console": "warn",
 
     "react/display-name": "off",
@@ -71,8 +71,5 @@ module.exports = {
   globals: {
     React: true,
     JSX: true,
-  },
-  rules: {
-    "no-unused-vars": [1, { args: "after-used", argsIgnorePattern: "^_" }],
   },
 }
