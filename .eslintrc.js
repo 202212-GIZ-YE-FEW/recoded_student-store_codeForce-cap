@@ -72,4 +72,7 @@ module.exports = {
         React: true,
         JSX: true,
     },
+    rules: {
+        "no-unused-vars": [1, { args: "after-used", argsIgnorePattern: "^_" }],
+    },
 };

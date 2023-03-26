@@ -1,7 +1,15 @@
 {
-    "name": "nextjs",
+    "name": "codeforce-students-store",
+    "author": "CodeForce Team",
+    "description": "Student marketplace for affordable, second hand products.",
     "version": "0.1.0",
+    "license": "MIT",
+    "homepage": "recoded_student-store_codeForce-cap",
     "private": true,
+    "engines": {
+        "node": ">=14.0.0",
+        "npm": ">=7.0.0"
+    },
     "scripts": {
         "dev": "next dev",
         "build": "next build",
@@ -9,14 +17,15 @@
         "lint": "next lint",
         "lint:fix": "eslint src --fix && npm run format",
         "lint:strict": "eslint src",
+        "prettier": "prettier --write .",
+        "prepare": "husky install",
         "test:watch": "jest --watch",
         "test": "jest --passWithNoTests",
         "format": "prettier -w .",
         "format:check": "prettier -c .",
         "release": "standard-version",
         "push-release": "git push --follow-tags origin main",
-        "postbuild": "next-sitemap --config next-sitemap.config.js",
-        "prepare": "husky install"
+        "postbuild": "next-sitemap --config next-sitemap.config.js"
     },
     "dependencies": {
         "clsx": "^1.2.1",
