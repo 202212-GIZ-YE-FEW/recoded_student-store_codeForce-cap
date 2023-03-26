@@ -1,10 +1,41 @@
 {
-    "css.validate": false,
-    "editor.formatOnSave": true,
-    "editor.tabSize": 2,
-    "editor.codeActionsOnSave": {
-        "source.fixAll": true
-    },
-    "headwind.runOnSave": false,
-    "typescript.preferences.importModuleSpecifier": "non-relative"
+  "css.validate": false,
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "editor.formatOnSave": true,
+  "editor.tabSize": 2,
+  "editor.codeActionsOnSave": {
+    "source.fixAll": true,
+    "source.organizeImports": true,
+    "source.addMissingImports": true
+  },
+  "headwind.runOnSave": false,
+  "typescript.preferences.importModuleSpecifier": "non-relative",
+  "cSpell.words": [
+    "codeforce",
+    "commitlint",
+    "datacentres",
+    "devs",
+    "nextauth",
+    "nextjs",
+    "npmrc",
+    "prettierignore",
+    "prettierrc",
+    "regexes",
+    "rgba",
+    "scaleable",
+    "signin",
+    "Supabase",
+    "superpowered",
+    "tailwindcss",
+    "typeof",
+    "typesafe",
+    "unoptimized",
+    "userinfo",
+    "Vercel",
+    "Viewports",
+    "WEBP",
+    "clsx",
+    "svgr",
+    "postbuild"
+  ]
 }
