@@ -1,8 +1,9 @@
+import Link from "next/link"
 import { useTranslation } from "next-i18next"
 import { serverSideTranslations } from "next-i18next/serverSideTranslations"
-import Link from "next/link"
 
 import Navbar from "@/components/Navbar"
+
 import Layout from "@/layout/Layout"
 
 export default function HomePage() {
