@@ -3,6 +3,7 @@ import { useTranslation } from "next-i18next"
 import { serverSideTranslations } from "next-i18next/serverSideTranslations"
 
 import Navbar from "@/components/Navbar"
+import ProductList from "@/components/ProductList"
 
 import Layout from "@/layout/Layout"
 
@@ -21,6 +22,7 @@ export default function HomePage() {
           العربية
         </Link>
       </div>
+      <ProductList />
     </Layout>
   )
 }
