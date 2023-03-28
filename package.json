@@ -34,6 +34,7 @@
     "date-fns": "^2.29.1",
     "eslint-plugin-jest": "^26.6.0",
     "i18next": "^21.9.0",
+    "keen-slider": "^6.8.5",
     "next": "^13.2.4",
     "next-i18next": "^11.2.2",
     "react": "^18.2.0",

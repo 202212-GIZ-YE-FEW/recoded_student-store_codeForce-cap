@@ -1,16 +1,17 @@
-import Link from "next/link"
 import { useTranslation } from "next-i18next"
 import { serverSideTranslations } from "next-i18next/serverSideTranslations"
+import Link from "next/link"
 
+import Hero from "@/components/hero/Hero"
 import Navbar from "@/components/Navbar"
 
-import Layout from "@/layout/Layout"
+import RootLayout from "@/layout/root/RootLayout"
 
 export default function HomePage() {
   const { t } = useTranslation("common")
 
   return (
-    <Layout>
+    <RootLayout>
       <Navbar />
       <p>{t("test")}</p>
       <div style={{ display: "flex", flexDirection: "row", gap: "20px" }}>
@@ -21,7 +22,10 @@ export default function HomePage() {
           العربية
         </Link>
       </div>
-    </Layout>
+      <div>
+        <Hero />
+      </div>
+    </RootLayout>
   )
 }
 
