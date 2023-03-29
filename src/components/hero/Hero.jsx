@@ -1,8 +1,11 @@
 import { useKeenSlider } from "keen-slider/react"
+import Image from "next/image"
 import { useState } from "react"
 
 import "keen-slider/keen-slider.min.css"
 import "./Hero.module.css"
+
+import { SectionWrapper } from "@/hoc"
 
 const images = [
   "https://images.unsplash.com/photo-1590004953392-5aba2e72269a?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&h=500&w=800&q=80",
@@ -11,8 +14,7 @@ const images = [
   "https://images.unsplash.com/photo-1590005176489-db2e714711fc?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&h=500&w=800&q=80",
 ]
 
-export default function Hero() {
-  const [isLoading, setIsLoading] = useState(true)
+function Hero() {
   const [details, setDetails] = useState(null)
 
   const [sliderRef] = useKeenSlider(
@@ -66,23 +68,37 @@ export default function Hero() {
     }
   }
 
-  // if (isLoading) {
-  //   return <div>Loading...</div>
-  // }
-
   return (
     <>
-      <div className='container mx-auto justify-center items-center px-10'>
-        <div ref={sliderRef} className='keen-slider zoom-out'>
+      <div className=''>
+        <div ref={sliderRef} className='keen-slider zoom-out px-15'>
           {images.map((src, idx) => (
-            <div key={idx} className='keen-slider__slide zoom-out__slide'>
-              <div style={scaleStyle(idx)}>
-                <img src={src} className='w-full h-full object-cover' />
+            <div
+              key={idx}
+              className='keen-slider__slide absolute w-full h-full'
+            >
+              <div style={scaleStyle(idx)} className='mx-10'>
+                <Image
+                  src={src}
+                  width={1123}
+                  height={500}
+                  alt='...'
+                  className=' w-full h-full object-cover bg-transparent'
+                />
               </div>
             </div>
           ))}
         </div>
       </div>
+      <style jsx>
+        {`
+          .zoom-out {
+            perspective: 1000px;
+            height: 520px;
+          }
+        `}
+      </style>
     </>
   )
 }
+export default SectionWrapper(Hero)
