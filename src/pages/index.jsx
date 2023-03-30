@@ -4,6 +4,7 @@ import Link from "next/link"
 
 import Navbar from "@/components/Navbar"
 import Layout from "@/layout/Layout"
+import Footer from "@/components/Footer"
 
 export default function HomePage() {
   const { t } = useTranslation("common")
@@ -20,6 +21,7 @@ export default function HomePage() {
           العربية
         </Link>
       </div>
+      <Footer />
     </Layout>
   )
 }
