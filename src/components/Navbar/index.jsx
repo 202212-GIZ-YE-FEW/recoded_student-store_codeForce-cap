@@ -9,6 +9,8 @@ import { RxHamburgerMenu } from "react-icons/rx"
 import { TbArrowBadgeDown } from "react-icons/tb"
 import { TfiWorld } from "react-icons/tfi"
 
+import "./Navbar.module.css"
+
 import Logo from "./Logo"
 export default function Navbar() {
   const [languages, setLanguages] = useState(false)
@@ -83,7 +85,7 @@ export default function Navbar() {
           <input
             type='text'
             placeholder='search here'
-            className='search w-full text-sm  placeholder:text-gray-300 placeholder:capitalize text-gray-600'
+            className='input search w-full text-sm  placeholder:text-gray-300 placeholder:capitalize text-gray-600'
           />
           <div className=''>
             <AiOutlineSearch />
