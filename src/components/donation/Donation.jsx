@@ -11,11 +11,11 @@ export default function Donation() {
           height={524}
         ></Image>
       </div>
-      <div className='mt-14 flex max-w-4xl flex-col items-center gap-12'>
+      <div className='flex flex-col mt-14 max-w-[722px] items-center gap-12'>
         <div className='h-12 text-center text-_primary text-5xl font-bold'>
           <h2>Why Donate?</h2>
         </div>
-        <p className='text-_secondary p-3 text-4xl leading-loose'>
+        <p className='text-_secondary p-3 text-4xl leading-relaxed text-center'>
           Life is busy, and it can sometimes be easy to forget to show your
           gratitude for all that you’ve been given. Students have low budgets
           and they’re in need of financial support. When you are ready to give
@@ -30,7 +30,7 @@ export default function Donation() {
       </div>
 
       <div className='flexing flex flex-row flex-wrap items-center justify-around gap-12 p-10'>
-        <div className='donationCard donationCardPhone mt-8 flex h-64 w-72 flex-col justify-center rounded-lg bg-white shadow-lg '>
+        <div className='mt-8 flex h-64 w-72 flex-col justify-center rounded-lg bg-white shadow-lg'>
           <div className='flex flex-col items-center p-10 '>
             <span className='text-xl font-semibold'>Help</span>
             <div className='flex items-center'>
@@ -44,7 +44,7 @@ export default function Donation() {
             </button>
           </div>
         </div>
-        <div className='  donationCard donationCardPhone mt-8 flex h-72 w-72 flex-col justify-center rounded-lg bg-white shadow-lg '>
+        <div className='mt-8 flex h-72 w-72 flex-col justify-center rounded-lg bg-white shadow-lg '>
           <div className='flex flex-col items-center p-10 '>
             <span className='text-xl font-semibold'>Some Help</span>
             <div className='flex items-center'>
