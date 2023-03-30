@@ -11,13 +11,16 @@
   "headwind.runOnSave": false,
   "typescript.preferences.importModuleSpecifier": "non-relative",
   "cSpell.words": [
+    "clsx",
     "codeforce",
     "commitlint",
     "datacentres",
     "devs",
+    "extralight",
     "nextauth",
     "nextjs",
     "npmrc",
+    "postbuild",
     "prettierignore",
     "prettierrc",
     "regexes",
@@ -26,6 +29,7 @@
     "signin",
     "Supabase",
     "superpowered",
+    "svgr",
     "tailwindcss",
     "typeof",
     "typesafe",
@@ -33,9 +37,6 @@
     "userinfo",
     "Vercel",
     "Viewports",
-    "WEBP",
-    "clsx",
-    "svgr",
-    "postbuild"
+    "WEBP"
   ]
 }

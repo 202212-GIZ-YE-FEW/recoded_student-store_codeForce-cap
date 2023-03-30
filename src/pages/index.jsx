@@ -4,6 +4,7 @@ import { serverSideTranslations } from "next-i18next/serverSideTranslations"
 
 import Hero from "@/components/hero/Hero"
 import Navbar from "@/components/Navbar"
+import ProductList from "@/components/ProductList"
 
 import RootLayout from "@/layout/root/RootLayout"
 
@@ -27,6 +28,7 @@ export default function HomePage() {
       </RootLayout>
       <Hero />
     </>
+
   )
 }
 
