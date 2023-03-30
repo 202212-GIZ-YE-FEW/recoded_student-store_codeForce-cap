@@ -35,9 +35,7 @@ exports[`renders correctly 1`] = `
         Two-wheeler
       </button>
     </div>
-    <div
-      className=""
-    >
+    <div>
       <div
         className="carts grid xl:grid-cols-4 lg:grid-cols-4 md:grid-cols-2 sm:grid-cols-1 m-auto w-full"
       >
