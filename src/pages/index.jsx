@@ -1,25 +1,32 @@
-import Link from "next/link"
 import { useTranslation } from "next-i18next"
 import { serverSideTranslations } from "next-i18next/serverSideTranslations"
+import Link from "next/link"
+
+import Hero from "@/components/hero/Hero"
 import Navbar from "@/components/Navbar"
-import Layout from "@/layout/Layout"
+
+import RootLayout from "@/layout/root/RootLayout"
 
 export default function HomePage() {
   const { t } = useTranslation("common")
 
   return (
-    <Layout>
-      <Navbar />
-      <p>{t("test")}</p>
-      <div style={{ display: "flex", flexDirection: "row", gap: "20px" }}>
-        <Link href='/' locale='en'>
-          English
-        </Link>
-        <Link href='/' locale='ar'>
-          العربية
-        </Link>
-      </div>
-    </Layout>
+    <>
+      <RootLayout>
+        <Navbar />
+
+        <p>{t("test")}</p>
+        <div style={{ display: "flex", flexDirection: "row", gap: "20px" }}>
+          <Link href='/' locale='en'>
+            English
+          </Link>
+          <Link href='/' locale='ar'>
+            العربية
+          </Link>
+        </div>
+      </RootLayout>
+      <Hero />
+    </>
   )
 }
 
