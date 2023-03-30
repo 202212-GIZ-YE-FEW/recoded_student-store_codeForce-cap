@@ -5,7 +5,7 @@ export default function Footer() {
   return (
     <>
       <footer>
-        <div className='static lg:flex lg:justify-evenly bg-[#32314C] w-full h-full break-all mt-auto pb-32'>
+        <div className='relative lg:flex lg:justify-evenly bg-[#32314C] w-full h-full break-all mt-auto pb-32'>
           {/* Logo Section */}
           <div className='ml-5 pt-5'>
             <Link href='/'>
@@ -16,7 +16,7 @@ export default function Footer() {
                 alt='logo'
               />
             </Link>
-            <div className='absolute bottom-16 left-10 lg:left-40 lg:bottom-44'>
+            <div className='absolute bottom-16 left-5 lg:left-40 lg:bottom-1'>
               <a href='#'>
                 <Image
                   src='play-google.svg'

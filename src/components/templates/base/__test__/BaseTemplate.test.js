@@ -1,8 +1,8 @@
 import renderer from "react-test-renderer"
 
-import Navbar from ".."
+import BaseTemplate from "../BaseTemplate"
 
 it("renders correctly", () => {
-  const tree = renderer.create(Navbar).toJSON()
+  const tree = renderer.create(<BaseTemplate />).toJSON()
   expect(tree).toMatchSnapshot()
 })

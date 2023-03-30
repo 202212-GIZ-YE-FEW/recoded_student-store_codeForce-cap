@@ -1,8 +1,8 @@
 import renderer from "react-test-renderer"
 
-import Navbar from ".."
+import ProductList from "../index"
 
 it("renders correctly", () => {
-  const tree = renderer.create(Navbar).toJSON()
+  const tree = renderer.create(<ProductList />).toJSON()
   expect(tree).toMatchSnapshot()
 })
