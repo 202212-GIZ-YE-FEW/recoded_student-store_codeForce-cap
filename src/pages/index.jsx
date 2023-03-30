@@ -4,7 +4,7 @@ import { serverSideTranslations } from "next-i18next/serverSideTranslations"
 
 import Hero from "@/components/hero/Hero"
 import Navbar from "@/components/Navbar"
-import ProductList from "@/components/ProductList"
+import ProductFilter from "@/components/ProductFilter"
 
 import RootLayout from "@/layout/root/RootLayout"
 
@@ -25,10 +25,10 @@ export default function HomePage() {
             العربية
           </Link>
         </div>
+        <Hero />
+        <ProductFilter />
       </RootLayout>
-      <Hero />
     </>
-
   )
 }
 
