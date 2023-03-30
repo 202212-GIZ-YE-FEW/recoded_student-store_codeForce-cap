@@ -2,7 +2,7 @@ import Image from "next/image"
 //import Link from "next/link";
 export default function Donation() {
   return (
-    <div className='flex max-w-[1440px] flex-row flex-wrap items-center justify-around font-Poppins'>
+    <div className='flex flex-col items-center justify-center font-poppins'>
       <div className=' border-4 '>
         <Image
           src='/images/unsplash_1.jpg'
@@ -11,9 +11,24 @@ export default function Donation() {
           height={524}
         ></Image>
       </div>
-      <div className='text-center text-4xl font-bold text-purple-500/75'>
+      <div className='mt-14 flex max-w-4xl flex-col items-center gap-12'>
+        <div className='h-12 text-center text-_primary text-5xl font-bold'>
+          <h2>Why Donate?</h2>
+        </div>
+        <p className='text-_secondary p-3 text-4xl leading-loose'>
+          Life is busy, and it can sometimes be easy to forget to show your
+          gratitude for all that you’ve been given. Students have low budgets
+          and they’re in need of financial support. When you are ready to give
+          and are researching groups of people to support, this can remind us of
+          all that we have, and the act of donating to charity is a way to
+          express our feelings gratitude. Inspire others to give by posting your
+          kind action on social media to inspire others to give generously.
+        </p>
+      </div>
+      <div className='mt-14 text-center text-5xl font-bold text-_primary'>
         <h2>Make a Difference by Donating!</h2>
       </div>
+
       <div className='flexing flex flex-row flex-wrap items-center justify-around gap-12 p-10'>
         <div className='donationCard donationCardPhone mt-8 flex h-64 w-72 flex-col justify-center rounded-lg bg-white shadow-lg '>
           <div className='flex flex-col items-center p-10 '>
@@ -57,20 +72,6 @@ export default function Donation() {
             </button>
           </div>
         </div>
-      </div>
-      <div className='mb-36 flex max-w-4xl flex-col items-center gap-12'>
-        <div className='h-12  w-72 text-4xl font-bold  text-purple'>
-          <h2>Why Donate?</h2>
-        </div>
-        <p className='p-3 text-2xl leading-loose'>
-          Life is busy, and it can sometimes be easy to forget to show your
-          gratitude for all that you’ve been given. Students have low budgets
-          and they’re in need of financial support. When you are ready to give
-          and are researching groups of people to support, this can remind us of
-          all that we have, and the act of donating to charity is a way to
-          express our feelings gratitude. Inspire others to give by posting your
-          kind action on social media to inspire others to give generously.
-        </p>
       </div>
     </div>
   )
