@@ -15,25 +15,25 @@ exports[`renders correctly 1`] = `
         All
       </button>
       <button
-        className="filter-Books"
+        className="filter Books"
         onClick={[Function]}
       >
         Books
       </button>
       <button
-        className="filter-Furniture"
+        className="filter Furniture"
         onClick={[Function]}
       >
         Furniture
       </button>
       <button
-        className="filter-Electronics"
+        className="filter Electronics"
         onClick={[Function]}
       >
         Electronics
       </button>
       <button
-        className="filter-Two-wheeler"
+        className="filter Two-wheeler"
         onClick={[Function]}
       >
         Two-wheeler

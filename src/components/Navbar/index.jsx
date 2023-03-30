@@ -9,7 +9,7 @@ import { RxHamburgerMenu } from "react-icons/rx"
 import { TbArrowBadgeDown } from "react-icons/tb"
 import { TfiWorld } from "react-icons/tfi"
 
-import "./Navbar.module.css"
+import styles from "./Navbar.module.css"
 
 import Logo from "./Logo"
 export default function Navbar() {
@@ -18,7 +18,7 @@ export default function Navbar() {
 
   return (
     <div
-      className={`navbar  m-auto px-10 md:flex md:flex-row py-4 justify-between gap-5 items-center bg-white transition-all 
+      className={`${styles.navbar} m-auto px-10 md:flex md:flex-row py-4 justify-between gap-5 items-center bg-white transition-all 
       `}
     >
       <Logo />
@@ -85,7 +85,7 @@ export default function Navbar() {
           <input
             type='text'
             placeholder='search here'
-            className='input search w-full text-sm  placeholder:text-gray-300 placeholder:capitalize text-gray-600'
+            className={`${styles.input} ${styles.search} w-full text-sm  placeholder:text-gray-300 placeholder:capitalize text-gray-600`}
           />
           <div className=''>
             <AiOutlineSearch />
@@ -103,7 +103,7 @@ export default function Navbar() {
           <div className='relative'>
             <div
               className={`absolute left-[-100px] top-5 bg-white capitalize ${
-                languages ? "show" : "hidden"
+                languages ? `${styles.show}` : "hidden"
               }`}
             >
               <div className='my-2 px-5 py-2 hover:bg-gray-200 transition-all duration-500'>

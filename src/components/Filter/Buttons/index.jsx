@@ -1,7 +1,9 @@
+import styles from "@/components/Filter/Buttons/Buttons.module.css"
+
 export default function Buttons({ filters = [], handleFilterClick }) {
   const FilterButton = ({ filter }) => (
     <button
-      className={`filter-${filter}`}
+      className={`${styles.filter} ${styles[filter]}`}
       onClick={() => handleFilterClick(filter)}
     >
       {filter}
