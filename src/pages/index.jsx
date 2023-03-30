@@ -2,9 +2,11 @@ import { useTranslation } from "next-i18next"
 import { serverSideTranslations } from "next-i18next/serverSideTranslations"
 import Link from "next/link"
 
+import Donation from "@/components/donation"
 import Footer from "@/components/Footer"
 import Hero from "@/components/hero/Hero"
 import Navbar from "@/components/Navbar"
+import ProductList from "@/components/ProductList"
 
 import RootLayout from "@/layout/root/RootLayout"
 
@@ -25,6 +27,8 @@ export default function HomePage() {
           </Link>
         </div>
         <Hero />
+        <Donation />
+        <ProductList />
         <Footer />
       </RootLayout>
     </>
