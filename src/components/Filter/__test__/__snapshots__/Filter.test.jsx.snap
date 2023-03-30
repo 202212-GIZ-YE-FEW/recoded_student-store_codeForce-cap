@@ -1,0 +1,964 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders correctly 1`] = `
+<div>
+  <section
+    className="max-w-[1250px] mx-auto my-[50px]"
+  >
+    <div>
+      <label>
+        Filter by:
+      </label>
+      <div>
+        <button
+          onClick={[Function]}
+        >
+          All
+        </button>
+        <button
+          className="filter-Books"
+          onClick={[Function]}
+        >
+          Books
+        </button>
+        <button
+          className="filter-Furniture"
+          onClick={[Function]}
+        >
+          Furniture
+        </button>
+        <button
+          className="filter-Electronics"
+          onClick={[Function]}
+        >
+          Electronics
+        </button>
+        <button
+          className="filter-Two-wheeler"
+          onClick={[Function]}
+        >
+          Two-wheeler
+        </button>
+      </div>
+      <div>
+        <div
+          className="carts grid xl:grid-cols-4 lg:grid-cols-4 md:grid-cols-2 sm:grid-cols-1 m-auto w-full"
+        >
+          <div
+            className="cart mx-3 mb-10 border rounded-lg shadow-lg"
+          >
+            <img
+              alt="Moog Synthesizer"
+              className="rounded-t-lg shadow-lg w-full"
+              data-nimg="1"
+              decoding="async"
+              height={211.41}
+              loading="lazy"
+              onError={[Function]}
+              onLoad={[Function]}
+              src="/_next/image?url=%2Fimg.jpg&w=640&q=75"
+              srcSet="/_next/image?url=%2Fimg.jpg&w=384&q=75 1x, /_next/image?url=%2Fimg.jpg&w=640&q=75 2x"
+              style={
+                Object {
+                  "color": "transparent",
+                }
+              }
+              width={258}
+            />
+            <div
+              className="mx-3 text-center"
+            >
+              <div
+                className="info flex justify-between my-4 mx-3"
+              >
+                <div
+                  className="text-left"
+                >
+                  <h2
+                    className="font-semibold"
+                  >
+                    Moog Synthesizer
+                  </h2>
+                  <p
+                    className="font-extralight text-xs"
+                  >
+                    Books
+                  </p>
+                </div>
+                <div>
+                  <h2
+                    className="font-extrabold text-xl"
+                  >
+                    $
+                    468.00
+                  </h2>
+                  <p
+                    className="font-extralight text-xs"
+                  >
+                    Istanbul / Turkey
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div
+            className="cart mx-3 mb-10 border rounded-lg shadow-lg"
+          >
+            <img
+              alt="Moog Synthesizer"
+              className="rounded-t-lg shadow-lg w-full"
+              data-nimg="1"
+              decoding="async"
+              height={211.41}
+              loading="lazy"
+              onError={[Function]}
+              onLoad={[Function]}
+              src="/_next/image?url=%2Fimg.jpg&w=640&q=75"
+              srcSet="/_next/image?url=%2Fimg.jpg&w=384&q=75 1x, /_next/image?url=%2Fimg.jpg&w=640&q=75 2x"
+              style={
+                Object {
+                  "color": "transparent",
+                }
+              }
+              width={258}
+            />
+            <div
+              className="mx-3 text-center"
+            >
+              <div
+                className="info flex justify-between my-4 mx-3"
+              >
+                <div
+                  className="text-left"
+                >
+                  <h2
+                    className="font-semibold"
+                  >
+                    Moog Synthesizer
+                  </h2>
+                  <p
+                    className="font-extralight text-xs"
+                  >
+                    Furniture
+                  </p>
+                </div>
+                <div>
+                  <h2
+                    className="font-extrabold text-xl"
+                  >
+                    $
+                    468.00
+                  </h2>
+                  <p
+                    className="font-extralight text-xs"
+                  >
+                    Istanbul / Turkey
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div
+            className="cart mx-3 mb-10 border rounded-lg shadow-lg"
+          >
+            <img
+              alt="Moog Synthesizer"
+              className="rounded-t-lg shadow-lg w-full"
+              data-nimg="1"
+              decoding="async"
+              height={211.41}
+              loading="lazy"
+              onError={[Function]}
+              onLoad={[Function]}
+              src="/_next/image?url=%2Fimg.jpg&w=640&q=75"
+              srcSet="/_next/image?url=%2Fimg.jpg&w=384&q=75 1x, /_next/image?url=%2Fimg.jpg&w=640&q=75 2x"
+              style={
+                Object {
+                  "color": "transparent",
+                }
+              }
+              width={258}
+            />
+            <div
+              className="mx-3 text-center"
+            >
+              <div
+                className="info flex justify-between my-4 mx-3"
+              >
+                <div
+                  className="text-left"
+                >
+                  <h2
+                    className="font-semibold"
+                  >
+                    Moog Synthesizer
+                  </h2>
+                  <p
+                    className="font-extralight text-xs"
+                  >
+                    Furniture
+                  </p>
+                </div>
+                <div>
+                  <h2
+                    className="font-extrabold text-xl"
+                  >
+                    $
+                    468.00
+                  </h2>
+                  <p
+                    className="font-extralight text-xs"
+                  >
+                    Istanbul / Turkey
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div
+            className="cart mx-3 mb-10 border rounded-lg shadow-lg"
+          >
+            <img
+              alt="Moog Synthesizer"
+              className="rounded-t-lg shadow-lg w-full"
+              data-nimg="1"
+              decoding="async"
+              height={211.41}
+              loading="lazy"
+              onError={[Function]}
+              onLoad={[Function]}
+              src="/_next/image?url=%2Fimg.jpg&w=640&q=75"
+              srcSet="/_next/image?url=%2Fimg.jpg&w=384&q=75 1x, /_next/image?url=%2Fimg.jpg&w=640&q=75 2x"
+              style={
+                Object {
+                  "color": "transparent",
+                }
+              }
+              width={258}
+            />
+            <div
+              className="mx-3 text-center"
+            >
+              <div
+                className="info flex justify-between my-4 mx-3"
+              >
+                <div
+                  className="text-left"
+                >
+                  <h2
+                    className="font-semibold"
+                  >
+                    Moog Synthesizer
+                  </h2>
+                  <p
+                    className="font-extralight text-xs"
+                  >
+                    Electronics
+                  </p>
+                </div>
+                <div>
+                  <h2
+                    className="font-extrabold text-xl"
+                  >
+                    $
+                    468.00
+                  </h2>
+                  <p
+                    className="font-extralight text-xs"
+                  >
+                    Istanbul / Turkey
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div
+            className="cart mx-3 mb-10 border rounded-lg shadow-lg"
+          >
+            <img
+              alt="Moog Synthesizer"
+              className="rounded-t-lg shadow-lg w-full"
+              data-nimg="1"
+              decoding="async"
+              height={211.41}
+              loading="lazy"
+              onError={[Function]}
+              onLoad={[Function]}
+              src="/_next/image?url=%2Fimg.jpg&w=640&q=75"
+              srcSet="/_next/image?url=%2Fimg.jpg&w=384&q=75 1x, /_next/image?url=%2Fimg.jpg&w=640&q=75 2x"
+              style={
+                Object {
+                  "color": "transparent",
+                }
+              }
+              width={258}
+            />
+            <div
+              className="mx-3 text-center"
+            >
+              <div
+                className="info flex justify-between my-4 mx-3"
+              >
+                <div
+                  className="text-left"
+                >
+                  <h2
+                    className="font-semibold"
+                  >
+                    Moog Synthesizer
+                  </h2>
+                  <p
+                    className="font-extralight text-xs"
+                  >
+                    Two-wheeler
+                  </p>
+                </div>
+                <div>
+                  <h2
+                    className="font-extrabold text-xl"
+                  >
+                    $
+                    468.00
+                  </h2>
+                  <p
+                    className="font-extralight text-xs"
+                  >
+                    Istanbul / Turkey
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div
+            className="cart mx-3 mb-10 border rounded-lg shadow-lg"
+          >
+            <img
+              alt="Moog Synthesizer"
+              className="rounded-t-lg shadow-lg w-full"
+              data-nimg="1"
+              decoding="async"
+              height={211.41}
+              loading="lazy"
+              onError={[Function]}
+              onLoad={[Function]}
+              src="/_next/image?url=%2Fimg.jpg&w=640&q=75"
+              srcSet="/_next/image?url=%2Fimg.jpg&w=384&q=75 1x, /_next/image?url=%2Fimg.jpg&w=640&q=75 2x"
+              style={
+                Object {
+                  "color": "transparent",
+                }
+              }
+              width={258}
+            />
+            <div
+              className="mx-3 text-center"
+            >
+              <div
+                className="info flex justify-between my-4 mx-3"
+              >
+                <div
+                  className="text-left"
+                >
+                  <h2
+                    className="font-semibold"
+                  >
+                    Moog Synthesizer
+                  </h2>
+                  <p
+                    className="font-extralight text-xs"
+                  >
+                    Two-wheeler
+                  </p>
+                </div>
+                <div>
+                  <h2
+                    className="font-extrabold text-xl"
+                  >
+                    $
+                    468.00
+                  </h2>
+                  <p
+                    className="font-extralight text-xs"
+                  >
+                    Istanbul / Turkey
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div
+            className="cart mx-3 mb-10 border rounded-lg shadow-lg"
+          >
+            <img
+              alt="Moog Synthesizer"
+              className="rounded-t-lg shadow-lg w-full"
+              data-nimg="1"
+              decoding="async"
+              height={211.41}
+              loading="lazy"
+              onError={[Function]}
+              onLoad={[Function]}
+              src="/_next/image?url=%2Fimg.jpg&w=640&q=75"
+              srcSet="/_next/image?url=%2Fimg.jpg&w=384&q=75 1x, /_next/image?url=%2Fimg.jpg&w=640&q=75 2x"
+              style={
+                Object {
+                  "color": "transparent",
+                }
+              }
+              width={258}
+            />
+            <div
+              className="mx-3 text-center"
+            >
+              <div
+                className="info flex justify-between my-4 mx-3"
+              >
+                <div
+                  className="text-left"
+                >
+                  <h2
+                    className="font-semibold"
+                  >
+                    Moog Synthesizer
+                  </h2>
+                  <p
+                    className="font-extralight text-xs"
+                  >
+                    Two-wheeler
+                  </p>
+                </div>
+                <div>
+                  <h2
+                    className="font-extrabold text-xl"
+                  >
+                    $
+                    468.00
+                  </h2>
+                  <p
+                    className="font-extralight text-xs"
+                  >
+                    Istanbul / Turkey
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div
+            className="cart mx-3 mb-10 border rounded-lg shadow-lg"
+          >
+            <img
+              alt="Moog Synthesizer"
+              className="rounded-t-lg shadow-lg w-full"
+              data-nimg="1"
+              decoding="async"
+              height={211.41}
+              loading="lazy"
+              onError={[Function]}
+              onLoad={[Function]}
+              src="/_next/image?url=%2Fimg.jpg&w=640&q=75"
+              srcSet="/_next/image?url=%2Fimg.jpg&w=384&q=75 1x, /_next/image?url=%2Fimg.jpg&w=640&q=75 2x"
+              style={
+                Object {
+                  "color": "transparent",
+                }
+              }
+              width={258}
+            />
+            <div
+              className="mx-3 text-center"
+            >
+              <div
+                className="info flex justify-between my-4 mx-3"
+              >
+                <div
+                  className="text-left"
+                >
+                  <h2
+                    className="font-semibold"
+                  >
+                    Moog Synthesizer
+                  </h2>
+                  <p
+                    className="font-extralight text-xs"
+                  >
+                    Two-wheeler
+                  </p>
+                </div>
+                <div>
+                  <h2
+                    className="font-extrabold text-xl"
+                  >
+                    $
+                    468.00
+                  </h2>
+                  <p
+                    className="font-extralight text-xs"
+                  >
+                    Istanbul / Turkey
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div
+            className="cart mx-3 mb-10 border rounded-lg shadow-lg"
+          >
+            <img
+              alt="Moog Synthesizer"
+              className="rounded-t-lg shadow-lg w-full"
+              data-nimg="1"
+              decoding="async"
+              height={211.41}
+              loading="lazy"
+              onError={[Function]}
+              onLoad={[Function]}
+              src="/_next/image?url=%2Fimg.jpg&w=640&q=75"
+              srcSet="/_next/image?url=%2Fimg.jpg&w=384&q=75 1x, /_next/image?url=%2Fimg.jpg&w=640&q=75 2x"
+              style={
+                Object {
+                  "color": "transparent",
+                }
+              }
+              width={258}
+            />
+            <div
+              className="mx-3 text-center"
+            >
+              <div
+                className="info flex justify-between my-4 mx-3"
+              >
+                <div
+                  className="text-left"
+                >
+                  <h2
+                    className="font-semibold"
+                  >
+                    Moog Synthesizer
+                  </h2>
+                  <p
+                    className="font-extralight text-xs"
+                  >
+                    Two-wheeler
+                  </p>
+                </div>
+                <div>
+                  <h2
+                    className="font-extrabold text-xl"
+                  >
+                    $
+                    468.00
+                  </h2>
+                  <p
+                    className="font-extralight text-xs"
+                  >
+                    Istanbul / Turkey
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div
+            className="cart mx-3 mb-10 border rounded-lg shadow-lg"
+          >
+            <img
+              alt="Moog Synthesizer"
+              className="rounded-t-lg shadow-lg w-full"
+              data-nimg="1"
+              decoding="async"
+              height={211.41}
+              loading="lazy"
+              onError={[Function]}
+              onLoad={[Function]}
+              src="/_next/image?url=%2Fimg.jpg&w=640&q=75"
+              srcSet="/_next/image?url=%2Fimg.jpg&w=384&q=75 1x, /_next/image?url=%2Fimg.jpg&w=640&q=75 2x"
+              style={
+                Object {
+                  "color": "transparent",
+                }
+              }
+              width={258}
+            />
+            <div
+              className="mx-3 text-center"
+            >
+              <div
+                className="info flex justify-between my-4 mx-3"
+              >
+                <div
+                  className="text-left"
+                >
+                  <h2
+                    className="font-semibold"
+                  >
+                    Moog Synthesizer
+                  </h2>
+                  <p
+                    className="font-extralight text-xs"
+                  >
+                    Two-wheeler
+                  </p>
+                </div>
+                <div>
+                  <h2
+                    className="font-extrabold text-xl"
+                  >
+                    $
+                    468.00
+                  </h2>
+                  <p
+                    className="font-extralight text-xs"
+                  >
+                    Istanbul / Turkey
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div
+            className="cart mx-3 mb-10 border rounded-lg shadow-lg"
+          >
+            <img
+              alt="Moog Synthesizer"
+              className="rounded-t-lg shadow-lg w-full"
+              data-nimg="1"
+              decoding="async"
+              height={211.41}
+              loading="lazy"
+              onError={[Function]}
+              onLoad={[Function]}
+              src="/_next/image?url=%2Fimg.jpg&w=640&q=75"
+              srcSet="/_next/image?url=%2Fimg.jpg&w=384&q=75 1x, /_next/image?url=%2Fimg.jpg&w=640&q=75 2x"
+              style={
+                Object {
+                  "color": "transparent",
+                }
+              }
+              width={258}
+            />
+            <div
+              className="mx-3 text-center"
+            >
+              <div
+                className="info flex justify-between my-4 mx-3"
+              >
+                <div
+                  className="text-left"
+                >
+                  <h2
+                    className="font-semibold"
+                  >
+                    Moog Synthesizer
+                  </h2>
+                  <p
+                    className="font-extralight text-xs"
+                  >
+                    Electronics
+                  </p>
+                </div>
+                <div>
+                  <h2
+                    className="font-extrabold text-xl"
+                  >
+                    $
+                    468.00
+                  </h2>
+                  <p
+                    className="font-extralight text-xs"
+                  >
+                    Istanbul / Turkey
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div
+            className="cart mx-3 mb-10 border rounded-lg shadow-lg"
+          >
+            <img
+              alt="Moog Synthesizer"
+              className="rounded-t-lg shadow-lg w-full"
+              data-nimg="1"
+              decoding="async"
+              height={211.41}
+              loading="lazy"
+              onError={[Function]}
+              onLoad={[Function]}
+              src="/_next/image?url=%2Fimg.jpg&w=640&q=75"
+              srcSet="/_next/image?url=%2Fimg.jpg&w=384&q=75 1x, /_next/image?url=%2Fimg.jpg&w=640&q=75 2x"
+              style={
+                Object {
+                  "color": "transparent",
+                }
+              }
+              width={258}
+            />
+            <div
+              className="mx-3 text-center"
+            >
+              <div
+                className="info flex justify-between my-4 mx-3"
+              >
+                <div
+                  className="text-left"
+                >
+                  <h2
+                    className="font-semibold"
+                  >
+                    Moog Synthesizer
+                  </h2>
+                  <p
+                    className="font-extralight text-xs"
+                  >
+                    Electronics
+                  </p>
+                </div>
+                <div>
+                  <h2
+                    className="font-extrabold text-xl"
+                  >
+                    $
+                    468.00
+                  </h2>
+                  <p
+                    className="font-extralight text-xs"
+                  >
+                    Istanbul / Turkey
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div
+            className="cart mx-3 mb-10 border rounded-lg shadow-lg"
+          >
+            <img
+              alt="Moog Synthesizer"
+              className="rounded-t-lg shadow-lg w-full"
+              data-nimg="1"
+              decoding="async"
+              height={211.41}
+              loading="lazy"
+              onError={[Function]}
+              onLoad={[Function]}
+              src="/_next/image?url=%2Fimg.jpg&w=640&q=75"
+              srcSet="/_next/image?url=%2Fimg.jpg&w=384&q=75 1x, /_next/image?url=%2Fimg.jpg&w=640&q=75 2x"
+              style={
+                Object {
+                  "color": "transparent",
+                }
+              }
+              width={258}
+            />
+            <div
+              className="mx-3 text-center"
+            >
+              <div
+                className="info flex justify-between my-4 mx-3"
+              >
+                <div
+                  className="text-left"
+                >
+                  <h2
+                    className="font-semibold"
+                  >
+                    Moog Synthesizer
+                  </h2>
+                  <p
+                    className="font-extralight text-xs"
+                  >
+                    Electronics
+                  </p>
+                </div>
+                <div>
+                  <h2
+                    className="font-extrabold text-xl"
+                  >
+                    $
+                    468.00
+                  </h2>
+                  <p
+                    className="font-extralight text-xs"
+                  >
+                    Istanbul / Turkey
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div
+            className="cart mx-3 mb-10 border rounded-lg shadow-lg"
+          >
+            <img
+              alt="Moog Synthesizer"
+              className="rounded-t-lg shadow-lg w-full"
+              data-nimg="1"
+              decoding="async"
+              height={211.41}
+              loading="lazy"
+              onError={[Function]}
+              onLoad={[Function]}
+              src="/_next/image?url=%2Fimg.jpg&w=640&q=75"
+              srcSet="/_next/image?url=%2Fimg.jpg&w=384&q=75 1x, /_next/image?url=%2Fimg.jpg&w=640&q=75 2x"
+              style={
+                Object {
+                  "color": "transparent",
+                }
+              }
+              width={258}
+            />
+            <div
+              className="mx-3 text-center"
+            >
+              <div
+                className="info flex justify-between my-4 mx-3"
+              >
+                <div
+                  className="text-left"
+                >
+                  <h2
+                    className="font-semibold"
+                  >
+                    Moog Synthesizer
+                  </h2>
+                  <p
+                    className="font-extralight text-xs"
+                  >
+                    Electronics
+                  </p>
+                </div>
+                <div>
+                  <h2
+                    className="font-extrabold text-xl"
+                  >
+                    $
+                    468.00
+                  </h2>
+                  <p
+                    className="font-extralight text-xs"
+                  >
+                    Istanbul / Turkey
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div
+            className="cart mx-3 mb-10 border rounded-lg shadow-lg"
+          >
+            <img
+              alt="Moog Synthesizer"
+              className="rounded-t-lg shadow-lg w-full"
+              data-nimg="1"
+              decoding="async"
+              height={211.41}
+              loading="lazy"
+              onError={[Function]}
+              onLoad={[Function]}
+              src="/_next/image?url=%2Fimg.jpg&w=640&q=75"
+              srcSet="/_next/image?url=%2Fimg.jpg&w=384&q=75 1x, /_next/image?url=%2Fimg.jpg&w=640&q=75 2x"
+              style={
+                Object {
+                  "color": "transparent",
+                }
+              }
+              width={258}
+            />
+            <div
+              className="mx-3 text-center"
+            >
+              <div
+                className="info flex justify-between my-4 mx-3"
+              >
+                <div
+                  className="text-left"
+                >
+                  <h2
+                    className="font-semibold"
+                  >
+                    Moog Synthesizer
+                  </h2>
+                  <p
+                    className="font-extralight text-xs"
+                  >
+                    Electronics
+                  </p>
+                </div>
+                <div>
+                  <h2
+                    className="font-extrabold text-xl"
+                  >
+                    $
+                    468.00
+                  </h2>
+                  <p
+                    className="font-extralight text-xs"
+                  >
+                    Istanbul / Turkey
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div
+            className="cart mx-3 mb-10 border rounded-lg shadow-lg"
+          >
+            <img
+              alt="Moog Synthesizer"
+              className="rounded-t-lg shadow-lg w-full"
+              data-nimg="1"
+              decoding="async"
+              height={211.41}
+              loading="lazy"
+              onError={[Function]}
+              onLoad={[Function]}
+              src="/_next/image?url=%2Fimg.jpg&w=640&q=75"
+              srcSet="/_next/image?url=%2Fimg.jpg&w=384&q=75 1x, /_next/image?url=%2Fimg.jpg&w=640&q=75 2x"
+              style={
+                Object {
+                  "color": "transparent",
+                }
+              }
+              width={258}
+            />
+            <div
+              className="mx-3 text-center"
+            >
+              <div
+                className="info flex justify-between my-4 mx-3"
+              >
+                <div
+                  className="text-left"
+                >
+                  <h2
+                    className="font-semibold"
+                  >
+                    Moog Synthesizer
+                  </h2>
+                  <p
+                    className="font-extralight text-xs"
+                  >
+                    Electronics
+                  </p>
+                </div>
+                <div>
+                  <h2
+                    className="font-extrabold text-xl"
+                  >
+                    $
+                    468.00
+                  </h2>
+                  <p
+                    className="font-extralight text-xs"
+                  >
+                    Istanbul / Turkey
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>
+`;
