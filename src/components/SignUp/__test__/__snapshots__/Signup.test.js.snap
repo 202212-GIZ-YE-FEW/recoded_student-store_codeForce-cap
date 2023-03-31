@@ -3,11 +3,33 @@
 exports[`renders correctly 1`] = `
 <div>
   <div
-    className="flex justify-center md:flex-row signup_background "
+    className="flex justify-center  md:flex-row  bg-[#f1f6fa] "
   >
     <div
-      className=" my-5 handbox_image w-3/6 "
-    />
+      className=" handbox_background   w-3/6 "
+    >
+      <div
+        className=" p-20 "
+      >
+        <img
+          alt="handbox"
+          data-nimg="1"
+          decoding="async"
+          height={40}
+          loading="lazy"
+          onError={[Function]}
+          onLoad={[Function]}
+          src="/_next/image?url=%2Fimg.jpg&w=96&q=75"
+          srcSet="/_next/image?url=%2Fimg.jpg&w=48&q=75 1x, /_next/image?url=%2Fimg.jpg&w=96&q=75 2x"
+          style={
+            Object {
+              "color": "transparent",
+            }
+          }
+          width={40}
+        />
+      </div>
+    </div>
     <div
       className="container form_mobile   w-3/6 items-center"
     >
@@ -15,7 +37,7 @@ exports[`renders correctly 1`] = `
         className="container m-auto flex w-5/6 flex-col items-center"
       >
         <h1
-          className="my-2 py-6 text-4xl text-white md:my-3 md:text-5xl"
+          className="my-2 py-6 text-4xl font-semibold text-[#485DCF] md:my-3 md:text-5xl"
         >
           Sign-Up
         </h1>
@@ -23,37 +45,37 @@ exports[`renders correctly 1`] = `
           className="container m-auto mb-6 flex w-5/6 flex-col items-center"
         >
           <input
-            className=" my-3.5 block w-full rounded-lg border border-gray-300 bg-gray-50 p-2.5  text-center  focus:ring-blue-500 focus:border-blue-500 "
+            className=" my-2 block w-full rounded-lg border border-gray-300  p-2.5  text-center  focus:ring-blue-500 focus:border-blue-500 "
             name="firstName"
             placeholder="Name"
             type="text"
           />
           <input
-            className=" my-3.5 block w-full rounded-lg border border-gray-300 bg-gray-50 p-2.5  text-center  focus:ring-blue-500 focus:border-blue-500 "
+            className=" my-2 block w-full rounded-lg border border-gray-300  p-2.5  text-center  focus:ring-blue-500 focus:border-blue-500 "
             name="surname"
             placeholder="Surname"
             type="text"
           />
           <input
-            className=" my-3.5 block w-full rounded-lg border border-gray-300 bg-gray-50 p-2.5  text-center  focus:ring-blue-500 focus:border-blue-500 "
+            className=" my-2 block w-full rounded-lg border border-gray-300  p-2.5  text-center  focus:ring-blue-500 focus:border-blue-500 "
             name="email"
             placeholder="E-mail address"
             type="email"
           />
           <input
-            className=" my-3.5 block w-full rounded-lg border border-gray-300 bg-gray-50 p-2.5  text-center   focus:ring-blue-500 focus:border-blue-500 "
+            className=" my-2 block w-full rounded-lg border border-gray-300  p-2.5  text-center   focus:ring-blue-500 focus:border-blue-500 "
             name="schoolname"
             placeholder="School name"
             type="text"
           />
           <input
-            className=" my-3.5 block w-full rounded-lg border border-gray-300 bg-gray-50 p-2.5  text-center   focus:ring-blue-500 focus:border-blue-500 "
+            className=" my-2 block w-full rounded-lg border border-gray-300  p-2.5  text-center   focus:ring-blue-500 focus:border-blue-500 "
             name="password"
             placeholder="Password"
             type="password"
           />
           <input
-            className=" my-3.5 block w-full rounded-lg border border-gray-300 bg-gray-50 p-2.5  text-center  focus:ring-blue-500 focus:border-blue-500 "
+            className=" my-2 block w-full rounded-lg border border-gray-300  p-2.5  text-center  focus:ring-blue-500 focus:border-blue-500 "
             name="password"
             placeholder="Re-enter password"
             type="password"
@@ -182,7 +204,7 @@ exports[`renders correctly 1`] = `
           </p>
         </div>
         <button
-          class="bg-[#585785] h-10 w-40 m-1 p-1 rounded-lg  font-light text-[15px] text-white shadow-sm"
+          class="bg-[#585785] h-10 w-40 mb-20 p-1 rounded-lg  font-light text-[15px] text-white shadow-sm"
           type="submit"
         >
           Sign in

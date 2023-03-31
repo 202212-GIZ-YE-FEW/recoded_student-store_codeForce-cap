@@ -1,16 +1,21 @@
+import Image from "next/image"
 import { BsFacebook, BsGoogle, BsTwitter } from "react-icons/bs"
 
 import styles from "./Signup.module.css"
+
+import handbox from "../../../public/images/hands_box.png"
 function Signup() {
   return (
     <div>
-      <div
-        className={`flex justify-center md:flex-row ${styles.signup_background} `}
-      >
-        <div className={` my-5 ${styles.handbox_image} w-3/6 `}></div>
+      <div className={`flex justify-center  md:flex-row  bg-[#f1f6fa] `}>
+        <div className={` ${styles.handbox_background}   w-3/6 `}>
+          <div className=' p-20 '>
+            <Image src={handbox} alt='handbox' />
+          </div>
+        </div>
         <div className={`container ${styles.form_mobile}   w-3/6 items-center`}>
           <div className='container m-auto flex w-5/6 flex-col items-center'>
-            <h1 className='my-2 py-6 text-4xl text-white md:my-3 md:text-5xl'>
+            <h1 className='my-2 py-6 text-4xl font-semibold text-[#485DCF] md:my-3 md:text-5xl'>
               Sign-Up
             </h1>
             <form className='container m-auto mb-6 flex w-5/6 flex-col items-center'>
@@ -18,8 +23,8 @@ function Signup() {
                 placeholder='Name'
                 type='text'
                 name='firstName'
-                className=' my-3.5 block w-full rounded-lg
-                border border-gray-300 bg-gray-50 p-2.5 
+                className=' my-2 block w-full rounded-lg
+                border border-gray-300  p-2.5 
                 text-center 
               focus:ring-blue-500 focus:border-blue-500 '
               />
@@ -27,8 +32,8 @@ function Signup() {
                 placeholder='Surname'
                 type='text'
                 name='surname'
-                className=' my-3.5 block w-full rounded-lg
-                border border-gray-300 bg-gray-50 p-2.5 
+                className=' my-2 block w-full rounded-lg
+                border border-gray-300  p-2.5 
                 text-center 
               focus:ring-blue-500 focus:border-blue-500 '
               />
@@ -36,8 +41,8 @@ function Signup() {
                 placeholder='E-mail address'
                 type='email'
                 name='email'
-                className=' my-3.5 block w-full rounded-lg
-                border border-gray-300 bg-gray-50 p-2.5 
+                className=' my-2 block w-full rounded-lg
+                border border-gray-300  p-2.5 
                 text-center 
               focus:ring-blue-500 focus:border-blue-500 '
               />
@@ -45,8 +50,8 @@ function Signup() {
                 placeholder='School name'
                 type='text'
                 name='schoolname'
-                className=' my-3.5 block w-full rounded-lg
-                border border-gray-300 bg-gray-50 p-2.5 
+                className=' my-2 block w-full rounded-lg
+                border border-gray-300  p-2.5 
                 text-center  
               focus:ring-blue-500 focus:border-blue-500 '
               />
@@ -54,8 +59,8 @@ function Signup() {
                 placeholder='Password'
                 type='password'
                 name='password'
-                className=' my-3.5 block w-full rounded-lg
-                border border-gray-300 bg-gray-50 p-2.5 
+                className=' my-2 block w-full rounded-lg
+                border border-gray-300  p-2.5 
                 text-center  
               focus:ring-blue-500 focus:border-blue-500 '
               />
@@ -63,8 +68,8 @@ function Signup() {
                 placeholder='Re-enter password'
                 type='password'
                 name='password'
-                className=' my-3.5 block w-full rounded-lg
-                border border-gray-300 bg-gray-50 p-2.5 
+                className=' my-2 block w-full rounded-lg
+                border border-gray-300  p-2.5 
                 text-center 
               focus:ring-blue-500 focus:border-blue-500 '
               />
@@ -111,7 +116,7 @@ function Signup() {
               <p>Already have an account?</p>
             </div>
             <button
-              class='bg-[#585785] h-10 w-40 m-1 p-1 rounded-lg  font-light text-[15px] text-white shadow-sm'
+              class='bg-[#585785] h-10 w-40 mb-20 p-1 rounded-lg  font-light text-[15px] text-white shadow-sm'
               type='submit'
             >
               Sign in
