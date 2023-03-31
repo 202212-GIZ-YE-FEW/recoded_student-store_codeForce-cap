@@ -13,7 +13,6 @@ module.exports = {
     // Project custom colors
     colors: {
       black: "#000000",
-      clay: "#F1F6FA",
       cyanaqua: "#90EEE1",
       darkpurple: "#32314D",
       iceblue: "#F1F6FA",
