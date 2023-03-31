@@ -19,6 +19,52 @@ exports[`renders correctly 1`] = `
         >
           Sign-Up
         </h1>
+        <form
+          className="container m-auto mb-6 flex w-5/6 flex-col items-center"
+        >
+          <input
+            className=" my-3.5 block w-full rounded-lg border border-gray-300 bg-gray-50 p-2.5  text-center text-xl  focus:ring-blue-500 focus:border-blue-500 "
+            name="firstName"
+            placeholder="name"
+            type="text"
+          />
+          <input
+            className=" my-3.5 block w-full rounded-lg border border-gray-300 bg-gray-50 p-2.5  text-center text-xl  focus:ring-blue-500 focus:border-blue-500 "
+            name="surname"
+            placeholder="surname"
+            type="text"
+          />
+          <input
+            className=" my-3.5 block w-full rounded-lg border border-gray-300 bg-gray-50 p-2.5  text-center text-xl  focus:ring-blue-500 focus:border-blue-500 "
+            name="email"
+            placeholder="E-mail address"
+            type="email"
+          />
+          <input
+            className=" my-3.5 block w-full rounded-lg border border-gray-300 bg-gray-50 p-2.5  text-center text-xl  focus:ring-blue-500 focus:border-blue-500 "
+            name="schoolname"
+            placeholder="School name"
+            type="text"
+          />
+          <input
+            className=" my-3.5 block w-full rounded-lg border border-gray-300 bg-gray-50 p-2.5  text-center text-xl  focus:ring-blue-500 focus:border-blue-500 "
+            name="password"
+            placeholder="Password"
+            type="password"
+          />
+          <input
+            className=" my-3.5 block w-full rounded-lg border border-gray-300 bg-gray-50 p-2.5  text-center text-xl  focus:ring-blue-500 focus:border-blue-500 "
+            name="password"
+            placeholder="re-enter password"
+            type="password"
+          />
+          <button
+            class=" bg-[#585785] font-light h-10 w-40 m-1 p-1 rounded-lg  text-[15px] text-white shadow-sm"
+            type="submit"
+          >
+            Sign up
+          </button>
+        </form>
       </div>
     </div>
   </div>
