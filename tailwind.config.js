@@ -14,7 +14,6 @@ module.exports = {
     colors: {
       black: "#000000",
       cyanaqua: "#90EEE1",
-      darkpurple: "#32314D",
       iceblue: "#F1F6FA",
       purple: "#7874F2",
       "purple-almostblack": "#32314D",
