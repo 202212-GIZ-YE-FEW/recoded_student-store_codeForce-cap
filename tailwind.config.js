@@ -17,7 +17,7 @@ module.exports = {
         "bubble-gum": "#7874F2",
       },
       backgroundImage: {
-        "High-lighter": "url('/images/Highlighter.png')",
+        "high-lighter": "url('/images/Highlighter.png')",
       },
     },
   },

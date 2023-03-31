@@ -6,100 +6,125 @@ exports[`renders correctly 1`] = `
     className="max-w-[1250px] mx-auto my-[50px]"
   >
     <div>
-      <div>
-        <button
-          onClick={[Function]}
+      <div
+        className="my-6 flex flex-col"
+      >
+        <div
+          className="my-6 flex justify-between mx-8 font-poppins font-bold text-bubble-gum"
         >
-          All
-        </button>
-        <button
-          className="filter Book"
-          onClick={[Function]}
+          <button
+            className="text-[38px] bg-high-lighter"
+            onClick={[Function]}
+          >
+            Categories
+          </button>
+          <h2
+            className="text-[38px] bg-high-lighter mr-52 hidden sm:block md:hidden lg:block"
+          >
+            Price Filter
+          </h2>
+        </div>
+        <div
+          className="flex justify-between shadow-2xl py-4 rounded-full"
         >
-          <img
-            alt="Book"
-            data-nimg="1"
-            decoding="async"
-            height={137}
-            loading="lazy"
-            onError={[Function]}
-            onLoad={[Function]}
-            src="/_next/image?url=%2Fimages%2FBook.png&w=384&q=75"
-            srcSet="/_next/image?url=%2Fimages%2FBook.png&w=256&q=75 1x, /_next/image?url=%2Fimages%2FBook.png&w=384&q=75 2x"
-            style={
-              Object {
-                "color": "transparent",
-              }
-            }
-            width={137}
-          />
-        </button>
-        <button
-          className="filter Furniture"
-          onClick={[Function]}
-        >
-          <img
-            alt="Furniture"
-            data-nimg="1"
-            decoding="async"
-            height={137}
-            loading="lazy"
-            onError={[Function]}
-            onLoad={[Function]}
-            src="/_next/image?url=%2Fimages%2FFurniture.png&w=384&q=75"
-            srcSet="/_next/image?url=%2Fimages%2FFurniture.png&w=256&q=75 1x, /_next/image?url=%2Fimages%2FFurniture.png&w=384&q=75 2x"
-            style={
-              Object {
-                "color": "transparent",
-              }
-            }
-            width={137}
-          />
-        </button>
-        <button
-          className="filter Electronics"
-          onClick={[Function]}
-        >
-          <img
-            alt="Electronics"
-            data-nimg="1"
-            decoding="async"
-            height={137}
-            loading="lazy"
-            onError={[Function]}
-            onLoad={[Function]}
-            src="/_next/image?url=%2Fimages%2FElectronic.png&w=384&q=75"
-            srcSet="/_next/image?url=%2Fimages%2FElectronic.png&w=256&q=75 1x, /_next/image?url=%2Fimages%2FElectronic.png&w=384&q=75 2x"
-            style={
-              Object {
-                "color": "transparent",
-              }
-            }
-            width={137}
-          />
-        </button>
-        <button
-          className="filter Two-wheeler"
-          onClick={[Function]}
-        >
-          <img
-            alt="Two-wheeler"
-            data-nimg="1"
-            decoding="async"
-            height={137}
-            loading="lazy"
-            onError={[Function]}
-            onLoad={[Function]}
-            src="/_next/image?url=%2Fimages%2FTwo-wheeler.png&w=384&q=75"
-            srcSet="/_next/image?url=%2Fimages%2FTwo-wheeler.png&w=256&q=75 1x, /_next/image?url=%2Fimages%2FTwo-wheeler.png&w=384&q=75 2x"
-            style={
-              Object {
-                "color": "transparent",
-              }
-            }
-            width={137}
-          />
-        </button>
+          <span>
+            <button
+              className="ml-6"
+              onClick={[Function]}
+            >
+              <img
+                alt="Book"
+                className="rounded-lg w-[20]"
+                data-nimg="1"
+                decoding="async"
+                height={120}
+                loading="lazy"
+                onError={[Function]}
+                onLoad={[Function]}
+                src="/_next/image?url=%2Fimages%2FBook.png&w=256&q=75"
+                srcSet="/_next/image?url=%2Fimages%2FBook.png&w=128&q=75 1x, /_next/image?url=%2Fimages%2FBook.png&w=256&q=75 2x"
+                style={
+                  Object {
+                    "color": "transparent",
+                  }
+                }
+                width={120}
+              />
+            </button>
+            <button
+              className="ml-6"
+              onClick={[Function]}
+            >
+              <img
+                alt="Furniture"
+                className="rounded-lg w-[20]"
+                data-nimg="1"
+                decoding="async"
+                height={120}
+                loading="lazy"
+                onError={[Function]}
+                onLoad={[Function]}
+                src="/_next/image?url=%2Fimages%2FFurniture.png&w=256&q=75"
+                srcSet="/_next/image?url=%2Fimages%2FFurniture.png&w=128&q=75 1x, /_next/image?url=%2Fimages%2FFurniture.png&w=256&q=75 2x"
+                style={
+                  Object {
+                    "color": "transparent",
+                  }
+                }
+                width={120}
+              />
+            </button>
+            <button
+              className="ml-6"
+              onClick={[Function]}
+            >
+              <img
+                alt="Electronics"
+                className="rounded-lg w-[20]"
+                data-nimg="1"
+                decoding="async"
+                height={120}
+                loading="lazy"
+                onError={[Function]}
+                onLoad={[Function]}
+                src="/_next/image?url=%2Fimages%2FElectronic.png&w=256&q=75"
+                srcSet="/_next/image?url=%2Fimages%2FElectronic.png&w=128&q=75 1x, /_next/image?url=%2Fimages%2FElectronic.png&w=256&q=75 2x"
+                style={
+                  Object {
+                    "color": "transparent",
+                  }
+                }
+                width={120}
+              />
+            </button>
+            <button
+              className="ml-6"
+              onClick={[Function]}
+            >
+              <img
+                alt="Two-wheeler"
+                className="rounded-lg w-[20]"
+                data-nimg="1"
+                decoding="async"
+                height={120}
+                loading="lazy"
+                onError={[Function]}
+                onLoad={[Function]}
+                src="/_next/image?url=%2Fimages%2FTwo-wheeler.png&w=256&q=75"
+                srcSet="/_next/image?url=%2Fimages%2FTwo-wheeler.png&w=128&q=75 1x, /_next/image?url=%2Fimages%2FTwo-wheeler.png&w=256&q=75 2x"
+                style={
+                  Object {
+                    "color": "transparent",
+                  }
+                }
+                width={120}
+              />
+            </button>
+          </span>
+          <h1>
+            HI
+          </h1>
+        </div>
       </div>
       <div>
         <div
