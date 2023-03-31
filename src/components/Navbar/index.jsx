@@ -1,3 +1,4 @@
+import Image from "next/image"
 import Link from "next/link"
 import { useState } from "react"
 import {
@@ -9,17 +10,18 @@ import { RxHamburgerMenu } from "react-icons/rx"
 import { TbArrowBadgeDown } from "react-icons/tb"
 import { TfiWorld } from "react-icons/tfi"
 
-import Logo from "./Logo"
+import LogoImg from "../../../public/Logo.png"
 export default function Navbar() {
   const [languages, setLanguages] = useState(false)
   const [open, setOpen] = useState(false)
-
   return (
     <div
       className={`navbar  m-auto px-10 md:flex md:flex-row py-4 justify-between gap-5 items-center bg-white transition-all 
       `}
     >
-      <Logo />
+      <div className='w-[130px]'>
+        <Image src={LogoImg} alt='logo' />
+      </div>
       {/* ----------- Languages ----------- */}
       <div className='flex items-end cursor-pointer absolute right-14 top-8 md:static order-2 md:hidden'>
         <div
