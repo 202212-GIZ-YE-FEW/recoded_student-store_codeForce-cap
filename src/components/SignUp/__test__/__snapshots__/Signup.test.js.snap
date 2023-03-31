@@ -1,0 +1,26 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders correctly 1`] = `
+<div>
+  <div
+    className="flex justify-center md:flex-row signup_background "
+  >
+    <div
+      className=" my-5 handbox_image w-3/6 "
+    />
+    <div
+      className="container form_mobile   w-3/6 items-center"
+    >
+      <div
+        className="container m-auto flex w-5/6 flex-col items-center"
+      >
+        <h1
+          className="my-2 py-6 text-4xl text-white md:my-3 md:text-5xl"
+        >
+          Sign-Up
+        </h1>
+      </div>
+    </div>
+  </div>
+</div>
+`;

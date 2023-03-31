@@ -5,7 +5,7 @@ import Link from "next/link"
 import Navbar from "@/components/Navbar"
 
 import RootLayout from "@/layout/root/RootLayout"
-import Signup from "@/components/SignUp"
+import Signup from "@/components/Signup"
 
 export default function HomePage() {
   const { t } = useTranslation("common")
