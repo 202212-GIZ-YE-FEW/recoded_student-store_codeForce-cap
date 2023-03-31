@@ -7,7 +7,28 @@ import { SectionWrapper } from "@/hoc"
 
 import Buttons from "../Buttons"
 
-const filters = ["Books", "Furniture", "Electronics", "Two-wheeler"]
+const filters = [
+  {
+    filter: "Book",
+    image: "/images/Book.png",
+    alt: "Book",
+  },
+  {
+    filter: "Furniture",
+    image: "/images/Furniture.png",
+    alt: "Furniture",
+  },
+  {
+    filter: "Electronics",
+    image: "/images/Electronic.png",
+    alt: "Electronics",
+  },
+  {
+    filter: "Two-wheeler",
+    image: "/images/Two-wheeler.png",
+    alt: "Two-wheeler",
+  },
+]
 
 function CategoryFilter() {
   const [selectedFilter, setSelectedFilter] = useState("")
@@ -16,7 +37,6 @@ function CategoryFilter() {
 
   return (
     <div>
-      <label>Filter by:</label>
       <Buttons filters={filters} handleFilterClick={handleFilterClick} />
       <ProductList selectedFilter={selectedFilter} products={products} />
     </div>

@@ -13,6 +13,12 @@ module.exports = {
       fontFamily: {
         poppins: ["Poppins", "sans-serif"],
       },
+      colors: {
+        "bubble-gum": "#7874F2",
+      },
+      backgroundImage: {
+        "High-lighter": "url('/images/Highlighter.png')",
+      },
     },
   },
   plugins: [],

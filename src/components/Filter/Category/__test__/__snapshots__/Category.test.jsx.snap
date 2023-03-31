@@ -5,9 +5,6 @@ exports[`renders correctly 1`] = `
   className="max-w-[1250px] mx-auto my-[50px]"
 >
   <div>
-    <label>
-      Filter by:
-    </label>
     <div>
       <button
         onClick={[Function]}
@@ -15,28 +12,92 @@ exports[`renders correctly 1`] = `
         All
       </button>
       <button
-        className="filter Books"
+        className="filter Book"
         onClick={[Function]}
       >
-        Books
+        <img
+          alt="Book"
+          data-nimg="1"
+          decoding="async"
+          height={137}
+          loading="lazy"
+          onError={[Function]}
+          onLoad={[Function]}
+          src="/_next/image?url=%2Fimages%2FBook.png&w=384&q=75"
+          srcSet="/_next/image?url=%2Fimages%2FBook.png&w=256&q=75 1x, /_next/image?url=%2Fimages%2FBook.png&w=384&q=75 2x"
+          style={
+            Object {
+              "color": "transparent",
+            }
+          }
+          width={137}
+        />
       </button>
       <button
         className="filter Furniture"
         onClick={[Function]}
       >
-        Furniture
+        <img
+          alt="Furniture"
+          data-nimg="1"
+          decoding="async"
+          height={137}
+          loading="lazy"
+          onError={[Function]}
+          onLoad={[Function]}
+          src="/_next/image?url=%2Fimages%2FFurniture.png&w=384&q=75"
+          srcSet="/_next/image?url=%2Fimages%2FFurniture.png&w=256&q=75 1x, /_next/image?url=%2Fimages%2FFurniture.png&w=384&q=75 2x"
+          style={
+            Object {
+              "color": "transparent",
+            }
+          }
+          width={137}
+        />
       </button>
       <button
         className="filter Electronics"
         onClick={[Function]}
       >
-        Electronics
+        <img
+          alt="Electronics"
+          data-nimg="1"
+          decoding="async"
+          height={137}
+          loading="lazy"
+          onError={[Function]}
+          onLoad={[Function]}
+          src="/_next/image?url=%2Fimages%2FElectronic.png&w=384&q=75"
+          srcSet="/_next/image?url=%2Fimages%2FElectronic.png&w=256&q=75 1x, /_next/image?url=%2Fimages%2FElectronic.png&w=384&q=75 2x"
+          style={
+            Object {
+              "color": "transparent",
+            }
+          }
+          width={137}
+        />
       </button>
       <button
         className="filter Two-wheeler"
         onClick={[Function]}
       >
-        Two-wheeler
+        <img
+          alt="Two-wheeler"
+          data-nimg="1"
+          decoding="async"
+          height={137}
+          loading="lazy"
+          onError={[Function]}
+          onLoad={[Function]}
+          src="/_next/image?url=%2Fimages%2FTwo-wheeler.png&w=384&q=75"
+          srcSet="/_next/image?url=%2Fimages%2FTwo-wheeler.png&w=256&q=75 1x, /_next/image?url=%2Fimages%2FTwo-wheeler.png&w=384&q=75 2x"
+          style={
+            Object {
+              "color": "transparent",
+            }
+          }
+          width={137}
+        />
       </button>
     </div>
     <div>
