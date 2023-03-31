@@ -116,9 +116,11 @@ export default function Navbar() {
         {/* ----------- Buttons ----------- */}
         <div className='flex  justify-between items-center gap-5 flex-col md:flex-row '>
           <div className='flex gap-3 capitalize flex-col md:flex-row'>
-            <div className='bg-violet-700 py-2 px-5 text-white rounded-3xl text-sm hover:bg-violet-800 transition-all cursor-pointer'>
-              sign up
-            </div>
+            <Link href='/SignUP'>
+              <div className='bg-violet-700 py-2 px-5 text-white rounded-3xl text-sm hover:bg-violet-800 transition-all cursor-pointer'>
+                sign up
+              </div>
+            </Link>
             <div className='bg-violet-700 py-2 px-5 text-white rounded-3xl text-sm hover:bg-violet-800 transition-all cursor-pointer'>
               sell items
             </div>
