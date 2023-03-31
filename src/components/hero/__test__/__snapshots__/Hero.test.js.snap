@@ -1,0 +1,124 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders correctly 1`] = `
+<section
+  className="max-w-[1250px] mx-auto my-[50px]"
+>
+  <div
+    className="jsx-6903023578c7ee5b "
+  >
+    <div
+      className="jsx-6903023578c7ee5b keen-slider zoom-out px-15"
+    >
+      <div
+        className="jsx-6903023578c7ee5b keen-slider__slide absolute w-full h-full"
+      >
+        <div
+          className="jsx-6903023578c7ee5b mx-10"
+          style={Object {}}
+        >
+          <img
+            alt="..."
+            className=" w-full h-full object-cover bg-transparent"
+            data-nimg="1"
+            decoding="async"
+            height={500}
+            loading="lazy"
+            onError={[Function]}
+            onLoad={[Function]}
+            src="/_next/image?url=https%3A%2F%2Fimages.unsplash.com%2Fphoto-1590004953392-5aba2e72269a%3Fixlib%3Drb-1.2.1%26ixid%3DeyJhcHBfaWQiOjEyMDd9%26auto%3Dformat%26fit%3Dcrop%26h%3D500%26w%3D800%26q%3D80&w=3840&q=75"
+            srcSet="/_next/image?url=https%3A%2F%2Fimages.unsplash.com%2Fphoto-1590004953392-5aba2e72269a%3Fixlib%3Drb-1.2.1%26ixid%3DeyJhcHBfaWQiOjEyMDd9%26auto%3Dformat%26fit%3Dcrop%26h%3D500%26w%3D800%26q%3D80&w=1200&q=75 1x, /_next/image?url=https%3A%2F%2Fimages.unsplash.com%2Fphoto-1590004953392-5aba2e72269a%3Fixlib%3Drb-1.2.1%26ixid%3DeyJhcHBfaWQiOjEyMDd9%26auto%3Dformat%26fit%3Dcrop%26h%3D500%26w%3D800%26q%3D80&w=3840&q=75 2x"
+            style={
+              Object {
+                "color": "transparent",
+              }
+            }
+            width={1123}
+          />
+        </div>
+      </div>
+      <div
+        className="jsx-6903023578c7ee5b keen-slider__slide absolute w-full h-full"
+      >
+        <div
+          className="jsx-6903023578c7ee5b mx-10"
+          style={Object {}}
+        >
+          <img
+            alt="..."
+            className=" w-full h-full object-cover bg-transparent"
+            data-nimg="1"
+            decoding="async"
+            height={500}
+            loading="lazy"
+            onError={[Function]}
+            onLoad={[Function]}
+            src="/_next/image?url=https%3A%2F%2Fimages.unsplash.com%2Fphoto-1590004845575-cc18b13d1d0a%3Fixlib%3Drb-1.2.1%26ixid%3DeyJhcHBfaWQiOjEyMDd9%26auto%3Dformat%26fit%3Dcrop%26h%3D500%26w%3D800%26q%3D80&w=3840&q=75"
+            srcSet="/_next/image?url=https%3A%2F%2Fimages.unsplash.com%2Fphoto-1590004845575-cc18b13d1d0a%3Fixlib%3Drb-1.2.1%26ixid%3DeyJhcHBfaWQiOjEyMDd9%26auto%3Dformat%26fit%3Dcrop%26h%3D500%26w%3D800%26q%3D80&w=1200&q=75 1x, /_next/image?url=https%3A%2F%2Fimages.unsplash.com%2Fphoto-1590004845575-cc18b13d1d0a%3Fixlib%3Drb-1.2.1%26ixid%3DeyJhcHBfaWQiOjEyMDd9%26auto%3Dformat%26fit%3Dcrop%26h%3D500%26w%3D800%26q%3D80&w=3840&q=75 2x"
+            style={
+              Object {
+                "color": "transparent",
+              }
+            }
+            width={1123}
+          />
+        </div>
+      </div>
+      <div
+        className="jsx-6903023578c7ee5b keen-slider__slide absolute w-full h-full"
+      >
+        <div
+          className="jsx-6903023578c7ee5b mx-10"
+          style={Object {}}
+        >
+          <img
+            alt="..."
+            className=" w-full h-full object-cover bg-transparent"
+            data-nimg="1"
+            decoding="async"
+            height={500}
+            loading="lazy"
+            onError={[Function]}
+            onLoad={[Function]}
+            src="/_next/image?url=https%3A%2F%2Fimages.unsplash.com%2Fphoto-1590004987778-bece5c9adab6%3Fixlib%3Drb-1.2.1%26ixid%3DeyJhcHBfaWQiOjEyMDd9%26auto%3Dformat%26fit%3Dcrop%26h%3D500%26w%3D800%26q%3D80&w=3840&q=75"
+            srcSet="/_next/image?url=https%3A%2F%2Fimages.unsplash.com%2Fphoto-1590004987778-bece5c9adab6%3Fixlib%3Drb-1.2.1%26ixid%3DeyJhcHBfaWQiOjEyMDd9%26auto%3Dformat%26fit%3Dcrop%26h%3D500%26w%3D800%26q%3D80&w=1200&q=75 1x, /_next/image?url=https%3A%2F%2Fimages.unsplash.com%2Fphoto-1590004987778-bece5c9adab6%3Fixlib%3Drb-1.2.1%26ixid%3DeyJhcHBfaWQiOjEyMDd9%26auto%3Dformat%26fit%3Dcrop%26h%3D500%26w%3D800%26q%3D80&w=3840&q=75 2x"
+            style={
+              Object {
+                "color": "transparent",
+              }
+            }
+            width={1123}
+          />
+        </div>
+      </div>
+      <div
+        className="jsx-6903023578c7ee5b keen-slider__slide absolute w-full h-full"
+      >
+        <div
+          className="jsx-6903023578c7ee5b mx-10"
+          style={Object {}}
+        >
+          <img
+            alt="..."
+            className=" w-full h-full object-cover bg-transparent"
+            data-nimg="1"
+            decoding="async"
+            height={500}
+            loading="lazy"
+            onError={[Function]}
+            onLoad={[Function]}
+            src="/_next/image?url=https%3A%2F%2Fimages.unsplash.com%2Fphoto-1590005176489-db2e714711fc%3Fixlib%3Drb-1.2.1%26ixid%3DeyJhcHBfaWQiOjEyMDd9%26auto%3Dformat%26fit%3Dcrop%26h%3D500%26w%3D800%26q%3D80&w=3840&q=75"
+            srcSet="/_next/image?url=https%3A%2F%2Fimages.unsplash.com%2Fphoto-1590005176489-db2e714711fc%3Fixlib%3Drb-1.2.1%26ixid%3DeyJhcHBfaWQiOjEyMDd9%26auto%3Dformat%26fit%3Dcrop%26h%3D500%26w%3D800%26q%3D80&w=1200&q=75 1x, /_next/image?url=https%3A%2F%2Fimages.unsplash.com%2Fphoto-1590005176489-db2e714711fc%3Fixlib%3Drb-1.2.1%26ixid%3DeyJhcHBfaWQiOjEyMDd9%26auto%3Dformat%26fit%3Dcrop%26h%3D500%26w%3D800%26q%3D80&w=3840&q=75 2x"
+            style={
+              Object {
+                "color": "transparent",
+              }
+            }
+            width={1123}
+          />
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+`;
