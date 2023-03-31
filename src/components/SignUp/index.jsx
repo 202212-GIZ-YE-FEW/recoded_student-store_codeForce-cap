@@ -1,3 +1,5 @@
+import { BsFacebook, BsGoogle, BsTwitter } from "react-icons/bs"
+
 import styles from "./Signup.module.css"
 function Signup() {
   return (
@@ -13,21 +15,21 @@ function Signup() {
             </h1>
             <form className='container m-auto mb-6 flex w-5/6 flex-col items-center'>
               <input
-                placeholder='name'
+                placeholder='Name'
                 type='text'
                 name='firstName'
                 className=' my-3.5 block w-full rounded-lg
                 border border-gray-300 bg-gray-50 p-2.5 
-                text-center text-xl 
+                text-center 
               focus:ring-blue-500 focus:border-blue-500 '
               />
               <input
-                placeholder='surname'
+                placeholder='Surname'
                 type='text'
                 name='surname'
                 className=' my-3.5 block w-full rounded-lg
                 border border-gray-300 bg-gray-50 p-2.5 
-                text-center text-xl 
+                text-center 
               focus:ring-blue-500 focus:border-blue-500 '
               />
               <input
@@ -36,7 +38,7 @@ function Signup() {
                 name='email'
                 className=' my-3.5 block w-full rounded-lg
                 border border-gray-300 bg-gray-50 p-2.5 
-                text-center text-xl 
+                text-center 
               focus:ring-blue-500 focus:border-blue-500 '
               />
               <input
@@ -45,7 +47,7 @@ function Signup() {
                 name='schoolname'
                 className=' my-3.5 block w-full rounded-lg
                 border border-gray-300 bg-gray-50 p-2.5 
-                text-center text-xl 
+                text-center  
               focus:ring-blue-500 focus:border-blue-500 '
               />
               <input
@@ -54,16 +56,16 @@ function Signup() {
                 name='password'
                 className=' my-3.5 block w-full rounded-lg
                 border border-gray-300 bg-gray-50 p-2.5 
-                text-center text-xl 
+                text-center  
               focus:ring-blue-500 focus:border-blue-500 '
               />
               <input
-                placeholder='re-enter password'
+                placeholder='Re-enter password'
                 type='password'
                 name='password'
                 className=' my-3.5 block w-full rounded-lg
                 border border-gray-300 bg-gray-50 p-2.5 
-                text-center text-xl 
+                text-center 
               focus:ring-blue-500 focus:border-blue-500 '
               />
               <button
@@ -73,6 +75,47 @@ function Signup() {
                 Sign up
               </button>
             </form>
+            <div className='flex items-center'>
+              <div className={`${styles.line_form}`}></div>
+              <p>Or</p>
+              <div className={`${styles.line_form}`}></div>
+            </div>
+            <p className='text-md m-1 text-[#647581]'>Sign-up-with</p>
+            <div className='m-1 mb-8 flex flex-row  '>
+              <button className=' m-1 flex items-center rounded-3xl border border-[#F26F6F] p-1  text-[#F26F6F]'>
+                <BsGoogle
+                  color='#F26F6F'
+                  size={24}
+                  style={{ padding: "1px" }}
+                />
+                <p className='mx-2 text-sm md:mx-3'>Google</p>
+              </button>
+              <button className='color-darkPurple m-1  flex items-center rounded-3xl border border-[#485DCF] p-1 text-[#485DCF]'>
+                <BsFacebook
+                  color='#485DCF'
+                  size={24}
+                  style={{ padding: "1px" }}
+                />
+                <p className='mx-2 text-sm md:mx-3'>Facebook</p>
+              </button>
+              <button className=' m-1 flex justify-around rounded-3xl border border-[#28C7FA]  p-1 text-[#28C7FA] '>
+                <BsTwitter
+                  color='#28C7FA'
+                  size={24}
+                  style={{ padding: "1px" }}
+                />
+                <p className='mx-2 text-sm md:mx-3'>Twitter</p>
+              </button>
+            </div>
+            <div className='mb-4 text-xl text-[#647581]'>
+              <p>Already have an account?</p>
+            </div>
+            <button
+              class='bg-[#585785] h-10 w-40 m-1 p-1 rounded-lg  font-light text-[15px] text-white shadow-sm'
+              type='submit'
+            >
+              Sign in
+            </button>
           </div>
         </div>
       </div>
