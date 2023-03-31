@@ -1,8 +1,8 @@
 import renderer from "react-test-renderer"
 
-import Footer from ".."
+import SingleProduct from ".."
 
 it("renders correctly", () => {
-  const tree = renderer.create(<Footer />).toJSON()
+  const tree = renderer.create(<SingleProduct />).toJSON()
   expect(tree).toMatchSnapshot()
 })
