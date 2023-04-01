@@ -8,6 +8,8 @@ import Navbar from "@/components/Navbar"
 
 import RootLayout from "@/layout/root/RootLayout"
 
+import ProductListing from "./product-listing"
+
 export default function HomePage() {
   const { t } = useTranslation("common")
 
@@ -25,6 +27,7 @@ export default function HomePage() {
           </Link>
         </div>
         <Hero />
+        <ProductListing />
         <Footer />
       </RootLayout>
     </>
