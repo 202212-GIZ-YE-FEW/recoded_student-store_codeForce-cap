@@ -10,32 +10,15 @@ export default function ProductListing() {
       </div>
       <div className='grid pt-8 md:gap-2 lg:grid-cols-2'>
         {/* product photos & info */}
-        <div className='grid gap-3 xxs:mb-0 md:grid-flow-row lg:mb-0'>
+        <div className='grid gap-3 xss:mb-0 md:grid-flow-row lg:mb-0'>
           {/* photos */}
           <div className='grid items-center justify-center'>
             {/* main photo */}
             <Image
               src='/productImg.png'
               alt='Image'
-              width={190}
-              height={140}
-              className='zoom flashing w-[32rem] rounded-xl shadow-xl hover:cursor-pointer'
-            />
-          </div>
-          {/* popup image */}
-          <div className='popup-image'>
-            <span
-              onClick={() => {
-                document.querySelector(".popup-image").style.display = "none"
-              }}
-            >
-              &times;
-            </span>
-            <Image
-              src='/productImg.png'
-              alt='Image'
-              width={190}
-              height={140}
+              width={620}
+              height={340}
               className='zoom flashing w-[32rem] rounded-xl shadow-xl hover:cursor-pointer'
             />
           </div>
