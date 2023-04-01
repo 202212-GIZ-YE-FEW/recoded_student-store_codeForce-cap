@@ -7,6 +7,7 @@ import Hero from "@/components/hero/Hero"
 import Navbar from "@/components/Navbar"
 
 import RootLayout from "@/layout/root/RootLayout"
+import SingleProduct from "@/components/SingleProduct"
 
 export default function HomePage() {
   const { t } = useTranslation("common")
@@ -15,6 +16,7 @@ export default function HomePage() {
     <>
       <RootLayout>
         <Navbar />
+        <SingleProduct />
         <p>{t("test")}</p>
         <div style={{ display: "flex", flexDirection: "row", gap: "20px" }}>
           <Link href='/' locale='en'>
