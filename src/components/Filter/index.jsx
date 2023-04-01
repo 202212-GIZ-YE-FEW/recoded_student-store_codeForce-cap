@@ -1,9 +1,9 @@
 import Category from "./Category"
 
-export default function Filter() {
+export default function Filter({ handleCategoryFilter }) {
   return (
     <div>
-      <Category />
+      <Category handleCategoryFilter={handleCategoryFilter} />
     </div>
   )
 }

@@ -149,8 +149,8 @@ exports[`renders correctly 1`] = `
             loading="lazy"
             onError={[Function]}
             onLoad={[Function]}
-            src="/_next/image?url=%2Fimg.jpg&w=640&q=75"
-            srcSet="/_next/image?url=%2Fimg.jpg&w=384&q=75 1x, /_next/image?url=%2Fimg.jpg&w=640&q=75 2x"
+            src="/_next/image?url=%2FproductImg.png&w=640&q=75"
+            srcSet="/_next/image?url=%2FproductImg.png&w=384&q=75 1x, /_next/image?url=%2FproductImg.png&w=640&q=75 2x"
             style={
               Object {
                 "color": "transparent",
@@ -183,7 +183,7 @@ exports[`renders correctly 1`] = `
                   className="font-extrabold text-xl"
                 >
                   $
-                  468.00
+                  10
                 </h2>
                 <p
                   className="font-extralight text-xs"
@@ -206,8 +206,8 @@ exports[`renders correctly 1`] = `
             loading="lazy"
             onError={[Function]}
             onLoad={[Function]}
-            src="/_next/image?url=%2Fimg.jpg&w=640&q=75"
-            srcSet="/_next/image?url=%2Fimg.jpg&w=384&q=75 1x, /_next/image?url=%2Fimg.jpg&w=640&q=75 2x"
+            src="/_next/image?url=%2FproductImg.png&w=640&q=75"
+            srcSet="/_next/image?url=%2FproductImg.png&w=384&q=75 1x, /_next/image?url=%2FproductImg.png&w=640&q=75 2x"
             style={
               Object {
                 "color": "transparent",
@@ -240,7 +240,7 @@ exports[`renders correctly 1`] = `
                   className="font-extrabold text-xl"
                 >
                   $
-                  468.00
+                  20
                 </h2>
                 <p
                   className="font-extralight text-xs"
@@ -263,8 +263,8 @@ exports[`renders correctly 1`] = `
             loading="lazy"
             onError={[Function]}
             onLoad={[Function]}
-            src="/_next/image?url=%2Fimg.jpg&w=640&q=75"
-            srcSet="/_next/image?url=%2Fimg.jpg&w=384&q=75 1x, /_next/image?url=%2Fimg.jpg&w=640&q=75 2x"
+            src="/_next/image?url=%2FproductImg.png&w=640&q=75"
+            srcSet="/_next/image?url=%2FproductImg.png&w=384&q=75 1x, /_next/image?url=%2FproductImg.png&w=640&q=75 2x"
             style={
               Object {
                 "color": "transparent",
@@ -297,7 +297,7 @@ exports[`renders correctly 1`] = `
                   className="font-extrabold text-xl"
                 >
                   $
-                  468.00
+                  30
                 </h2>
                 <p
                   className="font-extralight text-xs"
@@ -320,8 +320,8 @@ exports[`renders correctly 1`] = `
             loading="lazy"
             onError={[Function]}
             onLoad={[Function]}
-            src="/_next/image?url=%2Fimg.jpg&w=640&q=75"
-            srcSet="/_next/image?url=%2Fimg.jpg&w=384&q=75 1x, /_next/image?url=%2Fimg.jpg&w=640&q=75 2x"
+            src="/_next/image?url=%2FproductImg.png&w=640&q=75"
+            srcSet="/_next/image?url=%2FproductImg.png&w=384&q=75 1x, /_next/image?url=%2FproductImg.png&w=640&q=75 2x"
             style={
               Object {
                 "color": "transparent",
@@ -354,7 +354,7 @@ exports[`renders correctly 1`] = `
                   className="font-extrabold text-xl"
                 >
                   $
-                  468.00
+                  40
                 </h2>
                 <p
                   className="font-extralight text-xs"
@@ -377,8 +377,8 @@ exports[`renders correctly 1`] = `
             loading="lazy"
             onError={[Function]}
             onLoad={[Function]}
-            src="/_next/image?url=%2Fimg.jpg&w=640&q=75"
-            srcSet="/_next/image?url=%2Fimg.jpg&w=384&q=75 1x, /_next/image?url=%2Fimg.jpg&w=640&q=75 2x"
+            src="/_next/image?url=%2FproductImg.png&w=640&q=75"
+            srcSet="/_next/image?url=%2FproductImg.png&w=384&q=75 1x, /_next/image?url=%2FproductImg.png&w=640&q=75 2x"
             style={
               Object {
                 "color": "transparent",
@@ -411,7 +411,7 @@ exports[`renders correctly 1`] = `
                   className="font-extrabold text-xl"
                 >
                   $
-                  468.00
+                  50
                 </h2>
                 <p
                   className="font-extralight text-xs"
@@ -434,8 +434,8 @@ exports[`renders correctly 1`] = `
             loading="lazy"
             onError={[Function]}
             onLoad={[Function]}
-            src="/_next/image?url=%2Fimg.jpg&w=640&q=75"
-            srcSet="/_next/image?url=%2Fimg.jpg&w=384&q=75 1x, /_next/image?url=%2Fimg.jpg&w=640&q=75 2x"
+            src="/_next/image?url=%2FproductImg.png&w=640&q=75"
+            srcSet="/_next/image?url=%2FproductImg.png&w=384&q=75 1x, /_next/image?url=%2FproductImg.png&w=640&q=75 2x"
             style={
               Object {
                 "color": "transparent",
@@ -468,7 +468,7 @@ exports[`renders correctly 1`] = `
                   className="font-extrabold text-xl"
                 >
                   $
-                  468.00
+                  60
                 </h2>
                 <p
                   className="font-extralight text-xs"
@@ -491,8 +491,8 @@ exports[`renders correctly 1`] = `
             loading="lazy"
             onError={[Function]}
             onLoad={[Function]}
-            src="/_next/image?url=%2Fimg.jpg&w=640&q=75"
-            srcSet="/_next/image?url=%2Fimg.jpg&w=384&q=75 1x, /_next/image?url=%2Fimg.jpg&w=640&q=75 2x"
+            src="/_next/image?url=%2FproductImg.png&w=640&q=75"
+            srcSet="/_next/image?url=%2FproductImg.png&w=384&q=75 1x, /_next/image?url=%2FproductImg.png&w=640&q=75 2x"
             style={
               Object {
                 "color": "transparent",
@@ -525,7 +525,7 @@ exports[`renders correctly 1`] = `
                   className="font-extrabold text-xl"
                 >
                   $
-                  468.00
+                  70
                 </h2>
                 <p
                   className="font-extralight text-xs"
@@ -548,8 +548,8 @@ exports[`renders correctly 1`] = `
             loading="lazy"
             onError={[Function]}
             onLoad={[Function]}
-            src="/_next/image?url=%2Fimg.jpg&w=640&q=75"
-            srcSet="/_next/image?url=%2Fimg.jpg&w=384&q=75 1x, /_next/image?url=%2Fimg.jpg&w=640&q=75 2x"
+            src="/_next/image?url=%2FproductImg.png&w=640&q=75"
+            srcSet="/_next/image?url=%2FproductImg.png&w=384&q=75 1x, /_next/image?url=%2FproductImg.png&w=640&q=75 2x"
             style={
               Object {
                 "color": "transparent",
@@ -582,7 +582,7 @@ exports[`renders correctly 1`] = `
                   className="font-extrabold text-xl"
                 >
                   $
-                  468.00
+                  80
                 </h2>
                 <p
                   className="font-extralight text-xs"
@@ -605,8 +605,8 @@ exports[`renders correctly 1`] = `
             loading="lazy"
             onError={[Function]}
             onLoad={[Function]}
-            src="/_next/image?url=%2Fimg.jpg&w=640&q=75"
-            srcSet="/_next/image?url=%2Fimg.jpg&w=384&q=75 1x, /_next/image?url=%2Fimg.jpg&w=640&q=75 2x"
+            src="/_next/image?url=%2FproductImg.png&w=640&q=75"
+            srcSet="/_next/image?url=%2FproductImg.png&w=384&q=75 1x, /_next/image?url=%2FproductImg.png&w=640&q=75 2x"
             style={
               Object {
                 "color": "transparent",
@@ -639,7 +639,7 @@ exports[`renders correctly 1`] = `
                   className="font-extrabold text-xl"
                 >
                   $
-                  468.00
+                  90
                 </h2>
                 <p
                   className="font-extralight text-xs"
@@ -662,8 +662,8 @@ exports[`renders correctly 1`] = `
             loading="lazy"
             onError={[Function]}
             onLoad={[Function]}
-            src="/_next/image?url=%2Fimg.jpg&w=640&q=75"
-            srcSet="/_next/image?url=%2Fimg.jpg&w=384&q=75 1x, /_next/image?url=%2Fimg.jpg&w=640&q=75 2x"
+            src="/_next/image?url=%2FproductImg.png&w=640&q=75"
+            srcSet="/_next/image?url=%2FproductImg.png&w=384&q=75 1x, /_next/image?url=%2FproductImg.png&w=640&q=75 2x"
             style={
               Object {
                 "color": "transparent",
@@ -696,7 +696,7 @@ exports[`renders correctly 1`] = `
                   className="font-extrabold text-xl"
                 >
                   $
-                  468.00
+                  100
                 </h2>
                 <p
                   className="font-extralight text-xs"
@@ -719,8 +719,8 @@ exports[`renders correctly 1`] = `
             loading="lazy"
             onError={[Function]}
             onLoad={[Function]}
-            src="/_next/image?url=%2Fimg.jpg&w=640&q=75"
-            srcSet="/_next/image?url=%2Fimg.jpg&w=384&q=75 1x, /_next/image?url=%2Fimg.jpg&w=640&q=75 2x"
+            src="/_next/image?url=%2FproductImg.png&w=640&q=75"
+            srcSet="/_next/image?url=%2FproductImg.png&w=384&q=75 1x, /_next/image?url=%2FproductImg.png&w=640&q=75 2x"
             style={
               Object {
                 "color": "transparent",
@@ -753,7 +753,7 @@ exports[`renders correctly 1`] = `
                   className="font-extrabold text-xl"
                 >
                   $
-                  468.00
+                  200
                 </h2>
                 <p
                   className="font-extralight text-xs"
@@ -776,8 +776,8 @@ exports[`renders correctly 1`] = `
             loading="lazy"
             onError={[Function]}
             onLoad={[Function]}
-            src="/_next/image?url=%2Fimg.jpg&w=640&q=75"
-            srcSet="/_next/image?url=%2Fimg.jpg&w=384&q=75 1x, /_next/image?url=%2Fimg.jpg&w=640&q=75 2x"
+            src="/_next/image?url=%2FproductImg.png&w=640&q=75"
+            srcSet="/_next/image?url=%2FproductImg.png&w=384&q=75 1x, /_next/image?url=%2FproductImg.png&w=640&q=75 2x"
             style={
               Object {
                 "color": "transparent",
@@ -810,7 +810,7 @@ exports[`renders correctly 1`] = `
                   className="font-extrabold text-xl"
                 >
                   $
-                  468.00
+                  300
                 </h2>
                 <p
                   className="font-extralight text-xs"
@@ -833,8 +833,8 @@ exports[`renders correctly 1`] = `
             loading="lazy"
             onError={[Function]}
             onLoad={[Function]}
-            src="/_next/image?url=%2Fimg.jpg&w=640&q=75"
-            srcSet="/_next/image?url=%2Fimg.jpg&w=384&q=75 1x, /_next/image?url=%2Fimg.jpg&w=640&q=75 2x"
+            src="/_next/image?url=%2FproductImg.png&w=640&q=75"
+            srcSet="/_next/image?url=%2FproductImg.png&w=384&q=75 1x, /_next/image?url=%2FproductImg.png&w=640&q=75 2x"
             style={
               Object {
                 "color": "transparent",
@@ -867,7 +867,7 @@ exports[`renders correctly 1`] = `
                   className="font-extrabold text-xl"
                 >
                   $
-                  468.00
+                  500
                 </h2>
                 <p
                   className="font-extralight text-xs"
@@ -890,8 +890,8 @@ exports[`renders correctly 1`] = `
             loading="lazy"
             onError={[Function]}
             onLoad={[Function]}
-            src="/_next/image?url=%2Fimg.jpg&w=640&q=75"
-            srcSet="/_next/image?url=%2Fimg.jpg&w=384&q=75 1x, /_next/image?url=%2Fimg.jpg&w=640&q=75 2x"
+            src="/_next/image?url=%2FproductImg.png&w=640&q=75"
+            srcSet="/_next/image?url=%2FproductImg.png&w=384&q=75 1x, /_next/image?url=%2FproductImg.png&w=640&q=75 2x"
             style={
               Object {
                 "color": "transparent",
@@ -924,7 +924,7 @@ exports[`renders correctly 1`] = `
                   className="font-extrabold text-xl"
                 >
                   $
-                  468.00
+                  600
                 </h2>
                 <p
                   className="font-extralight text-xs"
@@ -947,8 +947,8 @@ exports[`renders correctly 1`] = `
             loading="lazy"
             onError={[Function]}
             onLoad={[Function]}
-            src="/_next/image?url=%2Fimg.jpg&w=640&q=75"
-            srcSet="/_next/image?url=%2Fimg.jpg&w=384&q=75 1x, /_next/image?url=%2Fimg.jpg&w=640&q=75 2x"
+            src="/_next/image?url=%2FproductImg.png&w=640&q=75"
+            srcSet="/_next/image?url=%2FproductImg.png&w=384&q=75 1x, /_next/image?url=%2FproductImg.png&w=640&q=75 2x"
             style={
               Object {
                 "color": "transparent",
@@ -981,7 +981,7 @@ exports[`renders correctly 1`] = `
                   className="font-extrabold text-xl"
                 >
                   $
-                  468.00
+                  700
                 </h2>
                 <p
                   className="font-extralight text-xs"
@@ -1004,8 +1004,8 @@ exports[`renders correctly 1`] = `
             loading="lazy"
             onError={[Function]}
             onLoad={[Function]}
-            src="/_next/image?url=%2Fimg.jpg&w=640&q=75"
-            srcSet="/_next/image?url=%2Fimg.jpg&w=384&q=75 1x, /_next/image?url=%2Fimg.jpg&w=640&q=75 2x"
+            src="/_next/image?url=%2FproductImg.png&w=640&q=75"
+            srcSet="/_next/image?url=%2FproductImg.png&w=384&q=75 1x, /_next/image?url=%2FproductImg.png&w=640&q=75 2x"
             style={
               Object {
                 "color": "transparent",
@@ -1038,7 +1038,7 @@ exports[`renders correctly 1`] = `
                   className="font-extrabold text-xl"
                 >
                   $
-                  468.00
+                  800
                 </h2>
                 <p
                   className="font-extralight text-xs"

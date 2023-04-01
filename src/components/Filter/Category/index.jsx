@@ -33,11 +33,11 @@ const filters = [
 function CategoryFilter() {
   const [selectedFilter, setSelectedFilter] = useState("")
 
-  const handleFilterClick = (filter) => setSelectedFilter(filter)
+  const handleCategoryFilter = (filter) => setSelectedFilter(filter)
 
   return (
     <div>
-      <Buttons filters={filters} handleFilterClick={handleFilterClick} />
+      <Buttons filters={filters} handleCategoryFilter={handleCategoryFilter} />
       <ProductList selectedFilter={selectedFilter} products={products} />
     </div>
   )

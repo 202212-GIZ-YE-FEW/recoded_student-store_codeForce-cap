@@ -1,8 +1,8 @@
 import Image from "next/image"
 
-export default function Buttons({ filters = [], handleFilterClick }) {
-  const FilterButton = ({ filter, image, alt }) => (
-    <button className='ml-6' onClick={() => handleFilterClick(filter)}>
+export default function Buttons({ filters = [], handleCategoryFilter }) {
+  const CategoryFilter = ({ filter, image, alt }) => (
+    <button className='ml-6' onClick={() => handleCategoryFilter(filter)}>
       <Image
         className='rounded-lg w-[20]'
         src={image}
@@ -17,7 +17,10 @@ export default function Buttons({ filters = [], handleFilterClick }) {
     <div className='my-6 flex flex-col'>
       <div className='my-6 flex w-full justify-between mx-8 font-poppins font-bold text-bubble-gum'>
         <span className='bg-high-lighter px-7 bg-[center_top_0.7rem] mx-10 bg-[length:97%_50px]  bg-no-repeat'>
-          <button className='text-[38px]' onClick={() => handleFilterClick("")}>
+          <button
+            className='text-[38px]'
+            onClick={() => handleCategoryFilter("")}
+          >
             Categories
           </button>
         </span>
@@ -30,7 +33,7 @@ export default function Buttons({ filters = [], handleFilterClick }) {
       <div className='flex justify-between shadow-2xl py-4 rounded-full'>
         <span>
           {filters.map(({ filter, image, alt }) => (
-            <FilterButton
+            <CategoryFilter
               key={filter}
               filter={filter}
               image={image}
