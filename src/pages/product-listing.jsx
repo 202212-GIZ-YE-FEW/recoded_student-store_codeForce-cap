@@ -1,6 +1,8 @@
 import Image from "next/image"
 
-export default function ProductListing() {
+import { SectionWrapper } from "@/hoc"
+
+function ProductListing() {
   return (
     <div className='bg-clay p-10'>
       <div className='border-b-2 border-gray-300 p-2 pb-6'>
@@ -57,3 +59,5 @@ export default function ProductListing() {
     </div>
   )
 }
+
+export default SectionWrapper(ProductListing)
