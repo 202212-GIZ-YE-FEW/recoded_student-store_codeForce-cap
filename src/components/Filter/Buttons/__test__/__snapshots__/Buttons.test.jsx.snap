@@ -5,19 +5,27 @@ exports[`renders correctly 1`] = `
   className="my-6 flex flex-col"
 >
   <div
-    className="my-6 flex justify-between mx-8 font-poppins font-bold text-bubble-gum"
+    className="my-6 flex w-full justify-between mx-8 font-poppins font-bold text-bubble-gum"
   >
-    <button
-      className="text-[38px] bg-high-lighter"
-      onClick={[Function]}
+    <span
+      className="bg-high-lighter px-7 bg-[center_top_0.7rem] mx-10 bg-[length:97%_50px]  bg-no-repeat"
     >
-      Categories
-    </button>
-    <h2
-      className="text-[38px] bg-high-lighter mr-52 hidden sm:block md:hidden lg:block"
+      <button
+        className="text-[38px]"
+        onClick={[Function]}
+      >
+        Categories
+      </button>
+    </span>
+    <span
+      className="bg-high-lighter px-7 bg-[center_top_0.9rem] mx-10 bg-[length:110%_50px] bg-no-repeat  mr-52"
     >
-      Price Filter
-    </h2>
+      <h2
+        className="text-[38px] hidden sm:block md:hidden lg:block"
+      >
+        Price Filter
+      </h2>
+    </span>
   </div>
   <div
     className="flex justify-between shadow-2xl py-4 rounded-full"
