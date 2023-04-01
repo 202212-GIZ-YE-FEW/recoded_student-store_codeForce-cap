@@ -5,7 +5,7 @@ import { SectionWrapper } from "@/hoc"
 function Donation() {
   return (
     <div className='flex flex-col items-center justify-center font-poppins'>
-      <div className=''>
+      <div className='lg:max-w-[100%] max-w-[85%] mx-auto'>
         <Image
           className='rounded'
           src='/images/unsplash_1.jpg'
@@ -14,18 +14,20 @@ function Donation() {
           height={524}
         ></Image>
       </div>
-      <div className='p-10 flex flex-col mt-14 items-center justify-center gap-12 max-w-screen-md'>
-        <div className='relative justify-center items-center h-12 text-center text-purple text-5xl font-bold lg:w-[700px] p-0 md:p-5'>
-          <Image
-            className='absolute left-28'
-            src='highlighter.svg'
-            alt='highlighter icon'
-            width={480}
-            height={380}
-          />
-          <span className=' absolute top-0 left-1/4'>
+      <div className='flex flex-col mt-20 items-center justify-center max-w-screen-md'>
+        <div className='flex flex-col justify-center items-center relative text-purple text-5xl font-bold'>
+          <div className=' -rotate-3'>
+            <Image
+              src='/images/Highlighter.png'
+              alt='highlighter icon'
+              width={578}
+              height={180}
+            />
+          </div>
+
+          <div className='absolute mb-[57px] text-center'>
             <h2>Why Donate?</h2>
-          </span>
+          </div>
         </div>
         <p className='text-purple-dark p-3 text-4xl leading-relaxed text-center'>
           Life is busy, and it can sometimes be easy to forget to show your
@@ -38,17 +40,17 @@ function Donation() {
         </p>
       </div>
       <div className='relative mt-14 text-5xl'>
-        <span className='absolute left-0 -z-10'>
-          <Image
-            src='highlighted.svg'
-            alt='currency icon'
-            width={888}
-            height={117}
-          />
-        </span>
-        <h2 className='font-bold text-purple text-center'>
-          Make a Difference by Donating!
-        </h2>
+        <Image
+          src='highlighter.svg'
+          alt='currency icon'
+          width={888}
+          height={117}
+        />
+        <div className=' absolute -translate-y-28'>
+          <h2 className='font-bold text-purple text-center'>
+            Make a Difference by Donating!
+          </h2>
+        </div>
       </div>
 
       <div className='flex flex-row flex-wrap items-center justify-around gap-12 p-10'>
