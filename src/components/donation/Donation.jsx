@@ -1,10 +1,16 @@
+// This file contains the Donation page component, which displays information about donating to charity.
 import Image from "next/image"
 
 import { SectionWrapper } from "@/hoc"
-//import Link from "next/link";
+
+/**
+ * Renders the Donation page component.
+ * @returns {JSX.Element} The Donation page component.
+ */
 function Donation() {
   return (
     <div className='flex flex-col items-center justify-center font-poppins'>
+      {/* Main image */}
       <div className='lg:max-w-[100%] max-w-[85%] mx-auto'>
         <Image
           className='rounded'
@@ -16,6 +22,7 @@ function Donation() {
       </div>
       <div className='flex flex-col mt-20 items-center justify-center max-w-screen-md'>
         <div className='flex flex-col justify-center items-center relative text-purple text-5xl font-bold'>
+          {/* Rotates the Highlighter icon */}
           <div className=' -rotate-3'>
             <Image
               src='/images/Highlighter.png'
@@ -52,12 +59,13 @@ function Donation() {
           </h2>
         </div>
       </div>
-
+      {/* Cards section */}
       <div className='flex flex-row flex-wrap items-center justify-around gap-12 p-10'>
         <div className='mt-20 h-[240px] w-[280px] flex flex-col  justify-center items-center rounded-xl bg-white text-purple-almostblack shadow-lg'>
           <div className='mt-8 flex flex-col items-center gap-2'>
             <span className='text-xl'>Small Help</span>
             <div className='relative flex items-center'>
+              {/* Displays currency icon */}
               <span className='absolute text-2xl -left-3 top-6'>
                 <Image
                   src='currency.svg'
@@ -114,4 +122,5 @@ function Donation() {
   )
 }
 
+// Higher order component for wrapping and to assure semantics & consistency.
 export default SectionWrapper(Donation)
