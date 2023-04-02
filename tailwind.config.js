@@ -10,22 +10,26 @@ module.exports = {
     "./src/**/*.{js,jsx}",
   ],
   theme: {
-    // Project custom colors
-    colors: {
-      black: "#000000",
-      cyanaqua: "#90EEE1",
-      iceblue: "#F1F6FA",
-      purple: "#7874F2",
-      "purple-almostblack": "#32314D",
-      "purple-dark": "#585785",
-      "purple-light": "#7874F2",
-      pumpkin: "#FF8A57",
-      skyblue: "#1B96EF",
-      white: "#FFFFFF",
+    extend: {
+      // Project custom colors
+      colors: {
+        black: "#000000",
+        cyanaqua: "#90EEE1",
+        iceblue: "#F1F6FA",
+        purple: "#7874F2",
+        "purple-almostblack": "#32314D",
+        "purple-dark": "#585785",
+        "purple-light": "#7874F2",
+        "bubble-gum": "#7874F2",
+        pumpkin: "#FF8A57",
+        skyblue: "#1B96EF",
+        white: "#FFFFFF",
+      },
+      // Project custom fonts
+      fontFamily: {
+        poppins: ["Poppins", "sans-serif"],
+      },
     },
-    fontFamily: {
-      poppins: ["Poppins", "sans-serif"],
-    },
+    plugins: [],
   },
-  plugins: [],
 }
