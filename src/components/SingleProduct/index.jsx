@@ -1,10 +1,12 @@
 import Image from "next/image"
 
+import { SectionWrapper } from "@/hoc"
+
 function SingleProduct() {
   return (
     <section className='py-12 sm:py-16'>
       <div className='container mx-auto px-4'>
-        <div className='lg:col-gap-12 xl:col-gap-16 mt-8 grid grid-cols-1 gap-12 lg:mt-12 lg:grid-cols-4 lg:gap-16 justify-items-center'>
+        <div className='lg:col-gap-12 xl:col-gap-16 grid grid-cols-1 gap-12 lg:mt-12 lg:grid-cols-4 lg:gap-16 justify-items-center'>
           <div className='lg:col-span-2 lg:row-end-1'>
             <div className='md:row'>
               <div className='md:col-span-1 lg:order-2 lg:ml-5'>
@@ -90,12 +92,18 @@ function SingleProduct() {
               </p>
             </div>
             <div className='mt-10 flex select-none flex-wrap items-center gap-1'>
-              <div className='flex flex-row bg-[#585785] w-96 h-36 rounded-l-full -mx-1 border-r-4 border-dashed'>
-                <div className='m-2'>
-                  <Image src='cat-photo.svg' width={130} height={100} alt='' />
+              <div className='flex flex-row bg-[#585785] w-64 h-20 lg:w-96 lg:h-36 md:w-96 md:h-36 rounded-l-full -mx-1 border-r-4 border-dashed'>
+                <div className='m-auto ml-2'>
+                  <Image
+                    src='cat-photo.svg'
+                    width={130}
+                    height={100}
+                    alt=''
+                    className='w-16 h-16 lg:w-32 lg:h-28 md:w-32 md:h-28'
+                  />
                 </div>
-                <div className='m-auto mx-0 font-poppins text-white'>
-                  <h1 className='font-semibold text-2xl'>Rifik Haspolat</h1>
+                <div className='m-auto lg:m-auto font-poppins text-white text-[14px] lg:text-xl md:text-xl'>
+                  <h1 className='font-semibold text-1xl'>Rifik Haspolat</h1>
                   <h2>
                     <span className='font-bold'>email:</span> miyav@gmail.com
                   </h2>
@@ -104,8 +112,8 @@ function SingleProduct() {
                   </h2>
                 </div>
               </div>
-              <div className='grid justify-items-center bg-orange-500 w-36 h-36'>
-                <h1 className='font-poppins text-white font-semibold text-3xl m-auto'>
+              <div className='grid justify-items-center bg-orange-500 w-20 h-20 lg:w-36 lg:h-36 md:w-36 md:h-36'>
+                <h1 className='font-poppins text-white font-semibold text-[14px] lg:text-3xl md:text-3xl m-auto'>
                   150<span>$</span>
                 </h1>
               </div>
@@ -120,4 +128,4 @@ function SingleProduct() {
   )
 }
 
-export default SingleProduct
+export default SectionWrapper(SingleProduct)
