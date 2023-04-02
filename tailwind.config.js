@@ -16,9 +16,6 @@ module.exports = {
       colors: {
         "bubble-gum": "#7874F2",
       },
-      backgroundImage: {
-        "high-lighter": "url('/images/Highlighter.png')",
-      },
     },
   },
   plugins: [],
