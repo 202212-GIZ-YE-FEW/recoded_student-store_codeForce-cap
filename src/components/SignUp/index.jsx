@@ -81,9 +81,9 @@ function Signup() {
               </button>
             </form>
             <div className='flex items-center'>
-              <div className={`${styles.line_form}`}></div>
+              <div className='my-1 mr-2 h-px mt-[10px] w-[164px] bg-[#9dafbd]'></div>
               <p>Or</p>
-              <div className={`${styles.line_form}`}></div>
+              <div className='my-1 mr-2 h-px mt-[10px] w-[164px] bg-[#9dafbd]'></div>
             </div>
             <p className='text-md m-1 text-[#647581]'>Sign-up-with</p>
             <div className='m-1 mb-8 flex flex-row  '>
