@@ -2,36 +2,31 @@ import Image from "next/image"
 
 export default function Buttons({ filters = [], handleCategoryFilter }) {
   const CategoryFilter = ({ filter, image, alt }) => (
-    <button className='ml-6' onClick={() => handleCategoryFilter(filter)}>
+    <button className='ml-4' onClick={() => handleCategoryFilter(filter)}>
       <Image
-        className='rounded-lg w-[20]'
+        className='rounded-lg'
         src={image}
         alt={alt}
-        width={120}
-        height={120}
+        width={150}
+        height={150}
       />
     </button>
   )
 
   return (
-    <div className='my-6 flex flex-col'>
-      <div className='my-6 flex w-full justify-between mx-8 font-poppins font-bold text-bubble-gum'>
-        <span className='bg-high-lighter px-7 bg-[center_top_0.7rem] mx-10 bg-[length:97%_50px]  bg-no-repeat'>
-          <button
-            className='text-[38px]'
-            onClick={() => handleCategoryFilter("")}
-          >
+    <div className='flex flex-col font-poppins mb-10'>
+      <div className='grid grid-cols-2 gap-x-10 text-[7vw] md:text-[5vw] lg:text-[3vw] text-bubble-gum font-bold py-5 text-center lg:text-left ml-[28vw] md:ml-[26vw] lg:ml-0 w-full'>
+        <span className='bg-high-lighter bg-[length:45vw_100%] md:bg-[length:32vw_100%] lg:bg-[length:50%_100%] bg-no-repeat md:bg-center lg:bg-left-bottom'>
+          <button className='lg:ml-9' onClick={() => handleCategoryFilter("")}>
             Categories
           </button>
         </span>
-        <span className='bg-high-lighter px-7 bg-[center_top_0.9rem] mx-10 bg-[length:110%_50px] bg-no-repeat  mr-52'>
-          <h2 className='text-[38px] hidden sm:block md:hidden lg:block'>
-            Price Filter
-          </h2>
+        <span className='bg-high-lighter bg-[length:50%_100%] bg-[center] bg-no-repeat hidden lg:block text-center'>
+          <h2>Price Filter</h2>
         </span>
       </div>
-      <div className='flex justify-between shadow-2xl py-4 rounded-full'>
-        <span>
+      <div className='flex flex-col lg:flex-row justify-between shadow-2xl rounded-[8vw] lg:rounded-full items-center lg:pr-20 py-10'>
+        <span className='grid grid-cols-4 gap-4 md:gap-28 lg:gap-4 pb-10 lg:pb-0 mx-auto pr-4 lg:px-0'>
           {filters.map(({ filter, image, alt }) => (
             <CategoryFilter
               key={filter}
@@ -41,7 +36,14 @@ export default function Buttons({ filters = [], handleCategoryFilter }) {
             />
           ))}
         </span>
-        <h1>HI</h1>
+        <span className='w-[70vw] md:w-[40vw] lg:w-[400px]'>
+          <Image
+            src='/Images/Price-Filter.png'
+            alt='...'
+            width={400}
+            height={400}
+          />
+        </span>
       </div>
     </div>
   )
