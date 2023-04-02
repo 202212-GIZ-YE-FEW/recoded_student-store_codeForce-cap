@@ -23,7 +23,7 @@ export default function Buttons({ filters = [], handleCategoryFilter }) {
             Categories
           </button>
         </span>
-        <span className='bg-high-lighter bg-[length:50%_100%] bg-[center] bg-no-repeat hidden lg:block text-center'>
+        <span className='bg-[url("/images/Highlighter.png")] bg-[length:50%_100%] bg-[center] bg-no-repeat hidden lg:block text-center'>
           <h2>Price Filter</h2>
         </span>
       </div>
