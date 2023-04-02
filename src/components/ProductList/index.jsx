@@ -15,11 +15,11 @@ export default function ProductList({ products = [], selectedFilter }) {
 
   return (
     <div>
-      <div className='carts grid xl:grid-cols-4 lg:grid-cols-4 md:grid-cols-2 sm:grid-cols-1 m-auto w-full'>
+      <div className='grid xl:grid-cols-4 lg:grid-cols-4 md:grid-cols-2 sm:grid-cols-1 m-auto w-full'>
         {categoryFilter.map((product) => (
           <div
             key={product.id}
-            className='cart mx-3 mb-10 border rounded-lg shadow-lg'
+            className='mx-3 mb-10 border rounded-lg shadow-lg'
           >
             <Image
               src='/productImg.png'
