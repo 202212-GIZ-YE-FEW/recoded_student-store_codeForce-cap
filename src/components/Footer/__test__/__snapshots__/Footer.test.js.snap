@@ -1,3 +1,283 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`renders correctly 1`] = `null`;
+exports[`renders correctly 1`] = `
+<footer>
+  <div
+    className="relative lg:flex lg:justify-evenly bg-[#32314C] w-full h-full break-all mt-auto pb-32"
+  >
+    <div
+      className="ml-5 pt-5"
+    >
+      <a
+        href="/"
+        onClick={[Function]}
+        onMouseEnter={[Function]}
+        onTouchStart={[Function]}
+      >
+        <img
+          alt="logo"
+          data-nimg="1"
+          decoding="async"
+          height={250}
+          loading="lazy"
+          onError={[Function]}
+          onLoad={[Function]}
+          src="logo-footer.svg"
+          style={
+            Object {
+              "color": "transparent",
+            }
+          }
+          width={350}
+        />
+      </a>
+      <div
+        className="absolute bottom-16 left-5 lg:left-40 lg:bottom-1"
+      >
+        <a
+          href="#"
+        >
+          <img
+            alt="Google Play"
+            className="box-content p-2 pt-6 md:w-32 lg:w-48"
+            data-nimg="1"
+            decoding="async"
+            height={49}
+            loading="lazy"
+            onError={[Function]}
+            onLoad={[Function]}
+            src="play-google.svg"
+            style={
+              Object {
+                "color": "transparent",
+              }
+            }
+            width={175}
+          />
+        </a>
+        <a
+          href="#"
+        >
+          <img
+            alt="App Store"
+            className="box-content p-2 md:w-32 lg:w-48"
+            data-nimg="1"
+            decoding="async"
+            height={49}
+            loading="lazy"
+            onError={[Function]}
+            onLoad={[Function]}
+            src="app-store.svg"
+            style={
+              Object {
+                "color": "transparent",
+              }
+            }
+            width={175}
+          />
+        </a>
+      </div>
+    </div>
+    <div
+      className="pl-14 pt-5 md:pt-14"
+    >
+      <ul
+        className="font-poppins text-white font-bold md:text-1xl lg:text-2xl"
+      >
+        <li
+          className="mb-4"
+        >
+          <a
+            className="hover:underline"
+            href="/"
+            onClick={[Function]}
+            onMouseEnter={[Function]}
+            onTouchStart={[Function]}
+          >
+            About US
+          </a>
+        </li>
+        <li>
+          <a
+            className="hover:underline"
+            href="/"
+            onClick={[Function]}
+            onMouseEnter={[Function]}
+            onTouchStart={[Function]}
+          >
+            Our Team
+          </a>
+        </li>
+        <li>
+          <h2
+            className="pt-4"
+          >
+            Contact Us:
+          </h2>
+          <ul
+            className="text-gray-600 dark:text-gray-400 font-medium"
+          >
+            <li
+              className="pt-4"
+            >
+              (555)678-9012
+            </li>
+            <li
+              className="pt-2"
+            >
+              contact@studentstore.com
+            </li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+    <div
+      className="pl-14 pt-10 md:pt-14"
+    >
+      <ul
+        className="font-poppins text-white font-bold md:text-1xl lg:text-2xl"
+      >
+        <li
+          className="mb-4"
+        >
+          <a
+            className="hover:underline "
+            href="/"
+            onClick={[Function]}
+            onMouseEnter={[Function]}
+            onTouchStart={[Function]}
+          >
+            Register for free
+          </a>
+        </li>
+        <li
+          className="mb-4"
+        >
+          <a
+            className="hover:underline"
+            href="/"
+            onClick={[Function]}
+            onMouseEnter={[Function]}
+            onTouchStart={[Function]}
+          >
+            Start Selling
+          </a>
+        </li>
+        <li
+          className="mb-4"
+        >
+          <a
+            className="hover:underline"
+            href="/"
+            onClick={[Function]}
+            onMouseEnter={[Function]}
+            onTouchStart={[Function]}
+          >
+            Buy Products
+          </a>
+        </li>
+      </ul>
+      <div
+        className="absolute md:flex justify-between bottom-64 right-0 lg:right-96 lg:top-64"
+      >
+        <a
+          href="#"
+        >
+          <img
+            alt="Facebook"
+            className="md:w-15 lg:w-15 m-5"
+            data-nimg="1"
+            decoding="async"
+            height={70}
+            loading="lazy"
+            onError={[Function]}
+            onLoad={[Function]}
+            src="facebook.svg"
+            style={
+              Object {
+                "color": "transparent",
+              }
+            }
+            width={60}
+          />
+        </a>
+        <a
+          href="#"
+        >
+          <img
+            alt="Twitter"
+            className="md:w-15 lg:w-15 m-5"
+            data-nimg="1"
+            decoding="async"
+            height={70}
+            loading="lazy"
+            onError={[Function]}
+            onLoad={[Function]}
+            src="twitter.svg"
+            style={
+              Object {
+                "color": "transparent",
+              }
+            }
+            width={60}
+          />
+        </a>
+        <a
+          href="#"
+        >
+          <img
+            alt="Instagram"
+            className="md:w-15 lg:w-15 m-5"
+            data-nimg="1"
+            decoding="async"
+            height={70}
+            loading="lazy"
+            onError={[Function]}
+            onLoad={[Function]}
+            src="instagram.svg"
+            style={
+              Object {
+                "color": "transparent",
+              }
+            }
+            width={60}
+          />
+        </a>
+      </div>
+    </div>
+    <div
+      className="flex justify-end h-36 pt-32 lg:pt-14"
+    >
+      <h2
+        className="m-0 font-poppins text-white font-bold md:text-2xl lg:text-2xl pt-2"
+      >
+        Scroll Up!
+      </h2>
+      <a
+        href="/"
+        onClick={[Function]}
+        onMouseEnter={[Function]}
+        onTouchStart={[Function]}
+      >
+        <img
+          alt="UP"
+          className="w-10 ml-2 mr-5 lg:mr-0"
+          data-nimg="1"
+          decoding="async"
+          height={35}
+          loading="lazy"
+          onError={[Function]}
+          onLoad={[Function]}
+          src="up-arrow.svg"
+          style={
+            Object {
+              "color": "transparent",
+            }
+          }
+          width={45}
+        />
+      </a>
+    </div>
+  </div>
+</footer>
+`;
