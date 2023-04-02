@@ -15,18 +15,18 @@ exports[`renders correctly 1`] = `
           alt="handbox"
           data-nimg="1"
           decoding="async"
-          height={40}
+          height={500}
           loading="lazy"
           onError={[Function]}
           onLoad={[Function]}
-          src="/_next/image?url=%2Fimg.jpg&w=96&q=75"
-          srcSet="/_next/image?url=%2Fimg.jpg&w=48&q=75 1x, /_next/image?url=%2Fimg.jpg&w=96&q=75 2x"
+          src="/_next/image?url=%2Fimg.jpg&w=1080&q=75"
+          srcSet="/_next/image?url=%2Fimg.jpg&w=640&q=75 1x, /_next/image?url=%2Fimg.jpg&w=1080&q=75 2x"
           style={
             Object {
               "color": "transparent",
             }
           }
-          width={40}
+          width={500}
         />
       </div>
     </div>

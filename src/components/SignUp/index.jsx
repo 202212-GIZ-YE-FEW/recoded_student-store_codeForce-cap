@@ -10,7 +10,7 @@ function Signup() {
       <div className={`flex justify-center   md:flex-row  bg-[#f1f6fa] `}>
         <div className={` ${styles.handbox_background}   w-3/6 `}>
           <div className=' p-20 '>
-            <Image src={handbox} alt='handbox' />
+            <Image src={handbox} alt='handbox' width={500} height={500} />
           </div>
         </div>
         <div
