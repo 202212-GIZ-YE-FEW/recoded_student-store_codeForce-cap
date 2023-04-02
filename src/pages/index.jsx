@@ -2,12 +2,11 @@ import Link from "next/link"
 import { useTranslation } from "next-i18next"
 import { serverSideTranslations } from "next-i18next/serverSideTranslations"
 
-import Filter from "@/components/Filter"
 import Donation from "@/components/donation"
+import Filter from "@/components/Filter"
 import Footer from "@/components/Footer"
 import Hero from "@/components/hero/Hero"
 import Navbar from "@/components/Navbar"
-import ProductList from "@/components/ProductList"
 import Signup from "@/components/Signup"
 
 import RootLayout from "@/layout/root/RootLayout"
