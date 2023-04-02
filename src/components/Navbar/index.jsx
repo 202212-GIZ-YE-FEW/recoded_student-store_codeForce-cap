@@ -11,7 +11,7 @@ import { TfiWorld } from "react-icons/tfi"
 
 import styles from "./Navbar.module.css"
 
-import Logo from "./Logo"
+import Logo from "./logo"
 export default function Navbar() {
   const [languages, setLanguages] = useState(false)
   const [open, setOpen] = useState(false)
