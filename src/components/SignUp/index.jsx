@@ -7,13 +7,15 @@ import handbox from "../../../public/images/hands_box.png"
 function Signup() {
   return (
     <div>
-      <div className={`flex justify-center  md:flex-row  bg-[#f1f6fa] `}>
+      <div className={`flex justify-center   md:flex-row  bg-[#f1f6fa] `}>
         <div className={` ${styles.handbox_background}   w-3/6 `}>
           <div className=' p-20 '>
             <Image src={handbox} alt='handbox' />
           </div>
         </div>
-        <div className={`container ${styles.form_mobile}   w-3/6 items-center`}>
+        <div
+          className={` container ${styles.form_mobile}   w-3/6 items-center`}
+        >
           <div className='container m-auto flex w-5/6 flex-col items-center'>
             <h1 className='my-2 py-6 text-4xl font-semibold text-[#485DCF] md:my-3 md:text-5xl'>
               Sign-Up

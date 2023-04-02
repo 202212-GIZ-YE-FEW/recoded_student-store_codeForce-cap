@@ -4,7 +4,7 @@
       #f1f6fa 4.53%,
       rgba(217, 217, 217, 0) 85.6%
     ),
-    url("../../../public/images/Signup_background.jpg");
+    url("/images/Signup_background.jpg");
   background-size: cover;
 }
 
@@ -16,7 +16,7 @@
         #f1f6fa 4.53%,
         rgba(217, 217, 217, 0) 100%
       ),
-      url("../../../public/images/Signup_background.jpg");
+      url("/images/Signup_background.jpg");
     background-size: cover;
   }
   .handbox_background {
