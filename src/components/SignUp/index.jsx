@@ -3,14 +3,18 @@ import { BsFacebook, BsGoogle, BsTwitter } from "react-icons/bs"
 
 import styles from "./Signup.module.css"
 
-import handbox from "../../../public/images/hands_box.png"
 function Signup() {
   return (
     <div>
       <div className={`flex justify-center   md:flex-row  bg-[#f1f6fa] `}>
         <div className={` ${styles.handbox_background}   w-3/6 `}>
           <div className=' p-20 '>
-            <Image src={handbox} alt='handbox' width={500} height={500} />
+            <Image
+              src='/images/hands_box.png'
+              alt='handbox'
+              width={500}
+              height={500}
+            />
           </div>
         </div>
         <div

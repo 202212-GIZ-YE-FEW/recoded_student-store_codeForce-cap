@@ -19,8 +19,8 @@ exports[`renders correctly 1`] = `
           loading="lazy"
           onError={[Function]}
           onLoad={[Function]}
-          src="/_next/image?url=%2Fimg.jpg&w=1080&q=75"
-          srcSet="/_next/image?url=%2Fimg.jpg&w=640&q=75 1x, /_next/image?url=%2Fimg.jpg&w=1080&q=75 2x"
+          src="/_next/image?url=%2Fimages%2Fhands_box.png&w=1080&q=75"
+          srcSet="/_next/image?url=%2Fimages%2Fhands_box.png&w=640&q=75 1x, /_next/image?url=%2Fimages%2Fhands_box.png&w=1080&q=75 2x"
           style={
             Object {
               "color": "transparent",
