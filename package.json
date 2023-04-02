@@ -24,6 +24,7 @@
     "format": "prettier -w .",
     "format:check": "prettier -c .",
     "release": "standard-version",
+    "pull": "git pull && npm i",
     "push-release": "git push --follow-tags origin main",
     "postbuild": "next-sitemap --config next-sitemap.config.js",
     "storybook": "start-storybook -p 6006",

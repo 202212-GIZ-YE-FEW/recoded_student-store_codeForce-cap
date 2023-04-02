@@ -3,9 +3,12 @@ import { useTranslation } from "next-i18next"
 import { serverSideTranslations } from "next-i18next/serverSideTranslations"
 
 import Filter from "@/components/Filter"
+import Donation from "@/components/donation"
 import Footer from "@/components/Footer"
 import Hero from "@/components/hero/Hero"
 import Navbar from "@/components/Navbar"
+import ProductList from "@/components/ProductList"
+import Signup from "@/components/Signup"
 
 import RootLayout from "@/layout/root/RootLayout"
 
@@ -16,6 +19,7 @@ export default function HomePage() {
     <>
       <RootLayout>
         <Navbar />
+        <Signup />
         <p>{t("test")}</p>
         <div style={{ display: "flex", flexDirection: "row", gap: "20px" }}>
           <Link href='/' locale='en'>
@@ -27,6 +31,7 @@ export default function HomePage() {
         </div>
         <Hero />
         <Filter />
+        <Donation />
         <Footer />
       </RootLayout>
     </>
