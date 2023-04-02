@@ -11,6 +11,7 @@ import { TbArrowBadgeDown } from "react-icons/tb"
 import { TfiWorld } from "react-icons/tfi"
 
 import LogoImg from "../../../public/Logo.png"
+
 export default function Navbar() {
   const [languages, setLanguages] = useState(false)
   const [open, setOpen] = useState(false)
@@ -119,11 +120,11 @@ export default function Navbar() {
         <div className='flex  justify-between items-center gap-5 flex-col md:flex-row '>
           <div className='flex gap-3 capitalize flex-col md:flex-row'>
             <Link href='/components/Signup'>
-              <div className='bg-violet-700 py-2 px-5 text-white rounded-3xl text-sm hover:bg-violet-800 transition-all cursor-pointer'>
+              <div className='bg-purple-light py-2 px-5 text-white rounded-3xl text-sm hover:bg-violet-800 transition-all cursor-pointer'>
                 sign up
               </div>
             </Link>
-            <div className='bg-violet-700 py-2 px-5 text-white rounded-3xl text-sm hover:bg-violet-800 transition-all cursor-pointer'>
+            <div className='bg-purple-light py-2 px-5 text-white rounded-3xl text-sm hover:bg-violet-800 transition-all cursor-pointer'>
               sell items
             </div>
           </div>

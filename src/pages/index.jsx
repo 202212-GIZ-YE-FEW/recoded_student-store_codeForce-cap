@@ -2,10 +2,14 @@ import { useTranslation } from "next-i18next"
 import { serverSideTranslations } from "next-i18next/serverSideTranslations"
 import Link from "next/link"
 
+import Donation from "@/components/donation"
+import Footer from "@/components/Footer"
+import Hero from "@/components/hero/Hero"
 import Navbar from "@/components/Navbar"
+import ProductList from "@/components/ProductList"
+import Signup from "@/components/Signup"
 
 import RootLayout from "@/layout/root/RootLayout"
-import Signup from "@/components/Signup"
 
 export default function HomePage() {
   const { t } = useTranslation("common")
@@ -24,6 +28,10 @@ export default function HomePage() {
             العربية
           </Link>
         </div>
+        <Hero />
+        <Donation />
+        <ProductList />
+        <Footer />
       </RootLayout>
     </>
   )

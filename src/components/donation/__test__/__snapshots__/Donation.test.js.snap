@@ -1,0 +1,245 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders correctly 1`] = `
+<section
+  className="max-w-[1250px] mx-auto my-[50px]"
+>
+  <div
+    className="flex flex-col items-center justify-center font-poppins"
+  >
+    <div
+      className="lg:max-w-[100%] max-w-[85%] mx-auto"
+    >
+      <img
+        alt="donation image"
+        className="rounded"
+        data-nimg="1"
+        decoding="async"
+        height={524}
+        loading="lazy"
+        onError={[Function]}
+        onLoad={[Function]}
+        src="/_next/image?url=%2Fimages%2Funsplash_1.jpg&w=3840&q=75"
+        srcSet="/_next/image?url=%2Fimages%2Funsplash_1.jpg&w=1200&q=75 1x, /_next/image?url=%2Fimages%2Funsplash_1.jpg&w=3840&q=75 2x"
+        style={
+          Object {
+            "color": "transparent",
+          }
+        }
+        width={1124}
+      />
+    </div>
+    <div
+      className="flex flex-col mt-20 items-center justify-center max-w-screen-md"
+    >
+      <div
+        className="flex flex-col justify-center items-center relative text-purple text-5xl font-bold"
+      >
+        <div
+          className=" -rotate-3"
+        >
+          <img
+            alt="highlighter icon"
+            data-nimg="1"
+            decoding="async"
+            height={180}
+            loading="lazy"
+            onError={[Function]}
+            onLoad={[Function]}
+            src="/_next/image?url=%2Fimages%2FHighlighter.png&w=1200&q=75"
+            srcSet="/_next/image?url=%2Fimages%2FHighlighter.png&w=640&q=75 1x, /_next/image?url=%2Fimages%2FHighlighter.png&w=1200&q=75 2x"
+            style={
+              Object {
+                "color": "transparent",
+              }
+            }
+            width={578}
+          />
+        </div>
+        <div
+          className="absolute mb-[57px] text-center"
+        >
+          <h2>
+            Why Donate?
+          </h2>
+        </div>
+      </div>
+      <p
+        className="text-purple-dark p-3 text-4xl leading-relaxed text-center"
+      >
+        Life is busy, and it can sometimes be easy to forget to show your gratitude for all that you’ve been given. Students have low budgets and they’re in need of financial support. When you are ready to give and are researching groups of people to support, this can remind us of all that we have, and the act of donating to charity is a way to express our feelings gratitude. Inspire others to give by posting your kind action on social media to inspire others to give generously.
+      </p>
+    </div>
+    <div
+      className="relative mt-14 text-5xl"
+    >
+      <img
+        alt="currency icon"
+        data-nimg="1"
+        decoding="async"
+        height={117}
+        loading="lazy"
+        onError={[Function]}
+        onLoad={[Function]}
+        src="highlighter.svg"
+        style={
+          Object {
+            "color": "transparent",
+          }
+        }
+        width={888}
+      />
+      <div
+        className=" absolute -translate-y-28"
+      >
+        <h2
+          className="font-bold text-purple text-center"
+        >
+          Make a Difference by Donating!
+        </h2>
+      </div>
+    </div>
+    <div
+      className="flex flex-row flex-wrap items-center justify-around gap-12 p-10"
+    >
+      <div
+        className="mt-20 h-[240px] w-[280px] flex flex-col  justify-center items-center rounded-xl bg-white text-purple-almostblack shadow-lg"
+      >
+        <div
+          className="mt-8 flex flex-col items-center gap-2"
+        >
+          <span
+            className="text-xl"
+          >
+            Small Help
+          </span>
+          <div
+            className="relative flex items-center"
+          >
+            <span
+              className="absolute text-2xl -left-3 top-6"
+            >
+              <img
+                alt="currency icon"
+                data-nimg="1"
+                decoding="async"
+                height={12}
+                loading="lazy"
+                onError={[Function]}
+                onLoad={[Function]}
+                src="currency.svg"
+                style={
+                  Object {
+                    "color": "transparent",
+                  }
+                }
+                width={8}
+              />
+            </span>
+            <span
+              className="font-bold text-[44px]"
+            >
+              10
+            </span>
+          </div>
+        </div>
+        <button
+          className="flex h-12 w-[65%] items-center justify-center rounded bg-pumpkin px-14 text-sm text-white  transition-all duration-[0.3s] ease-[ease-in-out] cursor-pointer hover:bg-purple"
+        >
+          Donate
+        </button>
+      </div>
+      <div
+        className="mt-10 h-[280px] w-[320px] flex flex-col  justify-center items-center rounded-xl bg-white text-purple-almostblack shadow-lg"
+      >
+        <div
+          className="mt-6 flex flex-col items-center"
+        >
+          <span
+            className="mb-4 text-2xl"
+          >
+            Some Help
+          </span>
+          <div
+            className="relative flex items-center"
+          >
+            <span
+              className="absolute text-2xl -left-3 top-8"
+            >
+              <img
+                alt="currency icon"
+                data-nimg="1"
+                decoding="async"
+                height={12}
+                loading="lazy"
+                onError={[Function]}
+                onLoad={[Function]}
+                src="currency.svg"
+                style={
+                  Object {
+                    "color": "transparent",
+                  }
+                }
+                width={12}
+              />
+            </span>
+            <span
+              className="font-bold text-[58px]"
+            >
+              25
+            </span>
+          </div>
+        </div>
+        <button
+          className="flex h-12 w-[65%] items-center justify-center rounded bg-pumpkin px-[70px] text-sm  text-white transition-all duration-[0.3s] ease-[ease-in-out] cursor-pointer hover:bg-purple"
+        >
+          Donate
+        </button>
+      </div>
+      <div
+        className="h-[320px] w-[380px] flex flex-col  justify-center items-center rounded-xl bg-white text-purple-almostblack shadow-lg"
+      >
+        <span
+          className="text-3xl"
+        >
+          Big Help
+        </span>
+        <div
+          className="relative flex items-center"
+        >
+          <span
+            className="absolute text-3xl -left-4 top-18"
+          >
+            <img
+              alt="currency icon"
+              data-nimg="1"
+              decoding="async"
+              height={16}
+              loading="lazy"
+              onError={[Function]}
+              onLoad={[Function]}
+              src="currency.svg"
+              style={
+                Object {
+                  "color": "transparent",
+                }
+              }
+              width={16}
+            />
+          </span>
+          <span
+            className="text-[69px] font-bold"
+          >
+            50
+          </span>
+        </div>
+        <button
+          className="flex h-12 w-[65%] items-center justify-center rounded bg-pumpkin px-20 text-xl text-white transition-all duration-[0.3s] ease-[ease-in-out] cursor-pointer hover:bg-purple"
+        >
+          Donate!
+        </button>
+      </div>
+    </div>
+  </div>
+</section>
+`;
