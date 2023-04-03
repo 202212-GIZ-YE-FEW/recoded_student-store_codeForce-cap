@@ -1,3 +1,4 @@
+import Image from "next/image"
 import Link from "next/link"
 import { useState } from "react"
 import {
@@ -9,17 +10,19 @@ import { RxHamburgerMenu } from "react-icons/rx"
 import { TbArrowBadgeDown } from "react-icons/tb"
 import { TfiWorld } from "react-icons/tfi"
 
-import Logo from "./Logo"
+import LogoImg from "../../../public/Logo.png"
+
 export default function Navbar() {
   const [languages, setLanguages] = useState(false)
   const [open, setOpen] = useState(false)
-
   return (
     <div
       className={`navbar  m-auto px-10 md:flex md:flex-row py-4 justify-between gap-5 items-center bg-white transition-all 
       `}
     >
-      <Logo />
+      <div className='w-[130px]'>
+        <Image src={LogoImg} alt='logo' />
+      </div>
       {/* ----------- Languages ----------- */}
       <div className='flex items-end cursor-pointer absolute right-14 top-8 md:static order-2 md:hidden'>
         <div
@@ -116,10 +119,12 @@ export default function Navbar() {
         {/* ----------- Buttons ----------- */}
         <div className='flex  justify-between items-center gap-5 flex-col md:flex-row '>
           <div className='flex gap-3 capitalize flex-col md:flex-row'>
-            <div className='bg-violet-700 py-2 px-5 text-white rounded-3xl text-sm hover:bg-violet-800 transition-all cursor-pointer'>
-              sign up
-            </div>
-            <div className='bg-violet-700 py-2 px-5 text-white rounded-3xl text-sm hover:bg-violet-800 transition-all cursor-pointer'>
+            <Link href='/components/Signup'>
+              <div className='bg-purple-light py-2 px-5 text-white rounded-3xl text-sm hover:bg-violet-800 transition-all cursor-pointer'>
+                sign up
+              </div>
+            </Link>
+            <div className='bg-purple-light py-2 px-5 text-white rounded-3xl text-sm hover:bg-violet-800 transition-all cursor-pointer'>
               sell items
             </div>
           </div>

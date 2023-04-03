@@ -1,0 +1,25 @@
+.handbox_background {
+  background: linear-gradient(
+      270deg,
+      #f1f6fa 4.53%,
+      rgba(217, 217, 217, 0) 85.6%
+    ),
+    url("/images/Signup_background.jpg");
+  background-size: cover;
+}
+
+@media screen and (max-width: 820px) {
+  .form_mobile {
+    width: 100%;
+    background: linear-gradient(
+        360deg,
+        #f1f6fa 4.53%,
+        rgba(217, 217, 217, 0) 100%
+      ),
+      url("/images/Signup_background.jpg");
+    background-size: cover;
+  }
+  .handbox_background {
+    display: none;
+  }
+}
