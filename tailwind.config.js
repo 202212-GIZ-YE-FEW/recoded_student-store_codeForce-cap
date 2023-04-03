@@ -14,8 +14,8 @@ module.exports = {
         poppins: ["Poppins", "sans-serif"],
       },
       backgroundImage: {
-        'background-title': "url('/background-title.svg')",
-      }
+        "background-title": "url('/background-title.svg')",
+      },
     },
   },
   plugins: [],
