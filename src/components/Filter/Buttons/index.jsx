@@ -17,13 +17,11 @@ export default function Buttons({ filters = [], handleCategoryFilter }) {
 
   return (
     <div className='flex flex-col font-poppins mb-10'>
-      <div className='grid grid-cols-2 gap-x-10 text-[7vw] md:text-[5vw] lg:text-[3vw] text-bubble-gum font-bold py-5 text-center lg:text-left ml-[28vw] md:ml-[26vw] lg:ml-0 w-full'>
-        <span className='bg-[url("/images/Highlighter.png")] bg-[length:45vw_100%] md:bg-[length:32vw_100%] lg:bg-[length:50%_100%] bg-no-repeat md:bg-center lg:bg-left-bottom'>
-          <button className='lg:ml-9' onClick={() => handleCategoryFilter("")}>
-            Categories
-          </button>
+      <div className='grid grid-cols-1 lg:grid-cols-2 py-5 lg:ml-0'>
+        <span className='block bg-[url("/images/Highlighter.png")] bg-[bottom] bg-[length:70%_70%] bg-no-repeat text-center text-[200%] md:text-[400%] text-bubble-gum font-bold'>
+          <button onClick={() => handleCategoryFilter("")}>Categories</button>
         </span>
-        <span className='bg-[url("/images/Highlighter.png")] bg-[length:50%_100%] bg-[center] bg-no-repeat hidden lg:block text-center'>
+        <span className='hidden lg:block bg-[url("/images/Highlighter.png")] bg-[bottom] lg:bg-[length:70%_70%] bg-no-repeat text-center text-[400%] text-bubble-gum font-bold'>
           <h2>Price Filter</h2>
         </span>
       </div>
