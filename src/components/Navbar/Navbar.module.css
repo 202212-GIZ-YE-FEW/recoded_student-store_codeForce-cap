@@ -1,0 +1,37 @@
+.input {
+  outline: none;
+}
+.search {
+  animation: to-right 0.5s ease-in-out;
+}
+.navbar {
+  transition: 0.5s ease-in-out;
+  box-shadow: 0 0 20px 3px rgba(#ddd, 0.8);
+}
+.show {
+  animation: fadeUp 0.5s linear;
+}
+/* Animations */
+@keyframes to-right {
+  0% {
+    flex: 0;
+    opacity: 0;
+  }
+  100% {
+    width: 300px;
+    flex: 1;
+
+    opacity: 1;
+  }
+}
+@keyframes fadeUp {
+  0% {
+    transform: translateY(10px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+
+    opacity: 1;
+  }
+}

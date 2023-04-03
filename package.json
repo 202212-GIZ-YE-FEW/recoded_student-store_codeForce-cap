@@ -24,6 +24,7 @@
     "format": "prettier -w .",
     "format:check": "prettier -c .",
     "release": "standard-version",
+    "pull": "git pull && npm i",
     "push-release": "git push --follow-tags origin main",
     "postbuild": "next-sitemap --config next-sitemap.config.js",
     "storybook": "start-storybook -p 6006",
@@ -40,6 +41,7 @@
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-icons": "^4.8.0",
+    "react-range": "^1.8.14",
     "react-router-dom": "^6.3.0",
     "react-test-renderer": "^18.2.0"
   },

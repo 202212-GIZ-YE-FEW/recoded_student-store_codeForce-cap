@@ -1,8 +1,8 @@
 import renderer from "react-test-renderer"
 
-import ProductList from ".."
+import Signup from ".."
 
 it("renders correctly", () => {
-  const tree = renderer.create(<ProductList />).toJSON()
+  const tree = renderer.create(<Signup />).toJSON()
   expect(tree).toMatchSnapshot()
 })
