@@ -1,5 +1,7 @@
 import Image from "next/image"
 
+import Highlighter from "@/components/highlighter"
+
 import PriceFilter from "../Price"
 
 export default function Buttons({ filters = [], handleCategoryFilter }) {
@@ -18,12 +20,10 @@ export default function Buttons({ filters = [], handleCategoryFilter }) {
   return (
     <div className='flex flex-col font-poppins mb-10'>
       <div className='grid grid-cols-1 lg:grid-cols-2 py-5 lg:ml-0'>
-        <span className='block bg-[url("/images/Highlighter.png")] bg-[bottom] bg-[length:70%_70%] bg-no-repeat text-center text-[200%] md:text-[400%] text-bubble-gum font-bold'>
-          <button onClick={() => handleCategoryFilter("")}>Categories</button>
-        </span>
-        <span className='hidden lg:block bg-[url("/images/Highlighter.png")] bg-[bottom] lg:bg-[length:70%_70%] bg-no-repeat text-center text-[400%] text-bubble-gum font-bold'>
-          <h2>Price Filter</h2>
-        </span>
+        <button onClick={() => handleCategoryFilter("")}>
+          <Highlighter highlighterStyle='category' text='Categories' />
+        </button>
+        <Highlighter highlighterStyle='priceFilter' text='Price Filter' />
       </div>
       <div className='flex flex-col lg:flex-row justify-between shadow-2xl rounded-[8vw] lg:rounded-full items-center lg:pr-20 py-10'>
         <span className='grid grid-cols-4 gap-4 md:gap-20 lg:gap-4 pb-10 lg:pb-0 mx-auto pr-4 lg:px-0'>
