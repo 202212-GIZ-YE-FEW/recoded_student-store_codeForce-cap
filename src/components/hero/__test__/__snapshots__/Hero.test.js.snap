@@ -5,17 +5,16 @@ exports[`renders correctly 1`] = `
   className="max-w-[1250px] mx-auto my-[50px]"
 >
   <div
-    className="jsx-6903023578c7ee5b "
+    className=""
   >
     <div
-      className="jsx-6903023578c7ee5b keen-slider zoom-out px-15"
+      className="zoom-out keen-slider px-15"
     >
       <div
-        className="jsx-6903023578c7ee5b keen-slider__slide absolute w-full h-full"
+        className="keen-slider__slide absolute w-full h-full"
       >
         <div
-          className="jsx-6903023578c7ee5b mx-10"
-
+          className="mx-10"
           style={Object {}}
         >
           <img
@@ -39,11 +38,10 @@ exports[`renders correctly 1`] = `
         </div>
       </div>
       <div
-        className="jsx-6903023578c7ee5b keen-slider__slide absolute w-full h-full"
+        className="keen-slider__slide absolute w-full h-full"
       >
         <div
-          className="jsx-6903023578c7ee5b mx-10"
-
+          className="mx-10"
           style={Object {}}
         >
           <img
@@ -67,11 +65,10 @@ exports[`renders correctly 1`] = `
         </div>
       </div>
       <div
-        className="jsx-6903023578c7ee5b keen-slider__slide absolute w-full h-full"
+        className="keen-slider__slide absolute w-full h-full"
       >
         <div
-          className="jsx-6903023578c7ee5b mx-10"
-
+          className="mx-10"
           style={Object {}}
         >
           <img
@@ -95,11 +92,10 @@ exports[`renders correctly 1`] = `
         </div>
       </div>
       <div
-        className="jsx-6903023578c7ee5b keen-slider__slide absolute w-full h-full"
+        className="keen-slider__slide absolute w-full h-full"
       >
         <div
-          className="jsx-6903023578c7ee5b mx-10"
-
+          className="mx-10"
           style={Object {}}
         >
           <img
