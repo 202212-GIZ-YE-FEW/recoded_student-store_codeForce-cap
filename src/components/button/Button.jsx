@@ -1,4 +1,5 @@
 import PropTypes from "prop-types"
+
 const BUTTON_STYLES = {
   orangeSignIn:
     "h-10 w-40 lg:w-48 lg:px-5 p-1 px-4 rounded-lg border-1 bg-pumpkin text-md font-normal text-white shadow-sm",
@@ -40,6 +41,7 @@ Button.propTypes = {
   type: PropTypes.oneOf(["button", "submit"]),
   text: PropTypes.string.isRequired,
   handleClick: PropTypes.func,
+  icon: PropTypes.string,
 }
 
 export default Button
