@@ -32,6 +32,7 @@
   },
   "dependencies": {
     "clsx": "^1.2.1",
+    "css-loader": "^6.7.3",
     "date-fns": "^2.29.1",
     "eslint-plugin-jest": "^26.6.0",
     "i18next": "^21.9.0",
