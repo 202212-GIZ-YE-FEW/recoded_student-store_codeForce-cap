@@ -4,6 +4,79 @@ exports[`renders correctly 1`] = `
 <section
   className="max-w-[1250px] mx-auto my-[50px]"
 >
-  <div />
+  <div>
+    <div>
+      <img
+        alt="Photo-one"
+        className="h-full w-full max-w-full object-cover"
+        data-nimg="1"
+        decoding="async"
+        height={500}
+        loading="lazy"
+        onError={[Function]}
+        onLoad={[Function]}
+        src="photo-one.svg"
+        style={
+          Object {
+            "color": "transparent",
+          }
+        }
+        width={500}
+      />
+    </div>
+    <div>
+      <img
+        alt="photo-two"
+        className="h-full w-full object-cover"
+        data-nimg="1"
+        decoding="async"
+        height={100}
+        loading="lazy"
+        onError={[Function]}
+        onLoad={[Function]}
+        src="photo-two.svg"
+        style={
+          Object {
+            "color": "transparent",
+          }
+        }
+        width={100}
+      />
+      <img
+        alt="photo-three"
+        className="h-full w-full object-cover"
+        data-nimg="1"
+        decoding="async"
+        height={100}
+        loading="lazy"
+        onError={[Function]}
+        onLoad={[Function]}
+        src="photo-three.svg"
+        style={
+          Object {
+            "color": "transparent",
+          }
+        }
+        width={100}
+      />
+      <img
+        alt="photo-four"
+        className="h-full w-full object-cover"
+        data-nimg="1"
+        decoding="async"
+        height={100}
+        loading="lazy"
+        onError={[Function]}
+        onLoad={[Function]}
+        src="photo-four.svg"
+        style={
+          Object {
+            "color": "transparent",
+          }
+        }
+        width={100}
+      />
+    </div>
+  </div>
 </section>
 `;
