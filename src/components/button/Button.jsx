@@ -20,6 +20,7 @@ function Button({
   type = "button",
   text = "",
   handleClick,
+  icon,
 }) {
   return (
     <button
@@ -27,6 +28,7 @@ function Button({
       onClick={handleClick}
       type={type}
     >
+      {icon && <i className={icon}></i>}
       {text}
     </button>
   )
