@@ -10,6 +10,7 @@ import Navbar from "@/components/Navbar"
 import Signup from "@/components/Signup"
 
 import RootLayout from "@/layout/root/RootLayout"
+import PhotosGallery from "@/components/PhotosGallery"
 
 export default function HomePage() {
   const { t } = useTranslation("common")
@@ -18,6 +19,7 @@ export default function HomePage() {
     <>
       <RootLayout>
         <Navbar />
+        <PhotosGallery />
         <Signup />
         <p>{t("test")}</p>
         <div style={{ display: "flex", flexDirection: "row", gap: "20px" }}>

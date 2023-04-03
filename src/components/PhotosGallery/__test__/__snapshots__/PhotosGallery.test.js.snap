@@ -1,0 +1,9 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders correctly 1`] = `
+<section
+  className="max-w-[1250px] mx-auto my-[50px]"
+>
+  <div />
+</section>
+`;
