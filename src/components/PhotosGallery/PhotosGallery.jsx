@@ -1,21 +1,21 @@
 import Image from "next/image"
 import React, { useEffect, useState } from "react"
 
-import { SectionWrapper } from "@/hoc"
-
-function PhotosGallery({ largimage, imgone, imgtwo, imgthree }) {
-  // console.log("ff", largimage)
+function PhotosGallery(props) {
   const [file, setFile] = useState(null)
+
   const onChangeImageHandler = (e) => {
     if (e.target.files[0]) {
-      setFile(e.target.files[0])
+      const reader = new FileReader()
+      reader.onload = () => {
+        setFile(reader.result)
+      }
+      reader.readAsDataURL(e.target.files[0])
       e.target.value = ""
     }
   }
 
-  useEffect(() => {
-    // console.log(file)
-  }, [file])
+  useEffect(() => {}, [file])
 
   function dropLargeImage() {
     return (
@@ -63,11 +63,11 @@ function PhotosGallery({ largimage, imgone, imgtwo, imgthree }) {
 
   return (
     <div className='flex flex-col lg:flex-col md:flex-row w-full justify-center'>
-      <div className='lg:m-0 my-auto'>
-        {largimage ? (
+      <div className='lg:m-0 my-auto w-full justify-center'>
+        {props.largimage ? (
           <Image
-            className='h-full w-full lg:w-full lg:h-full md:w-96 md:h-60 object-cover'
-            src={largimage}
+            className='h-full w-full lg:w-full lg:h-full md:w-full object-cover'
+            src={props.largimage}
             width={500}
             height={500}
             alt='Photo-one'
@@ -78,10 +78,10 @@ function PhotosGallery({ largimage, imgone, imgtwo, imgthree }) {
       </div>
       <div className='flex lg:w-full md:w-1/2 lg:flex-nowrap md:flex-wrap ml-0 lg:ml-0 md:ml-3 mt-3 lg:mt-3 md:mt-0'>
         <div className='w-full p-1'>
-          {imgone ? (
+          {props.imgone ? (
             <Image
               className='block h-full w-full rounded-lg object-cover object-center'
-              src='photo-three.svg'
+              src={props.imgone}
               width={500}
               height={500}
               alt='Photo-three'
@@ -91,10 +91,10 @@ function PhotosGallery({ largimage, imgone, imgtwo, imgthree }) {
           )}
         </div>
         <div className='lg:w-full md:w-1/2 w-full p-1'>
-          {imgtwo ? (
+          {props.imgtwo ? (
             <Image
               className='block h-full w-full rounded-lg object-cover object-center'
-              src='photo-two.svg'
+              src={props.imgtwo}
               width={100}
               height={100}
               alt='photo-two'
@@ -104,10 +104,10 @@ function PhotosGallery({ largimage, imgone, imgtwo, imgthree }) {
           )}
         </div>
         <div className='lg:w-full md:w-1/2 w-full p-1'>
-          {imgthree ? (
+          {props.imgthree ? (
             <Image
               className='block h-full w-full rounded-lg object-cover object-center'
-              src='photo-four.svg'
+              src={props.imgthree}
               width={100}
               height={100}
               alt='photo-four'
@@ -121,4 +121,4 @@ function PhotosGallery({ largimage, imgone, imgtwo, imgthree }) {
   )
 }
 
-export default SectionWrapper(PhotosGallery)
+export default PhotosGallery
