@@ -36,7 +36,7 @@ exports[`renders correctly 1`] = `
                   onLoad={[Function]}
                   src="photo-one.svg"
                   style={
-                    Object {
+                    {
                       "color": "transparent",
                     }
                   }
@@ -65,7 +65,7 @@ exports[`renders correctly 1`] = `
                     onLoad={[Function]}
                     src="photo-two.svg"
                     style={
-                      Object {
+                      {
                         "color": "transparent",
                       }
                     }
@@ -87,7 +87,7 @@ exports[`renders correctly 1`] = `
                     onLoad={[Function]}
                     src="photo-three.svg"
                     style={
-                      Object {
+                      {
                         "color": "transparent",
                       }
                     }
@@ -109,7 +109,7 @@ exports[`renders correctly 1`] = `
                     onLoad={[Function]}
                     src="photo-four.svg"
                     style={
-                      Object {
+                      {
                         "color": "transparent",
                       }
                     }
@@ -198,7 +198,7 @@ exports[`renders correctly 1`] = `
                   onLoad={[Function]}
                   src="cat-photo.svg"
                   style={
-                    Object {
+                    {
                       "color": "transparent",
                     }
                   }
@@ -259,7 +259,7 @@ exports[`renders correctly 1`] = `
           onLoad={[Function]}
           src="map.svg"
           style={
-            Object {
+            {
               "color": "transparent",
             }
           }
