@@ -76,7 +76,7 @@ function PhotosGallery({ largimage, imgone, imgtwo, imgthree }) {
           dropLargeImage()
         )}
       </div>
-      <div className='flex lg:w-full md:w-1/2 lg:flex-nowrap md:flex-wrap'>
+      <div className='flex lg:w-full md:w-1/2 lg:flex-nowrap md:flex-wrap ml-0 lg:ml-0 md:ml-3 mt-3 lg:mt-3 md:mt-0'>
         <div className='w-full p-1'>
           {imgone ? (
             <Image
