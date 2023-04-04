@@ -1,7 +1,8 @@
 import Image from "next/image"
 
-import { SectionWrapper } from "@/hoc"
 import PhotosGallery from "@/components/PhotosGallery"
+
+import { SectionWrapper } from "@/hoc"
 
 function SingleProduct() {
   return (

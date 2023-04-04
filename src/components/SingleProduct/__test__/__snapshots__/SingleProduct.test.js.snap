@@ -16,18 +16,18 @@ exports[`renders correctly 1`] = `
         <div
           className="lg:col-span-2 lg:row-end-1"
         >
-          <div
-            className="md:row"
+          <section
+            className="max-w-[1250px] mx-auto my-[50px]"
           >
             <div
-              className="md:col-span-1 lg:order-2 lg:ml-5"
+              className="flex flex-col lg:flex-col md:flex-row w-full justify-center"
             >
               <div
-                className="overflow-hidden rounded-lg"
+                className="lg:m-0 my-auto"
               >
                 <img
-                  alt=""
-                  className="h-full w-full max-w-full object-cover"
+                  alt="Photo-one"
+                  className="h-full w-full lg:w-full lg:h-full md:w-96 md:h-60 object-cover"
                   data-nimg="1"
                   decoding="async"
                   height={500}
@@ -43,20 +43,36 @@ exports[`renders correctly 1`] = `
                   width={500}
                 />
               </div>
-            </div>
-            <div
-              className="md:col-span-1 mt-2 w-full lg:order-1 lg:w-full justify-between"
-            >
               <div
-                className="flex lg:flex-row lg:items-start lg:w-full md:flex-none sm:flex-row sm:items-start sm:w-full"
+                className="flex lg:w-full md:w-1/3 lg:flex-nowrap md:flex-wrap"
               >
-                <button
-                  className="flex-0 aspect-square mb-3 h-32 w-full overflow-hidden rounded-lg border-2 border-transparent text-center"
-                  type="button"
+                <div
+                  className="w-full p-1"
                 >
                   <img
-                    alt=""
-                    className="h-full w-full object-cover"
+                    alt="Photo-three"
+                    className="block h-full w-full rounded-lg object-cover object-center"
+                    data-nimg="1"
+                    decoding="async"
+                    height={500}
+                    loading="lazy"
+                    onError={[Function]}
+                    onLoad={[Function]}
+                    src="photo-three.svg"
+                    style={
+                      Object {
+                        "color": "transparent",
+                      }
+                    }
+                    width={500}
+                  />
+                </div>
+                <div
+                  className="lg:w-full md:w-1/2 w-full p-1"
+                >
+                  <img
+                    alt="photo-two"
+                    className="block h-full w-full rounded-lg object-cover object-center"
                     data-nimg="1"
                     decoding="async"
                     height={100}
@@ -71,36 +87,13 @@ exports[`renders correctly 1`] = `
                     }
                     width={100}
                   />
-                </button>
-                <button
-                  className="flex-0 aspect-square mb-3 h-32 w-full overflow-hidden rounded-lg border-2 border-transparent text-center"
-                  type="button"
+                </div>
+                <div
+                  className="lg:w-full md:w-1/2 w-full p-1"
                 >
                   <img
-                    alt=""
-                    className="h-full w-full object-cover"
-                    data-nimg="1"
-                    decoding="async"
-                    height={100}
-                    loading="lazy"
-                    onError={[Function]}
-                    onLoad={[Function]}
-                    src="photo-three.svg"
-                    style={
-                      Object {
-                        "color": "transparent",
-                      }
-                    }
-                    width={100}
-                  />
-                </button>
-                <button
-                  className="flex-0 aspect-square mb-3 h-32 w-full overflow-hidden rounded-lg border-2 border-transparent text-center"
-                  type="button"
-                >
-                  <img
-                    alt=""
-                    className="h-full w-full object-cover"
+                    alt="photo-four"
+                    className="block h-full w-full rounded-lg object-cover object-center"
                     data-nimg="1"
                     decoding="async"
                     height={100}
@@ -115,10 +108,10 @@ exports[`renders correctly 1`] = `
                     }
                     width={100}
                   />
-                </button>
+                </div>
               </div>
             </div>
-          </div>
+          </section>
         </div>
         <div
           className="lg:col-span-2 lg:row-span-2 lg:row-end-2"

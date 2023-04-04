@@ -10,6 +10,7 @@ import Navbar from "@/components/Navbar"
 import Signup from "@/components/Signup"
 
 import RootLayout from "@/layout/root/RootLayout"
+
 import SingleProduct from "./single-product"
 
 export default function HomePage() {
