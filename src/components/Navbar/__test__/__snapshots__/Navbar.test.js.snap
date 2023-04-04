@@ -19,7 +19,7 @@ exports[`renders correctly 1`] = `
       src="/_next/image?url=%2Fimg.jpg&w=96&q=75"
       srcSet="/_next/image?url=%2Fimg.jpg&w=48&q=75 1x, /_next/image?url=%2Fimg.jpg&w=96&q=75 2x"
       style={
-        Object {
+        {
           "color": "transparent",
         }
       }
@@ -40,7 +40,7 @@ exports[`renders correctly 1`] = `
         stroke="currentColor"
         strokeWidth="0"
         style={
-          Object {
+          {
             "color": undefined,
           }
         }
@@ -63,7 +63,7 @@ exports[`renders correctly 1`] = `
         strokeLinejoin="round"
         strokeWidth="2"
         style={
-          Object {
+          {
             "color": undefined,
           }
         }
@@ -108,7 +108,7 @@ exports[`renders correctly 1`] = `
     stroke="currentColor"
     strokeWidth="0"
     style={
-      Object {
+      {
         "color": undefined,
       }
     }
@@ -131,7 +131,7 @@ exports[`renders correctly 1`] = `
     stroke="currentColor"
     strokeWidth="0"
     style={
-      Object {
+      {
         "color": undefined,
       }
     }
@@ -185,7 +185,7 @@ exports[`renders correctly 1`] = `
           stroke="currentColor"
           strokeWidth="0"
           style={
-            Object {
+            {
               "color": undefined,
             }
           }
@@ -213,7 +213,7 @@ exports[`renders correctly 1`] = `
           stroke="currentColor"
           strokeWidth="0"
           style={
-            Object {
+            {
               "color": undefined,
             }
           }
@@ -236,7 +236,7 @@ exports[`renders correctly 1`] = `
           strokeLinejoin="round"
           strokeWidth="2"
           style={
-            Object {
+            {
               "color": undefined,
             }
           }
@@ -308,7 +308,7 @@ exports[`renders correctly 1`] = `
             stroke="currentColor"
             strokeWidth="0"
             style={
-              Object {
+              {
                 "color": undefined,
               }
             }

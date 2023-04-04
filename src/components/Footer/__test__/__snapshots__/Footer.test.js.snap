@@ -24,7 +24,7 @@ exports[`renders correctly 1`] = `
           onLoad={[Function]}
           src="logo-footer.svg"
           style={
-            Object {
+            {
               "color": "transparent",
             }
           }
@@ -48,7 +48,7 @@ exports[`renders correctly 1`] = `
             onLoad={[Function]}
             src="play-google.svg"
             style={
-              Object {
+              {
                 "color": "transparent",
               }
             }
@@ -69,7 +69,7 @@ exports[`renders correctly 1`] = `
             onLoad={[Function]}
             src="app-store.svg"
             style={
-              Object {
+              {
                 "color": "transparent",
               }
             }
@@ -194,7 +194,7 @@ exports[`renders correctly 1`] = `
             onLoad={[Function]}
             src="facebook.svg"
             style={
-              Object {
+              {
                 "color": "transparent",
               }
             }
@@ -215,7 +215,7 @@ exports[`renders correctly 1`] = `
             onLoad={[Function]}
             src="twitter.svg"
             style={
-              Object {
+              {
                 "color": "transparent",
               }
             }
@@ -236,7 +236,7 @@ exports[`renders correctly 1`] = `
             onLoad={[Function]}
             src="instagram.svg"
             style={
-              Object {
+              {
                 "color": "transparent",
               }
             }
@@ -270,7 +270,7 @@ exports[`renders correctly 1`] = `
           onLoad={[Function]}
           src="up-arrow.svg"
           style={
-            Object {
+            {
               "color": "transparent",
             }
           }
