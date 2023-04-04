@@ -12,6 +12,7 @@ const HIGHLIGHTER = {
   donating: `${img} ${text} ${block} lg:bg-[length:820.72px_76.43px] lg:text-[49px] md:bg-[length:571.49px_53.22px] md:text-[34.2499px] bg-[length:339.1px_31.58px] text-[20.3228px]`,
   ordersPage: `${img} ${text} ${block} lg:bg-[length:437.27px_38px] lg:text-[38px] md:bg-[length:313.92px_27.28px] md:text-[27px] bg-[length:233.67px_20.31px] text-[21px]`,
   lestingPage: `${img} ${text} ${block} lg:bg-[length:200px_38px] lg:text-[38px] md:bg-[length:313.92px_27.28px] md:text-[27.28px] bg-[length:233.67px_20.31px] text-[20.31px]`,
+  editProfile: `${img} ${text} ${block} lg:bg-[length:200px_38px] lg:text-[30px] md:bg-[length:314px_28px] md:text-[28px] bg-[length:234px_20px] text-[20px]`,
 }
 
 export default function Highlighter({
