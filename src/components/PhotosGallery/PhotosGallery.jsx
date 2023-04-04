@@ -1,9 +1,10 @@
 import Image from "next/image"
 import React, { useEffect, useState } from "react"
+
 import { SectionWrapper } from "@/hoc"
 
 function PhotosGallery({ largimage, imgone, imgtwo, imgthree }) {
-  console.log("ff", largimage)
+  // console.log("ff", largimage)
   const [file, setFile] = useState(null)
   const onChangeImageHandler = (e) => {
     if (e.target.files[0]) {
@@ -13,7 +14,7 @@ function PhotosGallery({ largimage, imgone, imgtwo, imgthree }) {
   }
 
   useEffect(() => {
-    console.log(file)
+    // console.log(file)
   }, [file])
 
   function dropLargeImage() {
