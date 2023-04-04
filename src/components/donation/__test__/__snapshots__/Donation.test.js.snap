@@ -22,7 +22,7 @@ exports[`renders correctly 1`] = `
         src="/_next/image?url=%2Fimages%2Funsplash_1.jpg&w=3840&q=75"
         srcSet="/_next/image?url=%2Fimages%2Funsplash_1.jpg&w=1200&q=75 1x, /_next/image?url=%2Fimages%2Funsplash_1.jpg&w=3840&q=75 2x"
         style={
-          Object {
+          {
             "color": "transparent",
           }
         }
@@ -49,7 +49,7 @@ exports[`renders correctly 1`] = `
             src="/_next/image?url=%2Fimages%2FHighlighter.png&w=1200&q=75"
             srcSet="/_next/image?url=%2Fimages%2FHighlighter.png&w=640&q=75 1x, /_next/image?url=%2Fimages%2FHighlighter.png&w=1200&q=75 2x"
             style={
-              Object {
+              {
                 "color": "transparent",
               }
             }
@@ -83,7 +83,7 @@ exports[`renders correctly 1`] = `
         onLoad={[Function]}
         src="highlighter.svg"
         style={
-          Object {
+          {
             "color": "transparent",
           }
         }
@@ -129,7 +129,7 @@ exports[`renders correctly 1`] = `
                 onLoad={[Function]}
                 src="currency.svg"
                 style={
-                  Object {
+                  {
                     "color": "transparent",
                   }
                 }
@@ -176,7 +176,7 @@ exports[`renders correctly 1`] = `
                 onLoad={[Function]}
                 src="currency.svg"
                 style={
-                  Object {
+                  {
                     "color": "transparent",
                   }
                 }
@@ -220,7 +220,7 @@ exports[`renders correctly 1`] = `
               onLoad={[Function]}
               src="currency.svg"
               style={
-                Object {
+                {
                   "color": "transparent",
                 }
               }
