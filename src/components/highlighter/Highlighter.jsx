@@ -21,9 +21,10 @@ const HIGHLIGHTER = {
 export default function Highlighter({
   highlighterStyle = "category",
   text = "Student store",
+  className = "",
 }) {
   return (
-    <span className={HIGHLIGHTER[highlighterStyle]}>
+    <span className={`${HIGHLIGHTER[highlighterStyle]} ${className}`}>
       <h2>{text}</h2>
     </span>
   )
