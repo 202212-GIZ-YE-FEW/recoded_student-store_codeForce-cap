@@ -5,7 +5,8 @@ const block = "block"
 
 const HIGHLIGHTER = {
   category: `${img} ${text} ${block} bg-[length:70%_70%] text-[200%] md:text-[400%]`,
-  priceFilter: `${img} ${text} hidden lg:${block} lg:bg-[length:70%_70%] text-[400%]`,
+  priceFilter: `${img} ${text} lg:${block} hidden lg:bg-[length:70%_70%] text-[400%]`,
+  singleProduct: `${img} ${text} ${block} lg:bg-[length:250.65px_38px] lg:text-[38px] md:bg-[length:197.35px_30px] md:text-[30px] bg-[length:140px_21px] text-[21px]`,
 }
 
 export default function Highlighter({
