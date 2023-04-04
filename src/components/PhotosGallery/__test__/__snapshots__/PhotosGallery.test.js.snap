@@ -4,11 +4,13 @@ exports[`renders correctly 1`] = `
 <section
   className="max-w-[1250px] mx-auto my-[50px]"
 >
-  <div>
+  <div
+    className="flex flex-col lg:flex-col md:flex-row w-full"
+  >
     <div>
       <img
         alt="Photo-one"
-        className="h-full w-full max-w-full object-cover"
+        className="h-full w-full lg:w-full lg:h-full md:w-96 md:h-60 object-cover"
         data-nimg="1"
         decoding="async"
         height={500}
@@ -24,10 +26,12 @@ exports[`renders correctly 1`] = `
         width={500}
       />
     </div>
-    <div>
+    <div
+      className="flex justify-between lg:flex-row md:flex-col"
+    >
       <img
         alt="photo-two"
-        className="h-full w-full object-cover"
+        className="w-full object-cover"
         data-nimg="1"
         decoding="async"
         height={100}
@@ -44,7 +48,7 @@ exports[`renders correctly 1`] = `
       />
       <img
         alt="photo-three"
-        className="h-full w-full object-cover"
+        className="w-full lg:w-full md:w-60 object-cover"
         data-nimg="1"
         decoding="async"
         height={100}
@@ -61,7 +65,7 @@ exports[`renders correctly 1`] = `
       />
       <img
         alt="photo-four"
-        className="h-full w-full object-cover"
+        className="w-full object-cover"
         data-nimg="1"
         decoding="async"
         height={100}

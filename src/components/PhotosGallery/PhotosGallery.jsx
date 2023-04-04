@@ -4,8 +4,8 @@ import Image from "next/image"
 
 function PhotosGallery() {
   return (
-    <div className='flex flex-col lg:flex-col md:flex-row w-full'>
-      <div>
+    <div className='flex flex-col lg:flex-col md:flex-row w-full justify-center'>
+      <div className='lg:m-0 my-auto'>
         <Image
           className='h-full w-full lg:w-full lg:h-full md:w-96 md:h-60 object-cover'
           src='photo-one.svg'
@@ -14,28 +14,34 @@ function PhotosGallery() {
           alt='Photo-one'
         />
       </div>
-      <div className='flex justify-between lg:flex-row md:flex-col'>
-        <Image
-          className='w-full object-cover'
-          src='photo-two.svg'
-          width={100}
-          height={100}
-          alt='photo-two'
-        />
-        <Image
-          className='w-full lg:w-full md:w-60 object-cover'
-          src='photo-three.svg'
-          width={100}
-          height={100}
-          alt='photo-three'
-        />
-        <Image
-          className='w-full object-cover'
-          src='photo-four.svg'
-          width={100}
-          height={100}
-          alt='photo-four'
-        />
+      <div className='flex lg:w-full md:w-1/3 lg:flex-nowrap md:flex-wrap'>
+        <div className='w-full p-1'>
+          <Image
+            className='block h-full w-full rounded-lg object-cover object-center'
+            src='photo-three.svg'
+            width={500}
+            height={500}
+            alt='Photo-three'
+          />
+        </div>
+        <div className='lg:w-full md:w-1/2 w-full p-1'>
+          <Image
+            className='block h-full w-full rounded-lg object-cover object-center'
+            src='photo-two.svg'
+            width={100}
+            height={100}
+            alt='photo-two'
+          />
+        </div>
+        <div className='lg:w-full md:w-1/2 w-full p-1'>
+          <Image
+            className='block h-full w-full rounded-lg object-cover object-center'
+            src='photo-four.svg'
+            width={100}
+            height={100}
+            alt='photo-four'
+          />
+        </div>
       </div>
     </div>
   )
