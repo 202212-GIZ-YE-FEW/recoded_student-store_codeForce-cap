@@ -1,6 +1,6 @@
 import renderer from "react-test-renderer"
 
-import Signup from "../index"
+import Signup from ".."
 
 it("renders correctly", () => {
   const tree = renderer.create(<Signup />).toJSON()
