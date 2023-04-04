@@ -1,7 +1,11 @@
+// Repeated
+const img = "bg-[url('/images/Highlighter.png')] bg-bottom bg-no-repeat"
+const text = "text-purple-light text-center font-bold tracking-[-1px]"
+const block = "block"
+
 const HIGHLIGHTER = {
-  category: `block bg-[url("/images/Highlighter.png")] bg-[bottom] bg-[length:70%_70%] bg-no-repeat text-center text-[200%] md:text-[400%] text-purple-light font-bold`,
-  priceFilter:
-    'hidden lg:block bg-[url("/images/Highlighter.png")] bg-[bottom] lg:bg-[length:70%_70%] bg-no-repeat text-center text-[400%] text-purple-light font-bold',
+  category: `${img} ${text} ${block} bg-[length:70%_70%] text-[200%] md:text-[400%]`,
+  priceFilter: `${img} ${text} hidden lg:${block} lg:bg-[length:70%_70%] text-[400%]`,
 }
 
 export default function Highlighter({
