@@ -20,7 +20,6 @@ module.exports = {
         "purple-almostblack": "#32314D",
         "purple-dark": "#585785",
         "purple-light": "#7874F2",
-        "bubble-gum": "#7874F2",
         pumpkin: "#FF8A57",
         skyblue: "#1B96EF",
         white: "#FFFFFF",
