@@ -1,6 +1,7 @@
-import { SectionWrapper } from "@/hoc"
-import React from "react"
 import Image from "next/image"
+import React from "react"
+
+import { SectionWrapper } from "@/hoc"
 
 function PhotosGallery() {
   return (

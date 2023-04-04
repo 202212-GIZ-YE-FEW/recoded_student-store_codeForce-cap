@@ -5,9 +5,11 @@ exports[`renders correctly 1`] = `
   className="max-w-[1250px] mx-auto my-[50px]"
 >
   <div
-    className="flex flex-col lg:flex-col md:flex-row w-full"
+    className="flex flex-col lg:flex-col md:flex-row w-full justify-center"
   >
-    <div>
+    <div
+      className="lg:m-0 my-auto"
+    >
       <img
         alt="Photo-one"
         className="h-full w-full lg:w-full lg:h-full md:w-96 md:h-60 object-cover"
@@ -27,59 +29,71 @@ exports[`renders correctly 1`] = `
       />
     </div>
     <div
-      className="flex justify-between lg:flex-row md:flex-col"
+      className="flex lg:w-full md:w-1/3 lg:flex-nowrap md:flex-wrap"
     >
-      <img
-        alt="photo-two"
-        className="w-full object-cover"
-        data-nimg="1"
-        decoding="async"
-        height={100}
-        loading="lazy"
-        onError={[Function]}
-        onLoad={[Function]}
-        src="photo-two.svg"
-        style={
-          Object {
-            "color": "transparent",
+      <div
+        className="w-full p-1"
+      >
+        <img
+          alt="Photo-three"
+          className="block h-full w-full rounded-lg object-cover object-center"
+          data-nimg="1"
+          decoding="async"
+          height={500}
+          loading="lazy"
+          onError={[Function]}
+          onLoad={[Function]}
+          src="photo-three.svg"
+          style={
+            Object {
+              "color": "transparent",
+            }
           }
-        }
-        width={100}
-      />
-      <img
-        alt="photo-three"
-        className="w-full lg:w-full md:w-60 object-cover"
-        data-nimg="1"
-        decoding="async"
-        height={100}
-        loading="lazy"
-        onError={[Function]}
-        onLoad={[Function]}
-        src="photo-three.svg"
-        style={
-          Object {
-            "color": "transparent",
+          width={500}
+        />
+      </div>
+      <div
+        className="lg:w-full md:w-1/2 w-full p-1"
+      >
+        <img
+          alt="photo-two"
+          className="block h-full w-full rounded-lg object-cover object-center"
+          data-nimg="1"
+          decoding="async"
+          height={100}
+          loading="lazy"
+          onError={[Function]}
+          onLoad={[Function]}
+          src="photo-two.svg"
+          style={
+            Object {
+              "color": "transparent",
+            }
           }
-        }
-        width={100}
-      />
-      <img
-        alt="photo-four"
-        className="w-full object-cover"
-        data-nimg="1"
-        decoding="async"
-        height={100}
-        loading="lazy"
-        onError={[Function]}
-        onLoad={[Function]}
-        src="photo-four.svg"
-        style={
-          Object {
-            "color": "transparent",
+          width={100}
+        />
+      </div>
+      <div
+        className="lg:w-full md:w-1/2 w-full p-1"
+      >
+        <img
+          alt="photo-four"
+          className="block h-full w-full rounded-lg object-cover object-center"
+          data-nimg="1"
+          decoding="async"
+          height={100}
+          loading="lazy"
+          onError={[Function]}
+          onLoad={[Function]}
+          src="photo-four.svg"
+          style={
+            Object {
+              "color": "transparent",
+            }
           }
-        }
-        width={100}
-      />
+          width={100}
+        />
+      </div>
     </div>
   </div>
 </section>
