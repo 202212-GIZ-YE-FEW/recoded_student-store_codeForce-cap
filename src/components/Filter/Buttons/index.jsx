@@ -8,7 +8,7 @@ export default function Buttons({ filters = [], handleCategoryFilter }) {
   const CategoryFilter = ({ filter, image, alt }) => (
     <button className='ml-4' onClick={() => handleCategoryFilter(filter)}>
       <Image
-        className='rounded-lg'
+        className='rounded-lg hover:opacity-70'
         src={image}
         alt={alt}
         width={150}
@@ -20,7 +20,10 @@ export default function Buttons({ filters = [], handleCategoryFilter }) {
   return (
     <div className='flex flex-col font-poppins mb-10'>
       <div className='grid grid-cols-1 lg:grid-cols-2 py-5 lg:ml-0'>
-        <button onClick={() => handleCategoryFilter("")}>
+        <button
+          className='hover:opacity-70'
+          onClick={() => handleCategoryFilter("")}
+        >
           <Highlighter highlighterStyle='category' text='Categories' />
         </button>
         <Highlighter highlighterStyle='priceFilter' text='Price Filter' />
