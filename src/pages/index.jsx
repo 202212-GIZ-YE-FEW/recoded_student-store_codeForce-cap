@@ -7,10 +7,10 @@ import Filter from "@/components/Filter"
 import Footer from "@/components/Footer"
 import Hero from "@/components/hero/Hero"
 import Navbar from "@/components/Navbar"
-import PhotosGallery from "@/components/PhotosGallery"
 import Signup from "@/components/Signup"
 
 import RootLayout from "@/layout/root/RootLayout"
+import SingleProduct from "./single-product"
 
 export default function HomePage() {
   const { t } = useTranslation("common")
@@ -19,7 +19,7 @@ export default function HomePage() {
     <>
       <RootLayout>
         <Navbar />
-        <PhotosGallery />
+        <SingleProduct />
         <Signup />
         <p>{t("test")}</p>
         <div style={{ display: "flex", flexDirection: "row", gap: "20px" }}>
