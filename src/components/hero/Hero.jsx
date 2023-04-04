@@ -36,7 +36,7 @@ function Hero() {
           clearTimeout(timeout)
           if (mouseOver) return
           timeout = setTimeout(() => {
-            slider.next()
+            // slider.next()
           }, 2000)
         }
         slider.on("created", () => {
