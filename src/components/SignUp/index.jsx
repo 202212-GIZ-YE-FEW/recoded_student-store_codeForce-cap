@@ -80,7 +80,7 @@ function Signup() {
               focus:ring-blue-500 focus:border-blue-500 '
               />
               <button
-                class=' bg-[#585785] font-light h-10 w-40 m-1 p-1 rounded-lg  text-[15px] text-white shadow-sm'
+                className=' bg-[#585785] font-light h-10 w-40 m-1 p-1 rounded-lg  text-[15px] text-white shadow-sm'
                 type='submit'
               >
                 Sign up
@@ -122,7 +122,7 @@ function Signup() {
               <p>Already have an account?</p>
             </div>
             <button
-              class='bg-[#585785] h-10 w-40 mb-20 p-1 rounded-lg  font-light text-[15px] text-white shadow-sm'
+              className='bg-[#585785] h-10 w-40 mb-20 p-1 rounded-lg  font-light text-[15px] text-white shadow-sm'
               type='submit'
             >
               Sign in
