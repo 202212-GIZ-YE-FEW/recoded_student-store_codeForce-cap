@@ -1,7 +1,7 @@
 const HIGHLIGHTER = {
-  category: `block bg-[url("/images/Highlighter.png")] bg-[bottom] bg-[length:70%_70%] bg-no-repeat text-center text-[200%] md:text-[400%] text-bubble-gum font-bold`,
+  category: `block bg-[url("/images/Highlighter.png")] bg-[bottom] bg-[length:70%_70%] bg-no-repeat text-center text-[200%] md:text-[400%] text-purple-light font-bold`,
   priceFilter:
-    'hidden lg:block bg-[url("/images/Highlighter.png")] bg-[bottom] lg:bg-[length:70%_70%] bg-no-repeat text-center text-[400%] text-bubble-gum font-bold',
+    'hidden lg:block bg-[url("/images/Highlighter.png")] bg-[bottom] lg:bg-[length:70%_70%] bg-no-repeat text-center text-[400%] text-purple-light font-bold',
 }
 
 export default function Highlighter({
