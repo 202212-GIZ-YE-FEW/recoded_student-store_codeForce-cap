@@ -16,6 +16,50 @@ function PhotosGallery({ largimage, imgone, imgtwo, imgthree }) {
     console.log(file)
   }, [file])
 
+  function dropLargeImage() {
+    return (
+      <div className='w-full'>
+        <div className='border border-solid bg-gray-300 border-black rounded relative '>
+          <input
+            type='file'
+            className='cursor-pointer relative opacity-0 w-full p-14 lg:p-24 md:p-24'
+            onChange={onChangeImageHandler}
+          ></input>
+          <div className='w-12 absolute top-10 md:top-20 lg:top-20 right-0 left-0 m-auto'>
+            <Image
+              src='gallery.svg'
+              width={100}
+              height={100}
+              alt='drop large image'
+            />
+          </div>
+        </div>
+      </div>
+    )
+  }
+
+  function dropImage() {
+    return (
+      <div className='w-full'>
+        <div className='border border-solid bg-gray-300 border-black rounded relative '>
+          <input
+            type='file'
+            className='cursor-pointer relative opacity-0 w-full p-8 lg:p-10 md:p-10'
+            onChange={onChangeImageHandler}
+          ></input>
+          <div className='w-8 absolute top-8 right-0 left-0 m-auto'>
+            <Image
+              src='gallery.svg'
+              width={100}
+              height={100}
+              alt='drop image'
+            />
+          </div>
+        </div>
+      </div>
+    )
+  }
+
   return (
     <div className='flex flex-col lg:flex-col md:flex-row w-full justify-center'>
       <div className='lg:m-0 my-auto'>
@@ -28,26 +72,10 @@ function PhotosGallery({ largimage, imgone, imgtwo, imgthree }) {
             alt='Photo-one'
           />
         ) : (
-          <div className='w-full'>
-            <div className='border border-solid bg-gray-300 border-black rounded relative '>
-              <input
-                type='file'
-                className='cursor-pointer relative opacity-0 w-full p-24'
-                onChange={onChangeImageHandler}
-              ></input>
-              <div className='w-12 md:w-14 lg:w-16 absolute top-20 right-0 left-0 m-auto'>
-                <Image
-                  src='gallery.svg'
-                  width={100}
-                  height={100}
-                  alt='drop image'
-                />
-              </div>
-            </div>
-          </div>
+          dropLargeImage()
         )}
       </div>
-      <div className='flex lg:w-full md:w-1/3 lg:flex-nowrap md:flex-wrap'>
+      <div className='flex lg:w-full md:w-1/2 lg:flex-nowrap md:flex-wrap'>
         <div className='w-full p-1'>
           {imgone ? (
             <Image
@@ -58,23 +86,7 @@ function PhotosGallery({ largimage, imgone, imgtwo, imgthree }) {
               alt='Photo-three'
             />
           ) : (
-            <div className='w-full'>
-              <div className='border border-solid bg-gray-300 border-black rounded relative '>
-                <input
-                  type='file'
-                  className='cursor-pointer relative opacity-0 w-full h-44 p-14'
-                  onChange={onChangeImageHandler}
-                ></input>
-                <div className='w-12 md:w-14 lg:w-16 absolute top-20 right-0 left-0 m-auto'>
-                  <Image
-                    src='gallery.svg'
-                    width={100}
-                    height={100}
-                    alt='drop image'
-                  />
-                </div>
-              </div>
-            </div>
+            dropImage()
           )}
         </div>
         <div className='lg:w-full md:w-1/2 w-full p-1'>
@@ -87,23 +99,7 @@ function PhotosGallery({ largimage, imgone, imgtwo, imgthree }) {
               alt='photo-two'
             />
           ) : (
-            <div className='w-full'>
-              <div className='border border-solid bg-gray-300 border-black rounded relative '>
-                <input
-                  type='file'
-                  className='cursor-pointer relative opacity-0 w-full h-full p-14'
-                  onChange={onChangeImageHandler}
-                ></input>
-                <div className='w-12 md:w-14 lg:w-16 absolute top-20 right-0 left-0 m-auto'>
-                  <Image
-                    src='gallery.svg'
-                    width={100}
-                    height={100}
-                    alt='drop image'
-                  />
-                </div>
-              </div>
-            </div>
+            dropImage()
           )}
         </div>
         <div className='lg:w-full md:w-1/2 w-full p-1'>
@@ -116,23 +112,7 @@ function PhotosGallery({ largimage, imgone, imgtwo, imgthree }) {
               alt='photo-four'
             />
           ) : (
-            <div className='w-full'>
-              <div className='border border-solid bg-gray-300 border-black rounded relative '>
-                <input
-                  type='file'
-                  className='cursor-pointer relative opacity-0 w-full p-14'
-                  onChange={onChangeImageHandler}
-                ></input>
-                <div className='w-12 md:w-14 lg:w-16 absolute top-20 right-0 left-0 m-auto'>
-                  <Image
-                    src='gallery.svg'
-                    width={100}
-                    height={100}
-                    alt='drop image'
-                  />
-                </div>
-              </div>
-            </div>
+            dropImage()
           )}
         </div>
       </div>

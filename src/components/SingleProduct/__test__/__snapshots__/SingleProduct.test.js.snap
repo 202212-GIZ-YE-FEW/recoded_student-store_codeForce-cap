@@ -25,23 +25,39 @@ exports[`renders correctly 1`] = `
               <div
                 className="lg:m-0 my-auto"
               >
-                <img
-                  alt="Photo-one"
-                  className="h-full w-full lg:w-full lg:h-full md:w-96 md:h-60 object-cover"
-                  data-nimg="1"
-                  decoding="async"
-                  height={500}
-                  loading="lazy"
-                  onError={[Function]}
-                  onLoad={[Function]}
-                  src="photo-one.svg"
-                  style={
-                    Object {
-                      "color": "transparent",
-                    }
-                  }
-                  width={500}
-                />
+                <div
+                  className="w-full"
+                >
+                  <div
+                    className="border border-solid bg-gray-300 border-black rounded relative "
+                  >
+                    <input
+                      className="cursor-pointer relative opacity-0 w-full p-24"
+                      onChange={[Function]}
+                      type="file"
+                    />
+                    <div
+                      className="w-12 md:w-14 lg:w-16 absolute top-20 right-0 left-0 m-auto"
+                    >
+                      <img
+                        alt="drop image"
+                        data-nimg="1"
+                        decoding="async"
+                        height={100}
+                        loading="lazy"
+                        onError={[Function]}
+                        onLoad={[Function]}
+                        src="gallery.svg"
+                        style={
+                          Object {
+                            "color": "transparent",
+                          }
+                        }
+                        width={100}
+                      />
+                    </div>
+                  </div>
+                </div>
               </div>
               <div
                 className="flex lg:w-full md:w-1/3 lg:flex-nowrap md:flex-wrap"
@@ -49,65 +65,113 @@ exports[`renders correctly 1`] = `
                 <div
                   className="w-full p-1"
                 >
-                  <img
-                    alt="Photo-three"
-                    className="block h-full w-full rounded-lg object-cover object-center"
-                    data-nimg="1"
-                    decoding="async"
-                    height={500}
-                    loading="lazy"
-                    onError={[Function]}
-                    onLoad={[Function]}
-                    src="photo-three.svg"
-                    style={
-                      Object {
-                        "color": "transparent",
-                      }
-                    }
-                    width={500}
-                  />
+                  <div
+                    className="w-full"
+                  >
+                    <div
+                      className="border border-solid bg-gray-300 border-black rounded relative "
+                    >
+                      <input
+                        className="cursor-pointer relative opacity-0 w-full h-44 p-14"
+                        onChange={[Function]}
+                        type="file"
+                      />
+                      <div
+                        className="w-12 md:w-14 lg:w-16 absolute top-20 right-0 left-0 m-auto"
+                      >
+                        <img
+                          alt="drop image"
+                          data-nimg="1"
+                          decoding="async"
+                          height={100}
+                          loading="lazy"
+                          onError={[Function]}
+                          onLoad={[Function]}
+                          src="gallery.svg"
+                          style={
+                            Object {
+                              "color": "transparent",
+                            }
+                          }
+                          width={100}
+                        />
+                      </div>
+                    </div>
+                  </div>
                 </div>
                 <div
                   className="lg:w-full md:w-1/2 w-full p-1"
                 >
-                  <img
-                    alt="photo-two"
-                    className="block h-full w-full rounded-lg object-cover object-center"
-                    data-nimg="1"
-                    decoding="async"
-                    height={100}
-                    loading="lazy"
-                    onError={[Function]}
-                    onLoad={[Function]}
-                    src="photo-two.svg"
-                    style={
-                      Object {
-                        "color": "transparent",
-                      }
-                    }
-                    width={100}
-                  />
+                  <div
+                    className="w-full"
+                  >
+                    <div
+                      className="border border-solid bg-gray-300 border-black rounded relative "
+                    >
+                      <input
+                        className="cursor-pointer relative opacity-0 w-full h-full p-14"
+                        onChange={[Function]}
+                        type="file"
+                      />
+                      <div
+                        className="w-12 md:w-14 lg:w-16 absolute top-20 right-0 left-0 m-auto"
+                      >
+                        <img
+                          alt="drop image"
+                          data-nimg="1"
+                          decoding="async"
+                          height={100}
+                          loading="lazy"
+                          onError={[Function]}
+                          onLoad={[Function]}
+                          src="gallery.svg"
+                          style={
+                            Object {
+                              "color": "transparent",
+                            }
+                          }
+                          width={100}
+                        />
+                      </div>
+                    </div>
+                  </div>
                 </div>
                 <div
                   className="lg:w-full md:w-1/2 w-full p-1"
                 >
-                  <img
-                    alt="photo-four"
-                    className="block h-full w-full rounded-lg object-cover object-center"
-                    data-nimg="1"
-                    decoding="async"
-                    height={100}
-                    loading="lazy"
-                    onError={[Function]}
-                    onLoad={[Function]}
-                    src="photo-four.svg"
-                    style={
-                      Object {
-                        "color": "transparent",
-                      }
-                    }
-                    width={100}
-                  />
+                  <div
+                    className="w-full"
+                  >
+                    <div
+                      className="border border-solid bg-gray-300 border-black rounded relative "
+                    >
+                      <input
+                        className="cursor-pointer relative opacity-0 w-full p-14"
+                        onChange={[Function]}
+                        type="file"
+                      />
+                      <div
+                        className="w-12 md:w-14 lg:w-16 absolute top-20 right-0 left-0 m-auto"
+                      >
+                        <img
+                          alt="drop image"
+                          data-nimg="1"
+                          decoding="async"
+                          height={100}
+                          loading="lazy"
+                          onError={[Function]}
+                          onLoad={[Function]}
+                          src="gallery.svg"
+                          style={
+                            Object {
+                              "color": "transparent",
+                            }
+                          }
+                          width={100}
+                        />
+                      </div>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
