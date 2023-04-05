@@ -1,5 +1,6 @@
 import Image from "next/image"
 import Link from "next/link"
+import { useEffect, useState } from "react"
 
 import Highlighter from "../highlighter"
 
@@ -14,8 +15,22 @@ export default function SideBar({
   name = "Name",
   email = "Email",
   location = "Location",
-  currentPageStyle = "smallScreen",
 }) {
+  const [currentPageStyle, setCurrentPageStyle] = useState("smallScreen")
+
+  useEffect(() => {
+    const handleResize = () => {
+      if (window.innerWidth >= 1024) {
+        setCurrentPageStyle("largeScreen")
+      } else {
+        setCurrentPageStyle("smallScreen")
+      }
+    }
+
+    handleResize()
+    window.addEventListener("resize", handleResize)
+    return () => window.removeEventListener("resize", handleResize)
+  }, [])
   return currentPageStyle === "largeScreen" ? (
     // If the expression true
     <section className={SIDE_BAR[currentPageStyle]}>
