@@ -4,7 +4,7 @@ import SideBar from "../SideBar"
 
 describe("SideBar", () => {
   it("renders large screen version correctly", () => {
-    const { container, getByText, getByAltText } = render(
+    const { container } = render(
       <SideBar
         img='/productImg.png'
         name='Test Name'
@@ -19,7 +19,7 @@ describe("SideBar", () => {
   })
 
   it("renders small screen version correctly", () => {
-    const { container, getByText } = render(
+    const { container } = render(
       <SideBar
         img='/productImg.png'
         name='Test Name'
