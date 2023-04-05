@@ -3,6 +3,7 @@ import React, { useEffect, useState } from "react"
 
 function PhotosGallery(props) {
   const [file, setFile] = useState(null)
+  const GALLERY_SVG = "gallery.svg"
 
   const onChangeImageHandler = (e) => {
     if (e.target.files?.[0]) {
@@ -26,7 +27,7 @@ function PhotosGallery(props) {
           ></input>
           <div className='w-12 absolute top-10 md:top-20 lg:top-20 right-0 left-0 m-auto'>
             <Image
-              src='gallery.svg'
+              src={GALLERY_SVG}
               width={100}
               height={100}
               alt='drop large image'
@@ -48,7 +49,7 @@ function PhotosGallery(props) {
           ></input>
           <div className='w-8 absolute top-8 right-0 left-0 m-auto'>
             <Image
-              src='gallery.svg'
+              src={GALLERY_SVG}
               width={100}
               height={100}
               alt='drop image'
