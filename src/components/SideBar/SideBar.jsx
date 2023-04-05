@@ -15,6 +15,7 @@ export default function SideBar({
   name = "Name",
   email = "Email",
   location = "Location",
+  link = "Link",
   currentPage = "editeProfile",
 }) {
   const [currentPageStyle, setCurrentPageStyle] = useState("smallScreen")
@@ -48,15 +49,15 @@ export default function SideBar({
           <p>{email}</p>
           <p>{location}</p>
         </div>
-        <Link href={currentPageStyle}>
+        <Link href={link}>
           <Highlighter highlighterStyle='editProfile' text='Edit Profile' />
         </Link>
         <div className='font-bold text-[31px] grid grid-rows-2 gap-8'>
           <h1>
-            <Link href={currentPageStyle}>My Listing</Link>
+            <Link href={link}>My Listing</Link>
           </h1>
           <h1>
-            <Link href={currentPageStyle}>My Orders</Link>
+            <Link href={link}>My Orders</Link>
           </h1>
         </div>
       </div>
@@ -65,22 +66,13 @@ export default function SideBar({
     //If the expression false
     <section className={SIDE_BAR[currentPageStyle]}>
       <div className='grid grid-cols-3 text-[17px] items-center text-purple-dark text-center bg-[#90EEE1] h-[38px]'>
-        <Link
-          className='focus:bg-[#7874F2] focus:text-[#d7d7d7]'
-          href={currentPageStyle}
-        >
+        <Link className='focus:bg-[#7874F2] focus:text-[#d7d7d7]' href={link}>
           My Orders
         </Link>
-        <Link
-          className='focus:bg-[#7874F2] focus:text-[#d7d7d7]'
-          href={currentPageStyle}
-        >
+        <Link className='focus:bg-[#7874F2] focus:text-[#d7d7d7]' href={link}>
           My Listing
         </Link>
-        <Link
-          className='focus:bg-[#7874F2] focus:text-[#d7d7d7]'
-          href={currentPageStyle}
-        >
+        <Link className='focus:bg-[#7874F2] focus:text-[#d7d7d7]' href={link}>
           Edit Profile
         </Link>
       </div>
