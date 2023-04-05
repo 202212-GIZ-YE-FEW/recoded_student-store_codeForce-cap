@@ -33,7 +33,7 @@ exports[`renders correctly 1`] = `
                 onLoad={[Function]}
                 src="photo-one.svg"
                 style={
-                  Object {
+                  {
                     "color": "transparent",
                   }
                 }
@@ -67,68 +67,40 @@ exports[`renders correctly 1`] = `
               <div
                 className="lg:w-full md:w-1/2 w-full p-1"
               >
-                <button
-                  className="flex-0 aspect-square mb-3 h-32 w-full overflow-hidden rounded-lg border-2 border-transparent text-center"
-                  type="button"
-                >
-                  <img
-                    alt=""
-                    className="h-full w-full object-cover"
-                    data-nimg="1"
-                    decoding="async"
-                    height={100}
-                    loading="lazy"
-                    onError={[Function]}
-                    onLoad={[Function]}
-                    src="photo-two.svg"
-                    style={
-                      {
-                        "color": "transparent",
-                      }
+                <img
+                  alt="photo-two"
+                  className="block h-full w-full rounded-lg object-cover object-center"
+                  data-nimg="1"
+                  decoding="async"
+                  height={100}
+                  loading="lazy"
+                  onError={[Function]}
+                  onLoad={[Function]}
+                  src="photo-three.svg"
+                  style={
+                    {
+                      "color": "transparent",
                     }
-                    width={100}
-                  />
-                </button>
-                <button
-                  className="flex-0 aspect-square mb-3 h-32 w-full overflow-hidden rounded-lg border-2 border-transparent text-center"
-                  type="button"
-                >
-                  <img
-                    alt=""
-                    className="h-full w-full object-cover"
-                    data-nimg="1"
-                    decoding="async"
-                    height={100}
-                    loading="lazy"
-                    onError={[Function]}
-                    onLoad={[Function]}
-                    src="photo-three.svg"
-                    style={
-                      {
-                        "color": "transparent",
-                      }
-                    }
-                    width={100}
-                  />
-                </button>
-                <button
-                  className="flex-0 aspect-square mb-3 h-32 w-full overflow-hidden rounded-lg border-2 border-transparent text-center"
-                  type="button"
-                >
-                  <img
-                    alt=""
-                    className="h-full w-full object-cover"
-                    data-nimg="1"
-                    decoding="async"
-                    height={100}
-                    loading="lazy"
-                    onError={[Function]}
-                    onLoad={[Function]}
-                    src="photo-four.svg"
-                    style={
-                      {
-                        "color": "transparent",
-                      }
+                  }
+                  width={100}
+                />
+              </div>
+              <div
+                className="lg:w-full md:w-1/2 w-full p-1"
+              >
+                <img
+                  alt="photo-four"
+                  className="block h-full w-full rounded-lg object-cover object-center"
+                  data-nimg="1"
+                  decoding="async"
+                  height={100}
+                  loading="lazy"
+                  onError={[Function]}
+                  onLoad={[Function]}
+                  src="photo-four.svg"
+                  style={
+                    {
+                      "color": "transparent",
                     }
                   }
                   width={100}

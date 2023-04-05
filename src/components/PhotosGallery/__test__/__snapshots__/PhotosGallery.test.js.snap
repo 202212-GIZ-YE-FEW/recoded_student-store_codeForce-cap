@@ -31,7 +31,7 @@ exports[`renders correctly 1`] = `
             onLoad={[Function]}
             src="gallery.svg"
             style={
-              Object {
+              {
                 "color": "transparent",
               }
             }
@@ -71,7 +71,7 @@ exports[`renders correctly 1`] = `
               onLoad={[Function]}
               src="gallery.svg"
               style={
-                Object {
+                {
                   "color": "transparent",
                 }
               }
@@ -108,7 +108,7 @@ exports[`renders correctly 1`] = `
               onLoad={[Function]}
               src="gallery.svg"
               style={
-                Object {
+                {
                   "color": "transparent",
                 }
               }
@@ -145,7 +145,7 @@ exports[`renders correctly 1`] = `
               onLoad={[Function]}
               src="gallery.svg"
               style={
-                Object {
+                {
                   "color": "transparent",
                 }
               }
