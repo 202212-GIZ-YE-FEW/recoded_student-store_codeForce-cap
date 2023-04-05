@@ -15,7 +15,7 @@ const HIGHLIGHTER = {
   donate: `${img} ${text} block lg:bg-[length:699.31px_65.38px] lg:text-[50px] md:bg-[length:400.2px_53.2px] md:text-[35px] bg-[length:298.4px_39.67px] text-[26px]`,
   donating: `${img} ${text} block lg:bg-[length:820.72px_76.43px] lg:text-[49px] md:bg-[length:571.49px_53.22px] md:text-[34.2499px] bg-[length:339.1px_31.58px] text-[21px]`,
   ordersPage: `${img} ${text} block ${lgSize} ${mdSize} ${smSize}`,
-  lestingPage: `${img} ${text} block ${mdSize} ${smSize} lg:bg-[length:200px_38px] lg:text-[38px]`,
+  listingPage: `${img} ${text} block ${mdSize} ${smSize} lg:bg-[length:200px_38px] lg:text-[38px]`,
   editProfile: `${img} ${text} block ${mdSize} ${smSize} lg:bg-[length:200px_38px] lg:text-[30px]`,
 }
 
