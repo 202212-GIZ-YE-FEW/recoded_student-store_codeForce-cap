@@ -15,6 +15,7 @@ export default function SideBar({
   name = "Name",
   email = "Email",
   location = "Location",
+  currentPage = "editeProfile",
 }) {
   const [currentPageStyle, setCurrentPageStyle] = useState("smallScreen")
 
@@ -90,13 +91,15 @@ export default function SideBar({
       <Highlighter highlighterStyle='editProfile' text='Edit Profile' />
       <br />
       <br />
-      <Image
-        className='rounded-full mx-auto'
-        src={img}
-        alt='...'
-        width={274}
-        height={275}
-      />
+      {currentPage === "editeProfile" ? (
+        <Image
+          className='rounded-full mx-auto'
+          src={img}
+          alt='...'
+          width={274}
+          height={275}
+        />
+      ) : null}
     </section>
   )
 }
