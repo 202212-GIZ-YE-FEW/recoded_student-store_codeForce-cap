@@ -22,7 +22,7 @@ exports[`renders correctly 1`] = `
           src="/_next/image?url=%2Fimages%2Fhands_box.png&w=1080&q=75"
           srcSet="/_next/image?url=%2Fimages%2Fhands_box.png&w=640&q=75 1x, /_next/image?url=%2Fimages%2Fhands_box.png&w=1080&q=75 2x"
           style={
-            Object {
+            {
               "color": "transparent",
             }
           }
@@ -81,7 +81,7 @@ exports[`renders correctly 1`] = `
             type="password"
           />
           <button
-            class=" bg-[#585785] font-light h-10 w-40 m-1 p-1 rounded-lg  text-[15px] text-white shadow-sm"
+            className=" bg-[#585785] font-light h-10 w-40 m-1 p-1 rounded-lg  text-[15px] text-white shadow-sm"
             type="submit"
           >
             Sign up
@@ -118,7 +118,7 @@ exports[`renders correctly 1`] = `
               stroke="currentColor"
               strokeWidth="0"
               style={
-                Object {
+                {
                   "color": "#F26F6F",
                   "padding": "1px",
                 }
@@ -147,7 +147,7 @@ exports[`renders correctly 1`] = `
               stroke="currentColor"
               strokeWidth="0"
               style={
-                Object {
+                {
                   "color": "#485DCF",
                   "padding": "1px",
                 }
@@ -176,7 +176,7 @@ exports[`renders correctly 1`] = `
               stroke="currentColor"
               strokeWidth="0"
               style={
-                Object {
+                {
                   "color": "#28C7FA",
                   "padding": "1px",
                 }
@@ -204,7 +204,7 @@ exports[`renders correctly 1`] = `
           </p>
         </div>
         <button
-          class="bg-[#585785] h-10 w-40 mb-20 p-1 rounded-lg  font-light text-[15px] text-white shadow-sm"
+          className="bg-[#585785] h-10 w-40 mb-20 p-1 rounded-lg  font-light text-[15px] text-white shadow-sm"
           type="submit"
         >
           Sign in

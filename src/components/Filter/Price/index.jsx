@@ -37,13 +37,13 @@ export default function PriceFilter() {
           type='text'
           value={`$${tempValues[0]}`}
           onChange={handleMinChange}
-          className='w-24 rounded-md px-2 py-1 outline-none focus:outline-[#FF8A57] focus:outline-offset-2'
+          className='bg-transparent w-24 rounded-md px-2 py-1 outline-none focus:outline-[#FF8A57] focus:outline-offset-2'
         />
         <input
           type='text'
           value={`$${tempValues[1]}`}
           onChange={handleMaxChange}
-          className='w-24 rounded-md px-2 py-1 outline-none focus:outline-[#FF8A57] focus:outline-offset-2'
+          className='bg-transparent w-24 rounded-md px-2 py-1 outline-none focus:outline-[#FF8A57] focus:outline-offset-2'
         />
       </div>
       <div className='mt-4 mx-4 md:mx-8 w-[90%]'>
