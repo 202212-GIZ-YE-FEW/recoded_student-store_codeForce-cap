@@ -16,35 +16,37 @@ export default function SideBar({
   location = "Location",
   currentPageStyle = "smallScreen",
 }) {
-  return (
-    // <section className={SIDE_BAR[currentPageStyle]}>
-    //   <div className='flex flex-col justify-around h-[75%]'>
-    //     <Image
-    //       className='rounded-full mx-auto mb-3'
-    //       src={img}
-    //       alt='...'
-    //       width={171}
-    //       height={171}
-    //     />
-    //     <div className='text-[22px]'>
-    //       <h2 className='font-semibold'>{name}</h2>
-    //       <p>{email}</p>
-    //       <p>{location}</p>
-    //     </div>
-    //     <Link href={currentPageStyle}>
-    //       <Highlighter highlighterStyle='editProfile' text='Edit Profile' />
-    //     </Link>
-    //     <div className='font-bold text-[31px] grid grid-rows-2 gap-8'>
-    //       <h1>
-    //         <Link href={currentPageStyle}>My Listing</Link>
-    //       </h1>
-    //       <h1>
-    //         <Link href={currentPageStyle}>My Orders</Link>
-    //       </h1>
-    //     </div>
-    //   </div>
-    // </section>
-
+  return currentPageStyle === "largeScreen" ? (
+    // If the expression true
+    <section className={SIDE_BAR[currentPageStyle]}>
+      <div className='flex flex-col justify-around h-[75%]'>
+        <Image
+          className='rounded-full mx-auto mb-3'
+          src={img}
+          alt='...'
+          width={171}
+          height={171}
+        />
+        <div className='text-[22px]'>
+          <h2 className='font-semibold'>{name}</h2>
+          <p>{email}</p>
+          <p>{location}</p>
+        </div>
+        <Link href={currentPageStyle}>
+          <Highlighter highlighterStyle='editProfile' text='Edit Profile' />
+        </Link>
+        <div className='font-bold text-[31px] grid grid-rows-2 gap-8'>
+          <h1>
+            <Link href={currentPageStyle}>My Listing</Link>
+          </h1>
+          <h1>
+            <Link href={currentPageStyle}>My Orders</Link>
+          </h1>
+        </div>
+      </div>
+    </section>
+  ) : (
+    //If the expression false
     <section className={SIDE_BAR[currentPageStyle]}>
       <div className='grid grid-cols-3 text-[17px] items-center text-purple-dark text-center bg-[#90EEE1] h-[38px]'>
         <Link
