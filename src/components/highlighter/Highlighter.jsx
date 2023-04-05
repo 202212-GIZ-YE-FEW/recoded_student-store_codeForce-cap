@@ -1,6 +1,7 @@
 // Repeated styles
 const img = "bg-[url('/images/Highlighter.png')] bg-bottom bg-no-repeat"
-const text = "text-purple-light text-center font-bold tracking-[-1px]"
+const text =
+  "text-purple-light font-poppins text-center font-bold tracking-[-1px]"
 const lgSize = "lg:bg-[length:437.27px_38px] lg:text-[38px]"
 const mdSize = "md:bg-[length:313.92px_27.28px] md:text-[27.28px]"
 const smSize = "bg-[length:233.67px_20.31px] text-[21px]"
@@ -24,8 +25,10 @@ export default function Highlighter({
   className = "",
 }) {
   return (
-    <span className={`${HIGHLIGHTER[highlighterStyle]} ${className}`}>
-      <h2>{text}</h2>
+    <span>
+      <span className={`${HIGHLIGHTER[highlighterStyle]} ${className}`}>
+        <h2>{text}</h2>
+      </span>
     </span>
   )
 }

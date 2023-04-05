@@ -18,7 +18,7 @@ export default function Buttons({ filters = [], handleCategoryFilter }) {
   )
 
   return (
-    <div className='flex flex-col font-poppins mb-10'>
+    <div className='flex flex-col mb-10'>
       <div className='grid grid-cols-1 lg:grid-cols-2 py-5 lg:ml-0'>
         <button
           className='hover:opacity-70'
