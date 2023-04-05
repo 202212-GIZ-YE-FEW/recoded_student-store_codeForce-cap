@@ -5,7 +5,7 @@ function PhotosGallery(props) {
   const [file, setFile] = useState(null)
 
   const onChangeImageHandler = (e) => {
-    if (e.target.files[0]) {
+    if (e.target.files?.[0]) {
       const reader = new FileReader()
       reader.onload = () => {
         setFile(reader.result)
