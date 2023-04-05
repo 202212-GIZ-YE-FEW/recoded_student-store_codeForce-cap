@@ -15,8 +15,6 @@ function PhotosGallery(props) {
     }
   }
 
-  useEffect(() => {}, [file])
-
   function dropLargeImage() {
     return (
       <div className='w-full'>
