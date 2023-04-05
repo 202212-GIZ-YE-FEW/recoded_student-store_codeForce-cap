@@ -7,7 +7,6 @@ import Filter from "@/components/Filter"
 import Footer from "@/components/Footer"
 import Hero from "@/components/hero/Hero"
 import Navbar from "@/components/Navbar"
-import SideBar from "@/components/SideBar"
 import Signup from "@/components/Signup"
 
 import RootLayout from "@/layout/root/RootLayout"
@@ -30,7 +29,6 @@ export default function HomePage() {
           </Link>
         </div>
         <Hero />
-        <SideBar />
         <Filter />
         <Donation />
         <Footer />
