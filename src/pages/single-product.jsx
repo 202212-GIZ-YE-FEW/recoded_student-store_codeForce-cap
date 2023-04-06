@@ -63,7 +63,7 @@ function SingleProduct() {
                     src='cat-photo.svg'
                     width={130}
                     height={100}
-                    alt=''
+                    alt='profile'
                     className='w-16 h-16 lg:w-32 lg:h-28 md:w-32 md:h-28'
                   />
                 </div>
@@ -86,7 +86,7 @@ function SingleProduct() {
           </div>
         </div>
         <div className='mt-20 w-full object-cover grid justify-items-center'>
-          <Image src='map.svg' width={1400} height={350} alt='' />
+          <Image src='map.svg' width={1400} height={350} alt='map' />
         </div>
       </div>
     </section>
