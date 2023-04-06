@@ -15,12 +15,17 @@ function SingleProduct() {
     { id: 5, url: "photo-five.svg" },
   ])
 
+  const handleRemovePhoto = (id) => {
+    const newPhotos = photos.filter((photo) => photo.id !== id)
+    setPhotos(newPhotos)
+  }
+
   return (
     <section className='py-12 sm:py-16'>
       <div className='container mx-auto px-4'>
         <div className='lg:col-gap-12 xl:col-gap-16 grid grid-cols-1 gap-12 lg:mt-12 lg:grid-cols-4 lg:gap-16 justify-items-center'>
           <div className='lg:col-span-2 lg:row-end-1'>
-            <PhotosGallery photos={photos} />
+            <PhotosGallery photos={photos} onRemove={handleRemovePhoto} />
           </div>
 
           <div className='lg:col-span-2 lg:row-span-2 lg:row-end-2'>
