@@ -1,7 +1,3 @@
-import React from "react"
-
-function Signin() {
-  return <div>Signin</div>
-}
+import Signin from "./Signin"
 
 export default Signin

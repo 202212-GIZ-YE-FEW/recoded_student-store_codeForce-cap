@@ -19,7 +19,7 @@ exports[`renders correctly 1`] = `
       src="/_next/image?url=%2Fimg.jpg&w=96&q=75"
       srcSet="/_next/image?url=%2Fimg.jpg&w=48&q=75 1x, /_next/image?url=%2Fimg.jpg&w=96&q=75 2x"
       style={
-        Object {
+        {
           "color": "transparent",
         }
       }
@@ -40,7 +40,7 @@ exports[`renders correctly 1`] = `
         stroke="currentColor"
         strokeWidth="0"
         style={
-          Object {
+          {
             "color": undefined,
           }
         }
@@ -63,7 +63,7 @@ exports[`renders correctly 1`] = `
         strokeLinejoin="round"
         strokeWidth="2"
         style={
-          Object {
+          {
             "color": undefined,
           }
         }
@@ -108,7 +108,7 @@ exports[`renders correctly 1`] = `
     stroke="currentColor"
     strokeWidth="0"
     style={
-      Object {
+      {
         "color": undefined,
       }
     }
@@ -131,7 +131,7 @@ exports[`renders correctly 1`] = `
     stroke="currentColor"
     strokeWidth="0"
     style={
-      Object {
+      {
         "color": undefined,
       }
     }
@@ -185,7 +185,7 @@ exports[`renders correctly 1`] = `
           stroke="currentColor"
           strokeWidth="0"
           style={
-            Object {
+            {
               "color": undefined,
             }
           }
@@ -213,7 +213,7 @@ exports[`renders correctly 1`] = `
           stroke="currentColor"
           strokeWidth="0"
           style={
-            Object {
+            {
               "color": undefined,
             }
           }
@@ -236,7 +236,7 @@ exports[`renders correctly 1`] = `
           strokeLinejoin="round"
           strokeWidth="2"
           style={
-            Object {
+            {
               "color": undefined,
             }
           }
@@ -279,13 +279,20 @@ exports[`renders correctly 1`] = `
       <div
         className="flex gap-3 capitalize flex-col md:flex-row"
       >
-        <div
-          className="bg-violet-700 py-2 px-5 text-white rounded-3xl text-sm hover:bg-violet-800 transition-all cursor-pointer"
+        <a
+          href="/components/Signup"
+          onClick={[Function]}
+          onMouseEnter={[Function]}
+          onTouchStart={[Function]}
         >
-          sign up
-        </div>
+          <div
+            className="bg-purple-light py-2 px-5 text-white rounded-3xl text-sm hover:bg-violet-800 transition-all cursor-pointer"
+          >
+            sign up
+          </div>
+        </a>
         <div
-          className="bg-violet-700 py-2 px-5 text-white rounded-3xl text-sm hover:bg-violet-800 transition-all cursor-pointer"
+          className="bg-purple-light py-2 px-5 text-white rounded-3xl text-sm hover:bg-violet-800 transition-all cursor-pointer"
         >
           sell items
         </div>
@@ -301,7 +308,7 @@ exports[`renders correctly 1`] = `
             stroke="currentColor"
             strokeWidth="0"
             style={
-              Object {
+              {
                 "color": undefined,
               }
             }

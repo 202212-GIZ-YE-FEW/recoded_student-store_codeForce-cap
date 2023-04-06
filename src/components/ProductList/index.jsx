@@ -1,24 +1,28 @@
-// disable the img error
-/* eslint-disable @next/next/no-img-element */
-
-//Import Image next component
 import Image from "next/image"
 
-// Import Resources
-import products from "./products"
+export default function ProductList({ products = [], selectedFilter }) {
+  // Remove duplicates from the products array
+  const uniqueProducts = [
+    ...new Set(products.map((product) => JSON.stringify(product))),
+  ].map((product) => JSON.parse(product))
 
-export default function ProductList() {
+  // Filter the products based on the selected filter (if any)
+  const categoryFilter = selectedFilter
+    ? uniqueProducts.filter((product) =>
+        product.category.includes(selectedFilter)
+      )
+    : uniqueProducts
+
   return (
-    //* Fetch The Products
-    <div className=''>
-      <div className='carts grid xl:grid-cols-4 lg:grid-cols-4 md:grid-cols-2 sm:grid-cols-1 m-auto w-full'>
-        {products.map((product) => (
+    <div>
+      <div className='grid xl:grid-cols-4 lg:grid-cols-4 md:grid-cols-2 sm:grid-cols-1 m-auto w-full'>
+        {categoryFilter.map((product) => (
           <div
             key={product.id}
-            className='cart mx-3 mb-10 border rounded-lg shadow-lg'
+            className='mx-3 mb-10 border rounded-lg shadow-lg'
           >
             <Image
-              src={product.image.src}
+              src='/productImg.png'
               alt={product.name}
               width={258}
               height={211.41}

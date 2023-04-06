@@ -3,7 +3,7 @@ import Image from "next/image"
 import { useState } from "react"
 
 import "keen-slider/keen-slider.min.css"
-import "./Hero.module.css"
+import styels from "./Hero.module.css"
 
 import { SectionWrapper } from "@/hoc"
 
@@ -36,7 +36,7 @@ function Hero() {
           clearTimeout(timeout)
           if (mouseOver) return
           timeout = setTimeout(() => {
-            slider.next()
+            // slider.next()
           }, 2000)
         }
         slider.on("created", () => {
@@ -71,7 +71,10 @@ function Hero() {
   return (
     <>
       <div className=''>
-        <div ref={sliderRef} className='keen-slider zoom-out px-15'>
+        <div
+          ref={sliderRef}
+          className={`${styels.zoom + "-out"} keen-slider px-15`}
+        >
           {images.map((src, idx) => (
             <div
               key={idx}
@@ -90,14 +93,6 @@ function Hero() {
           ))}
         </div>
       </div>
-      <style jsx>
-        {`
-          .zoom-out {
-            perspective: 1000px;
-            height: 520px;
-          }
-        `}
-      </style>
     </>
   )
 }
