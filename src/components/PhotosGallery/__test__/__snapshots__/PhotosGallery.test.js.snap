@@ -22,7 +22,7 @@ exports[`renders correctly 1`] = `
           className="w-12 absolute top-10 md:top-20 lg:top-20 right-0 left-0 m-auto"
         >
           <img
-            alt="drop large image"
+            alt="drop image"
             data-nimg="1"
             decoding="async"
             height={100}
