@@ -66,7 +66,7 @@ function PhotosGallery(props) {
         {props.largimage ? (
           <Image
             className={styles.imagefull}
-            src={props.largimage}
+            src={props?.largimage}
             width={500}
             height={500}
             alt='Photo-one'
@@ -80,7 +80,7 @@ function PhotosGallery(props) {
           {props.imgone ? (
             <Image
               className={styles.imageblock}
-              src={props.imgone}
+              src={props?.imgone}
               width={500}
               height={500}
               alt='Photo-three'
@@ -93,7 +93,7 @@ function PhotosGallery(props) {
           {props.imgtwo ? (
             <Image
               className={styles.imageblock}
-              src={props.imgtwo}
+              src={props?.imgtwo}
               width={100}
               height={100}
               alt='photo-two'
@@ -106,7 +106,7 @@ function PhotosGallery(props) {
           {props.imgthree ? (
             <Image
               className={styles.imageblock}
-              src={props.imgthree}
+              src={props?.imgthree}
               width={100}
               height={100}
               alt='photo-four'
