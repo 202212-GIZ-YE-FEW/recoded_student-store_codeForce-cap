@@ -43,6 +43,11 @@ function dropImage(GALLERY_SVG, onChangeImageHandler) {
 function PhotosGallery(props) {
   const [file, setFile] = useState(null)
   const GALLERY_SVG = "gallery.svg"
+  const styles = {
+    imagefull: "h-full w-full lg:w-full lg:h-full md:w-full object-cover",
+    imageblock: "block h-full w-full rounded-lg object-cover object-center",
+    imagesize: "lg:w-full md:w-1/2 w-full p-1",
+  }
 
   const onChangeImageHandler = (e) => {
     if (e.target.files?.[0]) {
@@ -60,7 +65,7 @@ function PhotosGallery(props) {
       <div className='lg:m-0 my-auto w-full justify-center'>
         {props.largimage ? (
           <Image
-            className='h-full w-full lg:w-full lg:h-full md:w-full object-cover'
+            className={styles.imagefull}
             src={props.largimage}
             width={500}
             height={500}
@@ -74,7 +79,7 @@ function PhotosGallery(props) {
         <div className='w-full p-1'>
           {props.imgone ? (
             <Image
-              className='block h-full w-full rounded-lg object-cover object-center'
+              className={styles.imageblock}
               src={props.imgone}
               width={500}
               height={500}
@@ -84,10 +89,10 @@ function PhotosGallery(props) {
             dropImage(GALLERY_SVG, onChangeImageHandler)
           )}
         </div>
-        <div className='lg:w-full md:w-1/2 w-full p-1'>
+        <div className={styles.imagesize}>
           {props.imgtwo ? (
             <Image
-              className='block h-full w-full rounded-lg object-cover object-center'
+              className={styles.imageblock}
               src={props.imgtwo}
               width={100}
               height={100}
@@ -97,10 +102,10 @@ function PhotosGallery(props) {
             dropImage(GALLERY_SVG, onChangeImageHandler)
           )}
         </div>
-        <div className='lg:w-full md:w-1/2 w-full p-1'>
+        <div className={styles.imagesize}>
           {props.imgthree ? (
             <Image
-              className='block h-full w-full rounded-lg object-cover object-center'
+              className={styles.imageblock}
               src={props.imgthree}
               width={100}
               height={100}
