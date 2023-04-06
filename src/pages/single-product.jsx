@@ -1,29 +1,26 @@
 import Image from "next/image"
 
+import { useState } from "react"
+
 import PhotosGallery from "@/components/PhotosGallery"
 
 import { SectionWrapper } from "@/hoc"
 
 function SingleProduct() {
-  const photo = {
-    one: "photo-one.svg",
-    two: "photo-two.svg",
-    three: "photo-three.svg",
-    four: "photo-four.svg",
-    five: "photo-five.svg",
-  }
+  const [photos, setPhotos] = useState([
+    { id: 1, url: "photo-one.svg" },
+    { id: 2, url: "photo-two.svg" },
+    { id: 3, url: "photo-three.svg" },
+    { id: 4, url: "photo-four.svg" },
+    { id: 5, url: "photo-five.svg" },
+  ])
 
   return (
     <section className='py-12 sm:py-16'>
       <div className='container mx-auto px-4'>
         <div className='lg:col-gap-12 xl:col-gap-16 grid grid-cols-1 gap-12 lg:mt-12 lg:grid-cols-4 lg:gap-16 justify-items-center'>
           <div className='lg:col-span-2 lg:row-end-1'>
-            <PhotosGallery
-              largimage={photo.one}
-              imgone={photo.two}
-              imgtwo={photo.three}
-              imgthree={photo.four}
-            />
+            <PhotosGallery photos={photos} />
           </div>
 
           <div className='lg:col-span-2 lg:row-span-2 lg:row-end-2'>
