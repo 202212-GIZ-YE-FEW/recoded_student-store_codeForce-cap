@@ -1,38 +1,16 @@
 import Image from "next/image"
 import React, { useEffect, useState } from "react"
 
-function dropLargeImage(GALLERY_SVG, onChangeImageHandler) {
+function dropImage(GALLERY_SVG, onChangeImageHandler, dropClass, iconsize) {
   return (
     <div className='w-full'>
       <div className='border border-solid bg-gray-300 border-black rounded relative '>
         <input
           type='file'
-          className='cursor-pointer relative opacity-0 w-full p-14 lg:p-24 md:p-24'
+          className={dropClass}
           onChange={onChangeImageHandler}
         ></input>
-        <div className='w-12 absolute top-10 md:top-20 lg:top-20 right-0 left-0 m-auto'>
-          <Image
-            src={GALLERY_SVG}
-            width={100}
-            height={100}
-            alt='drop large image'
-          />
-        </div>
-      </div>
-    </div>
-  )
-}
-
-function dropImage(GALLERY_SVG, onChangeImageHandler) {
-  return (
-    <div className='w-full'>
-      <div className='border border-solid bg-gray-300 border-black rounded relative '>
-        <input
-          type='file'
-          className='cursor-pointer relative opacity-0 w-full p-8 lg:p-10 md:p-10'
-          onChange={onChangeImageHandler}
-        ></input>
-        <div className='w-8 absolute top-8 right-0 left-0 m-auto'>
+        <div className={iconsize}>
           <Image src={GALLERY_SVG} width={100} height={100} alt='drop image' />
         </div>
       </div>
@@ -47,6 +25,11 @@ function PhotosGallery(props) {
     imagefull: "h-full w-full lg:w-full lg:h-full md:w-full object-cover",
     imageblock: "block h-full w-full rounded-lg object-cover object-center",
     imagesize: "lg:w-full md:w-1/2 w-full p-1",
+    drop: "cursor-pointer relative opacity-0 w-full ",
+    droplarge: "p-14 lg:p-24 md:p-24",
+    dropsmall: "p-8 lg:p-10 md:p-10",
+    iconlarge: "w-12 absolute top-10 md:top-20 lg:top-20 right-0 left-0 m-auto",
+    iconsmall: "w-8 absolute top-8 right-0 left-0 m-auto",
   }
 
   const onChangeImageHandler = (e) => {
@@ -72,7 +55,12 @@ function PhotosGallery(props) {
             alt='Photo-one'
           />
         ) : (
-          dropLargeImage(GALLERY_SVG, onChangeImageHandler)
+          dropImage(
+            GALLERY_SVG,
+            onChangeImageHandler,
+            styles.drop + styles.droplarge,
+            styles.iconlarge
+          )
         )}
       </div>
       <div className='flex lg:w-full md:w-1/2 lg:flex-nowrap md:flex-wrap ml-0 lg:ml-0 md:ml-3 mt-3 lg:mt-3 md:mt-0'>
@@ -86,7 +74,12 @@ function PhotosGallery(props) {
               alt='Photo-three'
             />
           ) : (
-            dropImage(GALLERY_SVG, onChangeImageHandler)
+            dropImage(
+              GALLERY_SVG,
+              onChangeImageHandler,
+              styles.drop + styles.dropsmall,
+              styles.iconsmall
+            )
           )}
         </div>
         <div className={styles.imagesize}>
@@ -99,7 +92,12 @@ function PhotosGallery(props) {
               alt='photo-two'
             />
           ) : (
-            dropImage(GALLERY_SVG, onChangeImageHandler)
+            dropImage(
+              GALLERY_SVG,
+              onChangeImageHandler,
+              styles.drop + styles.dropsmall,
+              styles.iconsmall
+            )
           )}
         </div>
         <div className={styles.imagesize}>
@@ -112,7 +110,12 @@ function PhotosGallery(props) {
               alt='photo-four'
             />
           ) : (
-            dropImage(GALLERY_SVG, onChangeImageHandler)
+            dropImage(
+              GALLERY_SVG,
+              onChangeImageHandler,
+              styles.drop + styles.dropsmall,
+              styles.iconsmall
+            )
           )}
         </div>
       </div>
