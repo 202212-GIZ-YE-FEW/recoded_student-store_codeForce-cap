@@ -22,39 +22,23 @@ exports[`renders correctly 1`] = `
             <div
               className="lg:m-0 my-auto w-full justify-center"
             >
-              <div
-                className="w-full"
-              >
-                <div
-                  className="border border-solid bg-gray-300 border-black rounded relative "
-                >
-                  <input
-                    className="cursor-pointer relative opacity-0 w-full p-14 lg:p-24 md:p-24"
-                    onChange={[Function]}
-                    type="file"
-                  />
-                  <div
-                    className="w-12 absolute top-10 md:top-20 lg:top-20 right-0 left-0 m-auto"
-                  >
-                    <img
-                      alt="drop image"
-                      data-nimg="1"
-                      decoding="async"
-                      height={100}
-                      loading="lazy"
-                      onError={[Function]}
-                      onLoad={[Function]}
-                      src="gallery.svg"
-                      style={
-                        {
-                          "color": "transparent",
-                        }
-                      }
-                      width={100}
-                    />
-                  </div>
-                </div>
-              </div>
+              <img
+                alt="Photo-one"
+                className="h-full w-full lg:w-full lg:h-full md:w-full object-cover"
+                data-nimg="1"
+                decoding="async"
+                height={500}
+                loading="lazy"
+                onError={[Function]}
+                onLoad={[Function]}
+                src="photo-one.svg"
+                style={
+                  {
+                    "color": "transparent",
+                  }
+                }
+                width={500}
+              />
             </div>
             <div
               className="flex lg:w-full md:w-1/2 lg:flex-nowrap md:flex-wrap ml-0 lg:ml-0 md:ml-3 mt-3 lg:mt-3 md:mt-0"
@@ -62,113 +46,65 @@ exports[`renders correctly 1`] = `
               <div
                 className="w-full p-1"
               >
-                <div
-                  className="w-full"
-                >
-                  <div
-                    className="border border-solid bg-gray-300 border-black rounded relative "
-                  >
-                    <input
-                      className="cursor-pointer relative opacity-0 w-full p-8 lg:p-10 md:p-10"
-                      onChange={[Function]}
-                      type="file"
-                    />
-                    <div
-                      className="w-8 absolute top-8 right-0 left-0 m-auto"
-                    >
-                      <img
-                        alt="drop image"
-                        data-nimg="1"
-                        decoding="async"
-                        height={100}
-                        loading="lazy"
-                        onError={[Function]}
-                        onLoad={[Function]}
-                        src="gallery.svg"
-                        style={
-                          {
-                            "color": "transparent",
-                          }
-                        }
-                        width={100}
-                      />
-                    </div>
-                  </div>
-                </div>
+                <img
+                  alt="Photo-three"
+                  className="block h-full w-full rounded-lg object-cover object-center"
+                  data-nimg="1"
+                  decoding="async"
+                  height={500}
+                  loading="lazy"
+                  onError={[Function]}
+                  onLoad={[Function]}
+                  src="photo-two.svg"
+                  style={
+                    {
+                      "color": "transparent",
+                    }
+                  }
+                  width={500}
+                />
               </div>
               <div
                 className="lg:w-full md:w-1/2 w-full p-1"
               >
-                <div
-                  className="w-full"
-                >
-                  <div
-                    className="border border-solid bg-gray-300 border-black rounded relative "
-                  >
-                    <input
-                      className="cursor-pointer relative opacity-0 w-full p-8 lg:p-10 md:p-10"
-                      onChange={[Function]}
-                      type="file"
-                    />
-                    <div
-                      className="w-8 absolute top-8 right-0 left-0 m-auto"
-                    >
-                      <img
-                        alt="drop image"
-                        data-nimg="1"
-                        decoding="async"
-                        height={100}
-                        loading="lazy"
-                        onError={[Function]}
-                        onLoad={[Function]}
-                        src="gallery.svg"
-                        style={
-                          {
-                            "color": "transparent",
-                          }
-                        }
-                        width={100}
-                      />
-                    </div>
-                  </div>
-                </div>
+                <img
+                  alt="photo-two"
+                  className="block h-full w-full rounded-lg object-cover object-center"
+                  data-nimg="1"
+                  decoding="async"
+                  height={100}
+                  loading="lazy"
+                  onError={[Function]}
+                  onLoad={[Function]}
+                  src="photo-three.svg"
+                  style={
+                    {
+                      "color": "transparent",
+                    }
+                  }
+                  width={100}
+                />
               </div>
               <div
                 className="lg:w-full md:w-1/2 w-full p-1"
               >
-                <div
-                  className="w-full"
-                >
-                  <div
-                    className="border border-solid bg-gray-300 border-black rounded relative "
-                  >
-                    <input
-                      className="cursor-pointer relative opacity-0 w-full p-8 lg:p-10 md:p-10"
-                      onChange={[Function]}
-                      type="file"
-                    />
-                    <div
-                      className="w-8 absolute top-8 right-0 left-0 m-auto"
-                    >
-                      <img
-                        alt="drop image"
-                        data-nimg="1"
-                        decoding="async"
-                        height={100}
-                        loading="lazy"
-                        onError={[Function]}
-                        onLoad={[Function]}
-                        src="gallery.svg"
-                        style={
-                          {
-                            "color": "transparent",
-                          }
-                        }
-                        width={100}
-                      />
-                    </div>
-                  </div>
-                </div>
+                <img
+                  alt="photo-four"
+                  className="block h-full w-full rounded-lg object-cover object-center"
+                  data-nimg="1"
+                  decoding="async"
+                  height={100}
+                  loading="lazy"
+                  onError={[Function]}
+                  onLoad={[Function]}
+                  src="photo-four.svg"
+                  style={
+                    {
+                      "color": "transparent",
+                    }
+                  }
+                  width={100}
+                />
               </div>
             </div>
           </div>
@@ -241,7 +177,7 @@ exports[`renders correctly 1`] = `
                 className="m-auto ml-2"
               >
                 <img
-                  alt=""
+                  alt="profile"
                   className="w-16 h-16 lg:w-32 lg:h-28 md:w-32 md:h-28"
                   data-nimg="1"
                   decoding="async"
@@ -303,7 +239,7 @@ exports[`renders correctly 1`] = `
         className="mt-20 w-full object-cover grid justify-items-center"
       >
         <img
-          alt=""
+          alt="map"
           data-nimg="1"
           decoding="async"
           height={350}

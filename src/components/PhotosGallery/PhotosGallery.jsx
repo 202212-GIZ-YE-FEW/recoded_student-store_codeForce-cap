@@ -1,5 +1,5 @@
 import Image from "next/image"
-import React, { useEffect, useState } from "react"
+import React, { useState } from "react"
 
 function dropImage(GALLERY_SVG, onChangeImageHandler, dropClass, iconsize) {
   return (
@@ -46,10 +46,10 @@ function PhotosGallery(props) {
   return (
     <div className='flex flex-col lg:flex-col md:flex-row w-full justify-center'>
       <div className='lg:m-0 my-auto w-full justify-center'>
-        {props.largimage ? (
+        {props?.photos?.[0].url ? (
           <Image
             className={styles.imagefull}
-            src={props?.largimage}
+            src={props?.photos[0].url}
             width={500}
             height={500}
             alt='Photo-one'
@@ -65,10 +65,10 @@ function PhotosGallery(props) {
       </div>
       <div className='flex lg:w-full md:w-1/2 lg:flex-nowrap md:flex-wrap ml-0 lg:ml-0 md:ml-3 mt-3 lg:mt-3 md:mt-0'>
         <div className='w-full p-1'>
-          {props.imgone ? (
+          {props?.photos?.[1].url ? (
             <Image
               className={styles.imageblock}
-              src={props?.imgone}
+              src={props?.photos[1].url}
               width={500}
               height={500}
               alt='Photo-three'
@@ -83,10 +83,10 @@ function PhotosGallery(props) {
           )}
         </div>
         <div className={styles.imagesize}>
-          {props.imgtwo ? (
+          {props?.photos?.[2].url ? (
             <Image
               className={styles.imageblock}
-              src={props?.imgtwo}
+              src={props?.photos[2].url}
               width={100}
               height={100}
               alt='photo-two'
@@ -101,10 +101,10 @@ function PhotosGallery(props) {
           )}
         </div>
         <div className={styles.imagesize}>
-          {props.imgthree ? (
+          {props?.photos?.[3].url ? (
             <Image
               className={styles.imageblock}
-              src={props?.imgthree}
+              src={props?.photos[3].url}
               width={100}
               height={100}
               alt='photo-four'
