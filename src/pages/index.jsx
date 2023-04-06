@@ -20,7 +20,7 @@ export default function HomePage() {
       <RootLayout>
         <Navbar />
         <Signin />
-        <Signup />
+
         <p>{t("test")}</p>
         <div style={{ display: "flex", flexDirection: "row", gap: "20px" }}>
           <Link href='/' locale='en'>

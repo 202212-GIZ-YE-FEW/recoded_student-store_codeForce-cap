@@ -1,7 +1,66 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`renders correctly 1`] = `
-<div>
-  Signin
+<div
+  className="flex justify-center  md:flex-row  bg-[#f1f6fa] "
+>
+  <div
+    className=" handbox_background   w-3/5 "
+  >
+    <div
+      className=" p-20 "
+    >
+      <img
+        alt="handbox"
+        data-nimg="1"
+        decoding="async"
+        height={500}
+        loading="lazy"
+        onError={[Function]}
+        onLoad={[Function]}
+        src="/_next/image?url=%2Fimages%2Fhands_box.png&w=1080&q=75"
+        srcSet="/_next/image?url=%2Fimages%2Fhands_box.png&w=640&q=75 1x, /_next/image?url=%2Fimages%2Fhands_box.png&w=1080&q=75 2x"
+        style={
+          {
+            "color": "transparent",
+          }
+        }
+        width={500}
+      />
+    </div>
+  </div>
+  <div
+    className="container m-auto flex w-5/6 flex-col items-center"
+  >
+    <h1
+      className="my-2 py-6 text-4xl font-semibold text-[#FF8A57] md:my-3 md:text-5xl"
+    >
+      Sign-in
+    </h1>
+    <form
+      className="container m-auto mb-6 flex w-5/6 flex-col items-center"
+    >
+      <input
+        className="my-2 block w-full rounded-lg border border-gray-300 p-2.5 text-center lg:w-96 md:w-72"
+        name="firstName"
+        placeholder="Name"
+        required={true}
+        type="text"
+      />
+      <input
+        className="my-2 block w-full rounded-lg border border-gray-300 p-2.5 text-center lg:w-96 md:w-64"
+        name="surname"
+        placeholder="Surname"
+        required={true}
+        type="text"
+      />
+      <button
+        className="h-10 w-40 lg:w-48 lg:px-5 p-1 px-4 rounded-lg border-1 bg-pumpkin text-md font-normal text-white shadow-sm"
+        type="button"
+      >
+        Sign in
+      </button>
+    </form>
+  </div>
 </div>
 `;
