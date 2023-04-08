@@ -1,5 +1,5 @@
 import Image from "next/image"
-import React, { useState } from "react"
+import { useState } from "react"
 
 function dropImage(
   GALLERY_SVG,
@@ -45,7 +45,7 @@ function PhotosGallery(props) {
       reader.onload = () => {
         setFile(reader.result)
       }
-      reader.readAsDataURL(e.target.files[0])
+      reader.readAsDataURL(e.target.files?.[0])
       e.target.value = ""
     }
   }
