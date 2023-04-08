@@ -17,6 +17,7 @@ exports[`renders correctly 1`] = `
           className="cursor-pointer relative opacity-0 w-full p-14 lg:p-24 md:p-24"
           onChange={[Function]}
           type="file"
+          value={null}
         />
         <div
           className="w-12 absolute top-10 md:top-20 lg:top-20 right-0 left-0 m-auto"
@@ -57,6 +58,7 @@ exports[`renders correctly 1`] = `
             className="cursor-pointer relative opacity-0 w-full p-8 lg:p-10 md:p-10"
             onChange={[Function]}
             type="file"
+            value={null}
           />
           <div
             className="w-8 absolute top-8 right-0 left-0 m-auto"
@@ -94,6 +96,7 @@ exports[`renders correctly 1`] = `
             className="cursor-pointer relative opacity-0 w-full p-8 lg:p-10 md:p-10"
             onChange={[Function]}
             type="file"
+            value={null}
           />
           <div
             className="w-8 absolute top-8 right-0 left-0 m-auto"
@@ -131,6 +134,7 @@ exports[`renders correctly 1`] = `
             className="cursor-pointer relative opacity-0 w-full p-8 lg:p-10 md:p-10"
             onChange={[Function]}
             type="file"
+            value={null}
           />
           <div
             className="w-8 absolute top-8 right-0 left-0 m-auto"

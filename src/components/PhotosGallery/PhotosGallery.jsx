@@ -1,7 +1,13 @@
 import Image from "next/image"
 import React, { useState } from "react"
 
-function dropImage(GALLERY_SVG, onChangeImageHandler, dropClass, iconsize) {
+function dropImage(
+  GALLERY_SVG,
+  onChangeImageHandler,
+  dropClass,
+  iconsize,
+  file
+) {
   return (
     <div className='w-full'>
       <div className='border border-solid bg-gray-300 border-black rounded relative '>
@@ -9,6 +15,7 @@ function dropImage(GALLERY_SVG, onChangeImageHandler, dropClass, iconsize) {
           type='file'
           className={dropClass}
           onChange={onChangeImageHandler}
+          value={file}
         ></input>
         <div className={iconsize}>
           <Image src={GALLERY_SVG} width={100} height={100} alt='drop image' />
@@ -59,7 +66,8 @@ function PhotosGallery(props) {
             GALLERY_SVG,
             onChangeImageHandler,
             styles.drop + styles.droplarge,
-            styles.iconlarge
+            styles.iconlarge,
+            file
           )
         )}
       </div>
@@ -78,7 +86,8 @@ function PhotosGallery(props) {
               GALLERY_SVG,
               onChangeImageHandler,
               styles.drop + styles.dropsmall,
-              styles.iconsmall
+              styles.iconsmall,
+              file
             )
           )}
         </div>
@@ -96,7 +105,8 @@ function PhotosGallery(props) {
               GALLERY_SVG,
               onChangeImageHandler,
               styles.drop + styles.dropsmall,
-              styles.iconsmall
+              styles.iconsmall,
+              file
             )
           )}
         </div>
@@ -114,7 +124,8 @@ function PhotosGallery(props) {
               GALLERY_SVG,
               onChangeImageHandler,
               styles.drop + styles.dropsmall,
-              styles.iconsmall
+              styles.iconsmall,
+              file
             )
           )}
         </div>

@@ -5,7 +5,7 @@ module.exports = {
   i18n,
   eslint: {
     dirs: ["src"],
-    ignoreDuringBuilds: true,
+    // ignoreDuringBuilds: true,
   },
 
   reactStrictMode: true,
