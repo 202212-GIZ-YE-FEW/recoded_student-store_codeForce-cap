@@ -180,6 +180,19 @@ exports[`renders correctly 1`] = `
         </p>
       </button>
     </div>
+    <div
+      className="mb-4 text-xl text-[#647581]"
+    >
+      <p>
+        Don’t have an account??
+      </p>
+    </div>
+    <button
+      className="h-10 w-40 lg:w-48 lg:px-5 p-1 px-4 rounded-lg border-1 bg-pumpkin text-md font-normal text-white shadow-sm"
+      type="button"
+    >
+      Sign-up
+    </button>
   </div>
 </div>
 `;

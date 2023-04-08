@@ -65,6 +65,10 @@ function Signin() {
               <p className='mx-2 text-sm md:mx-3'>Twitter</p>
             </button>
           </div>
+          <div className='mb-4 text-xl text-[#647581]'>
+            <p>Don’t have an account??</p>
+          </div>
+          <Button className='orangeSignIn ' text='Sign-up' />
         </div>
       </div>
     </>
