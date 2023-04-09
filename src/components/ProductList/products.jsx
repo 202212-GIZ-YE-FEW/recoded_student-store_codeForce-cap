@@ -6,6 +6,7 @@ const products = [
     price: 10.0,
     made_city: "Istanbul / Turkey",
     order_date: "01/04/2023",
+    delivery_address: "X Apartment Y Street Z Province Istanbul/Turkey",
   },
   {
     id: 2,
@@ -14,6 +15,7 @@ const products = [
     price: 20.0,
     made_city: "Istanbul / Turkey",
     order_date: "03/04/2023",
+    delivery_address: "X Apartment Y Street Z Province Istanbul/Turkey",
   },
   {
     id: 3,
@@ -22,6 +24,7 @@ const products = [
     price: 30.0,
     made_city: "Istanbul / Turkey",
     order_date: "05/04/2023",
+    delivery_address: "X Apartment Y Street Z Province Istanbul/Turkey",
   },
   {
     id: 4,
@@ -30,6 +33,7 @@ const products = [
     price: 40.0,
     made_city: "Istanbul / Turkey",
     order_date: "07/04/2023",
+    delivery_address: "X Apartment Y Street Z Province Istanbul/Turkey",
   },
   {
     id: 5,
@@ -38,6 +42,7 @@ const products = [
     price: 50.0,
     made_city: "Istanbul / Turkey",
     order_date: "09/04/2023",
+    delivery_address: "X Apartment Y Street Z Province Istanbul/Turkey",
   },
   {
     id: 6,
@@ -46,6 +51,7 @@ const products = [
     price: 60.0,
     made_city: "Istanbul / Turkey",
     order_date: "11/04/2023",
+    delivery_address: "X Apartment Y Street Z Province Istanbul/Turkey",
   },
   {
     id: 7,
@@ -54,6 +60,7 @@ const products = [
     price: 70.0,
     made_city: "Istanbul / Turkey",
     order_date: "13/04/2023",
+    delivery_address: "X Apartment Y Street Z Province Istanbul/Turkey",
   },
   {
     id: 8,
@@ -62,6 +69,7 @@ const products = [
     price: 80.0,
     made_city: "Istanbul / Turkey",
     order_date: "15/04/2023",
+    delivery_address: "X Apartment Y Street Z Province Istanbul/Turkey",
   },
   {
     id: 9,
@@ -70,6 +78,7 @@ const products = [
     price: 90.0,
     made_city: "Istanbul / Turkey",
     order_date: "17/04/2023",
+    delivery_address: "X Apartment Y Street Z Province Istanbul/Turkey",
   },
   {
     id: 10,
@@ -78,6 +87,7 @@ const products = [
     price: 100.0,
     made_city: "Istanbul / Turkey",
     order_date: "19/04/2023",
+    delivery_address: "X Apartment Y Street Z Province Istanbul/Turkey",
   },
   {
     id: 11,
@@ -86,6 +96,7 @@ const products = [
     price: 200.0,
     made_city: "Istanbul / Turkey",
     order_date: "21/04/2023",
+    delivery_address: "X Apartment Y Street Z Province Istanbul/Turkey",
   },
   {
     id: 12,
@@ -94,6 +105,7 @@ const products = [
     price: 300.0,
     made_city: "Istanbul / Turkey",
     order_date: "23/04/2023",
+    delivery_address: "X Apartment Y Street Z Province Istanbul/Turkey",
   },
   {
     id: 13,
@@ -102,6 +114,7 @@ const products = [
     price: 500.0,
     made_city: "Istanbul / Turkey",
     order_date: "25/04/2023",
+    delivery_address: "X Apartment Y Street Z Province Istanbul/Turkey",
   },
   {
     id: 14,
@@ -110,6 +123,7 @@ const products = [
     price: 600.0,
     made_city: "Istanbul / Turkey",
     order_date: "27/04/2023",
+    delivery_address: "X Apartment Y Street Z Province Istanbul/Turkey",
   },
   {
     id: 15,
@@ -118,6 +132,7 @@ const products = [
     price: 700.0,
     made_city: "Istanbul / Turkey",
     order_date: "01/05/2023",
+    delivery_address: "X Apartment Y Street Z Province Istanbul/Turkey",
   },
   {
     id: 16,
@@ -126,6 +141,7 @@ const products = [
     price: 800.0,
     made_city: "Istanbul / Turkey",
     order_date: "03/05/2023",
+    delivery_address: "X Apartment Y Street Z Province Istanbul/Turkey",
   },
 ]
 
