@@ -1,10 +1,39 @@
 import Image from "next/image"
+import { useRouter } from "next/router"
+import { useState } from "react"
 import { BsFacebook, BsGoogle, BsTwitter } from "react-icons/bs"
 
-import Input from "../input"
 import styles from "./Signup.module.css"
 
+import Input from "@/components/input"
+
+import signUp from "@/firebase/auth/signup"
+
 function Signup() {
+  const [email, setEmail] = useState("")
+  const [password, setPassword] = useState("")
+  const router = useRouter()
+  const [formData, setFormData] = useState({
+    username: "",
+    name: "",
+    surname: "",
+    email: "",
+    schoolName: "",
+    password: "",
+  })
+
+  const handleFormSubmit = async (e) => {
+    e.preventDefault()
+
+    const { result, error } = await signUp(email, password)
+
+    if (error) {
+      return console.log(error)
+    }
+
+    // else when successful
+    return router.push("/")
+  }
   return (
     <div>
       <div className={`flex justify-center   md:flex-row  bg-[#f1f6fa] `}>
@@ -26,15 +55,32 @@ function Signup() {
               Sign-Up
             </h1>
 
-            <form className='container m-auto mb-6 flex w-5/6 flex-col items-center'>
-              <Input type='text' name='firstName' placeholder='Name' />
-              <Input type='text' name='surname' placeholder='Surname' />
-              <Input type='email' name='email' placeholder='E-mail address' />
-              <Input type='text' name='schoolname' placeholder='School name' />
-              <Input type='password' name='password' placeholder='Password' />
+            <form
+              onSubmit={handleFormSubmit}
+              className='container m-auto mb-6 flex w-5/6 flex-col items-center'
+            >
+              <label htmlFor='first-name'>
+                <Input type='text' name='first-name' placeholder='Name' />
+              </label>
+              <label htmlFor='surname'>
+                <Input type='text' name='surname' placeholder='Surname' />
+              </label>
+              <label htmlFor='email'>
+                <Input type='email' name='email' placeholder='E-mail address' />
+              </label>
+              <label htmlFor='school-name'>
+                <Input
+                  type='text'
+                  name='school-name'
+                  placeholder='School name'
+                />
+              </label>
+              <label htmlFor='password'>
+                <Input type='password' name='password' placeholder='Password' />
+              </label>
               <Input
                 type='password'
-                name='password'
+                name='re-enter-password'
                 placeholder='Re-enter password'
               />
               <button
