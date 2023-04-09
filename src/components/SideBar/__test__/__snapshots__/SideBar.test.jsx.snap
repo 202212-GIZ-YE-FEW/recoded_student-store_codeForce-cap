@@ -39,10 +39,10 @@ exports[`SideBar does not render the image in small screen if not on edit profil
     >
       <span>
         <span
-          class="bg-[url('/images/Highlighter.png')] bg-bottom bg-no-repeat text-purple-light font-poppins text-center font-bold tracking-[-1px] block md:bg-[length:313.92px_27.28px] md:text-[27.28px] bg-[length:233.67px_20.31px] text-[21px] lg:bg-[length:200px_38px] lg:text-[30px] "
+          class="undefined "
         >
           <h2>
-            Edit Profile
+            Text
           </h2>
         </span>
       </span>
@@ -111,7 +111,7 @@ exports[`SideBar renders large screen version correctly 1`] = `
           class="bg-[url('/images/Highlighter.png')] bg-bottom bg-no-repeat text-purple-light font-poppins text-center font-bold tracking-[-1px] block md:bg-[length:313.92px_27.28px] md:text-[27.28px] bg-[length:233.67px_20.31px] text-[21px] lg:bg-[length:200px_38px] lg:text-[30px] "
         >
           <h2>
-            Edit Profile
+            Text
           </h2>
         </span>
       </span>
@@ -177,10 +177,10 @@ exports[`SideBar renders small screen version correctly 1`] = `
     >
       <span>
         <span
-          class="bg-[url('/images/Highlighter.png')] bg-bottom bg-no-repeat text-purple-light font-poppins text-center font-bold tracking-[-1px] block md:bg-[length:313.92px_27.28px] md:text-[27.28px] bg-[length:233.67px_20.31px] text-[21px] lg:bg-[length:200px_38px] lg:text-[30px] "
+          class="undefined "
         >
           <h2>
-            Edit Profile
+            Text
           </h2>
         </span>
       </span>
