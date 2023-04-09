@@ -1,8 +1,9 @@
 import Image from "next/image"
 import { BsFacebook, BsGoogle, BsTwitter } from "react-icons/bs"
 
-import Input from "../input"
 import styles from "./Signup.module.css"
+
+import Input from "../input"
 
 function Signup() {
   return (
