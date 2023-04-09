@@ -17,6 +17,7 @@ export default function SideBar({
   location = "Location",
   link = "Link",
   currentPage = "editeProfile",
+  highlighterText = "Text",
 }) {
   const [currentPageStyle, setCurrentPageStyle] = useState("smallScreen")
 
@@ -50,7 +51,7 @@ export default function SideBar({
           <p>{location}</p>
         </div>
         <Link href={link}>
-          <Highlighter highlighterStyle='editProfile' text='Edit Profile' />
+          <Highlighter highlighterStyle={currentPage} text={highlighterText} />
         </Link>
         <div className='font-bold text-[31px] grid grid-rows-2 gap-8'>
           <h1>
@@ -80,7 +81,7 @@ export default function SideBar({
       <br />
       <br />
       <br />
-      <Highlighter highlighterStyle='editProfile' text='Edit Profile' />
+      <Highlighter highlighterStyle={currentPage} text={highlighterText} />
       <br />
       <br />
       {currentPage === "editeProfile" ? (
