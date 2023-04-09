@@ -1,6 +1,7 @@
 import Image from "next/image"
 import { BsFacebook, BsGoogle, BsTwitter } from "react-icons/bs"
 
+import Input from "../input"
 import styles from "./Signup.module.css"
 
 function Signup() {
@@ -24,60 +25,17 @@ function Signup() {
             <h1 className='my-2 py-6 text-4xl font-semibold text-[#485DCF] md:my-3 md:text-5xl'>
               Sign-Up
             </h1>
+
             <form className='container m-auto mb-6 flex w-5/6 flex-col items-center'>
-              <input
-                placeholder='Name'
-                type='text'
-                name='firstName'
-                className=' my-2 block w-full rounded-lg
-                border border-gray-300  p-2.5 
-                text-center 
-              focus:ring-blue-500 focus:border-blue-500 '
-              />
-              <input
-                placeholder='Surname'
-                type='text'
-                name='surname'
-                className=' my-2 block w-full rounded-lg
-                border border-gray-300  p-2.5 
-                text-center 
-              focus:ring-blue-500 focus:border-blue-500 '
-              />
-              <input
-                placeholder='E-mail address'
-                type='email'
-                name='email'
-                className=' my-2 block w-full rounded-lg
-                border border-gray-300  p-2.5 
-                text-center 
-              focus:ring-blue-500 focus:border-blue-500 '
-              />
-              <input
-                placeholder='School name'
-                type='text'
-                name='schoolname'
-                className=' my-2 block w-full rounded-lg
-                border border-gray-300  p-2.5 
-                text-center  
-              focus:ring-blue-500 focus:border-blue-500 '
-              />
-              <input
-                placeholder='Password'
+              <Input type='text' name='firstName' placeholder='Name' />
+              <Input type='text' name='surname' placeholder='Surname' />
+              <Input type='email' name='email' placeholder='E-mail address' />
+              <Input type='text' name='schoolname' placeholder='School name' />
+              <Input type='password' name='password' placeholder='Password' />
+              <Input
                 type='password'
                 name='password'
-                className=' my-2 block w-full rounded-lg
-                border border-gray-300  p-2.5 
-                text-center  
-              focus:ring-blue-500 focus:border-blue-500 '
-              />
-              <input
                 placeholder='Re-enter password'
-                type='password'
-                name='password'
-                className=' my-2 block w-full rounded-lg
-                border border-gray-300  p-2.5 
-                text-center 
-              focus:ring-blue-500 focus:border-blue-500 '
               />
               <button
                 className=' bg-[#585785] font-light h-10 w-40 m-1 p-1 rounded-lg  text-[15px] text-white shadow-sm'

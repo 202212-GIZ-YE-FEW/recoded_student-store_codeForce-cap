@@ -45,39 +45,45 @@ exports[`renders correctly 1`] = `
           className="container m-auto mb-6 flex w-5/6 flex-col items-center"
         >
           <input
-            className=" my-2 block w-full rounded-lg border border-gray-300  p-2.5  text-center  focus:ring-blue-500 focus:border-blue-500 "
+            className="my-2 block w-full rounded-lg border border-gray-300 p-2.5 text-center undefined"
             name="firstName"
             placeholder="Name"
+            required={true}
             type="text"
           />
           <input
-            className=" my-2 block w-full rounded-lg border border-gray-300  p-2.5  text-center  focus:ring-blue-500 focus:border-blue-500 "
+            className="my-2 block w-full rounded-lg border border-gray-300 p-2.5 text-center undefined"
             name="surname"
             placeholder="Surname"
+            required={true}
             type="text"
           />
           <input
-            className=" my-2 block w-full rounded-lg border border-gray-300  p-2.5  text-center  focus:ring-blue-500 focus:border-blue-500 "
+            className="my-2 block w-full rounded-lg border border-gray-300 p-2.5 text-center undefined"
             name="email"
             placeholder="E-mail address"
+            required={true}
             type="email"
           />
           <input
-            className=" my-2 block w-full rounded-lg border border-gray-300  p-2.5  text-center   focus:ring-blue-500 focus:border-blue-500 "
+            className="my-2 block w-full rounded-lg border border-gray-300 p-2.5 text-center undefined"
             name="schoolname"
             placeholder="School name"
+            required={true}
             type="text"
           />
           <input
-            className=" my-2 block w-full rounded-lg border border-gray-300  p-2.5  text-center   focus:ring-blue-500 focus:border-blue-500 "
+            className="my-2 block w-full rounded-lg border border-gray-300 p-2.5 text-center undefined"
             name="password"
             placeholder="Password"
+            required={true}
             type="password"
           />
           <input
-            className=" my-2 block w-full rounded-lg border border-gray-300  p-2.5  text-center  focus:ring-blue-500 focus:border-blue-500 "
+            className="my-2 block w-full rounded-lg border border-gray-300 p-2.5 text-center undefined"
             name="password"
             placeholder="Re-enter password"
+            required={true}
             type="password"
           />
           <button
