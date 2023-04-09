@@ -84,7 +84,7 @@ export default function SideBar({
       <Highlighter highlighterStyle={currentPage} text={highlighterText} />
       <br />
       <br />
-      {currentPage === "editeProfile" ? (
+      {currentPage === "editProfile" ? (
         <Image
           className='rounded-full mx-auto'
           src={img}
