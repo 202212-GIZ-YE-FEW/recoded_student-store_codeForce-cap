@@ -12,9 +12,11 @@ import signUp from "@/firebase/auth/signup"
 
 function Signup() {
   const router = useRouter()
+  // const [email, setEmail] = useState("")
+  // const [password, setPassword] = useState("")
   const [formData, setFormData] = useState({
     username: "",
-    name: "",
+    name: "asd",
     surname: "",
     email: "",
     schoolName: "",
@@ -57,14 +59,16 @@ function Signup() {
   const handleFormSubmit = async (e) => {
     e.preventDefault()
 
+    const { username, name, surname, email, schoolName, password } = formData
+
     console.log(formData)
     // No validation errors, attempt to sign up the user
     const { result, error } = await signUp(
-      formData.name,
-      formData.surname,
-      formData.email,
-      formData.schoolName,
-      formData.password
+      email,
+      password,
+      name,
+      surname,
+      schoolName
     )
 
     if (error) {
@@ -72,6 +76,7 @@ function Signup() {
     }
 
     // else when successful
+    console.log(result)
     return router.push("/")
   }
 
