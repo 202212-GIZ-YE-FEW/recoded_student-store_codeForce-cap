@@ -1,6 +1,6 @@
 import renderer from "react-test-renderer"
 
-import UserOrders from "../index"
+import UserOrders from "../UserOrders"
 
 it("renders correctly", () => {
   const tree = renderer.create(<UserOrders />).toJSON()
