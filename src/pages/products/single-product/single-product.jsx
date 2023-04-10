@@ -1,66 +1,30 @@
 import Image from "next/image"
+import { useState } from "react"
+
+import PhotosGallery from "@/components/PhotosGallery"
 
 import { SectionWrapper } from "@/hoc"
 
 function SingleProduct() {
+  const [photos, setPhotos] = useState([
+    { id: 1, url: "photo-one.svg" },
+    { id: 2, url: "photo-two.svg" },
+    { id: 3, url: "photo-three.svg" },
+    { id: 4, url: "photo-four.svg" },
+    { id: 5, url: "photo-five.svg" },
+  ])
+
+  const handleRemovePhoto = (id) => {
+    const newPhotos = photos.filter((photo) => photo.id !== id)
+    setPhotos(newPhotos)
+  }
+
   return (
     <section className='py-12 sm:py-16'>
       <div className='container mx-auto px-4'>
         <div className='lg:col-gap-12 xl:col-gap-16 grid grid-cols-1 gap-12 lg:mt-12 lg:grid-cols-4 lg:gap-16 justify-items-center'>
           <div className='lg:col-span-2 lg:row-end-1'>
-            <div className='md:row'>
-              <div className='md:col-span-1 lg:order-2 lg:ml-5'>
-                <div className='overflow-hidden rounded-lg'>
-                  <Image
-                    className='h-full w-full max-w-full object-cover'
-                    src='photo-one.svg'
-                    width={500}
-                    height={500}
-                    alt=''
-                  />
-                </div>
-              </div>
-              <div className='md:col-span-1 mt-2 w-full lg:order-1 lg:w-full justify-between'>
-                <div className='flex lg:flex-row lg:items-start lg:w-full md:flex-none sm:flex-row sm:items-start sm:w-full'>
-                  <button
-                    type='button'
-                    className='flex-0 aspect-square mb-3 h-32 w-full overflow-hidden rounded-lg border-2 border-transparent text-center'
-                  >
-                    <Image
-                      className='h-full w-full object-cover'
-                      src='photo-two.svg'
-                      width={100}
-                      height={100}
-                      alt=''
-                    />
-                  </button>
-                  <button
-                    type='button'
-                    className='flex-0 aspect-square mb-3 h-32 w-full overflow-hidden rounded-lg border-2 border-transparent text-center'
-                  >
-                    <Image
-                      className='h-full w-full object-cover'
-                      src='photo-three.svg'
-                      width={100}
-                      height={100}
-                      alt=''
-                    />
-                  </button>
-                  <button
-                    type='button'
-                    className='flex-0 aspect-square mb-3 h-32 w-full overflow-hidden rounded-lg border-2 border-transparent text-center'
-                  >
-                    <Image
-                      className='h-full w-full object-cover'
-                      src='photo-four.svg'
-                      width={100}
-                      height={100}
-                      alt=''
-                    />
-                  </button>
-                </div>
-              </div>
-            </div>
+            <PhotosGallery photos={photos} onRemove={handleRemovePhoto} />
           </div>
 
           <div className='lg:col-span-2 lg:row-span-2 lg:row-end-2'>
@@ -98,7 +62,7 @@ function SingleProduct() {
                     src='cat-photo.svg'
                     width={130}
                     height={100}
-                    alt=''
+                    alt='profile'
                     className='w-16 h-16 lg:w-32 lg:h-28 md:w-32 md:h-28'
                   />
                 </div>
@@ -121,7 +85,7 @@ function SingleProduct() {
           </div>
         </div>
         <div className='mt-20 w-full object-cover grid justify-items-center'>
-          <Image src='map.svg' width={1400} height={350} alt='' />
+          <Image src='map.svg' width={1400} height={350} alt='map' />
         </div>
       </div>
     </section>
