@@ -55,10 +55,14 @@ export default function SideBar({
         </Link>
         <div className='font-bold text-[31px] grid grid-rows-2 gap-8'>
           <h1>
-            <Link href={link}>My Listing</Link>
+            <Link href={link} aria-label='My Listing'>
+              My Listing
+            </Link>
           </h1>
           <h1>
-            <Link href={link}>My Orders</Link>
+            <Link href={link} aria-label='My Orders'>
+              My Orders
+            </Link>
           </h1>
         </div>
       </div>
@@ -67,13 +71,25 @@ export default function SideBar({
     //If the expression false
     <section className={SIDE_BAR[currentPageStyle]}>
       <div className='grid grid-cols-3 text-[17px] items-center text-purple-dark text-center bg-[#90EEE1] h-[38px]'>
-        <Link className='focus:bg-[#7874F2] focus:text-[#d7d7d7]' href={link}>
+        <Link
+          className='focus:bg-[#7874F2] focus:text-[#d7d7d7]'
+          href={link}
+          aria-label='My Orders'
+        >
           My Orders
         </Link>
-        <Link className='focus:bg-[#7874F2] focus:text-[#d7d7d7]' href={link}>
+        <Link
+          className='focus:bg-[#7874F2] focus:text-[#d7d7d7]'
+          href={link}
+          aria-label='My Listing'
+        >
           My Listing
         </Link>
-        <Link className='focus:bg-[#7874F2] focus:text-[#d7d7d7]' href={link}>
+        <Link
+          className='focus:bg-[#7874F2] focus:text-[#d7d7d7]'
+          href={link}
+          aria-label='My Profile'
+        >
           Edit Profile
         </Link>
       </div>

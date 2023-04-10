@@ -52,6 +52,7 @@ exports[`SideBar does not render the image in small screen if not on edit profil
     >
       <h1>
         <a
+          aria-label="My Listing"
           href="/testLink"
         >
           My Listing
@@ -59,6 +60,7 @@ exports[`SideBar does not render the image in small screen if not on edit profil
       </h1>
       <h1>
         <a
+          aria-label="My Orders"
           href="/testLink"
         >
           My Orders
@@ -121,6 +123,7 @@ exports[`SideBar renders large screen version correctly 1`] = `
     >
       <h1>
         <a
+          aria-label="My Listing"
           href="/testLink"
         >
           My Listing
@@ -128,6 +131,7 @@ exports[`SideBar renders large screen version correctly 1`] = `
       </h1>
       <h1>
         <a
+          aria-label="My Orders"
           href="/testLink"
         >
           My Orders
@@ -190,6 +194,7 @@ exports[`SideBar renders small screen version correctly 1`] = `
     >
       <h1>
         <a
+          aria-label="My Listing"
           href="/testLink"
         >
           My Listing
@@ -197,6 +202,7 @@ exports[`SideBar renders small screen version correctly 1`] = `
       </h1>
       <h1>
         <a
+          aria-label="My Orders"
           href="/testLink"
         >
           My Orders
