@@ -1,8 +1,10 @@
+import bcrypt from "bcryptjs"
 import DOMPurify from "dompurify"
 import Image from "next/image"
 import { useRouter } from "next/router"
 import { useState } from "react"
 import { BsFacebook, BsGoogle, BsTwitter } from "react-icons/bs"
+import * as Yup from "yup"
 
 import styles from "./Signup.module.css"
 
@@ -10,18 +12,47 @@ import Input from "@/components/input"
 
 import signUp from "@/firebase/auth/signup"
 
+// Define validation schema using Yup
+const validationSchema = Yup.object().shape({
+  name: Yup.string().required("Name is required"),
+  surname: Yup.string().required("Surname is required"),
+  email: Yup.string().email("Invalid email").required("Email is required"),
+  schoolName: Yup.string().required("School name is required"),
+  password: Yup.string()
+    .min(8, "Password must be at least 8 characters")
+    .max(64, "Password must be less than 64 characters")
+    .matches(
+      /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[^\da-zA-Z]).{8,}$/,
+      "Password must contain at least one uppercase letter, one lowercase letter, one number, and one special character"
+    )
+    .required("Password is required"),
+  passwordConfirm: Yup.string()
+    .oneOf([Yup.ref("password"), null], "Passwords must match")
+    .required("Password confirm is required"),
+})
+
+/*
+//! Define rate limit middleware to prevent brute-force attacks
+const limiter = rateLimit({
+  windowMs: 15 * 60 * 1000, // 15 minutes
+  max: 5, // Limit each IP to 5 requests per windowMs
+})
+*/
+
 function Signup() {
   const router = useRouter()
-  // const [email, setEmail] = useState("")
-  // const [password, setPassword] = useState("")
+
   const [formData, setFormData] = useState({
-    username: "",
     name: "asd",
     surname: "",
     email: "",
     schoolName: "",
     password: "",
+    passwordConfirm: "",
+    errors: {},
   })
+
+  const [errors, setErrors] = useState({})
 
   const handleChange = (event) => {
     const { name, value } = event.target
@@ -31,53 +62,40 @@ function Signup() {
     }))
   }
 
-  const validateFormData = () => {
-    const { username, name, surname, email, schoolName, password } = formData
-    const errors = {}
-
-    // Validate required fields
-    if (!username) errors.username = "Username is required"
-    if (!name) errors.name = "Name is required"
-    if (!surname) errors.surname = "Surname is required"
-    if (!email) errors.email = "Email is required"
-    if (!schoolName) errors.schoolName = "School name is required"
-    if (!password) errors.password = "Password is required"
-
-    // Validate email format
-    if (email && !/\S+@\S+\.\S+/.test(email)) {
-      errors.email = "Invalid email format"
-    }
-
-    // Validate password length
-    if (password && password.length < 8) {
-      errors.password = "Password must be at least 8 characters long"
-    }
-
-    return errors
-  }
-
   const handleFormSubmit = async (e) => {
     e.preventDefault()
 
-    const { username, name, surname, email, schoolName, password } = formData
+    try {
+      await validationSchema.validate(formData, { abortEarly: false })
 
-    console.log(formData)
-    // No validation errors, attempt to sign up the user
-    const { result, error } = await signUp(
-      email,
-      password,
-      name,
-      surname,
-      schoolName
-    )
+      const { name, surname, email, schoolName, password } = formData
 
-    if (error) {
-      return console.log(error)
+      // Hash password using bcrypt
+      const hashedPassword = await bcrypt.hash(password, 10)
+
+      // No validation errors, attempt to sign up the user
+      const { result, error } = await signUp(
+        email,
+        hashedPassword,
+        name,
+        surname,
+        schoolName
+      )
+
+      if (error) {
+        return console.log(error)
+      }
+
+      // else when successful
+      console.log(result)
+      return router.push("/")
+    } catch (err) {
+      const validationErrors = {}
+      err.inner.forEach((error) => {
+        validationErrors[error.path] = error.message
+      })
+      setErrors(validationErrors)
     }
-
-    // else when successful
-    console.log(result)
-    return router.push("/")
   }
 
   return (
@@ -108,6 +126,7 @@ function Signup() {
               <label htmlFor='firstName'>
                 <Input
                   type='text'
+                  id='firstName'
                   name='firstName'
                   placeholder='Name'
                   value={formData.name}
@@ -116,6 +135,7 @@ function Signup() {
               </label>
               <label htmlFor='surname'>
                 <Input
+                  id='surname'
                   type='text'
                   name='surname'
                   placeholder='Surname'
@@ -126,6 +146,7 @@ function Signup() {
               <label htmlFor='email'>
                 <Input
                   type='email'
+                  id='email'
                   name='email'
                   placeholder='E-mail address'
                   value={formData.email}
@@ -135,6 +156,7 @@ function Signup() {
               <label htmlFor='schoolName'>
                 <Input
                   type='text'
+                  id='schoolName'
                   name='schoolName'
                   placeholder='School name'
                   value={formData.schoolName}
@@ -144,15 +166,20 @@ function Signup() {
               <label htmlFor='password'>
                 <Input
                   type='password'
+                  id='password'
                   name='password'
                   placeholder='Password'
                   value={formData.password}
                   onChange={handleChange}
                 />
               </label>
+              {errors.password && <p>{errors.password}</p>}
               <Input
                 type='password'
+                id='passwordConfirm'
                 name='passwordConfirm'
+                value={formData.passwordConfirm}
+                onChange={handleChange}
                 placeholder='Re-enter password'
               />
               <button
