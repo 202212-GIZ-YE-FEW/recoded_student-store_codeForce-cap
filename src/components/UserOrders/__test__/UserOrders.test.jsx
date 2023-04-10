@@ -1,6 +1,6 @@
 import renderer from "react-test-renderer"
 
-import UserOrders from "../UserOrders"
+import UserOrders from ".."
 
 test("UserOrders component renders correctly", () => {
   const component = renderer.create(<UserOrders />)
