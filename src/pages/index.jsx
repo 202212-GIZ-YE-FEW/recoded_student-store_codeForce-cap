@@ -1,6 +1,6 @@
+import Link from "next/link"
 import { useTranslation } from "next-i18next"
 import { serverSideTranslations } from "next-i18next/serverSideTranslations"
-import Link from "next/link"
 
 import Donation from "@/components/donation"
 import Filter from "@/components/Filter"
@@ -10,8 +10,8 @@ import Navbar from "@/components/Navbar"
 
 import RootLayout from "@/layout/root/RootLayout"
 
+import SingleProduct from "./products/single-product"
 import Signup from "./signup"
-import SingleProduct from "./single-product"
 
 export default function HomePage() {
   const { t } = useTranslation("common")
