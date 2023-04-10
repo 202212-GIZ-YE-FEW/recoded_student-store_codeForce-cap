@@ -45,5 +45,87 @@ exports[`renders correctly 1`] = `
       Our companys mission is to create a student-friendly marketplace that provides an affordable and convenient platform for students to buy, sell, and borrow various types of products. We aim to help students save money by providing them access to affordable used products while also helping them earn money by allowing them to sell their own items.
     </p>
   </div>
+  <div
+    className="flex flex-col mt-20 items-center justify-center max-w-screen-md"
+  >
+    <div
+      className="flex flex-col justify-center items-center relative text-purple text-5xl font-bold"
+    >
+      <div
+        className=" -rotate-3"
+      >
+        <img
+          alt="highlighter icon"
+          data-nimg="1"
+          decoding="async"
+          height={180}
+          loading="lazy"
+          onError={[Function]}
+          onLoad={[Function]}
+          src="/_next/image?url=%2Fimages%2FHighlighter.png&w=1200&q=75"
+          srcSet="/_next/image?url=%2Fimages%2FHighlighter.png&w=640&q=75 1x, /_next/image?url=%2Fimages%2FHighlighter.png&w=1200&q=75 2x"
+          style={
+            {
+              "color": "transparent",
+            }
+          }
+          width={578}
+        />
+      </div>
+      <div
+        className="absolute mb-[57px] text-center"
+      >
+        <h2>
+          History
+        </h2>
+      </div>
+    </div>
+    <p
+      className="text-purple-dark w-[700px] p-3 text-2xl leading-relaxed text-center"
+    >
+      Our company was founded by a group of students who recognized the need for a platform that caters to the specific needs of students. They observed that students often struggle to find affordable used products or a reliable platform to sell their own items. The company was established with the idea of providing a safe and efficient platform for students to buy, sell, and borrow products.
+    </p>
+  </div>
+  <div
+    className="flex flex-col mt-20 items-center justify-center max-w-screen-md"
+  >
+    <div
+      className="flex flex-col justify-center items-center relative text-purple text-5xl font-bold"
+    >
+      <div
+        className=" -rotate-3"
+      >
+        <img
+          alt="highlighter icon"
+          data-nimg="1"
+          decoding="async"
+          height={180}
+          loading="lazy"
+          onError={[Function]}
+          onLoad={[Function]}
+          src="/_next/image?url=%2Fimages%2FHighlighter.png&w=1200&q=75"
+          srcSet="/_next/image?url=%2Fimages%2FHighlighter.png&w=640&q=75 1x, /_next/image?url=%2Fimages%2FHighlighter.png&w=1200&q=75 2x"
+          style={
+            {
+              "color": "transparent",
+            }
+          }
+          width={578}
+        />
+      </div>
+      <div
+        className="absolute mb-[57px] text-center"
+      >
+        <h2>
+          Goals
+        </h2>
+      </div>
+    </div>
+    <p
+      className="text-purple-dark w-[700px] p-3 text-2xl leading-relaxed text-center"
+    >
+      Our primary goal is to become the go-to marketplace for students across the country. We aim to build a strong reputation as a trusted platform that offers a wide range of affordable and high-quality products. We also aim to continuously improve our platform to ensure that it remains easy to use, reliable, and secure for all users. Additionally, we strive to create a community of students who can share their experiences and insights about products and services, creating a more connected and supportive student network. Ultimately, we want to help students save money, earn money, and have a better experience as they navigate their academic journeys.
+    </p>
+  </div>
 </div>
 `;
