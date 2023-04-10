@@ -1,0 +1,109 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Highlighter component category highlighter style snapshot 1`] = `
+<span>
+  <span
+    className="bg-[url('/images/Highlighter.png')] bg-bottom bg-no-repeat text-purple-light font-poppins text-center font-bold tracking-[-1px] block bg-[length:70%_70%] text-[200%] md:text-[400%] "
+  >
+    <h2>
+      Student store
+    </h2>
+  </span>
+</span>
+`;
+
+exports[`Highlighter component donate highlighter style snapshot 1`] = `
+<span>
+  <span
+    className="bg-[url('/images/Highlighter.png')] bg-bottom bg-no-repeat text-purple-light font-poppins text-center font-bold tracking-[-1px] block lg:bg-[length:699.31px_65.38px] lg:text-[50px] md:bg-[length:400.2px_53.2px] md:text-[35px] bg-[length:298.4px_39.67px] text-[26px] "
+  >
+    <h2>
+      Student store
+    </h2>
+  </span>
+</span>
+`;
+
+exports[`Highlighter component donating highlighter style snapshot 1`] = `
+<span>
+  <span
+    className="bg-[url('/images/Highlighter.png')] bg-bottom bg-no-repeat text-purple-light font-poppins text-center font-bold tracking-[-1px] block lg:bg-[length:820.72px_76.43px] lg:text-[49px] md:bg-[length:571.49px_53.22px] md:text-[34.2499px] bg-[length:339.1px_31.58px] text-[21px] "
+  >
+    <h2>
+      Student store
+    </h2>
+  </span>
+</span>
+`;
+
+exports[`Highlighter component editProfile highlighter style snapshot 1`] = `
+<span>
+  <span
+    className="bg-[url('/images/Highlighter.png')] bg-bottom bg-no-repeat text-purple-light font-poppins text-center font-bold tracking-[-1px] block md:bg-[length:313.92px_27.28px] md:text-[27.28px] bg-[length:233.67px_20.31px] text-[21px] lg:bg-[length:200px_38px] lg:text-[30px] "
+  >
+    <h2>
+      Student store
+    </h2>
+  </span>
+</span>
+`;
+
+exports[`Highlighter component listingPage highlighter style snapshot 1`] = `
+<span>
+  <span
+    className="bg-[url('/images/Highlighter.png')] bg-bottom bg-no-repeat text-purple-light font-poppins text-center font-bold tracking-[-1px] block md:bg-[length:313.92px_27.28px] md:text-[27.28px] bg-[length:233.67px_20.31px] text-[21px] lg:bg-[length:200px_38px] lg:text-[38px] "
+  >
+    <h2>
+      Student store
+    </h2>
+  </span>
+</span>
+`;
+
+exports[`Highlighter component ordersPage highlighter style snapshot 1`] = `
+<span>
+  <span
+    className="bg-[url('/images/Highlighter.png')] bg-bottom bg-no-repeat text-purple-light font-poppins text-center font-bold tracking-[-1px] block lg:bg-[length:437.27px_38px] lg:text-[38px] md:bg-[length:313.92px_27.28px] md:text-[27.28px] bg-[length:233.67px_20.31px] text-[21px] "
+  >
+    <h2>
+      Student store
+    </h2>
+  </span>
+</span>
+`;
+
+exports[`Highlighter component priceFilter highlighter style snapshot 1`] = `
+<span>
+  <span
+    className="bg-[url('/images/Highlighter.png')] bg-bottom bg-no-repeat text-purple-light font-poppins text-center font-bold tracking-[-1px] hidden lg:block lg:bg-[length:70%_70%] text-[400%] "
+  >
+    <h2>
+      Student store
+    </h2>
+  </span>
+</span>
+`;
+
+exports[`Highlighter component productListing highlighter style snapshot 1`] = `
+<span>
+  <span
+    className="bg-[url('/images/Highlighter.png')] bg-bottom bg-no-repeat text-purple-light font-poppins text-center font-bold tracking-[-1px] lg:bg-[length:437.27px_38px] lg:text-[38px] hidden md:block md:bg-[length:334.85px_30px] md:text-[30px] "
+  >
+    <h2>
+      Student store
+    </h2>
+  </span>
+</span>
+`;
+
+exports[`Highlighter component singleProduct highlighter style snapshot 1`] = `
+<span>
+  <span
+    className="bg-[url('/images/Highlighter.png')] bg-bottom bg-no-repeat text-purple-light font-poppins text-center font-bold tracking-[-1px] block lg:bg-[length:250.65px_38px] lg:text-[38px] md:bg-[length:197.35px_30px] md:text-[30px] bg-[length:140px_21px] text-[21px] "
+  >
+    <h2>
+      Student store
+    </h2>
+  </span>
+</span>
+`;

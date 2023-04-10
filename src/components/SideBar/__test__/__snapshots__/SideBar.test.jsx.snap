@@ -1,0 +1,214 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`SideBar does not render the image in small screen if not on edit profile page 1`] = `
+<section
+  class="hidden lg:block lg:w-[331px] lg:h-[947px] text-center lg:shadow-2xl lg:pt-12"
+>
+  <div
+    class="flex flex-col justify-around h-[75%]"
+  >
+    <img
+      alt="..."
+      class="rounded-full mx-auto mb-3"
+      data-nimg="1"
+      decoding="async"
+      height="171"
+      loading="lazy"
+      src="/_next/image?url=%2FproductImg.png&w=384&q=75"
+      srcset="/_next/image?url=%2FproductImg.png&w=256&q=75 1x, /_next/image?url=%2FproductImg.png&w=384&q=75 2x"
+      style="color: transparent;"
+      width="171"
+    />
+    <div
+      class="text-[22px]"
+    >
+      <h2
+        class="font-semibold"
+      >
+        Test Name
+      </h2>
+      <p>
+        test@test.com
+      </p>
+      <p>
+        Test Location
+      </p>
+    </div>
+    <a
+      href="/testLink"
+    >
+      <span>
+        <span
+          class="undefined "
+        >
+          <h2>
+            Text
+          </h2>
+        </span>
+      </span>
+    </a>
+    <div
+      class="font-bold text-[31px] grid grid-rows-2 gap-8"
+    >
+      <h1>
+        <a
+          aria-label="My Listing"
+          href="/testLink"
+        >
+          My Listing
+        </a>
+      </h1>
+      <h1>
+        <a
+          aria-label="My Orders"
+          href="/testLink"
+        >
+          My Orders
+        </a>
+      </h1>
+    </div>
+  </div>
+</section>
+`;
+
+exports[`SideBar renders large screen version correctly 1`] = `
+<section
+  class="hidden lg:block lg:w-[331px] lg:h-[947px] text-center lg:shadow-2xl lg:pt-12"
+>
+  <div
+    class="flex flex-col justify-around h-[75%]"
+  >
+    <img
+      alt="..."
+      class="rounded-full mx-auto mb-3"
+      data-nimg="1"
+      decoding="async"
+      height="171"
+      loading="lazy"
+      src="/_next/image?url=%2FproductImg.png&w=384&q=75"
+      srcset="/_next/image?url=%2FproductImg.png&w=256&q=75 1x, /_next/image?url=%2FproductImg.png&w=384&q=75 2x"
+      style="color: transparent;"
+      width="171"
+    />
+    <div
+      class="text-[22px]"
+    >
+      <h2
+        class="font-semibold"
+      >
+        Test Name
+      </h2>
+      <p>
+        test@test.com
+      </p>
+      <p>
+        Test Location
+      </p>
+    </div>
+    <a
+      href="/testLink"
+    >
+      <span>
+        <span
+          class="bg-[url('/images/Highlighter.png')] bg-bottom bg-no-repeat text-purple-light font-poppins text-center font-bold tracking-[-1px] block md:bg-[length:313.92px_27.28px] md:text-[27.28px] bg-[length:233.67px_20.31px] text-[21px] lg:bg-[length:200px_38px] lg:text-[30px] "
+        >
+          <h2>
+            Text
+          </h2>
+        </span>
+      </span>
+    </a>
+    <div
+      class="font-bold text-[31px] grid grid-rows-2 gap-8"
+    >
+      <h1>
+        <a
+          aria-label="My Listing"
+          href="/testLink"
+        >
+          My Listing
+        </a>
+      </h1>
+      <h1>
+        <a
+          aria-label="My Orders"
+          href="/testLink"
+        >
+          My Orders
+        </a>
+      </h1>
+    </div>
+  </div>
+</section>
+`;
+
+exports[`SideBar renders small screen version correctly 1`] = `
+<section
+  class="hidden lg:block lg:w-[331px] lg:h-[947px] text-center lg:shadow-2xl lg:pt-12"
+>
+  <div
+    class="flex flex-col justify-around h-[75%]"
+  >
+    <img
+      alt="..."
+      class="rounded-full mx-auto mb-3"
+      data-nimg="1"
+      decoding="async"
+      height="171"
+      loading="lazy"
+      src="/_next/image?url=%2FproductImg.png&w=384&q=75"
+      srcset="/_next/image?url=%2FproductImg.png&w=256&q=75 1x, /_next/image?url=%2FproductImg.png&w=384&q=75 2x"
+      style="color: transparent;"
+      width="171"
+    />
+    <div
+      class="text-[22px]"
+    >
+      <h2
+        class="font-semibold"
+      >
+        Test Name
+      </h2>
+      <p>
+        test@test.com
+      </p>
+      <p>
+        Test Location
+      </p>
+    </div>
+    <a
+      href="/testLink"
+    >
+      <span>
+        <span
+          class="undefined "
+        >
+          <h2>
+            Text
+          </h2>
+        </span>
+      </span>
+    </a>
+    <div
+      class="font-bold text-[31px] grid grid-rows-2 gap-8"
+    >
+      <h1>
+        <a
+          aria-label="My Listing"
+          href="/testLink"
+        >
+          My Listing
+        </a>
+      </h1>
+      <h1>
+        <a
+          aria-label="My Orders"
+          href="/testLink"
+        >
+          My Orders
+        </a>
+      </h1>
+    </div>
+  </div>
+</section>
+`;
