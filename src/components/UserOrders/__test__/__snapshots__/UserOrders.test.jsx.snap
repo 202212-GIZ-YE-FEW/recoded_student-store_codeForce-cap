@@ -1,0 +1,1321 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`UserOrders component renders correctly 1`] = `
+<section
+  className="max-w-[1250px] mx-auto my-[50px]"
+>
+  <section
+    className="flex flex-col lg:flex-row"
+  >
+    <div>
+      <section
+        className="lg:hidden"
+      >
+        <div
+          className="grid grid-cols-3 text-[17px] items-center text-purple-dark text-center bg-[#90EEE1] h-[38px]"
+        >
+          <a
+            className="focus:bg-[#7874F2] focus:text-[#d7d7d7]"
+            href="Link"
+            onClick={[Function]}
+            onMouseEnter={[Function]}
+            onTouchStart={[Function]}
+          >
+            My Orders
+          </a>
+          <a
+            className="focus:bg-[#7874F2] focus:text-[#d7d7d7]"
+            href="Link"
+            onClick={[Function]}
+            onMouseEnter={[Function]}
+            onTouchStart={[Function]}
+          >
+            My Listing
+          </a>
+          <a
+            className="focus:bg-[#7874F2] focus:text-[#d7d7d7]"
+            href="Link"
+            onClick={[Function]}
+            onMouseEnter={[Function]}
+            onTouchStart={[Function]}
+          >
+            Edit Profile
+          </a>
+        </div>
+        <br />
+        <br />
+        <span>
+          <span
+            className="bg-[url('/images/Highlighter.png')] bg-bottom bg-no-repeat text-purple-light font-poppins text-center font-bold tracking-[-1px] block lg:bg-[length:437.27px_38px] lg:text-[38px] md:bg-[length:313.92px_27.28px] md:text-[27.28px] bg-[length:233.67px_20.31px] text-[21px] "
+          >
+            <h2>
+              My Orders
+            </h2>
+          </span>
+        </span>
+        <hr
+          class="w-[82%] h-[1px] mx-auto bg-gray-100 border-0 rounded dark:bg-gray-700"
+        />
+        <br />
+        <br />
+      </section>
+    </div>
+    <div
+      className="lg:bg-gradient-to-l from-zinc-800 to-slate-300 lg:py-16 h-[947px] overflow-y-auto w-full"
+    >
+      <div
+        className="grid lg:grid-cols-3 md:grid-cols-2 gap-5 md:px-20 px-8"
+      >
+        <div
+          className="lg:bg-white rounded-lg pb-10"
+        >
+          <img
+            alt="..."
+            className="rounded-t-lg shadow-lg w-full"
+            data-nimg="1"
+            decoding="async"
+            height={1080}
+            loading="lazy"
+            onError={[Function]}
+            onLoad={[Function]}
+            src="/_next/image?url=%2FproductImg.png&w=3840&q=75"
+            srcSet="/_next/image?url=%2FproductImg.png&w=1920&q=75 1x, /_next/image?url=%2FproductImg.png&w=3840&q=75 2x"
+            style={
+              {
+                "color": "transparent",
+              }
+            }
+            width={1920}
+          />
+          <div
+            className="mx-3"
+          >
+            <div
+              className="flex justify-between my-4"
+            >
+              <div
+                className="text-left"
+              >
+                <h2
+                  className="font-semibold"
+                >
+                  Moog Synthesizer
+                </h2>
+                <p
+                  className="font-extralight text-xs"
+                >
+                  Books
+                </p>
+              </div>
+              <div>
+                <h2
+                  className="font-extrabold text-xl text-right"
+                >
+                  $
+                  10
+                </h2>
+                <p
+                  className="font-extralight text-xs"
+                >
+                  Istanbul / Turkey
+                </p>
+              </div>
+            </div>
+            <div>
+              <p>
+                <span
+                  className="font-extrabold"
+                >
+                  Listing Date:
+                </span>
+                 
+                01/04/2023
+              </p>
+              <p>
+                <span
+                  className="font-extrabold"
+                >
+                  Category:
+                </span>
+                <br />
+                 
+                Books
+              </p>
+            </div>
+          </div>
+        </div>
+        <div
+          className="lg:bg-white rounded-lg pb-10"
+        >
+          <img
+            alt="..."
+            className="rounded-t-lg shadow-lg w-full"
+            data-nimg="1"
+            decoding="async"
+            height={1080}
+            loading="lazy"
+            onError={[Function]}
+            onLoad={[Function]}
+            src="/_next/image?url=%2FproductImg.png&w=3840&q=75"
+            srcSet="/_next/image?url=%2FproductImg.png&w=1920&q=75 1x, /_next/image?url=%2FproductImg.png&w=3840&q=75 2x"
+            style={
+              {
+                "color": "transparent",
+              }
+            }
+            width={1920}
+          />
+          <div
+            className="mx-3"
+          >
+            <div
+              className="flex justify-between my-4"
+            >
+              <div
+                className="text-left"
+              >
+                <h2
+                  className="font-semibold"
+                >
+                  Moog Synthesizer
+                </h2>
+                <p
+                  className="font-extralight text-xs"
+                >
+                  Furniture
+                </p>
+              </div>
+              <div>
+                <h2
+                  className="font-extrabold text-xl text-right"
+                >
+                  $
+                  20
+                </h2>
+                <p
+                  className="font-extralight text-xs"
+                >
+                  Istanbul / Turkey
+                </p>
+              </div>
+            </div>
+            <div>
+              <p>
+                <span
+                  className="font-extrabold"
+                >
+                  Listing Date:
+                </span>
+                 
+                03/04/2023
+              </p>
+              <p>
+                <span
+                  className="font-extrabold"
+                >
+                  Category:
+                </span>
+                <br />
+                 
+                Furniture
+              </p>
+            </div>
+          </div>
+        </div>
+        <div
+          className="lg:bg-white rounded-lg pb-10"
+        >
+          <img
+            alt="..."
+            className="rounded-t-lg shadow-lg w-full"
+            data-nimg="1"
+            decoding="async"
+            height={1080}
+            loading="lazy"
+            onError={[Function]}
+            onLoad={[Function]}
+            src="/_next/image?url=%2FproductImg.png&w=3840&q=75"
+            srcSet="/_next/image?url=%2FproductImg.png&w=1920&q=75 1x, /_next/image?url=%2FproductImg.png&w=3840&q=75 2x"
+            style={
+              {
+                "color": "transparent",
+              }
+            }
+            width={1920}
+          />
+          <div
+            className="mx-3"
+          >
+            <div
+              className="flex justify-between my-4"
+            >
+              <div
+                className="text-left"
+              >
+                <h2
+                  className="font-semibold"
+                >
+                  Moog Synthesizer
+                </h2>
+                <p
+                  className="font-extralight text-xs"
+                >
+                  Furniture
+                </p>
+              </div>
+              <div>
+                <h2
+                  className="font-extrabold text-xl text-right"
+                >
+                  $
+                  30
+                </h2>
+                <p
+                  className="font-extralight text-xs"
+                >
+                  Istanbul / Turkey
+                </p>
+              </div>
+            </div>
+            <div>
+              <p>
+                <span
+                  className="font-extrabold"
+                >
+                  Listing Date:
+                </span>
+                 
+                05/04/2023
+              </p>
+              <p>
+                <span
+                  className="font-extrabold"
+                >
+                  Category:
+                </span>
+                <br />
+                 
+                Furniture
+              </p>
+            </div>
+          </div>
+        </div>
+        <div
+          className="lg:bg-white rounded-lg pb-10"
+        >
+          <img
+            alt="..."
+            className="rounded-t-lg shadow-lg w-full"
+            data-nimg="1"
+            decoding="async"
+            height={1080}
+            loading="lazy"
+            onError={[Function]}
+            onLoad={[Function]}
+            src="/_next/image?url=%2FproductImg.png&w=3840&q=75"
+            srcSet="/_next/image?url=%2FproductImg.png&w=1920&q=75 1x, /_next/image?url=%2FproductImg.png&w=3840&q=75 2x"
+            style={
+              {
+                "color": "transparent",
+              }
+            }
+            width={1920}
+          />
+          <div
+            className="mx-3"
+          >
+            <div
+              className="flex justify-between my-4"
+            >
+              <div
+                className="text-left"
+              >
+                <h2
+                  className="font-semibold"
+                >
+                  Moog Synthesizer
+                </h2>
+                <p
+                  className="font-extralight text-xs"
+                >
+                  Electronics
+                </p>
+              </div>
+              <div>
+                <h2
+                  className="font-extrabold text-xl text-right"
+                >
+                  $
+                  40
+                </h2>
+                <p
+                  className="font-extralight text-xs"
+                >
+                  Istanbul / Turkey
+                </p>
+              </div>
+            </div>
+            <div>
+              <p>
+                <span
+                  className="font-extrabold"
+                >
+                  Listing Date:
+                </span>
+                 
+                07/04/2023
+              </p>
+              <p>
+                <span
+                  className="font-extrabold"
+                >
+                  Category:
+                </span>
+                <br />
+                 
+                Electronics
+              </p>
+            </div>
+          </div>
+        </div>
+        <div
+          className="lg:bg-white rounded-lg pb-10"
+        >
+          <img
+            alt="..."
+            className="rounded-t-lg shadow-lg w-full"
+            data-nimg="1"
+            decoding="async"
+            height={1080}
+            loading="lazy"
+            onError={[Function]}
+            onLoad={[Function]}
+            src="/_next/image?url=%2FproductImg.png&w=3840&q=75"
+            srcSet="/_next/image?url=%2FproductImg.png&w=1920&q=75 1x, /_next/image?url=%2FproductImg.png&w=3840&q=75 2x"
+            style={
+              {
+                "color": "transparent",
+              }
+            }
+            width={1920}
+          />
+          <div
+            className="mx-3"
+          >
+            <div
+              className="flex justify-between my-4"
+            >
+              <div
+                className="text-left"
+              >
+                <h2
+                  className="font-semibold"
+                >
+                  Moog Synthesizer
+                </h2>
+                <p
+                  className="font-extralight text-xs"
+                >
+                  Two-wheeler
+                </p>
+              </div>
+              <div>
+                <h2
+                  className="font-extrabold text-xl text-right"
+                >
+                  $
+                  50
+                </h2>
+                <p
+                  className="font-extralight text-xs"
+                >
+                  Istanbul / Turkey
+                </p>
+              </div>
+            </div>
+            <div>
+              <p>
+                <span
+                  className="font-extrabold"
+                >
+                  Listing Date:
+                </span>
+                 
+                09/04/2023
+              </p>
+              <p>
+                <span
+                  className="font-extrabold"
+                >
+                  Category:
+                </span>
+                <br />
+                 
+                Two-wheeler
+              </p>
+            </div>
+          </div>
+        </div>
+        <div
+          className="lg:bg-white rounded-lg pb-10"
+        >
+          <img
+            alt="..."
+            className="rounded-t-lg shadow-lg w-full"
+            data-nimg="1"
+            decoding="async"
+            height={1080}
+            loading="lazy"
+            onError={[Function]}
+            onLoad={[Function]}
+            src="/_next/image?url=%2FproductImg.png&w=3840&q=75"
+            srcSet="/_next/image?url=%2FproductImg.png&w=1920&q=75 1x, /_next/image?url=%2FproductImg.png&w=3840&q=75 2x"
+            style={
+              {
+                "color": "transparent",
+              }
+            }
+            width={1920}
+          />
+          <div
+            className="mx-3"
+          >
+            <div
+              className="flex justify-between my-4"
+            >
+              <div
+                className="text-left"
+              >
+                <h2
+                  className="font-semibold"
+                >
+                  Moog Synthesizer
+                </h2>
+                <p
+                  className="font-extralight text-xs"
+                >
+                  Two-wheeler
+                </p>
+              </div>
+              <div>
+                <h2
+                  className="font-extrabold text-xl text-right"
+                >
+                  $
+                  60
+                </h2>
+                <p
+                  className="font-extralight text-xs"
+                >
+                  Istanbul / Turkey
+                </p>
+              </div>
+            </div>
+            <div>
+              <p>
+                <span
+                  className="font-extrabold"
+                >
+                  Listing Date:
+                </span>
+                 
+                11/04/2023
+              </p>
+              <p>
+                <span
+                  className="font-extrabold"
+                >
+                  Category:
+                </span>
+                <br />
+                 
+                Two-wheeler
+              </p>
+            </div>
+          </div>
+        </div>
+        <div
+          className="lg:bg-white rounded-lg pb-10"
+        >
+          <img
+            alt="..."
+            className="rounded-t-lg shadow-lg w-full"
+            data-nimg="1"
+            decoding="async"
+            height={1080}
+            loading="lazy"
+            onError={[Function]}
+            onLoad={[Function]}
+            src="/_next/image?url=%2FproductImg.png&w=3840&q=75"
+            srcSet="/_next/image?url=%2FproductImg.png&w=1920&q=75 1x, /_next/image?url=%2FproductImg.png&w=3840&q=75 2x"
+            style={
+              {
+                "color": "transparent",
+              }
+            }
+            width={1920}
+          />
+          <div
+            className="mx-3"
+          >
+            <div
+              className="flex justify-between my-4"
+            >
+              <div
+                className="text-left"
+              >
+                <h2
+                  className="font-semibold"
+                >
+                  Moog Synthesizer
+                </h2>
+                <p
+                  className="font-extralight text-xs"
+                >
+                  Two-wheeler
+                </p>
+              </div>
+              <div>
+                <h2
+                  className="font-extrabold text-xl text-right"
+                >
+                  $
+                  70
+                </h2>
+                <p
+                  className="font-extralight text-xs"
+                >
+                  Istanbul / Turkey
+                </p>
+              </div>
+            </div>
+            <div>
+              <p>
+                <span
+                  className="font-extrabold"
+                >
+                  Listing Date:
+                </span>
+                 
+                13/04/2023
+              </p>
+              <p>
+                <span
+                  className="font-extrabold"
+                >
+                  Category:
+                </span>
+                <br />
+                 
+                Two-wheeler
+              </p>
+            </div>
+          </div>
+        </div>
+        <div
+          className="lg:bg-white rounded-lg pb-10"
+        >
+          <img
+            alt="..."
+            className="rounded-t-lg shadow-lg w-full"
+            data-nimg="1"
+            decoding="async"
+            height={1080}
+            loading="lazy"
+            onError={[Function]}
+            onLoad={[Function]}
+            src="/_next/image?url=%2FproductImg.png&w=3840&q=75"
+            srcSet="/_next/image?url=%2FproductImg.png&w=1920&q=75 1x, /_next/image?url=%2FproductImg.png&w=3840&q=75 2x"
+            style={
+              {
+                "color": "transparent",
+              }
+            }
+            width={1920}
+          />
+          <div
+            className="mx-3"
+          >
+            <div
+              className="flex justify-between my-4"
+            >
+              <div
+                className="text-left"
+              >
+                <h2
+                  className="font-semibold"
+                >
+                  Moog Synthesizer
+                </h2>
+                <p
+                  className="font-extralight text-xs"
+                >
+                  Two-wheeler
+                </p>
+              </div>
+              <div>
+                <h2
+                  className="font-extrabold text-xl text-right"
+                >
+                  $
+                  80
+                </h2>
+                <p
+                  className="font-extralight text-xs"
+                >
+                  Istanbul / Turkey
+                </p>
+              </div>
+            </div>
+            <div>
+              <p>
+                <span
+                  className="font-extrabold"
+                >
+                  Listing Date:
+                </span>
+                 
+                15/04/2023
+              </p>
+              <p>
+                <span
+                  className="font-extrabold"
+                >
+                  Category:
+                </span>
+                <br />
+                 
+                Two-wheeler
+              </p>
+            </div>
+          </div>
+        </div>
+        <div
+          className="lg:bg-white rounded-lg pb-10"
+        >
+          <img
+            alt="..."
+            className="rounded-t-lg shadow-lg w-full"
+            data-nimg="1"
+            decoding="async"
+            height={1080}
+            loading="lazy"
+            onError={[Function]}
+            onLoad={[Function]}
+            src="/_next/image?url=%2FproductImg.png&w=3840&q=75"
+            srcSet="/_next/image?url=%2FproductImg.png&w=1920&q=75 1x, /_next/image?url=%2FproductImg.png&w=3840&q=75 2x"
+            style={
+              {
+                "color": "transparent",
+              }
+            }
+            width={1920}
+          />
+          <div
+            className="mx-3"
+          >
+            <div
+              className="flex justify-between my-4"
+            >
+              <div
+                className="text-left"
+              >
+                <h2
+                  className="font-semibold"
+                >
+                  Moog Synthesizer
+                </h2>
+                <p
+                  className="font-extralight text-xs"
+                >
+                  Two-wheeler
+                </p>
+              </div>
+              <div>
+                <h2
+                  className="font-extrabold text-xl text-right"
+                >
+                  $
+                  90
+                </h2>
+                <p
+                  className="font-extralight text-xs"
+                >
+                  Istanbul / Turkey
+                </p>
+              </div>
+            </div>
+            <div>
+              <p>
+                <span
+                  className="font-extrabold"
+                >
+                  Listing Date:
+                </span>
+                 
+                17/04/2023
+              </p>
+              <p>
+                <span
+                  className="font-extrabold"
+                >
+                  Category:
+                </span>
+                <br />
+                 
+                Two-wheeler
+              </p>
+            </div>
+          </div>
+        </div>
+        <div
+          className="lg:bg-white rounded-lg pb-10"
+        >
+          <img
+            alt="..."
+            className="rounded-t-lg shadow-lg w-full"
+            data-nimg="1"
+            decoding="async"
+            height={1080}
+            loading="lazy"
+            onError={[Function]}
+            onLoad={[Function]}
+            src="/_next/image?url=%2FproductImg.png&w=3840&q=75"
+            srcSet="/_next/image?url=%2FproductImg.png&w=1920&q=75 1x, /_next/image?url=%2FproductImg.png&w=3840&q=75 2x"
+            style={
+              {
+                "color": "transparent",
+              }
+            }
+            width={1920}
+          />
+          <div
+            className="mx-3"
+          >
+            <div
+              className="flex justify-between my-4"
+            >
+              <div
+                className="text-left"
+              >
+                <h2
+                  className="font-semibold"
+                >
+                  Moog Synthesizer
+                </h2>
+                <p
+                  className="font-extralight text-xs"
+                >
+                  Two-wheeler
+                </p>
+              </div>
+              <div>
+                <h2
+                  className="font-extrabold text-xl text-right"
+                >
+                  $
+                  100
+                </h2>
+                <p
+                  className="font-extralight text-xs"
+                >
+                  Istanbul / Turkey
+                </p>
+              </div>
+            </div>
+            <div>
+              <p>
+                <span
+                  className="font-extrabold"
+                >
+                  Listing Date:
+                </span>
+                 
+                19/04/2023
+              </p>
+              <p>
+                <span
+                  className="font-extrabold"
+                >
+                  Category:
+                </span>
+                <br />
+                 
+                Two-wheeler
+              </p>
+            </div>
+          </div>
+        </div>
+        <div
+          className="lg:bg-white rounded-lg pb-10"
+        >
+          <img
+            alt="..."
+            className="rounded-t-lg shadow-lg w-full"
+            data-nimg="1"
+            decoding="async"
+            height={1080}
+            loading="lazy"
+            onError={[Function]}
+            onLoad={[Function]}
+            src="/_next/image?url=%2FproductImg.png&w=3840&q=75"
+            srcSet="/_next/image?url=%2FproductImg.png&w=1920&q=75 1x, /_next/image?url=%2FproductImg.png&w=3840&q=75 2x"
+            style={
+              {
+                "color": "transparent",
+              }
+            }
+            width={1920}
+          />
+          <div
+            className="mx-3"
+          >
+            <div
+              className="flex justify-between my-4"
+            >
+              <div
+                className="text-left"
+              >
+                <h2
+                  className="font-semibold"
+                >
+                  Moog Synthesizer
+                </h2>
+                <p
+                  className="font-extralight text-xs"
+                >
+                  Electronics
+                </p>
+              </div>
+              <div>
+                <h2
+                  className="font-extrabold text-xl text-right"
+                >
+                  $
+                  200
+                </h2>
+                <p
+                  className="font-extralight text-xs"
+                >
+                  Istanbul / Turkey
+                </p>
+              </div>
+            </div>
+            <div>
+              <p>
+                <span
+                  className="font-extrabold"
+                >
+                  Listing Date:
+                </span>
+                 
+                21/04/2023
+              </p>
+              <p>
+                <span
+                  className="font-extrabold"
+                >
+                  Category:
+                </span>
+                <br />
+                 
+                Electronics
+              </p>
+            </div>
+          </div>
+        </div>
+        <div
+          className="lg:bg-white rounded-lg pb-10"
+        >
+          <img
+            alt="..."
+            className="rounded-t-lg shadow-lg w-full"
+            data-nimg="1"
+            decoding="async"
+            height={1080}
+            loading="lazy"
+            onError={[Function]}
+            onLoad={[Function]}
+            src="/_next/image?url=%2FproductImg.png&w=3840&q=75"
+            srcSet="/_next/image?url=%2FproductImg.png&w=1920&q=75 1x, /_next/image?url=%2FproductImg.png&w=3840&q=75 2x"
+            style={
+              {
+                "color": "transparent",
+              }
+            }
+            width={1920}
+          />
+          <div
+            className="mx-3"
+          >
+            <div
+              className="flex justify-between my-4"
+            >
+              <div
+                className="text-left"
+              >
+                <h2
+                  className="font-semibold"
+                >
+                  Moog Synthesizer
+                </h2>
+                <p
+                  className="font-extralight text-xs"
+                >
+                  Electronics
+                </p>
+              </div>
+              <div>
+                <h2
+                  className="font-extrabold text-xl text-right"
+                >
+                  $
+                  300
+                </h2>
+                <p
+                  className="font-extralight text-xs"
+                >
+                  Istanbul / Turkey
+                </p>
+              </div>
+            </div>
+            <div>
+              <p>
+                <span
+                  className="font-extrabold"
+                >
+                  Listing Date:
+                </span>
+                 
+                23/04/2023
+              </p>
+              <p>
+                <span
+                  className="font-extrabold"
+                >
+                  Category:
+                </span>
+                <br />
+                 
+                Electronics
+              </p>
+            </div>
+          </div>
+        </div>
+        <div
+          className="lg:bg-white rounded-lg pb-10"
+        >
+          <img
+            alt="..."
+            className="rounded-t-lg shadow-lg w-full"
+            data-nimg="1"
+            decoding="async"
+            height={1080}
+            loading="lazy"
+            onError={[Function]}
+            onLoad={[Function]}
+            src="/_next/image?url=%2FproductImg.png&w=3840&q=75"
+            srcSet="/_next/image?url=%2FproductImg.png&w=1920&q=75 1x, /_next/image?url=%2FproductImg.png&w=3840&q=75 2x"
+            style={
+              {
+                "color": "transparent",
+              }
+            }
+            width={1920}
+          />
+          <div
+            className="mx-3"
+          >
+            <div
+              className="flex justify-between my-4"
+            >
+              <div
+                className="text-left"
+              >
+                <h2
+                  className="font-semibold"
+                >
+                  Moog Synthesizer
+                </h2>
+                <p
+                  className="font-extralight text-xs"
+                >
+                  Electronics
+                </p>
+              </div>
+              <div>
+                <h2
+                  className="font-extrabold text-xl text-right"
+                >
+                  $
+                  500
+                </h2>
+                <p
+                  className="font-extralight text-xs"
+                >
+                  Istanbul / Turkey
+                </p>
+              </div>
+            </div>
+            <div>
+              <p>
+                <span
+                  className="font-extrabold"
+                >
+                  Listing Date:
+                </span>
+                 
+                25/04/2023
+              </p>
+              <p>
+                <span
+                  className="font-extrabold"
+                >
+                  Category:
+                </span>
+                <br />
+                 
+                Electronics
+              </p>
+            </div>
+          </div>
+        </div>
+        <div
+          className="lg:bg-white rounded-lg pb-10"
+        >
+          <img
+            alt="..."
+            className="rounded-t-lg shadow-lg w-full"
+            data-nimg="1"
+            decoding="async"
+            height={1080}
+            loading="lazy"
+            onError={[Function]}
+            onLoad={[Function]}
+            src="/_next/image?url=%2FproductImg.png&w=3840&q=75"
+            srcSet="/_next/image?url=%2FproductImg.png&w=1920&q=75 1x, /_next/image?url=%2FproductImg.png&w=3840&q=75 2x"
+            style={
+              {
+                "color": "transparent",
+              }
+            }
+            width={1920}
+          />
+          <div
+            className="mx-3"
+          >
+            <div
+              className="flex justify-between my-4"
+            >
+              <div
+                className="text-left"
+              >
+                <h2
+                  className="font-semibold"
+                >
+                  Moog Synthesizer
+                </h2>
+                <p
+                  className="font-extralight text-xs"
+                >
+                  Electronics
+                </p>
+              </div>
+              <div>
+                <h2
+                  className="font-extrabold text-xl text-right"
+                >
+                  $
+                  600
+                </h2>
+                <p
+                  className="font-extralight text-xs"
+                >
+                  Istanbul / Turkey
+                </p>
+              </div>
+            </div>
+            <div>
+              <p>
+                <span
+                  className="font-extrabold"
+                >
+                  Listing Date:
+                </span>
+                 
+                27/04/2023
+              </p>
+              <p>
+                <span
+                  className="font-extrabold"
+                >
+                  Category:
+                </span>
+                <br />
+                 
+                Electronics
+              </p>
+            </div>
+          </div>
+        </div>
+        <div
+          className="lg:bg-white rounded-lg pb-10"
+        >
+          <img
+            alt="..."
+            className="rounded-t-lg shadow-lg w-full"
+            data-nimg="1"
+            decoding="async"
+            height={1080}
+            loading="lazy"
+            onError={[Function]}
+            onLoad={[Function]}
+            src="/_next/image?url=%2FproductImg.png&w=3840&q=75"
+            srcSet="/_next/image?url=%2FproductImg.png&w=1920&q=75 1x, /_next/image?url=%2FproductImg.png&w=3840&q=75 2x"
+            style={
+              {
+                "color": "transparent",
+              }
+            }
+            width={1920}
+          />
+          <div
+            className="mx-3"
+          >
+            <div
+              className="flex justify-between my-4"
+            >
+              <div
+                className="text-left"
+              >
+                <h2
+                  className="font-semibold"
+                >
+                  Moog Synthesizer
+                </h2>
+                <p
+                  className="font-extralight text-xs"
+                >
+                  Electronics
+                </p>
+              </div>
+              <div>
+                <h2
+                  className="font-extrabold text-xl text-right"
+                >
+                  $
+                  700
+                </h2>
+                <p
+                  className="font-extralight text-xs"
+                >
+                  Istanbul / Turkey
+                </p>
+              </div>
+            </div>
+            <div>
+              <p>
+                <span
+                  className="font-extrabold"
+                >
+                  Listing Date:
+                </span>
+                 
+                01/05/2023
+              </p>
+              <p>
+                <span
+                  className="font-extrabold"
+                >
+                  Category:
+                </span>
+                <br />
+                 
+                Electronics
+              </p>
+            </div>
+          </div>
+        </div>
+        <div
+          className="lg:bg-white rounded-lg pb-10"
+        >
+          <img
+            alt="..."
+            className="rounded-t-lg shadow-lg w-full"
+            data-nimg="1"
+            decoding="async"
+            height={1080}
+            loading="lazy"
+            onError={[Function]}
+            onLoad={[Function]}
+            src="/_next/image?url=%2FproductImg.png&w=3840&q=75"
+            srcSet="/_next/image?url=%2FproductImg.png&w=1920&q=75 1x, /_next/image?url=%2FproductImg.png&w=3840&q=75 2x"
+            style={
+              {
+                "color": "transparent",
+              }
+            }
+            width={1920}
+          />
+          <div
+            className="mx-3"
+          >
+            <div
+              className="flex justify-between my-4"
+            >
+              <div
+                className="text-left"
+              >
+                <h2
+                  className="font-semibold"
+                >
+                  Moog Synthesizer
+                </h2>
+                <p
+                  className="font-extralight text-xs"
+                >
+                  Electronics
+                </p>
+              </div>
+              <div>
+                <h2
+                  className="font-extrabold text-xl text-right"
+                >
+                  $
+                  800
+                </h2>
+                <p
+                  className="font-extralight text-xs"
+                >
+                  Istanbul / Turkey
+                </p>
+              </div>
+            </div>
+            <div>
+              <p>
+                <span
+                  className="font-extrabold"
+                >
+                  Listing Date:
+                </span>
+                 
+                03/05/2023
+              </p>
+              <p>
+                <span
+                  className="font-extrabold"
+                >
+                  Category:
+                </span>
+                <br />
+                 
+                Electronics
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</section>
+`;
