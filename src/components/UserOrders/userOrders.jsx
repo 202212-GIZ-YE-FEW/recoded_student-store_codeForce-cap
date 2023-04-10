@@ -7,7 +7,7 @@ import SideBar from "../SideBar"
 
 const gradient = "lg:bg-gradient-to-l from-zinc-800 to-slate-300"
 
-function userOrders() {
+function UserOrders() {
   return (
     <section className='flex flex-col lg:flex-row'>
       <div>
@@ -43,11 +43,11 @@ function userOrders() {
                 </div>
                 <div>
                   <p>
-                    <span className='font-extrabold'> Listing Date:</span>{" "}
+                    <span className='font-extrabold'>Listing Date:</span>{" "}
                     {product.order_date}
                   </p>
                   <p>
-                    <span className='font-extrabold'> Category:</span>
+                    <span className='font-extrabold'>Category:</span>
                     <br /> {product.category}
                   </p>
                 </div>
@@ -60,4 +60,4 @@ function userOrders() {
   )
 }
 
-export default SectionWrapper(userOrders)
+export default SectionWrapper(UserOrders)
