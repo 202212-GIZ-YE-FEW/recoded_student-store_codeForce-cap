@@ -79,8 +79,6 @@ export default function SideBar({
       </div>
       <br />
       <br />
-      <br />
-      <br />
       <Highlighter highlighterStyle={currentPage} text={highlighterText} />
       <br />
       <br />
