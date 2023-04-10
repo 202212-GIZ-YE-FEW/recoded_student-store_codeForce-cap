@@ -11,6 +11,7 @@ import Signin from "@/components/signin"
 import Signup from "@/components/Signup"
 
 import RootLayout from "@/layout/root/RootLayout"
+import Aboutus from "@/components/aboutus"
 
 export default function HomePage() {
   const { t } = useTranslation("common")
@@ -19,6 +20,7 @@ export default function HomePage() {
     <>
       <RootLayout>
         <Navbar />
+        <Aboutus />
         <Signin />
 
         <p>{t("test")}</p>
