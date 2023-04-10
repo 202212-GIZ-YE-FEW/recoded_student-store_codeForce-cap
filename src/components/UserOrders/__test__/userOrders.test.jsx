@@ -1,10 +1,8 @@
-import { render } from "@testing-library/react"
+import renderer from "react-test-renderer"
 
-import UserOrders from "../UserOrders"
+import UserOrders from ".."
 
-describe("UserOrders component", () => {
-  test("renders correctly", () => {
-    const wrapper = render(<UserOrders />)
-    expect(wrapper).toMatchSnapshot()
-  })
+it("renders correctly", () => {
+  const tree = renderer.create(<UserOrders />).toJSON()
+  expect(tree).toMatchSnapshot()
 })
