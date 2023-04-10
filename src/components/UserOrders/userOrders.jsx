@@ -5,15 +5,13 @@ import { SectionWrapper } from "@/hoc"
 import products from "../ProductList/products"
 import SideBar from "../SideBar"
 
-const gradient = "lg:bg-gradient-to-l from-zinc-800 to-slate-300"
-
 function UserOrders() {
   return (
     <section className='flex flex-col lg:flex-row'>
       <div>
         <SideBar currentPage='ordersPage' highlighterText='My Orders' />
       </div>
-      <div className={`${gradient} lg:py-16 h-[947px] overflow-y-auto w-full`}>
+      <div className='lg:bg-gradient-to-l from-zinc-800 to-slate-300 lg:py-16 h-[947px] overflow-y-auto w-full'>
         <div className='grid lg:grid-cols-3 md:grid-cols-2 gap-5 md:px-20 px-8'>
           {products.map((product) => (
             <div key={product.id} className='lg:bg-white rounded-lg pb-10'>
