@@ -1,4 +1,4 @@
-function Input({ type, name, placeholder, className }) {
+function Input({ type, name, value, placeholder, className, onChange }) {
   return (
     <>
       <input
@@ -6,6 +6,8 @@ function Input({ type, name, placeholder, className }) {
         name={name}
         placeholder={placeholder}
         className={`my-2 block w-full rounded-lg border border-gray-300 p-2.5 text-center ${className}`}
+        value={value}
+        onChange={onChange}
         required
       />
     </>
