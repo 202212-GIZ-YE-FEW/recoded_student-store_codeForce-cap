@@ -1,3 +1,3 @@
-import UserOrders from "./userOrders"
+import UserOrders from "./UserOrders"
 
 export default UserOrders
