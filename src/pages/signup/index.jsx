@@ -1,3 +1,4 @@
+import DOMPurify from "dompurify"
 import Image from "next/image"
 import { useRouter } from "next/router"
 import { useState } from "react"
@@ -10,8 +11,6 @@ import Input from "@/components/input"
 import signUp from "@/firebase/auth/signup"
 
 function Signup() {
-  const [email, setEmail] = useState("")
-  const [password, setPassword] = useState("")
   const router = useRouter()
   const [formData, setFormData] = useState({
     username: "",
@@ -22,10 +21,51 @@ function Signup() {
     password: "",
   })
 
+  const handleChange = (event) => {
+    const { name, value } = event.target
+    setFormData((prevState) => ({
+      ...prevState,
+      [name]: DOMPurify.sanitize(value),
+    }))
+  }
+
+  const validateFormData = () => {
+    const { username, name, surname, email, schoolName, password } = formData
+    const errors = {}
+
+    // Validate required fields
+    if (!username) errors.username = "Username is required"
+    if (!name) errors.name = "Name is required"
+    if (!surname) errors.surname = "Surname is required"
+    if (!email) errors.email = "Email is required"
+    if (!schoolName) errors.schoolName = "School name is required"
+    if (!password) errors.password = "Password is required"
+
+    // Validate email format
+    if (email && !/\S+@\S+\.\S+/.test(email)) {
+      errors.email = "Invalid email format"
+    }
+
+    // Validate password length
+    if (password && password.length < 8) {
+      errors.password = "Password must be at least 8 characters long"
+    }
+
+    return errors
+  }
+
   const handleFormSubmit = async (e) => {
     e.preventDefault()
 
-    const { result, error } = await signUp(email, password)
+    console.log(formData)
+    // No validation errors, attempt to sign up the user
+    const { result, error } = await signUp(
+      formData.name,
+      formData.surname,
+      formData.email,
+      formData.schoolName,
+      formData.password
+    )
 
     if (error) {
       return console.log(error)
@@ -34,6 +74,7 @@ function Signup() {
     // else when successful
     return router.push("/")
   }
+
   return (
     <div>
       <div className={`flex justify-center   md:flex-row  bg-[#f1f6fa] `}>
@@ -59,28 +100,54 @@ function Signup() {
               onSubmit={handleFormSubmit}
               className='container m-auto mb-6 flex w-5/6 flex-col items-center'
             >
-              <label htmlFor='first-name'>
-                <Input type='text' name='first-name' placeholder='Name' />
-              </label>
-              <label htmlFor='surname'>
-                <Input type='text' name='surname' placeholder='Surname' />
-              </label>
-              <label htmlFor='email'>
-                <Input type='email' name='email' placeholder='E-mail address' />
-              </label>
-              <label htmlFor='school-name'>
+              <label htmlFor='firstName'>
                 <Input
                   type='text'
-                  name='school-name'
+                  name='firstName'
+                  placeholder='Name'
+                  value={formData.name}
+                  onChange={handleChange}
+                />
+              </label>
+              <label htmlFor='surname'>
+                <Input
+                  type='text'
+                  name='surname'
+                  placeholder='Surname'
+                  value={formData.surname}
+                  onChange={handleChange}
+                />
+              </label>
+              <label htmlFor='email'>
+                <Input
+                  type='email'
+                  name='email'
+                  placeholder='E-mail address'
+                  value={formData.email}
+                  onChange={handleChange}
+                />
+              </label>
+              <label htmlFor='schoolName'>
+                <Input
+                  type='text'
+                  name='schoolName'
                   placeholder='School name'
+                  value={formData.schoolName}
+                  onChange={handleChange}
                 />
               </label>
               <label htmlFor='password'>
-                <Input type='password' name='password' placeholder='Password' />
+                <Input
+                  type='password'
+                  name='password'
+                  placeholder='Password'
+                  value={formData.password}
+                  onChange={handleChange}
+                />
               </label>
               <Input
                 type='password'
-                name='re-enter-password'
+                name='passwordConfirm'
                 placeholder='Re-enter password'
               />
               <button

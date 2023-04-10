@@ -1,15 +1,16 @@
 import { createUserWithEmailAndPassword } from "firebase/auth"
+import { collection, doc, setDoc } from "firebase/firestore"
 
 import { auth, db } from "../config"
 
-export default async function signUp(
+export default async function signUp({
   name,
   surname,
   email,
   schoolName,
-  password
-) {
-  const userRef = db.collection("users")
+  password,
+}) {
+  const userRef = collection(db, "users")
 
   let result = null,
     error = null
@@ -20,18 +21,17 @@ export default async function signUp(
         const user = userCredential.user
 
         // Create a user document
-        userRef
-          .doc(user.uid)
-          .set({
-            uid: user.uid,
-            username: email,
-            name: name,
-            surname: surname,
-            email: email,
-            schoolName: schoolName,
-            password: password,
-            createdAt: new Date().toISOString(),
-          })
+        setDoc(doc(userRef, user.uid), {
+          // Use setDoc to write to a document
+          uid: user.uid,
+          username: email,
+          name: name,
+          surname: surname,
+          email: email,
+          schoolName: schoolName,
+          password: password,
+          createdAt: new Date().toISOString(),
+        })
           .then(() => {
             console.log("User document created")
           })
