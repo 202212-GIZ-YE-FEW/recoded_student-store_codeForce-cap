@@ -80,6 +80,7 @@ export default function SideBar({
       <br />
       <br />
       <Highlighter highlighterStyle={currentPage} text={highlighterText} />
+      <hr class='w-[82%] h-[1px] mx-auto bg-gray-100 border-0 rounded dark:bg-gray-700'></hr>
       <br />
       <br />
       {currentPage === "editProfile" ? (
