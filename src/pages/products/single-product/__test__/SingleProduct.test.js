@@ -1,6 +1,6 @@
 import renderer from "react-test-renderer"
 
-import SingleProduct from ".."
+import SingleProduct from "../single-product"
 
 it("renders correctly", () => {
   const tree = renderer.create(<SingleProduct />).toJSON()
