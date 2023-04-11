@@ -28,7 +28,12 @@ function CardView() {
               href='#'
               className='text-gray-500 hover:text-gray-900 dark:hover:text-white'
             >
-              facebook
+              <Image
+                src='facebook-circle.svg'
+                width={60}
+                height={70}
+                alt='Facebook'
+              />
             </a>
           </li>
           <li>
@@ -36,7 +41,12 @@ function CardView() {
               href='#'
               className='text-gray-500 hover:text-gray-900 dark:hover:text-white'
             >
-              twitter
+              <Image
+                src='twitter.svg'
+                width={60}
+                height={70}
+                alt='twitter logo'
+              />
             </a>
           </li>
           <li>
@@ -44,7 +54,12 @@ function CardView() {
               href='#'
               className='text-gray-500 hover:text-gray-900 dark:hover:text-white'
             >
-              github
+              <Image
+                src='github.svg'
+                width={60}
+                height={70}
+                alt='github logo'
+              />
             </a>
           </li>
         </ul>
