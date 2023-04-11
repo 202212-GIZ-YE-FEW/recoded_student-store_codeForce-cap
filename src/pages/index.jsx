@@ -13,6 +13,7 @@ import RootLayout from "@/layout/root/RootLayout"
 
 import SingleProduct from "./products/single-product"
 import Signup from "./signup"
+import OurTeam from "@/components/OurTeam"
 
 export default function HomePage() {
   const { t } = useTranslation("common")
@@ -21,6 +22,7 @@ export default function HomePage() {
     <>
       <RootLayout>
         <Navbar />
+        <OurTeam />
         <SingleProduct />
         <Signup />
         {/* <Signin /> */}
