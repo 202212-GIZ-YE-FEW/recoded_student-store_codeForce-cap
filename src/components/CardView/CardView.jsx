@@ -2,7 +2,7 @@ import Image from "next/image"
 
 function CardView() {
   return (
-    <div className='items-center bg-gray-50 rounded-lg shadow sm:flex dark:bg-gray-800 dark:border-gray-700'>
+    <div className='items-center bg-gray-50 rounded-lg shadow sm:flex'>
       <a href='#'>
         <Image
           className='w-full rounded-lg sm:rounded-none sm:rounded-l-lg'
@@ -14,15 +14,13 @@ function CardView() {
       </a>
 
       <div className='p-5'>
-        <h3 className='text-xl font-bold tracking-tight text-gray-900 dark:text-white'>
-          <a href='#'>Full Name</a>
+        <h3 className='text-xl font-bold tracking-tight text-black'>
+          Full Name
         </h3>
 
-        <span className='text-gray-500 dark:text-gray-400'>Web Developer</span>
+        <span className='text-gray-500'>Web Developer</span>
 
-        <p className='mt-3 mb-4 font-light text-gray-500 dark:text-gray-400'>
-          describe
-        </p>
+        <p className='mt-3 mb-4 font-semibold text-gray-500'>describe</p>
 
         <ul className='flex space-x-4 sm:mt-0'>
           <li>
