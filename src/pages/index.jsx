@@ -2,12 +2,12 @@ import Link from "next/link"
 import { useTranslation } from "next-i18next"
 import { serverSideTranslations } from "next-i18next/serverSideTranslations"
 
-import CardView from "@/components/CardView"
 import Donation from "@/components/donation"
 import Filter from "@/components/Filter"
 import Footer from "@/components/Footer"
 import Hero from "@/components/hero/Hero"
 import Navbar from "@/components/Navbar"
+import OurTeam from "@/components/OurTeam"
 import Signin from "@/components/signin"
 
 import RootLayout from "@/layout/root/RootLayout"
@@ -21,7 +21,7 @@ export default function HomePage() {
     <>
       <RootLayout>
         <Navbar />
-        <CardView />
+        <OurTeam />
         <SingleProduct />
         <Signin />
 

@@ -102,6 +102,28 @@ exports[`renders correctly 1`] = `
           />
         </a>
       </li>
+      <li>
+        <a
+          className="text-gray-500 hover:text-gray-900"
+        >
+          <img
+            alt="linkedin"
+            data-nimg="1"
+            decoding="async"
+            height={35}
+            loading="lazy"
+            onError={[Function]}
+            onLoad={[Function]}
+            src="linkedin-circle.svg"
+            style={
+              {
+                "color": "transparent",
+              }
+            }
+            width={35}
+          />
+        </a>
+      </li>
     </ul>
   </div>
 </div>
