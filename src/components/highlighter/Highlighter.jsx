@@ -17,7 +17,7 @@ const HIGHLIGHTER = {
   ordersPage: `${img} ${text} block ${lgSize} ${mdSize} ${smSize}`,
   listingPage: `${img} ${text} block ${mdSize} ${smSize} lg:bg-[length:200px_38px] lg:text-[38px]`,
   editProfile: `${img} ${text} block ${mdSize} ${smSize} lg:bg-[length:200px_38px] lg:text-[30px]`,
-  aboutus: `${img} ${text} block ${mdSize} ${smSize} lg:bg-[length:200px_38px] lg:text-[55px]`,
+  aboutus: `${img} ${text} block ${mdSize} ${smSize} bg-[length:400px_80px] text-[55px] lg:bg-[length:400px_80px] lg:text-[55px]`,
 }
 
 export default function Highlighter({

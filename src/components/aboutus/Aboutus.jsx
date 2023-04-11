@@ -28,10 +28,9 @@ function Aboutus() {
           for students to buy, sell, and borrow products.
         </p>
       </div>
-      <div className='flex flex-col mt-20 items-center justify-center max-w-screen-md'>
-        <div className='flex flex-col justify-center items-center relative text-purple text-5xl font-bold'>
-          <Highlighter highlighterStyle='aboutus' text='Goals' />
-        </div>
+      <div className='grid  mt-20 items-center justify-center max-w-screen-md'>
+        <Highlighter highlighterStyle='aboutus' text='Goals' />
+
         <p className='text-purple-dark lg:w-[700px] p-3 text-2xl leading-relaxed text-center'>
           Our primary goal is to become the go-to marketplace for students
           across the country. We aim to build a strong reputation as a trusted
