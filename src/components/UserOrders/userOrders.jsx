@@ -1,6 +1,6 @@
 import Image from "next/image"
 
-import { SectionWrapper } from "@/hoc"
+import { SectionWrapper } from "@/components/hoc"
 
 import products from "../ProductList/products"
 import SideBar from "../SideBar"

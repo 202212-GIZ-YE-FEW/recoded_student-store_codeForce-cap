@@ -2,7 +2,9 @@
 
 exports[`renders correctly 1`] = `
 <input
-  className="my-2 block w-full rounded-lg border border-gray-300 p-2.5 text-center undefined"
-  required={true}
+  autoComplete="off"
+  className="my-2 block w-full rounded-lg border border-gray-300 p-2.5 text-center "
+  required={false}
+  type="text"
 />
 `;
