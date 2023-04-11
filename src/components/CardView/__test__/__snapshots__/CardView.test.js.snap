@@ -39,7 +39,6 @@ exports[`renders correctly 1`] = `
       <li>
         <a
           className="text-gray-500 hover:text-gray-900"
-          href="#"
         >
           <img
             alt="facebook"
@@ -62,7 +61,6 @@ exports[`renders correctly 1`] = `
       <li>
         <a
           className="text-gray-500 hover:text-gray-900"
-          href="#"
         >
           <img
             alt="twitter"
@@ -85,7 +83,6 @@ exports[`renders correctly 1`] = `
       <li>
         <a
           className="text-gray-500 hover:text-gray-900"
-          href="#"
         >
           <img
             alt="github"
