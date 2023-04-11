@@ -10,13 +10,19 @@ import styles from "./Signup.module.css"
 
 import Input from "@/components/input"
 
-import signUp from "@/firebase/auth/signup"
+import signUp from "@/utils/firebase/auth/signup"
 
 // Define validation schema using Yup
 const validationSchema = Yup.object().shape({
   name: Yup.string().required("Name is required"),
   surname: Yup.string().required("Surname is required"),
-  email: Yup.string().email("Invalid email").required("Email is required"),
+  email: Yup.string()
+    .email("invalid email")
+    .matches(
+      /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/,
+      "Please enter a valid email address"
+    )
+    .required("Email is required"),
   schoolName: Yup.string().required("School name is required"),
   password: Yup.string()
     .min(8, "Password must be at least 8 characters")
@@ -49,7 +55,6 @@ function Signup() {
     schoolName: "",
     password: "",
     passwordConfirm: "",
-    errors: {},
   })
 
   const [errors, setErrors] = useState({})
@@ -153,6 +158,7 @@ function Signup() {
                   onChange={handleChange}
                 />
               </label>
+              {errors.email && <p>{errors.email}</p>}
               <label htmlFor='schoolName'>
                 <Input
                   type='text'

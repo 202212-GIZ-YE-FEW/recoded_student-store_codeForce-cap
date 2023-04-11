@@ -1,7 +1,7 @@
 // This file contains the Donation page component, which displays information about donating to charity.
 import Image from "next/image"
 
-import { SectionWrapper } from "@/hoc"
+import { SectionWrapper } from "@/components/hoc"
 
 /**
  * Renders the Donation page component.

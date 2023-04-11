@@ -5,7 +5,7 @@ import { useState } from "react"
 import "keen-slider/keen-slider.min.css"
 import styels from "./Hero.module.css"
 
-import { SectionWrapper } from "@/hoc"
+import { SectionWrapper } from "@/components/hoc"
 
 const images = [
   "https://images.unsplash.com/photo-1590004953392-5aba2e72269a?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&h=500&w=800&q=80",
