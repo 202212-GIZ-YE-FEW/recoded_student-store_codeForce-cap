@@ -7,12 +7,12 @@ import Filter from "@/components/Filter"
 import Footer from "@/components/Footer"
 import Hero from "@/components/hero/Hero"
 import Navbar from "@/components/Navbar"
-import OurTeam from "@/components/OurTeam"
-import Signin from "@/components/signin"
+import UserOrders from "@/components/UserOrders"
 
 import RootLayout from "@/layout/root/RootLayout"
 
-import SingleProduct from "./single-product"
+import SingleProduct from "./products/single-product"
+import Signup from "./signup"
 
 export default function HomePage() {
   const { t } = useTranslation("common")
@@ -21,9 +21,9 @@ export default function HomePage() {
     <>
       <RootLayout>
         <Navbar />
-        <OurTeam />
         <SingleProduct />
-        <Signin />
+        <Signup />
+        {/* <Signin /> */}
 
         <p>{t("test")}</p>
         <div style={{ display: "flex", flexDirection: "row", gap: "20px" }}>

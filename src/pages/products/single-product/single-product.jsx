@@ -1,9 +1,8 @@
 import Image from "next/image"
 import { useState } from "react"
 
+import { SectionWrapper } from "@/components/hoc"
 import PhotosGallery from "@/components/PhotosGallery"
-
-import { SectionWrapper } from "@/hoc"
 
 function SingleProduct() {
   const [photos, setPhotos] = useState([
