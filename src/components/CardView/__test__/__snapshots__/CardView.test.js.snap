@@ -51,7 +51,22 @@ exports[`renders correctly 1`] = `
           className="text-gray-500 hover:text-gray-900 dark:hover:text-white"
           href="#"
         >
-          facebook
+          <img
+            alt="Facebook"
+            data-nimg="1"
+            decoding="async"
+            height={70}
+            loading="lazy"
+            onError={[Function]}
+            onLoad={[Function]}
+            src="facebook-circle.svg"
+            style={
+              {
+                "color": "transparent",
+              }
+            }
+            width={60}
+          />
         </a>
       </li>
       <li>
@@ -59,7 +74,22 @@ exports[`renders correctly 1`] = `
           className="text-gray-500 hover:text-gray-900 dark:hover:text-white"
           href="#"
         >
-          twitter
+          <img
+            alt="twitter logo"
+            data-nimg="1"
+            decoding="async"
+            height={70}
+            loading="lazy"
+            onError={[Function]}
+            onLoad={[Function]}
+            src="twitter.svg"
+            style={
+              {
+                "color": "transparent",
+              }
+            }
+            width={60}
+          />
         </a>
       </li>
       <li>
@@ -67,7 +97,22 @@ exports[`renders correctly 1`] = `
           className="text-gray-500 hover:text-gray-900 dark:hover:text-white"
           href="#"
         >
-          github
+          <img
+            alt="github logo"
+            data-nimg="1"
+            decoding="async"
+            height={70}
+            loading="lazy"
+            onError={[Function]}
+            onLoad={[Function]}
+            src="github.svg"
+            style={
+              {
+                "color": "transparent",
+              }
+            }
+            width={60}
+          />
         </a>
       </li>
     </ul>
