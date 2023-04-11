@@ -18,7 +18,7 @@ function Aboutus() {
             <h2>Mission</h2>
           </div>
         </div>
-        <p className='text-purple-dark w-[700px] p-3 text-2xl leading-relaxed text-center'>
+        <p className='text-purple-dark lg:w-[700px] p-3 text-2xl leading-relaxed text-center'>
           Our companys mission is to create a student-friendly marketplace that
           provides an affordable and convenient platform for students to buy,
           sell, and borrow various types of products. We aim to help students
@@ -41,7 +41,7 @@ function Aboutus() {
             <h2>History</h2>
           </div>
         </div>
-        <p className='text-purple-dark w-[700px] p-3 text-2xl leading-relaxed text-center'>
+        <p className='text-purple-dark lg:w-[700px] p-3 text-2xl leading-relaxed text-center'>
           Our company was founded by a group of students who recognized the need
           for a platform that caters to the specific needs of students. They
           observed that students often struggle to find affordable used products
@@ -65,7 +65,7 @@ function Aboutus() {
             <h2>Goals</h2>
           </div>
         </div>
-        <p className='text-purple-dark w-[700px] p-3 text-2xl leading-relaxed text-center'>
+        <p className='text-purple-dark lg:w-[700px] p-3 text-2xl leading-relaxed text-center'>
           Our primary goal is to become the go-to marketplace for students
           across the country. We aim to build a strong reputation as a trusted
           platform that offers a wide range of affordable and high-quality
