@@ -1,8 +1,12 @@
+import Highlighter from "../highlighter"
+
 function Aboutus() {
   return (
     <div className='flex flex-col items-center justify-center font-poppins'>
       <div className='flex flex-col mt-20 items-center justify-center max-w-screen-md'>
-        <div className='flex flex-col justify-center items-center relative text-purple text-5xl font-bold'></div>
+        <div className='flex flex-col justify-center items-center relative text-purple text-5xl font-bold'>
+          <Highlighter highlighterStyle='aboutus' text='Mission' />
+        </div>
         <p className='text-purple-dark lg:w-[700px] p-3 text-2xl leading-relaxed text-center'>
           Our companys mission is to create a student-friendly marketplace that
           provides an affordable and convenient platform for students to buy,
@@ -12,7 +16,9 @@ function Aboutus() {
         </p>
       </div>
       <div className='flex flex-col mt-20 items-center justify-center max-w-screen-md'>
-        <div className='flex flex-col justify-center items-center relative text-purple text-5xl font-bold'></div>
+        <div className='flex flex-col justify-center items-center relative text-purple text-5xl font-bold'>
+          <Highlighter highlighterStyle='aboutus' text='History' />
+        </div>
         <p className='text-purple-dark lg:w-[700px] p-3 text-2xl leading-relaxed text-center'>
           Our company was founded by a group of students who recognized the need
           for a platform that caters to the specific needs of students. They
@@ -23,7 +29,9 @@ function Aboutus() {
         </p>
       </div>
       <div className='flex flex-col mt-20 items-center justify-center max-w-screen-md'>
-        <div className='flex flex-col justify-center items-center relative text-purple text-5xl font-bold'></div>
+        <div className='flex flex-col justify-center items-center relative text-purple text-5xl font-bold'>
+          <Highlighter highlighterStyle='aboutus' text='Goals' />
+        </div>
         <p className='text-purple-dark lg:w-[700px] p-3 text-2xl leading-relaxed text-center'>
           Our primary goal is to become the go-to marketplace for students
           across the country. We aim to build a strong reputation as a trusted
