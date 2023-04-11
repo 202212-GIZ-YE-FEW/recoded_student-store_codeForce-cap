@@ -15,6 +15,7 @@ function CardView(props) {
     facebook: "facebook-circle.svg",
     twitter: "twitter-circle.svg",
     github: "github.svg",
+    linkedin: "linkedin-circle.svg",
   }
 
   return (
@@ -42,6 +43,7 @@ function CardView(props) {
           {ImageList(props.facebook, images.facebook, "facebook")}
           {ImageList(props.twitter, images.twitter, "twitter")}
           {ImageList(props.github, images.github, "github")}
+          {ImageList(props.linkedin, images.linkedin, "linkedin")}
         </ul>
       </div>
     </div>
