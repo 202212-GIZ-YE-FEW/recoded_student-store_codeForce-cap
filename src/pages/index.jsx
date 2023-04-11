@@ -2,6 +2,7 @@ import Link from "next/link"
 import { useTranslation } from "next-i18next"
 import { serverSideTranslations } from "next-i18next/serverSideTranslations"
 
+import CardView from "@/components/CardView"
 import Donation from "@/components/donation"
 import Filter from "@/components/Filter"
 import Footer from "@/components/Footer"
@@ -12,7 +13,6 @@ import Signin from "@/components/signin"
 import RootLayout from "@/layout/root/RootLayout"
 
 import SingleProduct from "./single-product"
-import CardView from "@/components/CardView"
 
 export default function HomePage() {
   const { t } = useTranslation("common")

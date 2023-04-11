@@ -31,7 +31,7 @@ function CardView() {
               <Image
                 src='facebook-circle.svg'
                 width={60}
-                height={70}
+                height={60}
                 alt='Facebook'
               />
             </a>
@@ -42,9 +42,9 @@ function CardView() {
               className='text-gray-500 hover:text-gray-900 dark:hover:text-white'
             >
               <Image
-                src='twitter.svg'
+                src='twitter-circle.svg'
                 width={60}
-                height={70}
+                height={60}
                 alt='twitter logo'
               />
             </a>
@@ -57,7 +57,7 @@ function CardView() {
               <Image
                 src='github.svg'
                 width={60}
-                height={70}
+                height={60}
                 alt='github logo'
               />
             </a>
