@@ -10,7 +10,7 @@ function ImageList(personalURL, imageName, altName) {
   )
 }
 
-function CardView() {
+function CardView(props) {
   const images = {
     facebook: "facebook-circle.svg",
     twitter: "twitter-circle.svg",
@@ -19,24 +19,24 @@ function CardView() {
 
   return (
     <div className='items-center bg-gray-50 rounded-lg shadow sm:flex'>
-      <a href='#'>
-        <Image
-          className='w-full rounded-lg sm:rounded-none sm:rounded-l-lg'
-          src='cat-photo.svg'
-          alt=''
-          width={100}
-          height={100}
-        />
-      </a>
+      <Image
+        className='w-full rounded-lg sm:rounded-none sm:rounded-l-lg'
+        src={props.profile}
+        alt='profile'
+        width={100}
+        height={100}
+      />
 
       <div className='p-5'>
         <h3 className='text-xl font-bold tracking-tight text-black'>
-          Full Name
+          {props.fullName}
         </h3>
 
-        <span className='text-gray-500'>Web Developer</span>
+        <span className='text-gray-500'>{props.jobName}</span>
 
-        <p className='mt-3 mb-4 font-semibold text-gray-500'>describe</p>
+        <p className='mt-3 mb-4 font-semibold text-gray-500'>
+          {props.description}
+        </p>
 
         <ul className='flex space-x-4 sm:mt-0'>
           {ImageList("#", images.facebook, "facebook")}
