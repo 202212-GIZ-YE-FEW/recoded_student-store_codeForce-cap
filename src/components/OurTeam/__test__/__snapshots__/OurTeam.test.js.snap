@@ -158,6 +158,534 @@ exports[`renders correctly 1`] = `
         </ul>
       </div>
     </div>
+    <div
+      className="items-center bg-gray-50 rounded-lg shadow flex-col sm:flex lg:flex-row"
+    >
+      <img
+        alt="profile"
+        className="w-full rounded"
+        data-nimg="1"
+        decoding="async"
+        height={100}
+        loading="lazy"
+        onError={[Function]}
+        onLoad={[Function]}
+        src=""
+        style={
+          {
+            "color": "transparent",
+          }
+        }
+        width={100}
+      />
+      <div
+        className="p-5"
+      >
+        <h3
+          className="text-xl font-bold tracking-tight text-black"
+        />
+        <span
+          className="text-gray-500"
+        >
+          Font-End Developer
+        </span>
+        <p
+          className="mt-3 mb-4 font-semibold text-gray-500"
+        />
+        <ul
+          className="flex space-x-4 sm:mt-0"
+        >
+          <li>
+            <a
+              className="text-gray-500 hover:text-gray-900"
+              href=""
+            >
+              <img
+                alt="facebook"
+                data-nimg="1"
+                decoding="async"
+                height={35}
+                loading="lazy"
+                onError={[Function]}
+                onLoad={[Function]}
+                src="facebook-circle.svg"
+                style={
+                  {
+                    "color": "transparent",
+                  }
+                }
+                width={35}
+              />
+            </a>
+          </li>
+          <li>
+            <a
+              className="text-gray-500 hover:text-gray-900"
+              href=""
+            >
+              <img
+                alt="twitter"
+                data-nimg="1"
+                decoding="async"
+                height={35}
+                loading="lazy"
+                onError={[Function]}
+                onLoad={[Function]}
+                src="twitter-circle.svg"
+                style={
+                  {
+                    "color": "transparent",
+                  }
+                }
+                width={35}
+              />
+            </a>
+          </li>
+          <li>
+            <a
+              className="text-gray-500 hover:text-gray-900"
+              href=""
+            >
+              <img
+                alt="github"
+                data-nimg="1"
+                decoding="async"
+                height={35}
+                loading="lazy"
+                onError={[Function]}
+                onLoad={[Function]}
+                src="github.svg"
+                style={
+                  {
+                    "color": "transparent",
+                  }
+                }
+                width={35}
+              />
+            </a>
+          </li>
+          <li>
+            <a
+              className="text-gray-500 hover:text-gray-900"
+              href=""
+            >
+              <img
+                alt="linkedin"
+                data-nimg="1"
+                decoding="async"
+                height={35}
+                loading="lazy"
+                onError={[Function]}
+                onLoad={[Function]}
+                src="linkedin-circle.svg"
+                style={
+                  {
+                    "color": "transparent",
+                  }
+                }
+                width={35}
+              />
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div
+      className="items-center bg-gray-50 rounded-lg shadow flex-col sm:flex lg:flex-row"
+    >
+      <img
+        alt="profile"
+        className="w-full rounded"
+        data-nimg="1"
+        decoding="async"
+        height={100}
+        loading="lazy"
+        onError={[Function]}
+        onLoad={[Function]}
+        src=""
+        style={
+          {
+            "color": "transparent",
+          }
+        }
+        width={100}
+      />
+      <div
+        className="p-5"
+      >
+        <h3
+          className="text-xl font-bold tracking-tight text-black"
+        />
+        <span
+          className="text-gray-500"
+        >
+          Font-End Developer
+        </span>
+        <p
+          className="mt-3 mb-4 font-semibold text-gray-500"
+        />
+        <ul
+          className="flex space-x-4 sm:mt-0"
+        >
+          <li>
+            <a
+              className="text-gray-500 hover:text-gray-900"
+              href=""
+            >
+              <img
+                alt="facebook"
+                data-nimg="1"
+                decoding="async"
+                height={35}
+                loading="lazy"
+                onError={[Function]}
+                onLoad={[Function]}
+                src="facebook-circle.svg"
+                style={
+                  {
+                    "color": "transparent",
+                  }
+                }
+                width={35}
+              />
+            </a>
+          </li>
+          <li>
+            <a
+              className="text-gray-500 hover:text-gray-900"
+              href=""
+            >
+              <img
+                alt="twitter"
+                data-nimg="1"
+                decoding="async"
+                height={35}
+                loading="lazy"
+                onError={[Function]}
+                onLoad={[Function]}
+                src="twitter-circle.svg"
+                style={
+                  {
+                    "color": "transparent",
+                  }
+                }
+                width={35}
+              />
+            </a>
+          </li>
+          <li>
+            <a
+              className="text-gray-500 hover:text-gray-900"
+              href=""
+            >
+              <img
+                alt="github"
+                data-nimg="1"
+                decoding="async"
+                height={35}
+                loading="lazy"
+                onError={[Function]}
+                onLoad={[Function]}
+                src="github.svg"
+                style={
+                  {
+                    "color": "transparent",
+                  }
+                }
+                width={35}
+              />
+            </a>
+          </li>
+          <li>
+            <a
+              className="text-gray-500 hover:text-gray-900"
+              href=""
+            >
+              <img
+                alt="linkedin"
+                data-nimg="1"
+                decoding="async"
+                height={35}
+                loading="lazy"
+                onError={[Function]}
+                onLoad={[Function]}
+                src="linkedin-circle.svg"
+                style={
+                  {
+                    "color": "transparent",
+                  }
+                }
+                width={35}
+              />
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div
+      className="items-center bg-gray-50 rounded-lg shadow flex-col sm:flex lg:flex-row"
+    >
+      <img
+        alt="profile"
+        className="w-full rounded"
+        data-nimg="1"
+        decoding="async"
+        height={100}
+        loading="lazy"
+        onError={[Function]}
+        onLoad={[Function]}
+        src=""
+        style={
+          {
+            "color": "transparent",
+          }
+        }
+        width={100}
+      />
+      <div
+        className="p-5"
+      >
+        <h3
+          className="text-xl font-bold tracking-tight text-black"
+        />
+        <span
+          className="text-gray-500"
+        >
+          Font-End Developer
+        </span>
+        <p
+          className="mt-3 mb-4 font-semibold text-gray-500"
+        />
+        <ul
+          className="flex space-x-4 sm:mt-0"
+        >
+          <li>
+            <a
+              className="text-gray-500 hover:text-gray-900"
+              href=""
+            >
+              <img
+                alt="facebook"
+                data-nimg="1"
+                decoding="async"
+                height={35}
+                loading="lazy"
+                onError={[Function]}
+                onLoad={[Function]}
+                src="facebook-circle.svg"
+                style={
+                  {
+                    "color": "transparent",
+                  }
+                }
+                width={35}
+              />
+            </a>
+          </li>
+          <li>
+            <a
+              className="text-gray-500 hover:text-gray-900"
+              href=""
+            >
+              <img
+                alt="twitter"
+                data-nimg="1"
+                decoding="async"
+                height={35}
+                loading="lazy"
+                onError={[Function]}
+                onLoad={[Function]}
+                src="twitter-circle.svg"
+                style={
+                  {
+                    "color": "transparent",
+                  }
+                }
+                width={35}
+              />
+            </a>
+          </li>
+          <li>
+            <a
+              className="text-gray-500 hover:text-gray-900"
+              href=""
+            >
+              <img
+                alt="github"
+                data-nimg="1"
+                decoding="async"
+                height={35}
+                loading="lazy"
+                onError={[Function]}
+                onLoad={[Function]}
+                src="github.svg"
+                style={
+                  {
+                    "color": "transparent",
+                  }
+                }
+                width={35}
+              />
+            </a>
+          </li>
+          <li>
+            <a
+              className="text-gray-500 hover:text-gray-900"
+              href=""
+            >
+              <img
+                alt="linkedin"
+                data-nimg="1"
+                decoding="async"
+                height={35}
+                loading="lazy"
+                onError={[Function]}
+                onLoad={[Function]}
+                src="linkedin-circle.svg"
+                style={
+                  {
+                    "color": "transparent",
+                  }
+                }
+                width={35}
+              />
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div
+      className="items-center bg-gray-50 rounded-lg shadow flex-col sm:flex lg:flex-row"
+    >
+      <img
+        alt="profile"
+        className="w-full rounded"
+        data-nimg="1"
+        decoding="async"
+        height={100}
+        loading="lazy"
+        onError={[Function]}
+        onLoad={[Function]}
+        src=""
+        style={
+          {
+            "color": "transparent",
+          }
+        }
+        width={100}
+      />
+      <div
+        className="p-5"
+      >
+        <h3
+          className="text-xl font-bold tracking-tight text-black"
+        />
+        <span
+          className="text-gray-500"
+        >
+          Font-End Developer
+        </span>
+        <p
+          className="mt-3 mb-4 font-semibold text-gray-500"
+        />
+        <ul
+          className="flex space-x-4 sm:mt-0"
+        >
+          <li>
+            <a
+              className="text-gray-500 hover:text-gray-900"
+              href=""
+            >
+              <img
+                alt="facebook"
+                data-nimg="1"
+                decoding="async"
+                height={35}
+                loading="lazy"
+                onError={[Function]}
+                onLoad={[Function]}
+                src="facebook-circle.svg"
+                style={
+                  {
+                    "color": "transparent",
+                  }
+                }
+                width={35}
+              />
+            </a>
+          </li>
+          <li>
+            <a
+              className="text-gray-500 hover:text-gray-900"
+              href=""
+            >
+              <img
+                alt="twitter"
+                data-nimg="1"
+                decoding="async"
+                height={35}
+                loading="lazy"
+                onError={[Function]}
+                onLoad={[Function]}
+                src="twitter-circle.svg"
+                style={
+                  {
+                    "color": "transparent",
+                  }
+                }
+                width={35}
+              />
+            </a>
+          </li>
+          <li>
+            <a
+              className="text-gray-500 hover:text-gray-900"
+              href=""
+            >
+              <img
+                alt="github"
+                data-nimg="1"
+                decoding="async"
+                height={35}
+                loading="lazy"
+                onError={[Function]}
+                onLoad={[Function]}
+                src="github.svg"
+                style={
+                  {
+                    "color": "transparent",
+                  }
+                }
+                width={35}
+              />
+            </a>
+          </li>
+          <li>
+            <a
+              className="text-gray-500 hover:text-gray-900"
+              href=""
+            >
+              <img
+                alt="linkedin"
+                data-nimg="1"
+                decoding="async"
+                height={35}
+                loading="lazy"
+                onError={[Function]}
+                onLoad={[Function]}
+                src="linkedin-circle.svg"
+                style={
+                  {
+                    "color": "transparent",
+                  }
+                }
+                width={35}
+              />
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
   </div>
 </div>
 `;
