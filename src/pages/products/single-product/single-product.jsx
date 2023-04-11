@@ -1,7 +1,6 @@
 import Image from "next/image"
 import { useState } from "react"
 
-import { SectionWrapper } from "@/components/hoc"
 import PhotosGallery from "@/components/PhotosGallery"
 
 function SingleProduct() {
@@ -91,4 +90,4 @@ function SingleProduct() {
   )
 }
 
-export default SectionWrapper(SingleProduct)
+export default SingleProduct
