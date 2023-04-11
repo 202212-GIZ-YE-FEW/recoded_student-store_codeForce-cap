@@ -12,6 +12,7 @@ import Signin from "@/components/signin"
 import RootLayout from "@/layout/root/RootLayout"
 
 import SingleProduct from "./single-product"
+import CardView from "@/components/CardView"
 
 export default function HomePage() {
   const { t } = useTranslation("common")
@@ -20,6 +21,7 @@ export default function HomePage() {
     <>
       <RootLayout>
         <Navbar />
+        <CardView />
         <SingleProduct />
         <Signin />
 
