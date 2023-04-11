@@ -1,9 +1,8 @@
 import { useState } from "react"
 
+import { SectionWrapper } from "@/components/hoc"
 import ProductList from "@/components/ProductList"
 import products from "@/components/ProductList/products"
-
-import { SectionWrapper } from "@/hoc"
 
 import Buttons from "../Buttons"
 
