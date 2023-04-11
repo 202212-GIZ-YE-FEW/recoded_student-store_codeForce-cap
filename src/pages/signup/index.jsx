@@ -88,11 +88,11 @@ function Signup() {
       )
 
       if (error) {
-        return console.log(error)
+        return error // i was delete console
       }
 
       // else when successful
-      console.log(result)
+      // console.log(result)
       return router.push("/")
     } catch (err) {
       const validationErrors = {}
