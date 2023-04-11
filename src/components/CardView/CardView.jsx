@@ -39,9 +39,9 @@ function CardView(props) {
         </p>
 
         <ul className='flex space-x-4 sm:mt-0'>
-          {ImageList("#", images.facebook, "facebook")}
-          {ImageList("#", images.twitter, "twitter")}
-          {ImageList("#", images.github, "github")}
+          {ImageList(props.facebook, images.facebook, "facebook")}
+          {ImageList(props.twitter, images.twitter, "twitter")}
+          {ImageList(props.github, images.github, "github")}
         </ul>
       </div>
     </div>
