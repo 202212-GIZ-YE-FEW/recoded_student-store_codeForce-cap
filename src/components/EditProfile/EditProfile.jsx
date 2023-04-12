@@ -19,19 +19,6 @@ export default function EditProfile() {
   const handleSubmit = (event) => {
     event.preventDefault()
 
-    // * Validate form inputs
-    if (
-      formData.name === "" ||
-      formData.surname === "" ||
-      formData.email === "" ||
-      formData.phoneNumber === "" ||
-      formData.address === "" ||
-      formData.newPassword === "" ||
-      formData.confirmNewPassword === ""
-    ) {
-      return alert("Please fill in all required fields.")
-    }
-
     // * Password comparison
     if (formData.newPassword !== formData.confirmNewPassword) {
       return alert("New passwords do not match.")
