@@ -15,11 +15,11 @@ export default function EditProfile() {
     address: "",
   })
 
-  // * Submitting handler
+  // * Form submitting handler
   const handleSubmit = (event) => {
     event.preventDefault()
 
-    // validate form inputs
+    // * Validate form inputs
     if (
       formData.name === "" ||
       formData.surname === "" ||
@@ -31,8 +31,20 @@ export default function EditProfile() {
     ) {
       return alert("Please fill in all required fields.")
     }
+
+    // * Password comparison
     if (formData.newPassword !== formData.confirmNewPassword) {
       return alert("New passwords do not match.")
+    }
+
+    // * Confirmation window
+    const confirmSave = window.confirm("Save changes?")
+    if (confirmSave) {
+      // * display form values in console
+      console.log(formData)
+
+      // * save changes
+      alert("Changes saved.")
     }
   }
 
