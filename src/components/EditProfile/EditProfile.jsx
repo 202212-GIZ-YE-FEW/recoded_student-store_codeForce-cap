@@ -27,10 +27,37 @@ export default function EditProfile() {
         maxLength={50}
         pattern='[a-zA-Z]+'
       />
-      <Input placeholder='Email' type='email' required />
-      <Input placeholder='Phone number' type='number' />
-      <Input placeholder='New Password' type='password' required />
-      <Input placeholder='Confirm Nwe Password' type='password' />
+      <Input
+        name='email'
+        type='email'
+        placeholder='Email'
+        required={true}
+        maxLength={50}
+        pattern='[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}'
+      />
+      <Input
+        name='phoneNumber'
+        type='tel'
+        placeholder='Phone number'
+        required={true}
+        pattern='\d{10,}'
+      />
+      <Input
+        name='newPassword'
+        type='password'
+        placeholder='New Password'
+        required={true}
+        minLength={8}
+        maxLength={50}
+      />
+      <Input
+        name='confirmNewPassword'
+        type='password'
+        placeholder='Confirm New Password'
+        required={true}
+        minLength={8}
+        maxLength={50}
+      />
       <Button buttonStyle='saveChanges' text='Save Changes' type='submit' />
     </form>
   )
