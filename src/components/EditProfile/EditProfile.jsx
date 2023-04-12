@@ -29,6 +29,8 @@ export default function EditProfile() {
         minLength={2}
         maxLength={50}
         pattern='[a-zA-Z]+'
+        value={formData.name}
+        onChange={(e) => setFormData({ ...formData, name: e.target.value })}
       />
       <Input
         name='surname'
@@ -38,6 +40,8 @@ export default function EditProfile() {
         minLength={2}
         maxLength={50}
         pattern='[a-zA-Z]+'
+        value={formData.surname}
+        onChange={(e) => setFormData({ ...formData, surname: e.target.value })}
       />
       <Input
         name='email'
@@ -46,6 +50,8 @@ export default function EditProfile() {
         required={true}
         maxLength={50}
         pattern='[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}'
+        value={formData.email}
+        onChange={(e) => setFormData({ ...formData, email: e.target.value })}
       />
       <Input
         name='phoneNumber'
@@ -53,6 +59,10 @@ export default function EditProfile() {
         placeholder='Phone number'
         required={true}
         pattern='\d{10,}'
+        value={formData.phoneNumber}
+        onChange={(e) =>
+          setFormData({ ...formData, phoneNumber: e.target.value })
+        }
       />
       <Input
         name='newPassword'
@@ -61,6 +71,10 @@ export default function EditProfile() {
         required={true}
         minLength={8}
         maxLength={50}
+        value={formData.newPassword}
+        onChange={(e) =>
+          setFormData({ ...formData, newPassword: e.target.value })
+        }
       />
       <Input
         name='confirmNewPassword'
@@ -69,6 +83,10 @@ export default function EditProfile() {
         required={true}
         minLength={8}
         maxLength={50}
+        value={formData.confirmNewPassword}
+        onChange={(e) =>
+          setFormData({ ...formData, confirmNewPassword: e.target.value })
+        }
       />
       <Button buttonStyle='saveChanges' text='Save Changes' type='submit' />
     </form>
