@@ -8,7 +8,7 @@ import Filter from "@/components/Filter"
 import Footer from "@/components/Footer"
 import Hero from "@/components/hero/Hero"
 import Navbar from "@/components/Navbar"
-import UserOrders from "@/components/UserOrders"
+import OurTeam from "@/components/OurTeam"
 
 import RootLayout from "@/layout/root/RootLayout"
 
@@ -22,6 +22,7 @@ export default function HomePage() {
     <>
       <RootLayout>
         <Navbar />
+        <OurTeam />
         <Aboutus />
         <UserOrders />
         <SingleProduct />
