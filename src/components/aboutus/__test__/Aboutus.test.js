@@ -1,8 +1,8 @@
 import renderer from "react-test-renderer"
 
-import SingleProduct from ".."
+import Aboutus from ".."
 
 it("renders correctly", () => {
-  const tree = renderer.create(<SingleProduct />).toJSON()
+  const tree = renderer.create(<Aboutus />).toJSON()
   expect(tree).toMatchSnapshot()
 })
