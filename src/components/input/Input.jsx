@@ -38,12 +38,12 @@ function Input({
 
 Input.propTypes = {
   id: PropTypes.string,
-  name: PropTypes.string.isRequired,
+  name: PropTypes.string,
   type: PropTypes.oneOf(["text", "email", "password", "number"]),
   value: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
   placeholder: PropTypes.string,
   autoComplete: PropTypes.string,
-  onChange: PropTypes.func.isRequired,
+  onChange: PropTypes.func,
   onBlur: PropTypes.func,
   onFocus: PropTypes.func,
   className: PropTypes.string,
