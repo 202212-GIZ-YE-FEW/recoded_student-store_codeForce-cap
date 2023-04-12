@@ -9,8 +9,24 @@ export default function EditProfile() {
 
   return (
     <form onSubmit={handleSubmit}>
-      <Input placeholder='Name' type='text' required />
-      <Input placeholder='Surname' type='text' />
+      <Input
+        name='name'
+        type='text'
+        placeholder='Name'
+        required={true}
+        minLength={2}
+        maxLength={50}
+        pattern='[a-zA-Z]+'
+      />
+      <Input
+        name='surname'
+        type='text'
+        placeholder='Surname'
+        required={true}
+        minLength={2}
+        maxLength={50}
+        pattern='[a-zA-Z]+'
+      />
       <Input placeholder='Email' type='email' required />
       <Input placeholder='Phone number' type='number' />
       <Input placeholder='New Password' type='password' required />
