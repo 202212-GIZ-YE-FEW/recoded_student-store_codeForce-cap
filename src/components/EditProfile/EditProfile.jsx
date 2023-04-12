@@ -18,6 +18,18 @@ export default function EditProfile() {
   // * Submitting handler
   const handleSubmit = (event) => {
     event.preventDefault()
+    // validate form inputs
+    if (
+      formData.name === "" ||
+      formData.surname === "" ||
+      formData.email === "" ||
+      formData.phoneNumber === "" ||
+      formData.address === "" ||
+      formData.newPassword === "" ||
+      formData.confirmNewPassword === ""
+    ) {
+      return alert("Please fill in all required fields.")
+    }
   }
 
   return (
