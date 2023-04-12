@@ -1,7 +1,8 @@
-import Link from "next/link"
 import { useTranslation } from "next-i18next"
 import { serverSideTranslations } from "next-i18next/serverSideTranslations"
+import Link from "next/link"
 
+import Aboutus from "@/components/aboutus"
 import Donation from "@/components/donation"
 import EditProfile from "@/components/EditProfile"
 import Filter from "@/components/Filter"
@@ -22,6 +23,7 @@ export default function HomePage() {
     <>
       <RootLayout>
         <Navbar />
+        <Aboutus />
         <UserOrders />
         <EditProfile />
         <SingleProduct />
