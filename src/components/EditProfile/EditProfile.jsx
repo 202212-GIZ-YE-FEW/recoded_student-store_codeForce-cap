@@ -18,6 +18,7 @@ export default function EditProfile() {
   // * Submitting handler
   const handleSubmit = (event) => {
     event.preventDefault()
+
     // validate form inputs
     if (
       formData.name === "" ||
@@ -29,6 +30,9 @@ export default function EditProfile() {
       formData.confirmNewPassword === ""
     ) {
       return alert("Please fill in all required fields.")
+    }
+    if (formData.newPassword !== formData.confirmNewPassword) {
+      return alert("New passwords do not match.")
     }
   }
 
