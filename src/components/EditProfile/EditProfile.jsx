@@ -1,7 +1,19 @@
+import { useState } from "react"
+
 import Button from "../button"
 import Input from "../input"
 
 export default function EditProfile() {
+  // * Form data handler
+  const [formData, setFormData] = useState({
+    name: "",
+    surname: "",
+    email: "",
+    phoneNumber: "",
+    newPassword: "",
+    confirmNewPassword: "",
+    address: "",
+  })
   const handleSubmit = (event) => {
     event.preventDefault() // Prevent form from submitting
     alert("Form submitted")
