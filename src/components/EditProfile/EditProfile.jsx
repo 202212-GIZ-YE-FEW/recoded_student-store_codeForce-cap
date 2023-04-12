@@ -14,9 +14,10 @@ export default function EditProfile() {
     confirmNewPassword: "",
     address: "",
   })
+
+  // * Submitting handler
   const handleSubmit = (event) => {
-    event.preventDefault() // Prevent form from submitting
-    alert("Form submitted")
+    event.preventDefault()
   }
 
   return (
