@@ -3,6 +3,7 @@ import { useTranslation } from "next-i18next"
 import { serverSideTranslations } from "next-i18next/serverSideTranslations"
 
 import Donation from "@/components/donation"
+import EditProfile from "@/components/EditProfile"
 import Filter from "@/components/Filter"
 import Footer from "@/components/Footer"
 import Hero from "@/components/hero/Hero"
@@ -22,6 +23,7 @@ export default function HomePage() {
       <RootLayout>
         <Navbar />
         <UserOrders />
+        <EditProfile />
         <SingleProduct />
         <Signup />
         {/* <Signin /> */}
