@@ -17,7 +17,7 @@ function OurTeam() {
     {
       id: 2,
       photo: "",
-      name: "",
+      name: "Nabile",
       job: "Font-End Developer",
       description: "",
       facebook: "",
