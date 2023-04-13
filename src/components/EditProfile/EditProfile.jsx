@@ -45,77 +45,89 @@ export default function EditProfile() {
 
   return (
     <form onSubmit={handleSubmit}>
-      <Input
-        name='name'
-        type='text'
-        placeholder='Name'
-        required={true}
-        minLength={2}
-        maxLength={50}
-        pattern='[a-zA-Z]+'
-        value={formData.name}
-        onChange={(e) => setFormData({ ...formData, name: e.target.value })}
-      />
+      <div className='grid grid-cols-2 ml-36 gap-x-12'>
+        <span className=' h-[448px] flex flex-col justify-between'>
+          <Input
+            name='name'
+            type='text'
+            placeholder='Name'
+            required={true}
+            minLength={2}
+            maxLength={50}
+            pattern='[a-zA-Z]+'
+            value={formData.name}
+            onChange={(e) => setFormData({ ...formData, name: e.target.value })}
+          />
 
-      <Input
-        name='surname'
-        type='text'
-        placeholder='Surname'
-        required={true}
-        minLength={2}
-        maxLength={50}
-        pattern='[a-zA-Z]+'
-        value={formData.surname}
-        onChange={(e) => setFormData({ ...formData, surname: e.target.value })}
-      />
+          <Input
+            name='surname'
+            type='text'
+            placeholder='Surname'
+            required={true}
+            minLength={2}
+            maxLength={50}
+            pattern='[a-zA-Z]+'
+            value={formData.surname}
+            onChange={(e) =>
+              setFormData({ ...formData, surname: e.target.value })
+            }
+          />
 
-      <Input
-        name='email'
-        type='email'
-        placeholder='Email'
-        required={true}
-        maxLength={50}
-        pattern='[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}'
-        value={formData.email}
-        onChange={(e) => setFormData({ ...formData, email: e.target.value })}
-      />
+          <Input
+            name='email'
+            type='email'
+            placeholder='Email'
+            required={true}
+            maxLength={50}
+            pattern='[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}'
+            value={formData.email}
+            onChange={(e) =>
+              setFormData({ ...formData, email: e.target.value })
+            }
+          />
 
-      <PhoneInput
-        country='ye'
-        value={formData.phoneNumber}
-        onChange={(phoneNumber) => setFormData({ ...formData, phoneNumber })}
-        inputStyle={{ width: "100%" }}
-      />
+          <PhoneInput
+            country='ye'
+            value={formData.phoneNumber}
+            onChange={(phoneNumber) =>
+              setFormData({ ...formData, phoneNumber })
+            }
+            inputStyle={{ width: "100%", height: "50px" }}
+          />
 
-      <Input
-        name='newPassword'
-        type='password'
-        placeholder='New Password'
-        required={true}
-        minLength={8}
-        maxLength={50}
-        value={formData.newPassword}
-        onChange={(e) =>
-          setFormData({ ...formData, newPassword: e.target.value })
-        }
-      />
+          <Input
+            name='newPassword'
+            type='password'
+            placeholder='New Password'
+            required={true}
+            minLength={8}
+            maxLength={50}
+            value={formData.newPassword}
+            onChange={(e) =>
+              setFormData({ ...formData, newPassword: e.target.value })
+            }
+          />
 
-      <Input
-        name='confirmNewPassword'
-        type='password'
-        placeholder='Confirm New Password'
-        required={true}
-        minLength={8}
-        maxLength={50}
-        value={formData.confirmNewPassword}
-        onChange={(e) =>
-          setFormData({ ...formData, confirmNewPassword: e.target.value })
-        }
-      />
-
-      <Maps />
-
-      <Button buttonStyle='saveChanges' text='Save Changes' type='submit' />
+          <Input
+            name='confirmNewPassword'
+            type='password'
+            placeholder='Confirm New Password'
+            required={true}
+            minLength={8}
+            maxLength={50}
+            value={formData.confirmNewPassword}
+            onChange={(e) =>
+              setFormData({ ...formData, confirmNewPassword: e.target.value })
+            }
+          />
+        </span>
+        <span className='mt-3'>
+          <Maps />
+        </span>
+        <span className='mx-auto mt-8'>
+          <Button buttonStyle='saveChanges' text='Save Changes' type='submit' />
+        </span>
+      </div>
     </form>
   )
 }
