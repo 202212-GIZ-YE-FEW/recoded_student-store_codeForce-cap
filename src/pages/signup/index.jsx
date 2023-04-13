@@ -50,7 +50,7 @@ function Signup() {
   const router = useRouter()
 
   const [formData, setFormData] = useState({
-    name: "asd",
+    name: "",
     surname: "",
     email: "",
     schoolName: "",
