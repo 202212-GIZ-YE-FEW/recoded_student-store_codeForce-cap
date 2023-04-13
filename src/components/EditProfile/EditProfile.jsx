@@ -3,6 +3,7 @@ import { useState } from "react"
 
 import Button from "../button"
 import Input from "../input"
+import Maps from "./Maps"
 
 export default function EditProfile() {
   // * Form data handler
@@ -104,6 +105,7 @@ export default function EditProfile() {
           setFormData({ ...formData, confirmNewPassword: e.target.value })
         }
       />
+      <Maps />
       <Button buttonStyle='saveChanges' text='Save Changes' type='submit' />
     </form>
   )
