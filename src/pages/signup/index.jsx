@@ -89,11 +89,11 @@ function Signup() {
       )
 
       if (error) {
-        return console.log(error)
+        return alert(error)
       }
 
       // else when successful
-      console.log(result)
+      alert(result)
       return router.push("/")
     } catch (err) {
       const validationErrors = {}
