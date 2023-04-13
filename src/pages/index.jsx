@@ -24,7 +24,7 @@ export default function HomePage() {
         <Navbar />
         <OurTeam />
         <Aboutus />
-        <UserOrders />
+        <userOrders />
         <SingleProduct />
         <Signup />
         {/* <Signin /> */}
