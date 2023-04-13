@@ -1,4 +1,3 @@
-/* eslint-disable no-console */
 import dynamic from "next/dynamic"
 import { useState } from "react"
 import PhoneInput from "react-phone-input-2"
