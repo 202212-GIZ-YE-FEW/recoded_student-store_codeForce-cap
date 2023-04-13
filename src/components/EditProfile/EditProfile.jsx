@@ -1,9 +1,13 @@
 /* eslint-disable no-console */
+import dynamic from "next/dynamic"
 import { useState } from "react"
 
 import Button from "../button"
 import Input from "../input"
-import Maps from "./Maps"
+
+const Maps = dynamic(() => import("./Maps"), {
+  ssr: false,
+})
 
 export default function EditProfile() {
   // * Form data handler
