@@ -189,6 +189,9 @@ function Signup() {
                 onChange={handleChange}
                 placeholder='Re-enter password'
               />
+              <div className='flex justify-center'>
+                <Button buttonStyle='purpleSignUp' text='Sign up' />
+              </div>
             </form>
             <div className='flex items-center'>
               <div className='my-1 mr-2 h-px mt-[10px] w-[164px] bg-[#9dafbd]'></div>
