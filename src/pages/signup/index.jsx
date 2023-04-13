@@ -228,12 +228,7 @@ function Signup() {
             <div className='mb-4 text-xl text-[#647581]'>
               <p>Already have an account?</p>
             </div>
-            <button
-              className='bg-[#585785] h-10 w-40 mb-20 p-1 rounded-lg  font-light text-[15px] text-white shadow-sm'
-              type='submit'
-            >
-              Sign in
-            </button>
+            <Button buttonStyle='purpleSignUp' text='Sign in' />
           </div>
         </div>
       </div>
