@@ -1,9 +1,25 @@
-import { useState } from "react"
+import { useEffect, useState } from "react"
 
 import Button from "../button"
 import Input from "../input"
 
 export default function EditProfile() {
+  // * Location constant
+  const [location, setLocation] = useState("")
+
+  // * Geolocation handler
+  useEffect(() => {
+    navigator.geolocation.getCurrentPosition(
+      (position) => {
+        const { latitude, longitude } = position.coords
+        setLocation(`(${latitude}, ${longitude})`)
+      },
+      (error) => {
+        console.error(error)
+      }
+    )
+  }, [])
+
   // * Form data handler
   const [formData, setFormData] = useState({
     name: "",
@@ -12,7 +28,7 @@ export default function EditProfile() {
     phoneNumber: "",
     newPassword: "",
     confirmNewPassword: "",
-    address: "",
+    address: location,
   })
 
   // * Form submitting handler
