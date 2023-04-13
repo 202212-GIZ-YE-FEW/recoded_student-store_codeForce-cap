@@ -120,6 +120,14 @@ export default function EditProfile() {
           setFormData({ ...formData, confirmNewPassword: e.target.value })
         }
       />
+      <Input
+        name='address'
+        type='text'
+        placeholder='Address'
+        required={true}
+        value={location}
+        onChange={(e) => setLocation(e.target.value)}
+      />
       <Button buttonStyle='saveChanges' text='Save Changes' type='submit' />
     </form>
   )
