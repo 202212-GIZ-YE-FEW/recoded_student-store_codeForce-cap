@@ -21,6 +21,7 @@ export default function EditProfile() {
     phoneNumber: "",
     newPassword: "",
     confirmNewPassword: "",
+    address: "",
   })
 
   // * Form submitting handler
@@ -45,8 +46,8 @@ export default function EditProfile() {
 
   return (
     <form onSubmit={handleSubmit}>
-      <div className='grid grid-cols-2 ml-36 gap-x-12'>
-        <span className=' h-[448px] flex flex-col justify-between'>
+      <div className='grid lg:grid-cols-2 lg:ml-36 lg:w-[100%] gap-x-12 w-[60%] mx-auto'>
+        <span className=' lg:h-[448px] flex flex-col justify-between'>
           <Input
             name='name'
             type='text'
@@ -60,6 +61,7 @@ export default function EditProfile() {
           />
 
           <Input
+            className='hidden lg:block'
             name='surname'
             type='text'
             placeholder='Surname'
@@ -96,6 +98,7 @@ export default function EditProfile() {
           />
 
           <Input
+            className='hidden lg:block'
             name='newPassword'
             type='password'
             placeholder='New Password'
@@ -109,6 +112,7 @@ export default function EditProfile() {
           />
 
           <Input
+            className='hidden lg:block'
             name='confirmNewPassword'
             type='password'
             placeholder='Confirm New Password'
@@ -120,8 +124,19 @@ export default function EditProfile() {
               setFormData({ ...formData, confirmNewPassword: e.target.value })
             }
           />
+          <Input
+            className='lg:hidden block'
+            name='address'
+            type='text'
+            placeholder='Address'
+            required={true}
+            value={formData.address}
+            onChange={(e) =>
+              setFormData({ ...formData, address: e.target.value })
+            }
+          />
         </span>
-        <span className='mt-3'>
+        <span className='mt-3 hidden lg:block'>
           <Maps />
         </span>
         <span className='mx-auto mt-8'>
