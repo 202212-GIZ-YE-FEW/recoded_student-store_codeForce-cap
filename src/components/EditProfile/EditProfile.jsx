@@ -1,6 +1,9 @@
 /* eslint-disable no-console */
 import dynamic from "next/dynamic"
 import { useState } from "react"
+import PhoneInput from "react-phone-input-2"
+
+import "react-phone-input-2/lib/style.css"
 
 import Button from "../button"
 import Input from "../input"
@@ -53,6 +56,7 @@ export default function EditProfile() {
         value={formData.name}
         onChange={(e) => setFormData({ ...formData, name: e.target.value })}
       />
+
       <Input
         name='surname'
         type='text'
@@ -64,6 +68,7 @@ export default function EditProfile() {
         value={formData.surname}
         onChange={(e) => setFormData({ ...formData, surname: e.target.value })}
       />
+
       <Input
         name='email'
         type='email'
@@ -74,17 +79,14 @@ export default function EditProfile() {
         value={formData.email}
         onChange={(e) => setFormData({ ...formData, email: e.target.value })}
       />
-      <Input
-        name='phoneNumber'
-        type='tel'
-        placeholder='Phone number'
-        required={true}
-        pattern='\d{10,}'
+
+      <PhoneInput
+        country='ye'
         value={formData.phoneNumber}
-        onChange={(e) =>
-          setFormData({ ...formData, phoneNumber: e.target.value })
-        }
+        onChange={(phoneNumber) => setFormData({ ...formData, phoneNumber })}
+        inputStyle={{ width: "100%" }}
       />
+
       <Input
         name='newPassword'
         type='password'
@@ -97,6 +99,7 @@ export default function EditProfile() {
           setFormData({ ...formData, newPassword: e.target.value })
         }
       />
+
       <Input
         name='confirmNewPassword'
         type='password'
@@ -109,7 +112,9 @@ export default function EditProfile() {
           setFormData({ ...formData, confirmNewPassword: e.target.value })
         }
       />
+
       <Maps />
+
       <Button buttonStyle='saveChanges' text='Save Changes' type='submit' />
     </form>
   )
