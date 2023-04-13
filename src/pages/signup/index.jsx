@@ -8,6 +8,7 @@ import * as Yup from "yup"
 
 import styles from "./Signup.module.css"
 
+import Button from "@/components/button"
 import Input from "@/components/input"
 
 import signUp from "@/utils/firebase/auth/signup"
@@ -49,7 +50,7 @@ function Signup() {
   const router = useRouter()
 
   const [formData, setFormData] = useState({
-    name: "asd",
+    name: "",
     surname: "",
     email: "",
     schoolName: "",
@@ -88,11 +89,11 @@ function Signup() {
       )
 
       if (error) {
-        return console.log(error)
+        return alert(error)
       }
 
       // else when successful
-      console.log(result)
+      alert(result)
       return router.push("/")
     } catch (err) {
       const validationErrors = {}
@@ -126,7 +127,7 @@ function Signup() {
 
             <form
               onSubmit={handleFormSubmit}
-              className='container m-auto mb-6 flex w-5/6 flex-col items-center'
+              className='container m-auto mb-6 flex  w-5/6 flex-col  '
             >
               <label htmlFor='firstName'>
                 <Input
@@ -188,12 +189,9 @@ function Signup() {
                 onChange={handleChange}
                 placeholder='Re-enter password'
               />
-              <button
-                className=' bg-[#585785] font-light h-10 w-40 m-1 p-1 rounded-lg  text-[15px] text-white shadow-sm'
-                type='submit'
-              >
-                Sign up
-              </button>
+              <div className='flex justify-center'>
+                <Button buttonStyle='purpleSignUp' text='Sign up' />
+              </div>
             </form>
             <div className='flex items-center'>
               <div className='my-1 mr-2 h-px mt-[10px] w-[164px] bg-[#9dafbd]'></div>
@@ -230,12 +228,7 @@ function Signup() {
             <div className='mb-4 text-xl text-[#647581]'>
               <p>Already have an account?</p>
             </div>
-            <button
-              className='bg-[#585785] h-10 w-40 mb-20 p-1 rounded-lg  font-light text-[15px] text-white shadow-sm'
-              type='submit'
-            >
-              Sign in
-            </button>
+            <Button buttonStyle='purpleSignUp' text='Sign in' />
           </div>
         </div>
       </div>

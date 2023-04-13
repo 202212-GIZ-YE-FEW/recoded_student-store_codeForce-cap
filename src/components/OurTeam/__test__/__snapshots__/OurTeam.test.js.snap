@@ -1,0 +1,711 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders correctly 1`] = `
+<div
+  className="py-8 px-4 mx-auto max-w-screen-xl lg:py-16 lg:px-6"
+>
+  <div
+    className="mx-auto max-w-screen-sm text-center mb-8 lg:mb-16"
+  >
+    <h2
+      className="mb-4 text-4xl tracking-tight font-extrabold text-gray-900"
+    >
+      Our Team
+    </h2>
+    <p
+      className="font-light text-gray-500 lg:mb-16 sm:text-xl"
+    >
+      CodeForce team is built on trust and mutual respect, with each member holding themselves accountable for their actions and decisions.
+    </p>
+  </div>
+  <div
+    className="grid gap-8 mb-6 lg:mb-16 md:grid-cols-2"
+  >
+    <div
+      className="items-center bg-gray-50 rounded-lg shadow flex-col sm:flex lg:flex-row"
+    >
+      <img
+        alt="profile"
+        className="w-full rounded"
+        data-nimg="1"
+        decoding="async"
+        height={100}
+        loading="lazy"
+        onError={[Function]}
+        onLoad={[Function]}
+        src="/_next/image?url=%2Fmohammed.jpg&w=256&q=75"
+        srcSet="/_next/image?url=%2Fmohammed.jpg&w=128&q=75 1x, /_next/image?url=%2Fmohammed.jpg&w=256&q=75 2x"
+        style={
+          {
+            "color": "transparent",
+          }
+        }
+        width={100}
+      />
+      <div
+        className="p-5"
+      >
+        <h3
+          className="text-xl font-bold tracking-tight text-black"
+        >
+          Moahmmed Al-Qershi
+        </h3>
+        <span
+          className="text-gray-500"
+        >
+          Font-End Developer & ERPNext Developer
+        </span>
+        <p
+          className="mt-3 mb-4 font-semibold text-gray-500"
+        >
+          I am a dedicated and passionate developer who is committed to delivering exceptional results and exceeding client expectations.
+        </p>
+        <ul
+          className="flex space-x-4 sm:mt-0"
+        >
+          <li>
+            <a
+              className="text-gray-500 hover:text-gray-900"
+              href="https://www.facebook.com/profile.php?id=100006287622110"
+            >
+              <img
+                alt="facebook"
+                data-nimg="1"
+                decoding="async"
+                height={35}
+                loading="lazy"
+                onError={[Function]}
+                onLoad={[Function]}
+                src="facebook-circle.svg"
+                style={
+                  {
+                    "color": "transparent",
+                  }
+                }
+                width={35}
+              />
+            </a>
+          </li>
+          <li>
+            <a
+              className="text-gray-500 hover:text-gray-900"
+              href="https://twitter.com/m_alqershi"
+            >
+              <img
+                alt="twitter"
+                data-nimg="1"
+                decoding="async"
+                height={35}
+                loading="lazy"
+                onError={[Function]}
+                onLoad={[Function]}
+                src="twitter-circle.svg"
+                style={
+                  {
+                    "color": "transparent",
+                  }
+                }
+                width={35}
+              />
+            </a>
+          </li>
+          <li>
+            <a
+              className="text-gray-500 hover:text-gray-900"
+              href="https://github.com/messam10"
+            >
+              <img
+                alt="github"
+                data-nimg="1"
+                decoding="async"
+                height={35}
+                loading="lazy"
+                onError={[Function]}
+                onLoad={[Function]}
+                src="github.svg"
+                style={
+                  {
+                    "color": "transparent",
+                  }
+                }
+                width={35}
+              />
+            </a>
+          </li>
+          <li>
+            <a
+              className="text-gray-500 hover:text-gray-900"
+              href="https://www.linkedin.com/in/mohammed-al-qershi-44681920b/"
+            >
+              <img
+                alt="linkedin"
+                data-nimg="1"
+                decoding="async"
+                height={35}
+                loading="lazy"
+                onError={[Function]}
+                onLoad={[Function]}
+                src="linkedin-circle.svg"
+                style={
+                  {
+                    "color": "transparent",
+                  }
+                }
+                width={35}
+              />
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div
+      className="items-center bg-gray-50 rounded-lg shadow flex-col sm:flex lg:flex-row"
+    >
+      <img
+        alt="profile"
+        className="w-full rounded"
+        data-nimg="1"
+        decoding="async"
+        height={100}
+        loading="lazy"
+        onError={[Function]}
+        onLoad={[Function]}
+        src="/_next/image?url=%2Fnabil.jpg&w=256&q=75"
+        srcSet="/_next/image?url=%2Fnabil.jpg&w=128&q=75 1x, /_next/image?url=%2Fnabil.jpg&w=256&q=75 2x"
+        style={
+          {
+            "color": "transparent",
+          }
+        }
+        width={100}
+      />
+      <div
+        className="p-5"
+      >
+        <h3
+          className="text-xl font-bold tracking-tight text-black"
+        >
+          NabiL Ashbat
+        </h3>
+        <span
+          className="text-gray-500"
+        >
+          Font-End Developer
+        </span>
+        <p
+          className="mt-3 mb-4 font-semibold text-gray-500"
+        >
+          A recent B.Sc. Computer Science graduate. In love with IT, Web development, Cybersecurity, and self-consciousness. Obsessed with everyday life challenges.
+        </p>
+        <ul
+          className="flex space-x-4 sm:mt-0"
+        >
+          <li>
+            <a
+              className="text-gray-500 hover:text-gray-900"
+              href=""
+            >
+              <img
+                alt="facebook"
+                data-nimg="1"
+                decoding="async"
+                height={35}
+                loading="lazy"
+                onError={[Function]}
+                onLoad={[Function]}
+                src="facebook-circle.svg"
+                style={
+                  {
+                    "color": "transparent",
+                  }
+                }
+                width={35}
+              />
+            </a>
+          </li>
+          <li>
+            <a
+              className="text-gray-500 hover:text-gray-900"
+              href=""
+            >
+              <img
+                alt="twitter"
+                data-nimg="1"
+                decoding="async"
+                height={35}
+                loading="lazy"
+                onError={[Function]}
+                onLoad={[Function]}
+                src="twitter-circle.svg"
+                style={
+                  {
+                    "color": "transparent",
+                  }
+                }
+                width={35}
+              />
+            </a>
+          </li>
+          <li>
+            <a
+              className="text-gray-500 hover:text-gray-900"
+              href="https://github.com/nabily4e-dev"
+            >
+              <img
+                alt="github"
+                data-nimg="1"
+                decoding="async"
+                height={35}
+                loading="lazy"
+                onError={[Function]}
+                onLoad={[Function]}
+                src="github.svg"
+                style={
+                  {
+                    "color": "transparent",
+                  }
+                }
+                width={35}
+              />
+            </a>
+          </li>
+          <li>
+            <a
+              className="text-gray-500 hover:text-gray-900"
+              href=""
+            >
+              <img
+                alt="linkedin"
+                data-nimg="1"
+                decoding="async"
+                height={35}
+                loading="lazy"
+                onError={[Function]}
+                onLoad={[Function]}
+                src="linkedin-circle.svg"
+                style={
+                  {
+                    "color": "transparent",
+                  }
+                }
+                width={35}
+              />
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div
+      className="items-center bg-gray-50 rounded-lg shadow flex-col sm:flex lg:flex-row"
+    >
+      <img
+        alt="profile"
+        className="w-full rounded"
+        data-nimg="1"
+        decoding="async"
+        height={100}
+        loading="lazy"
+        onError={[Function]}
+        onLoad={[Function]}
+        src="/_next/image?url=%2Fabobakr.jpg&w=256&q=75"
+        srcSet="/_next/image?url=%2Fabobakr.jpg&w=128&q=75 1x, /_next/image?url=%2Fabobakr.jpg&w=256&q=75 2x"
+        style={
+          {
+            "color": "transparent",
+          }
+        }
+        width={100}
+      />
+      <div
+        className="p-5"
+      >
+        <h3
+          className="text-xl font-bold tracking-tight text-black"
+        >
+          Abobakr Mahdi
+        </h3>
+        <span
+          className="text-gray-500"
+        >
+          Font-End Developer
+        </span>
+        <p
+          className="mt-3 mb-4 font-semibold text-gray-500"
+        >
+          I am a junior developer with a passion for learning and the ability to self-teach and take a little time and become a professional developer
+        </p>
+        <ul
+          className="flex space-x-4 sm:mt-0"
+        >
+          <li>
+            <a
+              className="text-gray-500 hover:text-gray-900"
+              href=""
+            >
+              <img
+                alt="facebook"
+                data-nimg="1"
+                decoding="async"
+                height={35}
+                loading="lazy"
+                onError={[Function]}
+                onLoad={[Function]}
+                src="facebook-circle.svg"
+                style={
+                  {
+                    "color": "transparent",
+                  }
+                }
+                width={35}
+              />
+            </a>
+          </li>
+          <li>
+            <a
+              className="text-gray-500 hover:text-gray-900"
+              href=""
+            >
+              <img
+                alt="twitter"
+                data-nimg="1"
+                decoding="async"
+                height={35}
+                loading="lazy"
+                onError={[Function]}
+                onLoad={[Function]}
+                src="twitter-circle.svg"
+                style={
+                  {
+                    "color": "transparent",
+                  }
+                }
+                width={35}
+              />
+            </a>
+          </li>
+          <li>
+            <a
+              className="text-gray-500 hover:text-gray-900"
+              href="https://github.com/BKR779"
+            >
+              <img
+                alt="github"
+                data-nimg="1"
+                decoding="async"
+                height={35}
+                loading="lazy"
+                onError={[Function]}
+                onLoad={[Function]}
+                src="github.svg"
+                style={
+                  {
+                    "color": "transparent",
+                  }
+                }
+                width={35}
+              />
+            </a>
+          </li>
+          <li>
+            <a
+              className="text-gray-500 hover:text-gray-900"
+              href=""
+            >
+              <img
+                alt="linkedin"
+                data-nimg="1"
+                decoding="async"
+                height={35}
+                loading="lazy"
+                onError={[Function]}
+                onLoad={[Function]}
+                src="linkedin-circle.svg"
+                style={
+                  {
+                    "color": "transparent",
+                  }
+                }
+                width={35}
+              />
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div
+      className="items-center bg-gray-50 rounded-lg shadow flex-col sm:flex lg:flex-row"
+    >
+      <img
+        alt="profile"
+        className="w-full rounded"
+        data-nimg="1"
+        decoding="async"
+        height={100}
+        loading="lazy"
+        onError={[Function]}
+        onLoad={[Function]}
+        src="/_next/image?url=%2Fabdulrahman.jpg&w=256&q=75"
+        srcSet="/_next/image?url=%2Fabdulrahman.jpg&w=128&q=75 1x, /_next/image?url=%2Fabdulrahman.jpg&w=256&q=75 2x"
+        style={
+          {
+            "color": "transparent",
+          }
+        }
+        width={100}
+      />
+      <div
+        className="p-5"
+      >
+        <h3
+          className="text-xl font-bold tracking-tight text-black"
+        >
+          Abdulrahman Abdullah
+        </h3>
+        <span
+          className="text-gray-500"
+        >
+          Font-End Developer
+        </span>
+        <p
+          className="mt-3 mb-4 font-semibold text-gray-500"
+        >
+          CodeForce team is built on trust and mutual respect, with each member holding themselves accountable for their actions and decisions.
+        </p>
+        <ul
+          className="flex space-x-4 sm:mt-0"
+        >
+          <li>
+            <a
+              className="text-gray-500 hover:text-gray-900"
+              href=""
+            >
+              <img
+                alt="facebook"
+                data-nimg="1"
+                decoding="async"
+                height={35}
+                loading="lazy"
+                onError={[Function]}
+                onLoad={[Function]}
+                src="facebook-circle.svg"
+                style={
+                  {
+                    "color": "transparent",
+                  }
+                }
+                width={35}
+              />
+            </a>
+          </li>
+          <li>
+            <a
+              className="text-gray-500 hover:text-gray-900"
+              href=""
+            >
+              <img
+                alt="twitter"
+                data-nimg="1"
+                decoding="async"
+                height={35}
+                loading="lazy"
+                onError={[Function]}
+                onLoad={[Function]}
+                src="twitter-circle.svg"
+                style={
+                  {
+                    "color": "transparent",
+                  }
+                }
+                width={35}
+              />
+            </a>
+          </li>
+          <li>
+            <a
+              className="text-gray-500 hover:text-gray-900"
+              href="https://github.com/AASB7"
+            >
+              <img
+                alt="github"
+                data-nimg="1"
+                decoding="async"
+                height={35}
+                loading="lazy"
+                onError={[Function]}
+                onLoad={[Function]}
+                src="github.svg"
+                style={
+                  {
+                    "color": "transparent",
+                  }
+                }
+                width={35}
+              />
+            </a>
+          </li>
+          <li>
+            <a
+              className="text-gray-500 hover:text-gray-900"
+              href=""
+            >
+              <img
+                alt="linkedin"
+                data-nimg="1"
+                decoding="async"
+                height={35}
+                loading="lazy"
+                onError={[Function]}
+                onLoad={[Function]}
+                src="linkedin-circle.svg"
+                style={
+                  {
+                    "color": "transparent",
+                  }
+                }
+                width={35}
+              />
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div
+      className="items-center bg-gray-50 rounded-lg shadow flex-col sm:flex lg:flex-row"
+    >
+      <img
+        alt="profile"
+        className="w-full rounded"
+        data-nimg="1"
+        decoding="async"
+        height={100}
+        loading="lazy"
+        onError={[Function]}
+        onLoad={[Function]}
+        src="/_next/image?url=%2Fmarwan.jpg&w=256&q=75"
+        srcSet="/_next/image?url=%2Fmarwan.jpg&w=128&q=75 1x, /_next/image?url=%2Fmarwan.jpg&w=256&q=75 2x"
+        style={
+          {
+            "color": "transparent",
+          }
+        }
+        width={100}
+      />
+      <div
+        className="p-5"
+      >
+        <h3
+          className="text-xl font-bold tracking-tight text-black"
+        >
+          MarwanBz
+        </h3>
+        <span
+          className="text-gray-500"
+        >
+          Font-End Developer
+        </span>
+        <p
+          className="mt-3 mb-4 font-semibold text-gray-500"
+        >
+          CodeForce team is built on trust and mutual respect, with each member holding themselves accountable for their actions and decisions.
+        </p>
+        <ul
+          className="flex space-x-4 sm:mt-0"
+        >
+          <li>
+            <a
+              className="text-gray-500 hover:text-gray-900"
+              href=""
+            >
+              <img
+                alt="facebook"
+                data-nimg="1"
+                decoding="async"
+                height={35}
+                loading="lazy"
+                onError={[Function]}
+                onLoad={[Function]}
+                src="facebook-circle.svg"
+                style={
+                  {
+                    "color": "transparent",
+                  }
+                }
+                width={35}
+              />
+            </a>
+          </li>
+          <li>
+            <a
+              className="text-gray-500 hover:text-gray-900"
+              href=""
+            >
+              <img
+                alt="twitter"
+                data-nimg="1"
+                decoding="async"
+                height={35}
+                loading="lazy"
+                onError={[Function]}
+                onLoad={[Function]}
+                src="twitter-circle.svg"
+                style={
+                  {
+                    "color": "transparent",
+                  }
+                }
+                width={35}
+              />
+            </a>
+          </li>
+          <li>
+            <a
+              className="text-gray-500 hover:text-gray-900"
+              href="https://github.com/MarwanBz"
+            >
+              <img
+                alt="github"
+                data-nimg="1"
+                decoding="async"
+                height={35}
+                loading="lazy"
+                onError={[Function]}
+                onLoad={[Function]}
+                src="github.svg"
+                style={
+                  {
+                    "color": "transparent",
+                  }
+                }
+                width={35}
+              />
+            </a>
+          </li>
+          <li>
+            <a
+              className="text-gray-500 hover:text-gray-900"
+              href=""
+            >
+              <img
+                alt="linkedin"
+                data-nimg="1"
+                decoding="async"
+                height={35}
+                loading="lazy"
+                onError={[Function]}
+                onLoad={[Function]}
+                src="linkedin-circle.svg"
+                style={
+                  {
+                    "color": "transparent",
+                  }
+                }
+                width={35}
+              />
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+`;
