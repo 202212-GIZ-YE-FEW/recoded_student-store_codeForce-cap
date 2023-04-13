@@ -61,7 +61,6 @@ export default function EditProfile() {
           />
 
           <Input
-            className='hidden lg:block'
             name='surname'
             type='text'
             placeholder='Surname'
@@ -98,7 +97,6 @@ export default function EditProfile() {
           />
 
           <Input
-            className='hidden lg:block'
             name='newPassword'
             type='password'
             placeholder='New Password'
@@ -112,7 +110,6 @@ export default function EditProfile() {
           />
 
           <Input
-            className='hidden lg:block'
             name='confirmNewPassword'
             type='password'
             placeholder='Confirm New Password'
