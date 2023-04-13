@@ -39,7 +39,7 @@ function Input({
 Input.propTypes = {
   id: PropTypes.string,
   name: PropTypes.string.isRequired,
-  type: PropTypes.oneOf(["text", "email", "password", "number"]),
+  type: PropTypes.oneOf(["text", "email", "password", "number", "tel"]),
   value: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
   placeholder: PropTypes.string,
   autoComplete: PropTypes.string,
