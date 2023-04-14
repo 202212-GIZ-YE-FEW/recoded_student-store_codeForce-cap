@@ -27,10 +27,16 @@ export default function SideBar({ handleSelectedPage }) {
             <Highlighter highlighterStyle='editProfile' text='Edit Profile' />
           </button>
           <div className='font-bold text-[31px] grid grid-rows-2 gap-8'>
-            <button aria-label='My Listing'>
+            <button
+              aria-label='My Listing'
+              onClick={() => handleSelectedPage("UserListings")}
+            >
               <Highlighter highlighterStyle='listingPage' text='My Listings' />
             </button>
-            <button aria-label='My Orders'>
+            <button
+              aria-label='My Orders'
+              onClick={() => handleSelectedPage("UserOrders")}
+            >
               <Highlighter highlighterStyle='ordersPage' text='My Orders' />
             </button>
           </div>
@@ -42,12 +48,14 @@ export default function SideBar({ handleSelectedPage }) {
           <button
             className='focus:bg-[#7874F2] focus:text-[#d7d7d7]'
             aria-label='My Orders'
+            onClick={() => handleSelectedPage("UserOrders")}
           >
             My Orders
           </button>
           <button
             className='focus:bg-[#7874F2] focus:text-[#d7d7d7]'
             aria-label='My Listing'
+            onClick={() => handleSelectedPage("UserListings")}
           >
             My Listing
           </button>
