@@ -2,7 +2,7 @@ import Image from "next/image"
 
 import Highlighter from "../highlighter"
 
-export default function SideBar() {
+export default function SideBar({ handleSelectedPage }) {
   return (
     <>
       {/* // If it is large screen */}
@@ -20,7 +20,10 @@ export default function SideBar() {
             <p>User Email</p>
             <p>User Location</p>
           </div>
-          <button aria-label='Edit Profile'>
+          <button
+            aria-label='Edit Profile'
+            onClick={() => handleSelectedPage("EditProfile")}
+          >
             <Highlighter highlighterStyle='editProfile' text='Edit Profile' />
           </button>
           <div className='font-bold text-[31px] grid grid-rows-2 gap-8'>
@@ -51,6 +54,7 @@ export default function SideBar() {
           <button
             className='focus:bg-[#7874F2] focus:text-[#d7d7d7]'
             aria-label='Edit Profile'
+            onClick={() => handleSelectedPage("EditProfile")}
           >
             Edit Profile
           </button>
