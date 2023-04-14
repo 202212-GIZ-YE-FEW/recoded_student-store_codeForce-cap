@@ -20,19 +20,15 @@ export default function SideBar() {
             <p>User Email</p>
             <p>User Location</p>
           </div>
-          <button href='' aria-label='Edit Profile'>
+          <button aria-label='Edit Profile'>
             <Highlighter highlighterStyle='editProfile' text='Edit Profile' />
           </button>
           <div className='font-bold text-[31px] grid grid-rows-2 gap-8'>
             <h1>
-              <button href='' aria-label='My Listing'>
-                My Listing
-              </button>
+              <button aria-label='My Listing'>My Listing</button>
             </h1>
             <h1>
-              <button href='' aria-label='My Orders'>
-                My Orders
-              </button>
+              <button aria-label='My Orders'>My Orders</button>
             </h1>
           </div>
         </div>
@@ -42,22 +38,19 @@ export default function SideBar() {
         <div className='grid grid-cols-3 text-[17px] items-center text-purple-dark text-center bg-[#90EEE1] h-[38px]'>
           <button
             className='focus:bg-[#7874F2] focus:text-[#d7d7d7]'
-            href=''
             aria-label='My Orders'
           >
             My Orders
           </button>
           <button
             className='focus:bg-[#7874F2] focus:text-[#d7d7d7]'
-            href=''
             aria-label='My Listing'
           >
             My Listing
           </button>
           <button
             className='focus:bg-[#7874F2] focus:text-[#d7d7d7]'
-            href=''
-            aria-label='My Profile'
+            aria-label='Edit Profile'
           >
             Edit Profile
           </button>
