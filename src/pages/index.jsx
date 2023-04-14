@@ -9,9 +9,10 @@ import Filter from "@/components/Filter"
 import Footer from "@/components/Footer"
 import Hero from "@/components/hero/Hero"
 import Navbar from "@/components/Navbar"
+import OurTeam from "@/components/OurTeam"
 import UserListings from "@/components/UserListings"
 import UserOrders from "@/components/UserOrders"
-import OurTeam from "@/components/OurTeam"
+
 import RootLayout from "@/layout/root/RootLayout"
 
 import SingleProduct from "./products/single-product"
