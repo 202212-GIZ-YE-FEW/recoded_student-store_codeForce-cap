@@ -1,5 +1,4 @@
 import Image from "next/image"
-import Link from "next/link"
 
 import Highlighter from "../highlighter"
 
@@ -8,7 +7,6 @@ export default function SideBar({
   name = "Name",
   email = "Email",
   location = "Location",
-  link = "Link",
   currentPage = "editeProfile",
   highlighterText = "Text",
 }) {
@@ -29,22 +27,22 @@ export default function SideBar({
             <p>{email}</p>
             <p>{location}</p>
           </div>
-          <Link href={link}>
+          <button href=''>
             <Highlighter
               highlighterStyle={currentPage}
               text={highlighterText}
             />
-          </Link>
+          </button>
           <div className='font-bold text-[31px] grid grid-rows-2 gap-8'>
             <h1>
-              <Link href={link} aria-label='My Listing'>
+              <button href='' aria-label='My Listing'>
                 My Listing
-              </Link>
+              </button>
             </h1>
             <h1>
-              <Link href={link} aria-label='My Orders'>
+              <button href='' aria-label='My Orders'>
                 My Orders
-              </Link>
+              </button>
             </h1>
           </div>
         </div>
@@ -52,27 +50,27 @@ export default function SideBar({
       {/* //If the expression false */}
       <section className='lg:hidden'>
         <div className='grid grid-cols-3 text-[17px] items-center text-purple-dark text-center bg-[#90EEE1] h-[38px]'>
-          <Link
+          <button
             className='focus:bg-[#7874F2] focus:text-[#d7d7d7]'
-            href={link}
+            href=''
             aria-label='My Orders'
           >
             My Orders
-          </Link>
-          <Link
+          </button>
+          <button
             className='focus:bg-[#7874F2] focus:text-[#d7d7d7]'
-            href={link}
+            href=''
             aria-label='My Listing'
           >
             My Listing
-          </Link>
-          <Link
+          </button>
+          <button
             className='focus:bg-[#7874F2] focus:text-[#d7d7d7]'
-            href={link}
+            href=''
             aria-label='My Profile'
           >
             Edit Profile
-          </Link>
+          </button>
         </div>
         <br />
         <br />
