@@ -27,12 +27,12 @@ export default function SideBar({ handleSelectedPage }) {
             <Highlighter highlighterStyle='editProfile' text='Edit Profile' />
           </button>
           <div className='font-bold text-[31px] grid grid-rows-2 gap-8'>
-            <h1>
-              <button aria-label='My Listing'>My Listing</button>
-            </h1>
-            <h1>
-              <button aria-label='My Orders'>My Orders</button>
-            </h1>
+            <button aria-label='My Listing'>
+              <Highlighter highlighterStyle='listingPage' text='My Listings' />
+            </button>
+            <button aria-label='My Orders'>
+              <Highlighter highlighterStyle='ordersPage' text='My Orders' />
+            </button>
           </div>
         </div>
       </section>

@@ -50,20 +50,32 @@ exports[`SideBar does not render the image in small screen if not on edit profil
     <div
       class="font-bold text-[31px] grid grid-rows-2 gap-8"
     >
-      <h1>
-        <button
-          aria-label="My Listing"
-        >
-          My Listing
-        </button>
-      </h1>
-      <h1>
-        <button
-          aria-label="My Orders"
-        >
-          My Orders
-        </button>
-      </h1>
+      <button
+        aria-label="My Listing"
+      >
+        <span>
+          <span
+            class="bg-[url('/images/Highlighter.png')] bg-bottom bg-no-repeat text-purple-light font-poppins text-center font-bold tracking-[-1px] block md:bg-[length:313.92px_27.28px] md:text-[27.28px] bg-[length:233.67px_20.31px] text-[21px] lg:bg-[length:200px_38px] lg:text-[38px] "
+          >
+            <h2>
+              My Listings
+            </h2>
+          </span>
+        </span>
+      </button>
+      <button
+        aria-label="My Orders"
+      >
+        <span>
+          <span
+            class="bg-[url('/images/Highlighter.png')] bg-bottom bg-no-repeat text-purple-light font-poppins text-center font-bold tracking-[-1px] block lg:bg-[length:437.27px_38px] lg:text-[38px] md:bg-[length:313.92px_27.28px] md:text-[27.28px] bg-[length:233.67px_20.31px] text-[21px] "
+          >
+            <h2>
+              My Orders
+            </h2>
+          </span>
+        </span>
+      </button>
     </div>
   </div>
 </section>
@@ -119,20 +131,32 @@ exports[`SideBar renders large screen version correctly 1`] = `
     <div
       class="font-bold text-[31px] grid grid-rows-2 gap-8"
     >
-      <h1>
-        <button
-          aria-label="My Listing"
-        >
-          My Listing
-        </button>
-      </h1>
-      <h1>
-        <button
-          aria-label="My Orders"
-        >
-          My Orders
-        </button>
-      </h1>
+      <button
+        aria-label="My Listing"
+      >
+        <span>
+          <span
+            class="bg-[url('/images/Highlighter.png')] bg-bottom bg-no-repeat text-purple-light font-poppins text-center font-bold tracking-[-1px] block md:bg-[length:313.92px_27.28px] md:text-[27.28px] bg-[length:233.67px_20.31px] text-[21px] lg:bg-[length:200px_38px] lg:text-[38px] "
+          >
+            <h2>
+              My Listings
+            </h2>
+          </span>
+        </span>
+      </button>
+      <button
+        aria-label="My Orders"
+      >
+        <span>
+          <span
+            class="bg-[url('/images/Highlighter.png')] bg-bottom bg-no-repeat text-purple-light font-poppins text-center font-bold tracking-[-1px] block lg:bg-[length:437.27px_38px] lg:text-[38px] md:bg-[length:313.92px_27.28px] md:text-[27.28px] bg-[length:233.67px_20.31px] text-[21px] "
+          >
+            <h2>
+              My Orders
+            </h2>
+          </span>
+        </span>
+      </button>
     </div>
   </div>
 </section>
@@ -188,20 +212,32 @@ exports[`SideBar renders small screen version correctly 1`] = `
     <div
       class="font-bold text-[31px] grid grid-rows-2 gap-8"
     >
-      <h1>
-        <button
-          aria-label="My Listing"
-        >
-          My Listing
-        </button>
-      </h1>
-      <h1>
-        <button
-          aria-label="My Orders"
-        >
-          My Orders
-        </button>
-      </h1>
+      <button
+        aria-label="My Listing"
+      >
+        <span>
+          <span
+            class="bg-[url('/images/Highlighter.png')] bg-bottom bg-no-repeat text-purple-light font-poppins text-center font-bold tracking-[-1px] block md:bg-[length:313.92px_27.28px] md:text-[27.28px] bg-[length:233.67px_20.31px] text-[21px] lg:bg-[length:200px_38px] lg:text-[38px] "
+          >
+            <h2>
+              My Listings
+            </h2>
+          </span>
+        </span>
+      </button>
+      <button
+        aria-label="My Orders"
+      >
+        <span>
+          <span
+            class="bg-[url('/images/Highlighter.png')] bg-bottom bg-no-repeat text-purple-light font-poppins text-center font-bold tracking-[-1px] block lg:bg-[length:437.27px_38px] lg:text-[38px] md:bg-[length:313.92px_27.28px] md:text-[27.28px] bg-[length:233.67px_20.31px] text-[21px] "
+          >
+            <h2>
+              My Orders
+            </h2>
+          </span>
+        </span>
+      </button>
     </div>
   </div>
 </section>
