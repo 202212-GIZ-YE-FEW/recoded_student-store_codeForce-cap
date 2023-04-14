@@ -12,11 +12,11 @@ const BUTTON_STYLES = {
   purpleSignIn:
     "h-9 w-36 m-1 p-1 rounded-lg border-2 bg-purple-dark font-light text-sm text-white shadow-sm",
   purpleSignUp:
-    "h-10 w-40 m-1 p-1 rounded-lg border-2 bg-purple-dark font-light text-15px text-white shadow-sm",
+    "h-10 w-40 m-1 p-1 rounded-lg border-2 bg-purple-dark font-light text-[15px] text-white shadow-sm",
   listItem:
-    "h-12 w-72 md:h-14 md:w-80 lg:h-14 lg:w-96 m-1 p-1 rounded-lg border-2 bg-pumpkin font-md text-17px text-white shadow-sm",
+    "h-12 w-72 md:h-14 md:w-80 lg:h-14 lg:w-96 m-1 p-1 rounded-lg border-2 bg-pumpkin font-md text-[17px] text-white shadow-sm",
   saveChanges:
-    "h-12 w-56 lg:h-14 lg:w-64 m-1 p-1 px-2 hover:bg-purple hover:shadow-lg rounded-lg border-2 bg-pumpkin font-md text-17px text-white shadow-sm",
+    "h-12 w-56 lg:h-14 lg:w-64 m-1 p-1 px-2 hover:bg-purple hover:shadow-lg rounded-lg border-2 bg-pumpkin font-md text-[17px] text-white shadow-sm",
 }
 
 /**
