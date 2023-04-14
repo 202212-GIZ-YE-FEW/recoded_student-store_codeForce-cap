@@ -2,14 +2,7 @@ import Image from "next/image"
 
 import Highlighter from "../highlighter"
 
-export default function SideBar({
-  img = "/productImg.png",
-  name = "Name",
-  email = "Email",
-  location = "Location",
-  currentPage = "editeProfile",
-  highlighterText = "Text",
-}) {
+export default function SideBar() {
   return (
     <>
       {/* // If it is large screen */}
@@ -17,21 +10,18 @@ export default function SideBar({
         <div className='flex flex-col justify-around h-[75%]'>
           <Image
             className='rounded-full mx-auto mb-3'
-            src={img}
+            src='/productImg.png'
             alt='...'
             width={171}
             height={171}
           />
           <div className='text-[22px]'>
-            <h2 className='font-semibold'>{name}</h2>
-            <p>{email}</p>
-            <p>{location}</p>
+            <h2 className='font-semibold'>User Name</h2>
+            <p>User Email</p>
+            <p>User Location</p>
           </div>
-          <button href=''>
-            <Highlighter
-              highlighterStyle={currentPage}
-              text={highlighterText}
-            />
+          <button href='' aria-label='Edit Profile'>
+            <Highlighter highlighterStyle='editProfile' text='Edit Profile' />
           </button>
           <div className='font-bold text-[31px] grid grid-rows-2 gap-8'>
             <h1>
@@ -74,19 +64,17 @@ export default function SideBar({
         </div>
         <br />
         <br />
-        <Highlighter highlighterStyle={currentPage} text={highlighterText} />
+        <Highlighter highlighterStyle='editProfile' text='Edit Profile' />
         <hr className='w-[82%] h-[1px] mx-auto bg-gray-100 border-0 rounded dark:bg-gray-700'></hr>
         <br />
         <br />
-        {currentPage === "editProfile" ? (
-          <Image
-            className='rounded-full mx-auto'
-            src={img}
-            alt='...'
-            width={274}
-            height={275}
-          />
-        ) : null}
+        <Image
+          className='rounded-full mx-auto'
+          src='/productImg.png'
+          alt='...'
+          width={274}
+          height={275}
+        />
       </section>
     </>
   )

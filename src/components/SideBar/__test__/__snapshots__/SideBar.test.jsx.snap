@@ -25,24 +25,25 @@ exports[`SideBar does not render the image in small screen if not on edit profil
       <h2
         class="font-semibold"
       >
-        Test Name
+        User Name
       </h2>
       <p>
-        test@test.com
+        User Email
       </p>
       <p>
-        Test Location
+        User Location
       </p>
     </div>
     <button
+      aria-label="Edit Profile"
       href=""
     >
       <span>
         <span
-          class="undefined "
+          class="bg-[url('/images/Highlighter.png')] bg-bottom bg-no-repeat text-purple-light font-poppins text-center font-bold tracking-[-1px] block md:bg-[length:313.92px_27.28px] md:text-[27.28px] bg-[length:233.67px_20.31px] text-[21px] lg:bg-[length:200px_38px] lg:text-[30px] "
         >
           <h2>
-            Text
+            Edit Profile
           </h2>
         </span>
       </span>
@@ -96,16 +97,17 @@ exports[`SideBar renders large screen version correctly 1`] = `
       <h2
         class="font-semibold"
       >
-        Test Name
+        User Name
       </h2>
       <p>
-        test@test.com
+        User Email
       </p>
       <p>
-        Test Location
+        User Location
       </p>
     </div>
     <button
+      aria-label="Edit Profile"
       href=""
     >
       <span>
@@ -113,7 +115,7 @@ exports[`SideBar renders large screen version correctly 1`] = `
           class="bg-[url('/images/Highlighter.png')] bg-bottom bg-no-repeat text-purple-light font-poppins text-center font-bold tracking-[-1px] block md:bg-[length:313.92px_27.28px] md:text-[27.28px] bg-[length:233.67px_20.31px] text-[21px] lg:bg-[length:200px_38px] lg:text-[30px] "
         >
           <h2>
-            Text
+            Edit Profile
           </h2>
         </span>
       </span>
@@ -167,24 +169,25 @@ exports[`SideBar renders small screen version correctly 1`] = `
       <h2
         class="font-semibold"
       >
-        Test Name
+        User Name
       </h2>
       <p>
-        test@test.com
+        User Email
       </p>
       <p>
-        Test Location
+        User Location
       </p>
     </div>
     <button
+      aria-label="Edit Profile"
       href=""
     >
       <span>
         <span
-          class="undefined "
+          class="bg-[url('/images/Highlighter.png')] bg-bottom bg-no-repeat text-purple-light font-poppins text-center font-bold tracking-[-1px] block md:bg-[length:313.92px_27.28px] md:text-[27.28px] bg-[length:233.67px_20.31px] text-[21px] lg:bg-[length:200px_38px] lg:text-[30px] "
         >
           <h2>
-            Text
+            Edit Profile
           </h2>
         </span>
       </span>
