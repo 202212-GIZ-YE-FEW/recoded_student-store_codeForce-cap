@@ -1,12 +1,17 @@
+// ! The libraries that been used in this code
 import dynamic from "next/dynamic"
+import Image from "next/image"
 import { useState } from "react"
 import PhoneInput from "react-phone-input-2"
 
+// ! The phone input default style
 import "react-phone-input-2/lib/style.css"
 
+// ! Components import
 import Button from "../button"
 import Input from "../input"
 
+// ! Map dynamic import
 const Maps = dynamic(() => import("./Maps"), {
   ssr: false,
 })
@@ -21,6 +26,7 @@ export default function EditProfile() {
     newPassword: "",
     confirmNewPassword: "",
     address: "",
+    profileImg: "/productImg.png",
   })
 
   // * Form submitting handler
@@ -29,7 +35,7 @@ export default function EditProfile() {
 
     // * Password comparison
     if (formData.newPassword !== formData.confirmNewPassword) {
-      return alert("New passwords do not match.")
+      return alert("New passwords doesn't not match.")
     }
 
     // * Confirmation window
@@ -43,10 +49,40 @@ export default function EditProfile() {
     }
   }
 
+  // * Uploaded Image Handler
+  const uploadedImgHandler = (event) => {
+    const file = event.target.files[0]
+    const reader = new FileReader()
+    reader.readAsDataURL(file)
+    reader.onloadend = () => {
+      setFormData({ ...formData, profileImg: reader.result }) // update the profile image in the form data with the user-uploaded image
+    }
+  }
+
   return (
     <form onSubmit={handleSubmit}>
-      <div className='grid lg:grid-cols-2 lg:ml-36 lg:w-[100%] gap-x-12 w-[60%] mx-auto'>
-        <span className=' lg:h-[448px] flex flex-col justify-between'>
+      <div className='grid lg:grid-cols-2 lg:ml-36 w-[86%] overflow-y-auto gap-x-12 mt-10 lg:mt-28 mx-auto h-[577px] md:h-[744px] lg:h-[100%]'>
+        <label
+          htmlFor='profileImg'
+          className='block lg:hidden cursor-pointer rounded-full'
+        >
+          <Image
+            className='rounded-full mx-auto mb-10'
+            src={formData.profileImg}
+            alt='...'
+            width={274}
+            height={275}
+          />
+          <Input
+            className='hidden'
+            type='file'
+            id='profileImg'
+            name='profileImg'
+            accept='image/*'
+            onChange={uploadedImgHandler}
+          />
+        </label>
+        <span className='lg:h-[448px] md:h-[390px] flex flex-col justify-between '>
           <Input
             name='name'
             type='text'

@@ -2,14 +2,14 @@
 
 exports[`SideBar does not render the image in small screen if not on edit profile page 1`] = `
 <section
-  class="hidden lg:block lg:w-[331px] lg:h-[947px] text-center lg:shadow-2xl lg:pt-12"
+  class="hidden lg:block shadow-2xl overflow-hidden h-[100%]"
 >
   <div
-    class="flex flex-col justify-around h-[75%]"
+    class="flex flex-col justify-around text-center w-[331px] pt-10 h-[80%]"
   >
     <img
       alt="..."
-      class="rounded-full mx-auto mb-3"
+      class="rounded-full mx-auto"
       data-nimg="1"
       decoding="async"
       height="171"
@@ -20,52 +20,68 @@ exports[`SideBar does not render the image in small screen if not on edit profil
       width="171"
     />
     <div
-      class="text-[22px]"
+      class="text-[22px] op"
     >
       <h2
         class="font-semibold"
       >
-        Test Name
+        User Name
       </h2>
       <p>
-        test@test.com
+        User Email
       </p>
       <p>
-        Test Location
+        User Location
       </p>
     </div>
-    <a
-      href="/testLink"
+    <button
+      aria-label="Edit Profile"
     >
       <span>
         <span
           class="undefined "
         >
-          <h2>
-            Text
+          <h2
+            class="text-purple-light font-poppins text-center font-bold tracking-[-1px] text-[30px] hover:opacity-60"
+          >
+            Edit Profile
           </h2>
         </span>
       </span>
-    </a>
+    </button>
     <div
-      class="font-bold text-[31px] grid grid-rows-2 gap-8"
+      class="grid grid-rows-2 gap-8"
     >
-      <h1>
-        <a
-          aria-label="My Listing"
-          href="/testLink"
-        >
-          My Listing
-        </a>
-      </h1>
-      <h1>
-        <a
-          aria-label="My Orders"
-          href="/testLink"
-        >
-          My Orders
-        </a>
-      </h1>
+      <button
+        aria-label="My Listing"
+      >
+        <span>
+          <span
+            class="undefined "
+          >
+            <h2
+              class="text-purple-light font-poppins text-center font-bold tracking-[-1px] text-[40px] hover:opacity-60"
+            >
+              My Listings
+            </h2>
+          </span>
+        </span>
+      </button>
+      <button
+        aria-label="My Orders"
+      >
+        <span>
+          <span
+            class="undefined "
+          >
+            <h2
+              class="text-purple-light font-poppins text-center font-bold tracking-[-1px] text-[38px] hover:opacity-60"
+            >
+              My Orders
+            </h2>
+          </span>
+        </span>
+      </button>
     </div>
   </div>
 </section>
@@ -73,14 +89,14 @@ exports[`SideBar does not render the image in small screen if not on edit profil
 
 exports[`SideBar renders large screen version correctly 1`] = `
 <section
-  class="hidden lg:block lg:w-[331px] lg:h-[947px] text-center lg:shadow-2xl lg:pt-12"
+  class="hidden lg:block shadow-2xl overflow-hidden h-[100%]"
 >
   <div
-    class="flex flex-col justify-around h-[75%]"
+    class="flex flex-col justify-around text-center w-[331px] pt-10 h-[80%]"
   >
     <img
       alt="..."
-      class="rounded-full mx-auto mb-3"
+      class="rounded-full mx-auto"
       data-nimg="1"
       decoding="async"
       height="171"
@@ -91,52 +107,68 @@ exports[`SideBar renders large screen version correctly 1`] = `
       width="171"
     />
     <div
-      class="text-[22px]"
+      class="text-[22px] op"
     >
       <h2
         class="font-semibold"
       >
-        Test Name
+        User Name
       </h2>
       <p>
-        test@test.com
+        User Email
       </p>
       <p>
-        Test Location
+        User Location
       </p>
     </div>
-    <a
-      href="/testLink"
+    <button
+      aria-label="Edit Profile"
     >
       <span>
         <span
-          class="bg-[url('/images/Highlighter.png')] bg-bottom bg-no-repeat text-purple-light font-poppins text-center font-bold tracking-[-1px] block md:bg-[length:313.92px_27.28px] md:text-[27.28px] bg-[length:233.67px_20.31px] text-[21px] lg:bg-[length:200px_38px] lg:text-[30px] "
+          class="undefined "
         >
-          <h2>
-            Text
+          <h2
+            class="text-purple-light font-poppins text-center font-bold tracking-[-1px] text-[30px] hover:opacity-60"
+          >
+            Edit Profile
           </h2>
         </span>
       </span>
-    </a>
+    </button>
     <div
-      class="font-bold text-[31px] grid grid-rows-2 gap-8"
+      class="grid grid-rows-2 gap-8"
     >
-      <h1>
-        <a
-          aria-label="My Listing"
-          href="/testLink"
-        >
-          My Listing
-        </a>
-      </h1>
-      <h1>
-        <a
-          aria-label="My Orders"
-          href="/testLink"
-        >
-          My Orders
-        </a>
-      </h1>
+      <button
+        aria-label="My Listing"
+      >
+        <span>
+          <span
+            class="undefined "
+          >
+            <h2
+              class="text-purple-light font-poppins text-center font-bold tracking-[-1px] text-[40px] hover:opacity-60"
+            >
+              My Listings
+            </h2>
+          </span>
+        </span>
+      </button>
+      <button
+        aria-label="My Orders"
+      >
+        <span>
+          <span
+            class="undefined "
+          >
+            <h2
+              class="text-purple-light font-poppins text-center font-bold tracking-[-1px] text-[38px] hover:opacity-60"
+            >
+              My Orders
+            </h2>
+          </span>
+        </span>
+      </button>
     </div>
   </div>
 </section>
@@ -144,14 +176,14 @@ exports[`SideBar renders large screen version correctly 1`] = `
 
 exports[`SideBar renders small screen version correctly 1`] = `
 <section
-  class="hidden lg:block lg:w-[331px] lg:h-[947px] text-center lg:shadow-2xl lg:pt-12"
+  class="hidden lg:block shadow-2xl overflow-hidden h-[100%]"
 >
   <div
-    class="flex flex-col justify-around h-[75%]"
+    class="flex flex-col justify-around text-center w-[331px] pt-10 h-[80%]"
   >
     <img
       alt="..."
-      class="rounded-full mx-auto mb-3"
+      class="rounded-full mx-auto"
       data-nimg="1"
       decoding="async"
       height="171"
@@ -162,52 +194,68 @@ exports[`SideBar renders small screen version correctly 1`] = `
       width="171"
     />
     <div
-      class="text-[22px]"
+      class="text-[22px] op"
     >
       <h2
         class="font-semibold"
       >
-        Test Name
+        User Name
       </h2>
       <p>
-        test@test.com
+        User Email
       </p>
       <p>
-        Test Location
+        User Location
       </p>
     </div>
-    <a
-      href="/testLink"
+    <button
+      aria-label="Edit Profile"
     >
       <span>
         <span
           class="undefined "
         >
-          <h2>
-            Text
+          <h2
+            class="text-purple-light font-poppins text-center font-bold tracking-[-1px] text-[30px] hover:opacity-60"
+          >
+            Edit Profile
           </h2>
         </span>
       </span>
-    </a>
+    </button>
     <div
-      class="font-bold text-[31px] grid grid-rows-2 gap-8"
+      class="grid grid-rows-2 gap-8"
     >
-      <h1>
-        <a
-          aria-label="My Listing"
-          href="/testLink"
-        >
-          My Listing
-        </a>
-      </h1>
-      <h1>
-        <a
-          aria-label="My Orders"
-          href="/testLink"
-        >
-          My Orders
-        </a>
-      </h1>
+      <button
+        aria-label="My Listing"
+      >
+        <span>
+          <span
+            class="undefined "
+          >
+            <h2
+              class="text-purple-light font-poppins text-center font-bold tracking-[-1px] text-[40px] hover:opacity-60"
+            >
+              My Listings
+            </h2>
+          </span>
+        </span>
+      </button>
+      <button
+        aria-label="My Orders"
+      >
+        <span>
+          <span
+            class="undefined "
+          >
+            <h2
+              class="text-purple-light font-poppins text-center font-bold tracking-[-1px] text-[38px] hover:opacity-60"
+            >
+              My Orders
+            </h2>
+          </span>
+        </span>
+      </button>
     </div>
   </div>
 </section>

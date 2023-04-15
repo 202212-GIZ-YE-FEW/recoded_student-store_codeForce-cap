@@ -4,14 +4,11 @@ import { serverSideTranslations } from "next-i18next/serverSideTranslations"
 
 import Aboutus from "@/components/aboutus"
 import Donation from "@/components/donation"
-import EditProfile from "@/components/EditProfile"
 import Filter from "@/components/Filter"
 import Footer from "@/components/Footer"
 import Hero from "@/components/hero/Hero"
 import Navbar from "@/components/Navbar"
 import OurTeam from "@/components/OurTeam"
-import UserListings from "@/components/UserListings"
-import UserOrders from "@/components/UserOrders"
 
 import RootLayout from "@/layout/root/RootLayout"
 
@@ -27,9 +24,6 @@ export default function HomePage() {
         <Navbar />
         <OurTeam />
         <Aboutus />
-        <UserOrders />
-        <EditProfile />
-        <UserListings />
         <SingleProduct />
         <Signup />
         {/* <Signin /> */}
