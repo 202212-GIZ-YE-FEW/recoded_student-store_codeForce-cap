@@ -2,10 +2,10 @@ import Image from "next/image"
 
 import Highlighter from "../highlighter"
 
-export default function SideBar({ handleSelectedPage }) {
+export default function SideBar({ handleSelectedPage, selectedPage }) {
   return (
     <>
-      {/* // If it is large screen */}
+      {/* // * If it is large screen */}
       <section className='hidden lg:block shadow-2xl overflow-hidden h-[100%]'>
         <div className='flex flex-col justify-around text-center w-[331px] pt-10 h-[80%]'>
           <Image
@@ -42,7 +42,7 @@ export default function SideBar({ handleSelectedPage }) {
           </div>
         </div>
       </section>
-      {/* //If the expression false */}
+      {/* // * If the expression false */}
       <section className='block lg:hidden'>
         <div className='grid grid-cols-3 text-[17px] items-center text-purple-dark text-center bg-[#90EEE1] h-[37.5px]'>
           <button
@@ -69,7 +69,16 @@ export default function SideBar({ handleSelectedPage }) {
         </div>
         <br />
         <br />
-        <Highlighter highlighterStyle='ordersPage' text='Edit Profile' />
+        <Highlighter
+          highlighterStyle='editProfile'
+          text={
+            selectedPage === "EditProfile"
+              ? "Edit Profile"
+              : selectedPage === "UserListings"
+              ? "My Listings"
+              : "My Orders"
+          }
+        />
         <br />
         <hr className='w-[89%] h-[1.5px] mx-auto bg-gray-100 border-0 rounded dark:bg-gray-700'></hr>
       </section>

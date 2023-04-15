@@ -16,7 +16,10 @@ export default function UserPage() {
       <Navbar />
       <div className='lg:flex h-[40px] lg:h-[816.2px]'>
         <div>
-          <SideBar handleSelectedPage={handleSelectedPage} />
+          <SideBar
+            handleSelectedPage={handleSelectedPage}
+            selectedPage={selectedPage}
+          />
         </div>
         <div className='w-full'>
           {selectedPage === "EditProfile" && <EditProfile />}
