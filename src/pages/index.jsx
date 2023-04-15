@@ -1,10 +1,15 @@
 // import { useTranslation } from "next-i18next"
+import RootLayout from "@/layout/root/RootLayout"
 import { serverSideTranslations } from "next-i18next/serverSideTranslations"
 
 export default function HomePage() {
   // const { t } = useTranslation("common")
 
-  return <></>
+  return (
+    <>
+      <RootLayout></RootLayout>
+    </>
+  )
 }
 
 export async function getStaticProps({ locale }) {
