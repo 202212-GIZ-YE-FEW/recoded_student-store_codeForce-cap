@@ -13,6 +13,7 @@ import Input from "@/components/input"
 
 import signUp from "@/utils/firebase/auth/signup"
 import RootLayout from "@/layout/root/RootLayout"
+import Link from "next/link"
 
 // Define validation schema using Yup
 const validationSchema = Yup.object().shape({
@@ -230,7 +231,13 @@ function Signup() {
               <div className='mb-4 text-xl text-[#647581]'>
                 <p>Already have an account?</p>
               </div>
-              <Button buttonStyle='purpleSignUp' text='Sign in' />
+              {/* <Button buttonStyle='purpleSignUp' text='Sign in' /> */}
+              <Link
+                href='/signin'
+                className='h-10 w-40 m-1 p-1 rounded-lg border-2 bg-purple-dark font-light text-[15px] text-white shadow-sm text-center'
+              >
+                Sign in
+              </Link>
               <br />
             </div>
           </div>
