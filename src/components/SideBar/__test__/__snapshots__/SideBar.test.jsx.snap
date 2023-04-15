@@ -20,7 +20,7 @@ exports[`SideBar does not render the image in small screen if not on edit profil
       width="171"
     />
     <div
-      class="text-[22px]"
+      class="text-[22px] op"
     >
       <h2
         class="font-semibold"
@@ -33,22 +33,22 @@ exports[`SideBar does not render the image in small screen if not on edit profil
       <p>
         User Location
       </p>
-      <button
-        aria-label="Edit Profile"
-      >
-        <span>
-          <span
-            class="bg-[url('/images/Highlighter.png')] bg-bottom bg-no-repeat block md:bg-[length:313.92px_27.28px] md:text-[27.28px] bg-[length:233.67px_20.31px] text-[21px] lg:bg-[length:240px_38px] lg:text-[30px] "
-          >
-            <h2
-              class="text-purple-light font-poppins text-center font-bold tracking-[-1px] "
-            >
-              Edit Profile
-            </h2>
-          </span>
-        </span>
-      </button>
     </div>
+    <button
+      aria-label="Edit Profile"
+    >
+      <span>
+        <span
+          class="bg-[url('/images/Highlighter.png')] bg-bottom bg-no-repeat block md:bg-[length:313.92px_27.28px] md:text-[27.28px] bg-[length:233.67px_20.31px] text-[21px] lg:bg-[length:240px_38px] lg:text-[30px] "
+        >
+          <h2
+            class="text-purple-light font-poppins text-center font-bold tracking-[-1px] text-[30px] hover:opacity-60"
+          >
+            Edit Profile
+          </h2>
+        </span>
+      </span>
+    </button>
     <div
       class="grid grid-rows-2 gap-8"
     >
@@ -57,10 +57,10 @@ exports[`SideBar does not render the image in small screen if not on edit profil
       >
         <span>
           <span
-            class="bg-[url('/images/Highlighter.png')] bg-bottom bg-no-repeat block lg:bg-[length:290px_38px] lg:text-[38px] md:bg-[length:313.92px_27.28px] md:text-[27.28px] bg-[length:233.67px_20.31px] text-[21px] lg:text-[38px] "
+            class="bg-[url('/images/Highlighter.png')] bg-bottom bg-no-repeat block lg:bg-[length:290px_38px] lg:text-[38px] md:bg-[length:313.92px_27.28px] md:text-[27.28px] bg-[length:233.67px_20.31px] text-[21px] lg:text-[40px] "
           >
             <h2
-              class="text-purple-light font-poppins text-center font-bold tracking-[-1px] "
+              class="text-purple-light font-poppins text-center font-bold tracking-[-1px] text-[40px] hover:opacity-60"
             >
               My Listings
             </h2>
@@ -72,10 +72,10 @@ exports[`SideBar does not render the image in small screen if not on edit profil
       >
         <span>
           <span
-            class="bg-[url('/images/Highlighter.png')] bg-bottom bg-no-repeat block lg:bg-[length:290px_38px] lg:text-[38px] md:bg-[length:313.92px_27.28px] md:text-[27.28px] bg-[length:233.67px_20.31px] text-[21px] "
+            class="bg-[url('/images/Highlighter.png')] bg-bottom bg-no-repeat block lg:bg-[length:290px_38px] lg:text-[38px] md:bg-[length:313.92px_27.28px] md:text-[27.28px] bg-[length:233.67px_20.31px] text-[21px] lg:text-[38px] "
           >
             <h2
-              class="text-purple-light font-poppins text-center font-bold tracking-[-1px] "
+              class="text-purple-light font-poppins text-center font-bold tracking-[-1px] text-[38px] hover:opacity-60"
             >
               My Orders
             </h2>
@@ -107,7 +107,7 @@ exports[`SideBar renders large screen version correctly 1`] = `
       width="171"
     />
     <div
-      class="text-[22px]"
+      class="text-[22px] op"
     >
       <h2
         class="font-semibold"
@@ -120,22 +120,22 @@ exports[`SideBar renders large screen version correctly 1`] = `
       <p>
         User Location
       </p>
-      <button
-        aria-label="Edit Profile"
-      >
-        <span>
-          <span
-            class="bg-[url('/images/Highlighter.png')] bg-bottom bg-no-repeat block md:bg-[length:313.92px_27.28px] md:text-[27.28px] bg-[length:233.67px_20.31px] text-[21px] lg:bg-[length:240px_38px] lg:text-[30px] "
-          >
-            <h2
-              class="text-purple-light font-poppins text-center font-bold tracking-[-1px] "
-            >
-              Edit Profile
-            </h2>
-          </span>
-        </span>
-      </button>
     </div>
+    <button
+      aria-label="Edit Profile"
+    >
+      <span>
+        <span
+          class="bg-[url('/images/Highlighter.png')] bg-bottom bg-no-repeat block md:bg-[length:313.92px_27.28px] md:text-[27.28px] bg-[length:233.67px_20.31px] text-[21px] lg:bg-[length:240px_38px] lg:text-[30px] "
+        >
+          <h2
+            class="text-purple-light font-poppins text-center font-bold tracking-[-1px] text-[30px] hover:opacity-60"
+          >
+            Edit Profile
+          </h2>
+        </span>
+      </span>
+    </button>
     <div
       class="grid grid-rows-2 gap-8"
     >
@@ -144,10 +144,10 @@ exports[`SideBar renders large screen version correctly 1`] = `
       >
         <span>
           <span
-            class="bg-[url('/images/Highlighter.png')] bg-bottom bg-no-repeat block lg:bg-[length:290px_38px] lg:text-[38px] md:bg-[length:313.92px_27.28px] md:text-[27.28px] bg-[length:233.67px_20.31px] text-[21px] lg:text-[38px] "
+            class="bg-[url('/images/Highlighter.png')] bg-bottom bg-no-repeat block lg:bg-[length:290px_38px] lg:text-[38px] md:bg-[length:313.92px_27.28px] md:text-[27.28px] bg-[length:233.67px_20.31px] text-[21px] lg:text-[40px] "
           >
             <h2
-              class="text-purple-light font-poppins text-center font-bold tracking-[-1px] "
+              class="text-purple-light font-poppins text-center font-bold tracking-[-1px] text-[40px] hover:opacity-60"
             >
               My Listings
             </h2>
@@ -159,10 +159,10 @@ exports[`SideBar renders large screen version correctly 1`] = `
       >
         <span>
           <span
-            class="bg-[url('/images/Highlighter.png')] bg-bottom bg-no-repeat block lg:bg-[length:290px_38px] lg:text-[38px] md:bg-[length:313.92px_27.28px] md:text-[27.28px] bg-[length:233.67px_20.31px] text-[21px] "
+            class="bg-[url('/images/Highlighter.png')] bg-bottom bg-no-repeat block lg:bg-[length:290px_38px] lg:text-[38px] md:bg-[length:313.92px_27.28px] md:text-[27.28px] bg-[length:233.67px_20.31px] text-[21px] lg:text-[38px] "
           >
             <h2
-              class="text-purple-light font-poppins text-center font-bold tracking-[-1px] "
+              class="text-purple-light font-poppins text-center font-bold tracking-[-1px] text-[38px] hover:opacity-60"
             >
               My Orders
             </h2>
@@ -194,7 +194,7 @@ exports[`SideBar renders small screen version correctly 1`] = `
       width="171"
     />
     <div
-      class="text-[22px]"
+      class="text-[22px] op"
     >
       <h2
         class="font-semibold"
@@ -207,22 +207,22 @@ exports[`SideBar renders small screen version correctly 1`] = `
       <p>
         User Location
       </p>
-      <button
-        aria-label="Edit Profile"
-      >
-        <span>
-          <span
-            class="bg-[url('/images/Highlighter.png')] bg-bottom bg-no-repeat block md:bg-[length:313.92px_27.28px] md:text-[27.28px] bg-[length:233.67px_20.31px] text-[21px] lg:bg-[length:240px_38px] lg:text-[30px] "
-          >
-            <h2
-              class="text-purple-light font-poppins text-center font-bold tracking-[-1px] "
-            >
-              Edit Profile
-            </h2>
-          </span>
-        </span>
-      </button>
     </div>
+    <button
+      aria-label="Edit Profile"
+    >
+      <span>
+        <span
+          class="bg-[url('/images/Highlighter.png')] bg-bottom bg-no-repeat block md:bg-[length:313.92px_27.28px] md:text-[27.28px] bg-[length:233.67px_20.31px] text-[21px] lg:bg-[length:240px_38px] lg:text-[30px] "
+        >
+          <h2
+            class="text-purple-light font-poppins text-center font-bold tracking-[-1px] text-[30px] hover:opacity-60"
+          >
+            Edit Profile
+          </h2>
+        </span>
+      </span>
+    </button>
     <div
       class="grid grid-rows-2 gap-8"
     >
@@ -231,10 +231,10 @@ exports[`SideBar renders small screen version correctly 1`] = `
       >
         <span>
           <span
-            class="bg-[url('/images/Highlighter.png')] bg-bottom bg-no-repeat block lg:bg-[length:290px_38px] lg:text-[38px] md:bg-[length:313.92px_27.28px] md:text-[27.28px] bg-[length:233.67px_20.31px] text-[21px] lg:text-[38px] "
+            class="bg-[url('/images/Highlighter.png')] bg-bottom bg-no-repeat block lg:bg-[length:290px_38px] lg:text-[38px] md:bg-[length:313.92px_27.28px] md:text-[27.28px] bg-[length:233.67px_20.31px] text-[21px] lg:text-[40px] "
           >
             <h2
-              class="text-purple-light font-poppins text-center font-bold tracking-[-1px] "
+              class="text-purple-light font-poppins text-center font-bold tracking-[-1px] text-[40px] hover:opacity-60"
             >
               My Listings
             </h2>
@@ -246,10 +246,10 @@ exports[`SideBar renders small screen version correctly 1`] = `
       >
         <span>
           <span
-            class="bg-[url('/images/Highlighter.png')] bg-bottom bg-no-repeat block lg:bg-[length:290px_38px] lg:text-[38px] md:bg-[length:313.92px_27.28px] md:text-[27.28px] bg-[length:233.67px_20.31px] text-[21px] "
+            class="bg-[url('/images/Highlighter.png')] bg-bottom bg-no-repeat block lg:bg-[length:290px_38px] lg:text-[38px] md:bg-[length:313.92px_27.28px] md:text-[27.28px] bg-[length:233.67px_20.31px] text-[21px] lg:text-[38px] "
           >
             <h2
-              class="text-purple-light font-poppins text-center font-bold tracking-[-1px] "
+              class="text-purple-light font-poppins text-center font-bold tracking-[-1px] text-[38px] hover:opacity-60"
             >
               My Orders
             </h2>

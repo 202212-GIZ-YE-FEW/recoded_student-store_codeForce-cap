@@ -15,29 +15,41 @@ export default function SideBar({ handleSelectedPage, selectedPage }) {
             width={171}
             height={171}
           />
-          <div className='text-[22px]'>
+          <div className='text-[22px] op'>
             <h2 className='font-semibold'>User Name</h2>
             <p>User Email</p>
             <p>User Location</p>
-            <button
-              aria-label='Edit Profile'
-              onClick={() => handleSelectedPage("EditProfile")}
-            >
-              <Highlighter highlighterStyle='editProfile' text='Edit Profile' />
-            </button>
           </div>
+          <button
+            aria-label='Edit Profile'
+            onClick={() => handleSelectedPage("EditProfile")}
+          >
+            <Highlighter
+              highlighterStyle='editProfile'
+              text='Edit Profile'
+              textClassName='text-[30px] hover:opacity-60'
+            />
+          </button>
           <div className='grid grid-rows-2 gap-8'>
             <button
               aria-label='My Listing'
               onClick={() => handleSelectedPage("UserListings")}
             >
-              <Highlighter highlighterStyle='listingPage' text='My Listings' />
+              <Highlighter
+                highlighterStyle='listingPage'
+                text='My Listings'
+                textClassName='text-[40px] hover:opacity-60'
+              />
             </button>
             <button
               aria-label='My Orders'
               onClick={() => handleSelectedPage("UserOrders")}
             >
-              <Highlighter highlighterStyle='ordersPage' text='My Orders' />
+              <Highlighter
+                highlighterStyle='ordersPage'
+                text='My Orders'
+                textClassName='text-[38px] hover:opacity-60'
+              />
             </button>
           </div>
         </div>
