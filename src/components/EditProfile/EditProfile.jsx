@@ -73,13 +73,13 @@ export default function EditProfile() {
             width={274}
             height={275}
           />
-          <input
+          <Input
+            className='hidden'
             type='file'
             id='profileImg'
             name='profileImg'
             accept='image/*'
             onChange={uploadedImgHandler}
-            style={{ display: "none" }}
           />
         </label>
         <span className='lg:h-[448px] md:h-[390px] flex flex-col justify-between '>
