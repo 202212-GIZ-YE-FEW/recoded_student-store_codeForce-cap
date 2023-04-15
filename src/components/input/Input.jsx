@@ -15,6 +15,7 @@ function Input({
   minLength,
   maxLength,
   pattern,
+  accept,
 }) {
   return (
     <input
@@ -32,6 +33,7 @@ function Input({
       minLength={minLength}
       maxLength={maxLength}
       pattern={pattern}
+      accept={accept}
     />
   )
 }
