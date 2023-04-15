@@ -73,13 +73,6 @@ export default function SideBar({ handleSelectedPage }) {
         <hr className='w-[82%] h-[1px] mx-auto bg-gray-100 border-0 rounded dark:bg-gray-700'></hr>
         <br />
         <br />
-        <Image
-          className='rounded-full mx-auto'
-          src='/productImg.png'
-          alt='...'
-          width={274}
-          height={275}
-        />
       </section>
     </>
   )
