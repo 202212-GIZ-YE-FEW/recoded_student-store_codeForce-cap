@@ -2,7 +2,7 @@ import { useTranslation } from "next-i18next"
 import { serverSideTranslations } from "next-i18next/serverSideTranslations"
 
 export default function HomePage() {
-  const { t } = useTranslation("common")
+  // const { t } = useTranslation("common")
 
   return <></>
 }
