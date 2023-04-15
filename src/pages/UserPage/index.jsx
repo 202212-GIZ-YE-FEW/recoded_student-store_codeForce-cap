@@ -15,10 +15,14 @@ export default function UserPage() {
     <>
       <Navbar />
       <div className='lg:flex'>
-        <SideBar handleSelectedPage={handleSelectedPage} />
-        {selectedPage === "EditProfile" && <EditProfile />}
-        {selectedPage === "UserListings" && <UserListings />}
-        {selectedPage === "UserOrders" && <UserOrders />}
+        <div>
+          <SideBar handleSelectedPage={handleSelectedPage} />
+        </div>
+        <div className='w-full'>
+          {selectedPage === "EditProfile" && <EditProfile />}
+          {selectedPage === "UserListings" && <UserListings />}
+          {selectedPage === "UserOrders" && <UserOrders />}
+        </div>
       </div>
     </>
   )
