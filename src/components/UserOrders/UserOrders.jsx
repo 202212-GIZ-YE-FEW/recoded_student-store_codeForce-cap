@@ -1,18 +1,12 @@
 import Image from "next/image"
 
-import { SectionWrapper } from "@/components/hoc"
-
 import products from "../ProductList/products"
-import SideBar from "../SideBar"
 
-function UserOrders() {
+export default function UserOrders() {
   return (
-    <section className='flex flex-col lg:flex-row'>
-      <div>
-        <SideBar currentPage='ordersPage' highlighterText='My Orders' />
-      </div>
-      <div className='lg:bg-gradient-to-l from-zinc-800 to-slate-300 lg:py-16 h-[947px] overflow-y-auto w-full'>
-        <div className='grid lg:grid-cols-3 md:grid-cols-2 gap-5 md:px-20 px-8'>
+    <section className='flex flex-col lg:flex-row h-[617px] md:h-[784px] lg:h-[100%] overflow-y-auto lg:bg-gradient-to-l from-zinc-800 to-slate-300 '>
+      <div className=' w-full'>
+        <div className='grid lg:grid-cols-3 md:grid-cols-2 gap-5 px-8 py-16'>
           {products.map((product) => (
             <div
               key={product.id}
@@ -63,5 +57,3 @@ function UserOrders() {
     </section>
   )
 }
-
-export default SectionWrapper(UserOrders)
