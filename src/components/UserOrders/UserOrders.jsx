@@ -1,10 +1,8 @@
 import Image from "next/image"
 
-import { SectionWrapper } from "@/components/hoc"
-
 import products from "../ProductList/products"
 
-function UserOrders() {
+export default function UserOrders() {
   return (
     <section className='flex flex-col lg:flex-row'>
       <div className='lg:bg-gradient-to-l from-zinc-800 to-slate-300 lg:py-16 h-[947px] overflow-y-auto w-full'>
@@ -59,5 +57,3 @@ function UserOrders() {
     </section>
   )
 }
-
-export default SectionWrapper(UserOrders)
