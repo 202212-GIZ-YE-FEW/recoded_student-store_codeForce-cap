@@ -1,4 +1,5 @@
 // import { useTranslation } from "next-i18next"
+import Hero from "@/components/hero/Hero"
 import RootLayout from "@/layout/root/RootLayout"
 import { serverSideTranslations } from "next-i18next/serverSideTranslations"
 
@@ -7,7 +8,9 @@ export default function HomePage() {
 
   return (
     <>
-      <RootLayout></RootLayout>
+      <RootLayout>
+        <Hero />
+      </RootLayout>
     </>
   )
 }
