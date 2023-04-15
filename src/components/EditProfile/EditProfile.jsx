@@ -62,13 +62,26 @@ export default function EditProfile() {
   return (
     <form onSubmit={handleSubmit}>
       <div className='grid lg:grid-cols-2 lg:ml-36 w-[86%] overflow-y-auto gap-x-12 mt-10 lg:mt-28 mx-auto h-[577px] md:h-[744px] lg:h-[100%]'>
-        <Image
-          className='rounded-full mx-auto block lg:hidden mb-10'
-          src='/productImg.png'
-          alt='...'
-          width={274}
-          height={275}
-        />
+        <label
+          htmlFor='profileImg'
+          className='block lg:hidden cursor-pointer rounded-full'
+        >
+          <Image
+            className='rounded-full mx-auto mb-10'
+            src={formData.profileImg}
+            alt='...'
+            width={274}
+            height={275}
+          />
+          <input
+            type='file'
+            id='profileImg'
+            name='profileImg'
+            accept='image/*'
+            onChange={uploadedImgHandler}
+            style={{ display: "none" }}
+          />
+        </label>
         <span className='lg:h-[448px] md:h-[390px] flex flex-col justify-between '>
           <Input
             name='name'
