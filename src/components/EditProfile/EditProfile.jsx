@@ -26,6 +26,7 @@ export default function EditProfile() {
     newPassword: "",
     confirmNewPassword: "",
     address: "",
+    profileImg: "/productImg.png",
   })
 
   // * Form submitting handler
@@ -34,7 +35,7 @@ export default function EditProfile() {
 
     // * Password comparison
     if (formData.newPassword !== formData.confirmNewPassword) {
-      return alert("New passwords do not match.")
+      return alert("New passwords doesn't not match.")
     }
 
     // * Confirmation window
