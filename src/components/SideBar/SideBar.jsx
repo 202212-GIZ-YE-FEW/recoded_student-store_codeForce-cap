@@ -44,7 +44,7 @@ export default function SideBar({ handleSelectedPage }) {
       </section>
       {/* //If the expression false */}
       <section className='block lg:hidden'>
-        <div className='grid grid-cols-3 text-[17px] items-center text-purple-dark text-center bg-[#90EEE1] h-[38px]'>
+        <div className='grid grid-cols-3 text-[17px] items-center text-purple-dark text-center bg-[#90EEE1] h-[37.5px]'>
           <button
             className='focus:bg-[#7874F2] focus:text-[#d7d7d7]'
             aria-label='My Orders'
@@ -69,8 +69,9 @@ export default function SideBar({ handleSelectedPage }) {
         </div>
         <br />
         <br />
-        <Highlighter highlighterStyle='editProfile' text='Edit Profile' />
-        <hr className='w-[82%] h-[1px] mx-auto bg-gray-100 border-0 rounded dark:bg-gray-700'></hr>
+        <Highlighter highlighterStyle='ordersPage' text='Edit Profile' />
+        <br />
+        <hr className='w-[89%] h-[1.5px] mx-auto bg-gray-100 border-0 rounded dark:bg-gray-700'></hr>
       </section>
     </>
   )
