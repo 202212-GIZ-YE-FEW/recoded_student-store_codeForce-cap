@@ -25,7 +25,9 @@ export default function SideBar({ handleSelectedPage, selectedPage }) {
             onClick={() => handleSelectedPage("EditProfile")}
           >
             <Highlighter
-              highlighterStyle='editProfile'
+              highlighterStyle={
+                selectedPage === "EditProfile" ? "editProfile" : ""
+              }
               text='Edit Profile'
               textClassName='text-[30px] hover:opacity-60'
             />
@@ -36,7 +38,9 @@ export default function SideBar({ handleSelectedPage, selectedPage }) {
               onClick={() => handleSelectedPage("UserListings")}
             >
               <Highlighter
-                highlighterStyle='listingPage'
+                highlighterStyle={
+                  selectedPage === "UserListings" ? "listingPage" : ""
+                }
                 text='My Listings'
                 textClassName='text-[40px] hover:opacity-60'
               />
@@ -46,7 +50,9 @@ export default function SideBar({ handleSelectedPage, selectedPage }) {
               onClick={() => handleSelectedPage("UserOrders")}
             >
               <Highlighter
-                highlighterStyle='ordersPage'
+                highlighterStyle={
+                  selectedPage === "UserOrders" ? "ordersPage" : ""
+                }
                 text='My Orders'
                 textClassName='text-[38px] hover:opacity-60'
               />
