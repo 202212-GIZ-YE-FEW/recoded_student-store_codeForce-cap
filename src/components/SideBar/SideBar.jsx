@@ -6,10 +6,10 @@ export default function SideBar({ handleSelectedPage }) {
   return (
     <>
       {/* // If it is large screen */}
-      <section className='hidden lg:block lg:w-[331px] lg:h-[947px] text-center lg:shadow-2xl lg:pt-12'>
-        <div className='flex flex-col justify-around h-[75%]'>
+      <section className='hidden lg:block shadow-2xl overflow-hidden h-[100%]'>
+        <div className='flex flex-col justify-around text-center w-[331px] pt-10 h-[80%]'>
           <Image
-            className='rounded-full mx-auto mb-3'
+            className='rounded-full mx-auto'
             src='/productImg.png'
             alt='...'
             width={171}
@@ -19,14 +19,14 @@ export default function SideBar({ handleSelectedPage }) {
             <h2 className='font-semibold'>User Name</h2>
             <p>User Email</p>
             <p>User Location</p>
+            <button
+              aria-label='Edit Profile'
+              onClick={() => handleSelectedPage("EditProfile")}
+            >
+              <Highlighter highlighterStyle='editProfile' text='Edit Profile' />
+            </button>
           </div>
-          <button
-            aria-label='Edit Profile'
-            onClick={() => handleSelectedPage("EditProfile")}
-          >
-            <Highlighter highlighterStyle='editProfile' text='Edit Profile' />
-          </button>
-          <div className='font-bold text-[31px] grid grid-rows-2 gap-8'>
+          <div className='grid grid-rows-2 gap-8'>
             <button
               aria-label='My Listing'
               onClick={() => handleSelectedPage("UserListings")}
@@ -43,7 +43,7 @@ export default function SideBar({ handleSelectedPage }) {
         </div>
       </section>
       {/* //If the expression false */}
-      <section className='lg:hidden'>
+      <section className='block lg:hidden'>
         <div className='grid grid-cols-3 text-[17px] items-center text-purple-dark text-center bg-[#90EEE1] h-[38px]'>
           <button
             className='focus:bg-[#7874F2] focus:text-[#d7d7d7]'
