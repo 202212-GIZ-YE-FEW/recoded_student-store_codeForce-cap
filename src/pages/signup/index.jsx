@@ -231,6 +231,7 @@ function Signup() {
                 <p>Already have an account?</p>
               </div>
               <Button buttonStyle='purpleSignUp' text='Sign in' />
+              <br />
             </div>
           </div>
         </div>
