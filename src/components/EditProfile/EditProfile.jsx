@@ -49,6 +49,16 @@ export default function EditProfile() {
     }
   }
 
+  // * Uploaded Image Handler
+  const uploadedImgHandler = (event) => {
+    const file = event.target.files[0]
+    const reader = new FileReader()
+    reader.readAsDataURL(file)
+    reader.onloadend = () => {
+      setFormData({ ...formData, profileImg: reader.result }) // update the profile image in the form data with the user-uploaded image
+    }
+  }
+
   return (
     <form onSubmit={handleSubmit}>
       <div className='grid lg:grid-cols-2 lg:ml-36 w-[86%] overflow-y-auto gap-x-12 mt-10 lg:mt-28 mx-auto h-[577px] md:h-[744px] lg:h-[100%]'>
