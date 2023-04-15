@@ -9,9 +9,11 @@ exports[`renders correctly 1`] = `
   >
     <span>
       <span
-        className="bg-[url('/images/Highlighter.png')] bg-bottom bg-no-repeat text-purple-light font-poppins text-center font-bold tracking-[-1px] block md:bg-[length:313.92px_27.28px] md:text-[27.28px] bg-[length:233.67px_20.31px] text-[21px] bg-[length:400px_80px] text-[55px] lg:bg-[length:400px_80px] lg:text-[55px] "
+        className="bg-[url('/images/Highlighter.png')] bg-bottom bg-no-repeat block md:bg-[length:313.92px_27.28px] md:text-[27.28px] bg-[length:233.67px_20.31px] text-[21px] bg-[length:400px_80px] text-[55px] lg:bg-[length:400px_80px] lg:text-[55px] "
       >
-        <h2>
+        <h2
+          className="text-purple-light font-poppins text-center font-bold tracking-[-1px]"
+        >
           Mission
         </h2>
       </span>
@@ -27,9 +29,11 @@ exports[`renders correctly 1`] = `
   >
     <span>
       <span
-        className="bg-[url('/images/Highlighter.png')] bg-bottom bg-no-repeat text-purple-light font-poppins text-center font-bold tracking-[-1px] block md:bg-[length:313.92px_27.28px] md:text-[27.28px] bg-[length:233.67px_20.31px] text-[21px] bg-[length:400px_80px] text-[55px] lg:bg-[length:400px_80px] lg:text-[55px] "
+        className="bg-[url('/images/Highlighter.png')] bg-bottom bg-no-repeat block md:bg-[length:313.92px_27.28px] md:text-[27.28px] bg-[length:233.67px_20.31px] text-[21px] bg-[length:400px_80px] text-[55px] lg:bg-[length:400px_80px] lg:text-[55px] "
       >
-        <h2>
+        <h2
+          className="text-purple-light font-poppins text-center font-bold tracking-[-1px]"
+        >
           History
         </h2>
       </span>
@@ -45,9 +49,11 @@ exports[`renders correctly 1`] = `
   >
     <span>
       <span
-        className="bg-[url('/images/Highlighter.png')] bg-bottom bg-no-repeat text-purple-light font-poppins text-center font-bold tracking-[-1px] block md:bg-[length:313.92px_27.28px] md:text-[27.28px] bg-[length:233.67px_20.31px] text-[21px] bg-[length:400px_80px] text-[55px] lg:bg-[length:400px_80px] lg:text-[55px] "
+        className="bg-[url('/images/Highlighter.png')] bg-bottom bg-no-repeat block md:bg-[length:313.92px_27.28px] md:text-[27.28px] bg-[length:233.67px_20.31px] text-[21px] bg-[length:400px_80px] text-[55px] lg:bg-[length:400px_80px] lg:text-[55px] "
       >
-        <h2>
+        <h2
+          className="text-purple-light font-poppins text-center font-bold tracking-[-1px]"
+        >
           Goals
         </h2>
       </span>
