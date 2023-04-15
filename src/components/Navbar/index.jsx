@@ -75,7 +75,7 @@ export default function Navbar() {
             about us
           </Link>
           <Link
-            href='/'
+            href='/our-team'
             className='relative mx-4 capitalize text-sm hover:text-violet-800   transition-all duration-1000 before:absolute before:-bottom-2 before:left-0  before:h-[1px]  before:w-0 before:opacity-0 before:bg-violet-700 before:transition-all before:duration-500 hover:before:w-full hover:before:opacity-100'
           >
             our team
