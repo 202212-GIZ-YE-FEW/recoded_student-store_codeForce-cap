@@ -2,14 +2,14 @@
 
 exports[`SideBar does not render the image in small screen if not on edit profile page 1`] = `
 <section
-  class="hidden lg:block lg:w-[331px] lg:h-[947px] text-center lg:shadow-2xl lg:pt-12"
+  class="hidden lg:block shadow-2xl overflow-hidden h-[100%]"
 >
   <div
-    class="flex flex-col justify-around h-[75%]"
+    class="flex flex-col justify-around text-center w-[331px] pt-10 h-[80%]"
   >
     <img
       alt="..."
-      class="rounded-full mx-auto mb-3"
+      class="rounded-full mx-auto"
       data-nimg="1"
       decoding="async"
       height="171"
@@ -33,22 +33,22 @@ exports[`SideBar does not render the image in small screen if not on edit profil
       <p>
         User Location
       </p>
-    </div>
-    <button
-      aria-label="Edit Profile"
-    >
-      <span>
-        <span
-          class="bg-[url('/images/Highlighter.png')] bg-bottom bg-no-repeat text-purple-light font-poppins text-center font-bold tracking-[-1px] block md:bg-[length:313.92px_27.28px] md:text-[27.28px] bg-[length:233.67px_20.31px] text-[21px] lg:bg-[length:200px_38px] lg:text-[30px] "
-        >
-          <h2>
-            Edit Profile
-          </h2>
+      <button
+        aria-label="Edit Profile"
+      >
+        <span>
+          <span
+            class="bg-[url('/images/Highlighter.png')] bg-bottom bg-no-repeat text-purple-light font-poppins text-center font-bold tracking-[-1px] block md:bg-[length:313.92px_27.28px] md:text-[27.28px] bg-[length:233.67px_20.31px] text-[21px] lg:bg-[length:200px_38px] lg:text-[30px] "
+          >
+            <h2>
+              Edit Profile
+            </h2>
+          </span>
         </span>
-      </span>
-    </button>
+      </button>
+    </div>
     <div
-      class="font-bold text-[31px] grid grid-rows-2 gap-8"
+      class="grid grid-rows-2 gap-8"
     >
       <button
         aria-label="My Listing"
@@ -83,14 +83,14 @@ exports[`SideBar does not render the image in small screen if not on edit profil
 
 exports[`SideBar renders large screen version correctly 1`] = `
 <section
-  class="hidden lg:block lg:w-[331px] lg:h-[947px] text-center lg:shadow-2xl lg:pt-12"
+  class="hidden lg:block shadow-2xl overflow-hidden h-[100%]"
 >
   <div
-    class="flex flex-col justify-around h-[75%]"
+    class="flex flex-col justify-around text-center w-[331px] pt-10 h-[80%]"
   >
     <img
       alt="..."
-      class="rounded-full mx-auto mb-3"
+      class="rounded-full mx-auto"
       data-nimg="1"
       decoding="async"
       height="171"
@@ -114,22 +114,22 @@ exports[`SideBar renders large screen version correctly 1`] = `
       <p>
         User Location
       </p>
-    </div>
-    <button
-      aria-label="Edit Profile"
-    >
-      <span>
-        <span
-          class="bg-[url('/images/Highlighter.png')] bg-bottom bg-no-repeat text-purple-light font-poppins text-center font-bold tracking-[-1px] block md:bg-[length:313.92px_27.28px] md:text-[27.28px] bg-[length:233.67px_20.31px] text-[21px] lg:bg-[length:200px_38px] lg:text-[30px] "
-        >
-          <h2>
-            Edit Profile
-          </h2>
+      <button
+        aria-label="Edit Profile"
+      >
+        <span>
+          <span
+            class="bg-[url('/images/Highlighter.png')] bg-bottom bg-no-repeat text-purple-light font-poppins text-center font-bold tracking-[-1px] block md:bg-[length:313.92px_27.28px] md:text-[27.28px] bg-[length:233.67px_20.31px] text-[21px] lg:bg-[length:200px_38px] lg:text-[30px] "
+          >
+            <h2>
+              Edit Profile
+            </h2>
+          </span>
         </span>
-      </span>
-    </button>
+      </button>
+    </div>
     <div
-      class="font-bold text-[31px] grid grid-rows-2 gap-8"
+      class="grid grid-rows-2 gap-8"
     >
       <button
         aria-label="My Listing"
@@ -164,14 +164,14 @@ exports[`SideBar renders large screen version correctly 1`] = `
 
 exports[`SideBar renders small screen version correctly 1`] = `
 <section
-  class="hidden lg:block lg:w-[331px] lg:h-[947px] text-center lg:shadow-2xl lg:pt-12"
+  class="hidden lg:block shadow-2xl overflow-hidden h-[100%]"
 >
   <div
-    class="flex flex-col justify-around h-[75%]"
+    class="flex flex-col justify-around text-center w-[331px] pt-10 h-[80%]"
   >
     <img
       alt="..."
-      class="rounded-full mx-auto mb-3"
+      class="rounded-full mx-auto"
       data-nimg="1"
       decoding="async"
       height="171"
@@ -195,22 +195,22 @@ exports[`SideBar renders small screen version correctly 1`] = `
       <p>
         User Location
       </p>
-    </div>
-    <button
-      aria-label="Edit Profile"
-    >
-      <span>
-        <span
-          class="bg-[url('/images/Highlighter.png')] bg-bottom bg-no-repeat text-purple-light font-poppins text-center font-bold tracking-[-1px] block md:bg-[length:313.92px_27.28px] md:text-[27.28px] bg-[length:233.67px_20.31px] text-[21px] lg:bg-[length:200px_38px] lg:text-[30px] "
-        >
-          <h2>
-            Edit Profile
-          </h2>
+      <button
+        aria-label="Edit Profile"
+      >
+        <span>
+          <span
+            class="bg-[url('/images/Highlighter.png')] bg-bottom bg-no-repeat text-purple-light font-poppins text-center font-bold tracking-[-1px] block md:bg-[length:313.92px_27.28px] md:text-[27.28px] bg-[length:233.67px_20.31px] text-[21px] lg:bg-[length:200px_38px] lg:text-[30px] "
+          >
+            <h2>
+              Edit Profile
+            </h2>
+          </span>
         </span>
-      </span>
-    </button>
+      </button>
+    </div>
     <div
-      class="font-bold text-[31px] grid grid-rows-2 gap-8"
+      class="grid grid-rows-2 gap-8"
     >
       <button
         aria-label="My Listing"
