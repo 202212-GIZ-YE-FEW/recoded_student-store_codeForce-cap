@@ -280,7 +280,7 @@ exports[`renders correctly 1`] = `
         className="flex gap-3 capitalize flex-col md:flex-row"
       >
         <a
-          href="/components/Signup"
+          href="/signup"
           onClick={[Function]}
           onMouseEnter={[Function]}
           onTouchStart={[Function]}
