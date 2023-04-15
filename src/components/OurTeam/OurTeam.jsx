@@ -1,4 +1,5 @@
 import CardView from "../CardView"
+import Highlighter from "../highlighter"
 
 function OurTeam() {
   const team = [
@@ -67,9 +68,7 @@ function OurTeam() {
   return (
     <div className='py-8 px-4 mx-auto max-w-screen-xl lg:py-16 lg:px-6'>
       <div className='mx-auto max-w-screen-sm text-center mb-8 lg:mb-16'>
-        <h2 className='mb-4 text-4xl tracking-tight font-extrabold text-gray-900'>
-          Our Team
-        </h2>
+        <Highlighter highlighterStyle='ourteam' text='Our Team' />
         <p className='font-light text-gray-500 lg:mb-16 sm:text-xl'>
           CodeForce team is built on trust and mutual respect, with each member
           holding themselves accountable for their actions and decisions.

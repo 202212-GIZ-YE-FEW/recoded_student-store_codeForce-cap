@@ -18,6 +18,7 @@ const HIGHLIGHTER = {
   listingPage: `${img} block ${lgSize} ${mdSize} ${smSize} lg:text-[40px]`,
   editProfile: `${img} block ${mdSize} ${smSize} lg:bg-[length:240px_38px] lg:text-[30px]`,
   aboutus: `${img} block ${mdSize} ${smSize} bg-[length:400px_80px] text-[55px] lg:bg-[length:400px_80px] lg:text-[55px]`,
+  ourteam: `${img} block ${mdSize} ${smSize} bg-[length:400px_80px] text-[55px] lg:bg-[length:400px_80px] lg:text-[55px]`,
 }
 
 export default function Highlighter({
