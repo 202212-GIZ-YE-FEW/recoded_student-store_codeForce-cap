@@ -14,7 +14,7 @@ export default function UserPage() {
   return (
     <>
       <Navbar />
-      <div className='lg:flex'>
+      <div className='lg:flex md:h-[816.2px]'>
         <div>
           <SideBar handleSelectedPage={handleSelectedPage} />
         </div>
