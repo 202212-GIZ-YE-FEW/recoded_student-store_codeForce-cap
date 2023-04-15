@@ -119,7 +119,7 @@ export default function Navbar() {
         {/* ----------- Buttons ----------- */}
         <div className='flex  justify-between items-center gap-5 flex-col md:flex-row '>
           <div className='flex gap-3 capitalize flex-col md:flex-row'>
-            <Link href='/components/Signup'>
+            <Link href='/signup'>
               <div className='bg-purple-light py-2 px-5 text-white rounded-3xl text-sm hover:bg-violet-800 transition-all cursor-pointer'>
                 sign up
               </div>
