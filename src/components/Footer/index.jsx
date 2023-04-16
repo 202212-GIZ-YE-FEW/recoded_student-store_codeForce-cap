@@ -49,12 +49,12 @@ export default function Footer() {
           <div className='pl-14 pt-5 md:pt-14'>
             <ul className='font-poppins text-white font-bold md:text-1xl lg:text-2xl'>
               <li className='mb-4'>
-                <Link href='/' className='hover:underline'>
+                <Link href='/about-us' className='hover:underline'>
                   About US
                 </Link>
               </li>
               <li>
-                <Link href='/' className='hover:underline'>
+                <Link href='/our-team' className='hover:underline'>
                   Our Team
                 </Link>
               </li>
@@ -72,7 +72,7 @@ export default function Footer() {
           <div className='pl-14 pt-10 md:pt-14'>
             <ul className='font-poppins text-white font-bold md:text-1xl lg:text-2xl'>
               <li className='mb-4'>
-                <Link href='/' className='hover:underline '>
+                <Link href='/signup' className='hover:underline '>
                   Register for free
                 </Link>
               </li>
