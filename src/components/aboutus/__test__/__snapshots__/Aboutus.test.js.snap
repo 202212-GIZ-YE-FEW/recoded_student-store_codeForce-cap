@@ -63,6 +63,7 @@ exports[`renders correctly 1`] = `
     >
       Our primary goal is to become the go-to marketplace for students across the country. We aim to build a strong reputation as a trusted platform that offers a wide range of affordable and high-quality products. We also aim to continuously improve our platform to ensure that it remains easy to use, reliable, and secure for all users. Additionally, we strive to create a community of students who can share their experiences and insights about products and services, creating a more connected and supportive student network. Ultimately, we want to help students save money, earn money, and have a better experience as they navigate their academic journeys.
     </p>
+    <br />
   </div>
 </div>
 `;
