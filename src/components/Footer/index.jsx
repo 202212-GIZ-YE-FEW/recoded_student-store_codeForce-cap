@@ -2,6 +2,13 @@ import Image from "next/image"
 import Link from "next/link"
 
 export default function Footer() {
+  const goToTop = () => {
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth",
+    })
+  }
+
   return (
     <>
       <footer>
@@ -118,7 +125,7 @@ export default function Footer() {
             <h2 className='m-0 font-poppins text-white font-bold md:text-2xl lg:text-2xl pt-2'>
               Scroll Up!
             </h2>
-            <Link href='/'>
+            <button onClick={goToTop}>
               <Image
                 className='w-10 ml-2 mr-5 lg:mr-0'
                 src='up-arrow.svg'
@@ -126,7 +133,7 @@ export default function Footer() {
                 height={35}
                 alt='UP'
               />
-            </Link>
+            </button>
           </div>
         </div>
       </footer>
