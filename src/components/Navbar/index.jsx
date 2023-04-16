@@ -1,14 +1,11 @@
 import Image from "next/image"
 import Link from "next/link"
 import { useState } from "react"
-import {
-  AiOutlineClose,
-  AiOutlineSearch,
-  AiOutlineShoppingCart,
-} from "react-icons/ai"
+import { AiOutlineClose, AiOutlineSearch } from "react-icons/ai"
 import { RxHamburgerMenu } from "react-icons/rx"
 import { TbArrowBadgeDown } from "react-icons/tb"
 import { TfiWorld } from "react-icons/tfi"
+import { HiHeart } from "react-icons/hi"
 
 import LogoImg from "../../../public/Logo.png"
 
@@ -137,7 +134,7 @@ export default function Navbar() {
             </button> */}
             <Link href='/cart'>
               {" "}
-              <AiOutlineShoppingCart />{" "}
+              <HiHeart />{" "}
             </Link>
           </div>
         </div>
