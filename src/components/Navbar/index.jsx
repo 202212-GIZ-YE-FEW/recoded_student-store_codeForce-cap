@@ -131,10 +131,14 @@ export default function Navbar() {
             </Link>
           </div>
           <div className='text-2xl text-orange-600 hover:text-orange-700 transition'>
-            <button>
+            {/* <button>
               {" "}
               <AiOutlineShoppingCart />{" "}
-            </button>
+            </button> */}
+            <Link href='/cart'>
+              {" "}
+              <AiOutlineShoppingCart />{" "}
+            </Link>
           </div>
         </div>
       </div>
