@@ -307,7 +307,12 @@ exports[`renders correctly 1`] = `
       <div
         className="text-2xl text-orange-600 hover:text-orange-700 transition"
       >
-        <button>
+        <a
+          href="/cart"
+          onClick={[Function]}
+          onMouseEnter={[Function]}
+          onTouchStart={[Function]}
+        >
            
           <svg
             fill="currentColor"
@@ -328,7 +333,7 @@ exports[`renders correctly 1`] = `
             />
           </svg>
            
-        </button>
+        </a>
       </div>
     </div>
   </div>
