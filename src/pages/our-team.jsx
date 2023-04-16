@@ -1,4 +1,5 @@
 import OurTeam from "@/components/OurTeam"
+
 import RootLayout from "@/layout/root/RootLayout"
 
 function OurTeamPage() {

@@ -1,5 +1,6 @@
 import SideBar from "@/components/SideBar"
 import UserOrders from "@/components/UserOrders"
+
 import RootLayout from "@/layout/root/RootLayout"
 
 function CartPage() {
