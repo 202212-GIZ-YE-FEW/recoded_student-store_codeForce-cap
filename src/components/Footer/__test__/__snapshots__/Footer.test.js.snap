@@ -84,19 +84,6 @@ exports[`renders correctly 1`] = `
       <ul
         className="font-poppins text-white font-bold md:text-1xl lg:text-2xl"
       >
-        <li
-          className="mb-4"
-        >
-          <a
-            className="hover:underline"
-            href="/"
-            onClick={[Function]}
-            onMouseEnter={[Function]}
-            onTouchStart={[Function]}
-          >
-            About US
-          </a>
-        </li>
         <li>
           <a
             className="hover:underline"

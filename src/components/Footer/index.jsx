@@ -49,8 +49,8 @@ export default function Footer() {
           <div className='pl-14 pt-5 md:pt-14'>
             <ul className='font-poppins text-white font-bold md:text-1xl lg:text-2xl'>
               <li>
-                <Link href='/' className='hover:underline'>
-                  Our Team
+                <Link href='/about-us' className='hover:underline'>
+                  About Us
                 </Link>
               </li>
               <li>
