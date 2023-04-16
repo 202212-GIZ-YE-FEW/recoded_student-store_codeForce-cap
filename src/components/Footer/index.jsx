@@ -72,7 +72,7 @@ export default function Footer() {
           <div className='pl-14 pt-10 md:pt-14'>
             <ul className='font-poppins text-white font-bold md:text-1xl lg:text-2xl'>
               <li className='mb-4'>
-                <Link href='/' className='hover:underline '>
+                <Link href='/signup' className='hover:underline '>
                   Register for free
                 </Link>
               </li>
