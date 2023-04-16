@@ -48,11 +48,6 @@ export default function Footer() {
           {/* About Section */}
           <div className='pl-14 pt-5 md:pt-14'>
             <ul className='font-poppins text-white font-bold md:text-1xl lg:text-2xl'>
-              <li className='mb-4'>
-                <Link href='/' className='hover:underline'>
-                  About US
-                </Link>
-              </li>
               <li>
                 <Link href='/' className='hover:underline'>
                   Our Team

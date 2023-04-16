@@ -480,7 +480,7 @@ exports[`renders correctly 1`] = `
           >
             <a
               className="hover:underline "
-              href="/"
+              href="/signup"
               onClick={[Function]}
               onMouseEnter={[Function]}
               onTouchStart={[Function]}
