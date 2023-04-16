@@ -253,11 +253,8 @@ exports[`renders correctly 1`] = `
       >
         Scroll Up!
       </h2>
-      <a
-        href="/"
+      <button
         onClick={[Function]}
-        onMouseEnter={[Function]}
-        onTouchStart={[Function]}
       >
         <img
           alt="UP"
@@ -276,7 +273,7 @@ exports[`renders correctly 1`] = `
           }
           width={45}
         />
-      </a>
+      </button>
     </div>
   </div>
 </footer>
