@@ -1,4 +1,5 @@
 import RootLayout from "@/layout/root/RootLayout"
+import Image from "next/image"
 import Link from "next/link"
 
 export default function NotFoundPage() {
@@ -6,6 +7,13 @@ export default function NotFoundPage() {
     <RootLayout>
       <div className='container flex flex-col items-center justify-center px-5 mx-auto my-8'>
         <div className='max-w-md text-center'>
+          <Image
+            src='/empty-box.png'
+            height={1000}
+            width={1000}
+            alt='Error 404'
+            className='w-52 m-auto mt-5'
+          />
           <h2 className='mb-8 font-extrabold text-9xl text-purple'>404</h2>
           <p className='text-2xl font-bold'>We could not find the page.</p>
           <p className='mt-4 mb-8 font-semibold'>
