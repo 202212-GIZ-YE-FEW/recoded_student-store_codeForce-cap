@@ -46,13 +46,19 @@ function PhotosGallery(props) {
   }
 
   const onChangeImageHandler = (e) => {
-    if (e.target.files?.[0]) {
-      const reader = new FileReader()
-      reader.onload = () => {
-        setFile(reader.result)
-      }
-      reader.readAsDataURL(e.target.files?.[0])
-      e.target.value = ""
+    // if (e.target.files?.[0]) {
+    //   const reader = new FileReader()
+    //   reader.onload = () => {
+    //     setFile(reader.result)
+    //   }
+    //   reader.readAsDataURL(e.target.files?.[0])
+    //   e.target.value = ""
+    // }
+    const file = e.target.files[0]
+    const reader = new FileReader()
+    reader.readAsDataURL(file)
+    reader.onloadend = () => {
+      setImages({ ...images, imagefull: reader.result })
     }
   }
 
