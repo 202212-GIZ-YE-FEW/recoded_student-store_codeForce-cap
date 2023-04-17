@@ -21,11 +21,11 @@ function CardView(props) {
   return (
     <div className='items-center bg-gray-50 rounded-lg shadow flex-col sm:flex lg:flex-row'>
       <Image
-        className='w-full rounded'
+        className='rounded w-[250px] h-[270px]'
         src={props.profile}
         alt='profile'
-        width={100}
-        height={100}
+        width={1920}
+        height={1080}
       />
 
       <div className='p-5'>

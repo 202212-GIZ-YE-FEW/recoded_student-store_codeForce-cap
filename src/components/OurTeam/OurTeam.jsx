@@ -5,7 +5,7 @@ function OurTeam() {
   const team = [
     {
       id: 1,
-      photo: "/mohammed.jpg",
+      photo: "https://avatars.githubusercontent.com/u/49818381?v=4",
       name: "Moahmmed Al-Qershi",
       job: "Font-End Developer & ERPNext Developer",
       description:
@@ -17,7 +17,7 @@ function OurTeam() {
     },
     {
       id: 2,
-      photo: "/nabil.jpg",
+      photo: "https://avatars.githubusercontent.com/u/75049983?v=4",
       name: "NabiL Ashbat",
       job: "Font-End Developer",
       description:
@@ -29,7 +29,7 @@ function OurTeam() {
     },
     {
       id: 3,
-      photo: "/abobakr.jpg",
+      photo: "https://avatars.githubusercontent.com/u/93738112?v=4",
       name: "Abobakr Mahdi",
       job: "Font-End Developer",
       description:
@@ -41,7 +41,7 @@ function OurTeam() {
     },
     {
       id: 4,
-      photo: "/abdulrahman.jpg",
+      photo: "https://avatars.githubusercontent.com/u/96662087?v=4",
       name: "Abdulrahman Abdullah",
       job: "Font-End Developer",
       description:
@@ -53,7 +53,7 @@ function OurTeam() {
     },
     {
       id: 5,
-      photo: "/marwan.jpg",
+      photo: "https://avatars.githubusercontent.com/u/69892218?v=4",
       name: "MarwanBz",
       job: "Font-End Developer",
       description:
