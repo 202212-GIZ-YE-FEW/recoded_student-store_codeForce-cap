@@ -8,23 +8,30 @@ exports[`renders correctly 1`] = `
   <div
     className="w-[130px]"
   >
-    <img
-      alt="logo"
-      data-nimg="1"
-      decoding="async"
-      height={40}
-      loading="lazy"
-      onError={[Function]}
-      onLoad={[Function]}
-      src="/_next/image?url=%2Fimg.jpg&w=96&q=75"
-      srcSet="/_next/image?url=%2Fimg.jpg&w=48&q=75 1x, /_next/image?url=%2Fimg.jpg&w=96&q=75 2x"
-      style={
-        {
-          "color": "transparent",
+    <a
+      href="/"
+      onClick={[Function]}
+      onMouseEnter={[Function]}
+      onTouchStart={[Function]}
+    >
+      <img
+        alt="logo"
+        data-nimg="1"
+        decoding="async"
+        height={40}
+        loading="lazy"
+        onError={[Function]}
+        onLoad={[Function]}
+        src="/_next/image?url=%2Fimg.jpg&w=96&q=75"
+        srcSet="/_next/image?url=%2Fimg.jpg&w=48&q=75 1x, /_next/image?url=%2Fimg.jpg&w=96&q=75 2x"
+        style={
+          {
+            "color": "transparent",
+          }
         }
-      }
-      width={40}
-    />
+        width={40}
+      />
+    </a>
   </div>
   <div
     className="flex items-end cursor-pointer absolute right-14 top-8 md:static order-2 md:hidden"

@@ -21,7 +21,9 @@ export default function Navbar() {
       `}
     >
       <div className='w-[130px]'>
-        <Image src={LogoImg} alt='logo' />
+        <Link href='/'>
+          <Image src={LogoImg} alt='logo' />
+        </Link>
       </div>
       {/* ----------- Languages ----------- */}
       <div className='flex items-end cursor-pointer absolute right-14 top-8 md:static order-2 md:hidden'>
@@ -131,10 +133,6 @@ export default function Navbar() {
             </Link>
           </div>
           <div className='text-2xl text-orange-600 hover:text-orange-700 transition'>
-            {/* <button>
-              {" "}
-              <AiOutlineShoppingCart />{" "}
-            </button> */}
             <Link href='/cart'>
               {" "}
               <AiOutlineShoppingCart />{" "}
