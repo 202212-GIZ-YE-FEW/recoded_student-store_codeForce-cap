@@ -69,16 +69,16 @@ export default function Navbar() {
         {/* ----------- Links ----------- */}
         <div className='flex flex-col md:flex-row gap-5'>
           <Link
+            href='/donation'
+            className='relative mx-4 capitalize text-sm hover:text-violet-800   transition-all duration-1000 before:absolute before:-bottom-2 before:left-0  before:h-[1px]  before:w-0 before:opacity-0 before:bg-violet-700 before:transition-all before:duration-500 hover:before:w-full hover:before:opacity-100'
+          >
+            Donation
+          </Link>
+          <Link
             href='/about-us'
             className='relative mx-4 capitalize text-sm  hover:text-violet-800   transition-all duration-1000 before:absolute before:-bottom-2 before:left-0  before:h-[1px]  before:w-0 before:opacity-0 before:bg-violet-700 before:transition-all before:duration-500 hover:before:w-full hover:before:opacity-100'
           >
             about us
-          </Link>
-          <Link
-            href='/our-team'
-            className='relative mx-4 capitalize text-sm hover:text-violet-800   transition-all duration-1000 before:absolute before:-bottom-2 before:left-0  before:h-[1px]  before:w-0 before:opacity-0 before:bg-violet-700 before:transition-all before:duration-500 hover:before:w-full hover:before:opacity-100'
-          >
-            our team
           </Link>
         </div>
         {/* ----------- Search ----------- */}

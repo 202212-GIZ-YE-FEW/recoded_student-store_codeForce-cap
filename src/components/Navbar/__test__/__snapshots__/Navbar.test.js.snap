@@ -150,6 +150,15 @@ exports[`renders correctly 1`] = `
       className="flex flex-col md:flex-row gap-5"
     >
       <a
+        className="relative mx-4 capitalize text-sm hover:text-violet-800   transition-all duration-1000 before:absolute before:-bottom-2 before:left-0  before:h-[1px]  before:w-0 before:opacity-0 before:bg-violet-700 before:transition-all before:duration-500 hover:before:w-full hover:before:opacity-100"
+        href="/donation"
+        onClick={[Function]}
+        onMouseEnter={[Function]}
+        onTouchStart={[Function]}
+      >
+        Donation
+      </a>
+      <a
         className="relative mx-4 capitalize text-sm  hover:text-violet-800   transition-all duration-1000 before:absolute before:-bottom-2 before:left-0  before:h-[1px]  before:w-0 before:opacity-0 before:bg-violet-700 before:transition-all before:duration-500 hover:before:w-full hover:before:opacity-100"
         href="/about-us"
         onClick={[Function]}
@@ -157,15 +166,6 @@ exports[`renders correctly 1`] = `
         onTouchStart={[Function]}
       >
         about us
-      </a>
-      <a
-        className="relative mx-4 capitalize text-sm hover:text-violet-800   transition-all duration-1000 before:absolute before:-bottom-2 before:left-0  before:h-[1px]  before:w-0 before:opacity-0 before:bg-violet-700 before:transition-all before:duration-500 hover:before:w-full hover:before:opacity-100"
-        href="/our-team"
-        onClick={[Function]}
-        onMouseEnter={[Function]}
-        onTouchStart={[Function]}
-      >
-        our team
       </a>
     </div>
     <div
