@@ -1,11 +1,8 @@
 import Image from "next/image"
 import Link from "next/link"
 import { useState } from "react"
-import {
-  AiOutlineClose,
-  AiOutlineSearch,
-  AiOutlineShoppingCart,
-} from "react-icons/ai"
+import { AiOutlineClose, AiOutlineSearch } from "react-icons/ai"
+import { HiHeart } from "react-icons/hi"
 import { RxHamburgerMenu } from "react-icons/rx"
 import { TbArrowBadgeDown } from "react-icons/tb"
 import { TfiWorld } from "react-icons/tfi"
@@ -135,7 +132,7 @@ export default function Navbar() {
           <div className='text-2xl text-orange-600 hover:text-orange-700 transition'>
             <Link href='/cart'>
               {" "}
-              <AiOutlineShoppingCart />{" "}
+              <HiHeart />{" "}
             </Link>
           </div>
         </div>

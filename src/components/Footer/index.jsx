@@ -117,7 +117,7 @@ export default function Footer() {
 
           {/* Scroll UP Section */}
           <div className='flex justify-end h-36 pt-32 lg:pt-14'>
-            <h2 className='m-0 font-poppins text-white font-bold md:text-2xl lg:text-2xl pt-2'>
+            <h2 className='m-0 font-poppins text-white font-bold md:text-2xl lg:text-2xl pt-2 lg:pt-7'>
               Scroll Up!
             </h2>
             <button onClick={goToTop}>
