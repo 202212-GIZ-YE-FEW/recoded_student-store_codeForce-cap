@@ -425,12 +425,12 @@ exports[`renders correctly 1`] = `
           <li>
             <a
               className="hover:underline"
-              href="/"
+              href="/about-us"
               onClick={[Function]}
               onMouseEnter={[Function]}
               onTouchStart={[Function]}
             >
-              Our Team
+              About Us
             </a>
           </li>
           <li>
