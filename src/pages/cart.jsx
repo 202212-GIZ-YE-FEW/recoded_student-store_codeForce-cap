@@ -1,4 +1,5 @@
 import PhotosGallery from "@/components/PhotosGallery"
+
 import RootLayout from "@/layout/root/RootLayout"
 
 function CartPage() {

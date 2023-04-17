@@ -2,10 +2,10 @@ import Image from "next/image"
 import Link from "next/link"
 import { useState } from "react"
 import { AiOutlineClose, AiOutlineSearch } from "react-icons/ai"
+import { HiHeart } from "react-icons/hi"
 import { RxHamburgerMenu } from "react-icons/rx"
 import { TbArrowBadgeDown } from "react-icons/tb"
 import { TfiWorld } from "react-icons/tfi"
-import { HiHeart } from "react-icons/hi"
 
 import LogoImg from "../../../public/Logo.png"
 

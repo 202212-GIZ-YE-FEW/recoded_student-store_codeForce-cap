@@ -62,7 +62,7 @@ function PhotosGallery(props) {
         {props?.photos?.[0].url || images.imagefull ? (
           <Image
             className={styles.imagefull}
-            src={props?.photos[0].url}
+            src={images.imagefull ? images.imagefull : props.photos[0].url}
             width={500}
             height={500}
             alt='Photo-one'
@@ -82,7 +82,7 @@ function PhotosGallery(props) {
           {props?.photos?.[1].url || images.imageBlockThree ? (
             <Image
               className={styles.imageblock}
-              src={props?.photos[1].url}
+              src={images.imagefull ? images.imagefull : props.photos[1].url}
               width={500}
               height={500}
               alt='Photo-three'
@@ -101,7 +101,7 @@ function PhotosGallery(props) {
           {props?.photos?.[2].url || images.imageBlockTwo ? (
             <Image
               className={styles.imageblock}
-              src={props?.photos[2].url}
+              src={images.imagefull ? images.imagefull : props.photos[2].url}
               width={100}
               height={100}
               alt='photo-two'
@@ -120,7 +120,7 @@ function PhotosGallery(props) {
           {props?.photos?.[3].url || images.imageBlockOne ? (
             <Image
               className={styles.imageblock}
-              src={props?.photos[3].url}
+              src={images.imagefull ? images.imagefull : props.photos[3].url}
               width={100}
               height={100}
               alt='photo-four'
