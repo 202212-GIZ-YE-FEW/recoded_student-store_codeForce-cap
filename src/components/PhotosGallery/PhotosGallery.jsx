@@ -59,7 +59,7 @@ function PhotosGallery(props) {
   return (
     <div className='flex flex-col lg:flex-col md:flex-row w-full justify-center'>
       <div className='lg:m-0 my-auto w-full justify-center'>
-        {props?.photos?.[0].url ? (
+        {props?.photos?.[0].url || images.imagefull ? (
           <Image
             className={styles.imagefull}
             src={props?.photos[0].url}
@@ -79,7 +79,7 @@ function PhotosGallery(props) {
       </div>
       <div className='flex lg:w-full md:w-1/2 lg:flex-nowrap md:flex-wrap ml-0 lg:ml-0 md:ml-3 mt-3 lg:mt-3 md:mt-0'>
         <div className='w-full p-1'>
-          {props?.photos?.[1].url ? (
+          {props?.photos?.[1].url || images.imageBlockThree ? (
             <Image
               className={styles.imageblock}
               src={props?.photos[1].url}
@@ -98,7 +98,7 @@ function PhotosGallery(props) {
           )}
         </div>
         <div className={styles.imagesize}>
-          {props?.photos?.[2].url ? (
+          {props?.photos?.[2].url || images.imageBlockTwo ? (
             <Image
               className={styles.imageblock}
               src={props?.photos[2].url}
@@ -117,7 +117,7 @@ function PhotosGallery(props) {
           )}
         </div>
         <div className={styles.imagesize}>
-          {props?.photos?.[3].url ? (
+          {props?.photos?.[3].url || images.imageBlockOne ? (
             <Image
               className={styles.imageblock}
               src={props?.photos[3].url}
