@@ -7,8 +7,6 @@ import { RxHamburgerMenu } from "react-icons/rx"
 import { TbArrowBadgeDown } from "react-icons/tb"
 import { TfiWorld } from "react-icons/tfi"
 
-import LogoImg from "../../../public/Logo.png"
-
 export default function Navbar() {
   const [languages, setLanguages] = useState(false)
   const [open, setOpen] = useState(false)
@@ -19,7 +17,7 @@ export default function Navbar() {
     >
       <div className='w-[130px]'>
         <Link href='/'>
-          <Image src={LogoImg} alt='logo' />
+          <Image src='/images/Logo.png' alt='logo' width={1920} height={1080} />
         </Link>
       </div>
       {/* ----------- Languages ----------- */}

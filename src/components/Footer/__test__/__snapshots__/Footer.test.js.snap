@@ -22,7 +22,7 @@ exports[`renders correctly 1`] = `
           loading="lazy"
           onError={[Function]}
           onLoad={[Function]}
-          src="logo-footer.svg"
+          src="/images/logo-footer.svg"
           style={
             {
               "color": "transparent",
@@ -46,7 +46,7 @@ exports[`renders correctly 1`] = `
             loading="lazy"
             onError={[Function]}
             onLoad={[Function]}
-            src="play-google.svg"
+            src="/images/play-google.svg"
             style={
               {
                 "color": "transparent",
@@ -67,7 +67,7 @@ exports[`renders correctly 1`] = `
             loading="lazy"
             onError={[Function]}
             onLoad={[Function]}
-            src="app-store.svg"
+            src="/images/app-store.svg"
             style={
               {
                 "color": "transparent",
@@ -179,7 +179,7 @@ exports[`renders correctly 1`] = `
             loading="lazy"
             onError={[Function]}
             onLoad={[Function]}
-            src="facebook.svg"
+            src="/images/facebook.svg"
             style={
               {
                 "color": "transparent",
@@ -200,7 +200,7 @@ exports[`renders correctly 1`] = `
             loading="lazy"
             onError={[Function]}
             onLoad={[Function]}
-            src="twitter.svg"
+            src="/images/twitter.svg"
             style={
               {
                 "color": "transparent",
@@ -221,7 +221,7 @@ exports[`renders correctly 1`] = `
             loading="lazy"
             onError={[Function]}
             onLoad={[Function]}
-            src="instagram.svg"
+            src="/images/instagram.svg"
             style={
               {
                 "color": "transparent",
@@ -252,7 +252,7 @@ exports[`renders correctly 1`] = `
           loading="lazy"
           onError={[Function]}
           onLoad={[Function]}
-          src="up-arrow.svg"
+          src="/images/up-arrow.svg"
           style={
             {
               "color": "transparent",

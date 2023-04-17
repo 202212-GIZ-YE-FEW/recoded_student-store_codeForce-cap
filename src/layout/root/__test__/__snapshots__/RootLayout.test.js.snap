@@ -19,18 +19,18 @@ exports[`renders correctly 1`] = `
           alt="logo"
           data-nimg="1"
           decoding="async"
-          height={40}
+          height={1080}
           loading="lazy"
           onError={[Function]}
           onLoad={[Function]}
-          src="/_next/image?url=%2Fimg.jpg&w=96&q=75"
-          srcSet="/_next/image?url=%2Fimg.jpg&w=48&q=75 1x, /_next/image?url=%2Fimg.jpg&w=96&q=75 2x"
+          src="/_next/image?url=%2Fimages%2FLogo.png&w=3840&q=75"
+          srcSet="/_next/image?url=%2Fimages%2FLogo.png&w=1920&q=75 1x, /_next/image?url=%2Fimages%2FLogo.png&w=3840&q=75 2x"
           style={
             {
               "color": "transparent",
             }
           }
-          width={40}
+          width={1920}
         />
       </a>
     </div>
@@ -370,7 +370,7 @@ exports[`renders correctly 1`] = `
             loading="lazy"
             onError={[Function]}
             onLoad={[Function]}
-            src="logo-footer.svg"
+            src="/images/logo-footer.svg"
             style={
               {
                 "color": "transparent",
@@ -394,7 +394,7 @@ exports[`renders correctly 1`] = `
               loading="lazy"
               onError={[Function]}
               onLoad={[Function]}
-              src="play-google.svg"
+              src="/images/play-google.svg"
               style={
                 {
                   "color": "transparent",
@@ -415,7 +415,7 @@ exports[`renders correctly 1`] = `
               loading="lazy"
               onError={[Function]}
               onLoad={[Function]}
-              src="app-store.svg"
+              src="/images/app-store.svg"
               style={
                 {
                   "color": "transparent",
@@ -527,7 +527,7 @@ exports[`renders correctly 1`] = `
               loading="lazy"
               onError={[Function]}
               onLoad={[Function]}
-              src="facebook.svg"
+              src="/images/facebook.svg"
               style={
                 {
                   "color": "transparent",
@@ -548,7 +548,7 @@ exports[`renders correctly 1`] = `
               loading="lazy"
               onError={[Function]}
               onLoad={[Function]}
-              src="twitter.svg"
+              src="/images/twitter.svg"
               style={
                 {
                   "color": "transparent",
@@ -569,7 +569,7 @@ exports[`renders correctly 1`] = `
               loading="lazy"
               onError={[Function]}
               onLoad={[Function]}
-              src="instagram.svg"
+              src="/images/instagram.svg"
               style={
                 {
                   "color": "transparent",
@@ -600,7 +600,7 @@ exports[`renders correctly 1`] = `
             loading="lazy"
             onError={[Function]}
             onLoad={[Function]}
-            src="up-arrow.svg"
+            src="/images/up-arrow.svg"
             style={
               {
                 "color": "transparent",

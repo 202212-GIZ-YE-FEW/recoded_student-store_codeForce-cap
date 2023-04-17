@@ -1,11 +1,11 @@
 import Image from "next/image"
+import Link from "next/link"
 import { BsFacebook, BsGoogle, BsTwitter } from "react-icons/bs"
 
 import styles from "./Signin.module.css"
 
 import Button from "../button"
 import Input from "../input"
-import Link from "next/link"
 function Signin() {
   return (
     <>

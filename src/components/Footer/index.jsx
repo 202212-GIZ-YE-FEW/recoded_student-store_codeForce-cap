@@ -17,7 +17,7 @@ export default function Footer() {
           <div className='ml-5 pt-5'>
             <Link href='/'>
               <Image
-                src='logo-footer.svg'
+                src='/images/logo-footer.svg'
                 width={350}
                 height={250}
                 alt='logo'
@@ -26,7 +26,7 @@ export default function Footer() {
             <div className='absolute bottom-16 left-5 lg:left-40 lg:bottom-1'>
               <a href='#'>
                 <Image
-                  src='play-google.svg'
+                  src='/images/play-google.svg'
                   width={175}
                   height={49}
                   alt='Google Play'
@@ -35,7 +35,7 @@ export default function Footer() {
               </a>
               <a href='#'>
                 <Image
-                  src='app-store.svg'
+                  src='/images/app-store.svg'
                   width={175}
                   height={49}
                   alt='App Store'
@@ -87,7 +87,7 @@ export default function Footer() {
             <div className='absolute md:flex justify-between bottom-64 right-0 lg:right-96 lg:top-64'>
               <a href='#'>
                 <Image
-                  src='facebook.svg'
+                  src='/images/facebook.svg'
                   width={60}
                   height={70}
                   alt='Facebook'
@@ -96,7 +96,7 @@ export default function Footer() {
               </a>
               <a href='#'>
                 <Image
-                  src='twitter.svg'
+                  src='/images/twitter.svg'
                   width={60}
                   height={70}
                   alt='Twitter'
@@ -105,7 +105,7 @@ export default function Footer() {
               </a>
               <a href='#'>
                 <Image
-                  src='instagram.svg'
+                  src='/images/instagram.svg'
                   width={60}
                   height={70}
                   alt='Instagram'
@@ -123,7 +123,7 @@ export default function Footer() {
             <button onClick={goToTop}>
               <Image
                 className='w-10 ml-2 mr-5 lg:mr-0'
-                src='up-arrow.svg'
+                src='/images/up-arrow.svg'
                 width={45}
                 height={35}
                 alt='UP'

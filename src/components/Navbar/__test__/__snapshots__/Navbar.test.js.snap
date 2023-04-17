@@ -18,18 +18,18 @@ exports[`renders correctly 1`] = `
         alt="logo"
         data-nimg="1"
         decoding="async"
-        height={40}
+        height={1080}
         loading="lazy"
         onError={[Function]}
         onLoad={[Function]}
-        src="/_next/image?url=%2Fimg.jpg&w=96&q=75"
-        srcSet="/_next/image?url=%2Fimg.jpg&w=48&q=75 1x, /_next/image?url=%2Fimg.jpg&w=96&q=75 2x"
+        src="/_next/image?url=%2Fimages%2FLogo.png&w=3840&q=75"
+        srcSet="/_next/image?url=%2Fimages%2FLogo.png&w=1920&q=75 1x, /_next/image?url=%2Fimages%2FLogo.png&w=3840&q=75 2x"
         style={
           {
             "color": "transparent",
           }
         }
-        width={40}
+        width={1920}
       />
     </a>
   </div>
