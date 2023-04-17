@@ -1,4 +1,5 @@
 import Highlighter from "../highlighter"
+import OurTeam from "../OurTeam"
 
 function Aboutus() {
   return (
@@ -41,6 +42,7 @@ function Aboutus() {
         </p>
         <br />
       </div>
+      <OurTeam />
     </div>
   )
 }
