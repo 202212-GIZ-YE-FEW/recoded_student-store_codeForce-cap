@@ -1,5 +1,5 @@
 ---
-name: Needed fix
+name: Scope of the fix
 about: Required fix
 title: ""
 labels: ""
@@ -9,7 +9,7 @@ assignees: ""
 # Fix title
 The fix title
 
-## Task description
+## Fix description
 Put the description here (Mandatory)
 
 ## Subtasks
