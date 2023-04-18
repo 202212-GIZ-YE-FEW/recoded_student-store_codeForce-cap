@@ -1,11 +1,66 @@
 import Image from "next/image"
+import { useRouter } from "next/router"
+import { useState } from "react"
 import { BsFacebook, BsGoogle, BsTwitter } from "react-icons/bs"
+import * as Yup from "yup"
 
 import styles from "./Signin.module.css"
 
+import signIn from "@/utils/firebase/auth/signin"
+
 import Button from "../button"
 import Input from "../input"
+
+// Define validation schema using Yup
+const validationSchema = Yup.object().shape({
+  email: Yup.string()
+    .email("invalid email")
+    .required("Email is can't be empty!"),
+  password: Yup.string().required("Password can't be empty!"),
+})
+
 function Signin() {
+  const router = useRouter()
+
+  const [formData, setFormData] = useState({
+    email: "",
+    password: "",
+  })
+
+  const [errors, setErrors] = useState({})
+
+  const handleChange = (event) => {
+    const { name, value } = event.target
+    setFormData((prevState) => ({
+      ...prevState,
+      [name]: value,
+    }))
+  }
+
+  const handleSubmit = async (event) => {
+    event.preventDefault()
+    try {
+      await validationSchema.validate(formData, { abortEarly: false })
+      const { email, password } = formData
+
+      const { result, error } = await signIn(email, password)
+
+      if (error) {
+        return console.log(error)
+      }
+
+      // else when successful
+      console.log(result)
+      return router.push("/")
+    } catch (err) {
+      const validationErrors = {}
+      err.inner.forEach((error) => {
+        validationErrors[error.path] = error.message
+      })
+      setErrors(validationErrors)
+    }
+  }
+
   return (
     <>
       <div className={`flex justify-center  md:flex-row  bg-[#f1f6fa] `}>
@@ -23,7 +78,10 @@ function Signin() {
           <h1 className='my-2 py-6 text-4xl font-semibold text-[#FF8A57] md:my-3 md:text-5xl'>
             Sign-in
           </h1>
-          <form className='container m-auto mb-6 flex w-5/6 flex-col items-center'>
+          <form
+            onSubmit={handleSubmit}
+            className='container m-auto mb-6 flex w-5/6 flex-col items-center'
+          >
             <Input
               type='text'
               name='firstName'
@@ -37,7 +95,7 @@ function Signin() {
               className='lg:w-96 md:w-64'
             />
             <div className='my-4 gap-1 flex-row flex lg:justify-center'>
-              <Button className='orangeSignIn' text='Sign in' />
+              <Button className='orangeSignIn' text='Sign in' type='submit' />
               <Button className='forgotPassword' text='forgotPassword ' />
             </div>
           </form>
