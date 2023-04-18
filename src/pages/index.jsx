@@ -1,8 +1,7 @@
-import Link from "next/link"
 import { useTranslation } from "next-i18next"
 import { serverSideTranslations } from "next-i18next/serverSideTranslations"
+import Link from "next/link"
 
-import Aboutus from "@/components/aboutus"
 import Donation from "@/components/donation"
 import Filter from "@/components/Filter"
 import Footer from "@/components/Footer"
@@ -22,12 +21,6 @@ export default function HomePage() {
     <>
       <RootLayout>
         <Navbar />
-        <OurTeam />
-        <Aboutus />
-        <SingleProduct />
-        <Signup />
-        {/* <Signin /> */}
-
         <p>{t("test")}</p>
         <div style={{ display: "flex", flexDirection: "row", gap: "20px" }}>
           <Link href='/' locale='en'>
@@ -37,6 +30,11 @@ export default function HomePage() {
             العربية
           </Link>
         </div>
+        <OurTeam />
+        <SingleProduct />
+        <Signup />
+        {/* <Signin /> */}
+
         <Hero />
         <Filter />
         <Donation />

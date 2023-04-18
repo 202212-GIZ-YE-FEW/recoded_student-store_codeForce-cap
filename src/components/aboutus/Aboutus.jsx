@@ -1,16 +1,20 @@
+import { withTranslation } from "next-i18next"
+
 import Highlighter from "../highlighter"
 
-function Aboutus() {
+function Aboutus({ t }) {
   return (
-    <div className='flex flex-col items-center justify-center font-poppins'>
+    <div
+      className='flex flex-col items-center justify-center font-poppins'
+      dir='{dir}'
+    >
       <div className='grid  mt-20 items-center justify-center max-w-screen-md'>
         <Highlighter highlighterStyle='aboutus' text='Mission' />
-        <p className='text-purple-dark lg:w-[700px] p-3 text-2xl leading-relaxed text-center'>
-          Our companys mission is to create a student-friendly marketplace that
-          provides an affordable and convenient platform for students to buy,
-          sell, and borrow various types of products. We aim to help students
-          save money by providing them access to affordable used products while
-          also helping them earn money by allowing them to sell their own items.
+        <p
+          className='text-purple-dark lg:w-[700px] p-3 text-2xl leading-relaxed text-center'
+          dir='rtl'
+        >
+          {t("mission")}
         </p>
       </div>
       <div className='grid  mt-20 items-center justify-center max-w-screen-md'>
@@ -44,4 +48,4 @@ function Aboutus() {
   )
 }
 
-export default Aboutus
+export default withTranslation("aboutus")(Aboutus)
