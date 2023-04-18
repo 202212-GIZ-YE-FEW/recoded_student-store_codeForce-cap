@@ -15,11 +15,9 @@ export default function Navbar() {
       className={`navbar  m-auto px-10 md:flex md:flex-row py-4 justify-between gap-5 items-center bg-white transition-all 
       `}
     >
-      <div className='w-[130px]'>
-        <Link href='/'>
-          <Image src='/images/Logo.png' alt='logo' width={1920} height={1080} />
-        </Link>
-      </div>
+      <Link href='/'>
+        <Image src='/images/Logo.png' alt='logo' width={130} height={130} />
+      </Link>
       {/* ----------- Languages ----------- */}
       <div className='flex items-end cursor-pointer absolute right-14 top-8 md:static order-2 md:hidden'>
         <div

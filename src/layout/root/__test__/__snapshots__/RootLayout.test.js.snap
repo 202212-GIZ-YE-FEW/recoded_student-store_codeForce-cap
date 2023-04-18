@@ -6,34 +6,30 @@ exports[`renders correctly 1`] = `
     className="navbar  m-auto px-10 md:flex md:flex-row py-4 justify-between gap-5 items-center bg-white transition-all 
       "
   >
-    <div
-      className="w-[130px]"
+    <a
+      href="/"
+      onClick={[Function]}
+      onMouseEnter={[Function]}
+      onTouchStart={[Function]}
     >
-      <a
-        href="/"
-        onClick={[Function]}
-        onMouseEnter={[Function]}
-        onTouchStart={[Function]}
-      >
-        <img
-          alt="logo"
-          data-nimg="1"
-          decoding="async"
-          height={1080}
-          loading="lazy"
-          onError={[Function]}
-          onLoad={[Function]}
-          src="/_next/image?url=%2Fimages%2FLogo.png&w=3840&q=75"
-          srcSet="/_next/image?url=%2Fimages%2FLogo.png&w=1920&q=75 1x, /_next/image?url=%2Fimages%2FLogo.png&w=3840&q=75 2x"
-          style={
-            {
-              "color": "transparent",
-            }
+      <img
+        alt="logo"
+        data-nimg="1"
+        decoding="async"
+        height={130}
+        loading="lazy"
+        onError={[Function]}
+        onLoad={[Function]}
+        src="/_next/image?url=%2Fimages%2FLogo.png&w=384&q=75"
+        srcSet="/_next/image?url=%2Fimages%2FLogo.png&w=256&q=75 1x, /_next/image?url=%2Fimages%2FLogo.png&w=384&q=75 2x"
+        style={
+          {
+            "color": "transparent",
           }
-          width={1920}
-        />
-      </a>
-    </div>
+        }
+        width={130}
+      />
+    </a>
     <div
       className="flex items-end cursor-pointer absolute right-14 top-8 md:static order-2 md:hidden"
     >
