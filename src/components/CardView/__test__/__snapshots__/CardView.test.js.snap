@@ -6,10 +6,10 @@ exports[`renders correctly 1`] = `
 >
   <img
     alt="profile"
-    className="rounded w-[250px] h-[270px]"
+    className="rounded"
     data-nimg="1"
     decoding="async"
-    height={1080}
+    height={290}
     loading="lazy"
     onError={[Function]}
     onLoad={[Function]}
@@ -19,7 +19,7 @@ exports[`renders correctly 1`] = `
         "color": "transparent",
       }
     }
-    width={1920}
+    width={270}
   />
   <div
     className="p-5"
@@ -114,7 +114,7 @@ exports[`renders correctly 1`] = `
             loading="lazy"
             onError={[Function]}
             onLoad={[Function]}
-            src="images/linkedin-circle.svg"
+            src="/images/linkedin-circle.svg"
             style={
               {
                 "color": "transparent",

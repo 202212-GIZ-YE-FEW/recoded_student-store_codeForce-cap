@@ -15,17 +15,17 @@ function CardView(props) {
     facebook: "/images/facebook-circle.svg",
     twitter: "/images/twitter-circle.svg",
     github: "/images/github.svg",
-    linkedin: "images/linkedin-circle.svg",
+    linkedin: "/images/linkedin-circle.svg",
   }
 
   return (
     <div className='items-center bg-gray-50 rounded-lg shadow flex-col sm:flex lg:flex-row'>
       <Image
-        className='rounded w-[250px] h-[270px]'
+        className='rounded'
         src={props.profile}
         alt='profile'
-        width={1920}
-        height={1080}
+        width={270}
+        height={290}
       />
 
       <div className='p-5'>

@@ -96,21 +96,21 @@ exports[`renders correctly 1`] = `
       >
         <img
           alt="profile"
-          className="rounded w-[250px] h-[270px]"
+          className="rounded"
           data-nimg="1"
           decoding="async"
-          height={1080}
+          height={290}
           loading="lazy"
           onError={[Function]}
           onLoad={[Function]}
-          src="/_next/image?url=https%3A%2F%2Favatars.githubusercontent.com%2Fu%2F49818381%3Fv%3D4&w=3840&q=75"
-          srcSet="/_next/image?url=https%3A%2F%2Favatars.githubusercontent.com%2Fu%2F49818381%3Fv%3D4&w=1920&q=75 1x, /_next/image?url=https%3A%2F%2Favatars.githubusercontent.com%2Fu%2F49818381%3Fv%3D4&w=3840&q=75 2x"
+          src="/_next/image?url=https%3A%2F%2Favatars.githubusercontent.com%2Fu%2F49818381%3Fv%3D4&w=640&q=75"
+          srcSet="/_next/image?url=https%3A%2F%2Favatars.githubusercontent.com%2Fu%2F49818381%3Fv%3D4&w=384&q=75 1x, /_next/image?url=https%3A%2F%2Favatars.githubusercontent.com%2Fu%2F49818381%3Fv%3D4&w=640&q=75 2x"
           style={
             {
               "color": "transparent",
             }
           }
-          width={1920}
+          width={270}
         />
         <div
           className="p-5"
@@ -215,7 +215,7 @@ exports[`renders correctly 1`] = `
                   loading="lazy"
                   onError={[Function]}
                   onLoad={[Function]}
-                  src="images/linkedin-circle.svg"
+                  src="/images/linkedin-circle.svg"
                   style={
                     {
                       "color": "transparent",
@@ -233,21 +233,21 @@ exports[`renders correctly 1`] = `
       >
         <img
           alt="profile"
-          className="rounded w-[250px] h-[270px]"
+          className="rounded"
           data-nimg="1"
           decoding="async"
-          height={1080}
+          height={290}
           loading="lazy"
           onError={[Function]}
           onLoad={[Function]}
-          src="/_next/image?url=https%3A%2F%2Favatars.githubusercontent.com%2Fu%2F75049983%3Fv%3D4&w=3840&q=75"
-          srcSet="/_next/image?url=https%3A%2F%2Favatars.githubusercontent.com%2Fu%2F75049983%3Fv%3D4&w=1920&q=75 1x, /_next/image?url=https%3A%2F%2Favatars.githubusercontent.com%2Fu%2F75049983%3Fv%3D4&w=3840&q=75 2x"
+          src="/_next/image?url=https%3A%2F%2Favatars.githubusercontent.com%2Fu%2F75049983%3Fv%3D4&w=640&q=75"
+          srcSet="/_next/image?url=https%3A%2F%2Favatars.githubusercontent.com%2Fu%2F75049983%3Fv%3D4&w=384&q=75 1x, /_next/image?url=https%3A%2F%2Favatars.githubusercontent.com%2Fu%2F75049983%3Fv%3D4&w=640&q=75 2x"
           style={
             {
               "color": "transparent",
             }
           }
-          width={1920}
+          width={270}
         />
         <div
           className="p-5"
@@ -352,7 +352,7 @@ exports[`renders correctly 1`] = `
                   loading="lazy"
                   onError={[Function]}
                   onLoad={[Function]}
-                  src="images/linkedin-circle.svg"
+                  src="/images/linkedin-circle.svg"
                   style={
                     {
                       "color": "transparent",
@@ -370,21 +370,21 @@ exports[`renders correctly 1`] = `
       >
         <img
           alt="profile"
-          className="rounded w-[250px] h-[270px]"
+          className="rounded"
           data-nimg="1"
           decoding="async"
-          height={1080}
+          height={290}
           loading="lazy"
           onError={[Function]}
           onLoad={[Function]}
-          src="/_next/image?url=https%3A%2F%2Favatars.githubusercontent.com%2Fu%2F93738112%3Fv%3D4&w=3840&q=75"
-          srcSet="/_next/image?url=https%3A%2F%2Favatars.githubusercontent.com%2Fu%2F93738112%3Fv%3D4&w=1920&q=75 1x, /_next/image?url=https%3A%2F%2Favatars.githubusercontent.com%2Fu%2F93738112%3Fv%3D4&w=3840&q=75 2x"
+          src="/_next/image?url=https%3A%2F%2Favatars.githubusercontent.com%2Fu%2F93738112%3Fv%3D4&w=640&q=75"
+          srcSet="/_next/image?url=https%3A%2F%2Favatars.githubusercontent.com%2Fu%2F93738112%3Fv%3D4&w=384&q=75 1x, /_next/image?url=https%3A%2F%2Favatars.githubusercontent.com%2Fu%2F93738112%3Fv%3D4&w=640&q=75 2x"
           style={
             {
               "color": "transparent",
             }
           }
-          width={1920}
+          width={270}
         />
         <div
           className="p-5"
@@ -489,7 +489,7 @@ exports[`renders correctly 1`] = `
                   loading="lazy"
                   onError={[Function]}
                   onLoad={[Function]}
-                  src="images/linkedin-circle.svg"
+                  src="/images/linkedin-circle.svg"
                   style={
                     {
                       "color": "transparent",
@@ -507,21 +507,21 @@ exports[`renders correctly 1`] = `
       >
         <img
           alt="profile"
-          className="rounded w-[250px] h-[270px]"
+          className="rounded"
           data-nimg="1"
           decoding="async"
-          height={1080}
+          height={290}
           loading="lazy"
           onError={[Function]}
           onLoad={[Function]}
-          src="/_next/image?url=https%3A%2F%2Favatars.githubusercontent.com%2Fu%2F96662087%3Fv%3D4&w=3840&q=75"
-          srcSet="/_next/image?url=https%3A%2F%2Favatars.githubusercontent.com%2Fu%2F96662087%3Fv%3D4&w=1920&q=75 1x, /_next/image?url=https%3A%2F%2Favatars.githubusercontent.com%2Fu%2F96662087%3Fv%3D4&w=3840&q=75 2x"
+          src="/_next/image?url=https%3A%2F%2Favatars.githubusercontent.com%2Fu%2F96662087%3Fv%3D4&w=640&q=75"
+          srcSet="/_next/image?url=https%3A%2F%2Favatars.githubusercontent.com%2Fu%2F96662087%3Fv%3D4&w=384&q=75 1x, /_next/image?url=https%3A%2F%2Favatars.githubusercontent.com%2Fu%2F96662087%3Fv%3D4&w=640&q=75 2x"
           style={
             {
               "color": "transparent",
             }
           }
-          width={1920}
+          width={270}
         />
         <div
           className="p-5"
@@ -626,7 +626,7 @@ exports[`renders correctly 1`] = `
                   loading="lazy"
                   onError={[Function]}
                   onLoad={[Function]}
-                  src="images/linkedin-circle.svg"
+                  src="/images/linkedin-circle.svg"
                   style={
                     {
                       "color": "transparent",
@@ -644,21 +644,21 @@ exports[`renders correctly 1`] = `
       >
         <img
           alt="profile"
-          className="rounded w-[250px] h-[270px]"
+          className="rounded"
           data-nimg="1"
           decoding="async"
-          height={1080}
+          height={290}
           loading="lazy"
           onError={[Function]}
           onLoad={[Function]}
-          src="/_next/image?url=https%3A%2F%2Favatars.githubusercontent.com%2Fu%2F69892218%3Fv%3D4&w=3840&q=75"
-          srcSet="/_next/image?url=https%3A%2F%2Favatars.githubusercontent.com%2Fu%2F69892218%3Fv%3D4&w=1920&q=75 1x, /_next/image?url=https%3A%2F%2Favatars.githubusercontent.com%2Fu%2F69892218%3Fv%3D4&w=3840&q=75 2x"
+          src="/_next/image?url=https%3A%2F%2Favatars.githubusercontent.com%2Fu%2F69892218%3Fv%3D4&w=640&q=75"
+          srcSet="/_next/image?url=https%3A%2F%2Favatars.githubusercontent.com%2Fu%2F69892218%3Fv%3D4&w=384&q=75 1x, /_next/image?url=https%3A%2F%2Favatars.githubusercontent.com%2Fu%2F69892218%3Fv%3D4&w=640&q=75 2x"
           style={
             {
               "color": "transparent",
             }
           }
-          width={1920}
+          width={270}
         />
         <div
           className="p-5"
@@ -763,7 +763,7 @@ exports[`renders correctly 1`] = `
                   loading="lazy"
                   onError={[Function]}
                   onLoad={[Function]}
-                  src="images/linkedin-circle.svg"
+                  src="/images/linkedin-circle.svg"
                   style={
                     {
                       "color": "transparent",
