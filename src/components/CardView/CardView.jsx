@@ -1,11 +1,15 @@
 import Image from "next/image"
+import Link from "next/link"
 
 function ImageList(personalURL, imageName, altName) {
   return (
     <li>
-      <a href={personalURL} className='text-gray-500 hover:text-gray-900'>
+      <Link
+        href={`${personalURL}`}
+        className='text-gray-500 hover:text-gray-900'
+      >
         <Image src={imageName} width={35} height={35} alt={altName} />
-      </a>
+      </Link>
     </li>
   )
 }

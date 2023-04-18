@@ -73,6 +73,9 @@ exports[`renders correctly 1`] = `
             <a
               className="text-gray-500 hover:text-gray-900"
               href="https://www.facebook.com/profile.php?id=100006287622110"
+              onClick={[Function]}
+              onMouseEnter={[Function]}
+              onTouchStart={[Function]}
             >
               <img
                 alt="facebook"
@@ -96,6 +99,9 @@ exports[`renders correctly 1`] = `
             <a
               className="text-gray-500 hover:text-gray-900"
               href="https://twitter.com/m_alqershi"
+              onClick={[Function]}
+              onMouseEnter={[Function]}
+              onTouchStart={[Function]}
             >
               <img
                 alt="twitter"
@@ -119,6 +125,9 @@ exports[`renders correctly 1`] = `
             <a
               className="text-gray-500 hover:text-gray-900"
               href="https://github.com/messam10"
+              onClick={[Function]}
+              onMouseEnter={[Function]}
+              onTouchStart={[Function]}
             >
               <img
                 alt="github"
@@ -142,6 +151,9 @@ exports[`renders correctly 1`] = `
             <a
               className="text-gray-500 hover:text-gray-900"
               href="https://www.linkedin.com/in/mohammed-al-qershi-44681920b/"
+              onClick={[Function]}
+              onMouseEnter={[Function]}
+              onTouchStart={[Function]}
             >
               <img
                 alt="linkedin"
@@ -210,6 +222,9 @@ exports[`renders correctly 1`] = `
             <a
               className="text-gray-500 hover:text-gray-900"
               href=""
+              onClick={[Function]}
+              onMouseEnter={[Function]}
+              onTouchStart={[Function]}
             >
               <img
                 alt="facebook"
@@ -233,6 +248,9 @@ exports[`renders correctly 1`] = `
             <a
               className="text-gray-500 hover:text-gray-900"
               href=""
+              onClick={[Function]}
+              onMouseEnter={[Function]}
+              onTouchStart={[Function]}
             >
               <img
                 alt="twitter"
@@ -256,6 +274,9 @@ exports[`renders correctly 1`] = `
             <a
               className="text-gray-500 hover:text-gray-900"
               href="https://github.com/nabily4e-dev"
+              onClick={[Function]}
+              onMouseEnter={[Function]}
+              onTouchStart={[Function]}
             >
               <img
                 alt="github"
@@ -279,6 +300,9 @@ exports[`renders correctly 1`] = `
             <a
               className="text-gray-500 hover:text-gray-900"
               href=""
+              onClick={[Function]}
+              onMouseEnter={[Function]}
+              onTouchStart={[Function]}
             >
               <img
                 alt="linkedin"
@@ -347,6 +371,9 @@ exports[`renders correctly 1`] = `
             <a
               className="text-gray-500 hover:text-gray-900"
               href=""
+              onClick={[Function]}
+              onMouseEnter={[Function]}
+              onTouchStart={[Function]}
             >
               <img
                 alt="facebook"
@@ -370,6 +397,9 @@ exports[`renders correctly 1`] = `
             <a
               className="text-gray-500 hover:text-gray-900"
               href=""
+              onClick={[Function]}
+              onMouseEnter={[Function]}
+              onTouchStart={[Function]}
             >
               <img
                 alt="twitter"
@@ -393,6 +423,9 @@ exports[`renders correctly 1`] = `
             <a
               className="text-gray-500 hover:text-gray-900"
               href="https://github.com/BKR779"
+              onClick={[Function]}
+              onMouseEnter={[Function]}
+              onTouchStart={[Function]}
             >
               <img
                 alt="github"
@@ -416,6 +449,9 @@ exports[`renders correctly 1`] = `
             <a
               className="text-gray-500 hover:text-gray-900"
               href=""
+              onClick={[Function]}
+              onMouseEnter={[Function]}
+              onTouchStart={[Function]}
             >
               <img
                 alt="linkedin"
@@ -484,6 +520,9 @@ exports[`renders correctly 1`] = `
             <a
               className="text-gray-500 hover:text-gray-900"
               href=""
+              onClick={[Function]}
+              onMouseEnter={[Function]}
+              onTouchStart={[Function]}
             >
               <img
                 alt="facebook"
@@ -507,6 +546,9 @@ exports[`renders correctly 1`] = `
             <a
               className="text-gray-500 hover:text-gray-900"
               href=""
+              onClick={[Function]}
+              onMouseEnter={[Function]}
+              onTouchStart={[Function]}
             >
               <img
                 alt="twitter"
@@ -530,6 +572,9 @@ exports[`renders correctly 1`] = `
             <a
               className="text-gray-500 hover:text-gray-900"
               href="https://github.com/AASB7"
+              onClick={[Function]}
+              onMouseEnter={[Function]}
+              onTouchStart={[Function]}
             >
               <img
                 alt="github"
@@ -553,6 +598,9 @@ exports[`renders correctly 1`] = `
             <a
               className="text-gray-500 hover:text-gray-900"
               href=""
+              onClick={[Function]}
+              onMouseEnter={[Function]}
+              onTouchStart={[Function]}
             >
               <img
                 alt="linkedin"
@@ -621,6 +669,9 @@ exports[`renders correctly 1`] = `
             <a
               className="text-gray-500 hover:text-gray-900"
               href=""
+              onClick={[Function]}
+              onMouseEnter={[Function]}
+              onTouchStart={[Function]}
             >
               <img
                 alt="facebook"
@@ -644,6 +695,9 @@ exports[`renders correctly 1`] = `
             <a
               className="text-gray-500 hover:text-gray-900"
               href=""
+              onClick={[Function]}
+              onMouseEnter={[Function]}
+              onTouchStart={[Function]}
             >
               <img
                 alt="twitter"
@@ -667,6 +721,9 @@ exports[`renders correctly 1`] = `
             <a
               className="text-gray-500 hover:text-gray-900"
               href="https://github.com/MarwanBz"
+              onClick={[Function]}
+              onMouseEnter={[Function]}
+              onTouchStart={[Function]}
             >
               <img
                 alt="github"
@@ -690,6 +747,9 @@ exports[`renders correctly 1`] = `
             <a
               className="text-gray-500 hover:text-gray-900"
               href=""
+              onClick={[Function]}
+              onMouseEnter={[Function]}
+              onTouchStart={[Function]}
             >
               <img
                 alt="linkedin"
