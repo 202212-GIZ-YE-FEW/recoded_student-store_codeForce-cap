@@ -1,16 +1,9 @@
 /**
  * Imports the Google authentication provider, the sign-in functions and the auth object from firebase
  */
-import {
-  GoogleAuthProvider,
-  signInWithEmailAndPassword,
-  signInWithPopup,
-} from "firebase/auth"
+import { signInWithEmailAndPassword, signInWithPopup } from "firebase/auth"
 
-import { auth } from "../config"
-
-// Google authentication provider
-const googleProvider = new GoogleAuthProvider()
+import { auth, googleProvider } from "../config"
 
 /**
  * Signs in a user with email and password or with Google if the user is not found or the password is wrong

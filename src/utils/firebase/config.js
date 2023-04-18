@@ -1,6 +1,10 @@
 // Import the functions you need from the SDKs you need
 import { getApps, initializeApp } from "firebase/app"
-import { getAuth } from "firebase/auth"
+import {
+  FacebookAuthProvider,
+  GoogleAuthProvider,
+  getAuth,
+} from "firebase/auth"
 import { getFirestore } from "firebase/firestore"
 
 // TODO: Add SDKs for Firebase products that you want to use
@@ -24,4 +28,6 @@ let firebase_app =
 export default firebase_app
 export const auth = getAuth(firebase_app)
 export const db = getFirestore(firebase_app)
-// const analytics = getAnalytics(firebase_app)
+
+export const googleProvider = new GoogleAuthProvider() // Google authentication provider
+export const facebookProvider = new FacebookAuthProvider() // Google authentication provider
