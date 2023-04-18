@@ -1,6 +1,6 @@
-import Link from "next/link"
 import { useTranslation } from "next-i18next"
 import { serverSideTranslations } from "next-i18next/serverSideTranslations"
+import Link from "next/link"
 
 import Aboutus from "@/components/aboutus"
 import Donation from "@/components/donation"
@@ -9,6 +9,7 @@ import Footer from "@/components/Footer"
 import Hero from "@/components/hero/Hero"
 import Navbar from "@/components/Navbar"
 import OurTeam from "@/components/OurTeam"
+import Signin from "@/components/Signin"
 
 import RootLayout from "@/layout/root/RootLayout"
 
@@ -26,7 +27,7 @@ export default function HomePage() {
         <Aboutus />
         <SingleProduct />
         <Signup />
-        {/* <Signin /> */}
+        <Signin />
 
         <p>{t("test")}</p>
         <div style={{ display: "flex", flexDirection: "row", gap: "20px" }}>

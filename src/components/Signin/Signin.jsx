@@ -39,11 +39,14 @@ function Signin() {
 
   const handleSubmit = async (event) => {
     event.preventDefault()
+
     try {
       await validationSchema.validate(formData, { abortEarly: false })
       const { email, password } = formData
 
       const { result, error } = await signIn(email, password)
+
+      console.log(formData)
 
       if (error) {
         return console.log(error)
@@ -82,18 +85,28 @@ function Signin() {
             onSubmit={handleSubmit}
             className='container m-auto mb-6 flex w-5/6 flex-col items-center'
           >
-            <Input
-              type='text'
-              name='firstName'
-              placeholder='Name'
-              className='lg:w-96 md:w-72'
-            />
-            <Input
-              type='text'
-              name='surname'
-              placeholder='Surname'
-              className='lg:w-96 md:w-64'
-            />
+            <label htmlFor='email'>
+              <Input
+                type='text'
+                name='email'
+                placeholder='e-mail address'
+                className='lg:w-96 md:w-72'
+                value={formData.email}
+                onChange={handleChange}
+              />
+            </label>
+            {errors.email && <p>{errors.email}</p>}
+            <label htmlFor='password'>
+              <Input
+                type='password'
+                name='password'
+                placeholder='Password'
+                className='lg:w-96 md:w-64'
+                value={formData.password}
+                onChange={handleChange}
+              />
+            </label>
+            {errors.password && <p>{errors.password}</p>}
             <div className='my-4 gap-1 flex-row flex lg:justify-center'>
               <Button className='orangeSignIn' text='Sign in' type='submit' />
               <Button className='forgotPassword' text='forgotPassword ' />

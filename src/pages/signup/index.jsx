@@ -1,4 +1,3 @@
-import bcrypt from "bcryptjs"
 import DOMPurify from "dompurify"
 import Image from "next/image"
 import { useRouter } from "next/router"
@@ -77,7 +76,8 @@ function Signup() {
       const { firstName, surname, email, schoolName, password } = formData
 
       // Hash password using bcrypt
-      const hashedPassword = await bcrypt.hash(password, 10)
+      // const hashedPassword = await bcrypt.hash(password, 10)
+      const hashedPassword = password
 
       console.log(formData)
 
