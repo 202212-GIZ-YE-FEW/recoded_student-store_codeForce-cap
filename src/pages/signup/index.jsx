@@ -15,7 +15,7 @@ import signUp from "@/utils/firebase/auth/signup"
 
 // Define validation schema using Yup
 const validationSchema = Yup.object().shape({
-  name: Yup.string().required("Name is required"),
+  firstName: Yup.string().required("First name is required"),
   surname: Yup.string().required("Surname is required"),
   email: Yup.string()
     .email("invalid email")
@@ -50,7 +50,7 @@ function Signup() {
   const router = useRouter()
 
   const [formData, setFormData] = useState({
-    name: "",
+    firstName: "",
     surname: "",
     email: "",
     schoolName: "",
@@ -74,27 +74,29 @@ function Signup() {
     try {
       await validationSchema.validate(formData, { abortEarly: false })
 
-      const { name, surname, email, schoolName, password } = formData
+      const { firstName, surname, email, schoolName, password } = formData
 
       // Hash password using bcrypt
       const hashedPassword = await bcrypt.hash(password, 10)
+
+      console.log(formData)
 
       // No validation errors, attempt to sign up the user
       const { result, error } = await signUp(
         email,
         hashedPassword,
-        name,
+        firstName,
         surname,
         schoolName
       )
 
       if (error) {
-        return alert(error)
+        return console.log(error)
       }
 
       // else when successful
-      alert(result)
-      return router.push("/")
+      console.log(result)
+      return router.push("/signup")
     } catch (err) {
       const validationErrors = {}
       err.inner.forEach((error) => {
@@ -139,6 +141,7 @@ function Signup() {
                   onChange={handleChange}
                 />
               </label>
+              {errors.firstName && <p>{errors.firstName}</p>}
               <label htmlFor='surname'>
                 <Input
                   id='surname'
@@ -149,6 +152,7 @@ function Signup() {
                   onChange={handleChange}
                 />
               </label>
+              {errors.surname && <p>{errors.surname}</p>}
               <label htmlFor='email'>
                 <Input
                   type='email'
@@ -170,6 +174,7 @@ function Signup() {
                   onChange={handleChange}
                 />
               </label>
+              {errors.schoolName && <p>{errors.schoolName}</p>}
               <label htmlFor='password'>
                 <Input
                   type='password'
@@ -189,8 +194,13 @@ function Signup() {
                 onChange={handleChange}
                 placeholder='Re-enter password'
               />
+              {errors.passwordConfirm && <p>{errors.passwordConfirm}</p>}
               <div className='flex justify-center'>
-                <Button buttonStyle='purpleSignUp' text='Sign up' />
+                <Button
+                  buttonStyle='purpleSignUp'
+                  text='Sign up'
+                  type='submit'
+                />
               </div>
             </form>
             <div className='flex items-center'>
@@ -228,7 +238,7 @@ function Signup() {
             <div className='mb-4 text-xl text-[#647581]'>
               <p>Already have an account?</p>
             </div>
-            <Button buttonStyle='purpleSignUp' text='Sign in' />
+            <Button buttonStyle='purpleSignUp' text='Sign in' type='submit' />
           </div>
         </div>
       </div>
