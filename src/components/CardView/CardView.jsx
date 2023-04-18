@@ -12,10 +12,10 @@ function ImageList(personalURL, imageName, altName) {
 
 function CardView(props) {
   const images = {
-    facebook: "facebook-circle.svg",
-    twitter: "twitter-circle.svg",
-    github: "github.svg",
-    linkedin: "linkedin-circle.svg",
+    facebook: "/images/facebook-circle.svg",
+    twitter: "/images/twitter-circle.svg",
+    github: "/images/github.svg",
+    linkedin: "images/linkedin-circle.svg",
   }
 
   return (

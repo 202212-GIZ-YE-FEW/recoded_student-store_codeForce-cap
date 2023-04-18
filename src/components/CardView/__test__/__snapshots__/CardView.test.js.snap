@@ -48,7 +48,7 @@ exports[`renders correctly 1`] = `
             loading="lazy"
             onError={[Function]}
             onLoad={[Function]}
-            src="facebook-circle.svg"
+            src="/images/facebook-circle.svg"
             style={
               {
                 "color": "transparent",
@@ -70,7 +70,7 @@ exports[`renders correctly 1`] = `
             loading="lazy"
             onError={[Function]}
             onLoad={[Function]}
-            src="twitter-circle.svg"
+            src="/images/twitter-circle.svg"
             style={
               {
                 "color": "transparent",
@@ -92,7 +92,7 @@ exports[`renders correctly 1`] = `
             loading="lazy"
             onError={[Function]}
             onLoad={[Function]}
-            src="github.svg"
+            src="/images/github.svg"
             style={
               {
                 "color": "transparent",
@@ -114,7 +114,7 @@ exports[`renders correctly 1`] = `
             loading="lazy"
             onError={[Function]}
             onLoad={[Function]}
-            src="linkedin-circle.svg"
+            src="images/linkedin-circle.svg"
             style={
               {
                 "color": "transparent",
