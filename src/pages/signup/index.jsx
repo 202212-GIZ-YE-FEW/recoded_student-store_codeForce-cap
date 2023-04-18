@@ -1,6 +1,7 @@
 import bcrypt from "bcryptjs"
 import DOMPurify from "dompurify"
 import Image from "next/image"
+import Link from "next/link"
 import { useRouter } from "next/router"
 import { useState } from "react"
 import { BsFacebook, BsGoogle, BsTwitter } from "react-icons/bs"
@@ -11,9 +12,8 @@ import styles from "./Signup.module.css"
 import Button from "@/components/button"
 import Input from "@/components/input"
 
-import signUp from "@/utils/firebase/auth/signup"
 import RootLayout from "@/layout/root/RootLayout"
-import Link from "next/link"
+import signUp from "@/utils/firebase/auth/signup"
 
 // Define validation schema using Yup
 const validationSchema = Yup.object().shape({

@@ -1,6 +1,7 @@
-import RootLayout from "@/layout/root/RootLayout"
 import Image from "next/image"
 import Link from "next/link"
+
+import RootLayout from "@/layout/root/RootLayout"
 
 export default function NotFoundPage() {
   return (
@@ -8,7 +9,7 @@ export default function NotFoundPage() {
       <div className='container flex flex-col items-center justify-center px-5 mx-auto my-8'>
         <div className='max-w-md text-center'>
           <Image
-            src='/empty-box.png'
+            src='/images/empty-box.png'
             height={1000}
             width={1000}
             alt='Error 404'
