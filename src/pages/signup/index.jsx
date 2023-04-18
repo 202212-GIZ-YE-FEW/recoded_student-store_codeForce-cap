@@ -10,7 +10,7 @@ import styles from "./Signup.module.css"
 import Button from "@/components/button"
 import Input from "@/components/input"
 
-import signUp from "@/utils/firebase/auth/signup"
+import signUp from "@/utils/firebase/signup"
 
 // Define validation schema using Yup
 const validationSchema = Yup.object().shape({
@@ -96,7 +96,7 @@ function Signup() {
 
       // else when successful
       console.log(result)
-      return router.push("/signup")
+      // return router.push("/signup")
     } catch (err) {
       const validationErrors = {}
       err.inner.forEach((error) => {

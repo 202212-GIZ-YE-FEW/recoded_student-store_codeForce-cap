@@ -6,7 +6,7 @@ import * as Yup from "yup"
 
 import styles from "./Signin.module.css"
 
-import signIn from "@/utils/firebase/auth/signin"
+import signIn from "@/utils/firebase/signin"
 
 import Button from "../button"
 import Input from "../input"
