@@ -43,3 +43,11 @@ export default async function signIn(email, password) {
     return { result: null, error }
   }
 }
+
+/**
+ * signOut(auth).then(() => {
+ *   // Sign-out successful.
+ * }).catch((error) => {
+ *   // An error happened.
+ * })
+ */
