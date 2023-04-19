@@ -22,7 +22,7 @@ exports[`renders correctly 1`] = `
           loading="lazy"
           onError={[Function]}
           onLoad={[Function]}
-          src="logo-footer.svg"
+          src="/images/logo-footer.svg"
           style={
             {
               "color": "transparent",
@@ -46,7 +46,7 @@ exports[`renders correctly 1`] = `
             loading="lazy"
             onError={[Function]}
             onLoad={[Function]}
-            src="play-google.svg"
+            src="/images/play-google.svg"
             style={
               {
                 "color": "transparent",
@@ -67,7 +67,7 @@ exports[`renders correctly 1`] = `
             loading="lazy"
             onError={[Function]}
             onLoad={[Function]}
-            src="app-store.svg"
+            src="/images/app-store.svg"
             style={
               {
                 "color": "transparent",
@@ -84,28 +84,15 @@ exports[`renders correctly 1`] = `
       <ul
         className="font-poppins text-white font-bold md:text-1xl lg:text-2xl"
       >
-        <li
-          className="mb-4"
-        >
-          <a
-            className="hover:underline"
-            href="/"
-            onClick={[Function]}
-            onMouseEnter={[Function]}
-            onTouchStart={[Function]}
-          >
-            About US
-          </a>
-        </li>
         <li>
           <a
             className="hover:underline"
-            href="/"
+            href="/about-us"
             onClick={[Function]}
             onMouseEnter={[Function]}
             onTouchStart={[Function]}
           >
-            Our Team
+            About Us
           </a>
         </li>
         <li>
@@ -142,7 +129,7 @@ exports[`renders correctly 1`] = `
         >
           <a
             className="hover:underline "
-            href="/"
+            href="/signup"
             onClick={[Function]}
             onMouseEnter={[Function]}
             onTouchStart={[Function]}
@@ -192,7 +179,7 @@ exports[`renders correctly 1`] = `
             loading="lazy"
             onError={[Function]}
             onLoad={[Function]}
-            src="facebook.svg"
+            src="/images/facebook.svg"
             style={
               {
                 "color": "transparent",
@@ -213,7 +200,7 @@ exports[`renders correctly 1`] = `
             loading="lazy"
             onError={[Function]}
             onLoad={[Function]}
-            src="twitter.svg"
+            src="/images/twitter.svg"
             style={
               {
                 "color": "transparent",
@@ -234,7 +221,7 @@ exports[`renders correctly 1`] = `
             loading="lazy"
             onError={[Function]}
             onLoad={[Function]}
-            src="instagram.svg"
+            src="/images/instagram.svg"
             style={
               {
                 "color": "transparent",
@@ -249,15 +236,12 @@ exports[`renders correctly 1`] = `
       className="flex justify-end h-36 pt-32 lg:pt-14"
     >
       <h2
-        className="m-0 font-poppins text-white font-bold md:text-2xl lg:text-2xl pt-2"
+        className="m-0 font-poppins text-white font-bold md:text-2xl lg:text-2xl pt-2 lg:pt-7"
       >
         Scroll Up!
       </h2>
-      <a
-        href="/"
+      <button
         onClick={[Function]}
-        onMouseEnter={[Function]}
-        onTouchStart={[Function]}
       >
         <img
           alt="UP"
@@ -268,7 +252,7 @@ exports[`renders correctly 1`] = `
           loading="lazy"
           onError={[Function]}
           onLoad={[Function]}
-          src="up-arrow.svg"
+          src="/images/up-arrow.svg"
           style={
             {
               "color": "transparent",
@@ -276,7 +260,7 @@ exports[`renders correctly 1`] = `
           }
           width={45}
         />
-      </a>
+      </button>
     </div>
   </div>
 </footer>
