@@ -22,7 +22,7 @@ export default function ProductList({ products = [], selectedFilter }) {
             className='mx-3 mb-10 border rounded-lg shadow-lg'
           >
             <Image
-              src='/productImg.png'
+              src={product.images}
               alt={product.name}
               width={258}
               height={211.41}

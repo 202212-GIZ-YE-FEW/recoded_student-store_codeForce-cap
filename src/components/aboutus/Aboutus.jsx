@@ -1,6 +1,7 @@
 import { withTranslation } from "next-i18next"
 
 import Highlighter from "../highlighter"
+import OurTeam from "../OurTeam"
 
 function Aboutus({ t }) {
   return (
@@ -43,7 +44,9 @@ function Aboutus({ t }) {
           we want to help students save money, earn money, and have a better
           experience as they navigate their academic journeys.
         </p>
+        <br />
       </div>
+      <OurTeam />
     </div>
   )
 }

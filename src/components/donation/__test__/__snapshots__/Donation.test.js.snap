@@ -32,73 +32,34 @@ exports[`renders correctly 1`] = `
     <div
       className="flex flex-col mt-20 items-center justify-center max-w-screen-md"
     >
-      <div
-        className="flex flex-col justify-center items-center relative text-purple text-5xl font-bold"
-      >
-        <div
-          className=" -rotate-3"
+      <span>
+        <span
+          className="bg-[url('/images/Highlighter.png')] bg-bottom bg-no-repeat block bg-[length:70%_70%] text-[200%] md:text-[400%] donate"
         >
-          <img
-            alt="highlighter icon"
-            data-nimg="1"
-            decoding="async"
-            height={180}
-            loading="lazy"
-            onError={[Function]}
-            onLoad={[Function]}
-            src="/_next/image?url=%2Fimages%2FHighlighter.png&w=1200&q=75"
-            srcSet="/_next/image?url=%2Fimages%2FHighlighter.png&w=640&q=75 1x, /_next/image?url=%2Fimages%2FHighlighter.png&w=1200&q=75 2x"
-            style={
-              {
-                "color": "transparent",
-              }
-            }
-            width={578}
-          />
-        </div>
-        <div
-          className="absolute mb-[57px] text-center"
-        >
-          <h2>
+          <h2
+            className="text-purple-light font-poppins text-center font-bold tracking-[-1px] "
+          >
             Why Donate?
           </h2>
-        </div>
-      </div>
+        </span>
+      </span>
       <p
         className="text-purple-dark p-3 text-4xl leading-relaxed text-center"
       >
         Life is busy, and it can sometimes be easy to forget to show your gratitude for all that you’ve been given. Students have low budgets and they’re in need of financial support. When you are ready to give and are researching groups of people to support, this can remind us of all that we have, and the act of donating to charity is a way to express our feelings gratitude. Inspire others to give by posting your kind action on social media to inspire others to give generously.
       </p>
     </div>
-    <div
-      className="relative mt-14 text-5xl"
-    >
-      <img
-        alt="currency icon"
-        data-nimg="1"
-        decoding="async"
-        height={117}
-        loading="lazy"
-        onError={[Function]}
-        onLoad={[Function]}
-        src="highlighter.svg"
-        style={
-          {
-            "color": "transparent",
-          }
-        }
-        width={888}
-      />
-      <div
-        className=" absolute -translate-y-28"
+    <span>
+      <span
+        className="bg-[url('/images/Highlighter.png')] bg-bottom bg-no-repeat block bg-[length:70%_70%] text-[200%] md:text-[400%] donating"
       >
         <h2
-          className="font-bold text-purple text-center"
+          className="text-purple-light font-poppins text-center font-bold tracking-[-1px] "
         >
           Make a Difference by Donating!
         </h2>
-      </div>
-    </div>
+      </span>
+    </span>
     <div
       className="flex flex-row flex-wrap items-center justify-around gap-12 p-10"
     >
@@ -127,7 +88,7 @@ exports[`renders correctly 1`] = `
                 loading="lazy"
                 onError={[Function]}
                 onLoad={[Function]}
-                src="currency.svg"
+                src="/images/currency.svg"
                 style={
                   {
                     "color": "transparent",
@@ -174,7 +135,7 @@ exports[`renders correctly 1`] = `
                 loading="lazy"
                 onError={[Function]}
                 onLoad={[Function]}
-                src="currency.svg"
+                src="/images/currency.svg"
                 style={
                   {
                     "color": "transparent",
@@ -218,7 +179,7 @@ exports[`renders correctly 1`] = `
               loading="lazy"
               onError={[Function]}
               onLoad={[Function]}
-              src="currency.svg"
+              src="/images/currency.svg"
               style={
                 {
                   "color": "transparent",

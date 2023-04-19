@@ -42,7 +42,7 @@ export default function EditProfile() {
     const confirmSave = window.confirm("Save changes?")
     if (confirmSave) {
       // * display form values in console
-      console.log(formData)
+      // console.log(formData)
 
       // * save changes
       alert("Changes saved.")

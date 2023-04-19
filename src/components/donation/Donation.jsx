@@ -3,6 +3,8 @@ import Image from "next/image"
 
 import { SectionWrapper } from "@/components/hoc"
 
+import Highlighter from "../highlighter"
+
 /**
  * Renders the Donation page component.
  * @returns {JSX.Element} The Donation page component.
@@ -21,21 +23,7 @@ function Donation() {
         ></Image>
       </div>
       <div className='flex flex-col mt-20 items-center justify-center max-w-screen-md'>
-        <div className='flex flex-col justify-center items-center relative text-purple text-5xl font-bold'>
-          {/* Rotates the Highlighter icon */}
-          <div className=' -rotate-3'>
-            <Image
-              src='/images/Highlighter.png'
-              alt='highlighter icon'
-              width={578}
-              height={180}
-            />
-          </div>
-
-          <div className='absolute mb-[57px] text-center'>
-            <h2>Why Donate?</h2>
-          </div>
-        </div>
+        <Highlighter highlighterClassName='donate' text='Why Donate?' />
         <p className='text-purple-dark p-3 text-4xl leading-relaxed text-center'>
           Life is busy, and it can sometimes be easy to forget to show your
           gratitude for all that you’ve been given. Students have low budgets
@@ -46,19 +34,10 @@ function Donation() {
           kind action on social media to inspire others to give generously.
         </p>
       </div>
-      <div className='relative mt-14 text-5xl'>
-        <Image
-          src='highlighter.svg'
-          alt='currency icon'
-          width={888}
-          height={117}
-        />
-        <div className=' absolute -translate-y-28'>
-          <h2 className='font-bold text-purple text-center'>
-            Make a Difference by Donating!
-          </h2>
-        </div>
-      </div>
+      <Highlighter
+        highlighterClassName='donating'
+        text='Make a Difference by Donating!'
+      />
       {/* Cards section */}
       <div className='flex flex-row flex-wrap items-center justify-around gap-12 p-10'>
         <div className='mt-20 h-[240px] w-[280px] flex flex-col  justify-center items-center rounded-xl bg-white text-purple-almostblack shadow-lg'>
@@ -68,7 +47,7 @@ function Donation() {
               {/* Displays currency icon */}
               <span className='absolute text-2xl -left-3 top-6'>
                 <Image
-                  src='currency.svg'
+                  src='/images/currency.svg'
                   alt='currency icon'
                   width={8}
                   height={12}
@@ -87,7 +66,7 @@ function Donation() {
             <div className='relative flex items-center'>
               <span className='absolute text-2xl -left-3 top-8'>
                 <Image
-                  src='currency.svg'
+                  src='/images/currency.svg'
                   alt='currency icon'
                   width={12}
                   height={12}
@@ -105,7 +84,7 @@ function Donation() {
           <div className='relative flex items-center'>
             <span className='absolute text-3xl -left-4 top-18'>
               <Image
-                src='currency.svg'
+                src='/images/currency.svg'
                 alt='currency icon'
                 width={16}
                 height={16}

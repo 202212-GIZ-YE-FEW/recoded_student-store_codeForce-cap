@@ -1,10 +1,11 @@
 import { useState } from "react"
 
 import EditProfile from "@/components/EditProfile"
-import Navbar from "@/components/Navbar"
 import SideBar from "@/components/SideBar"
 import UserListings from "@/components/UserListings"
 import UserOrders from "@/components/UserOrders"
+
+import RootLayout from "@/layout/root/RootLayout"
 
 export default function UserPage() {
   const [selectedPage, setSelectedPage] = useState("UserOrders")
@@ -12,8 +13,7 @@ export default function UserPage() {
     setSelectedPage(page)
   }
   return (
-    <>
-      <Navbar />
+    <RootLayout>
       <div className='lg:flex h-[40px] lg:h-[816.2px]'>
         <div>
           <SideBar
@@ -27,6 +27,6 @@ export default function UserPage() {
           {selectedPage === "UserOrders" && <UserOrders />}
         </div>
       </div>
-    </>
+    </RootLayout>
   )
 }
