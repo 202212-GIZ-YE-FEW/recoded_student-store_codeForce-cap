@@ -96,12 +96,12 @@ exports[`renders correctly 1`] = `
           <div
             className="my-2 px-5 py-2 hover:bg-gray-200 transition-all duration-500"
           >
-            english
+            English
           </div>
           <div
             className="my-2 px-5 py-2 hover:bg-gray-200 transition-all duration-500"
           >
-            arabic
+            Arabic
           </div>
         </div>
       </div>
@@ -171,7 +171,7 @@ exports[`renders correctly 1`] = `
           onMouseEnter={[Function]}
           onTouchStart={[Function]}
         >
-          about us
+          aboutus
         </a>
       </div>
       <div
@@ -269,12 +269,26 @@ exports[`renders correctly 1`] = `
             <div
               className="my-2 px-5 py-2 hover:bg-gray-200 transition-all duration-500"
             >
-              english
+              <a
+                href="/"
+                onClick={[Function]}
+                onMouseEnter={[Function]}
+                onTouchStart={[Function]}
+              >
+                English
+              </a>
             </div>
             <div
               className="my-2 px-5 py-2 hover:bg-gray-200 transition-all duration-500"
             >
-              arabic
+              <a
+                href="/"
+                onClick={[Function]}
+                onMouseEnter={[Function]}
+                onTouchStart={[Function]}
+              >
+                Arabic
+              </a>
             </div>
           </div>
         </div>

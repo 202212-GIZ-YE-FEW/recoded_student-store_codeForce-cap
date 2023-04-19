@@ -1,4 +1,7 @@
+import { serverSideTranslations } from "next-i18next/serverSideTranslations"
+
 import Footer from "@/components/Footer"
+
 import Navbar from "@/components/Navbar"
 
 export default function RootLayout({ children }) {
@@ -11,4 +14,13 @@ export default function RootLayout({ children }) {
       <Footer />
     </>
   )
+}
+
+export async function getStaticProps({ locale }) {
+  return {
+    props: {
+      ...(await serverSideTranslations(locale, ["common"])),
+      // Will be passed to the page component as props
+    },
+  }
 }

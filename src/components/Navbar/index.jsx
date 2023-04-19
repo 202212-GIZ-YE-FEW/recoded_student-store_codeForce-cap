@@ -6,8 +6,9 @@ import { HiHeart } from "react-icons/hi"
 import { RxHamburgerMenu } from "react-icons/rx"
 import { TbArrowBadgeDown } from "react-icons/tb"
 import { TfiWorld } from "react-icons/tfi"
+import { withTranslation } from "next-i18next"
 
-export default function Navbar() {
+function Navbar({ t }) {
   const [languages, setLanguages] = useState(false)
   const [open, setOpen] = useState(false)
   return (
@@ -35,10 +36,10 @@ export default function Navbar() {
               }`}
             >
               <div className='my-2 px-5 py-2 hover:bg-gray-200 transition-all duration-500'>
-                english
+                English
               </div>
               <div className='my-2 px-5 py-2 hover:bg-gray-200 transition-all duration-500'>
-                arabic
+                Arabic
               </div>
             </div>
           </div>
@@ -74,7 +75,7 @@ export default function Navbar() {
               href='/about-us'
               className='relative mx-4 capitalize text-sm  hover:text-violet-800   transition-all duration-1000 before:absolute before:-bottom-2 before:left-0  before:h-[1px]  before:w-0 before:opacity-0 before:bg-violet-700 before:transition-all before:duration-500 hover:before:w-full hover:before:opacity-100'
             >
-              about us
+              {t("aboutus")}
             </Link>
           </div>
           {/* ----------- Search ----------- */}
@@ -104,10 +105,14 @@ export default function Navbar() {
                 }`}
               >
                 <div className='my-2 px-5 py-2 hover:bg-gray-200 transition-all duration-500'>
-                  english
+                  <Link href='/' locale='en'>
+                    English
+                  </Link>
                 </div>
                 <div className='my-2 px-5 py-2 hover:bg-gray-200 transition-all duration-500'>
-                  arabic
+                  <Link href='/' locale='ar'>
+                    Arabic
+                  </Link>
                 </div>
               </div>
             </div>
@@ -138,3 +143,5 @@ export default function Navbar() {
     </header>
   )
 }
+
+export default withTranslation("common")(Navbar)
