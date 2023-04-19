@@ -115,5 +115,10 @@
     "commitizen": {
       "path": "./node_modules/cz-conventional-changelog"
     }
+  },
+  "browser": {
+    "fs": false,
+    "path": false,
+    "os": false
   }
 }
