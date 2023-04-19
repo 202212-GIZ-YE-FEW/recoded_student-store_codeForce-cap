@@ -7,11 +7,17 @@ exports[`renders correctly 1`] = `
   <div
     className="mx-auto max-w-screen-sm text-center mb-8 lg:mb-16"
   >
-    <h2
-      className="mb-4 text-4xl tracking-tight font-extrabold text-gray-900"
-    >
-      Our Team
-    </h2>
+    <span>
+      <span
+        className="bg-[url('/images/Highlighter.png')] bg-bottom bg-no-repeat block md:bg-[length:313.92px_27.28px] md:text-[27.28px] bg-[length:233.67px_20.31px] text-[21px] bg-[length:400px_80px] text-[55px] lg:bg-[length:400px_80px] lg:text-[55px] "
+      >
+        <h2
+          className="text-purple-light font-poppins text-center font-bold tracking-[-1px] "
+        >
+          Our Team
+        </h2>
+      </span>
+    </span>
     <p
       className="font-light text-gray-500 lg:mb-16 sm:text-xl"
     >
@@ -26,21 +32,21 @@ exports[`renders correctly 1`] = `
     >
       <img
         alt="profile"
-        className="w-full rounded"
+        className="rounded"
         data-nimg="1"
         decoding="async"
-        height={100}
+        height={290}
         loading="lazy"
         onError={[Function]}
         onLoad={[Function]}
-        src="/_next/image?url=%2Fmohammed.jpg&w=256&q=75"
-        srcSet="/_next/image?url=%2Fmohammed.jpg&w=128&q=75 1x, /_next/image?url=%2Fmohammed.jpg&w=256&q=75 2x"
+        src="/_next/image?url=https%3A%2F%2Favatars.githubusercontent.com%2Fu%2F49818381%3Fv%3D4&w=640&q=75"
+        srcSet="/_next/image?url=https%3A%2F%2Favatars.githubusercontent.com%2Fu%2F49818381%3Fv%3D4&w=384&q=75 1x, /_next/image?url=https%3A%2F%2Favatars.githubusercontent.com%2Fu%2F49818381%3Fv%3D4&w=640&q=75 2x"
         style={
           {
             "color": "transparent",
           }
         }
-        width={100}
+        width={270}
       />
       <div
         className="p-5"
@@ -67,6 +73,9 @@ exports[`renders correctly 1`] = `
             <a
               className="text-gray-500 hover:text-gray-900"
               href="https://www.facebook.com/profile.php?id=100006287622110"
+              onClick={[Function]}
+              onMouseEnter={[Function]}
+              onTouchStart={[Function]}
             >
               <img
                 alt="facebook"
@@ -76,7 +85,7 @@ exports[`renders correctly 1`] = `
                 loading="lazy"
                 onError={[Function]}
                 onLoad={[Function]}
-                src="facebook-circle.svg"
+                src="/images/facebook-circle.svg"
                 style={
                   {
                     "color": "transparent",
@@ -90,6 +99,9 @@ exports[`renders correctly 1`] = `
             <a
               className="text-gray-500 hover:text-gray-900"
               href="https://twitter.com/m_alqershi"
+              onClick={[Function]}
+              onMouseEnter={[Function]}
+              onTouchStart={[Function]}
             >
               <img
                 alt="twitter"
@@ -99,7 +111,7 @@ exports[`renders correctly 1`] = `
                 loading="lazy"
                 onError={[Function]}
                 onLoad={[Function]}
-                src="twitter-circle.svg"
+                src="/images/twitter-circle.svg"
                 style={
                   {
                     "color": "transparent",
@@ -113,6 +125,9 @@ exports[`renders correctly 1`] = `
             <a
               className="text-gray-500 hover:text-gray-900"
               href="https://github.com/messam10"
+              onClick={[Function]}
+              onMouseEnter={[Function]}
+              onTouchStart={[Function]}
             >
               <img
                 alt="github"
@@ -122,7 +137,7 @@ exports[`renders correctly 1`] = `
                 loading="lazy"
                 onError={[Function]}
                 onLoad={[Function]}
-                src="github.svg"
+                src="/images/github.svg"
                 style={
                   {
                     "color": "transparent",
@@ -136,6 +151,9 @@ exports[`renders correctly 1`] = `
             <a
               className="text-gray-500 hover:text-gray-900"
               href="https://www.linkedin.com/in/mohammed-al-qershi-44681920b/"
+              onClick={[Function]}
+              onMouseEnter={[Function]}
+              onTouchStart={[Function]}
             >
               <img
                 alt="linkedin"
@@ -145,7 +163,7 @@ exports[`renders correctly 1`] = `
                 loading="lazy"
                 onError={[Function]}
                 onLoad={[Function]}
-                src="linkedin-circle.svg"
+                src="/images/linkedin-circle.svg"
                 style={
                   {
                     "color": "transparent",
@@ -163,21 +181,21 @@ exports[`renders correctly 1`] = `
     >
       <img
         alt="profile"
-        className="w-full rounded"
+        className="rounded"
         data-nimg="1"
         decoding="async"
-        height={100}
+        height={290}
         loading="lazy"
         onError={[Function]}
         onLoad={[Function]}
-        src="/_next/image?url=%2Fnabil.jpg&w=256&q=75"
-        srcSet="/_next/image?url=%2Fnabil.jpg&w=128&q=75 1x, /_next/image?url=%2Fnabil.jpg&w=256&q=75 2x"
+        src="/_next/image?url=https%3A%2F%2Favatars.githubusercontent.com%2Fu%2F75049983%3Fv%3D4&w=640&q=75"
+        srcSet="/_next/image?url=https%3A%2F%2Favatars.githubusercontent.com%2Fu%2F75049983%3Fv%3D4&w=384&q=75 1x, /_next/image?url=https%3A%2F%2Favatars.githubusercontent.com%2Fu%2F75049983%3Fv%3D4&w=640&q=75 2x"
         style={
           {
             "color": "transparent",
           }
         }
-        width={100}
+        width={270}
       />
       <div
         className="p-5"
@@ -204,6 +222,9 @@ exports[`renders correctly 1`] = `
             <a
               className="text-gray-500 hover:text-gray-900"
               href=""
+              onClick={[Function]}
+              onMouseEnter={[Function]}
+              onTouchStart={[Function]}
             >
               <img
                 alt="facebook"
@@ -213,7 +234,7 @@ exports[`renders correctly 1`] = `
                 loading="lazy"
                 onError={[Function]}
                 onLoad={[Function]}
-                src="facebook-circle.svg"
+                src="/images/facebook-circle.svg"
                 style={
                   {
                     "color": "transparent",
@@ -227,6 +248,9 @@ exports[`renders correctly 1`] = `
             <a
               className="text-gray-500 hover:text-gray-900"
               href=""
+              onClick={[Function]}
+              onMouseEnter={[Function]}
+              onTouchStart={[Function]}
             >
               <img
                 alt="twitter"
@@ -236,7 +260,7 @@ exports[`renders correctly 1`] = `
                 loading="lazy"
                 onError={[Function]}
                 onLoad={[Function]}
-                src="twitter-circle.svg"
+                src="/images/twitter-circle.svg"
                 style={
                   {
                     "color": "transparent",
@@ -250,6 +274,9 @@ exports[`renders correctly 1`] = `
             <a
               className="text-gray-500 hover:text-gray-900"
               href="https://github.com/nabily4e-dev"
+              onClick={[Function]}
+              onMouseEnter={[Function]}
+              onTouchStart={[Function]}
             >
               <img
                 alt="github"
@@ -259,7 +286,7 @@ exports[`renders correctly 1`] = `
                 loading="lazy"
                 onError={[Function]}
                 onLoad={[Function]}
-                src="github.svg"
+                src="/images/github.svg"
                 style={
                   {
                     "color": "transparent",
@@ -273,6 +300,9 @@ exports[`renders correctly 1`] = `
             <a
               className="text-gray-500 hover:text-gray-900"
               href=""
+              onClick={[Function]}
+              onMouseEnter={[Function]}
+              onTouchStart={[Function]}
             >
               <img
                 alt="linkedin"
@@ -282,7 +312,7 @@ exports[`renders correctly 1`] = `
                 loading="lazy"
                 onError={[Function]}
                 onLoad={[Function]}
-                src="linkedin-circle.svg"
+                src="/images/linkedin-circle.svg"
                 style={
                   {
                     "color": "transparent",
@@ -300,21 +330,21 @@ exports[`renders correctly 1`] = `
     >
       <img
         alt="profile"
-        className="w-full rounded"
+        className="rounded"
         data-nimg="1"
         decoding="async"
-        height={100}
+        height={290}
         loading="lazy"
         onError={[Function]}
         onLoad={[Function]}
-        src="/_next/image?url=%2Fabobakr.jpg&w=256&q=75"
-        srcSet="/_next/image?url=%2Fabobakr.jpg&w=128&q=75 1x, /_next/image?url=%2Fabobakr.jpg&w=256&q=75 2x"
+        src="/_next/image?url=https%3A%2F%2Favatars.githubusercontent.com%2Fu%2F93738112%3Fv%3D4&w=640&q=75"
+        srcSet="/_next/image?url=https%3A%2F%2Favatars.githubusercontent.com%2Fu%2F93738112%3Fv%3D4&w=384&q=75 1x, /_next/image?url=https%3A%2F%2Favatars.githubusercontent.com%2Fu%2F93738112%3Fv%3D4&w=640&q=75 2x"
         style={
           {
             "color": "transparent",
           }
         }
-        width={100}
+        width={270}
       />
       <div
         className="p-5"
@@ -341,6 +371,9 @@ exports[`renders correctly 1`] = `
             <a
               className="text-gray-500 hover:text-gray-900"
               href=""
+              onClick={[Function]}
+              onMouseEnter={[Function]}
+              onTouchStart={[Function]}
             >
               <img
                 alt="facebook"
@@ -350,7 +383,7 @@ exports[`renders correctly 1`] = `
                 loading="lazy"
                 onError={[Function]}
                 onLoad={[Function]}
-                src="facebook-circle.svg"
+                src="/images/facebook-circle.svg"
                 style={
                   {
                     "color": "transparent",
@@ -364,6 +397,9 @@ exports[`renders correctly 1`] = `
             <a
               className="text-gray-500 hover:text-gray-900"
               href=""
+              onClick={[Function]}
+              onMouseEnter={[Function]}
+              onTouchStart={[Function]}
             >
               <img
                 alt="twitter"
@@ -373,7 +409,7 @@ exports[`renders correctly 1`] = `
                 loading="lazy"
                 onError={[Function]}
                 onLoad={[Function]}
-                src="twitter-circle.svg"
+                src="/images/twitter-circle.svg"
                 style={
                   {
                     "color": "transparent",
@@ -387,6 +423,9 @@ exports[`renders correctly 1`] = `
             <a
               className="text-gray-500 hover:text-gray-900"
               href="https://github.com/BKR779"
+              onClick={[Function]}
+              onMouseEnter={[Function]}
+              onTouchStart={[Function]}
             >
               <img
                 alt="github"
@@ -396,7 +435,7 @@ exports[`renders correctly 1`] = `
                 loading="lazy"
                 onError={[Function]}
                 onLoad={[Function]}
-                src="github.svg"
+                src="/images/github.svg"
                 style={
                   {
                     "color": "transparent",
@@ -410,6 +449,9 @@ exports[`renders correctly 1`] = `
             <a
               className="text-gray-500 hover:text-gray-900"
               href=""
+              onClick={[Function]}
+              onMouseEnter={[Function]}
+              onTouchStart={[Function]}
             >
               <img
                 alt="linkedin"
@@ -419,7 +461,7 @@ exports[`renders correctly 1`] = `
                 loading="lazy"
                 onError={[Function]}
                 onLoad={[Function]}
-                src="linkedin-circle.svg"
+                src="/images/linkedin-circle.svg"
                 style={
                   {
                     "color": "transparent",
@@ -437,21 +479,21 @@ exports[`renders correctly 1`] = `
     >
       <img
         alt="profile"
-        className="w-full rounded"
+        className="rounded"
         data-nimg="1"
         decoding="async"
-        height={100}
+        height={290}
         loading="lazy"
         onError={[Function]}
         onLoad={[Function]}
-        src="/_next/image?url=%2Fabdulrahman.jpg&w=256&q=75"
-        srcSet="/_next/image?url=%2Fabdulrahman.jpg&w=128&q=75 1x, /_next/image?url=%2Fabdulrahman.jpg&w=256&q=75 2x"
+        src="/_next/image?url=https%3A%2F%2Favatars.githubusercontent.com%2Fu%2F96662087%3Fv%3D4&w=640&q=75"
+        srcSet="/_next/image?url=https%3A%2F%2Favatars.githubusercontent.com%2Fu%2F96662087%3Fv%3D4&w=384&q=75 1x, /_next/image?url=https%3A%2F%2Favatars.githubusercontent.com%2Fu%2F96662087%3Fv%3D4&w=640&q=75 2x"
         style={
           {
             "color": "transparent",
           }
         }
-        width={100}
+        width={270}
       />
       <div
         className="p-5"
@@ -478,6 +520,9 @@ exports[`renders correctly 1`] = `
             <a
               className="text-gray-500 hover:text-gray-900"
               href=""
+              onClick={[Function]}
+              onMouseEnter={[Function]}
+              onTouchStart={[Function]}
             >
               <img
                 alt="facebook"
@@ -487,7 +532,7 @@ exports[`renders correctly 1`] = `
                 loading="lazy"
                 onError={[Function]}
                 onLoad={[Function]}
-                src="facebook-circle.svg"
+                src="/images/facebook-circle.svg"
                 style={
                   {
                     "color": "transparent",
@@ -501,6 +546,9 @@ exports[`renders correctly 1`] = `
             <a
               className="text-gray-500 hover:text-gray-900"
               href=""
+              onClick={[Function]}
+              onMouseEnter={[Function]}
+              onTouchStart={[Function]}
             >
               <img
                 alt="twitter"
@@ -510,7 +558,7 @@ exports[`renders correctly 1`] = `
                 loading="lazy"
                 onError={[Function]}
                 onLoad={[Function]}
-                src="twitter-circle.svg"
+                src="/images/twitter-circle.svg"
                 style={
                   {
                     "color": "transparent",
@@ -524,6 +572,9 @@ exports[`renders correctly 1`] = `
             <a
               className="text-gray-500 hover:text-gray-900"
               href="https://github.com/AASB7"
+              onClick={[Function]}
+              onMouseEnter={[Function]}
+              onTouchStart={[Function]}
             >
               <img
                 alt="github"
@@ -533,7 +584,7 @@ exports[`renders correctly 1`] = `
                 loading="lazy"
                 onError={[Function]}
                 onLoad={[Function]}
-                src="github.svg"
+                src="/images/github.svg"
                 style={
                   {
                     "color": "transparent",
@@ -547,6 +598,9 @@ exports[`renders correctly 1`] = `
             <a
               className="text-gray-500 hover:text-gray-900"
               href=""
+              onClick={[Function]}
+              onMouseEnter={[Function]}
+              onTouchStart={[Function]}
             >
               <img
                 alt="linkedin"
@@ -556,7 +610,7 @@ exports[`renders correctly 1`] = `
                 loading="lazy"
                 onError={[Function]}
                 onLoad={[Function]}
-                src="linkedin-circle.svg"
+                src="/images/linkedin-circle.svg"
                 style={
                   {
                     "color": "transparent",
@@ -574,21 +628,21 @@ exports[`renders correctly 1`] = `
     >
       <img
         alt="profile"
-        className="w-full rounded"
+        className="rounded"
         data-nimg="1"
         decoding="async"
-        height={100}
+        height={290}
         loading="lazy"
         onError={[Function]}
         onLoad={[Function]}
-        src="/_next/image?url=%2Fmarwan.jpg&w=256&q=75"
-        srcSet="/_next/image?url=%2Fmarwan.jpg&w=128&q=75 1x, /_next/image?url=%2Fmarwan.jpg&w=256&q=75 2x"
+        src="/_next/image?url=https%3A%2F%2Favatars.githubusercontent.com%2Fu%2F69892218%3Fv%3D4&w=640&q=75"
+        srcSet="/_next/image?url=https%3A%2F%2Favatars.githubusercontent.com%2Fu%2F69892218%3Fv%3D4&w=384&q=75 1x, /_next/image?url=https%3A%2F%2Favatars.githubusercontent.com%2Fu%2F69892218%3Fv%3D4&w=640&q=75 2x"
         style={
           {
             "color": "transparent",
           }
         }
-        width={100}
+        width={270}
       />
       <div
         className="p-5"
@@ -615,6 +669,9 @@ exports[`renders correctly 1`] = `
             <a
               className="text-gray-500 hover:text-gray-900"
               href=""
+              onClick={[Function]}
+              onMouseEnter={[Function]}
+              onTouchStart={[Function]}
             >
               <img
                 alt="facebook"
@@ -624,7 +681,7 @@ exports[`renders correctly 1`] = `
                 loading="lazy"
                 onError={[Function]}
                 onLoad={[Function]}
-                src="facebook-circle.svg"
+                src="/images/facebook-circle.svg"
                 style={
                   {
                     "color": "transparent",
@@ -638,6 +695,9 @@ exports[`renders correctly 1`] = `
             <a
               className="text-gray-500 hover:text-gray-900"
               href=""
+              onClick={[Function]}
+              onMouseEnter={[Function]}
+              onTouchStart={[Function]}
             >
               <img
                 alt="twitter"
@@ -647,7 +707,7 @@ exports[`renders correctly 1`] = `
                 loading="lazy"
                 onError={[Function]}
                 onLoad={[Function]}
-                src="twitter-circle.svg"
+                src="/images/twitter-circle.svg"
                 style={
                   {
                     "color": "transparent",
@@ -661,6 +721,9 @@ exports[`renders correctly 1`] = `
             <a
               className="text-gray-500 hover:text-gray-900"
               href="https://github.com/MarwanBz"
+              onClick={[Function]}
+              onMouseEnter={[Function]}
+              onTouchStart={[Function]}
             >
               <img
                 alt="github"
@@ -670,7 +733,7 @@ exports[`renders correctly 1`] = `
                 loading="lazy"
                 onError={[Function]}
                 onLoad={[Function]}
-                src="github.svg"
+                src="/images/github.svg"
                 style={
                   {
                     "color": "transparent",
@@ -684,6 +747,9 @@ exports[`renders correctly 1`] = `
             <a
               className="text-gray-500 hover:text-gray-900"
               href=""
+              onClick={[Function]}
+              onMouseEnter={[Function]}
+              onTouchStart={[Function]}
             >
               <img
                 alt="linkedin"
@@ -693,7 +759,7 @@ exports[`renders correctly 1`] = `
                 loading="lazy"
                 onError={[Function]}
                 onLoad={[Function]}
-                src="linkedin-circle.svg"
+                src="/images/linkedin-circle.svg"
                 style={
                   {
                     "color": "transparent",

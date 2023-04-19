@@ -1,4 +1,5 @@
 import Image from "next/image"
+import Link from "next/link"
 import { BsFacebook, BsGoogle, BsTwitter } from "react-icons/bs"
 
 import styles from "./Signin.module.css"
@@ -68,7 +69,13 @@ function Signin() {
           <div className='mb-4 text-xl text-[#647581]'>
             <p>Don’t have an account??</p>
           </div>
-          <Button className='orangeSignIn ' text='Sign-up' />
+          {/* <Button className='orangeSignIn ' text='Sign-up' /> */}
+          <Link
+            href='/signup'
+            className='h-10 w-40 lg:w-48 lg:px-5 p-1 px-4 rounded-lg border-1 bg-pumpkin text-md font-normal text-white shadow-sm text-center'
+          >
+            Sign-up
+          </Link>
         </div>
       </div>
     </>

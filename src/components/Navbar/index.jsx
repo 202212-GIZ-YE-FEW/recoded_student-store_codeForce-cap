@@ -1,16 +1,11 @@
 import Image from "next/image"
 import Link from "next/link"
 import { useState } from "react"
-import {
-  AiOutlineClose,
-  AiOutlineSearch,
-  AiOutlineShoppingCart,
-} from "react-icons/ai"
+import { AiOutlineClose, AiOutlineSearch } from "react-icons/ai"
+import { HiHeart } from "react-icons/hi"
 import { RxHamburgerMenu } from "react-icons/rx"
 import { TbArrowBadgeDown } from "react-icons/tb"
 import { TfiWorld } from "react-icons/tfi"
-
-import LogoImg from "../../../public/Logo.png"
 
 export default function Navbar() {
   const [languages, setLanguages] = useState(false)
@@ -20,9 +15,9 @@ export default function Navbar() {
       className={`navbar  m-auto px-10 md:flex md:flex-row py-4 justify-between gap-5 items-center bg-white transition-all 
       `}
     >
-      <div className='w-[130px]'>
-        <Image src={LogoImg} alt='logo' />
-      </div>
+      <Link href='/'>
+        <Image src='/images/Logo.png' alt='logo' width={130} height={130} />
+      </Link>
       {/* ----------- Languages ----------- */}
       <div className='flex items-end cursor-pointer absolute right-14 top-8 md:static order-2 md:hidden'>
         <div
@@ -69,16 +64,16 @@ export default function Navbar() {
         {/* ----------- Links ----------- */}
         <div className='flex flex-col md:flex-row gap-5'>
           <Link
-            href='/'
+            href='/donation'
+            className='relative mx-4 capitalize text-sm hover:text-violet-800   transition-all duration-1000 before:absolute before:-bottom-2 before:left-0  before:h-[1px]  before:w-0 before:opacity-0 before:bg-violet-700 before:transition-all before:duration-500 hover:before:w-full hover:before:opacity-100'
+          >
+            Donation
+          </Link>
+          <Link
+            href='/about-us'
             className='relative mx-4 capitalize text-sm  hover:text-violet-800   transition-all duration-1000 before:absolute before:-bottom-2 before:left-0  before:h-[1px]  before:w-0 before:opacity-0 before:bg-violet-700 before:transition-all before:duration-500 hover:before:w-full hover:before:opacity-100'
           >
             about us
-          </Link>
-          <Link
-            href='/'
-            className='relative mx-4 capitalize text-sm hover:text-violet-800   transition-all duration-1000 before:absolute before:-bottom-2 before:left-0  before:h-[1px]  before:w-0 before:opacity-0 before:bg-violet-700 before:transition-all before:duration-500 hover:before:w-full hover:before:opacity-100'
-          >
-            our team
           </Link>
         </div>
         {/* ----------- Search ----------- */}
@@ -119,20 +114,22 @@ export default function Navbar() {
         {/* ----------- Buttons ----------- */}
         <div className='flex  justify-between items-center gap-5 flex-col md:flex-row '>
           <div className='flex gap-3 capitalize flex-col md:flex-row'>
-            <Link href='/components/Signup'>
+            <Link href='/signin'>
               <div className='bg-purple-light py-2 px-5 text-white rounded-3xl text-sm hover:bg-violet-800 transition-all cursor-pointer'>
-                sign up
+                sign in
               </div>
             </Link>
-            <div className='bg-purple-light py-2 px-5 text-white rounded-3xl text-sm hover:bg-violet-800 transition-all cursor-pointer'>
-              sell items
-            </div>
+            <Link href='/sell-items'>
+              <div className='bg-purple-light py-2 px-5 text-white rounded-3xl text-sm hover:bg-violet-800 transition-all cursor-pointer'>
+                sell items
+              </div>
+            </Link>
           </div>
           <div className='text-2xl text-orange-600 hover:text-orange-700 transition'>
-            <button>
+            <Link href='/cart'>
               {" "}
-              <AiOutlineShoppingCart />{" "}
-            </button>
+              <HiHeart />{" "}
+            </Link>
           </div>
         </div>
       </div>
