@@ -11,6 +11,7 @@ import { withTranslation } from "next-i18next"
 function Navbar({ t }) {
   const [languages, setLanguages] = useState(false)
   const [open, setOpen] = useState(false)
+
   return (
     <header className='sticky top-0 z-50'>
       <div
