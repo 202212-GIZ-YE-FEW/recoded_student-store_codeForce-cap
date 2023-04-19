@@ -12,6 +12,7 @@ import Button from "@/components/button"
 import Input from "@/components/input"
 
 import signUp from "@/utils/firebase/signup"
+import waitForEmailVerification from "@/utils/firebase/waitForEmailVerification"
 
 // Define validation schema using Yup
 const validationSchema = Yup.object().shape({
@@ -60,6 +61,9 @@ function Signup() {
     passwordConfirm: "",
   })
 
+  const [isLoading, setIsLoading] = useState(false)
+  const [isSuccess, setIsSuccess] = useState(false)
+  const [errorMessage, setErrorMessage] = useState("")
   const [errors, setErrors] = useState({})
 
   const handleChange = (event) => {
@@ -72,6 +76,7 @@ function Signup() {
 
   const handleFormSubmit = async (e) => {
     e.preventDefault()
+    setIsLoading(true) // set loading state to true while the API call is in progress
 
     try {
       await validationSchema.validate(formData, { abortEarly: false })
@@ -92,6 +97,22 @@ function Signup() {
         surname,
         schoolName
       )
+
+      setIsLoading(false) // set loading state to false after the API call is complete
+
+      if (result) {
+        // Wait for the user to verify their email address
+        await waitForEmailVerification()
+        setIsSuccess(true)
+        console.log("Sign up successful!")
+        console.log(
+          "Email verification sent! Please check your inbox.",
+          "\n email:",
+          result.email,
+          "\n email verification status:",
+          result.verified
+        )
+      }
 
       if (error) {
         return console.log(error)
@@ -134,6 +155,8 @@ function Signup() {
               onSubmit={handleFormSubmit}
               className='container m-auto mb-6 flex  w-5/6 flex-col  '
             >
+              {isLoading && <p>Loading...</p>}
+
               <label htmlFor='firstName'>
                 <Input
                   type='text'
@@ -144,7 +167,9 @@ function Signup() {
                   onChange={handleChange}
                 />
               </label>
-              {errors.firstName && <p>{errors.firstName}</p>}
+              {errors.firstName && (
+                <p style={{ color: "red" }}>{errors.firstName}</p>
+              )}
               <label htmlFor='surname'>
                 <Input
                   id='surname'
@@ -205,6 +230,12 @@ function Signup() {
                   type='submit'
                 />
               </div>
+              {isSuccess && (
+                <p style={{ color: "green" }}>
+                  email verification sent please check your email box, or your
+                  spam in some circumstances
+                </p>
+              )}
             </form>
             <div className='flex items-center'>
               <div className='my-1 mr-2 h-px mt-[10px] w-[164px] bg-[#9dafbd]'></div>

@@ -1,5 +1,7 @@
 import {
   createUserWithEmailAndPassword,
+  getAdditionalUserInfo,
+  GoogleAuthProvider,
   signInWithEmailAndPassword,
   signInWithPopup,
 } from "firebase/auth"
@@ -22,8 +24,38 @@ export async function signInWithFacebook() {
 }
 
 export async function signInWithGoogle() {
-  const res = await signInWithPopup(auth, googleProvider)
-  return res.user
+  try {
+    // Use signInWithPopup to sign in with Google and get the result
+    const result = await signInWithPopup(auth, googleProvider)
+
+    // Get the credential and token from the result
+    const credential = GoogleAuthProvider.credentialFromResult(result)
+    const token = credential.accessToken
+
+    // Get the user info from the result
+    const user = result.user
+
+    // Get the additional IdP data from the result
+    const additionalInfo = getAdditionalUserInfo(result)
+
+    // Do something with the user, token and additional info
+    // ...
+
+    // Return the user object
+    return user
+  } catch (error) {
+    // Handle errors here
+    const errorCode = error.code
+    const errorMessage = error.message
+    const email = error.customData.email
+    const credential = GoogleAuthProvider.credentialFromError(error)
+
+    // Do something with the error info
+    // ...
+
+    // Throw or return the error
+    throw error
+  }
 }
 
 /**
