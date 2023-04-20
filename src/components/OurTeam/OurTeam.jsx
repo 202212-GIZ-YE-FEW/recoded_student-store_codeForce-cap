@@ -4,15 +4,14 @@ import { withTranslation } from "next-i18next"
 
 import Highlighter from "../highlighter"
 
-function OurTeam() {
+function OurTeam({ t }) {
   const team = [
     {
       id: 1,
       photo: "https://avatars.githubusercontent.com/u/49818381?v=4",
-      name: "Moahmmed Al-Qershi",
-      job: "Font-End Developer & ERPNext Developer",
-      description:
-        "I am a dedicated and passionate developer who is committed to delivering exceptional results and exceeding client expectations.",
+      name: t("member-name-one"),
+      job: t("member-job-one"),
+      description: t("member-description-one"),
       facebook: "https://www.facebook.com/profile.php?id=100006287622110",
       twitter: "https://twitter.com/m_alqershi",
       github: "https://github.com/messam10",
@@ -21,10 +20,9 @@ function OurTeam() {
     {
       id: 2,
       photo: "https://avatars.githubusercontent.com/u/75049983?v=4",
-      name: "NabiL Ashbat",
-      job: "Font-End Developer",
-      description:
-        "A recent B.Sc. Computer Science graduate. In love with IT, Web development, Cybersecurity, and self-consciousness. Obsessed with everyday life challenges.",
+      name: t("member-name-two"),
+      job: t("member-job"),
+      description: t("member-description-two"),
       facebook: "",
       twitter: "",
       github: "https://github.com/nabily4e-dev",
@@ -33,10 +31,9 @@ function OurTeam() {
     {
       id: 3,
       photo: "https://avatars.githubusercontent.com/u/93738112?v=4",
-      name: "Abobakr Mahdi",
-      job: "Font-End Developer",
-      description:
-        "I am a junior developer with a passion for learning and the ability to self-teach and take a little time and become a professional developer",
+      name: t("member-name-three"),
+      job: t("member-job"),
+      description: t("member-description-three"),
       facebook: "",
       twitter: "",
       github: "https://github.com/BKR779",
@@ -45,10 +42,9 @@ function OurTeam() {
     {
       id: 4,
       photo: "https://avatars.githubusercontent.com/u/96662087?v=4",
-      name: "Abdulrahman Abdullah",
-      job: "Font-End Developer",
-      description:
-        "CodeForce team is built on trust and mutual respect, with each member holding themselves accountable for their actions and decisions.",
+      name: t("member-name-four"),
+      job: t("member-job"),
+      description: t("our-team-des"),
       facebook: "",
       twitter: "",
       github: "https://github.com/AASB7",
@@ -57,10 +53,9 @@ function OurTeam() {
     {
       id: 5,
       photo: "https://avatars.githubusercontent.com/u/69892218?v=4",
-      name: "MarwanBz",
-      job: "Font-End Developer",
-      description:
-        "CodeForce team is built on trust and mutual respect, with each member holding themselves accountable for their actions and decisions.",
+      name: t("member-name-five"),
+      job: t("member-job"),
+      description: t("our-team-des"),
       facebook: "",
       twitter: "",
       github: "https://github.com/MarwanBz",
@@ -69,15 +64,11 @@ function OurTeam() {
   ]
 
   return (
-    <div
-      className='py-8 px-4 mx-auto max-w-screen-xl lg:py-16 lg:px-6'
-      // dir={t("language") === "ar" ? "rtl" : "ltr"}
-    >
+    <div className='py-8 px-4 mx-auto max-w-screen-xl lg:py-16 lg:px-6'>
       <div className='mx-auto max-w-screen-sm text-center mb-8 lg:mb-16'>
-        <Highlighter highlighterStyle='aboutus' text='Our Team' />
+        <Highlighter highlighterStyle='aboutus' text={t("our-team")} />
         <p className='font-light text-gray-500 lg:mb-16 sm:text-xl'>
-          CodeForce team is built on trust and mutual respect, with each member
-          holding themselves accountable for their actions and decisions.
+          {t("our-team-des")}
         </p>
       </div>
       <div className='grid gap-8 mb-6 lg:mb-16 md:grid-cols-2'>

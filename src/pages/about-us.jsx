@@ -15,7 +15,11 @@ export default function AboutUs() {
 export async function getStaticProps({ locale }) {
   return {
     props: {
-      ...(await serverSideTranslations(locale, ["aboutus", "common"])),
+      ...(await serverSideTranslations(locale, [
+        "aboutus",
+        "ourteam",
+        "common",
+      ])),
       // Will be passed to the page component as props
     },
   }
