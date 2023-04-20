@@ -39,4 +39,4 @@ sitemap.xml
 sitemap-*.xml
 
 .env
-serviceAccountKey.json
+src\utils\firebase\serviceAccountKey.json
