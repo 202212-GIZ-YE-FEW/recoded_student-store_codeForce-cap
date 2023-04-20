@@ -1,7 +1,10 @@
+import { withTranslation } from "next-i18next"
+
 import Image from "next/image"
+
 import Link from "next/link"
 
-export default function Footer() {
+function Footer({ t }) {
   const goToTop = () => {
     window.scrollTo({
       top: 0,
@@ -135,3 +138,5 @@ export default function Footer() {
     </>
   )
 }
+
+export default withTranslation("common")(Footer)
