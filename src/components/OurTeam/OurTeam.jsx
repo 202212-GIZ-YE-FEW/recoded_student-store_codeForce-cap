@@ -1,4 +1,7 @@
 import CardView from "../CardView"
+
+import { withTranslation } from "next-i18next"
+
 import Highlighter from "../highlighter"
 
 function OurTeam() {
@@ -66,7 +69,10 @@ function OurTeam() {
   ]
 
   return (
-    <div className='py-8 px-4 mx-auto max-w-screen-xl lg:py-16 lg:px-6'>
+    <div
+      className='py-8 px-4 mx-auto max-w-screen-xl lg:py-16 lg:px-6'
+      // dir={t("language") === "ar" ? "rtl" : "ltr"}
+    >
       <div className='mx-auto max-w-screen-sm text-center mb-8 lg:mb-16'>
         <Highlighter highlighterStyle='aboutus' text='Our Team' />
         <p className='font-light text-gray-500 lg:mb-16 sm:text-xl'>
@@ -93,4 +99,4 @@ function OurTeam() {
   )
 }
 
-export default OurTeam
+export default withTranslation("ourteam")(OurTeam)
