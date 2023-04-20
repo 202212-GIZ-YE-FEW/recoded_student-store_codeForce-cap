@@ -19,7 +19,7 @@ function Aboutus({ t }) {
       <div className='grid  mt-20 items-center justify-center max-w-screen-md'>
         <Highlighter highlighterStyle='aboutus' text={t("history")} />
         <p className='text-purple-dark lg:w-[700px] p-3 text-2xl leading-relaxed text-center'>
-          text={t("history-des")}
+          {t("history-des")}
         </p>
       </div>
       <div className='grid  mt-20 items-center justify-center max-w-screen-md'>
@@ -35,4 +35,4 @@ function Aboutus({ t }) {
   )
 }
 
-export default withTranslation(["aboutus", "common"])(Aboutus)
+export default withTranslation("aboutus")(Aboutus)
