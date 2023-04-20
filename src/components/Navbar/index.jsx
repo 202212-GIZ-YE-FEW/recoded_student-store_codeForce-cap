@@ -7,6 +7,7 @@ import { RxHamburgerMenu } from "react-icons/rx"
 import { TbArrowBadgeDown } from "react-icons/tb"
 import { TfiWorld } from "react-icons/tfi"
 import { withTranslation } from "next-i18next"
+import { dir } from "i18next"
 
 function Navbar({ t }) {
   const [languages, setLanguages] = useState(false)
@@ -70,20 +71,20 @@ function Navbar({ t }) {
               href='/donation'
               className='relative mx-4 capitalize text-sm hover:text-violet-800   transition-all duration-1000 before:absolute before:-bottom-2 before:left-0  before:h-[1px]  before:w-0 before:opacity-0 before:bg-violet-700 before:transition-all before:duration-500 hover:before:w-full hover:before:opacity-100'
             >
-              Donation
+              {t("donation")}
             </Link>
             <Link
               href='/about-us'
               className='relative mx-4 capitalize text-sm  hover:text-violet-800   transition-all duration-1000 before:absolute before:-bottom-2 before:left-0  before:h-[1px]  before:w-0 before:opacity-0 before:bg-violet-700 before:transition-all before:duration-500 hover:before:w-full hover:before:opacity-100'
             >
-              {t("aboutus")}
+              {t("about-us")}
             </Link>
           </div>
           {/* ----------- Search ----------- */}
           <div className=' flex-1 border flex items-center py-2 px-4 rounded-3xl'>
             <input
               type='text'
-              placeholder='search here'
+              placeholder={t("search-here")}
               className='search w-full text-sm  placeholder:text-gray-300 placeholder:capitalize text-gray-600'
             />
             <div className=''>
@@ -106,13 +107,13 @@ function Navbar({ t }) {
                 }`}
               >
                 <div className='my-2 px-5 py-2 hover:bg-gray-200 transition-all duration-500'>
-                  <Link href='/' locale='en'>
+                  <Link href='' locale='en'>
                     English
                   </Link>
                 </div>
                 <div className='my-2 px-5 py-2 hover:bg-gray-200 transition-all duration-500'>
-                  <Link href='/' locale='ar'>
-                    Arabic
+                  <Link href='' locale='ar'>
+                    العربية
                   </Link>
                 </div>
               </div>
@@ -123,12 +124,12 @@ function Navbar({ t }) {
             <div className='flex gap-3 capitalize flex-col md:flex-row'>
               <Link href='/signin'>
                 <div className='bg-purple-light py-2 px-5 text-white rounded-3xl text-sm hover:bg-violet-800 transition-all cursor-pointer'>
-                  sign in
+                  {t("sign-in")}
                 </div>
               </Link>
               <Link href='/sell-items'>
                 <div className='bg-purple-light py-2 px-5 text-white rounded-3xl text-sm hover:bg-violet-800 transition-all cursor-pointer'>
-                  sell items
+                  {t("sell-items")}
                 </div>
               </Link>
             </div>

@@ -1,4 +1,14 @@
 {
+  "language": "ar",
   "test": "مرحبا",
-  "aboutus": "من نحن"
+  "about-us": "من نحن",
+  "donation": "التبرّع",
+  "sign-in": "تسجيل الدخول",
+  "sell-items": "بيع العناصر",
+  "search-here": "ابحث هنا",
+  "contact-us": "اتصل بنا:",
+  "register-for-free":"سجل مجاناً",
+  "start-selling": "ابدأ بالبيع",
+  "buy-products": "شراء المنتجات",
+  "scroll-up": "انتقل لأعلى!",
 }

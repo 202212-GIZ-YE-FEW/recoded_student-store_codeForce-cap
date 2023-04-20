@@ -13,7 +13,8 @@ function Aboutus({ t }) {
         <Highlighter highlighterStyle='aboutus' text='Mission' />
         <p
           className='text-purple-dark lg:w-[700px] p-3 text-2xl leading-relaxed text-center'
-          dir='rtl'
+          // dir='rtl'
+          dir={t("language") === "ar" ? "rtl" : "ltr"}
         >
           {t("mission")}
         </p>

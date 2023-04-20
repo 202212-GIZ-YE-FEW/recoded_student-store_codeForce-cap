@@ -1,4 +1,14 @@
 {
+  "language": "en",
   "test": "Hello",
-  "aboutus": "About Us"
+  "about-us": "About Us",
+  "donation": "Donation",
+  "sign-in": "Sign In",
+  "sell-items": "Sell Items",
+  "search-here": "Search Here",
+  "contact-us": "Contact Us:",
+  "register-for-free":"Register for free",
+  "start-selling": "Start Selling",
+  "buy-products": "Buy Products",
+  "scroll-up": "Scroll Up!",
 }
