@@ -1,49 +1,32 @@
 import { withTranslation } from "next-i18next"
 
 import Highlighter from "../highlighter"
+
 import OurTeam from "../OurTeam"
 
 function Aboutus({ t }) {
   return (
     <div
       className='flex flex-col items-center justify-center font-poppins'
-      dir='{dir}'
+      dir={t("language") === "ar" ? "rtl" : "ltr"}
     >
       <div className='grid  mt-20 items-center justify-center max-w-screen-md'>
-        <Highlighter highlighterStyle='aboutus' text='Mission' />
-        <p
-          className='text-purple-dark lg:w-[700px] p-3 text-2xl leading-relaxed text-center'
-          // dir='rtl'
-          dir={t("language") === "ar" ? "rtl" : "ltr"}
-        >
-          {t("mission")}
-        </p>
-      </div>
-      <div className='grid  mt-20 items-center justify-center max-w-screen-md'>
-        <Highlighter highlighterStyle='aboutus' text='History' />
+        <Highlighter highlighterStyle='aboutus' text={t("mission")} />
         <p className='text-purple-dark lg:w-[700px] p-3 text-2xl leading-relaxed text-center'>
-          Our company was founded by a group of students who recognized the need
-          for a platform that caters to the specific needs of students. They
-          observed that students often struggle to find affordable used products
-          or a reliable platform to sell their own items. The company was
-          established with the idea of providing a safe and efficient platform
-          for students to buy, sell, and borrow products.
+          {t("mission-des")}
         </p>
       </div>
       <div className='grid  mt-20 items-center justify-center max-w-screen-md'>
-        <Highlighter highlighterStyle='aboutus' text='Goals' />
+        <Highlighter highlighterStyle='aboutus' text={t("history")} />
+        <p className='text-purple-dark lg:w-[700px] p-3 text-2xl leading-relaxed text-center'>
+          text={t("history-des")}
+        </p>
+      </div>
+      <div className='grid  mt-20 items-center justify-center max-w-screen-md'>
+        <Highlighter highlighterStyle='aboutus' text={t("goals")} />
 
         <p className='text-purple-dark lg:w-[700px] p-3 text-2xl leading-relaxed text-center'>
-          Our primary goal is to become the go-to marketplace for students
-          across the country. We aim to build a strong reputation as a trusted
-          platform that offers a wide range of affordable and high-quality
-          products. We also aim to continuously improve our platform to ensure
-          that it remains easy to use, reliable, and secure for all users.
-          Additionally, we strive to create a community of students who can
-          share their experiences and insights about products and services,
-          creating a more connected and supportive student network. Ultimately,
-          we want to help students save money, earn money, and have a better
-          experience as they navigate their academic journeys.
+          {t("goals-des")}
         </p>
         <br />
       </div>
@@ -52,4 +35,4 @@ function Aboutus({ t }) {
   )
 }
 
-export default withTranslation("aboutus")(Aboutus)
+export default withTranslation(["aboutus", "common"])(Aboutus)
