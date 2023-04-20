@@ -14,7 +14,7 @@ function Footer({ t }) {
 
   return (
     <>
-      <footer>
+      <footer dir={t("language") === "ar" ? "rtl" : "ltr"}>
         <div className='relative lg:flex lg:justify-evenly bg-[#32314C] w-full h-full break-all mt-auto pb-32'>
           {/* Logo Section */}
           <div className='ml-5 pt-5'>
@@ -53,11 +53,11 @@ function Footer({ t }) {
             <ul className='font-poppins text-white font-bold md:text-1xl lg:text-2xl'>
               <li>
                 <Link href='/about-us' className='hover:underline'>
-                  About Us
+                  {t("about-us")}
                 </Link>
               </li>
               <li>
-                <h2 className='pt-4'>Contact Us:</h2>
+                <h2 className='pt-4'>{t("contact-us")}</h2>
                 <ul className='text-gray-600 dark:text-gray-400 font-medium'>
                   <li className='pt-4'>(555)678-9012</li>
                   <li className='pt-2'>contact@studentstore.com</li>
@@ -71,17 +71,17 @@ function Footer({ t }) {
             <ul className='font-poppins text-white font-bold md:text-1xl lg:text-2xl'>
               <li className='mb-4'>
                 <Link href='/signup' className='hover:underline '>
-                  Register for free
+                  {t("register-for-free")}
                 </Link>
               </li>
               <li className='mb-4'>
                 <Link href='/' className='hover:underline'>
-                  Start Selling
+                  {t("start-selling")}
                 </Link>
               </li>
               <li className='mb-4'>
                 <Link href='/' className='hover:underline'>
-                  Buy Products
+                  {t("buy-products")}
                 </Link>
               </li>
             </ul>
@@ -121,7 +121,7 @@ function Footer({ t }) {
           {/* Scroll UP Section */}
           <div className='flex justify-end h-36 pt-32 lg:pt-14'>
             <h2 className='m-0 font-poppins text-white font-bold md:text-2xl lg:text-2xl pt-2 lg:pt-7'>
-              Scroll Up!
+              {t("scroll-up")}
             </h2>
             <button onClick={goToTop}>
               <Image
