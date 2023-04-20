@@ -14,7 +14,10 @@ function Navbar({ t }) {
   const [open, setOpen] = useState(false)
 
   return (
-    <header className='sticky top-0 z-50'>
+    <header
+      className='sticky top-0 z-50'
+      dir={t("language") === "ar" ? "rtl" : "ltr"}
+    >
       <div
         className={`navbar  m-auto px-10 md:flex md:flex-row py-4 justify-between gap-5 items-center bg-white transition-all 
       `}
@@ -41,7 +44,7 @@ function Navbar({ t }) {
                 English
               </div>
               <div className='my-2 px-5 py-2 hover:bg-gray-200 transition-all duration-500'>
-                Arabic
+                العربية
               </div>
             </div>
           </div>

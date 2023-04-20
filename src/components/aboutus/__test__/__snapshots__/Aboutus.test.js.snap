@@ -21,7 +21,7 @@ exports[`renders correctly 1`] = `
     </span>
     <p
       className="text-purple-dark lg:w-[700px] p-3 text-2xl leading-relaxed text-center"
-      dir="rtl"
+      dir="ltr"
     >
       mission
     </p>

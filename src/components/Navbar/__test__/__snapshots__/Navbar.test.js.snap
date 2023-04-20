@@ -162,7 +162,7 @@ exports[`renders correctly 1`] = `
           onMouseEnter={[Function]}
           onTouchStart={[Function]}
         >
-          Donation
+          donation
         </a>
         <a
           className="relative mx-4 capitalize text-sm  hover:text-violet-800   transition-all duration-1000 before:absolute before:-bottom-2 before:left-0  before:h-[1px]  before:w-0 before:opacity-0 before:bg-violet-700 before:transition-all before:duration-500 hover:before:w-full hover:before:opacity-100"
@@ -171,7 +171,7 @@ exports[`renders correctly 1`] = `
           onMouseEnter={[Function]}
           onTouchStart={[Function]}
         >
-          aboutus
+          about-us
         </a>
       </div>
       <div
@@ -179,7 +179,7 @@ exports[`renders correctly 1`] = `
       >
         <input
           className="search w-full text-sm  placeholder:text-gray-300 placeholder:capitalize text-gray-600"
-          placeholder="search here"
+          placeholder="search-here"
           type="text"
         />
         <div
@@ -270,7 +270,7 @@ exports[`renders correctly 1`] = `
               className="my-2 px-5 py-2 hover:bg-gray-200 transition-all duration-500"
             >
               <a
-                href="/"
+                href=""
                 onClick={[Function]}
                 onMouseEnter={[Function]}
                 onTouchStart={[Function]}
@@ -282,12 +282,12 @@ exports[`renders correctly 1`] = `
               className="my-2 px-5 py-2 hover:bg-gray-200 transition-all duration-500"
             >
               <a
-                href="/"
+                href=""
                 onClick={[Function]}
                 onMouseEnter={[Function]}
                 onTouchStart={[Function]}
               >
-                Arabic
+                العربية
               </a>
             </div>
           </div>
@@ -308,7 +308,7 @@ exports[`renders correctly 1`] = `
             <div
               className="bg-purple-light py-2 px-5 text-white rounded-3xl text-sm hover:bg-violet-800 transition-all cursor-pointer"
             >
-              sign in
+              sign-in
             </div>
           </a>
           <a
@@ -320,7 +320,7 @@ exports[`renders correctly 1`] = `
             <div
               className="bg-purple-light py-2 px-5 text-white rounded-3xl text-sm hover:bg-violet-800 transition-all cursor-pointer"
             >
-              sell items
+              sell-items
             </div>
           </a>
         </div>
