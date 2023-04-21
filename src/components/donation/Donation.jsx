@@ -5,13 +5,18 @@ import { SectionWrapper } from "@/components/hoc"
 
 import Highlighter from "../highlighter"
 
+import { withTranslation } from "next-i18next"
+
 /**
  * Renders the Donation page component.
  * @returns {JSX.Element} The Donation page component.
  */
-function Donation() {
+function Donation({ t }) {
   return (
-    <div className='flex flex-col items-center justify-center font-poppins'>
+    <div
+      className='flex flex-col items-center justify-center font-poppins'
+      dir={t("language") === "ar" ? "rtl" : "ltr"}
+    >
       {/* Main image */}
       <div className='lg:max-w-[100%] max-w-[85%] mx-auto'>
         <Image
@@ -102,4 +107,4 @@ function Donation() {
 }
 
 // Higher order component for wrapping and to assure semantics & consistency.
-export default SectionWrapper(Donation)
+export default withTranslation("donation")(Donation)

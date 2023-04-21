@@ -1,7 +1,9 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`renders correctly 1`] = `
-<footer>
+<footer
+  dir="ltr"
+>
   <div
     className="relative lg:flex lg:justify-evenly bg-[#32314C] w-full h-full break-all mt-auto pb-32"
   >
@@ -92,14 +94,14 @@ exports[`renders correctly 1`] = `
             onMouseEnter={[Function]}
             onTouchStart={[Function]}
           >
-            About Us
+            about-us
           </a>
         </li>
         <li>
           <h2
             className="pt-4"
           >
-            Contact Us:
+            contact-us
           </h2>
           <ul
             className="text-gray-600 dark:text-gray-400 font-medium"
@@ -134,7 +136,7 @@ exports[`renders correctly 1`] = `
             onMouseEnter={[Function]}
             onTouchStart={[Function]}
           >
-            Register for free
+            register-for-free
           </a>
         </li>
         <li
@@ -147,7 +149,7 @@ exports[`renders correctly 1`] = `
             onMouseEnter={[Function]}
             onTouchStart={[Function]}
           >
-            Start Selling
+            start-selling
           </a>
         </li>
         <li
@@ -160,7 +162,7 @@ exports[`renders correctly 1`] = `
             onMouseEnter={[Function]}
             onTouchStart={[Function]}
           >
-            Buy Products
+            buy-products
           </a>
         </li>
       </ul>
@@ -238,7 +240,7 @@ exports[`renders correctly 1`] = `
       <h2
         className="m-0 font-poppins text-white font-bold md:text-2xl lg:text-2xl pt-2 lg:pt-7"
       >
-        Scroll Up!
+        scroll-up
       </h2>
       <button
         onClick={[Function]}
