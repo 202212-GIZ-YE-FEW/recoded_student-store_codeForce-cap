@@ -1,7 +1,9 @@
 import { useState } from "react"
 
-import { SectionWrapper } from "@/components/hoc"
+import { withTranslation } from "next-i18next"
+
 import ProductList from "@/components/ProductList"
+
 import products from "@/components/ProductList/products"
 
 import Buttons from "../Buttons"
@@ -42,4 +44,4 @@ function CategoryFilter() {
   )
 }
 
-export default SectionWrapper(CategoryFilter)
+export default withTranslation("index")(CategoryFilter)
