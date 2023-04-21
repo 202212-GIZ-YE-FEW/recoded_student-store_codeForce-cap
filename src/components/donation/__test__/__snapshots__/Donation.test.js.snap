@@ -1,181 +1,88 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`renders correctly 1`] = `
-<section
-  className="max-w-[1250px] mx-auto my-[50px]"
+<div
+  className="flex flex-col items-center justify-center font-poppins"
+  dir="ltr"
 >
   <div
-    className="flex flex-col items-center justify-center font-poppins"
+    className="lg:max-w-[100%] max-w-[85%] mx-auto"
   >
-    <div
-      className="lg:max-w-[100%] max-w-[85%] mx-auto"
-    >
-      <img
-        alt="donation image"
-        className="rounded"
-        data-nimg="1"
-        decoding="async"
-        height={524}
-        loading="lazy"
-        onError={[Function]}
-        onLoad={[Function]}
-        src="/_next/image?url=%2Fimages%2Funsplash_1.jpg&w=3840&q=75"
-        srcSet="/_next/image?url=%2Fimages%2Funsplash_1.jpg&w=1200&q=75 1x, /_next/image?url=%2Fimages%2Funsplash_1.jpg&w=3840&q=75 2x"
-        style={
-          {
-            "color": "transparent",
-          }
+    <img
+      alt="donation image"
+      className="rounded"
+      data-nimg="1"
+      decoding="async"
+      height={524}
+      loading="lazy"
+      onError={[Function]}
+      onLoad={[Function]}
+      src="/_next/image?url=%2Fimages%2Funsplash_1.jpg&w=3840&q=75"
+      srcSet="/_next/image?url=%2Fimages%2Funsplash_1.jpg&w=1200&q=75 1x, /_next/image?url=%2Fimages%2Funsplash_1.jpg&w=3840&q=75 2x"
+      style={
+        {
+          "color": "transparent",
         }
-        width={1124}
-      />
-    </div>
-    <div
-      className="flex flex-col mt-20 items-center justify-center max-w-screen-md"
-    >
-      <span>
-        <span
-          className="bg-[url('/images/Highlighter.png')] bg-bottom bg-no-repeat block bg-[length:70%_70%] text-[200%] md:text-[400%] donate"
-        >
-          <h2
-            className="text-purple-light font-poppins text-center font-bold tracking-[-1px] "
-          >
-            Why Donate?
-          </h2>
-        </span>
-      </span>
-      <p
-        className="text-purple-dark p-3 text-4xl leading-relaxed text-center"
-      >
-        Life is busy, and it can sometimes be easy to forget to show your gratitude for all that you’ve been given. Students have low budgets and they’re in need of financial support. When you are ready to give and are researching groups of people to support, this can remind us of all that we have, and the act of donating to charity is a way to express our feelings gratitude. Inspire others to give by posting your kind action on social media to inspire others to give generously.
-      </p>
-    </div>
+      }
+      width={1124}
+    />
+  </div>
+  <div
+    className="flex flex-col mt-20 items-center justify-center max-w-screen-md"
+  >
     <span>
       <span
-        className="bg-[url('/images/Highlighter.png')] bg-bottom bg-no-repeat block bg-[length:70%_70%] text-[200%] md:text-[400%] donating"
+        className="bg-[url('/images/Highlighter.png')] bg-bottom bg-no-repeat block bg-[length:70%_70%] text-[200%] md:text-[400%] donate"
       >
         <h2
           className="text-purple-light font-poppins text-center font-bold tracking-[-1px] "
         >
-          Make a Difference by Donating!
+          Why Donate?
         </h2>
       </span>
     </span>
+    <p
+      className="text-purple-dark p-3 text-4xl leading-relaxed text-center"
+    >
+      Life is busy, and it can sometimes be easy to forget to show your gratitude for all that you’ve been given. Students have low budgets and they’re in need of financial support. When you are ready to give and are researching groups of people to support, this can remind us of all that we have, and the act of donating to charity is a way to express our feelings gratitude. Inspire others to give by posting your kind action on social media to inspire others to give generously.
+    </p>
+  </div>
+  <span>
+    <span
+      className="bg-[url('/images/Highlighter.png')] bg-bottom bg-no-repeat block bg-[length:70%_70%] text-[200%] md:text-[400%] donating"
+    >
+      <h2
+        className="text-purple-light font-poppins text-center font-bold tracking-[-1px] "
+      >
+        Make a Difference by Donating!
+      </h2>
+    </span>
+  </span>
+  <div
+    className="flex flex-row flex-wrap items-center justify-around gap-12 p-10"
+  >
     <div
-      className="flex flex-row flex-wrap items-center justify-around gap-12 p-10"
+      className="mt-20 h-[240px] w-[280px] flex flex-col  justify-center items-center rounded-xl bg-white text-purple-almostblack shadow-lg"
     >
       <div
-        className="mt-20 h-[240px] w-[280px] flex flex-col  justify-center items-center rounded-xl bg-white text-purple-almostblack shadow-lg"
-      >
-        <div
-          className="mt-8 flex flex-col items-center gap-2"
-        >
-          <span
-            className="text-xl"
-          >
-            Small Help
-          </span>
-          <div
-            className="relative flex items-center"
-          >
-            <span
-              className="absolute text-2xl -left-3 top-6"
-            >
-              <img
-                alt="currency icon"
-                data-nimg="1"
-                decoding="async"
-                height={12}
-                loading="lazy"
-                onError={[Function]}
-                onLoad={[Function]}
-                src="/images/currency.svg"
-                style={
-                  {
-                    "color": "transparent",
-                  }
-                }
-                width={8}
-              />
-            </span>
-            <span
-              className="font-bold text-[44px]"
-            >
-              10
-            </span>
-          </div>
-        </div>
-        <button
-          className="flex h-12 w-[65%] items-center justify-center rounded bg-pumpkin px-14 text-sm text-white  transition-all duration-[0.3s] ease-[ease-in-out] cursor-pointer hover:bg-purple"
-        >
-          Donate
-        </button>
-      </div>
-      <div
-        className="mt-10 h-[280px] w-[320px] flex flex-col  justify-center items-center rounded-xl bg-white text-purple-almostblack shadow-lg"
-      >
-        <div
-          className="mt-6 flex flex-col items-center"
-        >
-          <span
-            className="mb-4 text-2xl"
-          >
-            Some Help
-          </span>
-          <div
-            className="relative flex items-center"
-          >
-            <span
-              className="absolute text-2xl -left-3 top-8"
-            >
-              <img
-                alt="currency icon"
-                data-nimg="1"
-                decoding="async"
-                height={12}
-                loading="lazy"
-                onError={[Function]}
-                onLoad={[Function]}
-                src="/images/currency.svg"
-                style={
-                  {
-                    "color": "transparent",
-                  }
-                }
-                width={12}
-              />
-            </span>
-            <span
-              className="font-bold text-[58px]"
-            >
-              25
-            </span>
-          </div>
-        </div>
-        <button
-          className="flex h-12 w-[65%] items-center justify-center rounded bg-pumpkin px-[70px] text-sm  text-white transition-all duration-[0.3s] ease-[ease-in-out] cursor-pointer hover:bg-purple"
-        >
-          Donate
-        </button>
-      </div>
-      <div
-        className="h-[320px] w-[380px] flex flex-col  justify-center items-center rounded-xl bg-white text-purple-almostblack shadow-lg"
+        className="mt-8 flex flex-col items-center gap-2"
       >
         <span
-          className="text-3xl"
+          className="text-xl"
         >
-          Big Help
+          Small Help
         </span>
         <div
           className="relative flex items-center"
         >
           <span
-            className="absolute text-3xl -left-4 top-18"
+            className="absolute text-2xl -left-3 top-6"
           >
             <img
               alt="currency icon"
               data-nimg="1"
               decoding="async"
-              height={16}
+              height={12}
               loading="lazy"
               onError={[Function]}
               onLoad={[Function]}
@@ -185,22 +92,112 @@ exports[`renders correctly 1`] = `
                   "color": "transparent",
                 }
               }
-              width={16}
+              width={8}
             />
           </span>
           <span
-            className="text-[69px] font-bold"
+            className="font-bold text-[44px]"
           >
-            50
+            10
           </span>
         </div>
-        <button
-          className="flex h-12 w-[65%] items-center justify-center rounded bg-pumpkin px-20 text-xl text-white transition-all duration-[0.3s] ease-[ease-in-out] cursor-pointer hover:bg-purple"
-        >
-          Donate!
-        </button>
       </div>
+      <button
+        className="flex h-12 w-[65%] items-center justify-center rounded bg-pumpkin px-14 text-sm text-white  transition-all duration-[0.3s] ease-[ease-in-out] cursor-pointer hover:bg-purple"
+      >
+        Donate
+      </button>
+    </div>
+    <div
+      className="mt-10 h-[280px] w-[320px] flex flex-col  justify-center items-center rounded-xl bg-white text-purple-almostblack shadow-lg"
+    >
+      <div
+        className="mt-6 flex flex-col items-center"
+      >
+        <span
+          className="mb-4 text-2xl"
+        >
+          Some Help
+        </span>
+        <div
+          className="relative flex items-center"
+        >
+          <span
+            className="absolute text-2xl -left-3 top-8"
+          >
+            <img
+              alt="currency icon"
+              data-nimg="1"
+              decoding="async"
+              height={12}
+              loading="lazy"
+              onError={[Function]}
+              onLoad={[Function]}
+              src="/images/currency.svg"
+              style={
+                {
+                  "color": "transparent",
+                }
+              }
+              width={12}
+            />
+          </span>
+          <span
+            className="font-bold text-[58px]"
+          >
+            25
+          </span>
+        </div>
+      </div>
+      <button
+        className="flex h-12 w-[65%] items-center justify-center rounded bg-pumpkin px-[70px] text-sm  text-white transition-all duration-[0.3s] ease-[ease-in-out] cursor-pointer hover:bg-purple"
+      >
+        Donate
+      </button>
+    </div>
+    <div
+      className="h-[320px] w-[380px] flex flex-col  justify-center items-center rounded-xl bg-white text-purple-almostblack shadow-lg"
+    >
+      <span
+        className="text-3xl"
+      >
+        Big Help
+      </span>
+      <div
+        className="relative flex items-center"
+      >
+        <span
+          className="absolute text-3xl -left-4 top-18"
+        >
+          <img
+            alt="currency icon"
+            data-nimg="1"
+            decoding="async"
+            height={16}
+            loading="lazy"
+            onError={[Function]}
+            onLoad={[Function]}
+            src="/images/currency.svg"
+            style={
+              {
+                "color": "transparent",
+              }
+            }
+            width={16}
+          />
+        </span>
+        <span
+          className="text-[69px] font-bold"
+        >
+          50
+        </span>
+      </div>
+      <button
+        className="flex h-12 w-[65%] items-center justify-center rounded bg-pumpkin px-20 text-xl text-white transition-all duration-[0.3s] ease-[ease-in-out] cursor-pointer hover:bg-purple"
+      >
+        Donate!
+      </button>
     </div>
   </div>
-</section>
+</div>
 `;
