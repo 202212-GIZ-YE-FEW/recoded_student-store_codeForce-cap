@@ -5,17 +5,17 @@ exports[`renders correctly 1`] = `
   className="max-w-[1250px] mx-auto my-[50px]"
 >
   <div
-    className="jsx-2a57d10fb13504b1 "
+    className=""
   >
     <div
-      className="jsx-2a57d10fb13504b1 keen-slider zoom-out px-15"
+      className="zoom-out keen-slider px-15"
     >
       <div
-        className="jsx-2a57d10fb13504b1 keen-slider__slide absolute w-full h-full"
+        className="keen-slider__slide absolute w-full h-full"
       >
         <div
-          className="jsx-2a57d10fb13504b1 mx-10"
-          style={Object {}}
+          className="mx-10"
+          style={{}}
         >
           <img
             alt="..."
@@ -29,7 +29,7 @@ exports[`renders correctly 1`] = `
             src="/_next/image?url=https%3A%2F%2Fimages.unsplash.com%2Fphoto-1590004953392-5aba2e72269a%3Fixlib%3Drb-1.2.1%26ixid%3DeyJhcHBfaWQiOjEyMDd9%26auto%3Dformat%26fit%3Dcrop%26h%3D500%26w%3D800%26q%3D80&w=3840&q=75"
             srcSet="/_next/image?url=https%3A%2F%2Fimages.unsplash.com%2Fphoto-1590004953392-5aba2e72269a%3Fixlib%3Drb-1.2.1%26ixid%3DeyJhcHBfaWQiOjEyMDd9%26auto%3Dformat%26fit%3Dcrop%26h%3D500%26w%3D800%26q%3D80&w=1200&q=75 1x, /_next/image?url=https%3A%2F%2Fimages.unsplash.com%2Fphoto-1590004953392-5aba2e72269a%3Fixlib%3Drb-1.2.1%26ixid%3DeyJhcHBfaWQiOjEyMDd9%26auto%3Dformat%26fit%3Dcrop%26h%3D500%26w%3D800%26q%3D80&w=3840&q=75 2x"
             style={
-              Object {
+              {
                 "color": "transparent",
               }
             }
@@ -38,11 +38,11 @@ exports[`renders correctly 1`] = `
         </div>
       </div>
       <div
-        className="jsx-2a57d10fb13504b1 keen-slider__slide absolute w-full h-full"
+        className="keen-slider__slide absolute w-full h-full"
       >
         <div
-          className="jsx-2a57d10fb13504b1 mx-10"
-          style={Object {}}
+          className="mx-10"
+          style={{}}
         >
           <img
             alt="..."
@@ -56,7 +56,7 @@ exports[`renders correctly 1`] = `
             src="/_next/image?url=https%3A%2F%2Fimages.unsplash.com%2Fphoto-1590004845575-cc18b13d1d0a%3Fixlib%3Drb-1.2.1%26ixid%3DeyJhcHBfaWQiOjEyMDd9%26auto%3Dformat%26fit%3Dcrop%26h%3D500%26w%3D800%26q%3D80&w=3840&q=75"
             srcSet="/_next/image?url=https%3A%2F%2Fimages.unsplash.com%2Fphoto-1590004845575-cc18b13d1d0a%3Fixlib%3Drb-1.2.1%26ixid%3DeyJhcHBfaWQiOjEyMDd9%26auto%3Dformat%26fit%3Dcrop%26h%3D500%26w%3D800%26q%3D80&w=1200&q=75 1x, /_next/image?url=https%3A%2F%2Fimages.unsplash.com%2Fphoto-1590004845575-cc18b13d1d0a%3Fixlib%3Drb-1.2.1%26ixid%3DeyJhcHBfaWQiOjEyMDd9%26auto%3Dformat%26fit%3Dcrop%26h%3D500%26w%3D800%26q%3D80&w=3840&q=75 2x"
             style={
-              Object {
+              {
                 "color": "transparent",
               }
             }
@@ -65,11 +65,11 @@ exports[`renders correctly 1`] = `
         </div>
       </div>
       <div
-        className="jsx-2a57d10fb13504b1 keen-slider__slide absolute w-full h-full"
+        className="keen-slider__slide absolute w-full h-full"
       >
         <div
-          className="jsx-2a57d10fb13504b1 mx-10"
-          style={Object {}}
+          className="mx-10"
+          style={{}}
         >
           <img
             alt="..."
@@ -83,7 +83,7 @@ exports[`renders correctly 1`] = `
             src="/_next/image?url=https%3A%2F%2Fimages.unsplash.com%2Fphoto-1590004987778-bece5c9adab6%3Fixlib%3Drb-1.2.1%26ixid%3DeyJhcHBfaWQiOjEyMDd9%26auto%3Dformat%26fit%3Dcrop%26h%3D500%26w%3D800%26q%3D80&w=3840&q=75"
             srcSet="/_next/image?url=https%3A%2F%2Fimages.unsplash.com%2Fphoto-1590004987778-bece5c9adab6%3Fixlib%3Drb-1.2.1%26ixid%3DeyJhcHBfaWQiOjEyMDd9%26auto%3Dformat%26fit%3Dcrop%26h%3D500%26w%3D800%26q%3D80&w=1200&q=75 1x, /_next/image?url=https%3A%2F%2Fimages.unsplash.com%2Fphoto-1590004987778-bece5c9adab6%3Fixlib%3Drb-1.2.1%26ixid%3DeyJhcHBfaWQiOjEyMDd9%26auto%3Dformat%26fit%3Dcrop%26h%3D500%26w%3D800%26q%3D80&w=3840&q=75 2x"
             style={
-              Object {
+              {
                 "color": "transparent",
               }
             }
@@ -92,11 +92,11 @@ exports[`renders correctly 1`] = `
         </div>
       </div>
       <div
-        className="jsx-2a57d10fb13504b1 keen-slider__slide absolute w-full h-full"
+        className="keen-slider__slide absolute w-full h-full"
       >
         <div
-          className="jsx-2a57d10fb13504b1 mx-10"
-          style={Object {}}
+          className="mx-10"
+          style={{}}
         >
           <img
             alt="..."
@@ -110,7 +110,7 @@ exports[`renders correctly 1`] = `
             src="/_next/image?url=https%3A%2F%2Fimages.unsplash.com%2Fphoto-1590005176489-db2e714711fc%3Fixlib%3Drb-1.2.1%26ixid%3DeyJhcHBfaWQiOjEyMDd9%26auto%3Dformat%26fit%3Dcrop%26h%3D500%26w%3D800%26q%3D80&w=3840&q=75"
             srcSet="/_next/image?url=https%3A%2F%2Fimages.unsplash.com%2Fphoto-1590005176489-db2e714711fc%3Fixlib%3Drb-1.2.1%26ixid%3DeyJhcHBfaWQiOjEyMDd9%26auto%3Dformat%26fit%3Dcrop%26h%3D500%26w%3D800%26q%3D80&w=1200&q=75 1x, /_next/image?url=https%3A%2F%2Fimages.unsplash.com%2Fphoto-1590005176489-db2e714711fc%3Fixlib%3Drb-1.2.1%26ixid%3DeyJhcHBfaWQiOjEyMDd9%26auto%3Dformat%26fit%3Dcrop%26h%3D500%26w%3D800%26q%3D80&w=3840&q=75 2x"
             style={
-              Object {
+              {
                 "color": "transparent",
               }
             }

@@ -6,17 +6,31 @@ module.exports = {
     jest: true,
   },
   plugins: ["simple-import-sort", "unused-imports"],
-  extends: ["eslint:recommended", "next", "next/core-web-vitals", "prettier"],
+  extends: [
+    "eslint:recommended",
+    "next",
+    "next/core-web-vitals",
+    "prettier",
+    "plugin:storybook/recommended",
+    "plugin:storybook/recommended",
+  ],
   rules: {
-    "no-unused-vars": [1, { args: "after-used", argsIgnorePattern: "^_" }],
+    "no-unused-vars": [
+      1,
+      {
+        args: "after-used",
+        argsIgnorePattern: "^_",
+      },
+    ],
     "no-console": "warn",
-
     "react/display-name": "off",
     "react/jsx-curly-brace-presence": [
       "warn",
-      { props: "never", children: "never" },
+      {
+        props: "never",
+        children: "never",
+      },
     ],
-
     //#region  //*=========== Unused Import ===========
     "unused-imports/no-unused-imports": "warn",
     "unused-imports/no-unused-vars": [
@@ -68,6 +82,7 @@ module.exports = {
     ],
     //#endregion  //*======== Import Sort ===========
   },
+
   globals: {
     React: true,
     JSX: true,
