@@ -37,14 +37,14 @@ exports[`renders correctly 1`] = `
         <h2
           className="text-purple-light font-poppins text-center font-bold tracking-[-1px] "
         >
-          Why Donate?
+          donate
         </h2>
       </span>
     </span>
     <p
       className="text-purple-dark p-3 text-4xl leading-relaxed text-center"
     >
-      Life is busy, and it can sometimes be easy to forget to show your gratitude for all that you’ve been given. Students have low budgets and they’re in need of financial support. When you are ready to give and are researching groups of people to support, this can remind us of all that we have, and the act of donating to charity is a way to express our feelings gratitude. Inspire others to give by posting your kind action on social media to inspire others to give generously.
+      donate-des
     </p>
   </div>
   <span>
@@ -54,7 +54,7 @@ exports[`renders correctly 1`] = `
       <h2
         className="text-purple-light font-poppins text-center font-bold tracking-[-1px] "
       >
-        Make a Difference by Donating!
+        make-donate
       </h2>
     </span>
   </span>
@@ -70,7 +70,7 @@ exports[`renders correctly 1`] = `
         <span
           className="text-xl"
         >
-          Small Help
+          small-help
         </span>
         <div
           className="relative flex items-center"
@@ -105,7 +105,7 @@ exports[`renders correctly 1`] = `
       <button
         className="flex h-12 w-[65%] items-center justify-center rounded bg-pumpkin px-14 text-sm text-white  transition-all duration-[0.3s] ease-[ease-in-out] cursor-pointer hover:bg-purple"
       >
-        Donate
+        donate-button
       </button>
     </div>
     <div
@@ -117,7 +117,7 @@ exports[`renders correctly 1`] = `
         <span
           className="mb-4 text-2xl"
         >
-          Some Help
+          some-help
         </span>
         <div
           className="relative flex items-center"
@@ -152,7 +152,7 @@ exports[`renders correctly 1`] = `
       <button
         className="flex h-12 w-[65%] items-center justify-center rounded bg-pumpkin px-[70px] text-sm  text-white transition-all duration-[0.3s] ease-[ease-in-out] cursor-pointer hover:bg-purple"
       >
-        Donate
+        donate-button
       </button>
     </div>
     <div
@@ -161,7 +161,7 @@ exports[`renders correctly 1`] = `
       <span
         className="text-3xl"
       >
-        Big Help
+        big-help
       </span>
       <div
         className="relative flex items-center"
@@ -195,7 +195,7 @@ exports[`renders correctly 1`] = `
       <button
         className="flex h-12 w-[65%] items-center justify-center rounded bg-pumpkin px-20 text-xl text-white transition-all duration-[0.3s] ease-[ease-in-out] cursor-pointer hover:bg-purple"
       >
-        Donate!
+        donate-button
       </button>
     </div>
   </div>
