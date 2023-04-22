@@ -1,9 +1,11 @@
-import { withTranslation } from "next-i18next"
+// import { useTranslation } from "react-i18next"
+
+// const { t } = useTranslation("common")
 
 const products = [
   {
     id: 1,
-    name: "Moog Synthesizer",
+    name: "Moog Synthesizer", //t("name-product"),
     category: "Books",
     price: 10.0,
     made_city: "Istanbul / Turkey",
@@ -179,4 +181,4 @@ const products = [
   },
 ]
 
-export default withTranslation("index")(products)
+export default products
