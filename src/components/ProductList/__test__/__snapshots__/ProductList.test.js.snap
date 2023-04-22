@@ -5,6 +5,919 @@ exports[`renders correctly 1`] = `
   <div
     className="grid xl:grid-cols-4 lg:grid-cols-4 md:grid-cols-2 sm:grid-cols-1 m-auto w-full"
     dir="ltr"
-  />
+  >
+    <div
+      className="mx-3 mb-10 border rounded-lg shadow-lg"
+    >
+      <img
+        alt="name-product"
+        className="rounded-t-lg shadow-lg w-full"
+        data-nimg="1"
+        decoding="async"
+        height={211.41}
+        loading="lazy"
+        onError={[Function]}
+        onLoad={[Function]}
+        src="/_next/image?url=%2Fimages%2FproductImg.png&w=640&q=75"
+        srcSet="/_next/image?url=%2Fimages%2FproductImg.png&w=384&q=75 1x, /_next/image?url=%2Fimages%2FproductImg.png&w=640&q=75 2x"
+        style={
+          {
+            "color": "transparent",
+          }
+        }
+        width={258}
+      />
+      <div
+        className="mx-3 text-center"
+      >
+        <div
+          className="info flex justify-between my-4 mx-3"
+        >
+          <div
+            className="text-left"
+          >
+            <h2
+              className="font-semibold"
+            >
+              name-product
+            </h2>
+            <p
+              className="font-extralight text-xs"
+            >
+              filter-one
+            </p>
+          </div>
+          <div>
+            <h2
+              className="font-extrabold text-xl"
+            >
+              $
+              10
+            </h2>
+            <p
+              className="font-extralight text-xs"
+            >
+              made-city
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div
+      className="mx-3 mb-10 border rounded-lg shadow-lg"
+    >
+      <img
+        alt="name-product"
+        className="rounded-t-lg shadow-lg w-full"
+        data-nimg="1"
+        decoding="async"
+        height={211.41}
+        loading="lazy"
+        onError={[Function]}
+        onLoad={[Function]}
+        src="/_next/image?url=%2Fimages%2FproductImg.png&w=640&q=75"
+        srcSet="/_next/image?url=%2Fimages%2FproductImg.png&w=384&q=75 1x, /_next/image?url=%2Fimages%2FproductImg.png&w=640&q=75 2x"
+        style={
+          {
+            "color": "transparent",
+          }
+        }
+        width={258}
+      />
+      <div
+        className="mx-3 text-center"
+      >
+        <div
+          className="info flex justify-between my-4 mx-3"
+        >
+          <div
+            className="text-left"
+          >
+            <h2
+              className="font-semibold"
+            >
+              name-product
+            </h2>
+            <p
+              className="font-extralight text-xs"
+            >
+              filter-two
+            </p>
+          </div>
+          <div>
+            <h2
+              className="font-extrabold text-xl"
+            >
+              $
+              20
+            </h2>
+            <p
+              className="font-extralight text-xs"
+            >
+              made-city
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div
+      className="mx-3 mb-10 border rounded-lg shadow-lg"
+    >
+      <img
+        alt="name-product"
+        className="rounded-t-lg shadow-lg w-full"
+        data-nimg="1"
+        decoding="async"
+        height={211.41}
+        loading="lazy"
+        onError={[Function]}
+        onLoad={[Function]}
+        src="/_next/image?url=%2Fimages%2FproductImg.png&w=640&q=75"
+        srcSet="/_next/image?url=%2Fimages%2FproductImg.png&w=384&q=75 1x, /_next/image?url=%2Fimages%2FproductImg.png&w=640&q=75 2x"
+        style={
+          {
+            "color": "transparent",
+          }
+        }
+        width={258}
+      />
+      <div
+        className="mx-3 text-center"
+      >
+        <div
+          className="info flex justify-between my-4 mx-3"
+        >
+          <div
+            className="text-left"
+          >
+            <h2
+              className="font-semibold"
+            >
+              name-product
+            </h2>
+            <p
+              className="font-extralight text-xs"
+            >
+              filter-two
+            </p>
+          </div>
+          <div>
+            <h2
+              className="font-extrabold text-xl"
+            >
+              $
+              30
+            </h2>
+            <p
+              className="font-extralight text-xs"
+            >
+              made-city
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div
+      className="mx-3 mb-10 border rounded-lg shadow-lg"
+    >
+      <img
+        alt="name-product"
+        className="rounded-t-lg shadow-lg w-full"
+        data-nimg="1"
+        decoding="async"
+        height={211.41}
+        loading="lazy"
+        onError={[Function]}
+        onLoad={[Function]}
+        src="/_next/image?url=%2Fimages%2FproductImg.png&w=640&q=75"
+        srcSet="/_next/image?url=%2Fimages%2FproductImg.png&w=384&q=75 1x, /_next/image?url=%2Fimages%2FproductImg.png&w=640&q=75 2x"
+        style={
+          {
+            "color": "transparent",
+          }
+        }
+        width={258}
+      />
+      <div
+        className="mx-3 text-center"
+      >
+        <div
+          className="info flex justify-between my-4 mx-3"
+        >
+          <div
+            className="text-left"
+          >
+            <h2
+              className="font-semibold"
+            >
+              name-product
+            </h2>
+            <p
+              className="font-extralight text-xs"
+            >
+              filter-three
+            </p>
+          </div>
+          <div>
+            <h2
+              className="font-extrabold text-xl"
+            >
+              $
+              40
+            </h2>
+            <p
+              className="font-extralight text-xs"
+            >
+              made-city
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div
+      className="mx-3 mb-10 border rounded-lg shadow-lg"
+    >
+      <img
+        alt="name-product"
+        className="rounded-t-lg shadow-lg w-full"
+        data-nimg="1"
+        decoding="async"
+        height={211.41}
+        loading="lazy"
+        onError={[Function]}
+        onLoad={[Function]}
+        src="/_next/image?url=%2Fimages%2FproductImg.png&w=640&q=75"
+        srcSet="/_next/image?url=%2Fimages%2FproductImg.png&w=384&q=75 1x, /_next/image?url=%2Fimages%2FproductImg.png&w=640&q=75 2x"
+        style={
+          {
+            "color": "transparent",
+          }
+        }
+        width={258}
+      />
+      <div
+        className="mx-3 text-center"
+      >
+        <div
+          className="info flex justify-between my-4 mx-3"
+        >
+          <div
+            className="text-left"
+          >
+            <h2
+              className="font-semibold"
+            >
+              name-product
+            </h2>
+            <p
+              className="font-extralight text-xs"
+            >
+              filter-four
+            </p>
+          </div>
+          <div>
+            <h2
+              className="font-extrabold text-xl"
+            >
+              $
+              50
+            </h2>
+            <p
+              className="font-extralight text-xs"
+            >
+              made-city
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div
+      className="mx-3 mb-10 border rounded-lg shadow-lg"
+    >
+      <img
+        alt="name-product"
+        className="rounded-t-lg shadow-lg w-full"
+        data-nimg="1"
+        decoding="async"
+        height={211.41}
+        loading="lazy"
+        onError={[Function]}
+        onLoad={[Function]}
+        src="/_next/image?url=%2Fimages%2FproductImg.png&w=640&q=75"
+        srcSet="/_next/image?url=%2Fimages%2FproductImg.png&w=384&q=75 1x, /_next/image?url=%2Fimages%2FproductImg.png&w=640&q=75 2x"
+        style={
+          {
+            "color": "transparent",
+          }
+        }
+        width={258}
+      />
+      <div
+        className="mx-3 text-center"
+      >
+        <div
+          className="info flex justify-between my-4 mx-3"
+        >
+          <div
+            className="text-left"
+          >
+            <h2
+              className="font-semibold"
+            >
+              name-product
+            </h2>
+            <p
+              className="font-extralight text-xs"
+            >
+              filter-four
+            </p>
+          </div>
+          <div>
+            <h2
+              className="font-extrabold text-xl"
+            >
+              $
+              60
+            </h2>
+            <p
+              className="font-extralight text-xs"
+            >
+              made-city
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div
+      className="mx-3 mb-10 border rounded-lg shadow-lg"
+    >
+      <img
+        alt="name-product"
+        className="rounded-t-lg shadow-lg w-full"
+        data-nimg="1"
+        decoding="async"
+        height={211.41}
+        loading="lazy"
+        onError={[Function]}
+        onLoad={[Function]}
+        src="/_next/image?url=%2Fimages%2FproductImg.png&w=640&q=75"
+        srcSet="/_next/image?url=%2Fimages%2FproductImg.png&w=384&q=75 1x, /_next/image?url=%2Fimages%2FproductImg.png&w=640&q=75 2x"
+        style={
+          {
+            "color": "transparent",
+          }
+        }
+        width={258}
+      />
+      <div
+        className="mx-3 text-center"
+      >
+        <div
+          className="info flex justify-between my-4 mx-3"
+        >
+          <div
+            className="text-left"
+          >
+            <h2
+              className="font-semibold"
+            >
+              name-product
+            </h2>
+            <p
+              className="font-extralight text-xs"
+            >
+              filter-four
+            </p>
+          </div>
+          <div>
+            <h2
+              className="font-extrabold text-xl"
+            >
+              $
+              70
+            </h2>
+            <p
+              className="font-extralight text-xs"
+            >
+              made-city
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div
+      className="mx-3 mb-10 border rounded-lg shadow-lg"
+    >
+      <img
+        alt="name-product"
+        className="rounded-t-lg shadow-lg w-full"
+        data-nimg="1"
+        decoding="async"
+        height={211.41}
+        loading="lazy"
+        onError={[Function]}
+        onLoad={[Function]}
+        src="/_next/image?url=%2Fimages%2FproductImg.png&w=640&q=75"
+        srcSet="/_next/image?url=%2Fimages%2FproductImg.png&w=384&q=75 1x, /_next/image?url=%2Fimages%2FproductImg.png&w=640&q=75 2x"
+        style={
+          {
+            "color": "transparent",
+          }
+        }
+        width={258}
+      />
+      <div
+        className="mx-3 text-center"
+      >
+        <div
+          className="info flex justify-between my-4 mx-3"
+        >
+          <div
+            className="text-left"
+          >
+            <h2
+              className="font-semibold"
+            >
+              name-product
+            </h2>
+            <p
+              className="font-extralight text-xs"
+            >
+              filter-four
+            </p>
+          </div>
+          <div>
+            <h2
+              className="font-extrabold text-xl"
+            >
+              $
+              80
+            </h2>
+            <p
+              className="font-extralight text-xs"
+            >
+              made-city
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div
+      className="mx-3 mb-10 border rounded-lg shadow-lg"
+    >
+      <img
+        alt="name-product"
+        className="rounded-t-lg shadow-lg w-full"
+        data-nimg="1"
+        decoding="async"
+        height={211.41}
+        loading="lazy"
+        onError={[Function]}
+        onLoad={[Function]}
+        src="/_next/image?url=%2Fimages%2FproductImg.png&w=640&q=75"
+        srcSet="/_next/image?url=%2Fimages%2FproductImg.png&w=384&q=75 1x, /_next/image?url=%2Fimages%2FproductImg.png&w=640&q=75 2x"
+        style={
+          {
+            "color": "transparent",
+          }
+        }
+        width={258}
+      />
+      <div
+        className="mx-3 text-center"
+      >
+        <div
+          className="info flex justify-between my-4 mx-3"
+        >
+          <div
+            className="text-left"
+          >
+            <h2
+              className="font-semibold"
+            >
+              name-product
+            </h2>
+            <p
+              className="font-extralight text-xs"
+            >
+              filter-four
+            </p>
+          </div>
+          <div>
+            <h2
+              className="font-extrabold text-xl"
+            >
+              $
+              90
+            </h2>
+            <p
+              className="font-extralight text-xs"
+            >
+              made-city
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div
+      className="mx-3 mb-10 border rounded-lg shadow-lg"
+    >
+      <img
+        alt="name-product"
+        className="rounded-t-lg shadow-lg w-full"
+        data-nimg="1"
+        decoding="async"
+        height={211.41}
+        loading="lazy"
+        onError={[Function]}
+        onLoad={[Function]}
+        src="/_next/image?url=%2Fimages%2FproductImg.png&w=640&q=75"
+        srcSet="/_next/image?url=%2Fimages%2FproductImg.png&w=384&q=75 1x, /_next/image?url=%2Fimages%2FproductImg.png&w=640&q=75 2x"
+        style={
+          {
+            "color": "transparent",
+          }
+        }
+        width={258}
+      />
+      <div
+        className="mx-3 text-center"
+      >
+        <div
+          className="info flex justify-between my-4 mx-3"
+        >
+          <div
+            className="text-left"
+          >
+            <h2
+              className="font-semibold"
+            >
+              name-product
+            </h2>
+            <p
+              className="font-extralight text-xs"
+            >
+              filter-four
+            </p>
+          </div>
+          <div>
+            <h2
+              className="font-extrabold text-xl"
+            >
+              $
+              100
+            </h2>
+            <p
+              className="font-extralight text-xs"
+            >
+              made-city
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div
+      className="mx-3 mb-10 border rounded-lg shadow-lg"
+    >
+      <img
+        alt="name-product"
+        className="rounded-t-lg shadow-lg w-full"
+        data-nimg="1"
+        decoding="async"
+        height={211.41}
+        loading="lazy"
+        onError={[Function]}
+        onLoad={[Function]}
+        src="/_next/image?url=%2Fimages%2FproductImg.png&w=640&q=75"
+        srcSet="/_next/image?url=%2Fimages%2FproductImg.png&w=384&q=75 1x, /_next/image?url=%2Fimages%2FproductImg.png&w=640&q=75 2x"
+        style={
+          {
+            "color": "transparent",
+          }
+        }
+        width={258}
+      />
+      <div
+        className="mx-3 text-center"
+      >
+        <div
+          className="info flex justify-between my-4 mx-3"
+        >
+          <div
+            className="text-left"
+          >
+            <h2
+              className="font-semibold"
+            >
+              name-product
+            </h2>
+            <p
+              className="font-extralight text-xs"
+            >
+              filter-three
+            </p>
+          </div>
+          <div>
+            <h2
+              className="font-extrabold text-xl"
+            >
+              $
+              200
+            </h2>
+            <p
+              className="font-extralight text-xs"
+            >
+              made-city
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div
+      className="mx-3 mb-10 border rounded-lg shadow-lg"
+    >
+      <img
+        alt="name-product"
+        className="rounded-t-lg shadow-lg w-full"
+        data-nimg="1"
+        decoding="async"
+        height={211.41}
+        loading="lazy"
+        onError={[Function]}
+        onLoad={[Function]}
+        src="/_next/image?url=%2Fimages%2FproductImg.png&w=640&q=75"
+        srcSet="/_next/image?url=%2Fimages%2FproductImg.png&w=384&q=75 1x, /_next/image?url=%2Fimages%2FproductImg.png&w=640&q=75 2x"
+        style={
+          {
+            "color": "transparent",
+          }
+        }
+        width={258}
+      />
+      <div
+        className="mx-3 text-center"
+      >
+        <div
+          className="info flex justify-between my-4 mx-3"
+        >
+          <div
+            className="text-left"
+          >
+            <h2
+              className="font-semibold"
+            >
+              name-product
+            </h2>
+            <p
+              className="font-extralight text-xs"
+            >
+              filter-three
+            </p>
+          </div>
+          <div>
+            <h2
+              className="font-extrabold text-xl"
+            >
+              $
+              300
+            </h2>
+            <p
+              className="font-extralight text-xs"
+            >
+              made-city
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div
+      className="mx-3 mb-10 border rounded-lg shadow-lg"
+    >
+      <img
+        alt="name-product"
+        className="rounded-t-lg shadow-lg w-full"
+        data-nimg="1"
+        decoding="async"
+        height={211.41}
+        loading="lazy"
+        onError={[Function]}
+        onLoad={[Function]}
+        src="/_next/image?url=%2Fimages%2FproductImg.png&w=640&q=75"
+        srcSet="/_next/image?url=%2Fimages%2FproductImg.png&w=384&q=75 1x, /_next/image?url=%2Fimages%2FproductImg.png&w=640&q=75 2x"
+        style={
+          {
+            "color": "transparent",
+          }
+        }
+        width={258}
+      />
+      <div
+        className="mx-3 text-center"
+      >
+        <div
+          className="info flex justify-between my-4 mx-3"
+        >
+          <div
+            className="text-left"
+          >
+            <h2
+              className="font-semibold"
+            >
+              name-product
+            </h2>
+            <p
+              className="font-extralight text-xs"
+            >
+              filter-three
+            </p>
+          </div>
+          <div>
+            <h2
+              className="font-extrabold text-xl"
+            >
+              $
+              500
+            </h2>
+            <p
+              className="font-extralight text-xs"
+            >
+              made-city
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div
+      className="mx-3 mb-10 border rounded-lg shadow-lg"
+    >
+      <img
+        alt="name-product"
+        className="rounded-t-lg shadow-lg w-full"
+        data-nimg="1"
+        decoding="async"
+        height={211.41}
+        loading="lazy"
+        onError={[Function]}
+        onLoad={[Function]}
+        src="/_next/image?url=%2Fimages%2FproductImg.png&w=640&q=75"
+        srcSet="/_next/image?url=%2Fimages%2FproductImg.png&w=384&q=75 1x, /_next/image?url=%2Fimages%2FproductImg.png&w=640&q=75 2x"
+        style={
+          {
+            "color": "transparent",
+          }
+        }
+        width={258}
+      />
+      <div
+        className="mx-3 text-center"
+      >
+        <div
+          className="info flex justify-between my-4 mx-3"
+        >
+          <div
+            className="text-left"
+          >
+            <h2
+              className="font-semibold"
+            >
+              name-product
+            </h2>
+            <p
+              className="font-extralight text-xs"
+            >
+              filter-three
+            </p>
+          </div>
+          <div>
+            <h2
+              className="font-extrabold text-xl"
+            >
+              $
+              600
+            </h2>
+            <p
+              className="font-extralight text-xs"
+            >
+              made-city
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div
+      className="mx-3 mb-10 border rounded-lg shadow-lg"
+    >
+      <img
+        alt="name-product"
+        className="rounded-t-lg shadow-lg w-full"
+        data-nimg="1"
+        decoding="async"
+        height={211.41}
+        loading="lazy"
+        onError={[Function]}
+        onLoad={[Function]}
+        src="/_next/image?url=%2Fimages%2FproductImg.png&w=640&q=75"
+        srcSet="/_next/image?url=%2Fimages%2FproductImg.png&w=384&q=75 1x, /_next/image?url=%2Fimages%2FproductImg.png&w=640&q=75 2x"
+        style={
+          {
+            "color": "transparent",
+          }
+        }
+        width={258}
+      />
+      <div
+        className="mx-3 text-center"
+      >
+        <div
+          className="info flex justify-between my-4 mx-3"
+        >
+          <div
+            className="text-left"
+          >
+            <h2
+              className="font-semibold"
+            >
+              name-product
+            </h2>
+            <p
+              className="font-extralight text-xs"
+            >
+              filter-three
+            </p>
+          </div>
+          <div>
+            <h2
+              className="font-extrabold text-xl"
+            >
+              $
+              700
+            </h2>
+            <p
+              className="font-extralight text-xs"
+            >
+              made-city
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div
+      className="mx-3 mb-10 border rounded-lg shadow-lg"
+    >
+      <img
+        alt="name-product"
+        className="rounded-t-lg shadow-lg w-full"
+        data-nimg="1"
+        decoding="async"
+        height={211.41}
+        loading="lazy"
+        onError={[Function]}
+        onLoad={[Function]}
+        src="/_next/image?url=%2Fimages%2FproductImg.png&w=640&q=75"
+        srcSet="/_next/image?url=%2Fimages%2FproductImg.png&w=384&q=75 1x, /_next/image?url=%2Fimages%2FproductImg.png&w=640&q=75 2x"
+        style={
+          {
+            "color": "transparent",
+          }
+        }
+        width={258}
+      />
+      <div
+        className="mx-3 text-center"
+      >
+        <div
+          className="info flex justify-between my-4 mx-3"
+        >
+          <div
+            className="text-left"
+          >
+            <h2
+              className="font-semibold"
+            >
+              name-product
+            </h2>
+            <p
+              className="font-extralight text-xs"
+            >
+              filter-three
+            </p>
+          </div>
+          <div>
+            <h2
+              className="font-extrabold text-xl"
+            >
+              $
+              800
+            </h2>
+            <p
+              className="font-extralight text-xs"
+            >
+              made-city
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
 </div>
 `;
