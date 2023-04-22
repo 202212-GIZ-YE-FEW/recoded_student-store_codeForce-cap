@@ -2,5 +2,9 @@
   "language": "en",
   "categories": "Categories",
   "price-filter":"Price Filter",
-  "name-product":"Moog Synthesizer"
+  "name-product":"Moog Synthesizer",
+  "min-price":"Sorry, the minimum price is $10",
+  "min-price-des": "Sorry, the minimum price cannot be greater than the maximum price",
+  "max-price":"Sorry, the maximum price is $1000",
+  "max-price-des": "Sorry, the maximum price cannot be less than the minimum price"
 }

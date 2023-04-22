@@ -15,9 +15,9 @@ function PriceFilter({ t }) {
   const handleMinChange = (e) => {
     const newMin = +e.target.value.replace(/\D/g, "")
     if (newMin < 0) {
-      alert("Sorry, the minimum price is $10")
+      t("min-price")
     } else if (newMin > tempValues[1]) {
-      alert("Sorry, the minimum price cannot be greater than the maximum price")
+      t("min-price-des")
     } else {
       setTempValues([newMin, tempValues[1]])
     }
@@ -26,9 +26,9 @@ function PriceFilter({ t }) {
   const handleMaxChange = (e) => {
     const newMax = +e.target.value.replace(/\D/g, "")
     if (newMax > 1000) {
-      alert("Sorry, the maximum price is $1000")
+      t("max-price")
     } else if (newMax < tempValues[0]) {
-      alert("Sorry, the maximum price cannot be less than the minimum price")
+      t("max-price-des")
     } else {
       setTempValues([tempValues[0], newMax])
     }
