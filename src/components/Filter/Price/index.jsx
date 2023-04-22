@@ -1,7 +1,11 @@
 import { useState } from "react"
+
 import { Range } from "react-range"
 
-export default function PriceFilter() {
+import { withTranslation } from "next-i18next"
+
+// add translation functions to filter-price component
+function PriceFilter({ t }) {
   const [tempValues, setTempValues] = useState([270, 770]) // temporary min and max values for changes made by user
 
   const handleChange = (newValues) => {
@@ -69,6 +73,8 @@ export default function PriceFilter() {
     </div>
   )
 }
+
+export default withTranslation("index")(PriceFilter)
 
 /* Just leave it i need to deal with it in another time */
 
