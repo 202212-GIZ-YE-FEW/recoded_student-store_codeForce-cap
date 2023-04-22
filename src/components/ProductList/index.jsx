@@ -1,6 +1,8 @@
 import Image from "next/image"
 
-export default function ProductList({ products = [], selectedFilter }) {
+import { withTranslation } from "next-i18next"
+
+function ProductList({ products = [], selectedFilter, t }) {
   // Remove duplicates from the products array
   const uniqueProducts = [
     ...new Set(products.map((product) => JSON.stringify(product))),
@@ -46,3 +48,5 @@ export default function ProductList({ products = [], selectedFilter }) {
     </div>
   )
 }
+
+export default withTranslation("index")(ProductList)
