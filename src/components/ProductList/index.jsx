@@ -17,7 +17,10 @@ function ProductList({ products = [], selectedFilter, t }) {
 
   return (
     <div>
-      <div className='grid xl:grid-cols-4 lg:grid-cols-4 md:grid-cols-2 sm:grid-cols-1 m-auto w-full'>
+      <div
+        className='grid xl:grid-cols-4 lg:grid-cols-4 md:grid-cols-2 sm:grid-cols-1 m-auto w-full'
+        dir={t("language") === "ar" ? "rtl" : "ltr"}
+      >
         {categoryFilter.map((product) => (
           <div
             key={product.id}

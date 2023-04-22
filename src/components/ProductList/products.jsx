@@ -1,3 +1,5 @@
+import { withTranslation } from "next-i18next"
+
 const products = [
   {
     id: 1,
@@ -177,4 +179,4 @@ const products = [
   },
 ]
 
-export default products
+export default withTranslation("index")(products)
