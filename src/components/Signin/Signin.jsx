@@ -79,7 +79,7 @@ function Signin({ t }) {
             <p>{t("dont-have-an-account")}</p>
           </div>
           <Link
-            href='/signup'
+            href='/sign-up'
             className='h-10 w-40 lg:w-48 lg:px-5 p-1 px-4 rounded-lg border-1 bg-pumpkin text-md font-normal text-white shadow-sm text-center'
           >
             {t("sign-up")}

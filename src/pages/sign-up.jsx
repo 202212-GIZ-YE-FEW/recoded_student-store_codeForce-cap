@@ -2,9 +2,9 @@ import RootLayout from "@/layout/root/RootLayout"
 
 import { serverSideTranslations } from "next-i18next/serverSideTranslations"
 
-import Signup from "./signup"
+import Signup from "./signup/index"
 
-export default function SignInPage() {
+export default function SignUpPage() {
   return (
     <RootLayout>
       <Signup />
