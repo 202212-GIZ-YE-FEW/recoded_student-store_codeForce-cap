@@ -24,6 +24,8 @@ import RootLayout from "@/layout/root/RootLayout"
 
 import signUp from "@/utils/firebase/auth/signup"
 
+import { withTranslation } from "react-i18next"
+
 // Define validation schema using Yup
 const validationSchema = Yup.object().shape({
   name: Yup.string().required("Name is required"),
@@ -207,10 +209,10 @@ function Signup({ t }) {
               </form>
               <div className='flex items-center'>
                 <div className='my-1 mr-2 h-px mt-[10px] w-[164px] bg-[#9dafbd]'></div>
-                <p>Or</p>
+                <p>{t("or")}</p>
                 <div className='my-1 mr-2 h-px mt-[10px] w-[164px] bg-[#9dafbd]'></div>
               </div>
-              <p className='text-md m-1 text-[#647581]'>Sign-up-with</p>
+              <p className='text-md m-1 text-[#647581]'>{t("sign-up-with")}</p>
               <div className='m-1 mb-8 flex flex-row  '>
                 <button className=' m-1 flex items-center rounded-3xl border border-[#F26F6F] p-1  text-[#F26F6F]'>
                   <BsGoogle
@@ -218,7 +220,7 @@ function Signup({ t }) {
                     size={24}
                     style={{ padding: "1px" }}
                   />
-                  <p className='mx-2 text-sm md:mx-3'>Google</p>
+                  <p className='mx-2 text-sm md:mx-3'>{t("google")}</p>
                 </button>
                 <button className='color-darkPurple m-1  flex items-center rounded-3xl border border-[#485DCF] p-1 text-[#485DCF]'>
                   <BsFacebook
@@ -226,7 +228,7 @@ function Signup({ t }) {
                     size={24}
                     style={{ padding: "1px" }}
                   />
-                  <p className='mx-2 text-sm md:mx-3'>Facebook</p>
+                  <p className='mx-2 text-sm md:mx-3'>{t("facebook")}</p>
                 </button>
                 <button className=' m-1 flex justify-around rounded-3xl border border-[#28C7FA]  p-1 text-[#28C7FA] '>
                   <BsTwitter
@@ -234,18 +236,18 @@ function Signup({ t }) {
                     size={24}
                     style={{ padding: "1px" }}
                   />
-                  <p className='mx-2 text-sm md:mx-3'>Twitter</p>
+                  <p className='mx-2 text-sm md:mx-3'>{t("twitter")}</p>
                 </button>
               </div>
               <div className='mb-4 text-xl text-[#647581]'>
-                <p>Already have an account?</p>
+                <p>{t("have-an-account")}</p>
               </div>
               {/* <Button buttonStyle='purpleSignUp' text='Sign in' /> */}
               <Link
                 href='/signin'
                 className='h-10 w-40 m-1 p-1 rounded-lg border-2 bg-purple-dark font-light text-[15px] text-white shadow-sm text-center'
               >
-                Sign in
+                {t("sign-in")}
               </Link>
               <br />
             </div>
@@ -256,4 +258,5 @@ function Signup({ t }) {
   )
 }
 
-export default Signup
+// export default Signup
+export default withTranslation("Signup")(Signup)

@@ -8,11 +8,11 @@
   "password":"Password",
   "password-confirm":"Re-enter Password",
   "forgot-password":"Forgot Password",
-  "sign-in-with":"Sign in with",
+  "sign-up-with":"Sign up with",
   "google":"Google",
   "facebook":"Facebook",
   "twitter":"Twitter",
-  "dont-have-an-account":"Don’t have an account?",
+  "have-an-account":"Already have an account?",
   "sign-in":"Sign in",
   "or":"or"
 }
