@@ -7,13 +7,14 @@ import { RxHamburgerMenu } from "react-icons/rx"
 import { TbArrowBadgeDown } from "react-icons/tb"
 import { TfiWorld } from "react-icons/tfi"
 
+import styles from "./Navbar.module.css"
 export default function Navbar() {
   const [languages, setLanguages] = useState(false)
   const [open, setOpen] = useState(false)
   return (
     <header className='sticky top-0 z-50'>
       <div
-        className={`navbar  m-auto px-10 md:flex md:flex-row py-4 justify-between gap-5 items-center bg-white transition-all 
+        className={`${styles.navbar} m-auto px-10 md:flex md:flex-row py-4 justify-between gap-5 items-center bg-white transition-all 
       `}
       >
         <Link href='/'>
