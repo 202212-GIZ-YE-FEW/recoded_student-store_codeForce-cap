@@ -1,14 +1,17 @@
 {
   "language": "ar",
-  "sign-in": "تسجيل الدخول",
+  "sign-up": "أنشاء حساب",
   "name":"الاسم",
   "surname":"اللقب",
-  "forgot-password":"نسيت كلمة المرور",
-  "sign-in-with":"تسجيل دخول بواسطه",
+  "email":"البريد الاليكتروني",
+  "school":"اسم المدرسة",
+  "password":"كلمة المرور",
+  "password-confirm":"إعادة ادخال كلمة المرور",
+  "sign-up-with":"أنشاء حساب بواسطة",
   "google":"جوجل",
   "facebook":"فيسبوك",
   "twitter":"تويتر",
-  "dont-have-an-account":"ليس لديك حساب؟",
-  "sign-up":"أنشاء حساب",
+  "have-an-account":"!لدي حساب بالفعل",
+  "sign-in":"تسجيل دخول",
   "or":"أو"
 }

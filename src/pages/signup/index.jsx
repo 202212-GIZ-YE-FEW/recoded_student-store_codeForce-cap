@@ -20,8 +20,6 @@ import Button from "@/components/button"
 
 import Input from "@/components/input"
 
-import RootLayout from "@/layout/root/RootLayout"
-
 import signUp from "@/utils/firebase/auth/signup"
 
 import { withTranslation } from "react-i18next"
@@ -119,7 +117,10 @@ function Signup({ t }) {
 
   return (
     <div>
-      <div className={`flex justify-center   md:flex-row  bg-[#f1f6fa] `}>
+      <div
+        className={`flex justify-center   md:flex-row  bg-[#f1f6fa] `}
+        // dir={t("language") === "ar" ? "rtl" : "ltr"}
+      >
         <div className={` ${styles.handbox_background}   w-3/6 `}>
           <div className='p-20'>
             <Image
@@ -203,7 +204,7 @@ function Signup({ t }) {
                 placeholder={t("password-confirm")}
               />
               <div className='flex justify-center'>
-                <Button buttonStyle='purpleSignUp' text='Sign up' />
+                <Button buttonStyle='purpleSignUp' text={t("sign-up")} />
               </div>
             </form>
             <div className='flex items-center'>
@@ -256,5 +257,4 @@ function Signup({ t }) {
   )
 }
 
-// export default Signup
-export default withTranslation("Signup")(Signup)
+export default withTranslation("signup")(Signup)

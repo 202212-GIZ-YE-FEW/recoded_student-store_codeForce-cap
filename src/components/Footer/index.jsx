@@ -70,7 +70,7 @@ function Footer({ t }) {
           <div className='pl-14 pt-10 md:pt-14'>
             <ul className='font-poppins text-white font-bold md:text-1xl lg:text-2xl'>
               <li className='mb-4'>
-                <Link href='/signup' className='hover:underline '>
+                <Link href='/sign-up' className='hover:underline '>
                   {t("register-for-free")}
                 </Link>
               </li>

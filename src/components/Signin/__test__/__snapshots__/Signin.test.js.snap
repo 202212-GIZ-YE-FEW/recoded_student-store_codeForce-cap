@@ -191,7 +191,7 @@ exports[`renders correctly 1`] = `
     </div>
     <a
       className="h-10 w-40 lg:w-48 lg:px-5 p-1 px-4 rounded-lg border-1 bg-pumpkin text-md font-normal text-white shadow-sm text-center"
-      href="/signup"
+      href="/sign-up"
       onClick={[Function]}
       onMouseEnter={[Function]}
       onTouchStart={[Function]}
