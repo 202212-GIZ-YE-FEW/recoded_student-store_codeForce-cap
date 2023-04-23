@@ -1,8 +1,6 @@
-import { useState } from "react"
-
-import { Range } from "react-range"
-
 import { withTranslation } from "next-i18next"
+import { useState } from "react"
+import { Range } from "react-range"
 
 // add translation functions to filter-price component
 function PriceFilter({ t }) {

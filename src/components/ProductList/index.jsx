@@ -1,5 +1,4 @@
 import Image from "next/image"
-
 import { withTranslation } from "next-i18next"
 
 import Products from "./products"

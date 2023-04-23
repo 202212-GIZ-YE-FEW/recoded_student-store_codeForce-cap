@@ -1,8 +1,8 @@
+import { serverSideTranslations } from "next-i18next/serverSideTranslations"
+
 import Signin from "@/components/Signin"
 
 import RootLayout from "@/layout/root/RootLayout"
-
-import { serverSideTranslations } from "next-i18next/serverSideTranslations"
 
 export default function SignInPage() {
   return (

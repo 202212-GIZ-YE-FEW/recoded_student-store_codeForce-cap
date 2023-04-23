@@ -1,14 +1,14 @@
 {
   "language": "ar",
   "sign-in": "تسجيل الدخول",
-  "name":"الاسم",
-  "surname":"اللقب",
-  "forgot-password":"نسيت كلمة المرور",
-  "sign-in-with":"تسجيل دخول بواسطه",
-  "google":"جوجل",
-  "facebook":"فيسبوك",
-  "twitter":"تويتر",
-  "dont-have-an-account":"ليس لديك حساب؟",
-  "sign-up":"أنشاء حساب",
-  "or":"أو"
+  "name": "الاسم",
+  "surname": "اللقب",
+  "forgot-password": "نسيت كلمة المرور",
+  "sign-in-with": "تسجيل دخول بواسطه",
+  "google": "جوجل",
+  "facebook": "فيسبوك",
+  "twitter": "تويتر",
+  "dont-have-an-account": "ليس لديك حساب؟",
+  "sign-up": "أنشاء حساب",
+  "or": "أو"
 }

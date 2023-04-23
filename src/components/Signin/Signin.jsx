@@ -1,16 +1,12 @@
 import Image from "next/image"
-
 import Link from "next/link"
-
+import { withTranslation } from "next-i18next"
 import { BsFacebook, BsGoogle, BsTwitter } from "react-icons/bs"
 
 import styles from "./Signin.module.css"
 
 import Button from "../button"
-
 import Input from "../input"
-
-import { withTranslation } from "next-i18next"
 
 function Signin({ t }) {
   return (

@@ -1,7 +1,6 @@
-import CardView from "../CardView"
-
 import { withTranslation } from "next-i18next"
 
+import CardView from "../CardView"
 import Highlighter from "../highlighter"
 
 function OurTeam({ t }) {

@@ -1,14 +1,14 @@
 {
   "language": "en",
   "sign-in": "Sign in",
-  "name":"Name",
-  "surname":"Surname",
-  "forgot-password":"Forgot Password",
-  "sign-in-with":"Sign in with",
-  "google":"Google",
-  "facebook":"Facebook",
-  "twitter":"Twitter",
-  "dont-have-an-account":"Don’t have an account?",
-  "sign-up":"Sign-up",
-  "or":"or"
+  "name": "Name",
+  "surname": "Surname",
+  "forgot-password": "Forgot Password",
+  "sign-in-with": "Sign in with",
+  "google": "Google",
+  "facebook": "Facebook",
+  "twitter": "Twitter",
+  "dont-have-an-account": "Don’t have an account?",
+  "sign-up": "Sign-up",
+  "or": "or"
 }

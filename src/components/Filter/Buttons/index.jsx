@@ -1,10 +1,9 @@
 import Image from "next/image"
+import { withTranslation } from "next-i18next"
 
 import Highlighter from "@/components/highlighter"
 
 import PriceFilter from "../Price"
-
-import { withTranslation } from "next-i18next"
 
 function Buttons({ filters = [], handleCategoryFilter, t }) {
   const CategoryFilter = ({ filter, image, alt }) => (

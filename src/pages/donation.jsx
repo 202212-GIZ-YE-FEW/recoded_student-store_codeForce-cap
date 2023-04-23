@@ -1,8 +1,8 @@
+import { serverSideTranslations } from "next-i18next/serverSideTranslations"
+
 import Donation from "@/components/donation"
 
 import RootLayout from "@/layout/root/RootLayout"
-
-import { serverSideTranslations } from "next-i18next/serverSideTranslations"
 
 export default function donation() {
   return (

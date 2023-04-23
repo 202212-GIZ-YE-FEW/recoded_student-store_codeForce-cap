@@ -1,15 +1,15 @@
 {
   "language": "en",
   "categories": "Categories",
-  "price-filter":"Price Filter",
-  "name-product":"Moog Synthesizer",
-  "min-price":"Sorry, the minimum price is $10",
+  "price-filter": "Price Filter",
+  "name-product": "Moog Synthesizer",
+  "min-price": "Sorry, the minimum price is $10",
   "min-price-des": "Sorry, the minimum price cannot be greater than the maximum price",
-  "max-price":"Sorry, the maximum price is $1000",
+  "max-price": "Sorry, the maximum price is $1000",
   "max-price-des": "Sorry, the maximum price cannot be less than the minimum price",
-  "filter-one":"Book",
-  "filter-two":"Furniture",
-  "filter-three":"Electronics",
-  "filter-four":"Two-wheeler",
-  "made-city":"Istanbul / Turkey"
+  "filter-one": "Book",
+  "filter-two": "Furniture",
+  "filter-three": "Electronics",
+  "filter-four": "Two-wheeler",
+  "made-city": "Istanbul / Turkey"
 }

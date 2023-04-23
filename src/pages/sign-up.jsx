@@ -1,6 +1,6 @@
-import RootLayout from "@/layout/root/RootLayout"
-
 import { serverSideTranslations } from "next-i18next/serverSideTranslations"
+
+import RootLayout from "@/layout/root/RootLayout"
 
 import Signup from "../components/signup/index"
 

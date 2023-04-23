@@ -1,9 +1,7 @@
+import { withTranslation } from "next-i18next"
 import { useState } from "react"
 
-import { withTranslation } from "next-i18next"
-
 import ProductList from "@/components/ProductList"
-
 import products from "@/components/ProductList/products"
 
 import Buttons from "../Buttons"
