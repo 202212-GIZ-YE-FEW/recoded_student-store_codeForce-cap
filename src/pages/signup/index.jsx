@@ -1,18 +1,27 @@
 import bcrypt from "bcryptjs"
+
 import DOMPurify from "dompurify"
+
 import Image from "next/image"
+
 import Link from "next/link"
+
 import { useRouter } from "next/router"
+
 import { useState } from "react"
+
 import { BsFacebook, BsGoogle, BsTwitter } from "react-icons/bs"
+
 import * as Yup from "yup"
 
 import styles from "./Signup.module.css"
 
 import Button from "@/components/button"
+
 import Input from "@/components/input"
 
 import RootLayout from "@/layout/root/RootLayout"
+
 import signUp from "@/utils/firebase/auth/signup"
 
 // Define validation schema using Yup
@@ -48,7 +57,7 @@ const limiter = rateLimit({
 })
 */
 
-function Signup() {
+function Signup({ t }) {
   const router = useRouter()
 
   const [formData, setFormData] = useState({
@@ -111,7 +120,7 @@ function Signup() {
       <div>
         <div className={`flex justify-center   md:flex-row  bg-[#f1f6fa] `}>
           <div className={` ${styles.handbox_background}   w-3/6 `}>
-            <div className=' p-20 '>
+            <div className='p-20'>
               <Image
                 src='/images/hands_box.png'
                 alt='handbox'
@@ -125,7 +134,7 @@ function Signup() {
           >
             <div className='container m-auto flex w-5/6 flex-col items-center'>
               <h1 className='my-2 py-6 text-4xl font-semibold text-[#485DCF] md:my-3 md:text-5xl'>
-                Sign-Up
+                {t("sign-up")}
               </h1>
 
               <form
@@ -137,7 +146,7 @@ function Signup() {
                     type='text'
                     id='firstName'
                     name='firstName'
-                    placeholder='Name'
+                    placeholder={t("name")}
                     value={formData.name}
                     onChange={handleChange}
                   />
@@ -147,7 +156,7 @@ function Signup() {
                     id='surname'
                     type='text'
                     name='surname'
-                    placeholder='Surname'
+                    placeholder={t("surname")}
                     value={formData.surname}
                     onChange={handleChange}
                   />
@@ -157,7 +166,7 @@ function Signup() {
                     type='email'
                     id='email'
                     name='email'
-                    placeholder='E-mail address'
+                    placeholder={t("email")}
                     value={formData.email}
                     onChange={handleChange}
                   />
@@ -168,7 +177,7 @@ function Signup() {
                     type='text'
                     id='schoolName'
                     name='schoolName'
-                    placeholder='School name'
+                    placeholder={t("school")}
                     value={formData.schoolName}
                     onChange={handleChange}
                   />
@@ -178,7 +187,7 @@ function Signup() {
                     type='password'
                     id='password'
                     name='password'
-                    placeholder='Password'
+                    placeholder={t("password")}
                     value={formData.password}
                     onChange={handleChange}
                   />
@@ -190,7 +199,7 @@ function Signup() {
                   name='passwordConfirm'
                   value={formData.passwordConfirm}
                   onChange={handleChange}
-                  placeholder='Re-enter password'
+                  placeholder={t("password-confirm")}
                 />
                 <div className='flex justify-center'>
                   <Button buttonStyle='purpleSignUp' text='Sign up' />

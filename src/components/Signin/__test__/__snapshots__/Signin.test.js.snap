@@ -35,7 +35,7 @@ exports[`renders correctly 1`] = `
     <h1
       className="my-2 py-6 text-4xl font-semibold text-[#FF8A57] md:my-3 md:text-5xl"
     >
-      Sign-in
+      sign-in
     </h1>
     <form
       className="container m-auto mb-6 flex w-5/6 flex-col items-center"
@@ -44,7 +44,7 @@ exports[`renders correctly 1`] = `
         autoComplete="off"
         className="my-2 block w-full rounded-lg border border-gray-300 p-2.5 text-center lg:w-96 md:w-72"
         name="firstName"
-        placeholder="Name"
+        placeholder="name"
         required={false}
         type="text"
       />
@@ -52,7 +52,7 @@ exports[`renders correctly 1`] = `
         autoComplete="off"
         className="my-2 block w-full rounded-lg border border-gray-300 p-2.5 text-center lg:w-96 md:w-64"
         name="surname"
-        placeholder="Surname"
+        placeholder="surname"
         required={false}
         type="text"
       />
@@ -63,13 +63,13 @@ exports[`renders correctly 1`] = `
           className="h-10 w-40 lg:w-48 lg:px-5 p-1 px-4 rounded-lg border-1 bg-pumpkin text-md font-normal text-white shadow-sm"
           type="button"
         >
-          Sign in
+          sign-in
         </button>
         <button
           className="h-10 w-40 lg:w-48 lg:px-5 p-1 px-4 rounded-lg border-1 bg-pumpkin text-md font-normal text-white shadow-sm"
           type="button"
         >
-          forgotPassword 
+          forgot-password
         </button>
       </div>
     </form>
@@ -80,7 +80,7 @@ exports[`renders correctly 1`] = `
         className="my-1 mr-2 h-px mt-[10px] w-[164px] bg-[#9dafbd]"
       />
       <p>
-        Or
+        or
       </p>
       <div
         className="my-1 mr-2 h-px mt-[10px] w-[164px] bg-[#9dafbd]"
@@ -89,7 +89,7 @@ exports[`renders correctly 1`] = `
     <p
       className="text-md m-1 text-[#647581]"
     >
-      Sign-up-with
+      sign-in-with
     </p>
     <div
       className="m-1 mb-8 flex flex-row  "
@@ -120,7 +120,7 @@ exports[`renders correctly 1`] = `
         <p
           className="mx-2 text-sm md:mx-3"
         >
-          Google
+          google
         </p>
       </button>
       <button
@@ -149,7 +149,7 @@ exports[`renders correctly 1`] = `
         <p
           className="mx-2 text-sm md:mx-3"
         >
-          Facebook
+          facebook
         </p>
       </button>
       <button
@@ -178,7 +178,7 @@ exports[`renders correctly 1`] = `
         <p
           className="mx-2 text-sm md:mx-3"
         >
-          Twitter
+          twitter
         </p>
       </button>
     </div>
@@ -186,7 +186,7 @@ exports[`renders correctly 1`] = `
       className="mb-4 text-xl text-[#647581]"
     >
       <p>
-        Don’t have an account??
+        dont-have-an-account
       </p>
     </div>
     <a
@@ -196,7 +196,7 @@ exports[`renders correctly 1`] = `
       onMouseEnter={[Function]}
       onTouchStart={[Function]}
     >
-      Sign-up
+      sign-up
     </a>
   </div>
 </div>
