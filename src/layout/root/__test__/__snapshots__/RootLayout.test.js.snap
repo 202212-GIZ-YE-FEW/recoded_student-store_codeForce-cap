@@ -179,7 +179,8 @@ exports[`renders correctly 1`] = `
           className=" flex-1 border flex items-center py-2 px-4 rounded-3xl"
         >
           <input
-            className="search w-full text-sm  placeholder:text-gray-300 placeholder:capitalize text-gray-600"
+            className="search input w-full text-sm placeholder:text-gray-300 placeholder:capitalize text-gray-600
+              "
             placeholder="search here"
             type="text"
           />
