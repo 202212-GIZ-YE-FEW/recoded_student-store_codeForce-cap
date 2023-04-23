@@ -83,7 +83,8 @@ export default function Navbar() {
             <input
               type='text'
               placeholder='search here'
-              className='search w-full text-sm  placeholder:text-gray-300 placeholder:capitalize text-gray-600'
+              className={`${styles.search} ${styles.input} w-full text-sm  placeholder:text-gray-300 placeholder:capitalize text-gray-600
+              `}
             />
             <div className=''>
               <AiOutlineSearch />

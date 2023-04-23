@@ -107,7 +107,7 @@ exports[`renders correctly 1`] = `
       </div>
     </div>
     <svg
-      className="absolute right-6 top-8 text-2xl cursor-pointer md:hidden "
+      className="absolute right-6 top-8 text-2xl cursor-pointer md:hidden show"
       fill="none"
       height="1em"
       onClick={[Function]}
