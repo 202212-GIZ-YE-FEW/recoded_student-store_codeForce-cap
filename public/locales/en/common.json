@@ -7,8 +7,11 @@
   "sell-items": "Sell Items",
   "search-here": "Search Here",
   "contact-us": "Contact Us:",
-  "register-for-free":"Register for free",
+  "register-for-free": "Register for free",
   "start-selling": "Start Selling",
   "buy-products": "Buy Products",
-  "scroll-up": "Scroll Up!"
+  "scroll-up": "Scroll Up!",
+  "error": "We could not find the page.",
+  "error-des": "Do not worry, you can find plenty of other things at home.",
+  "back-home": "Back to Home"
 }

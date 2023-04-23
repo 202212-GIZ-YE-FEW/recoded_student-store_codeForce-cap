@@ -302,7 +302,7 @@ exports[`renders correctly 1`] = `
             className="flex gap-3 capitalize flex-col md:flex-row"
           >
             <a
-              href="/signin"
+              href="/sign-in"
               onClick={[Function]}
               onMouseEnter={[Function]}
               onTouchStart={[Function]}
@@ -494,7 +494,7 @@ exports[`renders correctly 1`] = `
           >
             <a
               className="hover:underline "
-              href="/signup"
+              href="/sign-up"
               onClick={[Function]}
               onMouseEnter={[Function]}
               onTouchStart={[Function]}

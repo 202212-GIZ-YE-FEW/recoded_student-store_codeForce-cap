@@ -1,9 +1,14 @@
 import Image from "next/image"
+
 import Link from "next/link"
 
 import RootLayout from "@/layout/root/RootLayout"
 
+import { useTranslation } from "next-i18next"
+
 export default function NotFoundPage() {
+  const { t } = useTranslation("common")
+
   return (
     <RootLayout>
       <div className='container flex flex-col items-center justify-center px-5 mx-auto my-8'>
