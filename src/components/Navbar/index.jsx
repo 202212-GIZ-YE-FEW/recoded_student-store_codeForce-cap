@@ -47,13 +47,13 @@ export default function Navbar() {
         {/* ----------- Burger ----------- */}
         <RxHamburgerMenu
           className={`absolute right-6 top-8 text-2xl cursor-pointer md:hidden ${
-            open ? "hidden" : ""
+            open ? "hidden" : `${styles.show}`
           }`}
           onClick={() => setOpen(true)}
         />
         <AiOutlineClose
           className={`absolute right-6 top-8 text-2xl cursor-pointer md:hidden ${
-            open ? "" : "hidden"
+            open ? `${styles.show}` : "hidden"
           }`}
           onClick={() => setOpen(false)}
         />
