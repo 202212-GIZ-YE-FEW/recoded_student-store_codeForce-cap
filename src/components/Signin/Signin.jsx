@@ -1,15 +1,24 @@
 import Image from "next/image"
+
 import Link from "next/link"
+
 import { BsFacebook, BsGoogle, BsTwitter } from "react-icons/bs"
 
 import styles from "./Signin.module.css"
 
 import Button from "../button"
+
 import Input from "../input"
-function Signin() {
+
+import { withTranslation } from "next-i18next"
+
+function Signin({ t }) {
   return (
     <>
-      <div className={`flex justify-center  md:flex-row  bg-[#f1f6fa] `}>
+      <div
+        className={`flex justify-center  md:flex-row  bg-[#f1f6fa] `}
+        // dir={t("language") === "ar" ? "rtl" : "ltr"}
+      >
         <div className={` ${styles.handbox_background}   w-3/5 `}>
           <div className=' p-20 '>
             <Image
@@ -82,4 +91,4 @@ function Signin() {
   )
 }
 
-export default Signin
+export default withTranslation("signin")(Signin)
