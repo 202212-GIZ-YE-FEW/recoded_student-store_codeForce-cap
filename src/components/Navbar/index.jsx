@@ -32,7 +32,7 @@ export default function Navbar() {
           <div className='relative z-50 '>
             <div
               className={`absolute left-[-100px] top-2 bg-white capitalize border border-solid border-violet-600${
-                languages ? " show" : " hidden"
+                languages ? `${styles.show}` : " hidden"
               }`}
             >
               <div className='my-2 px-5 py-2 hover:bg-gray-200 transition-all duration-500'>
@@ -101,7 +101,7 @@ export default function Navbar() {
             <div className='relative'>
               <div
                 className={`absolute left-[-100px] top-5 bg-white capitalize ${
-                  languages ? "show" : "hidden"
+                  languages ? `${styles.show}` : "hidden"
                 }`}
               >
                 <div className='my-2 px-5 py-2 hover:bg-gray-200 transition-all duration-500'>
