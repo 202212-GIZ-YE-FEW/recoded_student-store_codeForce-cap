@@ -28,6 +28,22 @@ export default function Sellitems() {
       [name]: value,
     }))
   }
+
+  // Image upload handler
+  const UploadedImageHandler = (event, imageField) => {
+    const file = event.target.files[0]
+    if (file) {
+      const reader = new FileReader()
+      reader.readAsDataURL(file)
+      reader.onloadend = () => {
+        setFormData((prevFormData) => ({
+          ...prevFormData,
+          [imageField]: reader.result,
+        }))
+      }
+    }
+  }
+
   return (
     <section className='mx-5 mb-3'>
       <Highlighter text='List an Item/Service' />
