@@ -9,97 +9,57 @@ export default function Sellitems() {
   return (
     <section className='mx-5 mb-3'>
       <Highlighter text='List an Item/Service' />
-      <hr className='w-[95%] h-[1.5px] mx-auto bg-gray-100 border-0 rounded dark:bg-gray-700'></hr>
+      <hr className='w-[100%] h-[1.5px] mx-auto bg-gray-100 border-0 rounded dark:bg-gray-700'></hr>
       <br />
       <div className='grid grid-cols-1 lg:grid-cols-2 gap-4'>
-        <div className='grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-1 gap-4'>
-          <label
-            htmlFor='primaryImage'
-            className='inline-block cursor-pointer bg-[#979797] max-w-[690px] min-h-full'
-          >
+        <div className='flex flex-col sm:flex-row lg:flex-col gap-5'>
+          <span>
             <Image
-              className='mx-auto'
+              className='block drop-shadow-2xl lg:w-full'
               src={defaultImageInput}
               alt='primaryImage'
-              width={620}
+              width={570}
               height={340}
             />
-            <Input
-              className='hidden'
-              type='file'
-              id='primaryImage'
-              name='primaryImage'
-              accept='image/*'
-            />
-          </label>
-          <span className='flex flex-row sm:flex-col lg:flex-row gap-[60px] sm:gap-4 lg:gap-[60px]'>
-            <label
-              htmlFor='secondaryImage'
-              className='inline-block cursor-pointer bg-[#979797]'
-            >
+          </span>
+          <div className='flex flex-row sm:flex-col lg:flex-row gap-10 sm:gap-4 lg:gap-20'>
+            <span>
               <Image
-                className='mx-auto'
+                className='block drop-shadow-2xl sm:w-full lg:w-[190px]'
                 src={defaultImageInput}
                 alt='secondaryImage'
                 width={190}
                 height={137}
               />
-              <Input
-                className='hidden'
-                type='file'
-                id='secondaryImage'
-                name='secondaryImage'
-                accept='image/*'
-              />
-            </label>
-            <span className='flex gap-[60px] sm:gap-4 lg:gap-[60px]'>
-              <label
-                htmlFor='tertiaryImage'
-                className='inline-block cursor-pointer bg-[#979797]'
-              >
+            </span>
+            <div className='flex gap-10 sm:gap-4 lg:gap-20'>
+              <span>
                 <Image
-                  className='mx-auto'
+                  className='block drop-shadow-2xl'
                   src={defaultImageInput}
                   alt='tertiaryImage'
                   width={190}
                   height={137}
                 />
-                <Input
-                  className='hidden'
-                  type='file'
-                  id='tertiaryImage'
-                  name='tertiaryImage'
-                  accept='image/*'
-                />
-              </label>
-              <label
-                htmlFor='quaternaryImage'
-                className='inline-block cursor-pointer bg-[#979797]'
-              >
+              </span>
+              <span>
                 <Image
-                  className='mx-auto'
+                  className='block drop-shadow-2xl'
                   src={defaultImageInput}
                   alt='quaternaryImage'
                   width={190}
                   height={137}
                 />
-                <Input
-                  className='hidden'
-                  type='file'
-                  id='quaternaryImage'
-                  name='quaternaryImage'
-                  accept='image/*'
-                />
-              </label>
-            </span>
-          </span>
+              </span>
+            </div>
+          </div>
         </div>
 
         <div>
           <div className='flex flex-col sm:flex-row sm:gap-16'>
             <select
               id='typeSelector'
-              className='cursor-pointer text-center block py-2.5 px-0 w-full text-sm text-gray-500 bg-transparent border-0 border-b-2 border-gray-200 appearance-none dark:text-gray-400 dark:border-gray-700 focus:outline-none focus:ring-0'
+              className='cursor-pointer text-center block py-2.5 w-full text-md text-gray-600 bg-transparent border-0 border-b-2 border-gray-200 dark:text-gray-700 dark:border-gray-700 focus:outline-none focus:ring-0'
             >
               <option selected>Choose a type</option>
               <option value='product'>Product</option>
@@ -107,7 +67,7 @@ export default function Sellitems() {
             </select>
             <select
               id='categorySelector'
-              className='cursor-pointer text-center block py-2.5 px-0 w-full text-sm text-gray-500 bg-transparent border-0 border-b-2 border-gray-200 appearance-none dark:text-gray-400 dark:border-gray-700 focus:outline-none focus:ring-0'
+              className='cursor-pointer text-center block py-2.5 w-full text-md text-gray-600 bg-transparent border-0 border-b-2 border-gray-200 dark:text-gray-700 dark:border-gray-700 focus:outline-none focus:ring-0'
             >
               <option selected>Choose a Category</option>
               <option value='Books'>Books</option>
