@@ -9,66 +9,84 @@ export default function Sellitems() {
   return (
     <div>
       <Highlighter text='List an Item/Service' />
-      <label htmlFor='primaryImage' className='inline-block cursor-pointer'>
-        <Image
-          src={defaultImageInput}
-          alt='primaryImage'
-          width={620}
-          height={340}
-        />
-        <Input
-          className='hidden'
-          type='file'
-          id='primaryImage'
-          name='primaryImage'
-          accept='image/*'
-        />
-      </label>
-      <label htmlFor='secondaryImage' className='inline-block cursor-pointer'>
-        <Image
-          src={defaultImageInput}
-          alt='secondaryImage'
-          width={190}
-          height={137}
-        />
-        <Input
-          className='hidden'
-          type='file'
-          id='secondaryImage'
-          name='secondaryImage'
-          accept='image/*'
-        />
-      </label>
-      <label htmlFor='tertiaryImage' className='inline-block cursor-pointer'>
-        <Image
-          src={defaultImageInput}
-          alt='tertiaryImage'
-          width={190}
-          height={137}
-        />
-        <Input
-          className='hidden'
-          type='file'
-          id='tertiaryImage'
-          name='tertiaryImage'
-          accept='image/*'
-        />
-      </label>
-      <label htmlFor='quaternaryImage' className='inline-block cursor-pointer'>
-        <Image
-          src={defaultImageInput}
-          alt='quaternaryImage'
-          width={190}
-          height={137}
-        />
-        <Input
-          className='hidden'
-          type='file'
-          id='quaternaryImage'
-          name='quaternaryImage'
-          accept='image/*'
-        />
-      </label>
+      <div className='flex flex-col mx-10'>
+        <span>
+          <label
+            htmlFor='primaryImage'
+            className='inline-block cursor-pointer bg-[#979797]'
+          >
+            <Image
+              src={defaultImageInput}
+              alt='primaryImage'
+              width={620}
+              height={340}
+            />
+            <Input
+              className='hidden'
+              type='file'
+              id='primaryImage'
+              name='primaryImage'
+              accept='image/*'
+            />
+          </label>
+        </span>
+        <span>
+          <label
+            htmlFor='secondaryImage'
+            className='inline-block cursor-pointer bg-[#979797]'
+          >
+            <Image
+              src={defaultImageInput}
+              alt='secondaryImage'
+              width={190}
+              height={137}
+            />
+            <Input
+              className='hidden'
+              type='file'
+              id='secondaryImage'
+              name='secondaryImage'
+              accept='image/*'
+            />
+          </label>
+          <label
+            htmlFor='tertiaryImage'
+            className='inline-block cursor-pointer bg-[#979797] mx-[17px]'
+          >
+            <Image
+              src={defaultImageInput}
+              alt='tertiaryImage'
+              width={190}
+              height={137}
+            />
+            <Input
+              className='hidden'
+              type='file'
+              id='tertiaryImage'
+              name='tertiaryImage'
+              accept='image/*'
+            />
+          </label>
+          <label
+            htmlFor='quaternaryImage'
+            className='inline-block cursor-pointer bg-[#979797] mx-[17px]'
+          >
+            <Image
+              src={defaultImageInput}
+              alt='quaternaryImage'
+              width={190}
+              height={137}
+            />
+            <Input
+              className='hidden'
+              type='file'
+              id='quaternaryImage'
+              name='quaternaryImage'
+              accept='image/*'
+            />
+          </label>
+        </span>
+      </div>
 
       <select
         id='typeSelector'
