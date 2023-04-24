@@ -7,12 +7,12 @@ import Input from "../input"
 
 export default function Sellitems() {
   return (
-    <>
+    <section>
       <Highlighter text='List an Item/Service' />
-      <hr className='w-[89%] h-[1.5px] mx-auto bg-gray-100 border-0 rounded dark:bg-gray-700'></hr>
+      <hr className='w-[95%] h-[1.5px] mx-auto bg-gray-100 border-0 rounded dark:bg-gray-700'></hr>
       <br />
       <div className='flex justify-around'>
-        <div className='flex flex-col'>
+        <div className='flex flex-col justify-between'>
           <span>
             <label
               htmlFor='primaryImage'
@@ -33,7 +33,7 @@ export default function Sellitems() {
               />
             </label>
           </span>
-          <span>
+          <span className='grid grid-cols-3 gap-6'>
             <label
               htmlFor='secondaryImage'
               className='inline-block cursor-pointer bg-[#979797]'
@@ -54,7 +54,7 @@ export default function Sellitems() {
             </label>
             <label
               htmlFor='tertiaryImage'
-              className='inline-block cursor-pointer bg-[#979797] ml-[25px]'
+              className='inline-block cursor-pointer bg-[#979797]'
             >
               <Image
                 src={defaultImageInput}
@@ -72,7 +72,7 @@ export default function Sellitems() {
             </label>
             <label
               htmlFor='quaternaryImage'
-              className='inline-block cursor-pointer bg-[#979797] ml-[25px]'
+              className='inline-block cursor-pointer bg-[#979797]'
             >
               <Image
                 src={defaultImageInput}
@@ -129,6 +129,6 @@ export default function Sellitems() {
           </span>
         </div>
       </div>
-    </>
+    </section>
   )
 }
