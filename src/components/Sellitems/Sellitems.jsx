@@ -1,11 +1,16 @@
 import Image from "next/image"
 
-import defaultImageInput from "../../../public/images/imagesDefaultInput.png"
 import Button from "../button"
 import Highlighter from "../highlighter"
 import Input from "../input"
 
 export default function Sellitems() {
+  const formData = {
+    primaryImage: "/images/emptyImage.png",
+    secondaryImage: "/images/emptyImage.png",
+    tertiaryImage: "/images/emptyImage.png",
+    quaternaryImage: "/images/emptyImage.png",
+  }
   return (
     <section className='mx-5 mb-3'>
       <Highlighter text='List an Item/Service' />
@@ -16,7 +21,7 @@ export default function Sellitems() {
           <span>
             <Image
               className='block drop-shadow-2xl lg:w-full'
-              src={defaultImageInput}
+              src={formData.primaryImage}
               alt='primaryImage'
               width={570}
               height={340}
@@ -26,7 +31,7 @@ export default function Sellitems() {
             <span>
               <Image
                 className='block drop-shadow-2xl sm:w-full lg:w-[190px]'
-                src={defaultImageInput}
+                src={formData.secondaryImage}
                 alt='secondaryImage'
                 width={190}
                 height={137}
@@ -36,7 +41,7 @@ export default function Sellitems() {
               <span>
                 <Image
                   className='block drop-shadow-2xl'
-                  src={defaultImageInput}
+                  src={formData.tertiaryImage}
                   alt='tertiaryImage'
                   width={190}
                   height={137}
@@ -45,7 +50,7 @@ export default function Sellitems() {
               <span>
                 <Image
                   className='block drop-shadow-2xl'
-                  src={defaultImageInput}
+                  src={formData.quaternaryImage}
                   alt='quaternaryImage'
                   width={190}
                   height={137}
