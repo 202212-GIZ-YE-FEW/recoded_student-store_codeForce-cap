@@ -124,7 +124,7 @@ export default function Sellitems() {
             <Input placeholder='Price' className='w-[47%]' />
           </span>
           <span className='flex'>
-            <Button buttonStyle='listItem' text='Upload image(s)' />
+            <Button buttonStyle='uploadImage' text='Upload image(s)' />
             <Button buttonStyle='listItem' text='List' type='submit' />
           </span>
         </div>
