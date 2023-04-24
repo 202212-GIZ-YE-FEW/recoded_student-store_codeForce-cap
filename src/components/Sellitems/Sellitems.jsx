@@ -1,16 +1,23 @@
 import Image from "next/image"
+import { useState } from "react"
 
 import Button from "../button"
 import Highlighter from "../highlighter"
 import Input from "../input"
 
 export default function Sellitems() {
-  const formData = {
+  const [formData, setFormData] = useState({
     primaryImage: "/images/emptyImage.png",
     secondaryImage: "/images/emptyImage.png",
     tertiaryImage: "/images/emptyImage.png",
     quaternaryImage: "/images/emptyImage.png",
-  }
+    type: "",
+    category: "",
+    productName: "",
+    description: "",
+    location: "",
+    price: "",
+  })
   return (
     <section className='mx-5 mb-3'>
       <Highlighter text='List an Item/Service' />
