@@ -7,12 +7,12 @@ import Input from "../input"
 
 export default function Sellitems() {
   return (
-    <section>
+    <section className='mx-5'>
       <Highlighter text='List an Item/Service' />
       <hr className='w-[95%] h-[1.5px] mx-auto bg-gray-100 border-0 rounded dark:bg-gray-700'></hr>
       <br />
-      <div className='flex justify-around'>
-        <div className='flex flex-col justify-between'>
+      <div className='grid grid-cols-1 lg:grid-cols-2 gap-4'>
+        <div className='grid'>
           <span>
             <label
               htmlFor='primaryImage'
@@ -33,7 +33,7 @@ export default function Sellitems() {
               />
             </label>
           </span>
-          <span className='grid grid-cols-3 gap-6'>
+          <span className='flex flex-row gap-6'>
             <label
               htmlFor='secondaryImage'
               className='inline-block cursor-pointer bg-[#979797]'
