@@ -87,6 +87,10 @@ export default function Sellitems() {
         <option value='Electronics'>Electronics</option>
         <option value='Two-wheeler'>Two-wheeler</option>
       </select>
+      <Input placeholder='Product name' />
+      <Input placeholder='Description' />
+      <Input placeholder='Location' />
+      <Input placeholder='Price' />
     </div>
   )
 }
