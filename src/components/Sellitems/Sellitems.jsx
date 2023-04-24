@@ -52,7 +52,7 @@ export default function Sellitems() {
   }
 
   return (
-    <section onSubmit={submitHandler} className='mx-5 mb-3'>
+    <form onSubmit={submitHandler} className='mx-5 mb-3'>
       {/* Head text */}
       <Highlighter text='List an Item/Service' />
 
@@ -196,6 +196,6 @@ export default function Sellitems() {
           </div>
         </div>
       </div>
-    </section>
+    </form>
   )
 }
