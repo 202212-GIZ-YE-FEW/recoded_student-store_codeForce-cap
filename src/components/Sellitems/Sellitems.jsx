@@ -113,6 +113,7 @@ export default function Sellitems() {
               id='typeSelector'
               name='type'
               value={formData.type}
+              onChange={inputsHandler}
               className='cursor-pointer text-center block py-2.5 w-full text-md text-gray-600 bg-transparent border-0 border-b-2 border-gray-200 dark:text-gray-700 dark:border-gray-700 focus:outline-none focus:ring-0'
             >
               <option // * Default value selected
@@ -129,6 +130,7 @@ export default function Sellitems() {
               id='categorySelector'
               name='category'
               value={formData.category}
+              onChange={inputsHandler}
               className='cursor-pointer text-center block py-2.5 w-full text-md text-gray-600 bg-transparent border-0 border-b-2 border-gray-200 dark:text-gray-700 dark:border-gray-700 focus:outline-none focus:ring-0'
             >
               <option // * Default value selected
@@ -150,6 +152,7 @@ export default function Sellitems() {
               placeholder='Product name'
               type='text'
               value={formData.productName}
+              onChange={inputsHandler}
             />
             <Input // * Product description input
               name='description'
@@ -157,6 +160,7 @@ export default function Sellitems() {
               className='py-[75px]'
               type='text'
               value={formData.description}
+              onChange={inputsHandler}
             />
             <span className='flex gap-4'>
               <Input // * Product location input
@@ -165,6 +169,7 @@ export default function Sellitems() {
                 className='w-[47%]'
                 type='text'
                 value={formData.location}
+                onChange={inputsHandler}
               />
               <Input // * Product price input
                 name='price'
@@ -172,6 +177,7 @@ export default function Sellitems() {
                 className='w-[47%]'
                 type='text'
                 value={formData.price}
+                onChange={inputsHandler}
               />
             </span>
 
