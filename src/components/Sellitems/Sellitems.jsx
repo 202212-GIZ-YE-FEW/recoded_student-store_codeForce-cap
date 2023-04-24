@@ -112,6 +112,7 @@ export default function Sellitems() {
             <select
               id='typeSelector'
               name='type'
+              value={formData.type}
               className='cursor-pointer text-center block py-2.5 w-full text-md text-gray-600 bg-transparent border-0 border-b-2 border-gray-200 dark:text-gray-700 dark:border-gray-700 focus:outline-none focus:ring-0'
             >
               <option // * Default value selected
@@ -127,6 +128,7 @@ export default function Sellitems() {
             <select
               id='categorySelector'
               name='category'
+              value={formData.category}
               className='cursor-pointer text-center block py-2.5 w-full text-md text-gray-600 bg-transparent border-0 border-b-2 border-gray-200 dark:text-gray-700 dark:border-gray-700 focus:outline-none focus:ring-0'
             >
               <option // * Default value selected
@@ -147,12 +149,14 @@ export default function Sellitems() {
               name='productName'
               placeholder='Product name'
               type='text'
+              value={formData.productName}
             />
             <Input // * Product description input
               name='description'
               placeholder='Description'
               className='py-[75px]'
               type='text'
+              value={formData.description}
             />
             <span className='flex gap-4'>
               <Input // * Product location input
@@ -160,12 +164,14 @@ export default function Sellitems() {
                 placeholder='Location'
                 className='w-[47%]'
                 type='text'
+                value={formData.location}
               />
               <Input // * Product price input
                 name='price'
                 placeholder='Price'
                 className='w-[47%]'
                 type='text'
+                value={formData.price}
               />
             </span>
 
