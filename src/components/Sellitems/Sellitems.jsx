@@ -44,6 +44,13 @@ export default function Sellitems() {
     }
   }
 
+  // Submit handler
+  const submitHandler = (event) => {
+    event.preventDefault()
+    // Display the submitted form in the consol
+    console.log(formData)
+  }
+
   return (
     <section className='mx-5 mb-3'>
       <Highlighter text='List an Item/Service' />
