@@ -52,7 +52,7 @@ export default function Sellitems() {
   }
 
   return (
-    <section className='mx-5 mb-3'>
+    <section onSubmit={submitHandler} className='mx-5 mb-3'>
       <Highlighter text='List an Item/Service' />
       <hr className='w-[100%] h-[1.5px] mx-auto bg-gray-100 border-0 rounded dark:bg-gray-700'></hr>
       <br />
