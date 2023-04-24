@@ -119,7 +119,7 @@ export default function Sellitems() {
 
           <Input placeholder='Product name' />
           <Input placeholder='Description' className='py-[75px]' />
-          <span className='flex justify-between'>
+          <span className='flex gap-4'>
             <Input placeholder='Location' className='w-[47%]' />
             <Input placeholder='Price' className='w-[47%]' />
           </span>
