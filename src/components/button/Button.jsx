@@ -36,12 +36,14 @@ function Button({
   text = "",
   handleClick,
   icon,
+  handleChange,
 }) {
   return (
     <button
       className={BUTTON_STYLES[buttonStyle]}
       onClick={handleClick}
       type={type}
+      onChange={handleChange}
     >
       {icon && <i className={icon}></i>}
       {text}
