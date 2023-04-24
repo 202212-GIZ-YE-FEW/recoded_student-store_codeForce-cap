@@ -2,8 +2,8 @@
 import { getApps, initializeApp } from "firebase/app"
 import {
   FacebookAuthProvider,
-  GoogleAuthProvider,
   getAuth,
+  GoogleAuthProvider,
 } from "firebase/auth"
 import { getFirestore } from "firebase/firestore"
 

@@ -69,9 +69,6 @@ export default function Sellitems() {
         />
       </label>
 
-      <label for='typeSelector' className='sr-only'>
-        Underline select
-      </label>
       <select
         id='typeSelector'
         className='cursor-pointer block py-2.5 px-0 w-full text-sm text-gray-500 bg-transparent border-0 border-b-2 border-gray-200 appearance-none dark:text-gray-400 dark:border-gray-700 focus:outline-none focus:ring-0'
@@ -79,6 +76,16 @@ export default function Sellitems() {
         <option selected>Choose a type</option>
         <option value='product'>Product</option>
         <option value='service'>Service</option>
+      </select>
+      <select
+        id='categorySelector'
+        className='cursor-pointer block py-2.5 px-0 w-full text-sm text-gray-500 bg-transparent border-0 border-b-2 border-gray-200 appearance-none dark:text-gray-400 dark:border-gray-700 focus:outline-none focus:ring-0'
+      >
+        <option selected>Category</option>
+        <option value='Books'>Books</option>
+        <option value='Furniture'>Furniture</option>
+        <option value='Electronics'>Electronics</option>
+        <option value='Two-wheeler'>Two-wheeler</option>
       </select>
     </div>
   )
