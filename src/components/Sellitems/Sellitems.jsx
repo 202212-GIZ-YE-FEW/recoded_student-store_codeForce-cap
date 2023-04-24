@@ -6,6 +6,7 @@ import Highlighter from "../highlighter"
 import Input from "../input"
 
 export default function Sellitems() {
+  // Form data handler
   const [formData, setFormData] = useState({
     primaryImage: "/images/emptyImage.png",
     secondaryImage: "/images/emptyImage.png",
@@ -18,6 +19,15 @@ export default function Sellitems() {
     location: "",
     price: "",
   })
+
+  // Input handler
+  const inputsHandler = (event) => {
+    const { name, value } = event.target
+    setFormData((prevFormData) => ({
+      ...prevFormData,
+      [name]: value,
+    }))
+  }
   return (
     <section className='mx-5 mb-3'>
       <Highlighter text='List an Item/Service' />
