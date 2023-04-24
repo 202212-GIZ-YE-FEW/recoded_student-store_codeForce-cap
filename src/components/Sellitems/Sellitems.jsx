@@ -53,13 +53,18 @@ export default function Sellitems() {
 
   return (
     <section onSubmit={submitHandler} className='mx-5 mb-3'>
+      {/* Head text */}
       <Highlighter text='List an Item/Service' />
+
+      {/* Black line between the head text and the content*/}
       <hr className='w-[100%] h-[1.5px] mx-auto bg-gray-100 border-0 rounded dark:bg-gray-700'></hr>
       <br />
+
+      {/* Displayed images */}
       <div className='grid grid-cols-1 lg:grid-cols-2 gap-4'>
         <div className='flex flex-col sm:flex-row lg:flex-col gap-5'>
           <span>
-            <Image
+            <Image // * First Image
               className='block drop-shadow-2xl lg:w-full'
               src={formData.primaryImage}
               alt='primaryImage'
@@ -69,7 +74,7 @@ export default function Sellitems() {
           </span>
           <div className='flex flex-row sm:flex-col lg:flex-row gap-10 sm:gap-4 lg:gap-20'>
             <span>
-              <Image
+              <Image // * Second Image
                 className='block drop-shadow-2xl sm:w-full lg:w-[190px]'
                 src={formData.secondaryImage}
                 alt='secondaryImage'
@@ -79,7 +84,7 @@ export default function Sellitems() {
             </span>
             <div className='flex gap-10 sm:gap-4 lg:gap-20'>
               <span>
-                <Image
+                <Image // * Third Image
                   className='block drop-shadow-2xl'
                   src={formData.tertiaryImage}
                   alt='tertiaryImage'
@@ -88,7 +93,7 @@ export default function Sellitems() {
                 />
               </span>
               <span>
-                <Image
+                <Image // * Fourth Image
                   className='block drop-shadow-2xl'
                   src={formData.quaternaryImage}
                   alt='quaternaryImage'
@@ -100,21 +105,35 @@ export default function Sellitems() {
           </div>
         </div>
 
+        {/* Selectors */}
         <div>
           <div className='flex flex-col sm:flex-row sm:gap-16'>
+            {/* //* Type Selector */}
             <select
               id='typeSelector'
+              name='type'
               className='cursor-pointer text-center block py-2.5 w-full text-md text-gray-600 bg-transparent border-0 border-b-2 border-gray-200 dark:text-gray-700 dark:border-gray-700 focus:outline-none focus:ring-0'
             >
-              <option selected>Choose a type</option>
+              <option // * Default value selected
+                selected
+              >
+                Choose a type
+              </option>
               <option value='product'>Product</option>
               <option value='service'>Service</option>
             </select>
+
+            {/* //* Category Selector */}
             <select
               id='categorySelector'
+              name='category'
               className='cursor-pointer text-center block py-2.5 w-full text-md text-gray-600 bg-transparent border-0 border-b-2 border-gray-200 dark:text-gray-700 dark:border-gray-700 focus:outline-none focus:ring-0'
             >
-              <option selected>Choose a Category</option>
+              <option // * Default value selected
+                selected
+              >
+                Choose a Category
+              </option>
               <option value='Books'>Books</option>
               <option value='Furniture'>Furniture</option>
               <option value='Electronics'>Electronics</option>
@@ -122,16 +141,47 @@ export default function Sellitems() {
             </select>
           </div>
 
-          <Input placeholder='Product name' />
-          <Input placeholder='Description' className='py-[75px]' />
-          <span className='flex gap-4'>
-            <Input placeholder='Location' className='w-[47%]' />
-            <Input placeholder='Price' className='w-[47%]' />
-          </span>
-          <span className='flex'>
-            <Button buttonStyle='uploadImage' text='Upload image(s)' />
-            <Button buttonStyle='listItem' text='List' type='submit' />
-          </span>
+          {/* Product Information Inputs */}
+          <div>
+            <Input // * Product name input
+              name='productName'
+              placeholder='Product name'
+              type='text'
+            />
+            <Input // * Product description input
+              name='description'
+              placeholder='Description'
+              className='py-[75px]'
+              type='text'
+            />
+            <span className='flex gap-4'>
+              <Input // * Product location input
+                name='location'
+                placeholder='Location'
+                className='w-[47%]'
+                type='text'
+              />
+              <Input // * Product price input
+                name='price'
+                placeholder='Price'
+                className='w-[47%]'
+                type='text'
+              />
+            </span>
+
+            <span className='flex'>
+              <Button // * Image uploader button
+                buttonStyle='uploadImage'
+                text='Upload image(s)'
+                type='button'
+              />
+              <Button // * Submission button
+                buttonStyle='listItem'
+                text='List'
+                type='submit'
+              />
+            </span>
+          </div>
         </div>
       </div>
     </section>
