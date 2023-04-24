@@ -8,10 +8,10 @@ import Input from "../input"
 export default function Sellitems() {
   // Form data handler
   const [formData, setFormData] = useState({
-    primaryImage: "/images/emptyImage.png",
-    secondaryImage: "/images/emptyImage.png",
-    tertiaryImage: "/images/emptyImage.png",
-    quaternaryImage: "/images/emptyImage.png",
+    primaryImage: { file: null, url: "/images/emptyImage.png" },
+    secondaryImage: { file: null, url: "/images/emptyImage.png" },
+    tertiaryImage: { file: null, url: "/images/emptyImage.png" },
+    quaternaryImage: { file: null, url: "/images/emptyImage.png" },
     type: "",
     category: "",
     productName: "",
@@ -30,7 +30,7 @@ export default function Sellitems() {
   }
 
   // Image upload handler
-  const UploadedImageHandler = (event, imageField) => {
+  const uploadedImageHandler = (event, imageField) => {
     const file = event.target.files[0]
     if (file) {
       const reader = new FileReader()
@@ -38,7 +38,10 @@ export default function Sellitems() {
       reader.onloadend = () => {
         setFormData((prevFormData) => ({
           ...prevFormData,
-          [imageField]: reader.result,
+          [imageField]: {
+            file: file,
+            url: reader.result,
+          },
         }))
       }
     }
@@ -66,7 +69,7 @@ export default function Sellitems() {
           <span>
             <Image // * First Image
               className='block drop-shadow-2xl lg:w-full'
-              src={formData.primaryImage}
+              src={formData.primaryImage.url}
               alt='primaryImage'
               width={570}
               height={340}
@@ -76,7 +79,7 @@ export default function Sellitems() {
             <span>
               <Image // * Second Image
                 className='block drop-shadow-2xl sm:w-full lg:w-[190px]'
-                src={formData.secondaryImage}
+                src={formData.secondaryImage.url}
                 alt='secondaryImage'
                 width={190}
                 height={137}
@@ -86,7 +89,7 @@ export default function Sellitems() {
               <span>
                 <Image // * Third Image
                   className='block drop-shadow-2xl'
-                  src={formData.tertiaryImage}
+                  src={formData.tertiaryImage.url}
                   alt='tertiaryImage'
                   width={190}
                   height={137}
@@ -95,7 +98,7 @@ export default function Sellitems() {
               <span>
                 <Image // * Fourth Image
                   className='block drop-shadow-2xl'
-                  src={formData.quaternaryImage}
+                  src={formData.quaternaryImage.url}
                   alt='quaternaryImage'
                   width={190}
                   height={137}
