@@ -1,6 +1,7 @@
 import Image from "next/image"
 
 import defaultImageInput from "../../../public/images/imagesDefaultInput.png"
+import Button from "../button"
 import Highlighter from "../highlighter"
 import Input from "../input"
 
@@ -91,6 +92,8 @@ export default function Sellitems() {
       <Input placeholder='Description' />
       <Input placeholder='Location' />
       <Input placeholder='Price' />
+      <Button buttonStyle='listItem' text='Upload image(s)' />
+      <Button buttonStyle='listItem' text='List' type='submit' />
     </div>
   )
 }
