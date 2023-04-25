@@ -1,11 +1,14 @@
+import { addDoc, collection } from "firebase/firestore"
 import Image from "next/image"
 import { useState } from "react"
+
+import { db } from "@/utils/firebase/config"
 
 import Button from "../button"
 import Highlighter from "../highlighter"
 import Input from "../input"
 
-export default function ListingItems() {
+export default function Sellitems() {
   // Form data handler
   const [formData, setFormData] = useState({
     primaryImage: { file: null, url: "/images/emptyImage.png" },
@@ -48,10 +51,30 @@ export default function ListingItems() {
   }
 
   // Submit handler
-  const submitHandler = (event) => {
+  const submitHandler = async (event) => {
     event.preventDefault()
-    // Display the submitted form in the consol
-    console.log(formData)
+    try {
+      // Save the form data to the sellItems collection
+      const docRef = await addDoc(collection(db, "listing Items"), formData)
+
+      alert("Sell item added with ID:", docRef.id)
+
+      // Clear the form data
+      setFormData({
+        primaryImage: { file: null, url: "/images/emptyImage.png" },
+        secondaryImage: { file: null, url: "/images/emptyImage.png" },
+        tertiaryImage: { file: null, url: "/images/emptyImage.png" },
+        quaternaryImage: { file: null, url: "/images/emptyImage.png" },
+        type: "",
+        category: "",
+        productName: "",
+        description: "",
+        location: "",
+        price: "",
+      })
+    } catch (error) {
+      alert("Error adding sell item: ", error)
+    }
   }
 
   return (
