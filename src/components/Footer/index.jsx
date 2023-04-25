@@ -47,7 +47,7 @@ function Footer({ t }) {
           </div>
 
           {/* About Section */}
-          <div className='pl-14 pt-5 md:pt-14 rtl:mr-52 sm:rtl:mr-0'>
+          <div className='pl-14 pt-5 md:pt-14 rtl:w-full rtl:mr-40 sm:rtl:mr-0'>
             <ul className='font-poppins text-white font-bold md:text-1xl lg:text-2xl'>
               <li>
                 <Link href='/about-us' className='hover:underline'>
@@ -65,7 +65,7 @@ function Footer({ t }) {
           </div>
 
           {/* Link Pages Section */}
-          <div className='pl-14 pt-10 md:pt-14 rtl:mr-52 sm:rtl:mr-0'>
+          <div className='pl-14 pt-10 md:pt-14 rtl:mr-40 sm:rtl:mr-0'>
             <ul className='font-poppins text-white font-bold md:text-1xl lg:text-2xl'>
               <li className='mb-4'>
                 <Link href='/sign-up' className='hover:underline '>
