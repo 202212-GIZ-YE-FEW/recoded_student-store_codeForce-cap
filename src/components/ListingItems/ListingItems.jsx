@@ -1,6 +1,6 @@
 import { addDoc, collection } from "firebase/firestore"
-import Image from "next/image"
 import { useTranslation, withTranslation } from "next-i18next"
+import Image from "next/image"
 import { useState } from "react"
 
 import { db } from "@/utils/firebase/config"
@@ -93,7 +93,7 @@ function Sellitems() {
         <div className='flex flex-col sm:flex-row lg:flex-col gap-5'>
           <label htmlFor='primaryImageInput' className='cursor-pointer'>
             <Image // * First Image
-              className='block drop-shadow-2xl lg:w-full'
+              className='block drop-shadow-2xl lg:w-full max-h-[340px] sm:max-h-[262px] lg:max-h-[405px]'
               src={formData.primaryImage.url}
               alt={t("primaryImage")}
               width={570}
@@ -110,7 +110,7 @@ function Sellitems() {
           <div className='flex flex-row sm:flex-col lg:flex-row gap-10 sm:gap-4 lg:gap-20'>
             <label htmlFor='secondaryImageInput' className='cursor-pointer'>
               <Image // * Second Image
-                className='block drop-shadow-2xl sm:w-full lg:w-[190px]'
+                className='block drop-shadow-2xl sm:w-full lg:w-[190px] max-h-[90px] sm:max-h-[137px] lg:max-h-[105px]'
                 src={formData.secondaryImage.url}
                 alt={t("secondaryImage")}
                 width={190}
@@ -129,7 +129,7 @@ function Sellitems() {
             <div className='flex gap-10 sm:gap-4 lg:gap-20'>
               <label htmlFor='tertiaryImageInput' className='cursor-pointer'>
                 <Image // * Third Image
-                  className='block drop-shadow-2xl'
+                  className='block drop-shadow-2xl max-h-[90px] sm:max-h-[137px] lg:max-h-[105px]'
                   src={formData.tertiaryImage.url}
                   alt={t("tertiaryImage")}
                   width={190}
@@ -147,7 +147,7 @@ function Sellitems() {
               </label>
               <label htmlFor='quaternaryImageInput' className='cursor-pointer'>
                 <Image // * Fourth Image
-                  className='block drop-shadow-2xl'
+                  className='block drop-shadow-2xl max-h-[90px] sm:max-h-[137px] lg:max-h-[105px]'
                   src={formData.quaternaryImage.url}
                   alt={t("quaternaryImage")}
                   width={190}
