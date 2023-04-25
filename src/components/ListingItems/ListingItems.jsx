@@ -1,4 +1,5 @@
 import { addDoc, collection } from "firebase/firestore"
+import { withTranslation } from "next-i18next"
 import Image from "next/image"
 import { useState } from "react"
 
@@ -8,7 +9,7 @@ import Button from "../button"
 import Highlighter from "../highlighter"
 import Input from "../input"
 
-export default function Sellitems() {
+function Sellitems({ t }) {
   // Form data handler
   const [formData, setFormData] = useState({
     primaryImage: { file: null, url: "/images/emptyImage.png" },
@@ -57,7 +58,7 @@ export default function Sellitems() {
       // Save the form data to the sellItems collection
       const docRef = await addDoc(collection(db, "listing Items"), formData)
 
-      alert("Sell item added with ID:", docRef.id)
+      alert(t("addedAlert"), docRef.id)
 
       // Clear the form data
       setFormData({
@@ -73,14 +74,14 @@ export default function Sellitems() {
         price: "",
       })
     } catch (error) {
-      alert("Error adding sell item: ", error)
+      alert(t("notAddedAlert"), error)
     }
   }
 
   return (
     <form onSubmit={submitHandler} className='mx-5 mb-3'>
       {/* Head text */}
-      <Highlighter text='List an Item/Service' />
+      <Highlighter text={`${t("headerText")}`} />
 
       {/* Black line between the head text and the content*/}
       <hr className='w-[100%] h-[1.5px] mx-auto bg-gray-100 border-0 rounded dark:bg-gray-700'></hr>
@@ -93,7 +94,7 @@ export default function Sellitems() {
             <Image // * First Image
               className='block drop-shadow-2xl lg:w-full'
               src={formData.primaryImage.url}
-              alt='primaryImage'
+              alt={t("primaryImage")}
               width={570}
               height={340}
             />
@@ -110,7 +111,7 @@ export default function Sellitems() {
               <Image // * Second Image
                 className='block drop-shadow-2xl sm:w-full lg:w-[190px]'
                 src={formData.secondaryImage.url}
-                alt='secondaryImage'
+                alt={t("secondaryImage")}
                 width={190}
                 height={137}
               />
@@ -259,3 +260,4 @@ export default function Sellitems() {
     </form>
   )
 }
+export default withTranslation("listingItems")(Sellitems)
