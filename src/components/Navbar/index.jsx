@@ -11,6 +11,7 @@ import { TfiWorld } from "react-icons/tfi"
 function Navbar({ t }) {
   const [languages, setLanguages] = useState(false)
   const [open, setOpen] = useState(false)
+  // const diraction =
 
   return (
     <header
@@ -18,11 +19,17 @@ function Navbar({ t }) {
       dir={t("language") === "ar" ? "rtl" : "ltr"}
     >
       <div
-        className={`navbar  m-auto px-10 md:flex md:flex-row py-4 justify-between gap-5 items-center bg-white transition-all 
+        className={`navbar  m-auto px-10 md:flex md:flex-row py-4 justify-between gap-5 items-center bg-white transition-all
       `}
       >
         <Link href='/'>
-          <Image src='/images/Logo.png' alt='logo' width={130} height={130} />
+          <Image
+            src='/images/Logo.png'
+            alt='logo'
+            width={130}
+            height={130}
+            className='rtl:mr-52 sm:rtl:mr-0'
+          />
         </Link>
         {/* ----------- Languages ----------- */}
         <div className='flex items-end cursor-pointer absolute right-14 top-8 md:static order-2 md:hidden'>
