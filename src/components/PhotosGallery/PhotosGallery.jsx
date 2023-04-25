@@ -27,7 +27,7 @@ function dropImage(
 
 function PhotosGallery(props) {
   const [file, setFile] = useState(null)
-  const GALLERY_SVG = "gallery.svg"
+  const GALLERY_SVG = "/images/gallery.svg"
   const styles = {
     imagefull: "h-full w-full lg:w-full lg:h-full md:w-full object-cover",
     imageblock: "block h-full w-full rounded-lg object-cover object-center",
