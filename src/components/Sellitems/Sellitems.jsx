@@ -66,7 +66,7 @@ export default function Sellitems() {
       {/* Displayed images */}
       <div className='grid grid-cols-1 lg:grid-cols-2 gap-4'>
         <div className='flex flex-col sm:flex-row lg:flex-col gap-5'>
-          <span>
+          <label htmlFor='primaryImageInput' className='cursor-pointer'>
             <Image // * First Image
               className='block drop-shadow-2xl lg:w-full'
               src={formData.primaryImage.url}
@@ -74,9 +74,9 @@ export default function Sellitems() {
               width={570}
               height={340}
             />
-          </span>
+          </label>
           <div className='flex flex-row sm:flex-col lg:flex-row gap-10 sm:gap-4 lg:gap-20'>
-            <span>
+            <label htmlFor='secondaryImageInput' className='cursor-pointer'>
               <Image // * Second Image
                 className='block drop-shadow-2xl sm:w-full lg:w-[190px]'
                 src={formData.secondaryImage.url}
@@ -84,9 +84,9 @@ export default function Sellitems() {
                 width={190}
                 height={137}
               />
-            </span>
+            </label>
             <div className='flex gap-10 sm:gap-4 lg:gap-20'>
-              <span>
+              <label htmlFor='tertiaryImageInput' className='cursor-pointer'>
                 <Image // * Third Image
                   className='block drop-shadow-2xl'
                   src={formData.tertiaryImage.url}
@@ -94,8 +94,8 @@ export default function Sellitems() {
                   width={190}
                   height={137}
                 />
-              </span>
-              <span>
+              </label>
+              <label htmlFor='quaternaryImageInput' className='cursor-pointer'>
                 <Image // * Fourth Image
                   className='block drop-shadow-2xl'
                   src={formData.quaternaryImage.url}
@@ -103,7 +103,7 @@ export default function Sellitems() {
                   width={190}
                   height={137}
                 />
-              </span>
+              </label>
             </div>
           </div>
         </div>
