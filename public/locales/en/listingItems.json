@@ -1,7 +1,7 @@
 {
   "addedAlert": "Item added",
   "notAddedAlert": "Error adding item",
+  "headerText": "List an Item/Service",
   "primaryImage": "Primary image",
-  "secondaryImage": "Secondary image",
-  "headerText": "List an Item/Service"
+  "secondaryImage": "Secondary image"
 }
