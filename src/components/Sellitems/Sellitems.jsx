@@ -74,6 +74,13 @@ export default function Sellitems() {
               width={570}
               height={340}
             />
+            <Input
+              id='primaryImageInput'
+              type='file'
+              accept='image/*'
+              onChange={(event) => uploadedImageHandler(event, "primaryImage")}
+              className='hidden'
+            />
           </label>
           <div className='flex flex-row sm:flex-col lg:flex-row gap-10 sm:gap-4 lg:gap-20'>
             <label htmlFor='secondaryImageInput' className='cursor-pointer'>
@@ -83,6 +90,15 @@ export default function Sellitems() {
                 alt='secondaryImage'
                 width={190}
                 height={137}
+              />
+              <Input
+                id='secondaryImageInput'
+                type='file'
+                accept='image/*'
+                onChange={(event) =>
+                  uploadedImageHandler(event, "secondaryImage")
+                }
+                className='hidden'
               />
             </label>
             <div className='flex gap-10 sm:gap-4 lg:gap-20'>
@@ -94,6 +110,15 @@ export default function Sellitems() {
                   width={190}
                   height={137}
                 />
+                <Input
+                  id='tertiaryImageInput'
+                  type='file'
+                  accept='image/*'
+                  onChange={(event) =>
+                    uploadedImageHandler(event, "tertiaryImage")
+                  }
+                  className='hidden'
+                />
               </label>
               <label htmlFor='quaternaryImageInput' className='cursor-pointer'>
                 <Image // * Fourth Image
@@ -102,6 +127,15 @@ export default function Sellitems() {
                   alt='quaternaryImage'
                   width={190}
                   height={137}
+                />
+                <Input
+                  id='quaternaryImageInput'
+                  type='file'
+                  accept='image/*'
+                  onChange={(event) =>
+                    uploadedImageHandler(event, "quaternaryImage")
+                  }
+                  className='hidden'
                 />
               </label>
             </div>
