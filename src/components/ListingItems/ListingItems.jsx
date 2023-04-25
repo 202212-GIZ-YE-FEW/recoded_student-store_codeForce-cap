@@ -1,6 +1,6 @@
 import { addDoc, collection } from "firebase/firestore"
-import { useTranslation, withTranslation } from "next-i18next"
 import Image from "next/image"
+import { useTranslation, withTranslation } from "next-i18next"
 import { useState } from "react"
 
 import { db } from "@/utils/firebase/config"
