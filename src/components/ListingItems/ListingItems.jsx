@@ -9,7 +9,7 @@ import Button from "../button"
 import Highlighter from "../highlighter"
 import Input from "../input"
 
-function Sellitems() {
+function ListingItems() {
   const { t } = useTranslation("listingItems")
   // Form data handler
   const [formData, setFormData] = useState({
@@ -263,4 +263,4 @@ function Sellitems() {
     </form>
   )
 }
-export default withTranslation("listingItems")(Sellitems)
+export default withTranslation("listingItems")(ListingItems)
