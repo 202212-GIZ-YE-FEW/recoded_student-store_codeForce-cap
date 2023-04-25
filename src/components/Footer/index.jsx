@@ -24,7 +24,7 @@ function Footer({ t }) {
                 alt='logo'
               />
             </Link>
-            <div className='absolute bottom-16 left-5 lg:left-40 lg:bottom-1'>
+            <div className='absolute bottom-16 left-5 lg:left-40 lg:bottom-1 rtl:mr-52 sm:rtl:mr-0'>
               <a href='#'>
                 <Image
                   src='/images/play-google.svg'
@@ -47,7 +47,7 @@ function Footer({ t }) {
           </div>
 
           {/* About Section */}
-          <div className='pl-14 pt-5 md:pt-14'>
+          <div className='pl-14 pt-5 md:pt-14 rtl:mr-52 sm:rtl:mr-0'>
             <ul className='font-poppins text-white font-bold md:text-1xl lg:text-2xl'>
               <li>
                 <Link href='/about-us' className='hover:underline'>
@@ -65,7 +65,7 @@ function Footer({ t }) {
           </div>
 
           {/* Link Pages Section */}
-          <div className='pl-14 pt-10 md:pt-14'>
+          <div className='pl-14 pt-10 md:pt-14 rtl:mr-52 sm:rtl:mr-0'>
             <ul className='font-poppins text-white font-bold md:text-1xl lg:text-2xl'>
               <li className='mb-4'>
                 <Link href='/sign-up' className='hover:underline '>
@@ -117,7 +117,7 @@ function Footer({ t }) {
           </div>
 
           {/* Scroll UP Section */}
-          <div className='flex justify-end h-36 pt-32 lg:pt-14'>
+          <div className='flex justify-end h-36 pt-32 lg:pt-14 lg:rtl:ml-0 rtl:ml-56'>
             <h2 className='m-0 font-poppins text-white font-bold md:text-2xl lg:text-2xl pt-2 lg:pt-7'>
               {t("scroll-up")}
             </h2>
