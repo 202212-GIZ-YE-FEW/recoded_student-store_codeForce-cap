@@ -1,5 +1,5 @@
 import { addDoc, collection } from "firebase/firestore"
-import { withTranslation } from "next-i18next"
+import { useTranslation, withTranslation } from "next-i18next"
 import Image from "next/image"
 import { useState } from "react"
 
@@ -9,7 +9,8 @@ import Button from "../button"
 import Highlighter from "../highlighter"
 import Input from "../input"
 
-function Sellitems({ t }) {
+function Sellitems() {
+  const { t } = useTranslation("listingItems")
   // Form data handler
   const [formData, setFormData] = useState({
     primaryImage: { file: null, url: "/images/emptyImage.png" },
@@ -130,7 +131,7 @@ function Sellitems({ t }) {
                 <Image // * Third Image
                   className='block drop-shadow-2xl'
                   src={formData.tertiaryImage.url}
-                  alt='tertiaryImage'
+                  alt={t("tertiaryImage")}
                   width={190}
                   height={137}
                 />
@@ -148,7 +149,7 @@ function Sellitems({ t }) {
                 <Image // * Fourth Image
                   className='block drop-shadow-2xl'
                   src={formData.quaternaryImage.url}
-                  alt='quaternaryImage'
+                  alt={t("quaternaryImage")}
                   width={190}
                   height={137}
                 />
@@ -180,10 +181,10 @@ function Sellitems({ t }) {
               <option // * Default value selected
                 selected
               >
-                Choose a type
+                {t("typeSelector")}
               </option>
-              <option value='product'>Product</option>
-              <option value='service'>Service</option>
+              <option value='product'>{t("product")}</option>
+              <option value='service'>{t("service")}</option>
             </select>
 
             {/* //* Category Selector */}
@@ -197,12 +198,12 @@ function Sellitems({ t }) {
               <option // * Default value selected
                 selected
               >
-                Choose a Category
+                {t("categorySelector")}
               </option>
-              <option value='Books'>Books</option>
-              <option value='Furniture'>Furniture</option>
-              <option value='Electronics'>Electronics</option>
-              <option value='Two-wheeler'>Two-wheeler</option>
+              <option value='Books'>{t("books")}</option>
+              <option value='Furniture'>{t("furniture")}</option>
+              <option value='Electronics'>{t("electronics")}</option>
+              <option value='Two-wheeler'>{t("two-wheeler")}</option>
             </select>
           </div>
 
@@ -210,14 +211,14 @@ function Sellitems({ t }) {
           <div>
             <Input // * Product name input
               name='productName'
-              placeholder='Product name'
+              placeholder={t("productName")}
               type='text'
               value={formData.productName}
               onChange={inputsHandler}
             />
             <Input // * Product description input
               name='description'
-              placeholder='Description'
+              placeholder={t("description")}
               className='py-[75px]'
               type='text'
               value={formData.description}
@@ -226,7 +227,7 @@ function Sellitems({ t }) {
             <span className='flex gap-4'>
               <Input // * Product location input
                 name='location'
-                placeholder='Location'
+                placeholder={t("location")}
                 className='w-[47%]'
                 type='text'
                 value={formData.location}
@@ -234,7 +235,7 @@ function Sellitems({ t }) {
               />
               <Input // * Product price input
                 name='price'
-                placeholder='Price'
+                placeholder={t("price")}
                 className='w-[47%]'
                 type='text'
                 value={formData.price}
@@ -245,12 +246,12 @@ function Sellitems({ t }) {
             <span className='flex'>
               <Button // * Image uploader button
                 buttonStyle='uploadImage'
-                text='Upload image(s)'
+                text={t("uploadImage")}
                 type='button'
               />
               <Button // * Submission button
                 buttonStyle='listItem'
-                text='List'
+                text={t("list")}
                 type='submit'
               />
             </span>
