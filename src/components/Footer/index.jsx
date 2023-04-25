@@ -72,7 +72,7 @@ export default function Footer() {
                 </Link>
               </li>
               <li className='mb-4'>
-                <Link href='/' className='hover:underline'>
+                <Link href='/listing-page' className='hover:underline'>
                   Start Selling
                 </Link>
               </li>
