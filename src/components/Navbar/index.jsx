@@ -7,13 +7,14 @@ import { RxHamburgerMenu } from "react-icons/rx"
 import { TbArrowBadgeDown } from "react-icons/tb"
 import { TfiWorld } from "react-icons/tfi"
 
+import styles from "./Navbar.module.css"
 export default function Navbar() {
   const [languages, setLanguages] = useState(false)
   const [open, setOpen] = useState(false)
   return (
     <header className='sticky top-0 z-50'>
       <div
-        className={`navbar  m-auto px-10 md:flex md:flex-row py-4 justify-between gap-5 items-center bg-white transition-all 
+        className={`${styles.navbar} m-auto px-10 md:flex md:flex-row py-4 justify-between gap-5 items-center bg-white transition-all 
       `}
       >
         <Link href='/'>
@@ -31,7 +32,7 @@ export default function Navbar() {
           <div className='relative z-50 '>
             <div
               className={`absolute left-[-100px] top-2 bg-white capitalize border border-solid border-violet-600${
-                languages ? " show" : " hidden"
+                languages ? `${styles.show}` : " hidden"
               }`}
             >
               <div className='my-2 px-5 py-2 hover:bg-gray-200 transition-all duration-500'>
@@ -46,13 +47,13 @@ export default function Navbar() {
         {/* ----------- Burger ----------- */}
         <RxHamburgerMenu
           className={`absolute right-6 top-8 text-2xl cursor-pointer md:hidden ${
-            open ? "hidden" : ""
+            open ? "hidden" : `${styles.show}`
           }`}
           onClick={() => setOpen(true)}
         />
         <AiOutlineClose
           className={`absolute right-6 top-8 text-2xl cursor-pointer md:hidden ${
-            open ? "" : "hidden"
+            open ? `${styles.show}` : "hidden"
           }`}
           onClick={() => setOpen(false)}
         />
@@ -82,7 +83,8 @@ export default function Navbar() {
             <input
               type='text'
               placeholder='search here'
-              className='search w-full text-sm  placeholder:text-gray-300 placeholder:capitalize text-gray-600'
+              className={`${styles.search} ${styles.input} w-full text-sm placeholder:text-gray-300 placeholder:capitalize text-gray-600
+              `}
             />
             <div className=''>
               <AiOutlineSearch />
@@ -100,7 +102,7 @@ export default function Navbar() {
             <div className='relative'>
               <div
                 className={`absolute left-[-100px] top-5 bg-white capitalize ${
-                  languages ? "show" : "hidden"
+                  languages ? `${styles.show}` : "hidden"
                 }`}
               >
                 <div className='my-2 px-5 py-2 hover:bg-gray-200 transition-all duration-500'>
