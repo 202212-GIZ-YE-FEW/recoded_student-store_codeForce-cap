@@ -179,6 +179,7 @@ function Sellitems() {
               className='cursor-pointer text-center block py-2.5 w-full text-md text-gray-600 bg-transparent border-0 border-b-2 border-gray-200 dark:text-gray-700 dark:border-gray-700 focus:outline-none focus:ring-0'
             >
               <option // * Default value selected
+                value='default value'
                 selected
               >
                 {t("typeSelector")}
@@ -196,6 +197,7 @@ function Sellitems() {
               className='cursor-pointer text-center block py-2.5 w-full text-md text-gray-600 bg-transparent border-0 border-b-2 border-gray-200 dark:text-gray-700 dark:border-gray-700 focus:outline-none focus:ring-0'
             >
               <option // * Default value selected
+                value='default value'
                 selected
               >
                 {t("categorySelector")}
