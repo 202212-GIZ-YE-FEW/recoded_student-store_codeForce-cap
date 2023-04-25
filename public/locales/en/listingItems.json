@@ -3,5 +3,21 @@
   "notAddedAlert": "Error adding item",
   "headerText": "List an Item/Service",
   "primaryImage": "Primary image",
-  "secondaryImage": "Secondary image"
+  "secondaryImage": "Secondary image",
+  "tertiaryImage": "Tertiary image",
+  "quaternaryImage": "Quaternary image",
+  "typeSelector": "Choose a type",
+  "categorySelector": "Choose a Category",
+  "product": "Product",
+  "service": "Service",
+  "books": "Books",
+  "furniture": "Furniture",
+  "electronics": "Electronics",
+  "two-wheeler": "Two-wheeler",
+  "productName": "list name",
+  "description": "Description",
+  "location": "Location",
+  "price": "Price",
+  "uploadImage": "Upload image(s)",
+  "list": "List"
 }
