@@ -43,12 +43,11 @@ function UserListings({ t }) {
                 </div>
                 <div>
                   <p>
-                    <span className='font-extrabold'>Listing Date:</span>{" "}
+                    <span className='font-extrabold'>{t("listing-date")}</span>{" "}
                     {product.order_date}
                   </p>
                   <p>
-                    <span className='font-extrabold'>Category:</span>
-                    <br />
+                    <span className='font-extrabold'>{t("category")}</span>{" "}
                     <span className='font-extralight text-xs'>
                       {product.category}
                     </span>

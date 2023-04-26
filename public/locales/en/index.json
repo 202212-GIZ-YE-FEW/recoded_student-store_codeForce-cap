@@ -15,5 +15,6 @@
   "order-date": "Order Date:",
   "delivery-address": "Delivery Address:",
   "delivery-address-des": "X Apartment Y Street Z Province Istanbul/Turkey",
-  "": ""
+  "category": "Category:",
+  "listing-date": "Listing Date:"
 }
