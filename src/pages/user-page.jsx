@@ -23,7 +23,7 @@ export default function UserPage() {
   return (
     <RootLayout>
       <div
-        className='lg:flex h-[40px] lg:h-[816.2px]'
+        className='lg:flex h-[800px] lg:h-[816.2px]'
         dir={t("language") === "ar" ? "rtl" : "ltr"}
       >
         <div>
