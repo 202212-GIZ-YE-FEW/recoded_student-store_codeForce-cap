@@ -2,12 +2,17 @@ import Image from "next/image"
 
 import products from "../ProductList/products"
 
-export default function UserListings() {
+import { withTranslation } from "next-i18next"
+
+function UserListings({ t }) {
   return (
-    <section className='flex flex-col lg:flex-row h-[617px] md:h-[784px] lg:h-[100%] overflow-y-auto lg:bg-gradient-to-l from-zinc-800 to-slate-300 '>
+    <section
+      className='flex flex-col lg:flex-row h-[617px] md:h-[784px] lg:h-[100%] overflow-y-auto lg:bg-gradient-to-l from-zinc-800 to-slate-300 '
+      dir={t("language") === "ar" ? "rtl" : "ltr"}
+    >
       <div className=' w-full'>
         <div className='grid lg:grid-cols-3 md:grid-cols-2 gap-5 px-8 py-16'>
-          {products.map((product) => (
+          {products({ t }).map((product) => (
             <div
               key={product.id}
               className='lg:bg-white rounded-lg pb-7 shadow-2xl'
@@ -57,3 +62,5 @@ export default function UserListings() {
     </section>
   )
 }
+
+export default withTranslation("index")(UserListings)
