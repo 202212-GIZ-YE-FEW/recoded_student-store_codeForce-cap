@@ -11,5 +11,9 @@
   "filter-two": "أثاث",
   "filter-three": "إلكترونيات",
   "filter-four": "عجلتان",
-  "made-city": "اسطنبول / تركيا"
+  "made-city": "اسطنبول / تركيا",
+  "order-date":"تاريخ الطلب:",
+  "delivery-address":"عنوان التسليم:",
+  "delivery-address-des": "أكس شقة واي شارع زيد محافظة اسطنبول / تركيا",
+  "":""
 }

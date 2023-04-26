@@ -11,5 +11,9 @@
   "filter-two": "Furniture",
   "filter-three": "Electronics",
   "filter-four": "Two-wheeler",
-  "made-city": "Istanbul / Turkey"
+  "made-city": "Istanbul / Turkey",
+  "order-date": "Order Date:",
+  "delivery-address": "Delivery Address:",
+  "delivery-address-des": "X Apartment Y Street Z Province Istanbul/Turkey",
+  "":""
 }

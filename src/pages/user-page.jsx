@@ -12,14 +12,20 @@ import RootLayout from "@/layout/root/RootLayout"
 
 import { serverSideTranslations } from "next-i18next/serverSideTranslations"
 
+import { useTranslation } from "react-i18next"
+
 export default function UserPage() {
   const [selectedPage, setSelectedPage] = useState("UserOrders")
   function handleSelectedPage(page) {
     setSelectedPage(page)
   }
+  const { t } = useTranslation("index")
   return (
     <RootLayout>
-      <div className='lg:flex h-[40px] lg:h-[816.2px]'>
+      <div
+        className='lg:flex h-[40px] lg:h-[816.2px]'
+        dir={t("language") === "ar" ? "rtl" : "ltr"}
+      >
         <div>
           <SideBar
             handleSelectedPage={handleSelectedPage}

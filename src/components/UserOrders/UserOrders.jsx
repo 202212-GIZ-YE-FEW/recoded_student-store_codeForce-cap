@@ -43,11 +43,13 @@ function UserOrders({ t }) {
                 </div>
                 <div>
                   <p>
-                    <span className='font-extrabold'>Order Date:</span>{" "}
+                    <span className='font-extrabold'>{t("order-date")}</span>{" "}
                     {product.order_date}
                   </p>
                   <p>
-                    <span className='font-extrabold'>Delivery Address:</span>
+                    <span className='font-extrabold'>
+                      {t("delivery-address")}
+                    </span>
                     <br />
                     <span className='font-extralight text-xs'>
                       {product.delivery_address}

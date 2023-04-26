@@ -8,7 +8,7 @@ function Products({ t }) {
       made_city: t("made-city"),
       order_date: "01/04/2023",
       listing_date: "25/2/2023",
-      delivery_address: "X Apartment Y Street Z Province Istanbul/Turkey",
+      delivery_address: t("delivery-address-des"),
       images: "/images/productImg.png",
     },
     {
@@ -19,7 +19,7 @@ function Products({ t }) {
       made_city: t("made-city"),
       order_date: "03/04/2023",
       listing_date: "25/2/2023",
-      delivery_address: "X Apartment Y Street Z Province Istanbul/Turkey",
+      delivery_address: t("delivery-address-des"),
       images: "/images/productImg.png",
     },
     {
@@ -30,7 +30,7 @@ function Products({ t }) {
       made_city: t("made-city"),
       order_date: "05/04/2023",
       listing_date: "25/2/2023",
-      delivery_address: "X Apartment Y Street Z Province Istanbul/Turkey",
+      delivery_address: t("delivery-address-des"),
       images: "/images/productImg.png",
     },
     {
@@ -41,7 +41,7 @@ function Products({ t }) {
       made_city: t("made-city"),
       order_date: "07/04/2023",
       listing_date: "25/2/2023",
-      delivery_address: "X Apartment Y Street Z Province Istanbul/Turkey",
+      delivery_address: t("delivery-address-des"),
       images: "/images/productImg.png",
     },
     {
@@ -52,7 +52,7 @@ function Products({ t }) {
       made_city: t("made-city"),
       order_date: "09/04/2023",
       listing_date: "25/2/2023",
-      delivery_address: "X Apartment Y Street Z Province Istanbul/Turkey",
+      delivery_address: t("delivery-address-des"),
       images: "/images/productImg.png",
     },
     {
@@ -63,7 +63,7 @@ function Products({ t }) {
       made_city: t("made-city"),
       order_date: "11/04/2023",
       listing_date: "25/2/2023",
-      delivery_address: "X Apartment Y Street Z Province Istanbul/Turkey",
+      delivery_address: t("delivery-address-des"),
       images: "/images/productImg.png",
     },
     {
@@ -74,7 +74,7 @@ function Products({ t }) {
       made_city: t("made-city"),
       order_date: "13/04/2023",
       listing_date: "25/2/2023",
-      delivery_address: "X Apartment Y Street Z Province Istanbul/Turkey",
+      delivery_address: t("delivery-address-des"),
       images: "/images/productImg.png",
     },
     {
@@ -85,7 +85,7 @@ function Products({ t }) {
       made_city: t("made-city"),
       order_date: "15/04/2023",
       listing_date: "25/2/2023",
-      delivery_address: "X Apartment Y Street Z Province Istanbul/Turkey",
+      delivery_address: t("delivery-address-des"),
       images: "/images/productImg.png",
     },
     {
@@ -96,7 +96,7 @@ function Products({ t }) {
       made_city: t("made-city"),
       order_date: "17/04/2023",
       listing_date: "25/2/2023",
-      delivery_address: "X Apartment Y Street Z Province Istanbul/Turkey",
+      delivery_address: t("delivery-address-des"),
       images: "/images/productImg.png",
     },
     {
@@ -107,7 +107,7 @@ function Products({ t }) {
       made_city: t("made-city"),
       order_date: "19/04/2023",
       listing_date: "25/2/2023",
-      delivery_address: "X Apartment Y Street Z Province Istanbul/Turkey",
+      delivery_address: t("delivery-address-des"),
       images: "/images/productImg.png",
     },
     {
@@ -118,7 +118,7 @@ function Products({ t }) {
       made_city: t("made-city"),
       order_date: "21/04/2023",
       listing_date: "25/2/2023",
-      delivery_address: "X Apartment Y Street Z Province Istanbul/Turkey",
+      delivery_address: t("delivery-address-des"),
       images: "/images/productImg.png",
     },
     {
@@ -129,7 +129,7 @@ function Products({ t }) {
       made_city: t("made-city"),
       order_date: "23/04/2023",
       listing_date: "25/2/2023",
-      delivery_address: "X Apartment Y Street Z Province Istanbul/Turkey",
+      delivery_address: t("delivery-address-des"),
       images: "/images/productImg.png",
     },
     {
@@ -140,7 +140,7 @@ function Products({ t }) {
       made_city: t("made-city"),
       order_date: "25/04/2023",
       listing_date: "25/2/2023",
-      delivery_address: "X Apartment Y Street Z Province Istanbul/Turkey",
+      delivery_address: t("delivery-address-des"),
       images: "/images/productImg.png",
     },
     {
@@ -151,7 +151,7 @@ function Products({ t }) {
       made_city: t("made-city"),
       order_date: "27/04/2023",
       listing_date: "25/2/2023",
-      delivery_address: "X Apartment Y Street Z Province Istanbul/Turkey",
+      delivery_address: t("delivery-address-des"),
       images: "/images/productImg.png",
     },
     {
@@ -162,7 +162,7 @@ function Products({ t }) {
       made_city: t("made-city"),
       order_date: "01/05/2023",
       listing_date: "25/2/2023",
-      delivery_address: "X Apartment Y Street Z Province Istanbul/Turkey",
+      delivery_address: t("delivery-address-des"),
       images: "/images/productImg.png",
     },
     {
@@ -173,7 +173,7 @@ function Products({ t }) {
       made_city: t("made-city"),
       order_date: "03/05/2023",
       listing_date: "25/2/2023",
-      delivery_address: "X Apartment Y Street Z Province Istanbul/Turkey",
+      delivery_address: t("delivery-address-des"),
       images: "/images/productImg.png",
     },
   ]
