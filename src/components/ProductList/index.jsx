@@ -26,7 +26,7 @@ export default function ProductList({ products = [], selectedFilter }) {
               alt={product.name}
               width={258}
               height={211.41}
-              className='rounded-t-lg shadow-lg w-full'
+              className='rounded-t-lg shadow-lg w-full '
             />
             <div className='mx-3 text-center'>
               <div className='info flex justify-between my-4 mx-3'>
