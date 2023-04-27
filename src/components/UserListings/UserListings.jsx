@@ -10,7 +10,7 @@ export default function UserListings() {
           {products.map((product) => (
             <div
               key={product.id}
-              className='lg:bg-white rounded-lg pb-7 shadow-2xl transition hover:scale-105 hover:shadow-black'
+              className='lg:bg-white rounded-lg pb-7 cart-animation'
             >
               <Image
                 className='rounded-t-lg shadow-lg w-full'

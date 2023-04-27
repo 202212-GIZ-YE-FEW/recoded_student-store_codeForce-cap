@@ -8,7 +8,7 @@ export default function Buttons({ filters = [], handleCategoryFilter }) {
   const CategoryFilter = ({ filter, image, alt }) => (
     <button className='ml-4' onClick={() => handleCategoryFilter(filter)}>
       <Image
-        className='rounded-full shadow-2xl transition hover:scale-105 hover:shadow-black'
+        className='rounded-full cart-animation'
         src={image}
         alt={alt}
         width={150}

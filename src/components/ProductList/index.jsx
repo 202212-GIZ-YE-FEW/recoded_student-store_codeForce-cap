@@ -19,7 +19,7 @@ export default function ProductList({ products = [], selectedFilter }) {
         {categoryFilter.map((product) => (
           <div
             key={product.id}
-            className='mx-3 mb-10 border rounded-lg shadow-2xl transition hover:scale-105 hover:shadow-black'
+            className='mx-3 mb-10 border rounded-lg cart-animation'
           >
             <Image
               src={product.images}
