@@ -182,7 +182,7 @@ function ListingItems() {
               <option // * Default value selected
                 disabled={true}
                 value=''
-                selected={true}
+                defaultValue={true}
               >
                 {t("typeSelector")}
               </option>
@@ -201,7 +201,7 @@ function ListingItems() {
               <option // * Default value selected
                 disabled={true}
                 value=''
-                selected={true}
+                defaultValue={true}
               >
                 {t("categorySelector")}
               </option>
