@@ -1,5 +1,4 @@
 import DOMPurify from "dompurify"
-import { useSession } from "next-auth/react"
 import Image from "next/image"
 import { useRouter } from "next/router"
 import { useState } from "react"
@@ -48,8 +47,6 @@ const limiter = rateLimit({
 */
 
 function Signup() {
-  const { data: session } = useSession()
-
   const router = useRouter()
 
   const [formData, setFormData] = useState({

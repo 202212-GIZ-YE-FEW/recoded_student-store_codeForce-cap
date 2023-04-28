@@ -14,11 +14,15 @@ export default async function signIn(email, password, method = "email") {
 
       if (!userDoc.exists()) {
         alert("User not found")
+      } else if (!user.emailVerified) {
+        alert("Please verify your email before logging in")
+        await SignOut()
       } else {
         console.log("User signed in successfully")
         alert("User signed in successfully")
         SignOut()
         alert("Auto sign out triggered.")
+        result = { email: user.email, verified: user.emailVerified }
       }
     } else if (method === "facebook") {
       const user = await signInWithFacebook()

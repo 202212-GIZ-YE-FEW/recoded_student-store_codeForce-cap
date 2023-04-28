@@ -22,6 +22,7 @@ export default async function signUp(
 
       if (userDoc.exists()) {
         console.log("User already exists")
+        alert("This account already exist")
       } else {
         await createUserDoc(
           userId,
@@ -34,6 +35,7 @@ export default async function signUp(
 
         // Send email verification
         await sendEmailVerification(user)
+        alert("Please check your email for verification")
         result = { email: user.email, verified: user.emailVerified }
       }
 
@@ -68,7 +70,7 @@ export default async function signUp(
   } catch (e) {
     error = e
     console.error(error.message)
-    alert(error.message)
+    alert(`Error: \${error.message}`)
   }
 
   return { result, error }
