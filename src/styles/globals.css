@@ -1,3 +1,7 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.cart-animation {
+  @apply shadow-2xl transition hover:scale-105 hover:shadow-black;
+}
