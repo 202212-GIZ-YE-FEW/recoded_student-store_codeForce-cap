@@ -300,7 +300,7 @@ exports[`renders correctly 1`] = `
               </div>
             </a>
             <a
-              href="/listing-page"
+              href="/listing"
               onClick={[Function]}
               onMouseEnter={[Function]}
               onTouchStart={[Function]}
@@ -491,7 +491,7 @@ exports[`renders correctly 1`] = `
           >
             <a
               className="hover:underline"
-              href="/listing-page"
+              href="/listing"
               onClick={[Function]}
               onMouseEnter={[Function]}
               onTouchStart={[Function]}
