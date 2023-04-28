@@ -180,9 +180,8 @@ function ListingItems() {
               className='cursor-pointer text-center block py-2.5 w-full text-md text-gray-600 bg-transparent border-0 border-b-2 border-gray-200 dark:text-gray-700 dark:border-gray-700 focus:outline-none focus:ring-0'
             >
               <option // * Default value selected
-                disabled={true}
                 value=''
-                defaultValue={true}
+                hidden={true}
               >
                 {t("typeSelector")}
               </option>
@@ -199,9 +198,8 @@ function ListingItems() {
               className='cursor-pointer text-center block py-2.5 w-full text-md text-gray-600 bg-transparent border-0 border-b-2 border-gray-200 dark:text-gray-700 dark:border-gray-700 focus:outline-none focus:ring-0'
             >
               <option // * Default value selected
-                disabled={true}
                 value=''
-                defaultValue={true}
+                hidden={true}
               >
                 {t("categorySelector")}
               </option>
