@@ -4,13 +4,13 @@ import products from "../ProductList/products"
 
 export default function UserListings() {
   return (
-    <section className='flex flex-col lg:flex-row h-[617px] md:h-[784px] lg:h-[100%] overflow-y-auto lg:bg-gradient-to-l from-zinc-800 to-slate-300 '>
-      <div className=' w-full'>
+    <section className='flex flex-col lg:flex-row h-[617px] md:h-[784px] lg:h-[100%] overflow-y-auto lg:bg-gradient-to-l from-zinc-800 to-slate-300'>
+      <div className=' w-full mx-10'>
         <div className='grid lg:grid-cols-3 md:grid-cols-2 gap-5 px-8 py-16'>
           {products.map((product) => (
             <div
               key={product.id}
-              className='lg:bg-white rounded-lg pb-7 shadow-2xl'
+              className='lg:bg-white rounded-lg pb-7 cart-animation'
             >
               <Image
                 className='rounded-t-lg shadow-lg w-full'
