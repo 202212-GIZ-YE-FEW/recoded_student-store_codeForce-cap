@@ -3,6 +3,9 @@ import { addDoc, collection } from "firebase/firestore"
 import { useTranslation, withTranslation } from "next-i18next"
 import Image from "next/image"
 import { useState } from "react"
+import { ToastContainer, toast } from "react-toastify"
+
+import "react-toastify/dist/ReactToastify.css"
 
 import { db } from "@/utils/firebase/config"
 import { listingsValidation } from "@/utils/schemaValidations/listingItems"
@@ -91,102 +94,129 @@ function ListingItems() {
   }
 
   return (
-    <form onSubmit={submitHandler} className='mx-5 mb-3'>
-      {/* Head text */}
-      <Highlighter text={`${t("headerText")}`} />
+    <>
+      <ToastContainer />
+      <form onSubmit={submitHandler} className='mx-5 mb-3'>
+        {/* Head text */}
+        <Highlighter text={`${t("headerText")}`} />
 
-      {/* Black line between the head text and the content*/}
-      <hr className='w-[100%] h-[1.5px] mx-auto bg-gray-100 border-0 rounded dark:bg-gray-700'></hr>
-      <br />
+        {/* Black line between the head text and the content*/}
+        <hr className='w-[100%] h-[1.5px] mx-auto bg-gray-100 border-0 rounded dark:bg-gray-700'></hr>
+        <br />
 
-      {/* Displayed images */}
-      <div className='grid grid-cols-1 lg:grid-cols-2 gap-4'>
-        <div className='flex flex-col sm:flex-row lg:flex-col gap-5'>
-          <label htmlFor='primaryImageInput' className='cursor-pointer'>
-            <Image // * First Image
-              className='block drop-shadow-2xl lg:w-full max-h-[340px] sm:max-h-[262px] lg:max-h-[405px]'
-              src={formData.primaryImage.url}
-              alt={t("primaryImage")}
-              width={570}
-              height={340}
-            />
-            <Input
-              id='primaryImageInput'
-              type='file'
-              accept='image/*'
-              onChange={(event) => uploadedImageHandler(event, "primaryImage")}
-              className='hidden'
-            />
-          </label>
-          <div className='flex flex-row sm:flex-col lg:flex-row gap-10 sm:gap-4 lg:gap-20'>
-            <label htmlFor='secondaryImageInput' className='cursor-pointer'>
-              <Image // * Second Image
-                className='block drop-shadow-2xl sm:w-full lg:w-[190px] max-h-[90px] sm:max-h-[137px] lg:max-h-[105px]'
-                src={formData.secondaryImage.url}
-                alt={t("secondaryImage")}
-                width={190}
-                height={137}
+        {/* Displayed images */}
+        <div className='grid grid-cols-1 lg:grid-cols-2 gap-4'>
+          <div className='flex flex-col sm:flex-row lg:flex-col gap-5'>
+            <label htmlFor='primaryImageInput' className='cursor-pointer'>
+              <Image // * First Image
+                className='block drop-shadow-2xl lg:w-full max-h-[340px] sm:max-h-[262px] lg:max-h-[405px]'
+                src={formData.primaryImage.url}
+                alt={t("primaryImage")}
+                width={570}
+                height={340}
               />
               <Input
-                id='secondaryImageInput'
+                id='primaryImageInput'
                 type='file'
                 accept='image/*'
                 onChange={(event) =>
-                  uploadedImageHandler(event, "secondaryImage")
+                  uploadedImageHandler(event, "primaryImage")
                 }
                 className='hidden'
               />
             </label>
-            <div className='flex gap-10 sm:gap-4 lg:gap-20'>
-              <label htmlFor='tertiaryImageInput' className='cursor-pointer'>
-                <Image // * Third Image
-                  className='block drop-shadow-2xl max-h-[90px] sm:max-h-[137px] lg:max-h-[105px]'
-                  src={formData.tertiaryImage.url}
-                  alt={t("tertiaryImage")}
+            <div className='flex flex-row sm:flex-col lg:flex-row gap-10 sm:gap-4 lg:gap-20'>
+              <label htmlFor='secondaryImageInput' className='cursor-pointer'>
+                <Image // * Second Image
+                  className='block drop-shadow-2xl sm:w-full lg:w-[190px] max-h-[90px] sm:max-h-[137px] lg:max-h-[105px]'
+                  src={formData.secondaryImage.url}
+                  alt={t("secondaryImage")}
                   width={190}
                   height={137}
                 />
                 <Input
-                  id='tertiaryImageInput'
+                  id='secondaryImageInput'
                   type='file'
                   accept='image/*'
                   onChange={(event) =>
-                    uploadedImageHandler(event, "tertiaryImage")
+                    uploadedImageHandler(event, "secondaryImage")
                   }
                   className='hidden'
                 />
               </label>
-              <label htmlFor='quaternaryImageInput' className='cursor-pointer'>
-                <Image // * Fourth Image
-                  className='block drop-shadow-2xl max-h-[90px] sm:max-h-[137px] lg:max-h-[105px]'
-                  src={formData.quaternaryImage.url}
-                  alt={t("quaternaryImage")}
-                  width={190}
-                  height={137}
-                />
-                <Input
-                  id='quaternaryImageInput'
-                  type='file'
-                  accept='image/*'
-                  onChange={(event) =>
-                    uploadedImageHandler(event, "quaternaryImage")
-                  }
-                  className='hidden'
-                />
-              </label>
+              <div className='flex gap-10 sm:gap-4 lg:gap-20'>
+                <label htmlFor='tertiaryImageInput' className='cursor-pointer'>
+                  <Image // * Third Image
+                    className='block drop-shadow-2xl max-h-[90px] sm:max-h-[137px] lg:max-h-[105px]'
+                    src={formData.tertiaryImage.url}
+                    alt={t("tertiaryImage")}
+                    width={190}
+                    height={137}
+                  />
+                  <Input
+                    id='tertiaryImageInput'
+                    type='file'
+                    accept='image/*'
+                    onChange={(event) =>
+                      uploadedImageHandler(event, "tertiaryImage")
+                    }
+                    className='hidden'
+                  />
+                </label>
+                <label
+                  htmlFor='quaternaryImageInput'
+                  className='cursor-pointer'
+                >
+                  <Image // * Fourth Image
+                    className='block drop-shadow-2xl max-h-[90px] sm:max-h-[137px] lg:max-h-[105px]'
+                    src={formData.quaternaryImage.url}
+                    alt={t("quaternaryImage")}
+                    width={190}
+                    height={137}
+                  />
+                  <Input
+                    id='quaternaryImageInput'
+                    type='file'
+                    accept='image/*'
+                    onChange={(event) =>
+                      uploadedImageHandler(event, "quaternaryImage")
+                    }
+                    className='hidden'
+                  />
+                </label>
+              </div>
             </div>
           </div>
-        </div>
 
-        {/* Selectors */}
-        <div>
-          <div className='flex flex-col sm:flex-row sm:gap-16'>
-            {/* //* Type Selector */}
-            <label htmlFor='typeSelector' className='w-full'>
+          {/* Selectors */}
+          <div>
+            <div className='flex flex-col sm:flex-row sm:gap-16'>
+              {/* //* Type Selector */}
+              <label htmlFor='typeSelector' className='w-full'>
+                <select
+                  id='typeSelector'
+                  name='type'
+                  value={formData.type}
+                  onChange={inputsHandler}
+                  className='cursor-pointer text-center block py-2.5 w-full text-md text-gray-600 bg-transparent border-0 border-b-2 border-gray-200 dark:text-gray-700 dark:border-gray-700 focus:outline-none focus:ring-0'
+                >
+                  <option // * Default value selected
+                    value=''
+                    hidden={true}
+                  >
+                    {t("typeSelector")}
+                  </option>
+                  <option value='product'>{t("product")}</option>
+                  <option value='service'>{t("service")}</option>
+                </select>
+                {toast.error(errors.type).type}
+              </label>
+
+              {/* //* Category Selector */}
               <select
-                id='typeSelector'
-                name='type'
-                value={formData.type}
+                id='categorySelector'
+                name='category'
+                value={formData.category}
                 onChange={inputsHandler}
                 className='cursor-pointer text-center block py-2.5 w-full text-md text-gray-600 bg-transparent border-0 border-b-2 border-gray-200 dark:text-gray-700 dark:border-gray-700 focus:outline-none focus:ring-0'
               >
@@ -194,87 +224,68 @@ function ListingItems() {
                   value=''
                   hidden={true}
                 >
-                  {t("typeSelector")}
+                  {t("categorySelector")}
                 </option>
-                <option value='product'>{t("product")}</option>
-                <option value='service'>{t("service")}</option>
+                <option value='Books'>{t("books")}</option>
+                <option value='Furniture'>{t("furniture")}</option>
+                <option value='Electronics'>{t("electronics")}</option>
+                <option value='Two-wheeler'>{t("two-wheeler")}</option>
               </select>
-              {errors.type && <p>{errors.type}</p>}
-            </label>
+            </div>
 
-            {/* //* Category Selector */}
-            <select
-              id='categorySelector'
-              name='category'
-              value={formData.category}
-              onChange={inputsHandler}
-              className='cursor-pointer text-center block py-2.5 w-full text-md text-gray-600 bg-transparent border-0 border-b-2 border-gray-200 dark:text-gray-700 dark:border-gray-700 focus:outline-none focus:ring-0'
-            >
-              <option // * Default value selected
-                value=''
-                hidden={true}
-              >
-                {t("categorySelector")}
-              </option>
-              <option value='Books'>{t("books")}</option>
-              <option value='Furniture'>{t("furniture")}</option>
-              <option value='Electronics'>{t("electronics")}</option>
-              <option value='Two-wheeler'>{t("two-wheeler")}</option>
-            </select>
-          </div>
-
-          {/* Product Information Inputs */}
-          <div>
-            <Input // * Product name input
-              name='productName'
-              placeholder={t("productName")}
-              type='text'
-              value={formData.productName}
-              onChange={inputsHandler}
-            />
-            <Input // * Product description input
-              name='description'
-              placeholder={t("description")}
-              className='py-[75px]'
-              type='text'
-              value={formData.description}
-              onChange={inputsHandler}
-            />
-            <span className='flex gap-4'>
-              <Input // * Product location input
-                name='location'
-                placeholder={t("location")}
-                className='w-[47%]'
+            {/* Product Information Inputs */}
+            <div>
+              <Input // * Product name input
+                name='productName'
+                placeholder={t("productName")}
                 type='text'
-                value={formData.location}
+                value={formData.productName}
                 onChange={inputsHandler}
               />
-              <Input // * Product price input
-                name='price'
-                placeholder={t("price")}
-                className='w-[47%]'
+              <Input // * Product description input
+                name='description'
+                placeholder={t("description")}
+                className='py-[75px]'
                 type='text'
-                value={formData.price}
+                value={formData.description}
                 onChange={inputsHandler}
               />
-            </span>
+              <span className='flex gap-4'>
+                <Input // * Product location input
+                  name='location'
+                  placeholder={t("location")}
+                  className='w-[47%]'
+                  type='text'
+                  value={formData.location}
+                  onChange={inputsHandler}
+                />
+                <Input // * Product price input
+                  name='price'
+                  placeholder={t("price")}
+                  className='w-[47%]'
+                  type='text'
+                  value={formData.price}
+                  onChange={inputsHandler}
+                />
+              </span>
 
-            <span className='flex'>
-              <Button // * Image uploader button
-                buttonStyle='uploadImage'
-                text={t("uploadImage")}
-                type='button'
-              />
-              <Button // * Submission button
-                buttonStyle='listItem'
-                text={t("list")}
-                type='submit'
-              />
-            </span>
+              <span className='flex'>
+                <Button // * Image uploader button
+                  buttonStyle='uploadImage'
+                  text={t("uploadImage")}
+                  type='button'
+                />
+                <Button // * Submission button
+                  buttonStyle='listItem'
+                  text={t("list")}
+                  type='submit'
+                />
+              </span>
+            </div>
           </div>
         </div>
-      </div>
-    </form>
+      </form>
+    </>
   )
 }
 export default withTranslation("listingItems")(ListingItems)
