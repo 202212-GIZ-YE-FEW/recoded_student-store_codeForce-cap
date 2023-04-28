@@ -1,6 +1,7 @@
+import DOMPurify from "dompurify"
 import { addDoc, collection } from "firebase/firestore"
-import Image from "next/image"
 import { useTranslation, withTranslation } from "next-i18next"
+import Image from "next/image"
 import { useState } from "react"
 
 import { db } from "@/utils/firebase/config"
@@ -30,7 +31,7 @@ function ListingItems() {
     const { name, value } = event.target
     setFormData((prevFormData) => ({
       ...prevFormData,
-      [name]: value,
+      [name]: DOMPurify.sanitize(value),
     }))
   }
 
