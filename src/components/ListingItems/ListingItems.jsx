@@ -5,6 +5,7 @@ import Image from "next/image"
 import { useState } from "react"
 
 import { db } from "@/utils/firebase/config"
+import { listingsValidation } from "@/utils/schemaValidations/listingItems"
 
 import Button from "../button"
 import Highlighter from "../highlighter"
@@ -53,10 +54,14 @@ function ListingItems() {
     }
   }
 
+  // Errors state
+  const [errors, setErrors] = useState({})
+
   // Submit handler
   const submitHandler = async (event) => {
     event.preventDefault()
     try {
+      await listingsValidation.validate(formData, { abortEarly: false })
       // Save the form data to the sellItems collection
       const docRef = await addDoc(collection(db, "listing Items"), formData)
 
@@ -76,7 +81,12 @@ function ListingItems() {
         price: "",
       })
     } catch (error) {
-      alert(t("notAddedAlert"), error)
+      // Setting the error to be displayed from the validationErrors
+      const schemaErrors = {}
+      error.inner.forEach((error) => {
+        schemaErrors[error.path] = error.message
+      })
+      setErrors(schemaErrors)
     }
   }
 
@@ -172,22 +182,25 @@ function ListingItems() {
         <div>
           <div className='flex flex-col sm:flex-row sm:gap-16'>
             {/* //* Type Selector */}
-            <select
-              id='typeSelector'
-              name='type'
-              value={formData.type}
-              onChange={inputsHandler}
-              className='cursor-pointer text-center block py-2.5 w-full text-md text-gray-600 bg-transparent border-0 border-b-2 border-gray-200 dark:text-gray-700 dark:border-gray-700 focus:outline-none focus:ring-0'
-            >
-              <option // * Default value selected
-                value=''
-                hidden={true}
+            <label htmlFor='typeSelector' className='w-full'>
+              <select
+                id='typeSelector'
+                name='type'
+                value={formData.type}
+                onChange={inputsHandler}
+                className='cursor-pointer text-center block py-2.5 w-full text-md text-gray-600 bg-transparent border-0 border-b-2 border-gray-200 dark:text-gray-700 dark:border-gray-700 focus:outline-none focus:ring-0'
               >
-                {t("typeSelector")}
-              </option>
-              <option value='product'>{t("product")}</option>
-              <option value='service'>{t("service")}</option>
-            </select>
+                <option // * Default value selected
+                  value=''
+                  hidden={true}
+                >
+                  {t("typeSelector")}
+                </option>
+                <option value='product'>{t("product")}</option>
+                <option value='service'>{t("service")}</option>
+              </select>
+              {errors.type && <p>{errors.type}</p>}
+            </label>
 
             {/* //* Category Selector */}
             <select
