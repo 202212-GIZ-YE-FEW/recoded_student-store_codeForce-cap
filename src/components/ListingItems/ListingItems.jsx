@@ -1,9 +1,9 @@
 import DOMPurify from "dompurify"
 import { addDoc, collection } from "firebase/firestore"
-import { useTranslation, withTranslation } from "next-i18next"
 import Image from "next/image"
+import { useTranslation, withTranslation } from "next-i18next"
 import { useState } from "react"
-import { ToastContainer, toast } from "react-toastify"
+import { toast,ToastContainer } from "react-toastify"
 
 import "react-toastify/dist/ReactToastify.css"
 
@@ -68,7 +68,7 @@ function ListingItems() {
       // Save the form data to the sellItems collection
       const docRef = await addDoc(collection(db, "listing Items"), formData)
 
-      alert(t("addedAlert"), docRef.id)
+      toast.success(t("addedAlert"), { toastId: docRef.id })
 
       // Clear the form data
       setFormData({
@@ -213,60 +213,80 @@ function ListingItems() {
               </label>
 
               {/* //* Category Selector */}
-              <select
-                id='categorySelector'
-                name='category'
-                value={formData.category}
-                onChange={inputsHandler}
-                className='cursor-pointer text-center block py-2.5 w-full text-md text-gray-600 bg-transparent border-0 border-b-2 border-gray-200 dark:text-gray-700 dark:border-gray-700 focus:outline-none focus:ring-0'
-              >
-                <option // * Default value selected
-                  value=''
-                  hidden={true}
+              <label htmlFor='categorySelector' className='w-full'>
+                <select
+                  id='categorySelector'
+                  name='category'
+                  value={formData.category}
+                  onChange={inputsHandler}
+                  className='cursor-pointer text-center block py-2.5 w-full text-md text-gray-600 bg-transparent border-0 border-b-2 border-gray-200 dark:text-gray-700 dark:border-gray-700 focus:outline-none focus:ring-0'
                 >
-                  {t("categorySelector")}
-                </option>
-                <option value='Books'>{t("books")}</option>
-                <option value='Furniture'>{t("furniture")}</option>
-                <option value='Electronics'>{t("electronics")}</option>
-                <option value='Two-wheeler'>{t("two-wheeler")}</option>
-              </select>
+                  <option // * Default value selected
+                    value=''
+                    hidden={true}
+                  >
+                    {t("categorySelector")}
+                  </option>
+                  <option value='Books'>{t("books")}</option>
+                  <option value='Furniture'>{t("furniture")}</option>
+                  <option value='Electronics'>{t("electronics")}</option>
+                  <option value='Two-wheeler'>{t("two-wheeler")}</option>
+                </select>
+                {toast.error(errors.category).category}
+              </label>
             </div>
 
-            {/* Product Information Inputs */}
             <div>
-              <Input // * Product name input
-                name='productName'
-                placeholder={t("productName")}
-                type='text'
-                value={formData.productName}
-                onChange={inputsHandler}
-              />
-              <Input // * Product description input
-                name='description'
-                placeholder={t("description")}
-                className='py-[75px]'
-                type='text'
-                value={formData.description}
-                onChange={inputsHandler}
-              />
+              {/* Product Information Inputs */}
+              <label htmlFor='productName' className='w-full'>
+                <Input // * Product name input
+                  name='productName'
+                  placeholder={t("productName")}
+                  type='text'
+                  value={formData.productName}
+                  onChange={inputsHandler}
+                />
+                {toast.error(errors.productName).productName}
+              </label>
+
+              {/* // * Product description input */}
+              <label htmlFor='description' className='w-full'>
+                <Input
+                  name='description'
+                  placeholder={t("description")}
+                  className='py-[75px]'
+                  type='text'
+                  value={formData.description}
+                  onChange={inputsHandler}
+                />
+                {toast.error(errors.description).description}
+              </label>
+
               <span className='flex gap-4'>
-                <Input // * Product location input
-                  name='location'
-                  placeholder={t("location")}
-                  className='w-[47%]'
-                  type='text'
-                  value={formData.location}
-                  onChange={inputsHandler}
-                />
-                <Input // * Product price input
-                  name='price'
-                  placeholder={t("price")}
-                  className='w-[47%]'
-                  type='text'
-                  value={formData.price}
-                  onChange={inputsHandler}
-                />
+                {/* // * Product location input */}
+                <label htmlFor='location' className='w-full'>
+                  <Input
+                    name='location'
+                    placeholder={t("location")}
+                    className='w-[47%]'
+                    type='text'
+                    value={formData.location}
+                    onChange={inputsHandler}
+                  />
+                  {toast.error(errors.location).location}
+                </label>
+                {/* // * Product price input */}
+                <label htmlFor='price' className='w-full'>
+                  <Input
+                    name='price'
+                    placeholder={t("price")}
+                    className='w-[47%]'
+                    type='text'
+                    value={formData.price}
+                    onChange={inputsHandler}
+                  />
+                  {toast.error(errors.price).price}
+                </label>
               </span>
 
               <span className='flex'>
