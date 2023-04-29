@@ -2,16 +2,31 @@ import * as Yup from "yup"
 
 // Define validation schema using Yup
 export const signupValidation = Yup.object().shape({
-  firstName: Yup.string().required("First name is required"),
-  surname: Yup.string().required("Surname is required"),
+  firstName: Yup.string()
+    .required("First name is required")
+    .matches(
+      /^[a-zA-Z]+(([',. -][a-zA-Z ])?[a-zA-Z]*)*$/,
+      "Please enter a valid first name"
+    ),
+  surname: Yup.string()
+    .required("Surname is required")
+    .matches(
+      /^[a-zA-Z]+(([',. -][a-zA-Z ])?[a-zA-Z]*)*$/,
+      "Please enter a valid surname"
+    ),
   email: Yup.string()
-    .email("invalid email")
+    .email("Invalid email")
     .matches(
       /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/,
       "Please enter a valid email address"
     )
     .required("Email is required"),
-  schoolName: Yup.string().required("School name is required"),
+  schoolName: Yup.string()
+    .matches(
+      /^[a-zA-Z]+(([',. -][a-zA-Z ])?[a-zA-Z]*)*$/,
+      "Please enter a valid School name"
+    )
+    .required("School name is required"),
   password: Yup.string()
     .min(8, "Password must be at least 8 characters")
     .max(64, "Password must be less than 64 characters")
