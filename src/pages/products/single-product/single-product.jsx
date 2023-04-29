@@ -6,11 +6,11 @@ import PhotosGallery from "@/components/PhotosGallery"
 
 function SingleProduct() {
   const [photos, setPhotos] = useState([
-    { id: 1, url: "photo-one.svg" },
-    { id: 2, url: "photo-two.svg" },
-    { id: 3, url: "photo-three.svg" },
-    { id: 4, url: "photo-four.svg" },
-    { id: 5, url: "photo-five.svg" },
+    { id: 1, url: "/images/photo-one.svg" },
+    { id: 2, url: "/images/photo-two.svg" },
+    { id: 3, url: "/images/photo-three.svg" },
+    { id: 4, url: "/images/photo-four.svg" },
+    { id: 5, url: "/images/photo-five.svg" },
   ])
 
   const handleRemovePhoto = (id) => {

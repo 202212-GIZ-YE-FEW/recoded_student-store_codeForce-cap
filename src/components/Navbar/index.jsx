@@ -122,7 +122,7 @@ export default function Navbar() {
                   sign in
                 </div>
               </Link>
-              <Link href='/sell-items'>
+              <Link href='/listing'>
                 <div className='bg-purple-light py-2 px-5 text-white rounded-3xl text-sm hover:bg-violet-800 transition-all cursor-pointer'>
                   sell items
                 </div>

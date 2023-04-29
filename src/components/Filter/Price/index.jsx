@@ -1,5 +1,8 @@
 import { useState } from "react"
 import { Range } from "react-range"
+import { toast, ToastContainer } from "react-toastify"
+
+import "react-toastify/dist/ReactToastify.css"
 
 export default function PriceFilter() {
   const [tempValues, setTempValues] = useState([270, 770]) // temporary min and max values for changes made by user
@@ -11,9 +14,11 @@ export default function PriceFilter() {
   const handleMinChange = (e) => {
     const newMin = +e.target.value.replace(/\D/g, "")
     if (newMin < 0) {
-      alert("Sorry, the minimum price is $10")
+      toast.warn("Sorry, the minimum price is $10")
     } else if (newMin > tempValues[1]) {
-      alert("Sorry, the minimum price cannot be greater than the maximum price")
+      toast.warn(
+        "Sorry, the minimum price cannot be greater than the maximum price"
+      )
     } else {
       setTempValues([newMin, tempValues[1]])
     }
@@ -22,9 +27,11 @@ export default function PriceFilter() {
   const handleMaxChange = (e) => {
     const newMax = +e.target.value.replace(/\D/g, "")
     if (newMax > 1000) {
-      alert("Sorry, the maximum price is $1000")
+      toast.warn("Sorry, the maximum price is $1000")
     } else if (newMax < tempValues[0]) {
-      alert("Sorry, the maximum price cannot be less than the minimum price")
+      toast.warn(
+        "Sorry, the maximum price cannot be less than the minimum price"
+      )
     } else {
       setTempValues([tempValues[0], newMax])
     }
@@ -32,6 +39,7 @@ export default function PriceFilter() {
 
   return (
     <div className='flex flex-col items-stretch'>
+      <ToastContainer pauseOnHover={false} newestOnTop={true} theme='colored' />
       <div className='flex justify-around text-2xl text-bubble-gum font-poppins font-extrabold ml-5 md:ml-10'>
         <input
           type='text'

@@ -1,0 +1,23 @@
+{
+  "addedAlert": "تمت الأضافة",
+  "notAddedAlert": "فشل الأضافة",
+  "headerText": "أضف منتج / خدمة",
+  "primaryImage": "الصورة الاساسية",
+  "secondaryImage": "الصورة الثانيه",
+  "tertiaryImage": "الصورة الثالثه",
+  "quaternaryImage": "الصورة الرابعه",
+  "typeSelector": "اختر نوع الاضافة",
+  "categorySelector": "أختر فئة",
+  "product": "منتج",
+  "service": "خدمة",
+  "books": "كتب",
+  "furniture": "آثاث",
+  "electronics": "إلكترونيات",
+  "two-wheeler": "عجلتين",
+  "productName": "إسم الأضافة",
+  "description": "ألوصف",
+  "location": "الموقع",
+  "price": "ألسعر",
+  "uploadImage": "أضف صور(ة)",
+  "list": "نشر"
+}

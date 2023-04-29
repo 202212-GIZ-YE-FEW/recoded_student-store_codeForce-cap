@@ -1,8 +1,8 @@
 import renderer from "react-test-renderer"
 
-import Signin from ".."
+import Aboutus from "../Aboutus"
 
 it("renders correctly", () => {
-  const tree = renderer.create(<Signin />).toJSON()
+  const tree = renderer.create(<Aboutus />).toJSON()
   expect(tree).toMatchSnapshot()
 })

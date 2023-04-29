@@ -1,6 +1,10 @@
 // Import the functions you need from the SDKs you need
 import { getApps, initializeApp } from "firebase/app"
-import { getAuth } from "firebase/auth"
+import {
+  FacebookAuthProvider,
+  getAuth,
+  GoogleAuthProvider,
+} from "firebase/auth"
 import { getFirestore } from "firebase/firestore"
 
 // TODO: Add SDKs for Firebase products that you want to use
@@ -15,7 +19,6 @@ const firebaseConfig = {
   storageBucket: process.env.NEXT_PUBLIC_FIREBASE_STORAGE_BUCKET,
   messagingSenderId: process.env.NEXT_PUBLIC_FIREBASE_MESSAGING_SENDER_ID,
   appId: process.env.NEXT_PUBLIC_FIREBASE_APP_ID,
-  measurementId: process.env.NEXT_PUBLIC_FIREBASE_MEASUREMENT_ID,
 }
 
 // Initialize Firebase
@@ -25,4 +28,6 @@ let firebase_app =
 export default firebase_app
 export const auth = getAuth(firebase_app)
 export const db = getFirestore(firebase_app)
-// const analytics = getAnalytics(firebase_app)
+
+export const googleProvider = new GoogleAuthProvider() // Google authentication provider
+export const facebookProvider = new FacebookAuthProvider() // Google authentication provider
