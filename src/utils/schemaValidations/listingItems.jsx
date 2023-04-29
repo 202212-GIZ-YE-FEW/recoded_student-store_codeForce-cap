@@ -1,6 +1,18 @@
 import * as Yup from "yup"
 
 export const listingsValidation = Yup.object().shape({
+  primaryImage: Yup.object().shape({
+    file: Yup.mixed().optional(),
+    url: Yup.string().url().optional(),
+  }),
+  secondaryImage: Yup.object().shape({
+    file: Yup.mixed().optional(),
+    url: Yup.string().url().optional(),
+  }),
+  tertiaryImage: Yup.object().shape({
+    file: Yup.mixed().optional(),
+    url: Yup.string().url().optional(),
+  }),
   type: Yup.string().required(
     "Choose a Type the students need to know what you list for them !"
   ),

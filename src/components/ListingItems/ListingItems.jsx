@@ -86,6 +86,7 @@ function ListingItems() {
       })
     } catch (error) {
       // Setting the error to be displayed from the validationErrors
+      toast.error("Oh no There is an error the list doesn't uploaded")
       const schemaErrors = {}
       error.inner.forEach((error) => {
         schemaErrors[error.path] = error.message
