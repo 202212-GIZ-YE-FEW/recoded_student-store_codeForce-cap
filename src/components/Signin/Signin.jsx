@@ -3,22 +3,16 @@ import Link from "next/link"
 import { useRouter } from "next/router"
 import { useState } from "react"
 import { BsFacebook, BsGoogle, BsTwitter } from "react-icons/bs"
-import * as Yup from "yup"
+import { toast, ToastContainer } from "react-toastify"
 
+import "react-toastify/dist/ReactToastify.css"
 import styles from "./Signin.module.css"
 
 import signIn from "@/utils/firebase/signin"
+import { signinValidation } from "@/utils/schemaValidations/signin"
 
 import Button from "../button"
 import Input from "../input"
-
-// Define validation schema using Yup
-const validationSchema = Yup.object().shape({
-  email: Yup.string()
-    .email("invalid email")
-    .required("Email is can't be empty!"),
-  password: Yup.string().required("Password can't be empty!"),
-})
 
 function Signin() {
   const router = useRouter()
@@ -42,19 +36,17 @@ function Signin() {
     event.preventDefault()
 
     try {
-      await validationSchema.validate(formData, { abortEarly: false })
+      await signinValidation.validate(formData, { abortEarly: false })
       const { email, password } = formData
 
       const { result, error } = await signIn(email, password)
 
-      console.log(formData)
-
       if (error) {
-        return console.log(error)
+        return toast.error(error)
       }
 
       // else when successful
-      console.log(result)
+      toast.success(result)
       return router.push("/")
     } catch (err) {
       const validationErrors = {}
@@ -67,6 +59,7 @@ function Signin() {
 
   return (
     <>
+      <ToastContainer />
       <div className={`flex justify-center  md:flex-row  bg-[#f1f6fa] `}>
         <div className={` ${styles.handbox_background}   w-3/5 `}>
           <div className=' p-20 '>
@@ -96,7 +89,7 @@ function Signin() {
                 onChange={handleChange}
               />
             </label>
-            {errors.email && <p>{errors.email}</p>}
+            {toast.error(errors.email).email}
             <label htmlFor='password'>
               <Input
                 type='password'
@@ -107,7 +100,7 @@ function Signin() {
                 onChange={handleChange}
               />
             </label>
-            {errors.password && <p>{errors.password}</p>}
+            {toast.error(errors.password).password}
             <div className='my-4 gap-1 flex-row flex lg:justify-center'>
               <Button className='orangeSignIn' text='Sign in' type='submit' />
               <Button className='forgotPassword' text='forgotPassword ' />
