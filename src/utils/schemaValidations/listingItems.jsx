@@ -9,7 +9,7 @@ export const listingsValidation = Yup.object().shape({
   description: Yup.string().required("Please describe your listing"),
   location: Yup.string().required("Location is required"),
   price: Yup.number()
-    .required("How much is it coast ?")
-    .min(0, "Price must be greater than or equal to 0")
-    .max(1000, "Price must be less than or equal to 1000 $"),
+    .required("How much is it coast ?, pleas add a price")
+    .min(10)
+    .max(1000),
 })

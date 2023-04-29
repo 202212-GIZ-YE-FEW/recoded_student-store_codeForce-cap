@@ -27,7 +27,7 @@ function ListingItems() {
     productName: "",
     description: "",
     location: "",
-    price: "",
+    price: 0,
   })
 
   // Input handler
@@ -82,7 +82,7 @@ function ListingItems() {
         productName: "",
         description: "",
         location: "",
-        price: "",
+        price: 0,
       })
     } catch (error) {
       // Setting the error to be displayed from the validationErrors
@@ -193,101 +193,87 @@ function ListingItems() {
           <div>
             <div className='flex flex-col sm:flex-row sm:gap-16'>
               {/* //* Type Selector */}
-              <label htmlFor='typeSelector' className='w-full'>
-                <select
-                  id='typeSelector'
-                  name='type'
-                  value={formData.type}
-                  onChange={inputsHandler}
-                  className='cursor-pointer text-center block py-2.5 w-full text-md text-gray-600 bg-transparent border-0 border-b-2 border-gray-200 dark:text-gray-700 dark:border-gray-700 focus:outline-none focus:ring-0'
+              <select
+                id='typeSelector'
+                name='type'
+                value={formData.type}
+                onChange={inputsHandler}
+                className='cursor-pointer text-center block py-2.5 w-full text-md text-gray-600 bg-transparent border-0 border-b-2 border-gray-200 dark:text-gray-700 dark:border-gray-700 focus:outline-none focus:ring-0'
+                onError={`${toast.error(errors.type).type}`}
+              >
+                <option // * Default value selected
+                  value=''
+                  hidden={true}
                 >
-                  <option // * Default value selected
-                    value=''
-                    hidden={true}
-                  >
-                    {t("typeSelector")}
-                  </option>
-                  <option value='product'>{t("product")}</option>
-                  <option value='service'>{t("service")}</option>
-                </select>
-                {toast.error(errors.type).type}
-              </label>
+                  {t("typeSelector")}
+                </option>
+                <option value='product'>{t("product")}</option>
+                <option value='service'>{t("service")}</option>
+              </select>
 
               {/* //* Category Selector */}
-              <label htmlFor='categorySelector' className='w-full'>
-                <select
-                  id='categorySelector'
-                  name='category'
-                  value={formData.category}
-                  onChange={inputsHandler}
-                  className='cursor-pointer text-center block py-2.5 w-full text-md text-gray-600 bg-transparent border-0 border-b-2 border-gray-200 dark:text-gray-700 dark:border-gray-700 focus:outline-none focus:ring-0'
+              <select
+                id='categorySelector'
+                name='category'
+                value={formData.category}
+                onChange={inputsHandler}
+                className='cursor-pointer text-center block py-2.5 w-full text-md text-gray-600 bg-transparent border-0 border-b-2 border-gray-200 dark:text-gray-700 dark:border-gray-700 focus:outline-none focus:ring-0'
+                onError={`${toast.error(errors.category).category}`}
+              >
+                <option // * Default value selected
+                  value=''
+                  hidden={true}
                 >
-                  <option // * Default value selected
-                    value=''
-                    hidden={true}
-                  >
-                    {t("categorySelector")}
-                  </option>
-                  <option value='Books'>{t("books")}</option>
-                  <option value='Furniture'>{t("furniture")}</option>
-                  <option value='Electronics'>{t("electronics")}</option>
-                  <option value='Two-wheeler'>{t("two-wheeler")}</option>
-                </select>
-                {toast.error(errors.category).category}
-              </label>
+                  {t("categorySelector")}
+                </option>
+                <option value='Books'>{t("books")}</option>
+                <option value='Furniture'>{t("furniture")}</option>
+                <option value='Electronics'>{t("electronics")}</option>
+                <option value='Two-wheeler'>{t("two-wheeler")}</option>
+              </select>
             </div>
 
+            {/* Product Information Inputs */}
             <div>
-              {/* Product Information Inputs */}
-              <label htmlFor='productName' className='w-full'>
-                <Input // * Product name input
-                  name='productName'
-                  placeholder={t("productName")}
-                  type='text'
-                  value={formData.productName}
-                  onChange={inputsHandler}
-                />
-                {toast.error(errors.productName).productName}
-              </label>
+              <Input // * Product name input
+                name='productName'
+                placeholder={t("productName")}
+                type='text'
+                value={formData.productName}
+                onChange={inputsHandler}
+                onError={`${toast.error(errors.productName).productName}`}
+              />
 
-              {/* // * Product description input */}
-              <label htmlFor='description' className='w-full'>
-                <Input
-                  name='description'
-                  placeholder={t("description")}
-                  className='py-[75px]'
-                  type='text'
-                  value={formData.description}
-                  onChange={inputsHandler}
-                />
-                {toast.error(errors.description).description}
-              </label>
+              <Input // * Product description input
+                name='description'
+                placeholder={t("description")}
+                className='py-[75px]'
+                type='text'
+                value={formData.description}
+                onChange={inputsHandler}
+                onError={`${toast.error(errors.description).description}`}
+              />
 
               <span className='flex gap-4'>
-                {/* // * Product location input */}
-                <label htmlFor='location' className='w-full'>
-                  <Input
-                    name='location'
-                    placeholder={t("location")}
-                    className='w-[47%]'
-                    type='text'
-                    value={formData.location}
-                    onChange={inputsHandler}
-                  />
-                  {toast.error(errors.location).location}
-                </label>
-                {/* // * Product price input */}
-                <label htmlFor='price' className='w-full'>
-                  <Input
-                    name='price'
-                    placeholder={t("price")}
-                    className='w-[47%]'
-                    type='text'
-                    value={formData.price}
-                    onChange={inputsHandler}
-                  />
-                  {toast.error(errors.price).price}
-                </label>
+                <Input // * Product location input
+                  name='location'
+                  placeholder={t("location")}
+                  className='w-[47%]'
+                  type='text'
+                  value={formData.location}
+                  onChange={inputsHandler}
+                  onError={`${toast.error(errors.location).location}`}
+                />
+
+                <Input // * Product price input
+                  name='price'
+                  placeholder={t("price")}
+                  className='w-[47%]'
+                  type='text'
+                  value={formData.price}
+                  onChange={inputsHandler}
+                  onError={`${toast.error(errors.price)}`}
+                />
               </span>
 
               <span className='flex'>
