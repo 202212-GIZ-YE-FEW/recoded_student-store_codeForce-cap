@@ -7,7 +7,7 @@ function Aboutus() {
       <div className='grid  mt-20 items-center justify-center max-w-screen-md'>
         <Highlighter highlighterStyle='aboutus' text='Mission' />
         <p className='text-purple-dark lg:w-[700px] p-3 text-2xl leading-relaxed text-center'>
-          Our companys mission is to create a student-friendly marketplace that
+          Our companies mission is to create a student-friendly marketplace that
           provides an affordable and convenient platform for students to buy,
           sell, and borrow various types of products. We aim to help students
           save money by providing them access to affordable used products while
