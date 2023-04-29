@@ -65,6 +65,7 @@ function ListingItems() {
     event.preventDefault()
     try {
       await listingsValidation.validate(formData, { abortEarly: false })
+      toast.info("Pleas wait")
       // Save the form data to the sellItems collection
       const docRef = await addDoc(collection(db, "listing Items"), formData)
 
@@ -95,12 +96,7 @@ function ListingItems() {
 
   return (
     <>
-      <ToastContainer
-        pauseOnHover={false}
-        newestOnTop={true}
-        position='top-center'
-        theme='colored'
-      />
+      <ToastContainer pauseOnHover={false} newestOnTop={true} theme='colored' />
       <form onSubmit={submitHandler} className='mx-5 mb-3'>
         {/* Head text */}
         <Highlighter text={`${t("headerText")}`} />
