@@ -14,7 +14,7 @@ export default function UserPage() {
   }
   return (
     <RootLayout>
-      <div className='lg:flex h-[40px] lg:h-[816.2px]'>
+      <div className='lg:flex lg:h-[816.2px]'>
         <div>
           <SideBar
             handleSelectedPage={handleSelectedPage}
