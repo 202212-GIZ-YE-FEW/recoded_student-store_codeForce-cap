@@ -2,7 +2,6 @@ import DOMPurify from "dompurify"
 import Image from "next/image"
 import { useState } from "react"
 import { BsFacebook, BsGoogle, BsTwitter } from "react-icons/bs"
-import * as Yup from "yup"
 
 import styles from "./Signup.module.css"
 
@@ -12,31 +11,7 @@ import Input from "@/components/input"
 import RootLayout from "@/layout/root/RootLayout"
 import signUp from "@/utils/firebase/signup"
 import waitForEmailVerification from "@/utils/firebase/waitForEmailVerification"
-
-// Define validation schema using Yup
-const validationSchema = Yup.object().shape({
-  firstName: Yup.string().required("First name is required"),
-  surname: Yup.string().required("Surname is required"),
-  email: Yup.string()
-    .email("invalid email")
-    .matches(
-      /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/,
-      "Please enter a valid email address"
-    )
-    .required("Email is required"),
-  schoolName: Yup.string().required("School name is required"),
-  password: Yup.string()
-    .min(8, "Password must be at least 8 characters")
-    .max(64, "Password must be less than 64 characters")
-    .matches(
-      /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[^\da-zA-Z]).{8,}$/,
-      "Password must contain at least one uppercase letter, one lowercase letter, one number, and one special character"
-    )
-    .required("Password is required"),
-  passwordConfirm: Yup.string()
-    .oneOf([Yup.ref("password"), null], "Passwords must match")
-    .required("Password confirm is required"),
-})
+import { signupValidation } from "@/utils/schemaValidations/signup"
 
 /*
 //! Define rate limit middleware to prevent brute-force attacks
@@ -76,7 +51,7 @@ function Signup() {
     setIsLoading(true) // set loading state to true while the API call is in progress
 
     try {
-      await validationSchema.validate(formData, { abortEarly: false })
+      await signupValidation.validate(formData, { abortEarly: false })
 
       const { firstName, surname, email, schoolName, password } = formData
 
