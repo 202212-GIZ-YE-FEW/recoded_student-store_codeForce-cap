@@ -1,9 +1,9 @@
 import DOMPurify from "dompurify"
 import { addDoc, collection } from "firebase/firestore"
-import Image from "next/image"
 import { useTranslation, withTranslation } from "next-i18next"
+import Image from "next/image"
 import { useState } from "react"
-import { toast, ToastContainer } from "react-toastify"
+import { ToastContainer, toast } from "react-toastify"
 
 import "react-toastify/dist/ReactToastify.css"
 
@@ -95,7 +95,12 @@ function ListingItems() {
 
   return (
     <>
-      <ToastContainer />
+      <ToastContainer
+        pauseOnHover={false}
+        newestOnTop={true}
+        position='top-center'
+        theme='colored'
+      />
       <form onSubmit={submitHandler} className='mx-5 mb-3'>
         {/* Head text */}
         <Highlighter text={`${t("headerText")}`} />
