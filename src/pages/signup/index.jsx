@@ -2,7 +2,7 @@ import DOMPurify from "dompurify"
 import Image from "next/image"
 import { useState } from "react"
 import { BsFacebook, BsGoogle, BsTwitter } from "react-icons/bs"
-import { toast,ToastContainer } from "react-toastify"
+import { toast, ToastContainer } from "react-toastify"
 
 import "react-toastify/dist/ReactToastify.css"
 import styles from "./Signup.module.css"
