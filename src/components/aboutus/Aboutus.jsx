@@ -1,4 +1,5 @@
 import Highlighter from "../highlighter"
+import OurTeam from "../OurTeam"
 
 function Aboutus() {
   return (
@@ -39,7 +40,9 @@ function Aboutus() {
           we want to help students save money, earn money, and have a better
           experience as they navigate their academic journeys.
         </p>
+        <br />
       </div>
+      <OurTeam />
     </div>
   )
 }

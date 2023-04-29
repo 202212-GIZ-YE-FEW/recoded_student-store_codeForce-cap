@@ -50,6 +50,7 @@
     "prop-types": "^15.8.1",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
+    "react-error-boundary": "^4.0.4",
     "react-firebase-hooks": "^5.1.1",
     "react-form-hooks": "^1.1.5",
     "react-i18next": "^12.2.0",

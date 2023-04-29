@@ -1,10 +1,11 @@
 import CardView from "../CardView"
+import Highlighter from "../highlighter"
 
 function OurTeam() {
   const team = [
     {
       id: 1,
-      photo: "/mohammed.jpg",
+      photo: "https://avatars.githubusercontent.com/u/49818381?v=4",
       name: "Moahmmed Al-Qershi",
       job: "Font-End Developer & ERPNext Developer",
       description:
@@ -16,7 +17,7 @@ function OurTeam() {
     },
     {
       id: 2,
-      photo: "/nabil.jpg",
+      photo: "https://avatars.githubusercontent.com/u/75049983?v=4",
       name: "NabiL Ashbat",
       job: "Font-End Developer",
       description:
@@ -28,7 +29,7 @@ function OurTeam() {
     },
     {
       id: 3,
-      photo: "/abobakr.jpg",
+      photo: "https://avatars.githubusercontent.com/u/93738112?v=4",
       name: "Abobakr Mahdi",
       job: "Font-End Developer",
       description:
@@ -40,7 +41,7 @@ function OurTeam() {
     },
     {
       id: 4,
-      photo: "/abdulrahman.jpg",
+      photo: "https://avatars.githubusercontent.com/u/96662087?v=4",
       name: "Abdulrahman Abdullah",
       job: "Font-End Developer",
       description:
@@ -52,7 +53,7 @@ function OurTeam() {
     },
     {
       id: 5,
-      photo: "/marwan.jpg",
+      photo: "https://avatars.githubusercontent.com/u/69892218?v=4",
       name: "MarwanBz",
       job: "Font-End Developer",
       description:
@@ -67,9 +68,7 @@ function OurTeam() {
   return (
     <div className='py-8 px-4 mx-auto max-w-screen-xl lg:py-16 lg:px-6'>
       <div className='mx-auto max-w-screen-sm text-center mb-8 lg:mb-16'>
-        <h2 className='mb-4 text-4xl tracking-tight font-extrabold text-gray-900'>
-          Our Team
-        </h2>
+        <Highlighter highlighterStyle='aboutus' text='Our Team' />
         <p className='font-light text-gray-500 lg:mb-16 sm:text-xl'>
           CodeForce team is built on trust and mutual respect, with each member
           holding themselves accountable for their actions and decisions.
