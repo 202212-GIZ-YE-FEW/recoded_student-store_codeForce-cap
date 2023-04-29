@@ -1,4 +1,5 @@
 import { sendEmailVerification } from "firebase/auth"
+import { toast } from "react-toastify"
 
 import { createUserDoc, getUserDoc } from "./add-user"
 import { signInWithFacebook, signInWithGoogle, signUpWithEmail } from "./auth"
@@ -21,7 +22,7 @@ export default async function signUp(
       const userDoc = await getUserDoc(userId)
 
       if (userDoc.exists()) {
-        console.log("User already exists")
+        toast.error("User already exists")
       } else {
         await createUserDoc(
           userId,
@@ -38,7 +39,7 @@ export default async function signUp(
       }
 
       // Signed in successfully
-      console.log("User added successfully")
+      toast.success("User added successfully")
       // alert("User added successfully")
     } else if (method === "facebook") {
       const user = await signInWithFacebook()
@@ -46,10 +47,10 @@ export default async function signUp(
       const userDoc = await getUserDoc(userId)
 
       if (userDoc.exists()) {
-        console.log("User already exists")
+        toast.error("User already exists")
       } else {
         await createUserDoc(userId, firstName, surname, user.email, schoolName)
-        console.log("User added successfully")
+        toast.success("User added successfully")
         // alert("User added successfully")
       }
     } else if (method === "google") {
@@ -58,17 +59,15 @@ export default async function signUp(
       const userDoc = await getUserDoc(userId)
 
       if (userDoc.exists()) {
-        alert("User already exists")
+        toast.error("User already exists")
       } else {
         await createUserDoc(userId, firstName, surname, user.email, schoolName)
-        console.log("User added successfully")
-        alert("User added successfully")
+        toast.success("User added successfully")
       }
     }
   } catch (e) {
     error = e
-    console.error(error.message)
-    alert(error.message)
+    toast.error(error.message, "Your email is already signed in ")
   }
 
   return { result, error }
