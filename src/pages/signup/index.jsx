@@ -30,8 +30,9 @@ function Signup() {
   const { isLoggedIn } = useAuth()
   useEffect(() => {
     if (isLoggedIn) {
-      toast.info("Hey bro i think you already have an account !")
-      router.push("/")
+      router.replace("/").then(() => {
+        toast.info("Hey bro i think you already have an account !")
+      })
     }
   }, [isLoggedIn, router])
 
