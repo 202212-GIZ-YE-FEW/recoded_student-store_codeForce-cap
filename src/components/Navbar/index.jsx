@@ -11,11 +11,11 @@ import { HiHeart } from "react-icons/hi"
 import { RxHamburgerMenu } from "react-icons/rx"
 import { TbArrowBadgeDown, TbLogout, TbUserMinus } from "react-icons/tb"
 import { TfiWorld } from "react-icons/tfi"
-import { toast } from "react-toastify"
 
 import styles from "./Navbar.module.css"
 
 import { auth } from "@/utils/firebase/config"
+import SignOut from "@/utils/firebase/signout"
 
 export default function Navbar() {
   const [languages, setLanguages] = useState(false)
@@ -162,8 +162,7 @@ export default function Navbar() {
                         </Link>
                         <button
                           onClick={() => {
-                            auth.signOut()
-                            toast.success("Come back soon we miss you")
+                            SignOut()
                           }}
                           className='block px-4 py-2 hover:bg-gray-100 w-full text-left'
                         >
