@@ -1,12 +1,17 @@
 import Image from "next/image"
 import Link from "next/link"
-import { useEffect, useState } from "react"
+import { useState } from "react"
 import { useAuthState } from "react-firebase-hooks/auth"
-import { AiOutlineClose, AiOutlineSearch } from "react-icons/ai"
+import {
+  AiOutlineClose,
+  AiOutlineProfile,
+  AiOutlineSearch,
+} from "react-icons/ai"
 import { HiHeart } from "react-icons/hi"
 import { RxHamburgerMenu } from "react-icons/rx"
-import { TbArrowBadgeDown } from "react-icons/tb"
+import { TbArrowBadgeDown, TbLogout, TbUserMinus } from "react-icons/tb"
 import { TfiWorld } from "react-icons/tfi"
+import { toast } from "react-toastify"
 
 import styles from "./Navbar.module.css"
 
@@ -15,12 +20,7 @@ import { auth } from "@/utils/firebase/config"
 export default function Navbar() {
   const [languages, setLanguages] = useState(false)
   const [open, setOpen] = useState(false)
-  const [user, loading] = useAuthState(auth)
-  useEffect(() => {
-    if (!loading) {
-      setOpen(false) // Close the mobile menu when user logs in/out
-    }
-  }, [user, loading])
+  const [user] = useAuthState(auth)
   return (
     <header className='sticky top-0 z-50'>
       <div
@@ -41,7 +41,7 @@ export default function Navbar() {
           </div>
           <div className='relative z-50 '>
             <div
-              className={`absolute left-[-100px] top-2 bg-white capitalize border border-solid border-violet-600${
+              className={`absolute left-[-100px] top-2 bg-white capitalize border border-solid border-violet-600 ${
                 languages ? `${styles.show}` : " hidden"
               }`}
             >
@@ -126,20 +126,58 @@ export default function Navbar() {
           </div>
           {/* ----------- Buttons ----------- */}
           <div className='flex  justify-between items-center gap-5 flex-col md:flex-row '>
-            <div className='flex gap-3 capitalize flex-col md:flex-row'>
-              {user ? ( // Display user info if signed in
+            <div className='flex gap-4 capitalize flex-col md:flex-row'>
+              {user ? (
+                // Display user icon if signed in
                 <div className='flex items-center'>
-                  <div className='px-2'>{user.displayName}</div>
-                  <button
-                    onClick={() => auth.signOut()}
-                    className='text-sm text-gray-500 hover:text-gray-700 px-2'
-                  >
-                    Logout
-                  </button>
+                  <div className='block md:relative text-center'>
+                    <span className='hidden md:flex items-center cursor-pointer'>
+                      <TbUserMinus className='text-4xl text-purple' />
+                      {/* <Image
+                      alt='User'
+                      src='/images/user-icon.png'
+                      width={50}
+                      height={50}
+                    /> */}
+                      <TbArrowBadgeDown className='text-xl text-violet-700' />
+                    </span>
+                    <button
+                      onClick={() => setOpen(!open)}
+                      className='hidden md:block absolute top-0 right-0 h-full w-full cursor-pointer'
+                    />
+                    {open && (
+                      <div
+                        className={`md:absolute top-10 right-0 bg-white md:border border-gray-200 rounded-lg md:shadow-md py-2 ${styles.show}`}
+                      >
+                        <p>{user.displayName}</p>
+                        <hr className='bg-purple p-[1px]' />
+                        <Link
+                          href='/profile'
+                          className='block px-4 py-2 hover:bg-gray-100'
+                        >
+                          <span className='flex items-center gap-2'>
+                            Profile
+                            <AiOutlineProfile />
+                          </span>
+                        </Link>
+                        <button
+                          onClick={() => {
+                            auth.signOut()
+                            toast.success("Come back soon we miss you")
+                          }}
+                          className='block px-4 py-2 hover:bg-gray-100 w-full text-left'
+                        >
+                          <span className='flex items-center gap-2'>
+                            Logout
+                            <TbLogout />
+                          </span>
+                        </button>
+                      </div>
+                    )}
+                  </div>
                 </div>
               ) : (
                 // Display sign-in button if not signed in
-
                 <Link href='/signin'>
                   <div className='bg-purple-light py-2 px-5 text-white rounded-3xl text-sm hover:bg-violet-800 transition-all cursor-pointer'>
                     sign in
