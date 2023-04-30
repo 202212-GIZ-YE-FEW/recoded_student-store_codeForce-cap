@@ -31,7 +31,7 @@ function Signup() {
   useEffect(() => {
     if (isLoggedIn) {
       router.replace("/").then(() => {
-        toast.info("Hey bro i think you already have an account !")
+        toast.info("Hey you i think you already Signed up !")
       })
     }
   }, [isLoggedIn, router])
@@ -62,7 +62,7 @@ function Signup() {
 
     try {
       await signupValidation.validate(formData, { abortEarly: false })
-      toast.warning("Pleas wait") // set loading state to true while the API call is in progress
+      toast.warning("Pleas wait") // set notifier state while the API call is in progress
       const { firstName, surname, email, schoolName, password } = formData
 
       // Hash password using bcrypt
@@ -78,7 +78,7 @@ function Signup() {
         schoolName
       )
 
-      toast.success("You can log in now") // set loading state to false after the API call is complete
+      toast.success("You are logged in directly") // set notifier state while the API call is complete
       router.push("/")
       if (result) {
         // Wait for the user to verify their email address

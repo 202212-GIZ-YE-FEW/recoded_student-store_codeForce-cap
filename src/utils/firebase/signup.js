@@ -39,8 +39,7 @@ export default async function signUp(
       }
 
       // Signed in successfully
-      toast.success("User added successfully")
-      // alert("User added successfully")
+      toast.success("Welcome to our website")
     } else if (method === "facebook") {
       const user = await signInWithFacebook()
       const userId = user.uid
@@ -50,8 +49,7 @@ export default async function signUp(
         toast.error("User already exists")
       } else {
         await createUserDoc(userId, firstName, surname, user.email, schoolName)
-        toast.success("User added successfully")
-        // alert("User added successfully")
+        toast.success("Welcome to our website")
       }
     } else if (method === "google") {
       const user = await signInWithGoogle()
@@ -62,7 +60,7 @@ export default async function signUp(
         toast.error("User already exists")
       } else {
         await createUserDoc(userId, firstName, surname, user.email, schoolName)
-        toast.success("User added successfully")
+        toast.success("Welcome to our website")
       }
     }
   } catch (e) {
