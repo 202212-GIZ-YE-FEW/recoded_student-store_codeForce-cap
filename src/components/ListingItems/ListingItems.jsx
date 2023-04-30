@@ -1,4 +1,5 @@
 import DOMPurify from "dompurify"
+import { getAuth } from "firebase/auth"
 import { addDoc, collection } from "firebase/firestore"
 import { useTranslation, withTranslation } from "next-i18next"
 import Image from "next/image"
@@ -66,8 +67,12 @@ function ListingItems() {
     try {
       await listingsValidation.validate(formData, { abortEarly: false })
       toast.info("Pleas wait")
+      const auth = getAuth()
+      const user = auth.currentUser
+      const uid = user.uid
       // Save the form data to the sellItems collection
-      const docRef = await addDoc(collection(db, "listing Items"), formData)
+      const userCollection = collection(db, "users", uid, "listingItems")
+      const docRef = await addDoc(userCollection, formData)
 
       toast.success(t("addedAlert"), { toastId: docRef.id })
 
