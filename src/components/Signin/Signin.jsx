@@ -48,7 +48,7 @@ function Signin() {
 
       // else when successful
       return router.push("/").then(() => {
-        toast.success("Signed in successfully")
+        toast.success("Welcome back")
       })
     } catch (err) {
       const validationErrors = {}

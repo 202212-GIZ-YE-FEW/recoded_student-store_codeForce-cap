@@ -22,7 +22,7 @@ export default async function signUp(
       const userDoc = await getUserDoc(userId)
 
       if (userDoc.exists()) {
-        toast.error("User already exists")
+        toast.error("Already exists")
       } else {
         await createUserDoc(
           userId,
@@ -46,7 +46,7 @@ export default async function signUp(
       const userDoc = await getUserDoc(userId)
 
       if (userDoc.exists()) {
-        toast.error("User already exists")
+        toast.error("Already exists")
       } else {
         await createUserDoc(userId, firstName, surname, user.email, schoolName)
         toast.success("Welcome to our website")
@@ -57,7 +57,7 @@ export default async function signUp(
       const userDoc = await getUserDoc(userId)
 
       if (userDoc.exists()) {
-        toast.error("User already exists")
+        toast.error("Already exists")
       } else {
         await createUserDoc(userId, firstName, surname, user.email, schoolName)
         toast.success("Welcome to our website")
@@ -65,7 +65,7 @@ export default async function signUp(
     }
   } catch (e) {
     error = e
-    toast.error(error.message, "Your email is already signed in ")
+    toast.error(error.message, "Your email is already exists")
   }
 
   return { result, error }
