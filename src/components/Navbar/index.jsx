@@ -9,7 +9,7 @@ import {
 } from "react-icons/ai"
 import { HiHeart } from "react-icons/hi"
 import { RxHamburgerMenu } from "react-icons/rx"
-import { TbArrowBadgeDown, TbLogout, TbUserMinus } from "react-icons/tb"
+import { TbArrowBadgeDown, TbUserMinus } from "react-icons/tb"
 import { TfiWorld } from "react-icons/tfi"
 
 import styles from "./Navbar.module.css"
@@ -160,17 +160,7 @@ export default function Navbar() {
                             <AiOutlineProfile />
                           </span>
                         </Link>
-                        <button
-                          onClick={() => {
-                            SignOut()
-                          }}
-                          className='block px-4 py-2 hover:bg-gray-100 w-full text-left'
-                        >
-                          <span className='flex items-center gap-2'>
-                            Logout
-                            <TbLogout />
-                          </span>
-                        </button>
+                        <SignOut />
                       </div>
                     )}
                   </div>
