@@ -2,7 +2,6 @@ import { toast } from "react-toastify"
 
 import { createUserDoc, getUserDoc } from "./add-user"
 import { signInWithEmail, signInWithFacebook, signInWithGoogle } from "./auth"
-import SignOut from "./signout"
 
 export default async function signIn(email, password, method = "email") {
   let result = null,
@@ -18,8 +17,6 @@ export default async function signIn(email, password, method = "email") {
         toast.warn("User not found")
       } else {
         toast.success("User signed in successfully")
-        SignOut()
-        toast.info("Auto sign out triggered.")
       }
     } else if (method === "facebook") {
       const user = await signInWithFacebook()
