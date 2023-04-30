@@ -91,7 +91,7 @@ exports[`renders correctly 1`] = `
         className="relative z-50 "
       >
         <div
-          className="absolute left-[-100px] top-2 bg-white capitalize border border-solid border-violet-600 hidden"
+          className="absolute left-[-100px] top-2 bg-white capitalize border border-solid border-violet-600  hidden"
         >
           <div
             className="my-2 px-5 py-2 hover:bg-gray-200 transition-all duration-500"
@@ -284,7 +284,7 @@ exports[`renders correctly 1`] = `
         className="flex  justify-between items-center gap-5 flex-col md:flex-row "
       >
         <div
-          className="flex gap-3 capitalize flex-col md:flex-row"
+          className="flex gap-4 capitalize flex-col md:flex-row"
         >
           <a
             href="/signin"
