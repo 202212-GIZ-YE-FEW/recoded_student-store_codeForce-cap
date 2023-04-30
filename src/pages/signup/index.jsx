@@ -78,7 +78,6 @@ function Signup() {
         schoolName
       )
 
-      toast.success("You are logged in directly") // set notifier state while the API call is complete
       router.push("/")
       if (result) {
         // Wait for the user to verify their email address

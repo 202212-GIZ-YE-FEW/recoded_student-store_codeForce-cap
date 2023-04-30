@@ -39,7 +39,7 @@ export default async function signUp(
       }
 
       // Signed in successfully
-      toast.success("Welcome to our website")
+      toast.success("Welcome to our website. You are logged in directly")
     } else if (method === "facebook") {
       const user = await signInWithFacebook()
       const userId = user.uid

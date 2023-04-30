@@ -9,7 +9,6 @@ function SignOut() {
 
   const handleSignOut = async () => {
     try {
-      toast.warn("Please wait")
       await signOut(auth)
         .then(() => {
           router.push("/")
