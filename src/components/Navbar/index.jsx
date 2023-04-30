@@ -1,6 +1,7 @@
 import Image from "next/image"
 import Link from "next/link"
-import { useState } from "react"
+import { useEffect, useState } from "react"
+import { useAuthState } from "react-firebase-hooks/auth"
 import { AiOutlineClose, AiOutlineSearch } from "react-icons/ai"
 import { HiHeart } from "react-icons/hi"
 import { RxHamburgerMenu } from "react-icons/rx"
@@ -8,9 +9,18 @@ import { TbArrowBadgeDown } from "react-icons/tb"
 import { TfiWorld } from "react-icons/tfi"
 
 import styles from "./Navbar.module.css"
+
+import { auth } from "@/utils/firebase/config"
+
 export default function Navbar() {
   const [languages, setLanguages] = useState(false)
   const [open, setOpen] = useState(false)
+  const [user, loading] = useAuthState(auth)
+  useEffect(() => {
+    if (!loading) {
+      setOpen(false) // Close the mobile menu when user logs in/out
+    }
+  }, [user, loading])
   return (
     <header className='sticky top-0 z-50'>
       <div
@@ -117,11 +127,26 @@ export default function Navbar() {
           {/* ----------- Buttons ----------- */}
           <div className='flex  justify-between items-center gap-5 flex-col md:flex-row '>
             <div className='flex gap-3 capitalize flex-col md:flex-row'>
-              <Link href='/signin'>
-                <div className='bg-purple-light py-2 px-5 text-white rounded-3xl text-sm hover:bg-violet-800 transition-all cursor-pointer'>
-                  sign in
+              {user ? ( // Display user info if signed in
+                <div className='flex items-center'>
+                  <div className='px-2'>{user.displayName}</div>
+                  <button
+                    onClick={() => auth.signOut()}
+                    className='text-sm text-gray-500 hover:text-gray-700 px-2'
+                  >
+                    Logout
+                  </button>
                 </div>
-              </Link>
+              ) : (
+                // Display sign-in button if not signed in
+
+                <Link href='/signin'>
+                  <div className='bg-purple-light py-2 px-5 text-white rounded-3xl text-sm hover:bg-violet-800 transition-all cursor-pointer'>
+                    sign in
+                  </div>
+                </Link>
+              )}
+
               <Link href='/listing'>
                 <div className='bg-purple-light py-2 px-5 text-white rounded-3xl text-sm hover:bg-violet-800 transition-all cursor-pointer'>
                   sell items
