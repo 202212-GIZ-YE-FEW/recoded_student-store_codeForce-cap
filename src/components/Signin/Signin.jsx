@@ -3,7 +3,7 @@ import Link from "next/link"
 import { useRouter } from "next/router"
 import { useState } from "react"
 import { BsFacebook, BsGoogle, BsTwitter } from "react-icons/bs"
-import { toast, ToastContainer } from "react-toastify"
+import { ToastContainer, toast } from "react-toastify"
 
 import "react-toastify/dist/ReactToastify.css"
 import styles from "./Signin.module.css"
@@ -37,17 +37,19 @@ function Signin() {
 
     try {
       await signinValidation.validate(formData, { abortEarly: false })
+      toast.warn("Please wait")
       const { email, password } = formData
 
-      const { result, error } = await signIn(email, password)
+      const { error } = await signIn(email, password)
 
       if (error) {
         return toast.error(error)
       }
 
       // else when successful
-      toast.success(result)
-      return router.push("/")
+      return router.push("/").then(() => {
+        toast.success("Signed in successfully")
+      })
     } catch (err) {
       const validationErrors = {}
       err.inner.forEach((error) => {
@@ -59,7 +61,7 @@ function Signin() {
 
   return (
     <>
-      <ToastContainer />
+      <ToastContainer pauseOnHover={false} newestOnTop={true} />
       <div className={`flex justify-center  md:flex-row  bg-[#f1f6fa] `}>
         <div className={` ${styles.handbox_background}   w-3/5 `}>
           <div className=' p-20 '>
