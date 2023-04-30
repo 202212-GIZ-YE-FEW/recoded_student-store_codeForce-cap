@@ -1,7 +1,7 @@
 import DOMPurify from "dompurify"
 import Image from "next/image"
 import { useRouter } from "next/router"
-import { useState } from "react"
+import { useEffect, useState } from "react"
 import { BsFacebook, BsGoogle, BsTwitter } from "react-icons/bs"
 import { ToastContainer, toast } from "react-toastify"
 
@@ -15,6 +15,7 @@ import RootLayout from "@/layout/root/RootLayout"
 import signUp from "@/utils/firebase/signup"
 import waitForEmailVerification from "@/utils/firebase/waitForEmailVerification"
 import { signupValidation } from "@/utils/schemaValidations/signup"
+import { useAuth } from "@/utils/store"
 
 /*
 //! Define rate limit middleware to prevent brute-force attacks
@@ -25,7 +26,14 @@ const limiter = rateLimit({
 */
 
 function Signup() {
-  const router = useRouter() // * Note to the future
+  const router = useRouter()
+  const { isLoggedIn } = useAuth()
+  useEffect(() => {
+    if (isLoggedIn) {
+      toast.info("Hey bro i think you already have an account !")
+      router.push("/")
+    }
+  }, [isLoggedIn, router])
 
   const [formData, setFormData] = useState({
     firstName: "",
