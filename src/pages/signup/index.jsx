@@ -1,8 +1,9 @@
 import DOMPurify from "dompurify"
 import Image from "next/image"
+import { useRouter } from "next/router"
 import { useState } from "react"
 import { BsFacebook, BsGoogle, BsTwitter } from "react-icons/bs"
-import { toast, ToastContainer } from "react-toastify"
+import { ToastContainer, toast } from "react-toastify"
 
 import "react-toastify/dist/ReactToastify.css"
 import styles from "./Signup.module.css"
@@ -24,7 +25,7 @@ const limiter = rateLimit({
 */
 
 function Signup() {
-  // const router = useRouter() // * Note to the future
+  const router = useRouter() // * Note to the future
 
   const [formData, setFormData] = useState({
     firstName: "",
@@ -35,7 +36,6 @@ function Signup() {
     passwordConfirm: "",
   })
 
-  const [isLoading, setIsLoading] = useState(false)
   const [isSuccess, setIsSuccess] = useState(false)
   // const [errorMessage, setErrorMessage] = useState("") // * Note to the future
   const [errors, setErrors] = useState({})
@@ -70,7 +70,7 @@ function Signup() {
       )
 
       toast.success("You can log in now") // set loading state to false after the API call is complete
-
+      router.push("/")
       if (result) {
         // Wait for the user to verify their email address
         await waitForEmailVerification()
@@ -90,7 +90,7 @@ function Signup() {
       }
 
       // else when successful
-      toast.done(result)
+      toast.info(result)
       // return router.push("/signup")
     } catch (err) {
       const validationErrors = {}
@@ -103,7 +103,7 @@ function Signup() {
 
   return (
     <RootLayout>
-      <ToastContainer />
+      <ToastContainer pauseOnHover={false} />
       <div>
         <div className={`flex justify-center   md:flex-row  bg-[#f1f6fa] `}>
           <div className={` ${styles.handbox_background}   w-3/6 `}>
@@ -128,8 +128,6 @@ function Signup() {
                 onSubmit={handleFormSubmit}
                 className='container m-auto mb-6 flex  w-5/6 flex-col  '
               >
-                {isLoading && toast.loading("In progress please wait")}
-
                 <label htmlFor='firstName'>
                   <Input
                     type='text'
