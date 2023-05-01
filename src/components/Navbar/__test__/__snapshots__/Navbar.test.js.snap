@@ -315,7 +315,7 @@ exports[`renders correctly 1`] = `
           className="text-2xl text-orange-600 hover:text-orange-700 transition"
         >
           <a
-            href="/cart"
+            href="/favorites"
             onClick={[Function]}
             onMouseEnter={[Function]}
             onTouchStart={[Function]}
