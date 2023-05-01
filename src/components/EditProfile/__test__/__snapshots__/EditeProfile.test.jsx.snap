@@ -6,6 +6,7 @@ exports[`renders correctly 1`] = `
 >
   <div
     className="grid lg:grid-cols-2 lg:ml-36 w-[86%] overflow-y-auto gap-x-12 mt-10 lg:mt-28 mx-auto h-[577px] md:h-[744px] lg:h-[100%]"
+    dir="ltr"
   >
     <label
       className="block lg:hidden cursor-pointer rounded-full"
@@ -51,7 +52,7 @@ exports[`renders correctly 1`] = `
         name="name"
         onChange={[Function]}
         pattern="[a-zA-Z]+"
-        placeholder="Name"
+        placeholder="name"
         required={true}
         type="text"
         value=""
@@ -64,7 +65,7 @@ exports[`renders correctly 1`] = `
         name="surname"
         onChange={[Function]}
         pattern="[a-zA-Z]+"
-        placeholder="Surname"
+        placeholder="surname"
         required={true}
         type="text"
         value=""
@@ -76,7 +77,7 @@ exports[`renders correctly 1`] = `
         name="email"
         onChange={[Function]}
         pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\\.[a-zA-Z]{2,}"
-        placeholder="Email"
+        placeholder="email"
         required={true}
         type="email"
         value=""
@@ -140,7 +141,7 @@ exports[`renders correctly 1`] = `
         minLength={8}
         name="newPassword"
         onChange={[Function]}
-        placeholder="New Password"
+        placeholder="new-password"
         required={true}
         type="password"
         value=""
@@ -152,7 +153,7 @@ exports[`renders correctly 1`] = `
         minLength={8}
         name="confirmNewPassword"
         onChange={[Function]}
-        placeholder="Confirm New Password"
+        placeholder="new-password-confirm"
         required={true}
         type="password"
         value=""
@@ -162,7 +163,7 @@ exports[`renders correctly 1`] = `
         className="my-2 block w-full rounded-lg border border-gray-300 p-2.5 text-center lg:hidden block"
         name="address"
         onChange={[Function]}
-        placeholder="Address"
+        placeholder="address"
         required={true}
         type="text"
         value=""
@@ -178,7 +179,7 @@ exports[`renders correctly 1`] = `
         className="h-12 w-56 lg:h-14 lg:w-64 m-1 p-1 px-2 hover:bg-purple hover:shadow-lg rounded-lg border-2 bg-pumpkin font-md text-[17px] text-white shadow-sm"
         type="submit"
       >
-        Save Changes
+        save-changes
       </button>
     </span>
   </div>

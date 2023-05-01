@@ -46,7 +46,7 @@ function EditProfile({ t }) {
       // console.log(formData)
 
       // * save changes
-      alert("Changes saved.")
+      alert(t("save"))
     }
   }
 
@@ -64,7 +64,7 @@ function EditProfile({ t }) {
     <form onSubmit={handleSubmit}>
       <div
         className='grid lg:grid-cols-2 lg:ml-36 w-[86%] overflow-y-auto gap-x-12 mt-10 lg:mt-28 mx-auto h-[577px] md:h-[744px] lg:h-[100%]'
-        dir={t("language") === "ar" ? "rtl" : "ltr"}
+        // dir={t("language") === "ar" ? "rtl" : "ltr"}
       >
         <label
           htmlFor='profileImg'
