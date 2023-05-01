@@ -1,8 +1,8 @@
 {
   "language": "en",
   "sign-in": "Sign in",
-  "name": "Name",
-  "surname": "Surname",
+  "email": "E-mail Address",
+  "password": "Password",
   "forgot-password": "Forgot Password",
   "sign-in-with": "Sign in with",
   "google": "Google",

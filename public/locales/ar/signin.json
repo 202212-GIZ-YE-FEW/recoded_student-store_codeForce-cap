@@ -1,8 +1,8 @@
 {
   "language": "ar",
   "sign-in": "تسجيل الدخول",
-  "name": "الاسم",
-  "surname": "اللقب",
+  "email": "البريد الاليكتروني",
+  "password": "كلمة المرور",
   "forgot-password": "نسيت كلمة المرور",
   "sign-in-with": "تسجيل دخول بواسطه",
   "google": "جوجل",
