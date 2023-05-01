@@ -2,7 +2,7 @@ import Aboutus from "@/components/Aboutus"
 
 import RootLayout from "@/layout/root/RootLayout"
 
-function AboutusPage() {
+function AboutPage() {
   return (
     <RootLayout>
       <Aboutus />
@@ -10,4 +10,4 @@ function AboutusPage() {
   )
 }
 
-export default AboutusPage
+export default AboutPage
