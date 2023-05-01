@@ -2,8 +2,8 @@
 import dynamic from "next/dynamic"
 import Image from "next/image"
 import { useState } from "react"
-import PhoneInput from "react-phone-input-2"
 import { withTranslation } from "react-i18next"
+import PhoneInput from "react-phone-input-2"
 
 // ! The phone input default style
 import "react-phone-input-2/lib/style.css"

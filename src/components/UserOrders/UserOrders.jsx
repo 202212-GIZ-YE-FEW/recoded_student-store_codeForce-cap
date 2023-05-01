@@ -1,8 +1,7 @@
 import Image from "next/image"
+import { withTranslation } from "next-i18next"
 
 import products from "../ProductList/products"
-
-import { withTranslation } from "next-i18next"
 
 function UserOrders({ t }) {
   return (

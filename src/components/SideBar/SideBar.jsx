@@ -1,8 +1,7 @@
 import Image from "next/image"
+import { withTranslation } from "react-i18next"
 
 import Highlighter from "../highlighter"
-
-import { withTranslation } from "react-i18next"
 
 function SideBar({ handleSelectedPage, selectedPage, t }) {
   return (
