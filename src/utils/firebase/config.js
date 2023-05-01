@@ -29,7 +29,7 @@ let firebase_app =
 export default firebase_app
 export const auth = getAuth(firebase_app)
 export const db = getFirestore(firebase_app)
-export const storage = getStorage(firebase_app)
+export const Storage = getStorage(firebase_app)
 
 export const googleProvider = new GoogleAuthProvider() // Google authentication provider
 export const facebookProvider = new FacebookAuthProvider() // Google authentication provider

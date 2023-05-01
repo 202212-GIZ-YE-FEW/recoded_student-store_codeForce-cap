@@ -1,5 +1,4 @@
 import DOMPurify from "dompurify"
-import { getAuth } from "firebase/auth"
 import { addDoc, collection } from "firebase/firestore"
 import { useTranslation, withTranslation } from "next-i18next"
 import Image from "next/image"
@@ -8,7 +7,7 @@ import { ToastContainer, toast } from "react-toastify"
 
 import "react-toastify/dist/ReactToastify.css"
 
-import { db } from "@/utils/firebase/config"
+import { auth, db } from "@/utils/firebase/config"
 import { listingsValidation } from "@/utils/schemaValidations/listingItems"
 
 import Button from "../button"
@@ -67,7 +66,6 @@ function ListingItems() {
     try {
       await listingsValidation.validate(formData, { abortEarly: false })
       toast.info("Pleas wait")
-      const auth = getAuth()
       const user = auth.currentUser
       const uid = user.uid
       // Save the form data to the sellItems collection
