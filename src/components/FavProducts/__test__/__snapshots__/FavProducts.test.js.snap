@@ -262,7 +262,6 @@ exports[`renders correctly 1`] = `
         >
           <button
             className="flex items-center justify-center w-8 h-8 bg-white text-red-500 rounded-full shadow-md hover:text-red-500 transition-colors duration-300 ease-in-out"
-            onClick={[Function]}
           >
             <svg
               fill="currentColor"
@@ -380,7 +379,6 @@ exports[`renders correctly 1`] = `
         >
           <button
             className="flex items-center justify-center w-8 h-8 bg-white text-red-500 rounded-full shadow-md hover:text-red-500 transition-colors duration-300 ease-in-out"
-            onClick={[Function]}
           >
             <svg
               fill="currentColor"
@@ -498,7 +496,6 @@ exports[`renders correctly 1`] = `
         >
           <button
             className="flex items-center justify-center w-8 h-8 bg-white text-red-500 rounded-full shadow-md hover:text-red-500 transition-colors duration-300 ease-in-out"
-            onClick={[Function]}
           >
             <svg
               fill="currentColor"
@@ -616,7 +613,6 @@ exports[`renders correctly 1`] = `
         >
           <button
             className="flex items-center justify-center w-8 h-8 bg-white text-red-500 rounded-full shadow-md hover:text-red-500 transition-colors duration-300 ease-in-out"
-            onClick={[Function]}
           >
             <svg
               fill="currentColor"
@@ -734,7 +730,6 @@ exports[`renders correctly 1`] = `
         >
           <button
             className="flex items-center justify-center w-8 h-8 bg-white text-red-500 rounded-full shadow-md hover:text-red-500 transition-colors duration-300 ease-in-out"
-            onClick={[Function]}
           >
             <svg
               fill="currentColor"
@@ -852,7 +847,6 @@ exports[`renders correctly 1`] = `
         >
           <button
             className="flex items-center justify-center w-8 h-8 bg-white text-red-500 rounded-full shadow-md hover:text-red-500 transition-colors duration-300 ease-in-out"
-            onClick={[Function]}
           >
             <svg
               fill="currentColor"
@@ -970,7 +964,6 @@ exports[`renders correctly 1`] = `
         >
           <button
             className="flex items-center justify-center w-8 h-8 bg-white text-red-500 rounded-full shadow-md hover:text-red-500 transition-colors duration-300 ease-in-out"
-            onClick={[Function]}
           >
             <svg
               fill="currentColor"
@@ -1088,7 +1081,6 @@ exports[`renders correctly 1`] = `
         >
           <button
             className="flex items-center justify-center w-8 h-8 bg-white text-red-500 rounded-full shadow-md hover:text-red-500 transition-colors duration-300 ease-in-out"
-            onClick={[Function]}
           >
             <svg
               fill="currentColor"
@@ -1206,7 +1198,6 @@ exports[`renders correctly 1`] = `
         >
           <button
             className="flex items-center justify-center w-8 h-8 bg-white text-red-500 rounded-full shadow-md hover:text-red-500 transition-colors duration-300 ease-in-out"
-            onClick={[Function]}
           >
             <svg
               fill="currentColor"
@@ -1324,7 +1315,6 @@ exports[`renders correctly 1`] = `
         >
           <button
             className="flex items-center justify-center w-8 h-8 bg-white text-red-500 rounded-full shadow-md hover:text-red-500 transition-colors duration-300 ease-in-out"
-            onClick={[Function]}
           >
             <svg
               fill="currentColor"
@@ -1442,7 +1432,6 @@ exports[`renders correctly 1`] = `
         >
           <button
             className="flex items-center justify-center w-8 h-8 bg-white text-red-500 rounded-full shadow-md hover:text-red-500 transition-colors duration-300 ease-in-out"
-            onClick={[Function]}
           >
             <svg
               fill="currentColor"
@@ -1560,7 +1549,6 @@ exports[`renders correctly 1`] = `
         >
           <button
             className="flex items-center justify-center w-8 h-8 bg-white text-red-500 rounded-full shadow-md hover:text-red-500 transition-colors duration-300 ease-in-out"
-            onClick={[Function]}
           >
             <svg
               fill="currentColor"
@@ -1678,7 +1666,6 @@ exports[`renders correctly 1`] = `
         >
           <button
             className="flex items-center justify-center w-8 h-8 bg-white text-red-500 rounded-full shadow-md hover:text-red-500 transition-colors duration-300 ease-in-out"
-            onClick={[Function]}
           >
             <svg
               fill="currentColor"
@@ -1796,7 +1783,6 @@ exports[`renders correctly 1`] = `
         >
           <button
             className="flex items-center justify-center w-8 h-8 bg-white text-red-500 rounded-full shadow-md hover:text-red-500 transition-colors duration-300 ease-in-out"
-            onClick={[Function]}
           >
             <svg
               fill="currentColor"
@@ -1914,7 +1900,6 @@ exports[`renders correctly 1`] = `
         >
           <button
             className="flex items-center justify-center w-8 h-8 bg-white text-red-500 rounded-full shadow-md hover:text-red-500 transition-colors duration-300 ease-in-out"
-            onClick={[Function]}
           >
             <svg
               fill="currentColor"
@@ -2032,7 +2017,6 @@ exports[`renders correctly 1`] = `
         >
           <button
             className="flex items-center justify-center w-8 h-8 bg-white text-red-500 rounded-full shadow-md hover:text-red-500 transition-colors duration-300 ease-in-out"
-            onClick={[Function]}
           >
             <svg
               fill="currentColor"

@@ -1,12 +1,11 @@
-import { useState } from "react"
 import Image from "next/image"
-import { HiOutlineBookOpen } from "react-icons/hi"
-import { HiOutlineX } from "react-icons/hi"
-import { HiOutlineChip } from "react-icons/hi"
-import { TbSofa, TbBook } from "react-icons/tb"
-import { GiClothes } from "react-icons/gi"
-import { MdTwoWheeler } from "react-icons/md"
+import { useState } from "react"
 import { AiFillHeart } from "react-icons/ai"
+import { GiClothes } from "react-icons/gi"
+import { HiOutlineChip, HiOutlineX } from "react-icons/hi"
+import { MdTwoWheeler } from "react-icons/md"
+import { TbBook, TbSofa } from "react-icons/tb"
+
 import Highlighter from "../highlighter"
 import products from "../ProductList/products"
 
@@ -132,12 +131,7 @@ function FavProducts() {
                 </button>
               </div>
               <div className='absolute bottom-2 right-2 z-10'>
-                <button
-                  className='flex items-center justify-center w-8 h-8 bg-white text-red-500 rounded-full shadow-md hover:text-red-500 transition-colors duration-300 ease-in-out'
-                  onClick={() =>
-                    console.log(`Liking product with ID ${product.id}`)
-                  }
-                >
+                <button className='flex items-center justify-center w-8 h-8 bg-white text-red-500 rounded-full shadow-md hover:text-red-500 transition-colors duration-300 ease-in-out'>
                   <AiFillHeart />
                 </button>
               </div>
