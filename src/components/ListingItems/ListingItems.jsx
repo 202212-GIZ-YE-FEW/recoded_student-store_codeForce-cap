@@ -86,7 +86,8 @@ function ListingItems() {
       const tertiaryImageURL = await imageFirebaseUploader("tertiaryImage")
       const quaternaryImageURL = await imageFirebaseUploader("quaternaryImage")
 
-      const formDataWithImages = {
+      // New form with images new urls
+      const newFormWithImagesUrls = {
         ...formData,
         primaryImage: { url: primaryImageURL },
         secondaryImage: { url: secondaryImageURL },
@@ -96,8 +97,7 @@ function ListingItems() {
 
       // Save the form data to the sellItems collection
       const userCollection = collection(db, "users", uid, "listingItems")
-      const docRef = await addDoc(userCollection, formData)
-
+      const docRef = await addDoc(userCollection, newFormWithImagesUrls)
       toast.success(t("addedAlert"), { toastId: docRef.id })
 
       // Clear the form data
@@ -116,7 +116,9 @@ function ListingItems() {
       })
     } catch (error) {
       // Setting the error to be displayed from the validationErrors
-      toast.error("Oh no There is an error the list doesn't uploaded")
+      toast.error(
+        "Sorry, There is an error the list didn't upload successfully"
+      )
       const schemaErrors = {}
       error.inner.forEach((error) => {
         schemaErrors[error.path] = error.message
