@@ -80,6 +80,11 @@ function ListingItems() {
       const user = auth.currentUser
       const uid = user.uid
 
+      const primaryImageURL = await imageFirebaseUploader("primaryImage")
+      const secondaryImageURL = await imageFirebaseUploader("secondaryImage")
+      const tertiaryImageURL = await imageFirebaseUploader("tertiaryImage")
+      const quaternaryImageURL = await imageFirebaseUploader("quaternaryImage")
+
       // Save the form data to the sellItems collection
       const userCollection = collection(db, "users", uid, "listingItems")
       const docRef = await addDoc(userCollection, formData)
