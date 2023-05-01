@@ -43,4 +43,4 @@ src\utils\firebase\serviceAccountKey.json
 firebase.json
 firestore.indexes.json
 firestore.rules
-storage.ruless
+storage.rules
