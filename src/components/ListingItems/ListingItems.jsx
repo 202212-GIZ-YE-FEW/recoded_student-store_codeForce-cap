@@ -7,7 +7,7 @@ import { ToastContainer, toast } from "react-toastify"
 
 import "react-toastify/dist/ReactToastify.css"
 
-import { auth, db } from "@/utils/firebase/config"
+import { auth, db, timestamp } from "@/utils/firebase/config"
 import { listingsValidation } from "@/utils/schemaValidations/listingItems"
 
 import Button from "../button"
@@ -27,7 +27,8 @@ function ListingItems() {
     productName: "",
     description: "",
     location: "",
-    price: 0,
+    price: "",
+    createdAt: timestamp,
   })
 
   // Input handler
@@ -85,7 +86,8 @@ function ListingItems() {
         productName: "",
         description: "",
         location: "",
-        price: 0,
+        price: "",
+        createdAt: timestamp,
       })
     } catch (error) {
       // Setting the error to be displayed from the validationErrors
