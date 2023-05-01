@@ -11,25 +11,35 @@ import Highlighter from "../highlighter"
 import products from "../ProductList/products"
 
 function FavProducts() {
+  // Define state variables for favorite products and selected category
   const [FavProducts, setFavoriteProducts] = useState(products)
   const [selectedCategory, setSelectedCategory] = useState("All")
 
+  // Function to remove a product from the favorite products list
   const handleRemoveProduct = (id) => {
+    // Filter the favorite products list to exclude the product with the specified id
     const updatedProducts = FavProducts.filter((product) => product.id !== id)
+    // Set the state of the favorite products list to the updated list
     setFavoriteProducts(updatedProducts)
   }
 
+  // Function to handle changes to the selected category
   const handleCategoryChange = (category) => {
+    // Set the state of the selected category to the new category value
     setSelectedCategory(category)
     if (category === "All") {
+      // If the new category is "All", set the state of the favorite products list to the original list of products
       setFavoriteProducts(products)
     } else {
+      // Otherwise, filter the original list of products to include only those in the selected category
       const filteredProducts = products.filter(
         (product) => product.category === category
       )
+      // Set the state of the favorite products list to the filtered list of products
       setFavoriteProducts(filteredProducts)
     }
   }
+
   return (
     <div className='container mx-auto py-8 px-4 sm:px-8'>
       <Highlighter highlighterStyle='aboutus' text='Favorite Products' />
