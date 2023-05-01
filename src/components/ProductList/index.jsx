@@ -25,14 +25,14 @@ function ProductList({ selectedFilter, t }) {
         {categoryFilter.map((product) => (
           <div
             key={product.id}
-            className='mx-3 mb-10 border rounded-lg shadow-lg'
+            className='mx-3 mb-10 border rounded-lg cart-animation'
           >
             <Image
               src={product.images}
               alt={product.name}
               width={258}
               height={211.41}
-              className='rounded-t-lg shadow-lg w-full'
+              className='rounded-t-lg shadow-lg w-full '
             />
             <div className='mx-3 text-center'>
               <div className='info flex justify-between my-4 mx-3'>

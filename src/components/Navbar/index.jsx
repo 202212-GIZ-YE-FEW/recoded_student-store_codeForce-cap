@@ -8,6 +8,7 @@ import { RxHamburgerMenu } from "react-icons/rx"
 import { TbArrowBadgeDown } from "react-icons/tb"
 import { TfiWorld } from "react-icons/tfi"
 
+import styles from "./Navbar.module.css"
 function Navbar({ t }) {
   const [languages, setLanguages] = useState(false)
   const [open, setOpen] = useState(false)
@@ -19,7 +20,7 @@ function Navbar({ t }) {
       dir={t("language") === "ar" ? "rtl" : "ltr"}
     >
       <div
-        className={`navbar  m-auto px-10 md:flex md:flex-row py-4 justify-between gap-5 items-center bg-white transition-all
+        className={`${styles.navbar} m-auto px-10 md:flex md:flex-row py-4 justify-between gap-5 items-center bg-white transition-all 
       `}
       >
         <Link href='/'>
@@ -43,7 +44,7 @@ function Navbar({ t }) {
           <div className='relative z-50 '>
             <div
               className={`absolute left-[-100px] top-2 bg-white capitalize border border-solid border-violet-600${
-                languages ? " show" : " hidden"
+                languages ? `${styles.show}` : " hidden"
               }`}
             >
               <div className='my-2 px-5 py-2 hover:bg-gray-200 transition-all duration-500'>
@@ -58,13 +59,13 @@ function Navbar({ t }) {
         {/* ----------- Burger ----------- */}
         <RxHamburgerMenu
           className={`absolute right-6 top-8 text-2xl cursor-pointer md:hidden ${
-            open ? "hidden" : ""
+            open ? "hidden" : `${styles.show}`
           }`}
           onClick={() => setOpen(true)}
         />
         <AiOutlineClose
           className={`absolute right-6 top-8 text-2xl cursor-pointer md:hidden ${
-            open ? "" : "hidden"
+            open ? `${styles.show}` : "hidden"
           }`}
           onClick={() => setOpen(false)}
         />
@@ -83,7 +84,7 @@ function Navbar({ t }) {
               {t("donation")}
             </Link>
             <Link
-              href='/about-us'
+              href='/about'
               className='relative mx-4 capitalize text-sm  hover:text-violet-800   transition-all duration-1000 before:absolute before:-bottom-2 before:left-0  before:h-[1px]  before:w-0 before:opacity-0 before:bg-violet-700 before:transition-all before:duration-500 hover:before:w-full hover:before:opacity-100'
             >
               {t("about-us")}
@@ -94,7 +95,8 @@ function Navbar({ t }) {
             <input
               type='text'
               placeholder={t("search-here")}
-              className='search w-full text-sm  placeholder:text-gray-300 placeholder:capitalize text-gray-600'
+              className={`${styles.search} ${styles.input} w-full text-sm placeholder:text-gray-300 placeholder:capitalize text-gray-600
+              `}
             />
             <div className=''>
               <AiOutlineSearch />
@@ -111,8 +113,8 @@ function Navbar({ t }) {
             </div>
             <div className='relative'>
               <div
-                className={`absolute left-[-70px] rtl:left-[-20px] top-5 bg-white capitalize ${
-                  languages ? "show" : "hidden"
+                className={`absolute left-[-100px] top-5 bg-white capitalize ${
+                  languages ? `${styles.show}` : "hidden"
                 }`}
               >
                 <div className='my-2 px-5 py-2 hover:bg-gray-200 transition-all duration-500'>
@@ -136,7 +138,7 @@ function Navbar({ t }) {
                   {t("sign-in")}
                 </div>
               </Link>
-              <Link href='/sell-items'>
+              <Link href='/listing'>
                 <div className='bg-purple-light py-2 px-5 text-white rounded-3xl text-sm hover:bg-violet-800 transition-all cursor-pointer'>
                   {t("sell-items")}
                 </div>

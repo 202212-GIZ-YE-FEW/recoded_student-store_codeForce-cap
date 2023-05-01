@@ -1,6 +1,9 @@
 import { withTranslation } from "next-i18next"
 import { useState } from "react"
 import { Range } from "react-range"
+import { toast, ToastContainer } from "react-toastify"
+
+import "react-toastify/dist/ReactToastify.css"
 
 // add translation functions to filter-price component
 function PriceFilter({ t }) {
@@ -13,9 +16,9 @@ function PriceFilter({ t }) {
   const handleMinChange = (e) => {
     const newMin = +e.target.value.replace(/\D/g, "")
     if (newMin < 0) {
-      t("min-price")
+      toast.warn(t("min-price"))
     } else if (newMin > tempValues[1]) {
-      t("min-price-des")
+      toast.warn(t("min-price-des"))
     } else {
       setTempValues([newMin, tempValues[1]])
     }
@@ -24,9 +27,9 @@ function PriceFilter({ t }) {
   const handleMaxChange = (e) => {
     const newMax = +e.target.value.replace(/\D/g, "")
     if (newMax > 1000) {
-      t("max-price")
+      toast.warn(t("max-price"))
     } else if (newMax < tempValues[0]) {
-      t("max-price-des")
+      toast.warn(t("max-price-des"))
     } else {
       setTempValues([tempValues[0], newMax])
     }
@@ -34,6 +37,7 @@ function PriceFilter({ t }) {
 
   return (
     <div className='flex flex-col items-stretch'>
+      <ToastContainer pauseOnHover={false} newestOnTop={true} theme='colored' />
       <div className='flex justify-around text-2xl text-bubble-gum font-poppins font-extrabold ml-5 md:ml-10'>
         <input
           type='text'

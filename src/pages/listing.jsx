@@ -1,25 +1,22 @@
 import { serverSideTranslations } from "next-i18next/serverSideTranslations"
 
-import Aboutus from "@/components/aboutus"
+import ListingItems from "@/components/ListingItems"
 
 import RootLayout from "@/layout/root/RootLayout"
 
-export default function AboutUs() {
+function ListingPage() {
   return (
     <RootLayout>
-      <Aboutus />
+      <ListingItems />
     </RootLayout>
   )
 }
 
+export default ListingPage
 export async function getStaticProps({ locale }) {
   return {
     props: {
-      ...(await serverSideTranslations(locale, [
-        "aboutus",
-        "ourteam",
-        "common",
-      ])),
+      ...(await serverSideTranslations(locale, ["common", "listingItems"])),
       // Will be passed to the page component as props
     },
   }

@@ -6,7 +6,7 @@ exports[`renders correctly 1`] = `
   dir="ltr"
 >
   <div
-    className="navbar  m-auto px-10 md:flex md:flex-row py-4 justify-between gap-5 items-center bg-white transition-all
+    className="navbar m-auto px-10 md:flex md:flex-row py-4 justify-between gap-5 items-center bg-white transition-all 
       "
   >
     <a
@@ -109,7 +109,7 @@ exports[`renders correctly 1`] = `
       </div>
     </div>
     <svg
-      className="absolute right-6 top-8 text-2xl cursor-pointer md:hidden "
+      className="absolute right-6 top-8 text-2xl cursor-pointer md:hidden show"
       fill="none"
       height="1em"
       onClick={[Function]}
@@ -168,7 +168,7 @@ exports[`renders correctly 1`] = `
         </a>
         <a
           className="relative mx-4 capitalize text-sm  hover:text-violet-800   transition-all duration-1000 before:absolute before:-bottom-2 before:left-0  before:h-[1px]  before:w-0 before:opacity-0 before:bg-violet-700 before:transition-all before:duration-500 hover:before:w-full hover:before:opacity-100"
-          href="/about-us"
+          href="/about"
           onClick={[Function]}
           onMouseEnter={[Function]}
           onTouchStart={[Function]}
@@ -180,7 +180,8 @@ exports[`renders correctly 1`] = `
         className=" flex-1 border flex items-center py-2 px-4 rounded-3xl"
       >
         <input
-          className="search w-full text-sm  placeholder:text-gray-300 placeholder:capitalize text-gray-600"
+          className="search input w-full text-sm placeholder:text-gray-300 placeholder:capitalize text-gray-600
+              "
           placeholder="search-here"
           type="text"
         />
@@ -266,7 +267,7 @@ exports[`renders correctly 1`] = `
           className="relative"
         >
           <div
-            className="absolute left-[-70px] rtl:left-[-20px] top-5 bg-white capitalize hidden"
+            className="absolute left-[-100px] top-5 bg-white capitalize hidden"
           >
             <div
               className="my-2 px-5 py-2 hover:bg-gray-200 transition-all duration-500"
@@ -314,7 +315,7 @@ exports[`renders correctly 1`] = `
             </div>
           </a>
           <a
-            href="/sell-items"
+            href="/listing"
             onClick={[Function]}
             onMouseEnter={[Function]}
             onTouchStart={[Function]}

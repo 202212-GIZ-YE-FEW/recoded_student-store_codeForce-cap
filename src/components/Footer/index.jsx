@@ -50,7 +50,7 @@ function Footer({ t }) {
           <div className='pl-14 pt-5 md:pt-14 rtl:w-96 rtl:mr-40 sm:rtl:mr-0'>
             <ul className='font-poppins text-white font-bold md:text-1xl lg:text-2xl'>
               <li>
-                <Link href='/about-us' className='hover:underline'>
+                <Link href='/about' className='hover:underline'>
                   {t("about-us")}
                 </Link>
               </li>
@@ -73,7 +73,7 @@ function Footer({ t }) {
                 </Link>
               </li>
               <li className='mb-4'>
-                <Link href='/' className='hover:underline'>
+                <Link href='/listing' className='hover:underline'>
                   {t("start-selling")}
                 </Link>
               </li>

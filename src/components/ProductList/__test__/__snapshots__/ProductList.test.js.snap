@@ -7,11 +7,11 @@ exports[`renders correctly 1`] = `
     dir="ltr"
   >
     <div
-      className="mx-3 mb-10 border rounded-lg shadow-lg"
+      className="mx-3 mb-10 border rounded-lg cart-animation"
     >
       <img
         alt="name-product"
-        className="rounded-t-lg shadow-lg w-full"
+        className="rounded-t-lg shadow-lg w-full "
         data-nimg="1"
         decoding="async"
         height={211.41}
@@ -64,11 +64,11 @@ exports[`renders correctly 1`] = `
       </div>
     </div>
     <div
-      className="mx-3 mb-10 border rounded-lg shadow-lg"
+      className="mx-3 mb-10 border rounded-lg cart-animation"
     >
       <img
         alt="name-product"
-        className="rounded-t-lg shadow-lg w-full"
+        className="rounded-t-lg shadow-lg w-full "
         data-nimg="1"
         decoding="async"
         height={211.41}
@@ -121,11 +121,11 @@ exports[`renders correctly 1`] = `
       </div>
     </div>
     <div
-      className="mx-3 mb-10 border rounded-lg shadow-lg"
+      className="mx-3 mb-10 border rounded-lg cart-animation"
     >
       <img
         alt="name-product"
-        className="rounded-t-lg shadow-lg w-full"
+        className="rounded-t-lg shadow-lg w-full "
         data-nimg="1"
         decoding="async"
         height={211.41}
@@ -178,11 +178,11 @@ exports[`renders correctly 1`] = `
       </div>
     </div>
     <div
-      className="mx-3 mb-10 border rounded-lg shadow-lg"
+      className="mx-3 mb-10 border rounded-lg cart-animation"
     >
       <img
         alt="name-product"
-        className="rounded-t-lg shadow-lg w-full"
+        className="rounded-t-lg shadow-lg w-full "
         data-nimg="1"
         decoding="async"
         height={211.41}
@@ -235,11 +235,11 @@ exports[`renders correctly 1`] = `
       </div>
     </div>
     <div
-      className="mx-3 mb-10 border rounded-lg shadow-lg"
+      className="mx-3 mb-10 border rounded-lg cart-animation"
     >
       <img
         alt="name-product"
-        className="rounded-t-lg shadow-lg w-full"
+        className="rounded-t-lg shadow-lg w-full "
         data-nimg="1"
         decoding="async"
         height={211.41}
@@ -292,11 +292,11 @@ exports[`renders correctly 1`] = `
       </div>
     </div>
     <div
-      className="mx-3 mb-10 border rounded-lg shadow-lg"
+      className="mx-3 mb-10 border rounded-lg cart-animation"
     >
       <img
         alt="name-product"
-        className="rounded-t-lg shadow-lg w-full"
+        className="rounded-t-lg shadow-lg w-full "
         data-nimg="1"
         decoding="async"
         height={211.41}
@@ -349,11 +349,11 @@ exports[`renders correctly 1`] = `
       </div>
     </div>
     <div
-      className="mx-3 mb-10 border rounded-lg shadow-lg"
+      className="mx-3 mb-10 border rounded-lg cart-animation"
     >
       <img
         alt="name-product"
-        className="rounded-t-lg shadow-lg w-full"
+        className="rounded-t-lg shadow-lg w-full "
         data-nimg="1"
         decoding="async"
         height={211.41}
@@ -406,11 +406,11 @@ exports[`renders correctly 1`] = `
       </div>
     </div>
     <div
-      className="mx-3 mb-10 border rounded-lg shadow-lg"
+      className="mx-3 mb-10 border rounded-lg cart-animation"
     >
       <img
         alt="name-product"
-        className="rounded-t-lg shadow-lg w-full"
+        className="rounded-t-lg shadow-lg w-full "
         data-nimg="1"
         decoding="async"
         height={211.41}
@@ -463,11 +463,11 @@ exports[`renders correctly 1`] = `
       </div>
     </div>
     <div
-      className="mx-3 mb-10 border rounded-lg shadow-lg"
+      className="mx-3 mb-10 border rounded-lg cart-animation"
     >
       <img
         alt="name-product"
-        className="rounded-t-lg shadow-lg w-full"
+        className="rounded-t-lg shadow-lg w-full "
         data-nimg="1"
         decoding="async"
         height={211.41}
@@ -520,11 +520,11 @@ exports[`renders correctly 1`] = `
       </div>
     </div>
     <div
-      className="mx-3 mb-10 border rounded-lg shadow-lg"
+      className="mx-3 mb-10 border rounded-lg cart-animation"
     >
       <img
         alt="name-product"
-        className="rounded-t-lg shadow-lg w-full"
+        className="rounded-t-lg shadow-lg w-full "
         data-nimg="1"
         decoding="async"
         height={211.41}
@@ -577,11 +577,11 @@ exports[`renders correctly 1`] = `
       </div>
     </div>
     <div
-      className="mx-3 mb-10 border rounded-lg shadow-lg"
+      className="mx-3 mb-10 border rounded-lg cart-animation"
     >
       <img
         alt="name-product"
-        className="rounded-t-lg shadow-lg w-full"
+        className="rounded-t-lg shadow-lg w-full "
         data-nimg="1"
         decoding="async"
         height={211.41}
@@ -634,11 +634,11 @@ exports[`renders correctly 1`] = `
       </div>
     </div>
     <div
-      className="mx-3 mb-10 border rounded-lg shadow-lg"
+      className="mx-3 mb-10 border rounded-lg cart-animation"
     >
       <img
         alt="name-product"
-        className="rounded-t-lg shadow-lg w-full"
+        className="rounded-t-lg shadow-lg w-full "
         data-nimg="1"
         decoding="async"
         height={211.41}
@@ -691,11 +691,11 @@ exports[`renders correctly 1`] = `
       </div>
     </div>
     <div
-      className="mx-3 mb-10 border rounded-lg shadow-lg"
+      className="mx-3 mb-10 border rounded-lg cart-animation"
     >
       <img
         alt="name-product"
-        className="rounded-t-lg shadow-lg w-full"
+        className="rounded-t-lg shadow-lg w-full "
         data-nimg="1"
         decoding="async"
         height={211.41}
@@ -748,11 +748,11 @@ exports[`renders correctly 1`] = `
       </div>
     </div>
     <div
-      className="mx-3 mb-10 border rounded-lg shadow-lg"
+      className="mx-3 mb-10 border rounded-lg cart-animation"
     >
       <img
         alt="name-product"
-        className="rounded-t-lg shadow-lg w-full"
+        className="rounded-t-lg shadow-lg w-full "
         data-nimg="1"
         decoding="async"
         height={211.41}
@@ -805,11 +805,11 @@ exports[`renders correctly 1`] = `
       </div>
     </div>
     <div
-      className="mx-3 mb-10 border rounded-lg shadow-lg"
+      className="mx-3 mb-10 border rounded-lg cart-animation"
     >
       <img
         alt="name-product"
-        className="rounded-t-lg shadow-lg w-full"
+        className="rounded-t-lg shadow-lg w-full "
         data-nimg="1"
         decoding="async"
         height={211.41}
@@ -862,11 +862,11 @@ exports[`renders correctly 1`] = `
       </div>
     </div>
     <div
-      className="mx-3 mb-10 border rounded-lg shadow-lg"
+      className="mx-3 mb-10 border rounded-lg cart-animation"
     >
       <img
         alt="name-product"
-        className="rounded-t-lg shadow-lg w-full"
+        className="rounded-t-lg shadow-lg w-full "
         data-nimg="1"
         decoding="async"
         height={211.41}

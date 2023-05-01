@@ -30,7 +30,7 @@ exports[`renders correctly 1`] = `
             loading="lazy"
             onError={[Function]}
             onLoad={[Function]}
-            src="gallery.svg"
+            src="/images/gallery.svg"
             style={
               {
                 "color": "transparent",
@@ -71,7 +71,7 @@ exports[`renders correctly 1`] = `
               loading="lazy"
               onError={[Function]}
               onLoad={[Function]}
-              src="gallery.svg"
+              src="/images/gallery.svg"
               style={
                 {
                   "color": "transparent",
@@ -109,7 +109,7 @@ exports[`renders correctly 1`] = `
               loading="lazy"
               onError={[Function]}
               onLoad={[Function]}
-              src="gallery.svg"
+              src="/images/gallery.svg"
               style={
                 {
                   "color": "transparent",
@@ -147,7 +147,7 @@ exports[`renders correctly 1`] = `
               loading="lazy"
               onError={[Function]}
               onLoad={[Function]}
-              src="gallery.svg"
+              src="/images/gallery.svg"
               style={
                 {
                   "color": "transparent",
