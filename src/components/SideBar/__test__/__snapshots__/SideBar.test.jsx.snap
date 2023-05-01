@@ -3,6 +3,7 @@
 exports[`SideBar does not render the image in small screen if not on edit profile page 1`] = `
 <section
   class="hidden lg:block shadow-2xl overflow-hidden h-[100%]"
+  dir="ltr"
 >
   <div
     class="flex flex-col justify-around text-center w-[331px] pt-10 h-[80%]"
@@ -90,6 +91,7 @@ exports[`SideBar does not render the image in small screen if not on edit profil
 exports[`SideBar renders large screen version correctly 1`] = `
 <section
   class="hidden lg:block shadow-2xl overflow-hidden h-[100%]"
+  dir="ltr"
 >
   <div
     class="flex flex-col justify-around text-center w-[331px] pt-10 h-[80%]"
@@ -177,6 +179,7 @@ exports[`SideBar renders large screen version correctly 1`] = `
 exports[`SideBar renders small screen version correctly 1`] = `
 <section
   class="hidden lg:block shadow-2xl overflow-hidden h-[100%]"
+  dir="ltr"
 >
   <div
     class="flex flex-col justify-around text-center w-[331px] pt-10 h-[80%]"

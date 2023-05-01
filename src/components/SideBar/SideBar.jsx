@@ -33,7 +33,7 @@ function SideBar({ handleSelectedPage, selectedPage, t }) {
               highlighterStyle={
                 selectedPage === "EditProfile" ? "editProfile" : ""
               }
-              text='Edit Profile'
+              text={t("edit-profile")}
               textClassName='text-[30px] hover:opacity-60'
             />
           </button>
@@ -46,7 +46,7 @@ function SideBar({ handleSelectedPage, selectedPage, t }) {
                 highlighterStyle={
                   selectedPage === "UserListings" ? "listingPage" : ""
                 }
-                text='My Listings'
+                text={t("my-listing")}
                 textClassName='text-[40px] hover:opacity-60'
               />
             </button>
@@ -58,7 +58,7 @@ function SideBar({ handleSelectedPage, selectedPage, t }) {
                 highlighterStyle={
                   selectedPage === "UserOrders" ? "ordersPage" : ""
                 }
-                text='My Orders'
+                text={t("my-orders")}
                 textClassName='text-[38px] hover:opacity-60'
               />
             </button>
@@ -73,21 +73,21 @@ function SideBar({ handleSelectedPage, selectedPage, t }) {
             aria-label='My Orders'
             onClick={() => handleSelectedPage("UserOrders")}
           >
-            My Orders
+            {t("my-orders")}
           </button>
           <button
             className='focus:bg-[#7874F2] focus:text-[#d7d7d7]'
             aria-label='My Listing'
             onClick={() => handleSelectedPage("UserListings")}
           >
-            My Listing
+            {t("my-listing")}
           </button>
           <button
             className='focus:bg-[#7874F2] focus:text-[#d7d7d7]'
             aria-label='Edit Profile'
             onClick={() => handleSelectedPage("EditProfile")}
           >
-            Edit Profile
+            {t("edit-profile")}
           </button>
         </div>
         <br />
