@@ -1,5 +1,6 @@
 import DOMPurify from "dompurify"
 import { addDoc, collection } from "firebase/firestore"
+import { getDownloadURL, ref, uploadBytes } from "firebase/storage"
 import { useTranslation, withTranslation } from "next-i18next"
 import Image from "next/image"
 import { useState } from "react"
@@ -7,7 +8,7 @@ import { ToastContainer, toast } from "react-toastify"
 
 import "react-toastify/dist/ReactToastify.css"
 
-import { auth, db, timestamp } from "@/utils/firebase/config"
+import { auth, db, storage, timestamp } from "@/utils/firebase/config"
 import { listingsValidation } from "@/utils/schemaValidations/listingItems"
 
 import Button from "../button"
@@ -15,7 +16,10 @@ import Highlighter from "../highlighter"
 import Input from "../input"
 
 function ListingItems() {
+  // Translation state
   const { t } = useTranslation("listingItems")
+  // Errors state
+  const [errors, setErrors] = useState({})
   // Form data handler
   const [formData, setFormData] = useState({
     primaryImage: { file: null, url: "/images/emptyImage.png" },
@@ -40,8 +44,8 @@ function ListingItems() {
     }))
   }
 
-  // Image upload handler
-  const uploadedImageHandler = (event, imageField) => {
+  // Browser image uploader
+  const imageBrowserUploader = (event, imageField) => {
     const file = event.target.files[0]
     if (file) {
       const reader = new FileReader()
@@ -58,8 +62,14 @@ function ListingItems() {
     }
   }
 
-  // Errors state
-  const [errors, setErrors] = useState({})
+  // firebase Image uploader
+  async function imageFirebaseUploader(imageField) {
+    const image = formData[imageField]
+    const storageRef = ref(storage, `images/${image.file.name}`)
+    await uploadBytes(storageRef, image.file)
+    const downloadURL = await getDownloadURL(storageRef)
+    return downloadURL
+  }
 
   // Submit handler
   const submitHandler = async (event) => {
@@ -69,6 +79,7 @@ function ListingItems() {
       toast.info("Pleas wait")
       const user = auth.currentUser
       const uid = user.uid
+
       // Save the form data to the sellItems collection
       const userCollection = collection(db, "users", uid, "listingItems")
       const docRef = await addDoc(userCollection, formData)
@@ -127,7 +138,7 @@ function ListingItems() {
                 type='file'
                 accept='image/*'
                 onChange={(event) =>
-                  uploadedImageHandler(event, "primaryImage")
+                  imageBrowserUploader(event, "primaryImage")
                 }
                 className='hidden'
               />
@@ -146,7 +157,7 @@ function ListingItems() {
                   type='file'
                   accept='image/*'
                   onChange={(event) =>
-                    uploadedImageHandler(event, "secondaryImage")
+                    imageBrowserUploader(event, "secondaryImage")
                   }
                   className='hidden'
                 />
@@ -165,7 +176,7 @@ function ListingItems() {
                     type='file'
                     accept='image/*'
                     onChange={(event) =>
-                      uploadedImageHandler(event, "tertiaryImage")
+                      imageBrowserUploader(event, "tertiaryImage")
                     }
                     className='hidden'
                   />
@@ -186,7 +197,7 @@ function ListingItems() {
                     type='file'
                     accept='image/*'
                     onChange={(event) =>
-                      uploadedImageHandler(event, "quaternaryImage")
+                      imageBrowserUploader(event, "quaternaryImage")
                     }
                     className='hidden'
                   />
