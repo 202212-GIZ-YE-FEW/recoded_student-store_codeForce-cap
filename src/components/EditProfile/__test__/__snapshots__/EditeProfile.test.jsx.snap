@@ -6,7 +6,6 @@ exports[`renders correctly 1`] = `
 >
   <div
     className="grid lg:grid-cols-2 lg:ml-36 w-[86%] overflow-y-auto gap-x-12 mt-10 lg:mt-28 mx-auto h-[577px] md:h-[744px] lg:h-[100%]"
-    dir="ltr"
   >
     <label
       className="block lg:hidden cursor-pointer rounded-full"
