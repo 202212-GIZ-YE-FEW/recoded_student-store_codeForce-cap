@@ -80,10 +80,19 @@ function ListingItems() {
       const user = auth.currentUser
       const uid = user.uid
 
+      // Images storage constants which upload the images to the firebase storage
       const primaryImageURL = await imageFirebaseUploader("primaryImage")
       const secondaryImageURL = await imageFirebaseUploader("secondaryImage")
       const tertiaryImageURL = await imageFirebaseUploader("tertiaryImage")
       const quaternaryImageURL = await imageFirebaseUploader("quaternaryImage")
+
+      const formDataWithImages = {
+        ...formData,
+        primaryImage: { url: primaryImageURL },
+        secondaryImage: { url: secondaryImageURL },
+        tertiaryImage: { url: tertiaryImageURL },
+        quaternaryImage: { url: quaternaryImageURL },
+      }
 
       // Save the form data to the sellItems collection
       const userCollection = collection(db, "users", uid, "listingItems")
