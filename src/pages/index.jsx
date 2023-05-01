@@ -5,6 +5,7 @@ import Filter from "@/components/Filter"
 import Hero from "@/components/hero/Hero"
 
 import RootLayout from "@/layout/root/RootLayout"
+import FavProducts from "@/components/FavProducts"
 
 export default function HomePage() {
   // const { t } = useTranslation("common")
@@ -12,6 +13,7 @@ export default function HomePage() {
   return (
     <>
       <RootLayout>
+        <FavProducts />
         <Hero />
         <Filter />
       </RootLayout>
