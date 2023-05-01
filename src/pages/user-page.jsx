@@ -45,7 +45,7 @@ export default function UserPage() {
 export async function getStaticProps({ locale }) {
   return {
     props: {
-      ...(await serverSideTranslations(locale, ["index", "common"])),
+      ...(await serverSideTranslations(locale, ["index", "signup", "common"])),
       // Will be passed to the page component as props
     },
   }
