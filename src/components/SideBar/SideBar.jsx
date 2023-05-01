@@ -2,11 +2,16 @@ import Image from "next/image"
 
 import Highlighter from "../highlighter"
 
-export default function SideBar({ handleSelectedPage, selectedPage }) {
+import { withTranslation } from "react-i18next"
+
+function SideBar({ handleSelectedPage, selectedPage, t }) {
   return (
     <>
       {/* // * If it is large screen */}
-      <section className='hidden lg:block shadow-2xl overflow-hidden h-[100%]'>
+      <section
+        className='hidden lg:block shadow-2xl overflow-hidden h-[100%]'
+        dir={t("language") === "ar" ? "rtl" : "ltr"}
+      >
         <div className='flex flex-col justify-around text-center w-[331px] pt-10 h-[80%]'>
           <Image
             className='rounded-full mx-auto'
@@ -103,3 +108,5 @@ export default function SideBar({ handleSelectedPage, selectedPage }) {
     </>
   )
 }
+
+export default withTranslation("common")(SideBar)
