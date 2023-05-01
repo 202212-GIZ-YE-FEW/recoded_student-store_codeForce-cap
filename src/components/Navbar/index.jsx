@@ -9,7 +9,7 @@ import {
 } from "react-icons/ai"
 import { HiHeart } from "react-icons/hi"
 import { RxHamburgerMenu } from "react-icons/rx"
-import { TbArrowBadgeDown, TbUserMinus } from "react-icons/tb"
+import { TbArrowBadgeDown } from "react-icons/tb"
 import { TfiWorld } from "react-icons/tfi"
 
 import styles from "./Navbar.module.css"
@@ -132,13 +132,12 @@ export default function Navbar() {
                 <div className='flex items-center'>
                   <div className='block md:relative text-center'>
                     <span className='hidden md:flex items-center cursor-pointer'>
-                      <TbUserMinus className='text-4xl text-purple' />
-                      {/* <Image
-                      alt='User'
-                      src='/images/user-icon.png'
-                      width={50}
-                      height={50}
-                    /> */}
+                      <Image
+                        alt='User'
+                        src='/images/user-icon.png'
+                        width={37}
+                        height={37}
+                      />
                       <TbArrowBadgeDown className='text-xl text-violet-700' />
                     </span>
                     <button
