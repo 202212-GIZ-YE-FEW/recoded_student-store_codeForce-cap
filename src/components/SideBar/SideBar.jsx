@@ -96,10 +96,10 @@ function SideBar({ handleSelectedPage, selectedPage, t }) {
           highlighterStyle='editProfile'
           text={
             selectedPage === "EditProfile"
-              ? "Edit Profile"
+              ? t("edit-profile")
               : selectedPage === "UserListings"
-              ? "My Listings"
-              : "My Orders"
+              ? t("my-listing")
+              : t("my-orders")
           }
         />
         <br />

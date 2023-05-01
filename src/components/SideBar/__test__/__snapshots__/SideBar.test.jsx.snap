@@ -45,7 +45,7 @@ exports[`SideBar does not render the image in small screen if not on edit profil
           <h2
             class="text-purple-light font-poppins text-center font-bold tracking-[-1px] text-[30px] hover:opacity-60"
           >
-            Edit Profile
+            edit-profile
           </h2>
         </span>
       </span>
@@ -63,7 +63,7 @@ exports[`SideBar does not render the image in small screen if not on edit profil
             <h2
               class="text-purple-light font-poppins text-center font-bold tracking-[-1px] text-[40px] hover:opacity-60"
             >
-              My Listings
+              my-listing
             </h2>
           </span>
         </span>
@@ -78,7 +78,7 @@ exports[`SideBar does not render the image in small screen if not on edit profil
             <h2
               class="text-purple-light font-poppins text-center font-bold tracking-[-1px] text-[38px] hover:opacity-60"
             >
-              My Orders
+              my-orders
             </h2>
           </span>
         </span>
@@ -133,7 +133,7 @@ exports[`SideBar renders large screen version correctly 1`] = `
           <h2
             class="text-purple-light font-poppins text-center font-bold tracking-[-1px] text-[30px] hover:opacity-60"
           >
-            Edit Profile
+            edit-profile
           </h2>
         </span>
       </span>
@@ -151,7 +151,7 @@ exports[`SideBar renders large screen version correctly 1`] = `
             <h2
               class="text-purple-light font-poppins text-center font-bold tracking-[-1px] text-[40px] hover:opacity-60"
             >
-              My Listings
+              my-listing
             </h2>
           </span>
         </span>
@@ -166,7 +166,7 @@ exports[`SideBar renders large screen version correctly 1`] = `
             <h2
               class="text-purple-light font-poppins text-center font-bold tracking-[-1px] text-[38px] hover:opacity-60"
             >
-              My Orders
+              my-orders
             </h2>
           </span>
         </span>
@@ -221,7 +221,7 @@ exports[`SideBar renders small screen version correctly 1`] = `
           <h2
             class="text-purple-light font-poppins text-center font-bold tracking-[-1px] text-[30px] hover:opacity-60"
           >
-            Edit Profile
+            edit-profile
           </h2>
         </span>
       </span>
@@ -239,7 +239,7 @@ exports[`SideBar renders small screen version correctly 1`] = `
             <h2
               class="text-purple-light font-poppins text-center font-bold tracking-[-1px] text-[40px] hover:opacity-60"
             >
-              My Listings
+              my-listing
             </h2>
           </span>
         </span>
@@ -254,7 +254,7 @@ exports[`SideBar renders small screen version correctly 1`] = `
             <h2
               class="text-purple-light font-poppins text-center font-bold tracking-[-1px] text-[38px] hover:opacity-60"
             >
-              My Orders
+              my-orders
             </h2>
           </span>
         </span>
