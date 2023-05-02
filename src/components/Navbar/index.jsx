@@ -29,7 +29,7 @@ function Navbar({ t }) {
             alt='logo'
             width={130}
             height={130}
-            className='rtl:mr-52 sm:rtl:mr-0'
+            className='rtl:mr-48 lg:rtl:mr-[0]'
           />
         </Link>
         {/* ----------- Languages ----------- */}
