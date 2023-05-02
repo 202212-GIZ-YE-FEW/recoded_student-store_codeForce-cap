@@ -65,7 +65,8 @@ function ListingItems() {
   // firebase Image uploader
   async function imageFirebaseUploader(imageField) {
     const image = formData[imageField]
-    const storageRef = ref(storage, `images/${image.file.name}`)
+    const productName = formData.productName.toLowerCase().replace(/\s+/g, "-")
+    const storageRef = ref(storage, `images/${productName}/${image.file.name}`)
     await uploadBytes(storageRef, image.file)
     const downloadURL = await getDownloadURL(storageRef)
     return downloadURL
