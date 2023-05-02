@@ -113,7 +113,7 @@ function Navbar({ t }) {
             </div>
             <div className='relative'>
               <div
-                className={`absolute left-[-100px] top-5 bg-white capitalize ${
+                className={`absolute left-[-70px] rtl:left-[-10px] top-5 bg-white capitalize ${
                   languages ? `${styles.show}` : "hidden"
                 }`}
               >
