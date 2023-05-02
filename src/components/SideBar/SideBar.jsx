@@ -1,33 +1,11 @@
-import { doc, getDoc } from "firebase/firestore"
 import Image from "next/image"
-import { useEffect, useState } from "react"
-import { toast } from "react-toastify"
 
-import { db } from "@/utils/firebase/config"
-import { useAuth } from "@/utils/store"
+import { useProfileData } from "@/utils/store"
 
 import Highlighter from "../highlighter"
 
 export default function SideBar({ handleSelectedPage, selectedPage }) {
-  const { user } = useAuth()
-  const [profileData, setProfileData] = useState(null)
-
-  useEffect(() => {
-    const fetchProfileData = async () => {
-      if (user) {
-        const docRef = doc(db, "users", user.uid)
-        const docSnap = await getDoc(docRef)
-
-        if (docSnap.exists()) {
-          setProfileData(docSnap.data())
-        } else {
-          toast.error("No such document!")
-        }
-      }
-    }
-
-    fetchProfileData()
-  }, [user])
+  const profileData = useProfileData()
 
   return (
     <>
