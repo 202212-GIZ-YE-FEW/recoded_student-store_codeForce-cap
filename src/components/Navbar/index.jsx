@@ -1,6 +1,7 @@
+import ProgressBar from "@ramonak/react-progress-bar"
 import Image from "next/image"
 import Link from "next/link"
-import { useState } from "react"
+import { useEffect, useState } from "react"
 import { useAuthState } from "react-firebase-hooks/auth"
 import {
   AiOutlineClose,
@@ -21,6 +22,22 @@ export default function Navbar() {
   const [languages, setLanguages] = useState(false)
   const [open, setOpen] = useState(false)
   const [user] = useAuthState(auth)
+  const [scrollProgress, setScrollProgress] = useState(0)
+
+  const calculateScrollProgress = () => {
+    const scrollTop =
+      document.documentElement.scrollTop || document.body.scrollTop
+    const scrollHeight =
+      document.documentElement.scrollHeight -
+      document.documentElement.clientHeight
+    const progress = (scrollTop / scrollHeight) * 100
+    setScrollProgress(Math.floor(progress))
+  }
+
+  useEffect(() => {
+    window.addEventListener("scroll", calculateScrollProgress)
+    return () => window.removeEventListener("scroll", calculateScrollProgress)
+  }, [])
   return (
     <header className='sticky top-0 z-50'>
       <div
@@ -188,6 +205,10 @@ export default function Navbar() {
           </div>
         </div>
       </div>
+      <ProgressBar
+        completed={scrollProgress}
+        barContainerClassName='bg-white'
+      />
     </header>
   )
 }
