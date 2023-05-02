@@ -9,11 +9,9 @@ import { BsFacebook, BsGoogle, BsTwitter } from "react-icons/bs"
 import * as Yup from "yup"
 
 import styles from "./Signup.module.css"
-
-import Button from "@/components/button"
-import Input from "@/components/input"
-
-import signUp from "@/utils/firebase/auth/signup"
+import signUp from "@/utils/firebase/signup"
+import Input from "../input"
+import Button from "../button"
 
 // Define validation schema using Yup
 const validationSchema = Yup.object().shape({
@@ -235,7 +233,7 @@ function Signup({ t }) {
             </div>
             {/* <Button buttonStyle='purpleSignUp' text='Sign in' /> */}
             <Link
-              href='/sign-in'
+              href='/signin'
               className='h-10 w-40 m-1 p-1 rounded-lg border-2 bg-purple-dark font-light text-[15px] text-white shadow-sm text-center'
             >
               {t("sign-in")}

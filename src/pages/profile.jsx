@@ -6,6 +6,7 @@ import UserListings from "@/components/UserListings"
 import UserOrders from "@/components/UserOrders"
 
 import RootLayout from "@/layout/root/RootLayout"
+import { serverSideTranslations } from "next-i18next/serverSideTranslations"
 
 export default function UserPage() {
   const [selectedPage, setSelectedPage] = useState("UserOrders")
@@ -29,4 +30,18 @@ export default function UserPage() {
       </div>
     </RootLayout>
   )
+}
+
+export async function getStaticProps({ locale }) {
+  return {
+    props: {
+      ...(await serverSideTranslations(locale, [
+        "common",
+        "signup",
+        "listingItems",
+        "index",
+      ])),
+      // Will be passed to the page component as props
+    },
+  }
 }
