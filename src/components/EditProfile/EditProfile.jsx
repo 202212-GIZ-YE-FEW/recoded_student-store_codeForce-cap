@@ -1,8 +1,8 @@
 // ! The libraries that been used in this code
 import dynamic from "next/dynamic"
 import Image from "next/image"
-import { useState } from "react"
 import { withTranslation } from "next-i18next"
+import { useState } from "react"
 import PhoneInput from "react-phone-input-2"
 
 // ! The phone input default style

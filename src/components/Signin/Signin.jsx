@@ -1,6 +1,7 @@
 import Image from "next/image"
 import Link from "next/link"
 import { useRouter } from "next/router"
+import { withTranslation } from "next-i18next"
 import { useState } from "react"
 import { BsFacebook, BsGoogle, BsTwitter } from "react-icons/bs"
 import { toast, ToastContainer } from "react-toastify"
@@ -10,7 +11,6 @@ import styles from "./Signin.module.css"
 
 import signIn from "@/utils/firebase/signin"
 import { signinValidation } from "@/utils/schemaValidations/signin"
-import { withTranslation } from "next-i18next"
 
 import Button from "../button"
 import Input from "../input"

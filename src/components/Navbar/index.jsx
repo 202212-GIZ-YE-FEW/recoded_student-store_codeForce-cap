@@ -9,6 +9,7 @@ import { TbArrowBadgeDown } from "react-icons/tb"
 import { TfiWorld } from "react-icons/tfi"
 
 import styles from "./Navbar.module.css"
+
 function Navbar({ t }) {
   const [languages, setLanguages] = useState(false)
   const [open, setOpen] = useState(false)
@@ -145,7 +146,7 @@ function Navbar({ t }) {
               </Link>
             </div>
             <div className='text-2xl text-orange-600 hover:text-orange-700 transition'>
-              <Link href='/cart'>
+              <Link href='/favorites'>
                 {" "}
                 <HiHeart />{" "}
               </Link>

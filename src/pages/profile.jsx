@@ -1,3 +1,4 @@
+import { serverSideTranslations } from "next-i18next/serverSideTranslations"
 import { useState } from "react"
 
 import EditProfile from "@/components/EditProfile"
@@ -6,7 +7,6 @@ import UserListings from "@/components/UserListings"
 import UserOrders from "@/components/UserOrders"
 
 import RootLayout from "@/layout/root/RootLayout"
-import { serverSideTranslations } from "next-i18next/serverSideTranslations"
 
 export default function UserPage() {
   const [selectedPage, setSelectedPage] = useState("UserOrders")

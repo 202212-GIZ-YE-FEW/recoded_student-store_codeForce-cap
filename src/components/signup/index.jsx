@@ -9,9 +9,11 @@ import { BsFacebook, BsGoogle, BsTwitter } from "react-icons/bs"
 import * as Yup from "yup"
 
 import styles from "./Signup.module.css"
+
 import signUp from "@/utils/firebase/signup"
-import Input from "../input"
+
 import Button from "../button"
+import Input from "../input"
 
 // Define validation schema using Yup
 const validationSchema = Yup.object().shape({

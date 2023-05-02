@@ -1,5 +1,6 @@
 import Image from "next/image"
 import { withTranslation } from "next-i18next"
+import { AiOutlineHeart } from "react-icons/ai"
 
 import Products from "./products"
 
@@ -27,13 +28,20 @@ function ProductList({ selectedFilter, t }) {
             key={product.id}
             className='mx-3 mb-10 border rounded-lg cart-animation'
           >
-            <Image
-              src={product.images}
-              alt={product.name}
-              width={258}
-              height={211.41}
-              className='rounded-t-lg shadow-lg w-full '
-            />
+            <div className='relative overflow-hidden'>
+              <Image
+                src={product.images}
+                alt={product.name}
+                width={258}
+                height={211.41}
+                className='rounded-t-lg shadow-lg w-full '
+              />
+              <div className='absolute bottom-2 right-2 z-10'>
+                <button className='flex items-center justify-center w-8 h-8 bg-white text-red-500 rounded-full shadow-md hover:text-red-500 transition-colors duration-300 ease-in-out'>
+                  <AiOutlineHeart />
+                </button>
+              </div>
+            </div>
             <div className='mx-3 text-center'>
               <div className='info flex justify-between my-4 mx-3'>
                 <div className='text-left'>
