@@ -43,7 +43,7 @@ function Navbar({ t }) {
           </div>
           <div className='relative z-50 '>
             <div
-              className={`absolute left-[-100px] top-2 bg-white capitalize border border-solid border-violet-600${
+              className={`absolute left-[-70px] rtl:left-[-20px] top-2 bg-white capitalize border border-solid border-violet-600${
                 languages ? `${styles.show}` : " hidden"
               }`}
             >
