@@ -1,10 +1,10 @@
 import Image from "next/image"
+import { withTranslation } from "next-i18next"
 import { useState } from "react"
 import { AiFillHeart } from "react-icons/ai"
 import { HiOutlineChip, HiOutlineX } from "react-icons/hi"
 import { MdTwoWheeler } from "react-icons/md"
 import { TbBook, TbSofa } from "react-icons/tb"
-import { withTranslation } from "next-i18next"
 
 import Highlighter from "../highlighter"
 import products from "../ProductList/products"
