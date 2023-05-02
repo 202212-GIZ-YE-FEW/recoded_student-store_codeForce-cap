@@ -1,8 +1,34 @@
+import { doc, getDoc } from "firebase/firestore"
 import Image from "next/image"
+import { useEffect, useState } from "react"
+import { toast } from "react-toastify"
+
+import { db } from "@/utils/firebase/config"
+import { useAuth } from "@/utils/store"
 
 import Highlighter from "../highlighter"
 
 export default function SideBar({ handleSelectedPage, selectedPage }) {
+  const { user } = useAuth()
+  const [profileData, setProfileData] = useState(null)
+
+  useEffect(() => {
+    const fetchProfileData = async () => {
+      if (user) {
+        const docRef = doc(db, "users", user.uid)
+        const docSnap = await getDoc(docRef)
+
+        if (docSnap.exists()) {
+          setProfileData(docSnap.data())
+        } else {
+          toast.error("No such document!")
+        }
+      }
+    }
+
+    fetchProfileData()
+  }, [user])
+
   return (
     <>
       {/* // * If it is large screen */}
@@ -10,15 +36,18 @@ export default function SideBar({ handleSelectedPage, selectedPage }) {
         <div className='flex flex-col justify-around text-center w-[331px] pt-10 h-[80%]'>
           <Image
             className='rounded-full mx-auto'
-            src='/productImg.png'
+            src={profileData?.imageURL || "/images/cat-photo.svg"}
             alt='...'
             width={171}
             height={171}
           />
           <div className='text-[22px] op'>
-            <h2 className='font-semibold'>User Name</h2>
-            <p>User Email</p>
-            <p>User Location</p>
+            <h2 className='font-semibold'>
+              {"Name: " + profileData?.firstName + " " + profileData?.surname ||
+                "User Name"}
+            </h2>
+            <p>{"Email: " + profileData?.email || "User Email"}</p>
+            <p>{profileData?.location || "Location"}</p>
           </div>
           <button
             aria-label='Edit Profile'
