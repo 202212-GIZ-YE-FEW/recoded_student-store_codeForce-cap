@@ -1,5 +1,5 @@
 import Image from "next/image"
-import { withTranslation } from "react-i18next"
+import { withTranslation } from "next-i18next"
 
 import Highlighter from "../highlighter"
 
