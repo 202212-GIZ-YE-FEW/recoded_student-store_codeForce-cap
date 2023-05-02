@@ -315,7 +315,7 @@ exports[`renders correctly 1`] = `
           className="text-2xl text-orange-600 hover:text-orange-700 transition"
         >
           <a
-            href="/cart"
+            href="/favorites"
             onClick={[Function]}
             onMouseEnter={[Function]}
             onTouchStart={[Function]}
@@ -345,6 +345,53 @@ exports[`renders correctly 1`] = `
              
           </a>
         </div>
+      </div>
+    </div>
+  </div>
+  <div
+    aria-valuemax={100}
+    aria-valuemin={0}
+    aria-valuenow={0}
+    aria-valuetext="0%"
+    dir="ltr"
+    role="progressbar"
+    style={
+      {
+        "alignItems": "initial",
+        "display": "initial",
+      }
+    }
+  >
+    <div
+      className="bg-white"
+    >
+      <div
+        style={
+          {
+            "alignItems": "center",
+            "background": "#6a1b9a",
+            "borderRadius": "inherit",
+            "display": "flex",
+            "height": "20px",
+            "justifyContent": "flex-end",
+            "transition": "width 1s ease-in-out",
+            "width": "0%",
+          }
+        }
+      >
+        <span
+          style={
+            {
+              "color": "#fff",
+              "display": "initial",
+              "fontSize": "15px",
+              "fontWeight": "bold",
+              "padding": "5px",
+            }
+          }
+        >
+          0%
+        </span>
       </div>
     </div>
   </div>

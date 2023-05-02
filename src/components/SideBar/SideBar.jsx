@@ -19,7 +19,7 @@ export default function SideBar({ handleSelectedPage, selectedPage }) {
             width={171}
             height={171}
           />
-          <div className='text-[22px] op'>
+          <div className='text-[22px]'>
             <h2 className='font-semibold'>
               {"Name: " + profileData?.firstName + " " + profileData?.surname ||
                 "User Name"}
