@@ -15,7 +15,7 @@ function Footer({ t }) {
       <footer dir={t("language") === "ar" ? "rtl" : "ltr"}>
         <div className='relative lg:flex lg:justify-evenly bg-[#32314C] w-full h-full break-all mt-auto pb-32'>
           {/* Logo Section */}
-          <div className='ml-5 pt-5 rtl:mr-44 lg:rtl:mr-[0]'>
+          <div className='ml-5 pt-5 rtl:mr-[180px] rtl:sm:mr-[550px] rtl:lg:mr-[0px]'>
             <Link href='/'>
               <Image
                 src='/images/logo-footer.svg'
@@ -24,7 +24,7 @@ function Footer({ t }) {
                 alt='logo'
               />
             </Link>
-            <div className='absolute bottom-16 left-5 lg:left-40 lg:bottom-1 rtl:mr-52 sm:rtl:mr-0'>
+            <div className='absolute bottom-16 left-5 lg:left-40 lg:bottom-1 rtl:mr-[180px] rtl:sm:mr-[550px] rtl:lg:mr-[0px]'>
               <a href='#'>
                 <Image
                   src='/images/play-google.svg'
@@ -47,7 +47,7 @@ function Footer({ t }) {
           </div>
 
           {/* About Section */}
-          <div className='pl-14 pt-5 md:pt-14 rtl:w-96 rtl:mr-40 md:rtl:mr-0'>
+          <div className='pl-14 pt-5 md:pt-14 rtl:w-96 rtl:mr-[150px] rtl:sm:mr-[400px] rtl:lg:mr-[0px]'>
             <ul className='font-poppins text-white font-bold md:text-1xl lg:text-2xl'>
               <li>
                 <Link href='/about' className='hover:underline'>
@@ -65,7 +65,7 @@ function Footer({ t }) {
           </div>
 
           {/* Link Pages Section */}
-          <div className='pl-14 pt-10 md:pt-14 rtl:w-96 rtl:mr-40 md:rtl:mr-0'>
+          <div className='pl-14 pt-10 md:pt-14 rtl:w-96 rtl:mr-[150px] rtl:sm:mr-[400px] rtl:lg:mr-[0px]'>
             <ul className='font-poppins text-white font-bold md:text-1xl lg:text-2xl'>
               <li className='mb-4'>
                 <Link href='/signup' className='hover:underline '>
