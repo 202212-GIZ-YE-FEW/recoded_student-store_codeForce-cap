@@ -44,10 +44,10 @@ function FavProducts({ t }) {
       className='container mx-auto py-8 px-4 sm:px-8'
       dir={t("language") === "ar" ? "rtl" : "ltr"}
     >
-      <Highlighter highlighterStyle='aboutus' text='Favorite Products' />
+      <Highlighter highlighterStyle='aboutus' text={t("favorite-products")} />
       <div className='container mx-auto mt-8'>
         <h2 className='text-lg font-bold mb-2 text-center py-5'>
-          Filter By Category:
+          {t("filter-category")}
         </h2>
         <div className='flex flex-wrap justify-center py-4'>
           <button
@@ -57,7 +57,7 @@ function FavProducts({ t }) {
               " bg-purple !text-white hover:!bg-violet-800"
             }`}
           >
-            All
+            {t("all")}
           </button>
           <button
             onClick={() => handleCategoryChange("Electronics")}
@@ -66,7 +66,7 @@ function FavProducts({ t }) {
               " bg-purple !text-white hover:!bg-violet-800"
             }`}
           >
-            Electronics
+            {t("filter-three")}
             <HiOutlineChip className='text-2xl' />
           </button>
           {/* <button
@@ -85,7 +85,7 @@ function FavProducts({ t }) {
               " bg-purple !text-white hover:!bg-violet-800"
             }`}
           >
-            Books
+            {t("filter-one")}
             <TbBook className='text-2xl' />
           </button>
           <button
@@ -96,7 +96,7 @@ function FavProducts({ t }) {
               " bg-purple !text-white hover:!bg-violet-800"
             }`}
           >
-            Two-wheeler <MdTwoWheeler className='text-2xl' />
+            {t("filter-four")} <MdTwoWheeler className='text-2xl' />
           </button>
           <button
             onClick={() => handleCategoryChange("Furniture")}
@@ -106,7 +106,7 @@ function FavProducts({ t }) {
               " bg-purple !text-white hover:!bg-violet-800"
             }`}
           >
-            Furniture <TbSofa className='text-2xl' />
+            {t("filter-two")} <TbSofa className='text-2xl' />
           </button>
         </div>
       </div>
