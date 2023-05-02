@@ -1,13 +1,13 @@
-import Image from "next/image"
-import { useState } from "react"
-import { AiFillHeart } from "react-icons/ai"
-import { GiClothes } from "react-icons/gi"
 import { HiOutlineChip, HiOutlineX } from "react-icons/hi"
-import { MdTwoWheeler } from "react-icons/md"
 import { TbBook, TbSofa } from "react-icons/tb"
 
+import { AiFillHeart } from "react-icons/ai"
+import { GiClothes } from "react-icons/gi"
 import Highlighter from "../highlighter"
+import Image from "next/image"
+import { MdTwoWheeler } from "react-icons/md"
 import products from "../ProductList/products"
+import { useState } from "react"
 
 function FavProducts() {
   // Define state variables for favorite products and selected category
@@ -66,7 +66,7 @@ function FavProducts() {
             Electronics
             <HiOutlineChip className='text-2xl' />
           </button>
-          <button
+          {/* <button
             onClick={() => handleCategoryChange("Cloth")}
             className={`bg-gray-200 hover:bg-gray-300 text-gray-800 font-bold py-2 px-4 rounded-full mr-4 mb-4 transition-all duration-300 ease-in-out focus:ring-2 focus:ring-offset-2 focus:ring-gray-500 flex justify-around items-center w-32 shadow-md min-w-[110px] max-xs:flex-col ${
               selectedCategory === "Cloth" &&
@@ -74,7 +74,7 @@ function FavProducts() {
             }`}
           >
             Clothes <GiClothes className='text-2xl' />
-          </button>
+          </button> */}
           <button
             onClick={() => handleCategoryChange("Books")}
             className={`bg-gray-200 hover:bg-gray-300 text-gray-800 font-bold py-2 px-4 rounded-full mr-4 mb-4 transition-all duration-300 ease-in-out focus:ring-2 focus:ring-offset-2 focus:ring-gray-500 flex  justify-around items-center w-32 shadow-md min-w-[110px] ${
