@@ -1,8 +1,9 @@
 import Aboutus from "@/components/Aboutus"
 
 import RootLayout from "@/layout/root/RootLayout"
+import { serverSideTranslations } from "next-i18next/serverSideTranslations"
 
-function AboutPage() {
+export default function AboutPage() {
   return (
     <RootLayout>
       <Aboutus />
@@ -10,4 +11,15 @@ function AboutPage() {
   )
 }
 
-export default AboutPage
+export async function getStaticProps({ locale }) {
+  return {
+    props: {
+      ...(await serverSideTranslations(locale, [
+        "aboutus",
+        "ourteam",
+        "common",
+      ])),
+      // Will be passed to the page component as props
+    },
+  }
+}
