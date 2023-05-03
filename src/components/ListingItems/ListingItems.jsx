@@ -136,23 +136,23 @@ function ListingItems() {
           }
         })()
       })
-      router.replace("/").then(() => {
-        toast.promise(
-          uploadPromise,
-          {
-            pending:
-              "Uploading your product please wait the fast is depends in your internet speed",
-            success: "Item upload success 👌",
-            error: "Upload field 🤯",
-          },
-          {
-            success: ({ userDocRef, generalDocRef }) => ({
-              userToastId: userDocRef.id, // Changed the key name here
-              generalToastId: generalDocRef.id, // Changed the key name here
-            }),
-          }
-        )
-      })
+      // router.replace("/").then(() => {
+      toast.promise(
+        uploadPromise,
+        {
+          pending:
+            "Uploading your product please wait the fast is depends in your internet speed",
+          success: "Item upload success 👌",
+          error: "Upload field 🤯",
+        },
+        {
+          success: ({ userDocRef, generalDocRef }) => ({
+            userToastId: userDocRef.id, // Changed the key name here
+            generalToastId: generalDocRef.id, // Changed the key name here
+          }),
+        }
+      )
+      // })
     } catch (error) {
       toast.error("Sorry, There is an error product didn't upload successfully")
       const schemaErrors = {}
