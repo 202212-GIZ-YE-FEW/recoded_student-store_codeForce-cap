@@ -3,6 +3,7 @@ import { addDoc, collection } from "firebase/firestore"
 import { getDownloadURL, ref, uploadBytes } from "firebase/storage"
 import { useTranslation, withTranslation } from "next-i18next"
 import Image from "next/image"
+import { useRouter } from "next/router"
 import { useState } from "react"
 import { ToastContainer, toast } from "react-toastify"
 
@@ -16,6 +17,7 @@ import Highlighter from "../highlighter"
 import Input from "../input"
 
 function ListingItems() {
+  const router = useRouter()
   // Translation state
   const { t } = useTranslation("listingItems")
   // Errors state
@@ -77,49 +79,85 @@ function ListingItems() {
     event.preventDefault()
     try {
       await listingsValidation.validate(formData, { abortEarly: false })
-      toast.info("Pleas wait")
       const user = auth.currentUser
       const uid = user.uid
 
-      // Images storage constants which upload the images to the firebase storage
-      const primaryImageURL = await imageFirebaseUploader("primaryImage")
-      const secondaryImageURL = await imageFirebaseUploader("secondaryImage")
-      const tertiaryImageURL = await imageFirebaseUploader("tertiaryImage")
-      const quaternaryImageURL = await imageFirebaseUploader("quaternaryImage")
+      const uploadPromise = new Promise((resolve, reject) => {
+        ;(async () => {
+          try {
+            const primaryImageURL = await imageFirebaseUploader("primaryImage")
+            const secondaryImageURL = await imageFirebaseUploader(
+              "secondaryImage"
+            )
+            const tertiaryImageURL = await imageFirebaseUploader(
+              "tertiaryImage"
+            )
+            const quaternaryImageURL = await imageFirebaseUploader(
+              "quaternaryImage"
+            )
 
-      // New form with images new urls
-      const newFormWithImagesUrls = {
-        ...formData,
-        primaryImage: { url: primaryImageURL },
-        secondaryImage: { url: secondaryImageURL },
-        tertiaryImage: { url: tertiaryImageURL },
-        quaternaryImage: { url: quaternaryImageURL },
-      }
+            const newFormWithImagesUrls = {
+              ...formData,
+              primaryImage: { url: primaryImageURL },
+              secondaryImage: { url: secondaryImageURL },
+              tertiaryImage: { url: tertiaryImageURL },
+              quaternaryImage: { url: quaternaryImageURL },
+            }
 
-      // Save the form data to the sellItems collection
-      const userCollection = collection(db, "users", uid, "listingItems")
-      const docRef = await addDoc(userCollection, newFormWithImagesUrls)
-      toast.success(t("addedAlert"), { toastId: docRef.id })
+            const userCollection = collection(db, "users", uid, "userListings")
+            const userDocRef = await addDoc(
+              userCollection,
+              newFormWithImagesUrls
+            )
 
-      // Clear the form data
-      setFormData({
-        primaryImage: { file: null, url: "/images/emptyImage.png" },
-        secondaryImage: { file: null, url: "/images/emptyImage.png" },
-        tertiaryImage: { file: null, url: "/images/emptyImage.png" },
-        quaternaryImage: { file: null, url: "/images/emptyImage.png" },
-        type: "",
-        category: "",
-        productName: "",
-        description: "",
-        location: "",
-        price: "",
-        createdAt: timestamp,
+            const generalCollection = collection(db, "generalListings")
+            const generalDocRef = await addDoc(
+              generalCollection,
+              newFormWithImagesUrls
+            )
+
+            setFormData({
+              primaryImage: { file: null, url: "/images/emptyImage.png" },
+              secondaryImage: { file: null, url: "/images/emptyImage.png" },
+              tertiaryImage: { file: null, url: "/images/emptyImage.png" },
+              quaternaryImage: { file: null, url: "/images/emptyImage.png" },
+              type: "",
+              category: "",
+              productName: "",
+              description: "",
+              location: "",
+              price: "",
+              createdAt: timestamp,
+            })
+
+            resolve({ userDocRef, generalDocRef })
+          } catch (error) {
+            reject(error)
+          }
+        })()
       })
+
+      toast
+        .promise(
+          uploadPromise,
+          {
+            pending:
+              "Uploading your product please wait the fast is depends in your internet speed",
+            success: "Item upload success 👌",
+            error: "Upload field 🤯",
+          },
+          {
+            success: ({ userDocRef, generalDocRef }) => ({
+              userToastId: userDocRef.id, // Changed the key name here
+              generalToastId: generalDocRef.id, // Changed the key name here
+            }),
+          }
+        )
+        .then(() => {
+          router.replace("/")
+        })
     } catch (error) {
-      // Setting the error to be displayed from the validationErrors
-      toast.error(
-        "Sorry, There is an error the list didn't upload successfully"
-      )
+      toast.error("Sorry, There is an error product didn't upload successfully")
       const schemaErrors = {}
       error.inner.forEach((error) => {
         schemaErrors[error.path] = error.message
