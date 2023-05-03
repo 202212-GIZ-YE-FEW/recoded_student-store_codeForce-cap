@@ -4,6 +4,7 @@ exports[`renders correctly 1`] = `
 [
   <header
     className="sticky top-0 z-50"
+    dir="ltr"
   >
     <div
       className="navbar m-auto px-10 md:flex md:flex-row py-4 justify-between gap-5 items-center bg-white transition-all 
@@ -17,6 +18,7 @@ exports[`renders correctly 1`] = `
       >
         <img
           alt="logo"
+          className="rtl:mr-[180px] rtl:sm:mr-[550px] rtl:lg:mr-[0px]"
           data-nimg="1"
           decoding="async"
           height={130}
@@ -92,17 +94,17 @@ exports[`renders correctly 1`] = `
           className="relative z-50 "
         >
           <div
-            className="absolute left-[-100px] top-2 bg-white capitalize border border-solid border-violet-600  hidden"
+            className="absolute left-[-70px] rtl:left-[-20px] top-2 bg-white capitalize border border-solid border-violet-600  hidden"
           >
             <div
               className="my-2 px-5 py-2 hover:bg-gray-200 transition-all duration-500"
             >
-              english
+              English
             </div>
             <div
               className="my-2 px-5 py-2 hover:bg-gray-200 transition-all duration-500"
             >
-              arabic
+              العربية
             </div>
           </div>
         </div>
@@ -163,7 +165,7 @@ exports[`renders correctly 1`] = `
             onMouseEnter={[Function]}
             onTouchStart={[Function]}
           >
-            Donation
+            donation
           </a>
           <a
             className="relative mx-4 capitalize text-sm  hover:text-violet-800   transition-all duration-1000 before:absolute before:-bottom-2 before:left-0  before:h-[1px]  before:w-0 before:opacity-0 before:bg-violet-700 before:transition-all before:duration-500 hover:before:w-full hover:before:opacity-100"
@@ -172,7 +174,7 @@ exports[`renders correctly 1`] = `
             onMouseEnter={[Function]}
             onTouchStart={[Function]}
           >
-            about us
+            about-us
           </a>
         </div>
         <div
@@ -181,7 +183,7 @@ exports[`renders correctly 1`] = `
           <input
             className="search input w-full text-sm placeholder:text-gray-300 placeholder:capitalize text-gray-600
               "
-            placeholder="search here"
+            placeholder="search-here"
             type="text"
           />
           <div
@@ -266,17 +268,31 @@ exports[`renders correctly 1`] = `
             className="relative"
           >
             <div
-              className="absolute left-[-100px] top-5 bg-white capitalize hidden"
+              className="absolute left-[-70px] rtl:left-[-10px] top-5 bg-white capitalize hidden"
             >
               <div
                 className="my-2 px-5 py-2 hover:bg-gray-200 transition-all duration-500"
               >
-                english
+                <a
+                  href=""
+                  onClick={[Function]}
+                  onMouseEnter={[Function]}
+                  onTouchStart={[Function]}
+                >
+                  English
+                </a>
               </div>
               <div
                 className="my-2 px-5 py-2 hover:bg-gray-200 transition-all duration-500"
               >
-                arabic
+                <a
+                  href=""
+                  onClick={[Function]}
+                  onMouseEnter={[Function]}
+                  onTouchStart={[Function]}
+                >
+                  العربية
+                </a>
               </div>
             </div>
           </div>
@@ -296,7 +312,7 @@ exports[`renders correctly 1`] = `
               <div
                 className="bg-purple-light py-2 px-5 text-white rounded-3xl text-sm hover:bg-violet-800 transition-all cursor-pointer"
               >
-                sign in
+                sign-in
               </div>
             </a>
             <a
@@ -308,7 +324,7 @@ exports[`renders correctly 1`] = `
               <div
                 className="bg-purple-light py-2 px-5 text-white rounded-3xl text-sm hover:bg-violet-800 transition-all cursor-pointer"
               >
-                sell items
+                sell-items
               </div>
             </a>
           </div>
@@ -397,12 +413,14 @@ exports[`renders correctly 1`] = `
       </div>
     </div>
   </header>,
-  <footer>
+  <footer
+    dir="ltr"
+  >
     <div
       className="relative lg:flex lg:justify-evenly bg-[#32314C] w-full h-full break-all mt-auto pb-32"
     >
       <div
-        className="ml-5 pt-5"
+        className="ml-5 pt-5 rtl:mr-[180px] rtl:sm:mr-[550px] rtl:lg:mr-[0px]"
       >
         <a
           href="/"
@@ -428,7 +446,7 @@ exports[`renders correctly 1`] = `
           />
         </a>
         <div
-          className="absolute bottom-16 left-5 lg:left-40 lg:bottom-1"
+          className="absolute bottom-16 left-5 lg:left-40 lg:bottom-1 rtl:mr-[180px] rtl:sm:mr-[550px] rtl:lg:mr-[0px]"
         >
           <a
             href="#"
@@ -475,7 +493,7 @@ exports[`renders correctly 1`] = `
         </div>
       </div>
       <div
-        className="pl-14 pt-5 md:pt-14"
+        className="pl-14 pt-5 md:pt-14 rtl:w-96 rtl:mr-[150px] rtl:sm:mr-[400px] rtl:lg:mr-[0px]"
       >
         <ul
           className="font-poppins text-white font-bold md:text-1xl lg:text-2xl"
@@ -488,14 +506,14 @@ exports[`renders correctly 1`] = `
               onMouseEnter={[Function]}
               onTouchStart={[Function]}
             >
-              About Us
+              about-us
             </a>
           </li>
           <li>
             <h2
               className="pt-4"
             >
-              Contact Us:
+              contact-us
             </h2>
             <ul
               className="text-gray-600 dark:text-gray-400 font-medium"
@@ -515,7 +533,7 @@ exports[`renders correctly 1`] = `
         </ul>
       </div>
       <div
-        className="pl-14 pt-10 md:pt-14"
+        className="pl-14 pt-10 md:pt-14 rtl:w-96 rtl:mr-[150px] rtl:sm:mr-[400px] rtl:lg:mr-[0px]"
       >
         <ul
           className="font-poppins text-white font-bold md:text-1xl lg:text-2xl"
@@ -530,7 +548,7 @@ exports[`renders correctly 1`] = `
               onMouseEnter={[Function]}
               onTouchStart={[Function]}
             >
-              Register for free
+              register-for-free
             </a>
           </li>
           <li
@@ -543,7 +561,7 @@ exports[`renders correctly 1`] = `
               onMouseEnter={[Function]}
               onTouchStart={[Function]}
             >
-              Start Selling
+              start-selling
             </a>
           </li>
           <li
@@ -556,7 +574,7 @@ exports[`renders correctly 1`] = `
               onMouseEnter={[Function]}
               onTouchStart={[Function]}
             >
-              Buy Products
+              buy-products
             </a>
           </li>
         </ul>
@@ -629,12 +647,12 @@ exports[`renders correctly 1`] = `
         </div>
       </div>
       <div
-        className="flex justify-end h-36 pt-32 lg:pt-14"
+        className="flex justify-end h-36 pt-32 lg:pt-14 lg:rtl:ml-0 rtl:ml-56"
       >
         <h2
           className="m-0 font-poppins text-white font-bold md:text-2xl lg:text-2xl pt-2 lg:pt-7"
         >
-          Scroll Up!
+          scroll-up
         </h2>
         <button
           onClick={[Function]}

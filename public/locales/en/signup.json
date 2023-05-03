@@ -1,0 +1,23 @@
+{
+  "language": "en",
+  "sign-up": "Sign Up",
+  "name": "Name",
+  "surname": "Surname",
+  "email": "E-mail Address",
+  "school": "School Name",
+  "password": "Password",
+  "password-confirm": "Re-enter Password",
+  "new-password": "New Password",
+  "new-password-confirm": "Confirm New Password",
+  "address": "Address",
+  "save-changes": "Save Changes",
+  "password-match": "New passwords doesn't not match.",
+  "save": "Changes saved.",
+  "sign-up-with": "Sign up with",
+  "google": "Google",
+  "facebook": "Facebook",
+  "twitter": "Twitter",
+  "have-an-account": "Already have an account?",
+  "sign-in": "Sign in",
+  "or": "or"
+}

@@ -3,6 +3,7 @@
 exports[`renders correctly 1`] = `
 <div
   className="container mx-auto py-8 px-4 sm:px-8"
+  dir="ltr"
 >
   <span>
     <span
@@ -11,7 +12,7 @@ exports[`renders correctly 1`] = `
       <h2
         className="text-purple-light font-poppins text-center font-bold tracking-[-1px] "
       >
-        Favorite Products
+        favorite-products
       </h2>
     </span>
   </span>
@@ -21,7 +22,7 @@ exports[`renders correctly 1`] = `
     <h2
       className="text-lg font-bold mb-2 text-center py-5"
     >
-      Filter By Category:
+      filter-category
     </h2>
     <div
       className="flex flex-wrap justify-center py-4"
@@ -30,13 +31,13 @@ exports[`renders correctly 1`] = `
         className="bg-gray-200 hover:bg-gray-300 text-gray-800 font-bold py-2 px-4 rounded-full mr-4 mb-4 transition-all duration-300 ease-in-out  focus:ring-2 focus:ring-offset-2 focus:ring-gray-500 flex justify-around items-center w-16 shadow-md   bg-purple !text-white hover:!bg-violet-800"
         onClick={[Function]}
       >
-        All
+        all
       </button>
       <button
         className="bg-gray-200 hover:bg-gray-300 text-gray-800 font-bold py-2 px-4 rounded-full mr-4 mb-4 transition-all duration-300 ease-in-out focus:ring-2 focus:ring-offset-2 focus:ring-gray-500 flex justify-around items-center w-36 shadow-md min-w-[130px] max-xs:flex-col false"
         onClick={[Function]}
       >
-        Electronics
+        filter-three
         <svg
           aria-hidden="true"
           className="text-2xl"
@@ -64,7 +65,7 @@ exports[`renders correctly 1`] = `
         className="bg-gray-200 hover:bg-gray-300 text-gray-800 font-bold py-2 px-4 rounded-full mr-4 mb-4 transition-all duration-300 ease-in-out focus:ring-2 focus:ring-offset-2 focus:ring-gray-500 flex  justify-around items-center w-32 shadow-md min-w-[110px] false"
         onClick={[Function]}
       >
-        Books
+        filter-one
         <svg
           className="text-2xl"
           fill="none"
@@ -109,7 +110,8 @@ exports[`renders correctly 1`] = `
             false"
         onClick={[Function]}
       >
-        Two-wheeler 
+        filter-four
+         
         <svg
           className="text-2xl"
           fill="currentColor"
@@ -139,7 +141,8 @@ exports[`renders correctly 1`] = `
             false"
         onClick={[Function]}
       >
-        Furniture 
+        filter-two
+         
         <svg
           className="text-2xl"
           fill="none"
@@ -185,7 +188,7 @@ exports[`renders correctly 1`] = `
         className="relative overflow-hidden"
       >
         <img
-          alt="Moog Synthesizer"
+          alt="name-product"
           className="h-48 sm:h-56 md:h-64 w-full object-cover"
           data-nimg="1"
           decoding="async"
@@ -271,12 +274,12 @@ exports[`renders correctly 1`] = `
             <h2
               className="font-semibold"
             >
-              Moog Synthesizer
+              name-product
             </h2>
             <p
-              className="font-extralight text-xs"
+              className="font-extralight text-xs rtl:text-right"
             >
-              Books
+              filter-one
             </p>
           </div>
           <div>
@@ -289,7 +292,7 @@ exports[`renders correctly 1`] = `
             <p
               className="font-extralight text-xs"
             >
-              Istanbul / Turkey
+              made-city
             </p>
           </div>
         </div>
@@ -302,7 +305,7 @@ exports[`renders correctly 1`] = `
         className="relative overflow-hidden"
       >
         <img
-          alt="Moog Synthesizer"
+          alt="name-product"
           className="h-48 sm:h-56 md:h-64 w-full object-cover"
           data-nimg="1"
           decoding="async"
@@ -388,12 +391,12 @@ exports[`renders correctly 1`] = `
             <h2
               className="font-semibold"
             >
-              Moog Synthesizer
+              name-product
             </h2>
             <p
-              className="font-extralight text-xs"
+              className="font-extralight text-xs rtl:text-right"
             >
-              Furniture
+              filter-two
             </p>
           </div>
           <div>
@@ -406,7 +409,7 @@ exports[`renders correctly 1`] = `
             <p
               className="font-extralight text-xs"
             >
-              Istanbul / Turkey
+              made-city
             </p>
           </div>
         </div>
@@ -419,7 +422,7 @@ exports[`renders correctly 1`] = `
         className="relative overflow-hidden"
       >
         <img
-          alt="Moog Synthesizer"
+          alt="name-product"
           className="h-48 sm:h-56 md:h-64 w-full object-cover"
           data-nimg="1"
           decoding="async"
@@ -505,12 +508,12 @@ exports[`renders correctly 1`] = `
             <h2
               className="font-semibold"
             >
-              Moog Synthesizer
+              name-product
             </h2>
             <p
-              className="font-extralight text-xs"
+              className="font-extralight text-xs rtl:text-right"
             >
-              Furniture
+              filter-two
             </p>
           </div>
           <div>
@@ -523,7 +526,7 @@ exports[`renders correctly 1`] = `
             <p
               className="font-extralight text-xs"
             >
-              Istanbul / Turkey
+              made-city
             </p>
           </div>
         </div>
@@ -536,7 +539,7 @@ exports[`renders correctly 1`] = `
         className="relative overflow-hidden"
       >
         <img
-          alt="Moog Synthesizer"
+          alt="name-product"
           className="h-48 sm:h-56 md:h-64 w-full object-cover"
           data-nimg="1"
           decoding="async"
@@ -622,12 +625,12 @@ exports[`renders correctly 1`] = `
             <h2
               className="font-semibold"
             >
-              Moog Synthesizer
+              name-product
             </h2>
             <p
-              className="font-extralight text-xs"
+              className="font-extralight text-xs rtl:text-right"
             >
-              Electronics
+              filter-three
             </p>
           </div>
           <div>
@@ -640,7 +643,7 @@ exports[`renders correctly 1`] = `
             <p
               className="font-extralight text-xs"
             >
-              Istanbul / Turkey
+              made-city
             </p>
           </div>
         </div>
@@ -653,7 +656,7 @@ exports[`renders correctly 1`] = `
         className="relative overflow-hidden"
       >
         <img
-          alt="Moog Synthesizer"
+          alt="name-product"
           className="h-48 sm:h-56 md:h-64 w-full object-cover"
           data-nimg="1"
           decoding="async"
@@ -739,12 +742,12 @@ exports[`renders correctly 1`] = `
             <h2
               className="font-semibold"
             >
-              Moog Synthesizer
+              name-product
             </h2>
             <p
-              className="font-extralight text-xs"
+              className="font-extralight text-xs rtl:text-right"
             >
-              Two-wheeler
+              filter-four
             </p>
           </div>
           <div>
@@ -757,7 +760,7 @@ exports[`renders correctly 1`] = `
             <p
               className="font-extralight text-xs"
             >
-              Istanbul / Turkey
+              made-city
             </p>
           </div>
         </div>
@@ -770,7 +773,7 @@ exports[`renders correctly 1`] = `
         className="relative overflow-hidden"
       >
         <img
-          alt="Moog Synthesizer"
+          alt="name-product"
           className="h-48 sm:h-56 md:h-64 w-full object-cover"
           data-nimg="1"
           decoding="async"
@@ -856,12 +859,12 @@ exports[`renders correctly 1`] = `
             <h2
               className="font-semibold"
             >
-              Moog Synthesizer
+              name-product
             </h2>
             <p
-              className="font-extralight text-xs"
+              className="font-extralight text-xs rtl:text-right"
             >
-              Two-wheeler
+              filter-four
             </p>
           </div>
           <div>
@@ -874,7 +877,7 @@ exports[`renders correctly 1`] = `
             <p
               className="font-extralight text-xs"
             >
-              Istanbul / Turkey
+              made-city
             </p>
           </div>
         </div>
@@ -887,7 +890,7 @@ exports[`renders correctly 1`] = `
         className="relative overflow-hidden"
       >
         <img
-          alt="Moog Synthesizer"
+          alt="name-product"
           className="h-48 sm:h-56 md:h-64 w-full object-cover"
           data-nimg="1"
           decoding="async"
@@ -973,12 +976,12 @@ exports[`renders correctly 1`] = `
             <h2
               className="font-semibold"
             >
-              Moog Synthesizer
+              name-product
             </h2>
             <p
-              className="font-extralight text-xs"
+              className="font-extralight text-xs rtl:text-right"
             >
-              Two-wheeler
+              filter-four
             </p>
           </div>
           <div>
@@ -991,7 +994,7 @@ exports[`renders correctly 1`] = `
             <p
               className="font-extralight text-xs"
             >
-              Istanbul / Turkey
+              made-city
             </p>
           </div>
         </div>
@@ -1004,7 +1007,7 @@ exports[`renders correctly 1`] = `
         className="relative overflow-hidden"
       >
         <img
-          alt="Moog Synthesizer"
+          alt="name-product"
           className="h-48 sm:h-56 md:h-64 w-full object-cover"
           data-nimg="1"
           decoding="async"
@@ -1090,12 +1093,12 @@ exports[`renders correctly 1`] = `
             <h2
               className="font-semibold"
             >
-              Moog Synthesizer
+              name-product
             </h2>
             <p
-              className="font-extralight text-xs"
+              className="font-extralight text-xs rtl:text-right"
             >
-              Two-wheeler
+              filter-four
             </p>
           </div>
           <div>
@@ -1108,7 +1111,7 @@ exports[`renders correctly 1`] = `
             <p
               className="font-extralight text-xs"
             >
-              Istanbul / Turkey
+              made-city
             </p>
           </div>
         </div>
@@ -1121,7 +1124,7 @@ exports[`renders correctly 1`] = `
         className="relative overflow-hidden"
       >
         <img
-          alt="Moog Synthesizer"
+          alt="name-product"
           className="h-48 sm:h-56 md:h-64 w-full object-cover"
           data-nimg="1"
           decoding="async"
@@ -1207,12 +1210,12 @@ exports[`renders correctly 1`] = `
             <h2
               className="font-semibold"
             >
-              Moog Synthesizer
+              name-product
             </h2>
             <p
-              className="font-extralight text-xs"
+              className="font-extralight text-xs rtl:text-right"
             >
-              Two-wheeler
+              filter-four
             </p>
           </div>
           <div>
@@ -1225,7 +1228,7 @@ exports[`renders correctly 1`] = `
             <p
               className="font-extralight text-xs"
             >
-              Istanbul / Turkey
+              made-city
             </p>
           </div>
         </div>
@@ -1238,7 +1241,7 @@ exports[`renders correctly 1`] = `
         className="relative overflow-hidden"
       >
         <img
-          alt="Moog Synthesizer"
+          alt="name-product"
           className="h-48 sm:h-56 md:h-64 w-full object-cover"
           data-nimg="1"
           decoding="async"
@@ -1324,12 +1327,12 @@ exports[`renders correctly 1`] = `
             <h2
               className="font-semibold"
             >
-              Moog Synthesizer
+              name-product
             </h2>
             <p
-              className="font-extralight text-xs"
+              className="font-extralight text-xs rtl:text-right"
             >
-              Two-wheeler
+              filter-four
             </p>
           </div>
           <div>
@@ -1342,7 +1345,7 @@ exports[`renders correctly 1`] = `
             <p
               className="font-extralight text-xs"
             >
-              Istanbul / Turkey
+              made-city
             </p>
           </div>
         </div>
@@ -1355,7 +1358,7 @@ exports[`renders correctly 1`] = `
         className="relative overflow-hidden"
       >
         <img
-          alt="Moog Synthesizer"
+          alt="name-product"
           className="h-48 sm:h-56 md:h-64 w-full object-cover"
           data-nimg="1"
           decoding="async"
@@ -1441,12 +1444,12 @@ exports[`renders correctly 1`] = `
             <h2
               className="font-semibold"
             >
-              Moog Synthesizer
+              name-product
             </h2>
             <p
-              className="font-extralight text-xs"
+              className="font-extralight text-xs rtl:text-right"
             >
-              Electronics
+              filter-three
             </p>
           </div>
           <div>
@@ -1459,7 +1462,7 @@ exports[`renders correctly 1`] = `
             <p
               className="font-extralight text-xs"
             >
-              Istanbul / Turkey
+              made-city
             </p>
           </div>
         </div>
@@ -1472,7 +1475,7 @@ exports[`renders correctly 1`] = `
         className="relative overflow-hidden"
       >
         <img
-          alt="Moog Synthesizer"
+          alt="name-product"
           className="h-48 sm:h-56 md:h-64 w-full object-cover"
           data-nimg="1"
           decoding="async"
@@ -1558,12 +1561,12 @@ exports[`renders correctly 1`] = `
             <h2
               className="font-semibold"
             >
-              Moog Synthesizer
+              name-product
             </h2>
             <p
-              className="font-extralight text-xs"
+              className="font-extralight text-xs rtl:text-right"
             >
-              Electronics
+              filter-three
             </p>
           </div>
           <div>
@@ -1576,7 +1579,7 @@ exports[`renders correctly 1`] = `
             <p
               className="font-extralight text-xs"
             >
-              Istanbul / Turkey
+              made-city
             </p>
           </div>
         </div>
@@ -1589,7 +1592,7 @@ exports[`renders correctly 1`] = `
         className="relative overflow-hidden"
       >
         <img
-          alt="Moog Synthesizer"
+          alt="name-product"
           className="h-48 sm:h-56 md:h-64 w-full object-cover"
           data-nimg="1"
           decoding="async"
@@ -1675,12 +1678,12 @@ exports[`renders correctly 1`] = `
             <h2
               className="font-semibold"
             >
-              Moog Synthesizer
+              name-product
             </h2>
             <p
-              className="font-extralight text-xs"
+              className="font-extralight text-xs rtl:text-right"
             >
-              Electronics
+              filter-three
             </p>
           </div>
           <div>
@@ -1693,7 +1696,7 @@ exports[`renders correctly 1`] = `
             <p
               className="font-extralight text-xs"
             >
-              Istanbul / Turkey
+              made-city
             </p>
           </div>
         </div>
@@ -1706,7 +1709,7 @@ exports[`renders correctly 1`] = `
         className="relative overflow-hidden"
       >
         <img
-          alt="Moog Synthesizer"
+          alt="name-product"
           className="h-48 sm:h-56 md:h-64 w-full object-cover"
           data-nimg="1"
           decoding="async"
@@ -1792,12 +1795,12 @@ exports[`renders correctly 1`] = `
             <h2
               className="font-semibold"
             >
-              Moog Synthesizer
+              name-product
             </h2>
             <p
-              className="font-extralight text-xs"
+              className="font-extralight text-xs rtl:text-right"
             >
-              Electronics
+              filter-three
             </p>
           </div>
           <div>
@@ -1810,7 +1813,7 @@ exports[`renders correctly 1`] = `
             <p
               className="font-extralight text-xs"
             >
-              Istanbul / Turkey
+              made-city
             </p>
           </div>
         </div>
@@ -1823,7 +1826,7 @@ exports[`renders correctly 1`] = `
         className="relative overflow-hidden"
       >
         <img
-          alt="Moog Synthesizer"
+          alt="name-product"
           className="h-48 sm:h-56 md:h-64 w-full object-cover"
           data-nimg="1"
           decoding="async"
@@ -1909,12 +1912,12 @@ exports[`renders correctly 1`] = `
             <h2
               className="font-semibold"
             >
-              Moog Synthesizer
+              name-product
             </h2>
             <p
-              className="font-extralight text-xs"
+              className="font-extralight text-xs rtl:text-right"
             >
-              Electronics
+              filter-three
             </p>
           </div>
           <div>
@@ -1927,7 +1930,7 @@ exports[`renders correctly 1`] = `
             <p
               className="font-extralight text-xs"
             >
-              Istanbul / Turkey
+              made-city
             </p>
           </div>
         </div>
@@ -1940,7 +1943,7 @@ exports[`renders correctly 1`] = `
         className="relative overflow-hidden"
       >
         <img
-          alt="Moog Synthesizer"
+          alt="name-product"
           className="h-48 sm:h-56 md:h-64 w-full object-cover"
           data-nimg="1"
           decoding="async"
@@ -2026,12 +2029,12 @@ exports[`renders correctly 1`] = `
             <h2
               className="font-semibold"
             >
-              Moog Synthesizer
+              name-product
             </h2>
             <p
-              className="font-extralight text-xs"
+              className="font-extralight text-xs rtl:text-right"
             >
-              Electronics
+              filter-three
             </p>
           </div>
           <div>
@@ -2044,7 +2047,7 @@ exports[`renders correctly 1`] = `
             <p
               className="font-extralight text-xs"
             >
-              Istanbul / Turkey
+              made-city
             </p>
           </div>
         </div>

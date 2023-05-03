@@ -1,4 +1,5 @@
 import ProgressBar from "@ramonak/react-progress-bar"
+import { withTranslation } from "next-i18next"
 import Image from "next/image"
 import Link from "next/link"
 import { useEffect, useState } from "react"
@@ -9,6 +10,7 @@ import {
   AiOutlineSearch,
 } from "react-icons/ai"
 import { HiHeart } from "react-icons/hi"
+
 import { RxHamburgerMenu } from "react-icons/rx"
 import { TbArrowBadgeDown } from "react-icons/tb"
 import { TfiWorld } from "react-icons/tfi"
@@ -19,7 +21,7 @@ import { auth } from "@/utils/firebase/config"
 import SignOut from "@/utils/firebase/signout"
 import { useProfileData } from "@/utils/store"
 
-export default function Navbar() {
+function Navbar({ t }) {
   const [languages, setLanguages] = useState(false)
   const [open, setOpen] = useState(false)
   const [user] = useAuthState(auth)
@@ -40,14 +42,24 @@ export default function Navbar() {
     window.addEventListener("scroll", calculateScrollProgress)
     return () => window.removeEventListener("scroll", calculateScrollProgress)
   }, [])
+
   return (
-    <header className='sticky top-0 z-50'>
+    <header
+      className='sticky top-0 z-50'
+      dir={t("language") === "ar" ? "rtl" : "ltr"}
+    >
       <div
         className={`${styles.navbar} m-auto px-10 md:flex md:flex-row py-4 justify-between gap-5 items-center bg-white transition-all 
       `}
       >
         <Link href='/'>
-          <Image src='/images/Logo.png' alt='logo' width={130} height={130} />
+          <Image
+            src='/images/Logo.png'
+            alt='logo'
+            width={130}
+            height={130}
+            className='rtl:mr-[180px] rtl:sm:mr-[550px] rtl:lg:mr-[0px]'
+          />
         </Link>
         {/* ----------- Languages ----------- */}
         <div className='flex items-end cursor-pointer absolute right-14 top-8 md:static order-2 md:hidden'>
@@ -65,10 +77,10 @@ export default function Navbar() {
               }`}
             >
               <div className='my-2 px-5 py-2 hover:bg-gray-200 transition-all duration-500'>
-                english
+                English
               </div>
               <div className='my-2 px-5 py-2 hover:bg-gray-200 transition-all duration-500'>
-                arabic
+                العربية
               </div>
             </div>
           </div>
@@ -98,20 +110,20 @@ export default function Navbar() {
               href='/donation'
               className='relative mx-4 capitalize text-sm hover:text-violet-800   transition-all duration-1000 before:absolute before:-bottom-2 before:left-0  before:h-[1px]  before:w-0 before:opacity-0 before:bg-violet-700 before:transition-all before:duration-500 hover:before:w-full hover:before:opacity-100'
             >
-              Donation
+              {t("donation")}
             </Link>
             <Link
               href='/about'
               className='relative mx-4 capitalize text-sm  hover:text-violet-800   transition-all duration-1000 before:absolute before:-bottom-2 before:left-0  before:h-[1px]  before:w-0 before:opacity-0 before:bg-violet-700 before:transition-all before:duration-500 hover:before:w-full hover:before:opacity-100'
             >
-              about us
+              {t("about-us")}
             </Link>
           </div>
           {/* ----------- Search ----------- */}
           <div className=' flex-1 border flex items-center py-2 px-4 rounded-3xl'>
             <input
               type='text'
-              placeholder='search here'
+              placeholder={t("search-here")}
               className={`${styles.search} ${styles.input} w-full text-sm placeholder:text-gray-300 placeholder:capitalize text-gray-600
               `}
             />
@@ -130,15 +142,19 @@ export default function Navbar() {
             </div>
             <div className='relative'>
               <div
-                className={`absolute left-[-100px] top-5 bg-white capitalize ${
+                className={`absolute left-[-70px] rtl:left-[-10px] top-5 bg-white capitalize ${
                   languages ? `${styles.show}` : "hidden"
                 }`}
               >
                 <div className='my-2 px-5 py-2 hover:bg-gray-200 transition-all duration-500'>
-                  english
+                  <Link href='' locale='en'>
+                    English
+                  </Link>
                 </div>
                 <div className='my-2 px-5 py-2 hover:bg-gray-200 transition-all duration-500'>
-                  arabic
+                  <Link href='' locale='ar'>
+                    العربية
+                  </Link>
                 </div>
               </div>
             </div>
@@ -187,14 +203,14 @@ export default function Navbar() {
                 // Display sign-in button if not signed in
                 <Link href='/signin'>
                   <div className='bg-purple-light py-2 px-5 text-white rounded-3xl text-sm hover:bg-violet-800 transition-all cursor-pointer'>
-                    sign in
+                    {t("sign-in")}
                   </div>
                 </Link>
               )}
 
               <Link href='/listing'>
                 <div className='bg-purple-light py-2 px-5 text-white rounded-3xl text-sm hover:bg-violet-800 transition-all cursor-pointer'>
-                  sell items
+                  {t("sell-items")}
                 </div>
               </Link>
             </div>
@@ -214,3 +230,5 @@ export default function Navbar() {
     </header>
   )
 }
+
+export default withTranslation("common")(Navbar)

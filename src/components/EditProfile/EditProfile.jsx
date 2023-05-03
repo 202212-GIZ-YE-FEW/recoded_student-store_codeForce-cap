@@ -1,6 +1,7 @@
 // ! The libraries that been used in this code
 import dynamic from "next/dynamic"
 import Image from "next/image"
+import { withTranslation } from "next-i18next"
 import { useState } from "react"
 import PhoneInput from "react-phone-input-2"
 
@@ -16,7 +17,7 @@ const Maps = dynamic(() => import("./Maps"), {
   ssr: false,
 })
 
-export default function EditProfile() {
+function EditProfile({ t }) {
   // * Form data handler
   const [formData, setFormData] = useState({
     name: "",
@@ -35,7 +36,7 @@ export default function EditProfile() {
 
     // * Password comparison
     if (formData.newPassword !== formData.confirmNewPassword) {
-      return alert("New passwords doesn't not match.")
+      return alert(t("password-match"))
     }
 
     // * Confirmation window
@@ -45,7 +46,7 @@ export default function EditProfile() {
       // console.log(formData)
 
       // * save changes
-      alert("Changes saved.")
+      alert(t("save"))
     }
   }
 
@@ -61,7 +62,10 @@ export default function EditProfile() {
 
   return (
     <form onSubmit={handleSubmit}>
-      <div className='grid lg:grid-cols-2 lg:ml-36 w-[86%] overflow-y-auto gap-x-12 mt-10 lg:mt-28 mx-auto h-[577px] md:h-[744px] lg:h-[100%]'>
+      <div
+        className='grid lg:grid-cols-2 lg:ml-36 w-[86%] overflow-y-auto gap-x-12 mt-10 lg:mt-28 mx-auto h-[577px] md:h-[744px] lg:h-[100%]'
+        // dir={t("language") === "ar" ? "rtl" : "ltr"}
+      >
         <label
           htmlFor='profileImg'
           className='block lg:hidden cursor-pointer rounded-full'
@@ -86,7 +90,7 @@ export default function EditProfile() {
           <Input
             name='name'
             type='text'
-            placeholder='Name'
+            placeholder={t("name")}
             required={true}
             minLength={2}
             maxLength={50}
@@ -98,7 +102,7 @@ export default function EditProfile() {
           <Input
             name='surname'
             type='text'
-            placeholder='Surname'
+            placeholder={t("surname")}
             required={true}
             minLength={2}
             maxLength={50}
@@ -112,7 +116,7 @@ export default function EditProfile() {
           <Input
             name='email'
             type='email'
-            placeholder='Email'
+            placeholder={t("email")}
             required={true}
             maxLength={50}
             pattern='[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}'
@@ -134,7 +138,7 @@ export default function EditProfile() {
           <Input
             name='newPassword'
             type='password'
-            placeholder='New Password'
+            placeholder={t("new-password")}
             required={true}
             minLength={8}
             maxLength={50}
@@ -147,7 +151,7 @@ export default function EditProfile() {
           <Input
             name='confirmNewPassword'
             type='password'
-            placeholder='Confirm New Password'
+            placeholder={t("new-password-confirm")}
             required={true}
             minLength={8}
             maxLength={50}
@@ -160,7 +164,7 @@ export default function EditProfile() {
             className='lg:hidden block'
             name='address'
             type='text'
-            placeholder='Address'
+            placeholder={t("address")}
             required={true}
             value={formData.address}
             onChange={(e) =>
@@ -172,9 +176,15 @@ export default function EditProfile() {
           <Maps />
         </span>
         <span className='mx-auto mt-8'>
-          <Button buttonStyle='saveChanges' text='Save Changes' type='submit' />
+          <Button
+            buttonStyle='saveChanges'
+            text={t("save-changes")}
+            type='submit'
+          />
         </span>
       </div>
     </form>
   )
 }
+
+export default withTranslation("signup")(EditProfile)

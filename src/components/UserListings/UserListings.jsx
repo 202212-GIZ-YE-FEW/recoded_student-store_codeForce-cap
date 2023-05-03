@@ -1,13 +1,14 @@
 import Image from "next/image"
+import { withTranslation } from "next-i18next"
 
 import products from "../ProductList/products"
 
-export default function UserListings() {
+function UserListings({ t }) {
   return (
     <section className='flex flex-col lg:flex-row h-[617px] md:h-[784px] lg:h-[100%] overflow-y-auto lg:bg-gradient-to-l from-zinc-800 to-slate-300'>
       <div className=' w-full mx-10'>
         <div className='grid lg:grid-cols-3 md:grid-cols-2 gap-5 px-8 py-16'>
-          {products.map((product) => (
+          {products({ t }).map((product) => (
             <div
               key={product.id}
               className='lg:bg-white rounded-lg pb-7 cart-animation'
@@ -38,12 +39,11 @@ export default function UserListings() {
                 </div>
                 <div>
                   <p>
-                    <span className='font-extrabold'>Listing Date:</span>{" "}
+                    <span className='font-extrabold'>{t("listing-date")}</span>{" "}
                     {product.order_date}
                   </p>
                   <p>
-                    <span className='font-extrabold'>Category:</span>
-                    <br />
+                    <span className='font-extrabold'>{t("category")}</span>{" "}
                     <span className='font-extralight text-xs'>
                       {product.category}
                     </span>
@@ -57,3 +57,5 @@ export default function UserListings() {
     </section>
   )
 }
+
+export default withTranslation("index")(UserListings)

@@ -1,3 +1,4 @@
+import { serverSideTranslations } from "next-i18next/serverSideTranslations"
 import { useState } from "react"
 
 import EditProfile from "@/components/EditProfile"
@@ -29,4 +30,18 @@ export default function UserPage() {
       </div>
     </RootLayout>
   )
+}
+
+export async function getStaticProps({ locale }) {
+  return {
+    props: {
+      ...(await serverSideTranslations(locale, [
+        "common",
+        "signup",
+        "listingItems",
+        "index",
+      ])),
+      // Will be passed to the page component as props
+    },
+  }
 }

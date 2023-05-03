@@ -1,17 +1,17 @@
+import Image from "next/image"
+import { withTranslation } from "next-i18next"
+import { useState } from "react"
+import { AiFillHeart } from "react-icons/ai"
 import { HiOutlineChip, HiOutlineX } from "react-icons/hi"
+import { MdTwoWheeler } from "react-icons/md"
 import { TbBook, TbSofa } from "react-icons/tb"
 
-import { AiFillHeart } from "react-icons/ai"
-import { GiClothes } from "react-icons/gi"
 import Highlighter from "../highlighter"
-import Image from "next/image"
-import { MdTwoWheeler } from "react-icons/md"
 import products from "../ProductList/products"
-import { useState } from "react"
 
-function FavProducts() {
-  // Define state variables for favorite products and selected category
-  const [FavProducts, setFavoriteProducts] = useState(products)
+function FavProducts({ t }) {
+  // Define state variables for favorite products and selected category test
+  const [FavProducts, setFavoriteProducts] = useState(products({ t }))
   const [selectedCategory, setSelectedCategory] = useState("All")
 
   // Function to remove a product from the favorite products list
@@ -26,12 +26,12 @@ function FavProducts() {
   const handleCategoryChange = (category) => {
     // Set the state of the selected category to the new category value
     setSelectedCategory(category)
-    if (category === "All") {
+    if (category === t("all")) {
       // If the new category is "All", set the state of the favorite products list to the original list of products
-      setFavoriteProducts(products)
+      setFavoriteProducts(products({ t }))
     } else {
       // Otherwise, filter the original list of products to include only those in the selected category
-      const filteredProducts = products.filter(
+      const filteredProducts = products({ t }).filter(
         (product) => product.category === category
       )
       // Set the state of the favorite products list to the filtered list of products
@@ -40,30 +40,33 @@ function FavProducts() {
   }
 
   return (
-    <div className='container mx-auto py-8 px-4 sm:px-8'>
-      <Highlighter highlighterStyle='aboutus' text='Favorite Products' />
+    <div
+      className='container mx-auto py-8 px-4 sm:px-8'
+      dir={t("language") === "ar" ? "rtl" : "ltr"}
+    >
+      <Highlighter highlighterStyle='aboutus' text={t("favorite-products")} />
       <div className='container mx-auto mt-8'>
         <h2 className='text-lg font-bold mb-2 text-center py-5'>
-          Filter By Category:
+          {t("filter-category")}
         </h2>
         <div className='flex flex-wrap justify-center py-4'>
           <button
-            onClick={() => handleCategoryChange("All")}
+            onClick={() => handleCategoryChange(t("all"))}
             className={`bg-gray-200 hover:bg-gray-300 text-gray-800 font-bold py-2 px-4 rounded-full mr-4 mb-4 transition-all duration-300 ease-in-out  focus:ring-2 focus:ring-offset-2 focus:ring-gray-500 flex justify-around items-center w-16 shadow-md  ${
               selectedCategory === "All" &&
               " bg-purple !text-white hover:!bg-violet-800"
             }`}
           >
-            All
+            {t("all")}
           </button>
           <button
-            onClick={() => handleCategoryChange("Electronics")}
+            onClick={() => handleCategoryChange(t("filter-three"))}
             className={`bg-gray-200 hover:bg-gray-300 text-gray-800 font-bold py-2 px-4 rounded-full mr-4 mb-4 transition-all duration-300 ease-in-out focus:ring-2 focus:ring-offset-2 focus:ring-gray-500 flex justify-around items-center w-36 shadow-md min-w-[130px] max-xs:flex-col ${
               selectedCategory === "Electronics" &&
               " bg-purple !text-white hover:!bg-violet-800"
             }`}
           >
-            Electronics
+            {t("filter-three")}
             <HiOutlineChip className='text-2xl' />
           </button>
           {/* <button
@@ -76,34 +79,34 @@ function FavProducts() {
             Clothes <GiClothes className='text-2xl' />
           </button> */}
           <button
-            onClick={() => handleCategoryChange("Books")}
+            onClick={() => handleCategoryChange(t("filter-one"))}
             className={`bg-gray-200 hover:bg-gray-300 text-gray-800 font-bold py-2 px-4 rounded-full mr-4 mb-4 transition-all duration-300 ease-in-out focus:ring-2 focus:ring-offset-2 focus:ring-gray-500 flex  justify-around items-center w-32 shadow-md min-w-[110px] ${
               selectedCategory === "Books" &&
               " bg-purple !text-white hover:!bg-violet-800"
             }`}
           >
-            Books
+            {t("filter-one")}
             <TbBook className='text-2xl' />
           </button>
           <button
-            onClick={() => handleCategoryChange("Two-wheeler")}
+            onClick={() => handleCategoryChange(t("filter-four"))}
             className={`bg-gray-200 hover:bg-gray-300 text-gray-800 font-bold py-2 px-4 rounded-full mr-4 mb-4 transition-all duration-300 ease-in-out focus:ring-2 focus:ring-offset-2 focus:ring-gray-500 flex justify-around items-center w-44 shadow-md min-w-[150px] max-xs:flex-col
             ${
               selectedCategory === "Two-wheeler" &&
               " bg-purple !text-white hover:!bg-violet-800"
             }`}
           >
-            Two-wheeler <MdTwoWheeler className='text-2xl' />
+            {t("filter-four")} <MdTwoWheeler className='text-2xl' />
           </button>
           <button
-            onClick={() => handleCategoryChange("Furniture")}
+            onClick={() => handleCategoryChange(t("filter-two"))}
             className={`bg-gray-200 hover:bg-gray-300 text-gray-800 font-bold py-2 px-4 rounded-full mr-4 mb-4 transition-all duration-300 ease-in-out focus:ring-2 focus:ring-offset-2 focus:ring-gray-500 flex justify-around items-center w-40 shadow-md min-w-[150px]
             ${
               selectedCategory === "Furniture" &&
               " bg-purple !text-white hover:!bg-violet-800"
             }`}
           >
-            Furniture <TbSofa className='text-2xl' />
+            {t("filter-two")} <TbSofa className='text-2xl' />
           </button>
         </div>
       </div>
@@ -140,7 +143,9 @@ function FavProducts() {
               <div className='info flex justify-between my-4 mx-3'>
                 <div className='text-left'>
                   <h2 className='font-semibold'>{product.name}</h2>
-                  <p className='font-extralight text-xs'>{product.category}</p>
+                  <p className='font-extralight text-xs rtl:text-right'>
+                    {product.category}
+                  </p>
                 </div>
                 <div>
                   <h2 className='font-extrabold text-xl'>${product.price}</h2>
@@ -155,4 +160,5 @@ function FavProducts() {
   )
 }
 
-export default FavProducts
+// export default FavProducts
+export default withTranslation("index")(FavProducts)

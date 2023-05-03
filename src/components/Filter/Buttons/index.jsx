@@ -1,10 +1,11 @@
 import Image from "next/image"
+import { withTranslation } from "next-i18next"
 
 import Highlighter from "@/components/highlighter"
 
 import PriceFilter from "../Price"
 
-export default function Buttons({ filters = [], handleCategoryFilter }) {
+function Buttons({ filters = [], handleCategoryFilter, t }) {
   const CategoryFilter = ({ filter, image, alt }) => (
     <button className='ml-4' onClick={() => handleCategoryFilter(filter)}>
       <Image
@@ -18,15 +19,18 @@ export default function Buttons({ filters = [], handleCategoryFilter }) {
   )
 
   return (
-    <div className='flex flex-col mb-10'>
+    <div
+      className='flex flex-col mb-10'
+      // dir={t("language") === "ar" ? "rtl" : "ltr"}
+    >
       <div className='grid grid-cols-1 lg:grid-cols-2 py-5 lg:ml-0'>
         <button
           className='transition hover:scale-105'
           onClick={() => handleCategoryFilter("")}
         >
-          <Highlighter highlighterStyle='category' text='Categories' />
+          <Highlighter highlighterStyle='category' text={t("categories")} />
         </button>
-        <Highlighter highlighterStyle='priceFilter' text='Price Filter' />
+        <Highlighter highlighterStyle='priceFilter' text={t("price-filter")} />
       </div>
       <div className='flex flex-col lg:flex-row justify-between shadow-2xl rounded-[8vw] lg:rounded-full items-center lg:pr-20 py-10'>
         <span className='grid grid-cols-4 gap-4 md:gap-20 lg:gap-4 pb-10 lg:pb-0 mx-auto pr-4 lg:px-0'>
@@ -46,3 +50,5 @@ export default function Buttons({ filters = [], handleCategoryFilter }) {
     </div>
   )
 }
+
+export default withTranslation("index")(Buttons)

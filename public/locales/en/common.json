@@ -1,3 +1,20 @@
 {
-  "test": "Hello"
+  "language": "en",
+  "test": "Hello",
+  "about-us": "About Us",
+  "donation": "Donation",
+  "sign-in": "Sign In",
+  "sell-items": "Sell Items",
+  "search-here": "Search Here",
+  "contact-us": "Contact Us:",
+  "register-for-free": "Register for free",
+  "start-selling": "Start Selling",
+  "buy-products": "Buy Products",
+  "scroll-up": "Scroll Up!",
+  "error": "We could not find the page.",
+  "error-des": "Do not worry, you can find plenty of other things at home.",
+  "back-home": "Back to Home",
+  "edit-profile": "Edit Profile",
+  "my-listing": "My Listing",
+  "my-orders": "My Orders"
 }

@@ -1,16 +1,20 @@
+import { withTranslation } from "next-i18next"
 import Image from "next/image"
 
 import { useProfileData } from "@/utils/store"
 
 import Highlighter from "../highlighter"
 
-export default function SideBar({ handleSelectedPage, selectedPage }) {
+function SideBar({ handleSelectedPage, selectedPage, t }) {
   const profileData = useProfileData()
 
   return (
     <>
       {/* // * If it is large screen */}
-      <section className='hidden lg:block shadow-2xl overflow-hidden h-[100%]'>
+      <section
+        className='hidden lg:block shadow-2xl overflow-hidden h-[100%]'
+        dir={t("language") === "ar" ? "rtl" : "ltr"}
+      >
         <div className='flex flex-col justify-around text-center w-[331px] pt-10 h-[80%]'>
           <Image
             className='rounded-full mx-auto'
@@ -35,7 +39,7 @@ export default function SideBar({ handleSelectedPage, selectedPage }) {
               highlighterStyle={
                 selectedPage === "EditProfile" ? "editProfile" : ""
               }
-              text='Edit Profile'
+              text={t("edit-profile")}
               textClassName='text-[30px] hover:opacity-60'
             />
           </button>
@@ -48,7 +52,7 @@ export default function SideBar({ handleSelectedPage, selectedPage }) {
                 highlighterStyle={
                   selectedPage === "UserListings" ? "listingPage" : ""
                 }
-                text='My Listings'
+                text={t("my-listing")}
                 textClassName='text-[40px] hover:opacity-60'
               />
             </button>
@@ -60,7 +64,7 @@ export default function SideBar({ handleSelectedPage, selectedPage }) {
                 highlighterStyle={
                   selectedPage === "UserOrders" ? "ordersPage" : ""
                 }
-                text='My Orders'
+                text={t("my-orders")}
                 textClassName='text-[38px] hover:opacity-60'
               />
             </button>
@@ -75,21 +79,21 @@ export default function SideBar({ handleSelectedPage, selectedPage }) {
             aria-label='My Orders'
             onClick={() => handleSelectedPage("UserOrders")}
           >
-            My Orders
+            {t("my-orders")}
           </button>
           <button
             className='focus:bg-[#7874F2] focus:text-[#d7d7d7]'
             aria-label='My Listing'
             onClick={() => handleSelectedPage("UserListings")}
           >
-            My Listing
+            {t("my-listing")}
           </button>
           <button
             className='focus:bg-[#7874F2] focus:text-[#d7d7d7]'
             aria-label='Edit Profile'
             onClick={() => handleSelectedPage("EditProfile")}
           >
-            Edit Profile
+            {t("edit-profile")}
           </button>
         </div>
         <br />
@@ -98,10 +102,10 @@ export default function SideBar({ handleSelectedPage, selectedPage }) {
           highlighterStyle='editProfile'
           text={
             selectedPage === "EditProfile"
-              ? "Edit Profile"
+              ? t("edit-profile")
               : selectedPage === "UserListings"
-              ? "My Listings"
-              : "My Orders"
+              ? t("my-listing")
+              : t("my-orders")
           }
         />
         <br />
@@ -110,3 +114,5 @@ export default function SideBar({ handleSelectedPage, selectedPage }) {
     </>
   )
 }
+
+export default withTranslation("common")(SideBar)

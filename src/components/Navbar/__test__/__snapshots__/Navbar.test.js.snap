@@ -3,6 +3,7 @@
 exports[`renders correctly 1`] = `
 <header
   className="sticky top-0 z-50"
+  dir="ltr"
 >
   <div
     className="navbar m-auto px-10 md:flex md:flex-row py-4 justify-between gap-5 items-center bg-white transition-all 
@@ -16,6 +17,7 @@ exports[`renders correctly 1`] = `
     >
       <img
         alt="logo"
+        className="rtl:mr-[180px] rtl:sm:mr-[550px] rtl:lg:mr-[0px]"
         data-nimg="1"
         decoding="async"
         height={130}
@@ -96,12 +98,12 @@ exports[`renders correctly 1`] = `
           <div
             className="my-2 px-5 py-2 hover:bg-gray-200 transition-all duration-500"
           >
-            english
+            English
           </div>
           <div
             className="my-2 px-5 py-2 hover:bg-gray-200 transition-all duration-500"
           >
-            arabic
+            العربية
           </div>
         </div>
       </div>
@@ -162,7 +164,7 @@ exports[`renders correctly 1`] = `
           onMouseEnter={[Function]}
           onTouchStart={[Function]}
         >
-          Donation
+          donation
         </a>
         <a
           className="relative mx-4 capitalize text-sm  hover:text-violet-800   transition-all duration-1000 before:absolute before:-bottom-2 before:left-0  before:h-[1px]  before:w-0 before:opacity-0 before:bg-violet-700 before:transition-all before:duration-500 hover:before:w-full hover:before:opacity-100"
@@ -171,7 +173,7 @@ exports[`renders correctly 1`] = `
           onMouseEnter={[Function]}
           onTouchStart={[Function]}
         >
-          about us
+          about-us
         </a>
       </div>
       <div
@@ -180,7 +182,7 @@ exports[`renders correctly 1`] = `
         <input
           className="search input w-full text-sm placeholder:text-gray-300 placeholder:capitalize text-gray-600
               "
-          placeholder="search here"
+          placeholder="search-here"
           type="text"
         />
         <div
@@ -265,17 +267,31 @@ exports[`renders correctly 1`] = `
           className="relative"
         >
           <div
-            className="absolute left-[-100px] top-5 bg-white capitalize hidden"
+            className="absolute left-[-70px] rtl:left-[-10px] top-5 bg-white capitalize hidden"
           >
             <div
               className="my-2 px-5 py-2 hover:bg-gray-200 transition-all duration-500"
             >
-              english
+              <a
+                href=""
+                onClick={[Function]}
+                onMouseEnter={[Function]}
+                onTouchStart={[Function]}
+              >
+                English
+              </a>
             </div>
             <div
               className="my-2 px-5 py-2 hover:bg-gray-200 transition-all duration-500"
             >
-              arabic
+              <a
+                href=""
+                onClick={[Function]}
+                onMouseEnter={[Function]}
+                onTouchStart={[Function]}
+              >
+                العربية
+              </a>
             </div>
           </div>
         </div>
@@ -295,7 +311,7 @@ exports[`renders correctly 1`] = `
             <div
               className="bg-purple-light py-2 px-5 text-white rounded-3xl text-sm hover:bg-violet-800 transition-all cursor-pointer"
             >
-              sign in
+              sign-in
             </div>
           </a>
           <a
@@ -307,7 +323,7 @@ exports[`renders correctly 1`] = `
             <div
               className="bg-purple-light py-2 px-5 text-white rounded-3xl text-sm hover:bg-violet-800 transition-all cursor-pointer"
             >
-              sell items
+              sell-items
             </div>
           </a>
         </div>

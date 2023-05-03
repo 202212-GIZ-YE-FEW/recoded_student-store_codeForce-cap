@@ -1,35 +1,35 @@
+import { withTranslation } from "next-i18next"
 import { useState } from "react"
 
-import { SectionWrapper } from "@/components/hoc"
 import ProductList from "@/components/ProductList"
 import products from "@/components/ProductList/products"
 
 import Buttons from "../Buttons"
 
-const filters = [
-  {
-    filter: "Book",
-    image: "/images/Book.png",
-    alt: "Book",
-  },
-  {
-    filter: "Furniture",
-    image: "/images/Furniture.png",
-    alt: "Furniture",
-  },
-  {
-    filter: "Electronics",
-    image: "/images/Electronic.png",
-    alt: "Electronics",
-  },
-  {
-    filter: "Two-wheeler",
-    image: "/images/Two-wheeler.png",
-    alt: "Two-wheeler",
-  },
-]
+function CategoryFilter({ t }) {
+  const filters = [
+    {
+      filter: t("filter-one"),
+      image: "/images/Book.png",
+      alt: "Book",
+    },
+    {
+      filter: t("filter-two"),
+      image: "/images/Furniture.png",
+      alt: "Furniture",
+    },
+    {
+      filter: t("filter-three"),
+      image: "/images/Electronic.png",
+      alt: "Electronics",
+    },
+    {
+      filter: t("filter-four"),
+      image: "/images/Two-wheeler.png",
+      alt: "Two-wheeler",
+    },
+  ]
 
-function CategoryFilter() {
   const [selectedFilter, setSelectedFilter] = useState("")
 
   const handleCategoryFilter = (filter) => setSelectedFilter(filter)
@@ -42,4 +42,4 @@ function CategoryFilter() {
   )
 }
 
-export default SectionWrapper(CategoryFilter)
+export default withTranslation("index")(CategoryFilter)
