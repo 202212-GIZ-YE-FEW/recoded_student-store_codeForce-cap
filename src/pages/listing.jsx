@@ -1,7 +1,10 @@
+import { useTranslation } from "next-i18next"
 import { serverSideTranslations } from "next-i18next/serverSideTranslations"
 import { useRouter } from "next/router"
 import { useEffect } from "react"
 import { toast } from "react-toastify"
+
+import "react-toastify/dist/ReactToastify.css"
 
 import ListingItems from "@/components/ListingItems"
 
@@ -9,15 +12,16 @@ import RootLayout from "@/layout/root/RootLayout"
 import { useAuth } from "@/utils/store"
 
 function ListingPage() {
+  const { t } = useTranslation("listingItems")
   const router = useRouter()
   const { isLoggedIn } = useAuth()
   useEffect(() => {
     if (!isLoggedIn) {
-      router.replace("/signup").then(() => {
-        toast.info("Hey you i think you have to sign up or sign in first !")
+      router.replace("/").then(() => {
+        toast.info(t("hi"))
       })
     }
-  }, [isLoggedIn, router])
+  }, [isLoggedIn, router, t])
   return (
     <RootLayout>
       <ListingItems />

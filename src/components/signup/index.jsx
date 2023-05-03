@@ -2,16 +2,15 @@ import DOMPurify from "dompurify"
 import { withTranslation } from "next-i18next"
 import Image from "next/image"
 import { useRouter } from "next/router"
-import { useEffect, useState } from "react"
+import { useState } from "react"
 import { BsFacebook, BsGoogle, BsTwitter } from "react-icons/bs"
-import { ToastContainer, toast } from "react-toastify"
+import { toast } from "react-toastify"
 
 import styles from "./Signup.module.css"
 
 import signUp from "@/utils/firebase/signup"
 import waitForEmailVerification from "@/utils/firebase/waitForEmailVerification"
 import { signupValidation } from "@/utils/schemaValidations/signup"
-import { useAuth, useProfileData } from "@/utils/store"
 
 import Button from "../button"
 import Input from "../input"
@@ -26,17 +25,6 @@ const limiter = rateLimit({
 
 function Signup({ t }) {
   const router = useRouter()
-  const { isLoggedIn } = useAuth()
-  const userName = useProfileData()
-  useEffect(() => {
-    if (isLoggedIn) {
-      router.replace("/").then(() => {
-        toast.info(
-          `Hey ${userName?.firstName || "you"} i think you already Signed up !`
-        )
-      })
-    }
-  }, [isLoggedIn, router, userName])
 
   const [formData, setFormData] = useState({
     firstName: "",
@@ -80,17 +68,11 @@ function Signup({ t }) {
       )
 
       // Use toast.promise to display messages
-      const { result, error } = await toast.promise(
-        signUpPromise,
-        {
-          pending: "Please wait...",
-          success: "Signup successfully! You are logged in.",
-          error: "Signup failed. Please try again.",
-        },
-        {
-          autoClose: 5000,
-        }
-      )
+      const { result, error } = await toast.promise(signUpPromise, {
+        pending: "Please wait...",
+        success: "Signup successfully! You are logged in.",
+        error: "Signup failed. Please try again.",
+      })
 
       if (result) {
         // Wait for the user to verify their email address
@@ -118,149 +100,146 @@ function Signup({ t }) {
   }
 
   return (
-    <>
-      <ToastContainer pauseOnHover={false} />
-      <div>
-        <div className={`flex justify-center   md:flex-row  bg-[#f1f6fa] `}>
-          <div className={` ${styles.handbox_background}   w-3/6 `}>
-            <div className='p-20'>
-              <Image
-                src='/images/hands_box.png'
-                alt='handbox'
-                width={500}
-                height={500}
-              />
-            </div>
+    <div>
+      <div className={`flex justify-center   md:flex-row  bg-[#f1f6fa] `}>
+        <div className={` ${styles.handbox_background}   w-3/6 `}>
+          <div className='p-20'>
+            <Image
+              src='/images/hands_box.png'
+              alt='handbox'
+              width={500}
+              height={500}
+            />
           </div>
-          <div
-            className={` container ${styles.form_mobile}   w-3/6 items-center`}
-          >
-            <div className='container m-auto flex w-5/6 flex-col items-center'>
-              <h1 className='my-2 py-6 text-4xl font-semibold text-[#485DCF] md:my-3 md:text-5xl'>
-                {t("sign-up")}
-              </h1>
+        </div>
+        <div
+          className={` container ${styles.form_mobile}   w-3/6 items-center`}
+        >
+          <div className='container m-auto flex w-5/6 flex-col items-center'>
+            <h1 className='my-2 py-6 text-4xl font-semibold text-[#485DCF] md:my-3 md:text-5xl'>
+              {t("sign-up")}
+            </h1>
 
-              <form
-                onSubmit={handleFormSubmit}
-                className='container m-auto mb-6 flex  w-5/6 flex-col  '
-              >
-                <label htmlFor='firstName'>
-                  <Input
-                    type='text'
-                    id='firstName'
-                    name='firstName'
-                    placeholder={t("name")}
-                    value={formData.name}
-                    onChange={handleChange}
-                  />
-                </label>
-                {errors.firstName}
-                <label htmlFor='surname'>
-                  <Input
-                    id='surname'
-                    type='text'
-                    name='surname'
-                    placeholder={t("surname")}
-                    value={formData.surname}
-                    onChange={handleChange}
-                  />
-                </label>
-                {errors.surname}
-                <label htmlFor='email'>
-                  <Input
-                    type='email'
-                    id='email'
-                    name='email'
-                    placeholder={t("email")}
-                    value={formData.email}
-                    onChange={handleChange}
-                  />
-                </label>
-                {errors.email}
-                <label htmlFor='schoolName'>
-                  <Input
-                    type='text'
-                    id='schoolName'
-                    name='schoolName'
-                    placeholder={t("school")}
-                    value={formData.schoolName}
-                    onChange={handleChange}
-                  />
-                </label>
-                {errors.schoolName}
-                <label htmlFor='password'>
-                  <Input
-                    type='password'
-                    id='password'
-                    name='password'
-                    placeholder={t("password")}
-                    value={formData.password}
-                    onChange={handleChange}
-                  />
-                </label>
-                {errors.password}
+            <form
+              onSubmit={handleFormSubmit}
+              className='container m-auto mb-6 flex  w-5/6 flex-col  '
+            >
+              <label htmlFor='firstName'>
+                <Input
+                  type='text'
+                  id='firstName'
+                  name='firstName'
+                  placeholder={t("name")}
+                  value={formData.name}
+                  onChange={handleChange}
+                />
+              </label>
+              {errors.firstName}
+              <label htmlFor='surname'>
+                <Input
+                  id='surname'
+                  type='text'
+                  name='surname'
+                  placeholder={t("surname")}
+                  value={formData.surname}
+                  onChange={handleChange}
+                />
+              </label>
+              {errors.surname}
+              <label htmlFor='email'>
+                <Input
+                  type='email'
+                  id='email'
+                  name='email'
+                  placeholder={t("email")}
+                  value={formData.email}
+                  onChange={handleChange}
+                />
+              </label>
+              {errors.email}
+              <label htmlFor='schoolName'>
+                <Input
+                  type='text'
+                  id='schoolName'
+                  name='schoolName'
+                  placeholder={t("school")}
+                  value={formData.schoolName}
+                  onChange={handleChange}
+                />
+              </label>
+              {errors.schoolName}
+              <label htmlFor='password'>
                 <Input
                   type='password'
-                  id='passwordConfirm'
-                  name='passwordConfirm'
-                  value={formData.passwordConfirm}
+                  id='password'
+                  name='password'
+                  placeholder={t("password")}
+                  value={formData.password}
                   onChange={handleChange}
-                  placeholder={t("password-confirm")}
                 />
-                {errors.passwordConfirm}
-                <div className='flex justify-center'>
-                  <Button
-                    buttonStyle='purpleSignUp'
-                    text={t("sign-up")}
-                    type='submit'
-                  />
-                </div>
-              </form>
-              <div className='flex items-center'>
-                <div className='my-1 mr-2 h-px mt-[10px] w-[164px] bg-[#9dafbd]'></div>
-                <p>{t("or")}</p>
-                <div className='my-1 mr-2 h-px mt-[10px] w-[164px] bg-[#9dafbd]'></div>
-              </div>
-              <p className='text-md m-1 text-[#647581]'>{t("sign-up-with")}</p>
-              <div className='m-1 mb-8 flex flex-row  '>
-                <button className=' m-1 flex items-center rounded-3xl border border-[#F26F6F] p-1  text-[#F26F6F]'>
-                  <BsGoogle
-                    color='#F26F6F'
-                    size={24}
-                    style={{ padding: "1px" }}
-                  />
-                  <p className='mx-2 text-sm md:mx-3'>{t("google")}</p>
-                </button>
-                <button className='color-darkPurple m-1  flex items-center rounded-3xl border border-[#485DCF] p-1 text-[#485DCF]'>
-                  <BsFacebook
-                    color='#485DCF'
-                    size={24}
-                    style={{ padding: "1px" }}
-                  />
-                  <p className='mx-2 text-sm md:mx-3'>{t("facebook")}</p>
-                </button>
-                <button className=' m-1 flex justify-around rounded-3xl border border-[#28C7FA]  p-1 text-[#28C7FA] '>
-                  <BsTwitter
-                    color='#28C7FA'
-                    size={24}
-                    style={{ padding: "1px" }}
-                  />
-                  <p className='mx-2 text-sm md:mx-3'>{t("twitter")}</p>
-                </button>
-              </div>
-              <div className='mb-4 text-xl text-[#647581]'>
-                <p>{t("have-an-account")}</p>
-              </div>
-              <Button
-                buttonStyle='purpleSignUp'
-                text={t("sign-in")}
-                type='submit'
+              </label>
+              {errors.password}
+              <Input
+                type='password'
+                id='passwordConfirm'
+                name='passwordConfirm'
+                value={formData.passwordConfirm}
+                onChange={handleChange}
+                placeholder={t("password-confirm")}
               />
+              {errors.passwordConfirm}
+              <div className='flex justify-center'>
+                <Button
+                  buttonStyle='purpleSignUp'
+                  text={t("sign-up")}
+                  type='submit'
+                />
+              </div>
+            </form>
+            <div className='flex items-center'>
+              <div className='my-1 mr-2 h-px mt-[10px] w-[164px] bg-[#9dafbd]'></div>
+              <p>{t("or")}</p>
+              <div className='my-1 mr-2 h-px mt-[10px] w-[164px] bg-[#9dafbd]'></div>
             </div>
+            <p className='text-md m-1 text-[#647581]'>{t("sign-up-with")}</p>
+            <div className='m-1 mb-8 flex flex-row  '>
+              <button className=' m-1 flex items-center rounded-3xl border border-[#F26F6F] p-1  text-[#F26F6F]'>
+                <BsGoogle
+                  color='#F26F6F'
+                  size={24}
+                  style={{ padding: "1px" }}
+                />
+                <p className='mx-2 text-sm md:mx-3'>{t("google")}</p>
+              </button>
+              <button className='color-darkPurple m-1  flex items-center rounded-3xl border border-[#485DCF] p-1 text-[#485DCF]'>
+                <BsFacebook
+                  color='#485DCF'
+                  size={24}
+                  style={{ padding: "1px" }}
+                />
+                <p className='mx-2 text-sm md:mx-3'>{t("facebook")}</p>
+              </button>
+              <button className=' m-1 flex justify-around rounded-3xl border border-[#28C7FA]  p-1 text-[#28C7FA] '>
+                <BsTwitter
+                  color='#28C7FA'
+                  size={24}
+                  style={{ padding: "1px" }}
+                />
+                <p className='mx-2 text-sm md:mx-3'>{t("twitter")}</p>
+              </button>
+            </div>
+            <div className='mb-4 text-xl text-[#647581]'>
+              <p>{t("have-an-account")}</p>
+            </div>
+            <Button
+              buttonStyle='purpleSignUp'
+              text={t("sign-in")}
+              type='submit'
+            />
           </div>
         </div>
       </div>
-    </>
+    </div>
   )
 }
 

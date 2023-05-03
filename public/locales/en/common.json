@@ -16,5 +16,7 @@
   "back-home": "Back to Home",
   "edit-profile": "Edit Profile",
   "my-listing": "My Listing",
-  "my-orders": "My Orders"
+  "my-orders": "My Orders",
+  "signout": "User signed out successfully",
+  "fSignout": "Failed to sign out user"
 }

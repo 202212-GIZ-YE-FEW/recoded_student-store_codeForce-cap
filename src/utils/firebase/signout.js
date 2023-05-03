@@ -1,9 +1,10 @@
 import { getAuth, signOut } from "firebase/auth"
+import { withTranslation } from "next-i18next"
 import { useRouter } from "next/router"
 import { TbLogout } from "react-icons/tb"
 import { toast } from "react-toastify"
 
-function SignOut() {
+function SignOut({ t }) {
   const router = useRouter()
   const auth = getAuth()
 
@@ -14,10 +15,10 @@ function SignOut() {
           router.push("/")
         })
         .then(() => {
-          toast.success("User signed out successfully")
+          toast.success(t("signout"))
         })
     } catch (e) {
-      toast.error("Failed to sign out user")
+      toast.error(t("fSignout"))
     }
   }
 
@@ -31,4 +32,4 @@ function SignOut() {
   )
 }
 
-export default SignOut
+export default withTranslation("common")(SignOut)

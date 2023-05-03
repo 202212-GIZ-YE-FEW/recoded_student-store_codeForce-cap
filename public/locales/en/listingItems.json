@@ -22,5 +22,6 @@
   "location": "Location",
   "price": "Price",
   "uploadImage": "Upload image(s)",
-  "list": "List"
+  "list": "List",
+  "hi": "Hey you i think you have to sign up or sign in first !"
 }
