@@ -3,13 +3,14 @@ import { addDoc, collection } from "firebase/firestore"
 import { getDownloadURL, ref, uploadBytes } from "firebase/storage"
 import { useTranslation, withTranslation } from "next-i18next"
 import Image from "next/image"
-import { useState } from "react"
+import { useEffect, useState } from "react"
 import { ToastContainer, toast } from "react-toastify"
 
 import "react-toastify/dist/ReactToastify.css"
 
 import { auth, db, storage, timestamp } from "@/utils/firebase/config"
 import { listingsValidation } from "@/utils/schemaValidations/listingItems"
+import { useDefaultImage } from "@/utils/store"
 
 import Button from "../button"
 import Highlighter from "../highlighter"
@@ -22,10 +23,10 @@ function ListingItems() {
   const [errors, setErrors] = useState({})
   // Form info
   const [formData, setFormData] = useState({
-    primaryImage: { file: null, url: "/images/emptyImage.png" },
-    secondaryImage: { file: null, url: "/images/emptyImage.png" },
-    tertiaryImage: { file: null, url: "/images/emptyImage.png" },
-    quaternaryImage: { file: null, url: "/images/emptyImage.png" },
+    primaryImage: { file: null, url: "" },
+    secondaryImage: { file: null, url: "" },
+    tertiaryImage: { file: null, url: "" },
+    quaternaryImage: { file: null, url: "" },
     type: "",
     category: "",
     productName: "",
@@ -34,6 +35,20 @@ function ListingItems() {
     price: "",
     createdAt: timestamp,
   })
+
+  const defaultImageURL = useDefaultImage()
+
+  useEffect(() => {
+    if (defaultImageURL) {
+      setFormData((prevFormData) => ({
+        ...prevFormData,
+        primaryImage: { file: null, url: defaultImageURL },
+        secondaryImage: { file: null, url: defaultImageURL },
+        tertiaryImage: { file: null, url: defaultImageURL },
+        quaternaryImage: { file: null, url: defaultImageURL },
+      }))
+    }
+  }, [defaultImageURL])
 
   // Inputs verifier and handler
   const inputsHandler = (event) => {
