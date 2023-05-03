@@ -28,10 +28,10 @@ function FavProducts({ t }) {
     setSelectedCategory(category)
     if (category === t("all")) {
       // If the new category is "All", set the state of the favorite products list to the original list of products
-      setFavoriteProducts(products)
+      setFavoriteProducts(products({ t }))
     } else {
       // Otherwise, filter the original list of products to include only those in the selected category
-      const filteredProducts = products.filter(
+      const filteredProducts = products({ t }).filter(
         (product) => product.category === category
       )
       // Set the state of the favorite products list to the filtered list of products
@@ -51,7 +51,7 @@ function FavProducts({ t }) {
         </h2>
         <div className='flex flex-wrap justify-center py-4'>
           <button
-            onClick={() => handleCategoryChange("All")}
+            onClick={() => handleCategoryChange(t("all"))}
             className={`bg-gray-200 hover:bg-gray-300 text-gray-800 font-bold py-2 px-4 rounded-full mr-4 mb-4 transition-all duration-300 ease-in-out  focus:ring-2 focus:ring-offset-2 focus:ring-gray-500 flex justify-around items-center w-16 shadow-md  ${
               selectedCategory === "All" &&
               " bg-purple !text-white hover:!bg-violet-800"
@@ -60,7 +60,7 @@ function FavProducts({ t }) {
             {t("all")}
           </button>
           <button
-            onClick={() => handleCategoryChange("Electronics")}
+            onClick={() => handleCategoryChange(t("filter-three"))}
             className={`bg-gray-200 hover:bg-gray-300 text-gray-800 font-bold py-2 px-4 rounded-full mr-4 mb-4 transition-all duration-300 ease-in-out focus:ring-2 focus:ring-offset-2 focus:ring-gray-500 flex justify-around items-center w-36 shadow-md min-w-[130px] max-xs:flex-col ${
               selectedCategory === "Electronics" &&
               " bg-purple !text-white hover:!bg-violet-800"
@@ -79,7 +79,7 @@ function FavProducts({ t }) {
             Clothes <GiClothes className='text-2xl' />
           </button> */}
           <button
-            onClick={() => handleCategoryChange("Books")}
+            onClick={() => handleCategoryChange(t("filter-one"))}
             className={`bg-gray-200 hover:bg-gray-300 text-gray-800 font-bold py-2 px-4 rounded-full mr-4 mb-4 transition-all duration-300 ease-in-out focus:ring-2 focus:ring-offset-2 focus:ring-gray-500 flex  justify-around items-center w-32 shadow-md min-w-[110px] ${
               selectedCategory === "Books" &&
               " bg-purple !text-white hover:!bg-violet-800"
@@ -89,7 +89,7 @@ function FavProducts({ t }) {
             <TbBook className='text-2xl' />
           </button>
           <button
-            onClick={() => handleCategoryChange("Two-wheeler")}
+            onClick={() => handleCategoryChange(t("filter-four"))}
             className={`bg-gray-200 hover:bg-gray-300 text-gray-800 font-bold py-2 px-4 rounded-full mr-4 mb-4 transition-all duration-300 ease-in-out focus:ring-2 focus:ring-offset-2 focus:ring-gray-500 flex justify-around items-center w-44 shadow-md min-w-[150px] max-xs:flex-col
             ${
               selectedCategory === "Two-wheeler" &&
@@ -99,7 +99,7 @@ function FavProducts({ t }) {
             {t("filter-four")} <MdTwoWheeler className='text-2xl' />
           </button>
           <button
-            onClick={() => handleCategoryChange("Furniture")}
+            onClick={() => handleCategoryChange(t("filter-two"))}
             className={`bg-gray-200 hover:bg-gray-300 text-gray-800 font-bold py-2 px-4 rounded-full mr-4 mb-4 transition-all duration-300 ease-in-out focus:ring-2 focus:ring-offset-2 focus:ring-gray-500 flex justify-around items-center w-40 shadow-md min-w-[150px]
             ${
               selectedCategory === "Furniture" &&
