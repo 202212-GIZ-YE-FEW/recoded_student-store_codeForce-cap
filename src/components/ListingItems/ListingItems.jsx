@@ -82,6 +82,11 @@ function ListingItems() {
       const user = auth.currentUser
       const uid = user.uid
 
+      const confirm = window.confirm("Sure to upload ?")
+      if (!confirm) {
+        return
+      }
+
       const uploadPromise = new Promise((resolve, reject) => {
         ;(async () => {
           try {
