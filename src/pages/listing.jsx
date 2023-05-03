@@ -13,7 +13,7 @@ function ListingPage() {
   const { isLoggedIn } = useAuth()
   useEffect(() => {
     if (!isLoggedIn) {
-      router.replace("/").then(() => {
+      router.replace("/signup").then(() => {
         toast.info("Hey you i think you have to sign up or sign in first !")
       })
     }

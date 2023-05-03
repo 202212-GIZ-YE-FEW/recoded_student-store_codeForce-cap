@@ -15,7 +15,7 @@ import RootLayout from "@/layout/root/RootLayout"
 import signUp from "@/utils/firebase/signup"
 import waitForEmailVerification from "@/utils/firebase/waitForEmailVerification"
 import { signupValidation } from "@/utils/schemaValidations/signup"
-import { useAuth } from "@/utils/store"
+import { useAuth, useProfileData } from "@/utils/store"
 
 /*
 //! Define rate limit middleware to prevent brute-force attacks
@@ -28,10 +28,13 @@ const limiter = rateLimit({
 function Signup() {
   const router = useRouter()
   const { isLoggedIn } = useAuth()
+  const userName = useProfileData()
   useEffect(() => {
     if (isLoggedIn) {
       router.replace("/").then(() => {
-        toast.info("Hey you i think you already Signed up !")
+        toast.info(
+          `Hey ${userName?.firstName || "you"} i think you already Signed up !`
+        )
       })
     }
   }, [isLoggedIn, router])

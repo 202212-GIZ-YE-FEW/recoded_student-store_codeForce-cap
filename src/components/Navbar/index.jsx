@@ -12,16 +12,19 @@ import { HiHeart } from "react-icons/hi"
 import { RxHamburgerMenu } from "react-icons/rx"
 import { TbArrowBadgeDown } from "react-icons/tb"
 import { TfiWorld } from "react-icons/tfi"
+
 import styles from "./Navbar.module.css"
 
 import { auth } from "@/utils/firebase/config"
 import SignOut from "@/utils/firebase/signout"
+import { useProfileData } from "@/utils/store"
 
 export default function Navbar() {
   const [languages, setLanguages] = useState(false)
   const [open, setOpen] = useState(false)
   const [user] = useAuthState(auth)
   const [scrollProgress, setScrollProgress] = useState(0)
+  const userName = useProfileData()
 
   const calculateScrollProgress = () => {
     const scrollTop =
@@ -164,7 +167,7 @@ export default function Navbar() {
                       <div
                         className={`md:absolute top-10 right-0 bg-white md:border border-gray-200 rounded-lg md:shadow-md py-2 ${styles.show}`}
                       >
-                        <p>{user.displayName}</p>
+                        <p>{userName?.firstName || "user name"}</p>
                         <hr className='bg-purple p-[1px]' />
                         <Link
                           href='/profile'

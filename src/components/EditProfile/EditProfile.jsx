@@ -26,7 +26,7 @@ export default function EditProfile() {
     newPassword: "",
     confirmNewPassword: "",
     address: "",
-    profileImg: "/productImg.png",
+    profileImg: "/images/cat-photo.svg",
   })
 
   // * Form submitting handler

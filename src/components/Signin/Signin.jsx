@@ -47,7 +47,7 @@ function Signin() {
       }
 
       // else when successful
-      return router.push("/").then(() => {
+      return router.replace("/").then(() => {
         toast.success("Welcome back")
       })
     } catch (err) {
