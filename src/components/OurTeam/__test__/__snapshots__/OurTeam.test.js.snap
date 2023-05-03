@@ -14,14 +14,14 @@ exports[`renders correctly 1`] = `
         <h2
           className="text-purple-light font-poppins text-center font-bold tracking-[-1px] "
         >
-          Our Team
+          our-team
         </h2>
       </span>
     </span>
     <p
       className="font-light text-gray-500 lg:mb-16 sm:text-xl"
     >
-      CodeForce team is built on trust and mutual respect, with each member holding themselves accountable for their actions and decisions.
+      our-team-des
     </p>
   </div>
   <div
@@ -54,17 +54,17 @@ exports[`renders correctly 1`] = `
         <h3
           className="text-xl font-bold tracking-tight text-black"
         >
-          Moahmmed Al-Qershi
+          member-name-one
         </h3>
         <span
           className="text-gray-500"
         >
-          Font-End Developer & ERPNext Developer
+          member-job-one
         </span>
         <p
           className="mt-3 mb-4 font-semibold text-gray-500"
         >
-          I am a dedicated and passionate developer who is committed to delivering exceptional results and exceeding client expectations.
+          member-description-one
         </p>
         <ul
           className="flex space-x-4 sm:mt-0"
@@ -203,17 +203,17 @@ exports[`renders correctly 1`] = `
         <h3
           className="text-xl font-bold tracking-tight text-black"
         >
-          NabiL Ashbat
+          member-name-two
         </h3>
         <span
           className="text-gray-500"
         >
-          Font-End Developer
+          member-job
         </span>
         <p
           className="mt-3 mb-4 font-semibold text-gray-500"
         >
-          A recent B.Sc. Computer Science graduate. In love with IT, Web development, Cybersecurity, and self-consciousness. Obsessed with everyday life challenges.
+          member-description-two
         </p>
         <ul
           className="flex space-x-4 sm:mt-0"
@@ -352,17 +352,17 @@ exports[`renders correctly 1`] = `
         <h3
           className="text-xl font-bold tracking-tight text-black"
         >
-          Abobakr Mahdi
+          member-name-three
         </h3>
         <span
           className="text-gray-500"
         >
-          Font-End Developer
+          member-job
         </span>
         <p
           className="mt-3 mb-4 font-semibold text-gray-500"
         >
-          I am a junior developer with a passion for learning and the ability to self-teach and take a little time and become a professional developer
+          member-description-three
         </p>
         <ul
           className="flex space-x-4 sm:mt-0"
@@ -501,17 +501,17 @@ exports[`renders correctly 1`] = `
         <h3
           className="text-xl font-bold tracking-tight text-black"
         >
-          Abdulrahman Abdullah
+          member-name-four
         </h3>
         <span
           className="text-gray-500"
         >
-          Font-End Developer
+          member-job
         </span>
         <p
           className="mt-3 mb-4 font-semibold text-gray-500"
         >
-          CodeForce team is built on trust and mutual respect, with each member holding themselves accountable for their actions and decisions.
+          our-team-des
         </p>
         <ul
           className="flex space-x-4 sm:mt-0"
@@ -650,17 +650,17 @@ exports[`renders correctly 1`] = `
         <h3
           className="text-xl font-bold tracking-tight text-black"
         >
-          MarwanBz
+          member-name-five
         </h3>
         <span
           className="text-gray-500"
         >
-          Font-End Developer
+          member-job
         </span>
         <p
           className="mt-3 mb-4 font-semibold text-gray-500"
         >
-          CodeForce team is built on trust and mutual respect, with each member holding themselves accountable for their actions and decisions.
+          our-team-des
         </p>
         <ul
           className="flex space-x-4 sm:mt-0"

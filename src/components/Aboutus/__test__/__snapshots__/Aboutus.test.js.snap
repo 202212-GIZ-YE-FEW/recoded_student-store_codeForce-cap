@@ -3,6 +3,7 @@
 exports[`renders correctly 1`] = `
 <div
   className="flex flex-col items-center justify-center font-poppins"
+  dir="ltr"
 >
   <div
     className="grid  mt-20 items-center justify-center max-w-screen-md"
@@ -14,14 +15,14 @@ exports[`renders correctly 1`] = `
         <h2
           className="text-purple-light font-poppins text-center font-bold tracking-[-1px] "
         >
-          Mission
+          mission
         </h2>
       </span>
     </span>
     <p
       className="text-purple-dark lg:w-[700px] p-3 text-2xl leading-relaxed text-center"
     >
-      Our companies mission is to create a student-friendly marketplace that provides an affordable and convenient platform for students to buy, sell, and borrow various types of products. We aim to help students save money by providing them access to affordable used products while also helping them earn money by allowing them to sell their own items.
+      mission-des
     </p>
   </div>
   <div
@@ -34,14 +35,14 @@ exports[`renders correctly 1`] = `
         <h2
           className="text-purple-light font-poppins text-center font-bold tracking-[-1px] "
         >
-          History
+          history
         </h2>
       </span>
     </span>
     <p
       className="text-purple-dark lg:w-[700px] p-3 text-2xl leading-relaxed text-center"
     >
-      Our company was founded by a group of students who recognized the need for a platform that caters to the specific needs of students. They observed that students often struggle to find affordable used products or a reliable platform to sell their own items. The company was established with the idea of providing a safe and efficient platform for students to buy, sell, and borrow products.
+      history-des
     </p>
   </div>
   <div
@@ -54,14 +55,14 @@ exports[`renders correctly 1`] = `
         <h2
           className="text-purple-light font-poppins text-center font-bold tracking-[-1px] "
         >
-          Goals
+          goals
         </h2>
       </span>
     </span>
     <p
       className="text-purple-dark lg:w-[700px] p-3 text-2xl leading-relaxed text-center"
     >
-      Our primary goal is to become the go-to marketplace for students across the country. We aim to build a strong reputation as a trusted platform that offers a wide range of affordable and high-quality products. We also aim to continuously improve our platform to ensure that it remains easy to use, reliable, and secure for all users. Additionally, we strive to create a community of students who can share their experiences and insights about products and services, creating a more connected and supportive student network. Ultimately, we want to help students save money, earn money, and have a better experience as they navigate their academic journeys.
+      goals-des
     </p>
     <br />
   </div>
@@ -78,14 +79,14 @@ exports[`renders correctly 1`] = `
           <h2
             className="text-purple-light font-poppins text-center font-bold tracking-[-1px] "
           >
-            Our Team
+            our-team
           </h2>
         </span>
       </span>
       <p
         className="font-light text-gray-500 lg:mb-16 sm:text-xl"
       >
-        CodeForce team is built on trust and mutual respect, with each member holding themselves accountable for their actions and decisions.
+        our-team-des
       </p>
     </div>
     <div
@@ -118,17 +119,17 @@ exports[`renders correctly 1`] = `
           <h3
             className="text-xl font-bold tracking-tight text-black"
           >
-            Moahmmed Al-Qershi
+            member-name-one
           </h3>
           <span
             className="text-gray-500"
           >
-            Font-End Developer & ERPNext Developer
+            member-job-one
           </span>
           <p
             className="mt-3 mb-4 font-semibold text-gray-500"
           >
-            I am a dedicated and passionate developer who is committed to delivering exceptional results and exceeding client expectations.
+            member-description-one
           </p>
           <ul
             className="flex space-x-4 sm:mt-0"
@@ -267,17 +268,17 @@ exports[`renders correctly 1`] = `
           <h3
             className="text-xl font-bold tracking-tight text-black"
           >
-            NabiL Ashbat
+            member-name-two
           </h3>
           <span
             className="text-gray-500"
           >
-            Font-End Developer
+            member-job
           </span>
           <p
             className="mt-3 mb-4 font-semibold text-gray-500"
           >
-            A recent B.Sc. Computer Science graduate. In love with IT, Web development, Cybersecurity, and self-consciousness. Obsessed with everyday life challenges.
+            member-description-two
           </p>
           <ul
             className="flex space-x-4 sm:mt-0"
@@ -416,17 +417,17 @@ exports[`renders correctly 1`] = `
           <h3
             className="text-xl font-bold tracking-tight text-black"
           >
-            Abobakr Mahdi
+            member-name-three
           </h3>
           <span
             className="text-gray-500"
           >
-            Font-End Developer
+            member-job
           </span>
           <p
             className="mt-3 mb-4 font-semibold text-gray-500"
           >
-            I am a junior developer with a passion for learning and the ability to self-teach and take a little time and become a professional developer
+            member-description-three
           </p>
           <ul
             className="flex space-x-4 sm:mt-0"
@@ -565,17 +566,17 @@ exports[`renders correctly 1`] = `
           <h3
             className="text-xl font-bold tracking-tight text-black"
           >
-            Abdulrahman Abdullah
+            member-name-four
           </h3>
           <span
             className="text-gray-500"
           >
-            Font-End Developer
+            member-job
           </span>
           <p
             className="mt-3 mb-4 font-semibold text-gray-500"
           >
-            CodeForce team is built on trust and mutual respect, with each member holding themselves accountable for their actions and decisions.
+            our-team-des
           </p>
           <ul
             className="flex space-x-4 sm:mt-0"
@@ -714,17 +715,17 @@ exports[`renders correctly 1`] = `
           <h3
             className="text-xl font-bold tracking-tight text-black"
           >
-            MarwanBz
+            member-name-five
           </h3>
           <span
             className="text-gray-500"
           >
-            Font-End Developer
+            member-job
           </span>
           <p
             className="mt-3 mb-4 font-semibold text-gray-500"
           >
-            CodeForce team is built on trust and mutual respect, with each member holding themselves accountable for their actions and decisions.
+            our-team-des
           </p>
           <ul
             className="flex space-x-4 sm:mt-0"

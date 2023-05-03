@@ -1,13 +1,17 @@
 import Image from "next/image"
+import { withTranslation } from "next-i18next"
 
 import products from "../ProductList/products"
 
-export default function UserOrders() {
+function UserOrders({ t }) {
   return (
-    <section className='flex flex-col lg:flex-row h-[617px] md:h-[784px] lg:h-[100%] overflow-y-auto lg:bg-gradient-to-l from-zinc-800 to-slate-300'>
+    <section
+      className='flex flex-col lg:flex-row h-[617px] md:h-[784px] lg:h-[100%] overflow-y-auto lg:bg-gradient-to-l from-zinc-800 to-slate-300'
+      dir={t("language") === "ar" ? "rtl" : "ltr"}
+    >
       <div className=' w-full'>
-        <div className='grid lg:grid-cols-3 md:grid-cols-2 gap-5 px-8 py-16 mx-10'>
-          {products.map((product) => (
+        <div className='grid lg:grid-cols-3 md:grid-cols-2 gap-5 px-8 py-16'>
+          {products({ t }).map((product) => (
             <div
               key={product.id}
               className='lg:bg-white rounded-lg pb-7 cart-animation'
@@ -38,11 +42,13 @@ export default function UserOrders() {
                 </div>
                 <div>
                   <p>
-                    <span className='font-extrabold'>Order Date:</span>{" "}
+                    <span className='font-extrabold'>{t("order-date")}</span>{" "}
                     {product.order_date}
                   </p>
                   <p>
-                    <span className='font-extrabold'>Delivery Address:</span>
+                    <span className='font-extrabold'>
+                      {t("delivery-address")}
+                    </span>
                     <br />
                     <span className='font-extralight text-xs'>
                       {product.delivery_address}
@@ -57,3 +63,5 @@ export default function UserOrders() {
     </section>
   )
 }
+
+export default withTranslation("index")(UserOrders)

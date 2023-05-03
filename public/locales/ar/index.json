@@ -1,0 +1,23 @@
+{
+  "language": "ar",
+  "categories": "الفئات",
+  "price-filter": "فرز الاسعار",
+  "name-product": "آلة النطق Moog",
+  "min-price": "عذرا ، الحد الأدنى للسعر هو 10 دولارات",
+  "min-price-des": "عذرا ، لا يمكن أن يكون الحد الأدنى للسعر أكبر من الحد الأقصى للسعر",
+  "max-price": "عذرا ، الحد الأقصى للسعر هو 1000 دولار",
+  "max-price-des": "عذرا ، لا يمكن أن يكون الحد الأقصى للسعر أقل من الحد الأدنى للسعر",
+  "filter-one": "كتب",
+  "filter-two": "أثاث",
+  "filter-three": "إلكترونيات",
+  "filter-four": "عجلتان",
+  "made-city": "اسطنبول / تركيا",
+  "order-date": "تاريخ الطلب:",
+  "delivery-address": "عنوان التسليم:",
+  "delivery-address-des": "أكس شقة واي شارع زيد محافظة اسطنبول / تركيا",
+  "category": "فئة:",
+  "listing-date": "تاريخ الإدراج:",
+  "favorite-products": "المنتجات المفضلة",
+  "filter-category": "فرز بحسب الفئات:",
+  "all": "الكل"
+}

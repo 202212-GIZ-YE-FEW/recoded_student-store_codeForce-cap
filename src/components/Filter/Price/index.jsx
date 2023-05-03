@@ -1,10 +1,12 @@
+import { withTranslation } from "next-i18next"
 import { useState } from "react"
 import { Range } from "react-range"
 import { toast, ToastContainer } from "react-toastify"
 
 import "react-toastify/dist/ReactToastify.css"
 
-export default function PriceFilter() {
+// add translation functions to filter-price component
+function PriceFilter({ t }) {
   const [tempValues, setTempValues] = useState([270, 770]) // temporary min and max values for changes made by user
 
   const handleChange = (newValues) => {
@@ -14,11 +16,9 @@ export default function PriceFilter() {
   const handleMinChange = (e) => {
     const newMin = +e.target.value.replace(/\D/g, "")
     if (newMin < 0) {
-      toast.warn("Sorry, the minimum price is $10")
+      toast.warn(t("min-price"))
     } else if (newMin > tempValues[1]) {
-      toast.warn(
-        "Sorry, the minimum price cannot be greater than the maximum price"
-      )
+      toast.warn(t("min-price-des"))
     } else {
       setTempValues([newMin, tempValues[1]])
     }
@@ -27,11 +27,9 @@ export default function PriceFilter() {
   const handleMaxChange = (e) => {
     const newMax = +e.target.value.replace(/\D/g, "")
     if (newMax > 1000) {
-      toast.warn("Sorry, the maximum price is $1000")
+      toast.warn(t("max-price"))
     } else if (newMax < tempValues[0]) {
-      toast.warn(
-        "Sorry, the maximum price cannot be less than the minimum price"
-      )
+      toast.warn(t("max-price-des"))
     } else {
       setTempValues([tempValues[0], newMax])
     }
@@ -77,6 +75,8 @@ export default function PriceFilter() {
     </div>
   )
 }
+
+export default withTranslation("index")(PriceFilter)
 
 /* Just leave it i need to deal with it in another time */
 
