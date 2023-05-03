@@ -72,7 +72,7 @@ exports[`renders correctly 1`] = `
               name-product
             </h2>
             <p
-              className="font-extralight text-xs"
+              className="font-extralight text-xs rtl:text-right"
             >
               filter-one
             </p>
@@ -159,7 +159,7 @@ exports[`renders correctly 1`] = `
               name-product
             </h2>
             <p
-              className="font-extralight text-xs"
+              className="font-extralight text-xs rtl:text-right"
             >
               filter-two
             </p>
@@ -246,7 +246,7 @@ exports[`renders correctly 1`] = `
               name-product
             </h2>
             <p
-              className="font-extralight text-xs"
+              className="font-extralight text-xs rtl:text-right"
             >
               filter-two
             </p>
@@ -333,7 +333,7 @@ exports[`renders correctly 1`] = `
               name-product
             </h2>
             <p
-              className="font-extralight text-xs"
+              className="font-extralight text-xs rtl:text-right"
             >
               filter-three
             </p>
@@ -420,7 +420,7 @@ exports[`renders correctly 1`] = `
               name-product
             </h2>
             <p
-              className="font-extralight text-xs"
+              className="font-extralight text-xs rtl:text-right"
             >
               filter-four
             </p>
@@ -507,7 +507,7 @@ exports[`renders correctly 1`] = `
               name-product
             </h2>
             <p
-              className="font-extralight text-xs"
+              className="font-extralight text-xs rtl:text-right"
             >
               filter-four
             </p>
@@ -594,7 +594,7 @@ exports[`renders correctly 1`] = `
               name-product
             </h2>
             <p
-              className="font-extralight text-xs"
+              className="font-extralight text-xs rtl:text-right"
             >
               filter-four
             </p>
@@ -681,7 +681,7 @@ exports[`renders correctly 1`] = `
               name-product
             </h2>
             <p
-              className="font-extralight text-xs"
+              className="font-extralight text-xs rtl:text-right"
             >
               filter-four
             </p>
@@ -768,7 +768,7 @@ exports[`renders correctly 1`] = `
               name-product
             </h2>
             <p
-              className="font-extralight text-xs"
+              className="font-extralight text-xs rtl:text-right"
             >
               filter-four
             </p>
@@ -855,7 +855,7 @@ exports[`renders correctly 1`] = `
               name-product
             </h2>
             <p
-              className="font-extralight text-xs"
+              className="font-extralight text-xs rtl:text-right"
             >
               filter-four
             </p>
@@ -942,7 +942,7 @@ exports[`renders correctly 1`] = `
               name-product
             </h2>
             <p
-              className="font-extralight text-xs"
+              className="font-extralight text-xs rtl:text-right"
             >
               filter-three
             </p>
@@ -1029,7 +1029,7 @@ exports[`renders correctly 1`] = `
               name-product
             </h2>
             <p
-              className="font-extralight text-xs"
+              className="font-extralight text-xs rtl:text-right"
             >
               filter-three
             </p>
@@ -1116,7 +1116,7 @@ exports[`renders correctly 1`] = `
               name-product
             </h2>
             <p
-              className="font-extralight text-xs"
+              className="font-extralight text-xs rtl:text-right"
             >
               filter-three
             </p>
@@ -1203,7 +1203,7 @@ exports[`renders correctly 1`] = `
               name-product
             </h2>
             <p
-              className="font-extralight text-xs"
+              className="font-extralight text-xs rtl:text-right"
             >
               filter-three
             </p>
@@ -1290,7 +1290,7 @@ exports[`renders correctly 1`] = `
               name-product
             </h2>
             <p
-              className="font-extralight text-xs"
+              className="font-extralight text-xs rtl:text-right"
             >
               filter-three
             </p>
@@ -1377,7 +1377,7 @@ exports[`renders correctly 1`] = `
               name-product
             </h2>
             <p
-              className="font-extralight text-xs"
+              className="font-extralight text-xs rtl:text-right"
             >
               filter-three
             </p>
