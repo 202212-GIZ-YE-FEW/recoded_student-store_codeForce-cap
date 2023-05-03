@@ -26,7 +26,7 @@ function FavProducts({ t }) {
   const handleCategoryChange = (category) => {
     // Set the state of the selected category to the new category value
     setSelectedCategory(category)
-    if (category === "All") {
+    if (category === t("all")) {
       // If the new category is "All", set the state of the favorite products list to the original list of products
       setFavoriteProducts(products)
     } else {
