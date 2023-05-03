@@ -10,7 +10,7 @@ import Highlighter from "../highlighter"
 import products from "../ProductList/products"
 
 function FavProducts({ t }) {
-  // Define state variables for favorite products and selected category
+  // Define state variables for favorite products and selected category test
   const [FavProducts, setFavoriteProducts] = useState(products({ t }))
   const [selectedCategory, setSelectedCategory] = useState("All")
 
