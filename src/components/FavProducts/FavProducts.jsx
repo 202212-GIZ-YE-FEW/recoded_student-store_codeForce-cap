@@ -1,13 +1,12 @@
+import Image from "next/image"
+import { useState } from "react"
+import { AiFillHeart } from "react-icons/ai"
 import { HiOutlineChip, HiOutlineX } from "react-icons/hi"
+import { MdTwoWheeler } from "react-icons/md"
 import { TbBook, TbSofa } from "react-icons/tb"
 
-import { AiFillHeart } from "react-icons/ai"
-import { GiClothes } from "react-icons/gi"
 import Highlighter from "../highlighter"
-import Image from "next/image"
-import { MdTwoWheeler } from "react-icons/md"
 import products from "../ProductList/products"
-import { useState } from "react"
 
 function FavProducts() {
   // Define state variables for favorite products and selected category
