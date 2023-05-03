@@ -1,6 +1,7 @@
 import Image from "next/image"
 import Link from "next/link"
 import { withTranslation } from "next-i18next"
+
 import { useState } from "react"
 import { AiOutlineClose, AiOutlineSearch } from "react-icons/ai"
 import { HiHeart } from "react-icons/hi"
