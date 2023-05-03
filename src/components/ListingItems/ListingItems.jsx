@@ -136,9 +136,8 @@ function ListingItems() {
           }
         })()
       })
-
-      toast
-        .promise(
+      router.replace("/").then(() => {
+        toast.promise(
           uploadPromise,
           {
             pending:
@@ -153,9 +152,7 @@ function ListingItems() {
             }),
           }
         )
-        .then(() => {
-          router.replace("/")
-        })
+      })
     } catch (error) {
       toast.error("Sorry, There is an error product didn't upload successfully")
       const schemaErrors = {}
