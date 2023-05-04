@@ -182,7 +182,7 @@ function Navbar({ t }) {
                       <div
                         className={`md:absolute top-10 right-0 bg-white md:border border-gray-200 rounded-lg md:shadow-md py-2 ${styles.show}`}
                       >
-                        <p>{userName?.firstName || "user name"}</p>
+                        <p>{userName?.firstName || "user"}</p>
                         <hr className='bg-purple p-[1px]' />
                         <Link
                           href='/profile'

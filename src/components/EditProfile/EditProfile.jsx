@@ -1,17 +1,21 @@
 // ! The libraries that been used in this code
+import { doc, updateDoc } from "firebase/firestore"
+import { withTranslation } from "next-i18next"
 import dynamic from "next/dynamic"
 import Image from "next/image"
-import { withTranslation } from "next-i18next"
 import { useState } from "react"
 import PhoneInput from "react-phone-input-2"
+import { ToastContainer, toast } from "react-toastify"
 
 // ! The phone input default style
 import "react-phone-input-2/lib/style.css"
+import "react-toastify/dist/ReactToastify.css"
+
+import { auth, db } from "@/utils/firebase/config"
 
 // ! Components import
 import Button from "../button"
 import Input from "../input"
-
 // ! Map dynamic import
 const Maps = dynamic(() => import("./Maps"), {
   ssr: false,
@@ -20,33 +24,80 @@ const Maps = dynamic(() => import("./Maps"), {
 function EditProfile({ t }) {
   // * Form data handler
   const [formData, setFormData] = useState({
-    name: "",
+    firstName: "",
     surname: "",
     email: "",
     phoneNumber: "",
-    newPassword: "",
-    confirmNewPassword: "",
+    password: "",
+    confirmPassword: "",
     address: "",
     profileImg: "/images/cat-photo.svg",
   })
 
   // * Form submitting handler
-  const handleSubmit = (event) => {
+  const handleSubmit = async (event) => {
     event.preventDefault()
 
-    // * Password comparison
-    if (formData.newPassword !== formData.confirmNewPassword) {
-      return alert(t("password-match"))
-    }
+    try {
+      // * Password comparison
+      if (formData.password !== formData.confirmPassword) {
+        return alert(t("password-match"))
+      }
 
-    // * Confirmation window
-    const confirmSave = window.confirm("Save changes?")
-    if (confirmSave) {
-      // * display form values in console
-      // console.log(formData)
+      // * Confirmation window
 
-      // * save changes
-      alert(t("save"))
+      const confirmSave = window.confirm("Save changes?")
+      if (!confirmSave) {
+        return
+      }
+      const uploadPromise = new Promise((resolve, reject) => {
+        ;(async () => {
+          try {
+            const user = auth.currentUser
+            const userId = user.uid
+            const docRef = doc(db, "users", userId)
+            updateDoc(docRef, formData)
+            resolve({ docRef })
+          } catch (err) {
+            reject(err)
+            alert(err)
+          }
+        })()
+      })
+
+      toast
+        .promise(
+          // the promise it self
+          uploadPromise,
+          {
+            // promise progress
+            pending: t("uploadingMessage"),
+            // promise success
+            success: t("addedAlert"),
+            // promise filer
+            error: t("notAddedAlert"),
+          },
+          {
+            // allows for more complex toast message workflows where subsequent toast messages depend
+            success: ({ docRef }) => ({
+              userToastId: docRef.id,
+            }),
+          }
+        )
+        .then(() => {
+          setFormData({
+            firstName: "",
+            surname: "",
+            email: "",
+            phoneNumber: "",
+            password: "",
+            confirmPassword: "",
+            address: "",
+            profileImg: "/images/cat-photo.svg",
+          })
+        })
+    } catch (error) {
+      alert(error)
     }
   }
 
@@ -62,6 +113,7 @@ function EditProfile({ t }) {
 
   return (
     <form onSubmit={handleSubmit}>
+      <ToastContainer />
       <div
         className='grid lg:grid-cols-2 lg:ml-36 w-[86%] overflow-y-auto gap-x-12 mt-10 lg:mt-28 mx-auto h-[577px] md:h-[744px] lg:h-[100%]'
         // dir={t("language") === "ar" ? "rtl" : "ltr"}
@@ -94,9 +146,10 @@ function EditProfile({ t }) {
             required={true}
             minLength={2}
             maxLength={50}
-            pattern='[a-zA-Z]+'
             value={formData.name}
-            onChange={(e) => setFormData({ ...formData, name: e.target.value })}
+            onChange={(e) =>
+              setFormData({ ...formData, firstName: e.target.value })
+            }
           />
 
           <Input
@@ -106,7 +159,6 @@ function EditProfile({ t }) {
             required={true}
             minLength={2}
             maxLength={50}
-            pattern='[a-zA-Z]+'
             value={formData.surname}
             onChange={(e) =>
               setFormData({ ...formData, surname: e.target.value })
@@ -142,9 +194,9 @@ function EditProfile({ t }) {
             required={true}
             minLength={8}
             maxLength={50}
-            value={formData.newPassword}
+            value={formData.password}
             onChange={(e) =>
-              setFormData({ ...formData, newPassword: e.target.value })
+              setFormData({ ...formData, password: e.target.value })
             }
           />
 
@@ -155,9 +207,9 @@ function EditProfile({ t }) {
             required={true}
             minLength={8}
             maxLength={50}
-            value={formData.confirmNewPassword}
+            value={formData.confirmPassword}
             onChange={(e) =>
-              setFormData({ ...formData, confirmNewPassword: e.target.value })
+              setFormData({ ...formData, confirmPassword: e.target.value })
             }
           />
           <Input

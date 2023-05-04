@@ -29,7 +29,7 @@ function SideBar({ handleSelectedPage, selectedPage, t }) {
                 "User Name"}
             </h2>
             <p>{"Email: " + profileData?.email || "User Email"}</p>
-            <p>{profileData?.location || "Location"}</p>
+            <p>{profileData?.address || "Location"}</p>
           </div>
           <button
             aria-label='Edit Profile'
