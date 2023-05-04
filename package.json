@@ -2,7 +2,7 @@
   "name": "codeforce-students-store",
   "author": "CodeForce Team",
   "description": "Student marketplace for affordable, second hand products.",
-  "version": "0.1.0",
+  "version": "0.1",
   "license": "MIT",
   "homepage": "recoded_student-store_codeForce-cap",
   "private": true,

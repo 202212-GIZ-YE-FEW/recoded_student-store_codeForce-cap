@@ -1,6 +1,6 @@
+import { useRouter } from "next/router"
 import { useTranslation } from "next-i18next"
 import { serverSideTranslations } from "next-i18next/serverSideTranslations"
-import { useRouter } from "next/router"
 import { useEffect } from "react"
 import { toast, ToastContainer } from "react-toastify"
 

@@ -1,12 +1,12 @@
 // ! The libraries that been used in this code
 import { doc, updateDoc } from "firebase/firestore"
 import { getStorage, ref, uploadBytes } from "firebase/storage"
-import { withTranslation } from "next-i18next"
 import dynamic from "next/dynamic"
 import Image from "next/image"
+import { withTranslation } from "next-i18next"
 import { useState } from "react"
 import PhoneInput from "react-phone-input-2"
-import { ToastContainer, toast } from "react-toastify"
+import { toast, ToastContainer } from "react-toastify"
 
 // ! The phone input default style
 import "react-phone-input-2/lib/style.css"

@@ -5,6 +5,9 @@ exports[`renders correctly 1`] = `
   onSubmit={[Function]}
 >
   <div
+    className="Toastify"
+  />
+  <div
     className="grid lg:grid-cols-2 lg:ml-36 w-[86%] overflow-y-auto gap-x-12 mt-10 lg:mt-28 mx-auto h-[577px] md:h-[744px] lg:h-[100%]"
   >
     <label
@@ -49,11 +52,9 @@ exports[`renders correctly 1`] = `
         minLength={2}
         name="name"
         onChange={[Function]}
-        pattern="[a-zA-Z]+"
         placeholder="name"
         required={true}
         type="text"
-        value=""
       />
       <input
         autoComplete="off"
@@ -62,7 +63,6 @@ exports[`renders correctly 1`] = `
         minLength={2}
         name="surname"
         onChange={[Function]}
-        pattern="[a-zA-Z]+"
         placeholder="surname"
         required={true}
         type="text"

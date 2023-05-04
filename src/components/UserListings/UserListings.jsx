@@ -1,5 +1,5 @@
-import { withTranslation } from "next-i18next"
 import Image from "next/image"
+import { withTranslation } from "next-i18next"
 
 import products from "../ProductList/products"
 

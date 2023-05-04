@@ -1,6 +1,6 @@
 import { getAuth, signOut } from "firebase/auth"
-import { withTranslation } from "next-i18next"
 import { useRouter } from "next/router"
+import { withTranslation } from "next-i18next"
 import { TbLogout } from "react-icons/tb"
 import { toast } from "react-toastify"
 
