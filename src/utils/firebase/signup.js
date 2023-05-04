@@ -49,7 +49,7 @@ export default async function signUp(
         toast.error("Already exists")
       } else {
         await createUserDoc(userId, firstName, surname, user.email, schoolName)
-        toast.success("Welcome to our website")
+        toast.success("Welcome to our website. You are logged in directly")
       }
     } else if (method === "google") {
       const user = await signInWithGoogle()
@@ -60,7 +60,7 @@ export default async function signUp(
         toast.error("Already exists")
       } else {
         await createUserDoc(userId, firstName, surname, user.email, schoolName)
-        toast.success("Welcome to our website")
+        toast.success("Welcome to our website. You are logged in directly")
       }
     }
   } catch (e) {

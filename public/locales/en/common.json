@@ -17,6 +17,6 @@
   "edit-profile": "Edit Profile",
   "my-listing": "My Listing",
   "my-orders": "My Orders",
-  "signout": "User signed out successfully",
+  "signout": "Signed out successfully",
   "fSignout": "Failed to sign out user"
 }

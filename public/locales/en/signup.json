@@ -22,5 +22,7 @@
   "or": "or",
   "hey": "Hey",
   "signed": "we think you already Signed up !",
-  "you": "you"
+  "you": "you",
+  "exist": "Already exist",
+  "welcome": "Welcome to our website. You are logged in directly"
 }

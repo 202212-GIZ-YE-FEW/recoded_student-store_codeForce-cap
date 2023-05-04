@@ -10,7 +10,6 @@ import {
   AiOutlineSearch,
 } from "react-icons/ai"
 import { HiHeart } from "react-icons/hi"
-
 import { RxHamburgerMenu } from "react-icons/rx"
 import { TbArrowBadgeDown } from "react-icons/tb"
 import { TfiWorld } from "react-icons/tfi"
@@ -224,6 +223,10 @@ function Navbar({ t }) {
         </div>
       </div>
       <ProgressBar
+        transitionDuration='0.3s'
+        transitionTimingFunction='linear'
+        isLabelVisible={false}
+        height='10px'
         completed={scrollProgress}
         barContainerClassName='bg-white'
       />

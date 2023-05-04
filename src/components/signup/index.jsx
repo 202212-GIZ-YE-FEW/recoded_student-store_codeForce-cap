@@ -1,6 +1,7 @@
 import DOMPurify from "dompurify"
 import { withTranslation } from "next-i18next"
 import Image from "next/image"
+import Link from "next/link"
 import { useRouter } from "next/router"
 import { useState } from "react"
 import { BsFacebook, BsGoogle, BsTwitter } from "react-icons/bs"
@@ -52,14 +53,15 @@ function Signup({ t }) {
 
     try {
       await signupValidation.validate(formData, { abortEarly: false })
+      toast.warning("Pleas wait") // set loading state to true while the API call is in progress
       const { firstName, surname, email, schoolName, password } = formData
 
       // Hash password using bcrypt
-      // const hashedPassword = await bcrypt.hash(password, 10);
+      // const hashedPassword = await bcrypt.hash(password, 10)
       const hashedPassword = password
 
       // No validation errors, attempt to sign up the user
-      const signUpPromise = signUp(
+      const { result, error } = await signUp(
         email,
         hashedPassword,
         firstName,
@@ -67,30 +69,29 @@ function Signup({ t }) {
         schoolName
       )
 
-      // Use toast.promise to display messages
-      const { result, error } = await toast.promise(signUpPromise, {
-        pending: "Please wait...",
-        success: "Signup successfully! You are logged in.",
-        error: "Signup failed. Please try again.",
-      })
-
       if (result) {
         // Wait for the user to verify their email address
         await waitForEmailVerification()
         setIsSuccess(true)
+        toast.success("Sign up successful!")
         toast.warn(
-          `Email verification sent! Please check your inbox.\nemail: \${result.email}\nemail verification status: \${result.verified}`
+          "Email verification sent! Please check your inbox.",
+          "\n email:",
+          result.email,
+          "\n email verification status:",
+          result.verified
         )
       }
 
       if (error) {
-        return toast.error(error)
+        return
       }
 
-      // Else when successful, redirect to the home page
-      router.replace("/")
+      // else when successful
+      router.replace("/").then(() => {
+        toast.done("Hi")
+      })
     } catch (err) {
-      console.log(err)
       const validationErrors = {}
       err.inner.forEach((error) => {
         validationErrors[error.path] = error.message
@@ -196,6 +197,14 @@ function Signup({ t }) {
                 />
               </div>
             </form>
+            <div className='mb-4 text-xl text-[#647581]'>
+              <p>
+                {t("have-an-account")}{" "}
+                <Link href='/signin' className='underline'>
+                  {t("sign-in")}
+                </Link>
+              </p>
+            </div>
             <div className='flex items-center'>
               <div className='my-1 mr-2 h-px mt-[10px] w-[164px] bg-[#9dafbd]'></div>
               <p>{t("or")}</p>
@@ -228,14 +237,6 @@ function Signup({ t }) {
                 <p className='mx-2 text-sm md:mx-3'>{t("twitter")}</p>
               </button>
             </div>
-            <div className='mb-4 text-xl text-[#647581]'>
-              <p>{t("have-an-account")}</p>
-            </div>
-            <Button
-              buttonStyle='purpleSignUp'
-              text={t("sign-in")}
-              type='submit'
-            />
           </div>
         </div>
       </div>
