@@ -91,7 +91,7 @@ function Signin({ t }) {
               onChange={handleChange}
             />
           </label>
-          {toast.error(errors.email).email}
+          {errors.email}
           <label htmlFor='password'>
             <Input
               type='password'
@@ -102,7 +102,7 @@ function Signin({ t }) {
               onChange={handleChange}
             />
           </label>
-          {toast.error(errors.password).password}
+          {errors.password}
           <div className='my-4 gap-1 flex-row flex lg:justify-center'>
             <Button
               className='orangeSignIn'
