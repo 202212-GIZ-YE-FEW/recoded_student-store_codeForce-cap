@@ -18,5 +18,7 @@
   "my-listing": "My Listing",
   "my-orders": "My Orders",
   "signout": "Signed out successfully",
-  "fSignout": "Failed to sign out user"
+  "fSignout": "Failed to sign out user",
+  "logout": "Logout",
+  "profile": "Profile"
 }

@@ -25,7 +25,7 @@ function SignOut({ t }) {
   return (
     <span className='block px-4 py-2 hover:bg-gray-100 w-full text-left cursor-pointer'>
       <span className='flex items-center gap-2'>
-        <button onClick={handleSignOut}>Logout</button>
+        <button onClick={handleSignOut}>{t("logout")}</button>
         <TbLogout />
       </span>
     </span>

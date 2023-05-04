@@ -1,5 +1,5 @@
-import Image from "next/image"
 import { withTranslation } from "next-i18next"
+import Image from "next/image"
 
 import products from "../ProductList/products"
 
@@ -15,7 +15,7 @@ function UserListings({ t }) {
             >
               <Image
                 className='rounded-t-lg shadow-lg w-full'
-                src='/productImg.png'
+                src='/images/productImg.png'
                 alt='...'
                 width={1920}
                 height={1080}

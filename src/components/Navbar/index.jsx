@@ -189,7 +189,7 @@ function Navbar({ t }) {
                           className='block px-4 py-2 hover:bg-gray-100'
                         >
                           <span className='flex items-center gap-2'>
-                            Profile
+                            {t("profile")}
                             <AiOutlineProfile />
                           </span>
                         </Link>
