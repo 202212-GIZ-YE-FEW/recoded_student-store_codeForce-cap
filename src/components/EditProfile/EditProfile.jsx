@@ -1,5 +1,6 @@
 // ! The libraries that been used in this code
 import { doc, updateDoc } from "firebase/firestore"
+import { getStorage, ref, uploadBytes } from "firebase/storage"
 import { withTranslation } from "next-i18next"
 import dynamic from "next/dynamic"
 import Image from "next/image"
@@ -31,8 +32,41 @@ function EditProfile({ t }) {
     password: "",
     confirmPassword: "",
     address: "",
-    profileImg: "/images/cat-photo.svg",
+    profileImg: { file: null, url: "/images/cat-photo.svg" },
   })
+
+  // * Browser image uploader
+  const uploadedImgHandler = (event) => {
+    const file = event.target.files[0]
+    const reader = new FileReader()
+    reader.readAsDataURL(file)
+    reader.onloadend = () => {
+      setFormData({
+        ...formData,
+        profileImg: {
+          file: file,
+          url: reader.result,
+        },
+      }) // update the profile image in the form data with the user-uploaded image
+    }
+  }
+
+  // firebase Image uploader
+  const firebaseImgUploader = async () => {
+    try {
+      const storage = getStorage()
+      const user = auth.currentUser
+      const userId = user.uid
+      const file = formData.profileImg.file
+      const storageRef = ref(storage, `users/${userId}/${file.name}`)
+      const snapshot = await uploadBytes(storageRef, file)
+      const url = await snapshot.ref.getDownloadURL()
+      return url
+    } catch (error) {
+      console.error(error)
+      return null
+    }
+  }
 
   // * Form submitting handler
   const handleSubmit = async (event) => {
@@ -53,10 +87,18 @@ function EditProfile({ t }) {
       const uploadPromise = new Promise((resolve, reject) => {
         ;(async () => {
           try {
+            const profileImgUrl = await firebaseImgUploader()
             const user = auth.currentUser
             const userId = user.uid
             const docRef = doc(db, "users", userId)
-            updateDoc(docRef, formData)
+            const updatedForm = {
+              ...formData,
+              profileImg: {
+                file: null,
+                url: profileImgUrl,
+              },
+            }
+            updateDoc(docRef, updatedForm)
             resolve({ docRef })
           } catch (err) {
             reject(err)
@@ -93,21 +135,11 @@ function EditProfile({ t }) {
             password: "",
             confirmPassword: "",
             address: "",
-            profileImg: "/images/cat-photo.svg",
+            profileImg: { file: null, url: "/images/cat-photo.svg" },
           })
         })
     } catch (error) {
       alert(error)
-    }
-  }
-
-  // * Uploaded Image Handler
-  const uploadedImgHandler = (event) => {
-    const file = event.target.files[0]
-    const reader = new FileReader()
-    reader.readAsDataURL(file)
-    reader.onloadend = () => {
-      setFormData({ ...formData, profileImg: reader.result }) // update the profile image in the form data with the user-uploaded image
     }
   }
 
@@ -124,7 +156,7 @@ function EditProfile({ t }) {
         >
           <Image
             className='rounded-full mx-auto mb-10'
-            src={formData.profileImg}
+            src={formData.profileImg.url}
             alt='...'
             width={274}
             height={275}
