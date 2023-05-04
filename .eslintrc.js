@@ -1,7 +1,7 @@
 module.exports = {
   env: {
     browser: true,
-    es2021: true,
+    es2022: true,
     node: true,
     jest: true,
   },
@@ -14,6 +14,10 @@ module.exports = {
     "plugin:storybook/recommended",
     "plugin:storybook/recommended",
   ],
+  parserOptions: {
+    ecmaVersion: 2022,
+    sourceType: "module",
+  },
   rules: {
     "no-unused-vars": [
       1,

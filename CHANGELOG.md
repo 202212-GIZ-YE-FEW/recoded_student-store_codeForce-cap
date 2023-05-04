@@ -41,7 +41,7 @@ This changelog is manually generated and not accurate with the package.json, onl
 
 - #### ESLint Curly Brace Rule
 
-    New autofixable rule
+    New auto-fixable rule
     
     ```tsx
     props={'hi'}
@@ -61,9 +61,9 @@ This changelog is manually generated and not accurate with the package.json, onl
 
 ### Improvements & Bug Fixes
 
-- #### Unused Import ESlint Autofix
+- #### Unused Import ESlint Auto-fix
 
-    Unused import will automatically be removed by the ESlint autofix.
+    Unused import will automatically be removed by the ESlint auto-fix.
 
 - #### Renamed CustomLink to UnderlineLink
 
@@ -189,7 +189,7 @@ This changelog is manually generated and not accurate with the package.json, onl
 
     Classes are sorted using [prettier-plugin-sort-class-names](https://github.com/PutziSan/prettier-plugin-sort-class-names) with custom class order on [this file](https://github.com/theodorusclarence/ts-nextjs-tailwind-starter/blob/main/prettier-plugin-sort-class-names-order) and custom variant order on [prettierrc](https://github.com/theodorusclarence/ts-nextjs-tailwind-starter/blob/main/.prettierrc.js)
 
-    With this plugin, we can now safely check the order of the classes using the preconfigured lint action.
+    With this plugin, we can now safely check the order of the classes using the pre-configured lint action.
 
 ## 0.2.0 - 2021-11-10
 
@@ -221,7 +221,7 @@ This changelog is manually generated and not accurate with the package.json, onl
 
 - #### CustomLink Component
 
-    ![customlink](https://user-images.githubusercontent.com/55318172/129183546-4e8c2059-0493-4459-a1e9-755fbd32fe39.gif)
+    ![costume-link](https://user-images.githubusercontent.com/55318172/129183546-4e8c2059-0493-4459-a1e9-755fbd32fe39.gif)
 
 
 - #### Absolute Import
