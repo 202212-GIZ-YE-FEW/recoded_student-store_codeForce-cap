@@ -6,12 +6,12 @@ import { HiOutlineChip, HiOutlineX } from "react-icons/hi"
 import { MdTwoWheeler } from "react-icons/md"
 import { TbBook, TbSofa } from "react-icons/tb"
 
-import { useGeneralCollection } from "@/utils/store"
+import { useGeneralListings } from "@/utils/store"
 
 import Highlighter from "../highlighter"
 
 function FavProducts({ t }) {
-  const { data } = useGeneralCollection()
+  const { data } = useGeneralListings()
   // Define state variables for favorite products and selected category test
   const [FavProducts, setFavoriteProducts] = useState([])
   useEffect(() => {

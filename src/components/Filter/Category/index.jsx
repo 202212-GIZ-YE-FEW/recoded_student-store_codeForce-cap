@@ -3,13 +3,13 @@ import { useState } from "react"
 
 import ProductList from "@/components/ProductList"
 
-import { useGeneralCollection } from "@/utils/store"
+import { useGeneralListings } from "@/utils/store"
 
 // import products from "@/components/ProductList/products"
 import Buttons from "../Buttons"
 
 function CategoryFilter() {
-  const { data } = useGeneralCollection()
+  const { data } = useGeneralListings()
   const filters = [
     {
       filter: "Book",

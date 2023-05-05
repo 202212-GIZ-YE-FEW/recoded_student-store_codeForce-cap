@@ -2,10 +2,10 @@ import { withTranslation } from "next-i18next"
 import Image from "next/image"
 import { AiOutlineHeart } from "react-icons/ai"
 
-import { useGeneralCollection } from "@/utils/store"
+import { useGeneralListings } from "@/utils/store"
 
 function ProductList({ selectedFilter, t }) {
-  const { data, error } = useGeneralCollection()
+  const { data, error } = useGeneralListings()
   // Remove duplicates from the products array
   if (error) {
     return <div>Error: {error.message}</div>

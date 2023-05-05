@@ -1,4 +1,4 @@
-import { collection, doc, getDoc, onSnapshot } from "firebase/firestore"
+import { collection, doc, getDoc, onSnapshot, query } from "firebase/firestore"
 import { getDownloadURL, ref } from "firebase/storage"
 import { createContext, useContext, useEffect, useState } from "react"
 import { toast } from "react-toastify"
@@ -27,7 +27,11 @@ export const StoreProvider = ({ children }) => {
     loading,
   }
 
-  return <StoreContext.Provider value={value}>{children}</StoreContext.Provider>
+  return (
+    <StoreContext.Provider value={value} isLoggedIn={isLoggedIn}>
+      {children}
+    </StoreContext.Provider>
+  )
 }
 
 export const useAuth = () => {
@@ -89,7 +93,7 @@ export function useDefaultImage() {
   return defaultImageURL
 }
 
-export const useGeneralCollection = () => {
+export const useGeneralListings = () => {
   const [data, setData] = useState([])
   const [error, setError] = useState(null)
 
@@ -113,4 +117,27 @@ export const useGeneralCollection = () => {
   }, [])
 
   return { data, error }
+}
+
+export const useUserListings = () => {
+  const [data, setData] = useState([])
+  const [loading, setLoading] = useState(true)
+  const user = auth.currentUser
+  const userId = user.uid
+  useEffect(() => {
+    const userCollection = collection(db, "users", userId, "userListings")
+    const q = query(userCollection)
+    const unsubscribe = onSnapshot(q, (snapshot) => {
+      const fetchedListings = snapshot.docs.map((doc) => ({
+        id: doc.id,
+        ...doc.data(),
+      }))
+      setData(fetchedListings)
+      setLoading(false)
+    })
+    return () => {
+      unsubscribe()
+    }
+  }, [userId])
+  return { data, loading }
 }
