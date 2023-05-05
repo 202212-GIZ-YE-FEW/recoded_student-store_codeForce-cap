@@ -1,5 +1,5 @@
 import DOMPurify from "dompurify"
-import { addDoc, collection } from "firebase/firestore"
+import { addDoc, collection, orderBy } from "firebase/firestore"
 import { getDownloadURL, ref, uploadBytes } from "firebase/storage"
 import { useTranslation, withTranslation } from "next-i18next"
 import Image from "next/image"
@@ -129,14 +129,24 @@ function ListingItems() {
               }
             }
             // user collection that will be used to fetch the user listed items
-            const userCollection = collection(db, "users", uid, "userListings")
+            const userCollection = collection(
+              db,
+              "users",
+              uid,
+              "userListings",
+              orderBy("createdAt")
+            )
             const userDocRef = await addDoc(
               userCollection,
               newFormWithImagesUrls
             )
 
             // general collection that will be used to fetch the user listed items in the home page
-            const generalCollection = collection(db, "generalListings")
+            const generalCollection = collection(
+              db,
+              "generalListings",
+              orderBy("createdAt")
+            )
             const generalDocRef = await addDoc(
               generalCollection,
               newFormWithImagesUrls
