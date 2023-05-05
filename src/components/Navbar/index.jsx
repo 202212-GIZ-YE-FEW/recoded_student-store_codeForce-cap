@@ -18,12 +18,13 @@ import styles from "./Navbar.module.css"
 
 import { auth } from "@/utils/firebase/config"
 import SignOut from "@/utils/firebase/signout"
-import { useProfileData } from "@/utils/store"
+import { useAuth, useProfileData } from "@/utils/store"
 
 function Navbar({ t }) {
   const [languages, setLanguages] = useState(false)
   const [open, setOpen] = useState(false)
   const [user] = useAuthState(auth)
+  const { isLoggedIn } = useAuth()
   const [scrollProgress, setScrollProgress] = useState(0)
   const userName = useProfileData()
 
@@ -207,7 +208,7 @@ function Navbar({ t }) {
                 </Link>
               )}
 
-              <Link href='/listing'>
+              <Link href={isLoggedIn ? "/listing" : "/signin"}>
                 <div className='bg-purple-light py-2 px-5 text-white rounded-3xl text-sm hover:bg-violet-800 transition-all cursor-pointer'>
                   {t("sell-items")}
                 </div>
