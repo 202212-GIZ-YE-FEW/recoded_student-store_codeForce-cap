@@ -8,26 +8,26 @@ import { useGeneralCollection } from "@/utils/store"
 // import products from "@/components/ProductList/products"
 import Buttons from "../Buttons"
 
-function CategoryFilter({ t }) {
+function CategoryFilter() {
   const { data } = useGeneralCollection()
   const filters = [
     {
-      filter: t("filter-one"),
+      filter: "Book",
       image: "/images/Book.png",
       alt: "Book",
     },
     {
-      filter: t("filter-two"),
+      filter: "Furniture",
       image: "/images/Furniture.png",
       alt: "Furniture",
     },
     {
-      filter: t("filter-three"),
+      filter: "Electronics",
       image: "/images/Electronic.png",
       alt: "Electronics",
     },
     {
-      filter: t("filter-four"),
+      filter: "Two-wheeler",
       image: "/images/Two-wheeler.png",
       alt: "Two-wheeler",
     },
