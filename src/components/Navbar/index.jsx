@@ -186,7 +186,7 @@ function Navbar({ t }) {
                         <p>{userName?.firstName || "user"}</p>
                         <hr className='bg-purple p-[1px]' />
                         <Link
-                          href='/profile'
+                          href={isLoggedIn ? "/profile" : "/signup"}
                           className='block px-4 py-2 hover:bg-gray-100'
                         >
                           <span className='flex items-center gap-2'>

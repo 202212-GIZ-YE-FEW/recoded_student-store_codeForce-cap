@@ -24,5 +24,6 @@
   "signed": "we think you already Signed up !",
   "you": "you",
   "exist": "Already exist",
-  "welcome": "Welcome to our website. You are logged in directly"
+  "welcome": "Welcome to our website. You are logged in directly",
+  "notFound": "we think you don't have a profile so why don't you create one ??"
 }
