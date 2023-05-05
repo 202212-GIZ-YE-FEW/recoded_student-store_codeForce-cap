@@ -11,7 +11,7 @@ import products from "../ProductList/products"
 
 function FavProducts({ t }) {
   // Define state variables for favorite products and selected category test
-  const [FavProducts, setFavoriteProducts] = useState(products({ t }))
+  const [FavProducts, setFavoriteProducts] = useState(products())
   const [selectedCategory, setSelectedCategory] = useState("All")
 
   // Function to remove a product from the favorite products list
@@ -26,12 +26,12 @@ function FavProducts({ t }) {
   const handleCategoryChange = (category) => {
     // Set the state of the selected category to the new category value
     setSelectedCategory(category)
-    if (category === t("all")) {
+    if (category === "All") {
       // If the new category is "All", set the state of the favorite products list to the original list of products
-      setFavoriteProducts(products({ t }))
+      setFavoriteProducts(products())
     } else {
       // Otherwise, filter the original list of products to include only those in the selected category
-      const filteredProducts = products({ t }).filter(
+      const filteredProducts = products().filter(
         (product) => product.category === category
       )
       // Set the state of the favorite products list to the filtered list of products
@@ -51,7 +51,7 @@ function FavProducts({ t }) {
         </h2>
         <div className='flex flex-wrap justify-center py-4'>
           <button
-            onClick={() => handleCategoryChange(t("all"))}
+            onClick={() => handleCategoryChange("All")}
             className={`bg-gray-200 hover:bg-gray-300 text-gray-800 font-bold py-2 px-4 rounded-full mr-4 mb-4 transition-all duration-300 ease-in-out  focus:ring-2 focus:ring-offset-2 focus:ring-gray-500 flex justify-around items-center w-16 shadow-md  ${
               selectedCategory === "All" &&
               " bg-purple !text-white hover:!bg-violet-800"
@@ -60,7 +60,7 @@ function FavProducts({ t }) {
             {t("all")}
           </button>
           <button
-            onClick={() => handleCategoryChange(t("filter-three"))}
+            onClick={() => handleCategoryChange("Electronics")}
             className={`bg-gray-200 hover:bg-gray-300 text-gray-800 font-bold py-2 px-4 rounded-full mr-4 mb-4 transition-all duration-300 ease-in-out focus:ring-2 focus:ring-offset-2 focus:ring-gray-500 flex justify-around items-center w-36 shadow-md min-w-[130px] max-xs:flex-col ${
               selectedCategory === "Electronics" &&
               " bg-purple !text-white hover:!bg-violet-800"
@@ -79,7 +79,7 @@ function FavProducts({ t }) {
             Clothes <GiClothes className='text-2xl' />
           </button> */}
           <button
-            onClick={() => handleCategoryChange(t("filter-one"))}
+            onClick={() => handleCategoryChange("Books")}
             className={`bg-gray-200 hover:bg-gray-300 text-gray-800 font-bold py-2 px-4 rounded-full mr-4 mb-4 transition-all duration-300 ease-in-out focus:ring-2 focus:ring-offset-2 focus:ring-gray-500 flex  justify-around items-center w-32 shadow-md min-w-[110px] ${
               selectedCategory === "Books" &&
               " bg-purple !text-white hover:!bg-violet-800"
@@ -89,7 +89,7 @@ function FavProducts({ t }) {
             <TbBook className='text-2xl' />
           </button>
           <button
-            onClick={() => handleCategoryChange(t("filter-four"))}
+            onClick={() => handleCategoryChange("Two-wheeler")}
             className={`bg-gray-200 hover:bg-gray-300 text-gray-800 font-bold py-2 px-4 rounded-full mr-4 mb-4 transition-all duration-300 ease-in-out focus:ring-2 focus:ring-offset-2 focus:ring-gray-500 flex justify-around items-center w-44 shadow-md min-w-[150px] max-xs:flex-col
             ${
               selectedCategory === "Two-wheeler" &&
@@ -99,7 +99,7 @@ function FavProducts({ t }) {
             {t("filter-four")} <MdTwoWheeler className='text-2xl' />
           </button>
           <button
-            onClick={() => handleCategoryChange(t("filter-two"))}
+            onClick={() => handleCategoryChange("Furniture")}
             className={`bg-gray-200 hover:bg-gray-300 text-gray-800 font-bold py-2 px-4 rounded-full mr-4 mb-4 transition-all duration-300 ease-in-out focus:ring-2 focus:ring-offset-2 focus:ring-gray-500 flex justify-around items-center w-40 shadow-md min-w-[150px]
             ${
               selectedCategory === "Furniture" &&
