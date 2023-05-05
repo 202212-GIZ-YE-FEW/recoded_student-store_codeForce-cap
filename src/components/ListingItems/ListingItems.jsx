@@ -22,10 +22,10 @@ function ListingItems() {
   const [errors, setErrors] = useState({})
   // Form info
   const [formData, setFormData] = useState({
-    primaryImage: { file: null, url: "/images/emptyImage.png" },
-    secondaryImage: { file: null, url: "/images/emptyImage.png" },
-    tertiaryImage: { file: null, url: "/images/emptyImage.png" },
-    quaternaryImage: { file: null, url: "/images/emptyImage.png" },
+    primaryImage: { file: "", url: "/images/emptyImage.png" },
+    secondaryImage: { file: "", url: "/images/emptyImage.png" },
+    tertiaryImage: { file: "", url: "/images/emptyImage.png" },
+    quaternaryImage: { file: "", url: "/images/emptyImage.png" },
     type: "",
     category: "",
     productName: "",
@@ -64,6 +64,9 @@ function ListingItems() {
 
   // firebase Image uploader
   async function imageFirebaseUploader(imageField) {
+    if (!imageField) {
+      return ""
+    }
     const image = formData[imageField]
     const productName = formData.productName.toLowerCase().replace(/\s+/g, "-")
     const storageRef = ref(storage, `images/${productName}/${image.file.name}`)
@@ -111,7 +114,20 @@ function ListingItems() {
               tertiaryImage: { url: tertiaryImageURL },
               quaternaryImage: { url: quaternaryImageURL },
             }
-
+            if (primaryImageURL !== "") {
+              newFormWithImagesUrls.primaryImage = { url: primaryImageURL }
+            }
+            if (secondaryImageURL !== "") {
+              newFormWithImagesUrls.secondaryImage = { url: secondaryImageURL }
+            }
+            if (tertiaryImageURL !== "") {
+              newFormWithImagesUrls.tertiaryImage = { url: tertiaryImageURL }
+            }
+            if (quaternaryImageURL !== "") {
+              newFormWithImagesUrls.quaternaryImage = {
+                url: quaternaryImageURL,
+              }
+            }
             // user collection that will be used to fetch the user listed items
             const userCollection = collection(db, "users", uid, "userListings")
             const userDocRef = await addDoc(

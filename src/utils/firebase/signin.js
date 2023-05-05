@@ -15,8 +15,6 @@ export default async function signIn(email, password, method = "email") {
 
       if (!userDoc.exists()) {
         toast.warn("User not found")
-      } else {
-        toast.success("Welcome back")
       }
     } else if (method === "facebook") {
       const user = await signInWithFacebook()
@@ -26,8 +24,6 @@ export default async function signIn(email, password, method = "email") {
       if (!userDoc.exists()) {
         await createUserDoc(userId, user.displayName, "", user.email, "")
       }
-
-      toast.success("Welcome back")
     } else if (method === "google") {
       const user = await signInWithGoogle()
       const userId = user.uid
@@ -36,8 +32,6 @@ export default async function signIn(email, password, method = "email") {
       if (!userDoc.exists()) {
         await createUserDoc(userId, user.displayName, "", user.email, "")
       }
-
-      toast.success("Welcome back")
     }
   } catch (e) {
     error = e
