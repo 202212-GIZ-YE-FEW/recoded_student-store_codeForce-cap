@@ -1,4 +1,4 @@
-import { doc, getDoc } from "firebase/firestore"
+import { collection, doc, getDoc, onSnapshot } from "firebase/firestore"
 import { getDownloadURL, ref } from "firebase/storage"
 import { createContext, useContext, useEffect, useState } from "react"
 import { toast } from "react-toastify"
@@ -87,4 +87,30 @@ export function useDefaultImage() {
   }, [])
 
   return defaultImageURL
+}
+
+export const useGeneralCollection = () => {
+  const [data, setData] = useState([])
+  const [error, setError] = useState(null)
+
+  useEffect(() => {
+    const generalCollection = collection(db, "generalListings")
+    const unsubscribe = onSnapshot(
+      generalCollection,
+      (snapshot) => {
+        const fetchedData = snapshot.docs.map((doc) => ({
+          id: doc.id,
+          ...doc.data(),
+        }))
+        setData(fetchedData)
+      },
+      (error) => {
+        setError(error)
+      }
+    )
+
+    return () => unsubscribe()
+  }, [])
+
+  return { data, error }
 }

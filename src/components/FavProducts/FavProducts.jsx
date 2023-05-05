@@ -1,17 +1,25 @@
-import Image from "next/image"
 import { withTranslation } from "next-i18next"
-import { useState } from "react"
+import Image from "next/image"
+import { useEffect, useState } from "react"
 import { AiFillHeart } from "react-icons/ai"
 import { HiOutlineChip, HiOutlineX } from "react-icons/hi"
 import { MdTwoWheeler } from "react-icons/md"
 import { TbBook, TbSofa } from "react-icons/tb"
 
+import { useGeneralCollection } from "@/utils/store"
+
 import Highlighter from "../highlighter"
-import products from "../ProductList/products"
 
 function FavProducts({ t }) {
+  const { data } = useGeneralCollection()
   // Define state variables for favorite products and selected category test
-  const [FavProducts, setFavoriteProducts] = useState(products({ t }))
+  const [FavProducts, setFavoriteProducts] = useState([])
+  useEffect(() => {
+    if (data) {
+      setFavoriteProducts(data)
+    }
+  }, [data])
+
   const [selectedCategory, setSelectedCategory] = useState("All")
 
   // Function to remove a product from the favorite products list
@@ -28,10 +36,10 @@ function FavProducts({ t }) {
     setSelectedCategory(category)
     if (category === t("all")) {
       // If the new category is "All", set the state of the favorite products list to the original list of products
-      setFavoriteProducts(products({ t }))
+      setFavoriteProducts(data)
     } else {
       // Otherwise, filter the original list of products to include only those in the selected category
-      const filteredProducts = products({ t }).filter(
+      const filteredProducts = data.filter(
         (product) => product.category === category
       )
       // Set the state of the favorite products list to the filtered list of products
@@ -115,14 +123,14 @@ function FavProducts({ t }) {
         {FavProducts.map((product) => (
           <div
             key={product.id}
-            className='relative bg-white rounded-lg overflow-hidden shadow-md group transform transition-all duration-300 ease-in-out hover:scale-95'
+            className='relative flex flex-col justify-between bg-white rounded-lg overflow-hidden shadow-md group transform transition-all duration-300 ease-in-out hover:scale-95'
           >
             <div className='relative overflow-hidden'>
               <Image
-                src={product.images}
-                alt={product.name}
-                width={236}
-                height={193.88}
+                src={product.primaryImage.url}
+                alt={product.productName}
+                width={258}
+                height={250}
                 className='h-48 sm:h-56 md:h-64 w-full object-cover'
               />
               <div className='absolute top-2 right-2 z-10'>
@@ -142,14 +150,14 @@ function FavProducts({ t }) {
             <div className='mx-3 text-center'>
               <div className='info flex justify-between my-4 mx-3'>
                 <div className='text-left'>
-                  <h2 className='font-semibold'>{product.name}</h2>
+                  <h2 className='font-semibold'>{product.productName}</h2>
                   <p className='font-extralight text-xs rtl:text-right'>
                     {product.category}
                   </p>
                 </div>
                 <div>
                   <h2 className='font-extrabold text-xl'>${product.price}</h2>
-                  <p className='font-extralight text-xs'>{product.made_city}</p>
+                  <p className='font-extralight text-xs'>{product.location}</p>
                 </div>
               </div>
             </div>

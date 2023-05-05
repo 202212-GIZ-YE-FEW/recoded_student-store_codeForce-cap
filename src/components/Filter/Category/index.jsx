@@ -2,11 +2,14 @@ import { withTranslation } from "next-i18next"
 import { useState } from "react"
 
 import ProductList from "@/components/ProductList"
-import products from "@/components/ProductList/products"
 
+import { useGeneralCollection } from "@/utils/store"
+
+// import products from "@/components/ProductList/products"
 import Buttons from "../Buttons"
 
 function CategoryFilter({ t }) {
+  const { data } = useGeneralCollection()
   const filters = [
     {
       filter: t("filter-one"),
@@ -37,7 +40,7 @@ function CategoryFilter({ t }) {
   return (
     <div>
       <Buttons filters={filters} handleCategoryFilter={handleCategoryFilter} />
-      <ProductList selectedFilter={selectedFilter} products={products} />
+      <ProductList selectedFilter={selectedFilter} products={data} />
     </div>
   )
 }
