@@ -8,7 +8,7 @@ import Link from "next/link"
 function ProductList({ selectedFilter, t }) {
   // Remove duplicates from the products array
   const uniqueProducts = [
-    ...new Set(Products({ t }).map((product) => JSON.stringify(product))),
+    ...new Set(Products().map((product) => JSON.stringify(product))),
   ].map((product) => JSON.parse(product))
 
   // Filter the products based on the selected filter (if any)

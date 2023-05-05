@@ -19,7 +19,7 @@ exports[`renders correctly 1`] = `
           className="relative overflow-hidden"
         >
           <img
-            alt="name-product"
+            alt="Moog Synthesizer"
             className="rounded-t-lg shadow-lg w-full "
             data-nimg="1"
             decoding="async"
@@ -75,12 +75,12 @@ exports[`renders correctly 1`] = `
               <h2
                 className="font-semibold"
               >
-                name-product
+                Moog Synthesizer
               </h2>
               <p
                 className="font-extralight text-xs rtl:text-right"
               >
-                filter-one
+                Books
               </p>
             </div>
             <div>
@@ -93,7 +93,7 @@ exports[`renders correctly 1`] = `
               <p
                 className="font-extralight text-xs"
               >
-                made-city
+                Istanbul / Turkey
               </p>
             </div>
           </div>
@@ -113,7 +113,7 @@ exports[`renders correctly 1`] = `
           className="relative overflow-hidden"
         >
           <img
-            alt="name-product"
+            alt="Moog Synthesizer"
             className="rounded-t-lg shadow-lg w-full "
             data-nimg="1"
             decoding="async"
@@ -169,12 +169,12 @@ exports[`renders correctly 1`] = `
               <h2
                 className="font-semibold"
               >
-                name-product
+                Moog Synthesizer
               </h2>
               <p
                 className="font-extralight text-xs rtl:text-right"
               >
-                filter-two
+                Furniture
               </p>
             </div>
             <div>
@@ -187,7 +187,7 @@ exports[`renders correctly 1`] = `
               <p
                 className="font-extralight text-xs"
               >
-                made-city
+                Istanbul / Turkey
               </p>
             </div>
           </div>
@@ -207,7 +207,7 @@ exports[`renders correctly 1`] = `
           className="relative overflow-hidden"
         >
           <img
-            alt="name-product"
+            alt="Moog Synthesizer"
             className="rounded-t-lg shadow-lg w-full "
             data-nimg="1"
             decoding="async"
@@ -263,12 +263,12 @@ exports[`renders correctly 1`] = `
               <h2
                 className="font-semibold"
               >
-                name-product
+                Moog Synthesizer
               </h2>
               <p
                 className="font-extralight text-xs rtl:text-right"
               >
-                filter-two
+                Furniture
               </p>
             </div>
             <div>
@@ -281,7 +281,7 @@ exports[`renders correctly 1`] = `
               <p
                 className="font-extralight text-xs"
               >
-                made-city
+                Istanbul / Turkey
               </p>
             </div>
           </div>
@@ -301,7 +301,7 @@ exports[`renders correctly 1`] = `
           className="relative overflow-hidden"
         >
           <img
-            alt="name-product"
+            alt="Moog Synthesizer"
             className="rounded-t-lg shadow-lg w-full "
             data-nimg="1"
             decoding="async"
@@ -357,12 +357,12 @@ exports[`renders correctly 1`] = `
               <h2
                 className="font-semibold"
               >
-                name-product
+                Moog Synthesizer
               </h2>
               <p
                 className="font-extralight text-xs rtl:text-right"
               >
-                filter-three
+                Electronics
               </p>
             </div>
             <div>
@@ -375,7 +375,7 @@ exports[`renders correctly 1`] = `
               <p
                 className="font-extralight text-xs"
               >
-                made-city
+                Istanbul / Turkey
               </p>
             </div>
           </div>
@@ -395,7 +395,7 @@ exports[`renders correctly 1`] = `
           className="relative overflow-hidden"
         >
           <img
-            alt="name-product"
+            alt="Moog Synthesizer"
             className="rounded-t-lg shadow-lg w-full "
             data-nimg="1"
             decoding="async"
@@ -451,12 +451,12 @@ exports[`renders correctly 1`] = `
               <h2
                 className="font-semibold"
               >
-                name-product
+                Moog Synthesizer
               </h2>
               <p
                 className="font-extralight text-xs rtl:text-right"
               >
-                filter-four
+                Two-wheeler
               </p>
             </div>
             <div>
@@ -469,7 +469,7 @@ exports[`renders correctly 1`] = `
               <p
                 className="font-extralight text-xs"
               >
-                made-city
+                Istanbul / Turkey
               </p>
             </div>
           </div>
@@ -489,7 +489,7 @@ exports[`renders correctly 1`] = `
           className="relative overflow-hidden"
         >
           <img
-            alt="name-product"
+            alt="Moog Synthesizer"
             className="rounded-t-lg shadow-lg w-full "
             data-nimg="1"
             decoding="async"
@@ -545,12 +545,12 @@ exports[`renders correctly 1`] = `
               <h2
                 className="font-semibold"
               >
-                name-product
+                Moog Synthesizer
               </h2>
               <p
                 className="font-extralight text-xs rtl:text-right"
               >
-                filter-four
+                Two-wheeler
               </p>
             </div>
             <div>
@@ -563,7 +563,7 @@ exports[`renders correctly 1`] = `
               <p
                 className="font-extralight text-xs"
               >
-                made-city
+                Istanbul / Turkey
               </p>
             </div>
           </div>
@@ -583,7 +583,7 @@ exports[`renders correctly 1`] = `
           className="relative overflow-hidden"
         >
           <img
-            alt="name-product"
+            alt="Moog Synthesizer"
             className="rounded-t-lg shadow-lg w-full "
             data-nimg="1"
             decoding="async"
@@ -639,12 +639,12 @@ exports[`renders correctly 1`] = `
               <h2
                 className="font-semibold"
               >
-                name-product
+                Moog Synthesizer
               </h2>
               <p
                 className="font-extralight text-xs rtl:text-right"
               >
-                filter-four
+                Two-wheeler
               </p>
             </div>
             <div>
@@ -657,7 +657,7 @@ exports[`renders correctly 1`] = `
               <p
                 className="font-extralight text-xs"
               >
-                made-city
+                Istanbul / Turkey
               </p>
             </div>
           </div>
@@ -677,7 +677,7 @@ exports[`renders correctly 1`] = `
           className="relative overflow-hidden"
         >
           <img
-            alt="name-product"
+            alt="Moog Synthesizer"
             className="rounded-t-lg shadow-lg w-full "
             data-nimg="1"
             decoding="async"
@@ -733,12 +733,12 @@ exports[`renders correctly 1`] = `
               <h2
                 className="font-semibold"
               >
-                name-product
+                Moog Synthesizer
               </h2>
               <p
                 className="font-extralight text-xs rtl:text-right"
               >
-                filter-four
+                Two-wheeler
               </p>
             </div>
             <div>
@@ -751,7 +751,7 @@ exports[`renders correctly 1`] = `
               <p
                 className="font-extralight text-xs"
               >
-                made-city
+                Istanbul / Turkey
               </p>
             </div>
           </div>
@@ -771,7 +771,7 @@ exports[`renders correctly 1`] = `
           className="relative overflow-hidden"
         >
           <img
-            alt="name-product"
+            alt="Moog Synthesizer"
             className="rounded-t-lg shadow-lg w-full "
             data-nimg="1"
             decoding="async"
@@ -827,12 +827,12 @@ exports[`renders correctly 1`] = `
               <h2
                 className="font-semibold"
               >
-                name-product
+                Moog Synthesizer
               </h2>
               <p
                 className="font-extralight text-xs rtl:text-right"
               >
-                filter-four
+                Two-wheeler
               </p>
             </div>
             <div>
@@ -845,7 +845,7 @@ exports[`renders correctly 1`] = `
               <p
                 className="font-extralight text-xs"
               >
-                made-city
+                Istanbul / Turkey
               </p>
             </div>
           </div>
@@ -865,7 +865,7 @@ exports[`renders correctly 1`] = `
           className="relative overflow-hidden"
         >
           <img
-            alt="name-product"
+            alt="Moog Synthesizer"
             className="rounded-t-lg shadow-lg w-full "
             data-nimg="1"
             decoding="async"
@@ -921,12 +921,12 @@ exports[`renders correctly 1`] = `
               <h2
                 className="font-semibold"
               >
-                name-product
+                Moog Synthesizer
               </h2>
               <p
                 className="font-extralight text-xs rtl:text-right"
               >
-                filter-four
+                Two-wheeler
               </p>
             </div>
             <div>
@@ -939,7 +939,7 @@ exports[`renders correctly 1`] = `
               <p
                 className="font-extralight text-xs"
               >
-                made-city
+                Istanbul / Turkey
               </p>
             </div>
           </div>
@@ -959,7 +959,7 @@ exports[`renders correctly 1`] = `
           className="relative overflow-hidden"
         >
           <img
-            alt="name-product"
+            alt="Moog Synthesizer"
             className="rounded-t-lg shadow-lg w-full "
             data-nimg="1"
             decoding="async"
@@ -1015,12 +1015,12 @@ exports[`renders correctly 1`] = `
               <h2
                 className="font-semibold"
               >
-                name-product
+                Moog Synthesizer
               </h2>
               <p
                 className="font-extralight text-xs rtl:text-right"
               >
-                filter-three
+                Electronics
               </p>
             </div>
             <div>
@@ -1033,7 +1033,7 @@ exports[`renders correctly 1`] = `
               <p
                 className="font-extralight text-xs"
               >
-                made-city
+                Istanbul / Turkey
               </p>
             </div>
           </div>
@@ -1053,7 +1053,7 @@ exports[`renders correctly 1`] = `
           className="relative overflow-hidden"
         >
           <img
-            alt="name-product"
+            alt="Moog Synthesizer"
             className="rounded-t-lg shadow-lg w-full "
             data-nimg="1"
             decoding="async"
@@ -1109,12 +1109,12 @@ exports[`renders correctly 1`] = `
               <h2
                 className="font-semibold"
               >
-                name-product
+                Moog Synthesizer
               </h2>
               <p
                 className="font-extralight text-xs rtl:text-right"
               >
-                filter-three
+                Electronics
               </p>
             </div>
             <div>
@@ -1127,7 +1127,7 @@ exports[`renders correctly 1`] = `
               <p
                 className="font-extralight text-xs"
               >
-                made-city
+                Istanbul / Turkey
               </p>
             </div>
           </div>
@@ -1147,7 +1147,7 @@ exports[`renders correctly 1`] = `
           className="relative overflow-hidden"
         >
           <img
-            alt="name-product"
+            alt="Moog Synthesizer"
             className="rounded-t-lg shadow-lg w-full "
             data-nimg="1"
             decoding="async"
@@ -1203,12 +1203,12 @@ exports[`renders correctly 1`] = `
               <h2
                 className="font-semibold"
               >
-                name-product
+                Moog Synthesizer
               </h2>
               <p
                 className="font-extralight text-xs rtl:text-right"
               >
-                filter-three
+                Electronics
               </p>
             </div>
             <div>
@@ -1221,7 +1221,7 @@ exports[`renders correctly 1`] = `
               <p
                 className="font-extralight text-xs"
               >
-                made-city
+                Istanbul / Turkey
               </p>
             </div>
           </div>
@@ -1241,7 +1241,7 @@ exports[`renders correctly 1`] = `
           className="relative overflow-hidden"
         >
           <img
-            alt="name-product"
+            alt="Moog Synthesizer"
             className="rounded-t-lg shadow-lg w-full "
             data-nimg="1"
             decoding="async"
@@ -1297,12 +1297,12 @@ exports[`renders correctly 1`] = `
               <h2
                 className="font-semibold"
               >
-                name-product
+                Moog Synthesizer
               </h2>
               <p
                 className="font-extralight text-xs rtl:text-right"
               >
-                filter-three
+                Electronics
               </p>
             </div>
             <div>
@@ -1315,7 +1315,7 @@ exports[`renders correctly 1`] = `
               <p
                 className="font-extralight text-xs"
               >
-                made-city
+                Istanbul / Turkey
               </p>
             </div>
           </div>
@@ -1335,7 +1335,7 @@ exports[`renders correctly 1`] = `
           className="relative overflow-hidden"
         >
           <img
-            alt="name-product"
+            alt="Moog Synthesizer"
             className="rounded-t-lg shadow-lg w-full "
             data-nimg="1"
             decoding="async"
@@ -1391,12 +1391,12 @@ exports[`renders correctly 1`] = `
               <h2
                 className="font-semibold"
               >
-                name-product
+                Moog Synthesizer
               </h2>
               <p
                 className="font-extralight text-xs rtl:text-right"
               >
-                filter-three
+                Electronics
               </p>
             </div>
             <div>
@@ -1409,7 +1409,7 @@ exports[`renders correctly 1`] = `
               <p
                 className="font-extralight text-xs"
               >
-                made-city
+                Istanbul / Turkey
               </p>
             </div>
           </div>
@@ -1429,7 +1429,7 @@ exports[`renders correctly 1`] = `
           className="relative overflow-hidden"
         >
           <img
-            alt="name-product"
+            alt="Moog Synthesizer"
             className="rounded-t-lg shadow-lg w-full "
             data-nimg="1"
             decoding="async"
@@ -1485,12 +1485,12 @@ exports[`renders correctly 1`] = `
               <h2
                 className="font-semibold"
               >
-                name-product
+                Moog Synthesizer
               </h2>
               <p
                 className="font-extralight text-xs rtl:text-right"
               >
-                filter-three
+                Electronics
               </p>
             </div>
             <div>
@@ -1503,7 +1503,7 @@ exports[`renders correctly 1`] = `
               <p
                 className="font-extralight text-xs"
               >
-                made-city
+                Istanbul / Turkey
               </p>
             </div>
           </div>
