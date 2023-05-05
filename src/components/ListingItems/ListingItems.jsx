@@ -144,10 +144,10 @@ function ListingItems() {
 
             // formate the form after uploading success
             setFormData({
-              primaryImage: { file: null, url: "/images/emptyImage.png" },
-              secondaryImage: { file: null, url: "/images/emptyImage.png" },
-              tertiaryImage: { file: null, url: "/images/emptyImage.png" },
-              quaternaryImage: { file: null, url: "/images/emptyImage.png" },
+              primaryImage: { file: "", url: "/images/emptyImage.png" },
+              secondaryImage: { file: "", url: "/images/emptyImage.png" },
+              tertiaryImage: { file: "", url: "/images/emptyImage.png" },
+              quaternaryImage: { file: "", url: "/images/emptyImage.png" },
               type: "",
               category: "",
               productName: "",
