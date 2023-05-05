@@ -24,12 +24,15 @@ function SideBar({ handleSelectedPage, selectedPage, t }) {
             height={171}
           />
           <div className='text-[22px]'>
-            <h2 className='font-semibold'>
-              {"Name: " + profileData?.firstName + " " + profileData?.surname ||
-                "User Name"}
-            </h2>
-            <p>{"Email: " + profileData?.email || "User Email"}</p>
-            <p>{profileData?.address || "Location"}</p>
+            <span className='flex font-semibold justify-center gap-1'>
+              <h2>Name:</h2>
+              <span className='flex gap-1'>
+                <h2> {profileData?.firstName || "User"} </h2>
+                <h2> {profileData?.surname || "Name"} </h2>
+              </span>
+            </span>
+            <p>Email: {profileData?.email || "User Email"}</p>
+            <p>Location: {profileData?.address || "User Location"}</p>
           </div>
           <button
             aria-label='Edit Profile'

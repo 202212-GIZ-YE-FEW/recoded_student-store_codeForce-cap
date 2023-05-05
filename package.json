@@ -54,7 +54,7 @@
     "react-dom": "^18.2.0",
     "react-firebase-hooks": "^5.1.1",
     "react-form-hooks": "^1.1.5",
-    "react-i18next": "^12.2.0",
+    "react-i18next": "^12.2.2",
     "react-icons": "^4.8.0",
     "react-leaflet": "^4.2.1",
     "react-phone-input-2": "^2.15.1",

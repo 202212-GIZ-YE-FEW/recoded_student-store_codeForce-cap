@@ -1,8 +1,11 @@
+import { withTranslation } from "next-i18next"
 import Image from "next/image"
 import Link from "next/link"
-import { withTranslation } from "next-i18next"
+
+import { useAuth } from "@/utils/store"
 
 function Footer({ t }) {
+  const { isLoggedIn } = useAuth()
   const goToTop = () => {
     window.scrollTo({
       top: 0,
@@ -68,7 +71,10 @@ function Footer({ t }) {
           <div className='pl-14 pt-10 md:pt-14 rtl:w-96 rtl:mr-[150px] rtl:sm:mr-[400px] rtl:lg:mr-[0px]'>
             <ul className='font-poppins text-white font-bold md:text-1xl lg:text-2xl'>
               <li className='mb-4'>
-                <Link href='/signup' className='hover:underline '>
+                <Link
+                  href={isLoggedIn ? "/" : "/signup"}
+                  className='hover:underline '
+                >
                   {t("register-for-free")}
                 </Link>
               </li>

@@ -18,7 +18,7 @@ import styles from "./Navbar.module.css"
 
 import { auth } from "@/utils/firebase/config"
 import SignOut from "@/utils/firebase/signout"
-import { useProfileData } from "@/utils/store"
+import { useAuth, useProfileData } from "@/utils/store"
 
 function Navbar({ t }) {
   const [languages, setLanguages] = useState(false)
@@ -26,6 +26,7 @@ function Navbar({ t }) {
   const [user] = useAuthState(auth)
   const [scrollProgress, setScrollProgress] = useState(0)
   const userName = useProfileData()
+  const { isLoggedIn } = useAuth()
 
   const calculateScrollProgress = () => {
     const scrollTop =
@@ -207,7 +208,7 @@ function Navbar({ t }) {
                 </Link>
               )}
 
-              <Link href='/listing'>
+              <Link href={isLoggedIn ? "/listing" : "/signup"}>
                 <div className='bg-purple-light py-2 px-5 text-white rounded-3xl text-sm hover:bg-violet-800 transition-all cursor-pointer'>
                   {t("sell-items")}
                 </div>
