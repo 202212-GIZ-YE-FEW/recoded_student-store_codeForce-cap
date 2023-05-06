@@ -17,7 +17,13 @@ function UserListings({ t }) {
       </h1>
     )
   }
-  console.log(data)
+
+  const formatDate = (timestamp) => {
+    const date = timestamp.toDate()
+    return new Intl.DateTimeFormat("en-GB").format(date)
+  }
+  console.log(data, formatDate)
+
   return (
     <section
       className='flex flex-col lg:flex-row h-[617px] md:h-[784px] lg:h-[100%] overflow-y-auto lg:bg-gradient-to-l from-zinc-800 to-slate-300'
@@ -57,7 +63,8 @@ function UserListings({ t }) {
                 <div>
                   <p>
                     <span className='font-extrabold'>{t("listing-date")}</span>{" "}
-                    {product.order_date}
+                    {/* {new Date(product.createdAt.toDate()).toLocaleDateString()} */}
+                    {formatDate(product.createdAt)}
                   </p>
                   <p>
                     <span className='font-extrabold'>{t("category")}</span>{" "}
