@@ -1,6 +1,6 @@
 // ! The libraries that been used in this code
 import { doc, updateDoc } from "firebase/firestore"
-import { getStorage, ref, uploadBytes } from "firebase/storage"
+import { getDownloadURL, ref, uploadBytes } from "firebase/storage"
 import { withTranslation } from "next-i18next"
 import dynamic from "next/dynamic"
 import Image from "next/image"
@@ -12,7 +12,8 @@ import { ToastContainer, toast } from "react-toastify"
 import "react-phone-input-2/lib/style.css"
 import "react-toastify/dist/ReactToastify.css"
 
-import { auth, db } from "@/utils/firebase/config"
+import { auth, db, storage } from "@/utils/firebase/config"
+import { useProfileData } from "@/utils/store"
 
 // ! Components import
 import Button from "../button"
@@ -23,12 +24,13 @@ const Maps = dynamic(() => import("./Maps"), {
 })
 
 function EditProfile({ t }) {
+  const profile = useProfileData()
   // * Form data handler
   const [formData, setFormData] = useState({
     firstName: "",
     surname: "",
     email: "",
-    phoneNumber: "",
+    phoneNumber: "967",
     password: "",
     confirmPassword: "",
     address: "",
@@ -41,26 +43,25 @@ function EditProfile({ t }) {
     const reader = new FileReader()
     reader.readAsDataURL(file)
     reader.onloadend = () => {
-      setFormData({
-        ...formData,
+      setFormData((prevFormData) => ({
+        ...prevFormData,
         profileImg: {
           file: file,
           url: reader.result,
         },
-      }) // update the profile image in the form data with the user-uploaded image
+      })) // update the profile image in the form data with the user-uploaded image
     }
   }
 
   // firebase Image uploader
   const firebaseImgUploader = async () => {
     try {
-      const storage = getStorage()
       const user = auth.currentUser
       const userId = user.uid
       const file = formData.profileImg.file
       const storageRef = ref(storage, `users/${userId}/${file.name}`)
-      const snapshot = await uploadBytes(storageRef, file)
-      const url = await snapshot.ref.getDownloadURL()
+      await uploadBytes(storageRef, file)
+      const url = await getDownloadURL(storageRef)
       return url
     } catch (error) {
       console.error(error)
@@ -131,7 +132,7 @@ function EditProfile({ t }) {
             firstName: "",
             surname: "",
             email: "",
-            phoneNumber: "",
+            phoneNumber: "967",
             password: "",
             confirmPassword: "",
             address: "",
@@ -156,7 +157,7 @@ function EditProfile({ t }) {
         >
           <Image
             className='rounded-full mx-auto mb-10'
-            src={formData.profileImg.url}
+            src={profile?.profileImg.url || formData.profileImg.url}
             alt='...'
             width={274}
             height={275}
@@ -174,11 +175,11 @@ function EditProfile({ t }) {
           <Input
             name='name'
             type='text'
-            placeholder={t("name")}
+            placeholder={profile?.firstName || t("name")}
             required={true}
             minLength={2}
             maxLength={50}
-            value={formData.name}
+            value={formData.firstName}
             onChange={(e) =>
               setFormData({ ...formData, firstName: e.target.value })
             }
@@ -187,7 +188,7 @@ function EditProfile({ t }) {
           <Input
             name='surname'
             type='text'
-            placeholder={t("surname")}
+            placeholder={profile?.surname || t("surname")}
             required={true}
             minLength={2}
             maxLength={50}
@@ -200,7 +201,7 @@ function EditProfile({ t }) {
           <Input
             name='email'
             type='email'
-            placeholder={t("email")}
+            placeholder={profile?.email || t("email")}
             required={true}
             maxLength={50}
             pattern='[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}'
@@ -248,7 +249,7 @@ function EditProfile({ t }) {
             className='lg:hidden block'
             name='address'
             type='text'
-            placeholder={t("address")}
+            placeholder={profile?.address || t("address")}
             required={true}
             value={formData.address}
             onChange={(e) =>

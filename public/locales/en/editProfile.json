@@ -1,5 +1,12 @@
 {
   "uploadingAlert": "Pleas wait ...",
   "addedAlert": "Profile edited successfully ",
-  "notAddedAlert": "Sorry there is an error the profile didn't edited successfully "
+  "notAddedAlert": "Sorry there is an error the profile didn't edited successfully ",
+  "name": "First name",
+  "surname": "Surname",
+  "email": "Email",
+  "new-password": "New Password",
+  "new-password-confirm": "Confirm password",
+  "address": "Address",
+  "save-changes": "Save changes ?"
 }
