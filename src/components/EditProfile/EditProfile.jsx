@@ -1,4 +1,5 @@
 // ! The libraries that been used in this code
+import { updateEmail, updatePassword } from "firebase/auth"
 import { doc, updateDoc } from "firebase/firestore"
 import { getDownloadURL, ref, uploadBytes } from "firebase/storage"
 import { withTranslation } from "next-i18next"
@@ -91,6 +92,12 @@ function EditProfile({ t }) {
             const profileImgUrl = await firebaseImgUploader()
             const user = auth.currentUser
             const userId = user.uid
+            if (formData.email !== "" && formData.email !== user.email) {
+              await updateEmail(user, formData.email)
+            }
+            if (formData.password !== "") {
+              await updatePassword(user, formData.password)
+            }
             const docRef = doc(db, "users", userId)
             const updatedForm = {
               ...formData,
@@ -103,7 +110,7 @@ function EditProfile({ t }) {
             resolve({ docRef })
           } catch (err) {
             reject(err)
-            alert(err)
+            toast.error(err)
           }
         })()
       })
@@ -140,7 +147,7 @@ function EditProfile({ t }) {
           })
         })
     } catch (error) {
-      alert(error)
+      toast.error(error)
     }
   }
 
