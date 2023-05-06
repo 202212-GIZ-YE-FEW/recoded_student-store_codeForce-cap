@@ -39,7 +39,7 @@ function EditProfile({ t }) {
     password: "",
     confirmPassword: "",
     address: "",
-    profileImg: { file: null, url: "" },
+    profileImg: { file: null, url: "/images/cat-photo.svg" },
   })
 
   // * Browser image uploader
@@ -116,6 +116,30 @@ function EditProfile({ t }) {
 
                   // Retry the email update
                   await updateEmail(user, formData.email)
+                } else if (error.code === "auth/user-mismatch") {
+                  try {
+                    // Prompt the user to re-enter their email and password
+                    const email = prompt(
+                      "rung email or password, Please re-enter again"
+                    )
+                    const password = prompt(
+                      "rung email or password, Please re-enter again"
+                    )
+
+                    // Create the credential object
+                    const credential = EmailAuthProvider.credential(
+                      email,
+                      password
+                    )
+
+                    // Reauthenticate the user
+                    await reauthenticateWithCredential(user, credential)
+
+                    // Retry the email update
+                    await updateEmail(user, formData.email)
+                  } catch (error) {
+                    console.error("Error during reauthentication:", error)
+                  }
                 } else {
                   console.error("Unhandled error:", error)
                 }
@@ -166,7 +190,7 @@ function EditProfile({ t }) {
             password: "",
             confirmPassword: "",
             address: "",
-            profileImg: { file: null, url: "" },
+            profileImg: { file: null, url: "/images/cat-photo.svg" },
           })
         })
     } catch (error) {
@@ -187,7 +211,7 @@ function EditProfile({ t }) {
         >
           <Image
             className='rounded-full mx-auto mb-10'
-            src={profile?.profileImg.url || "/images/cat-photo.svg"}
+            src={profile?.profileImg?.url || formData.profileImg.url}
             alt='...'
             width={274}
             height={275}
