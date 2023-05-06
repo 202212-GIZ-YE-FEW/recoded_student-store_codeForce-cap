@@ -24,6 +24,8 @@ function Signin({ t }) {
   })
 
   const [errors, setErrors] = useState({})
+
+  // Collect the user data from the locale storage after signing in
   useEffect(() => {
     const user = JSON.parse(localStorage.getItem("user"))
 

@@ -12,6 +12,8 @@ function SignOut({ t }) {
     try {
       await signOut(auth)
         .then(() => {
+          // Remove user data from local storage
+          localStorage.removeItem("user")
           router.push("/")
         })
         .then(() => {
