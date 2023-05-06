@@ -113,7 +113,7 @@ function EditProfile({ t }) {
           uploadPromise,
           {
             // promise progress
-            pending: t("uploadingMessage"),
+            pending: t("uploadingAlert"),
             // promise success
             success: t("addedAlert"),
             // promise filer
@@ -271,4 +271,4 @@ function EditProfile({ t }) {
   )
 }
 
-export default withTranslation("signup")(EditProfile)
+export default withTranslation("editProfile")(EditProfile)

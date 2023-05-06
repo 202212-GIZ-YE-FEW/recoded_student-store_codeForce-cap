@@ -54,6 +54,7 @@ export async function getStaticProps({ locale }) {
         "signup",
         "listingItems",
         "index",
+        "editProfile",
       ])),
       // Will be passed to the page component as props
     },
