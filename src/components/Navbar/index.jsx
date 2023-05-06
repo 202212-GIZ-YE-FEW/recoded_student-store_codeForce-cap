@@ -11,7 +11,6 @@ import {
 } from "react-icons/ai"
 import { HiHeart } from "react-icons/hi"
 import { RxHamburgerMenu } from "react-icons/rx"
-import { TbArrowBadgeDown } from "react-icons/tb"
 import { TfiWorld } from "react-icons/tfi"
 
 import styles from "./Navbar.module.css"
@@ -25,7 +24,7 @@ function Navbar({ t }) {
   const [open, setOpen] = useState(false)
   const [user] = useAuthState(auth)
   const [scrollProgress, setScrollProgress] = useState(0)
-  const userName = useProfileData()
+  const profile = useProfileData()
   const { isLoggedIn } = useAuth()
 
   const calculateScrollProgress = () => {
@@ -68,7 +67,6 @@ function Navbar({ t }) {
             onClick={() => setLanguages(!languages)}
           >
             <TfiWorld className='text-2xl text-gray-700' />
-            <TbArrowBadgeDown className='text-xl text-violet-700' />
           </div>
           <div className='relative z-50 '>
             <div
@@ -138,7 +136,6 @@ function Navbar({ t }) {
               onClick={() => setLanguages(!languages)}
             >
               <TfiWorld className='text-2xl text-gray-700' />
-              <TbArrowBadgeDown className='text-xl text-violet-700' />
             </div>
             <div className='relative'>
               <div
@@ -169,11 +166,12 @@ function Navbar({ t }) {
                     <span className='hidden md:flex items-center cursor-pointer'>
                       <Image
                         alt='User'
-                        src='/images/user-icon.png'
+                        src={
+                          profile?.profileImg?.url || "/images/cat-photo.svg"
+                        }
                         width={37}
                         height={37}
                       />
-                      <TbArrowBadgeDown className='text-xl text-violet-700' />
                     </span>
                     <button
                       onClick={() => setOpen(!open)}
@@ -183,7 +181,7 @@ function Navbar({ t }) {
                       <div
                         className={`md:absolute top-10 right-0 bg-white md:border border-gray-200 rounded-lg md:shadow-md py-2 ${styles.show}`}
                       >
-                        <p>{userName?.firstName || "user"}</p>
+                        <p>{profile?.firstName || "user"}</p>
                         <hr className='bg-purple p-[1px]' />
                         <Link
                           href={isLoggedIn ? "/profile" : "/signup"}
