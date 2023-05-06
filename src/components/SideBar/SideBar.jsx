@@ -18,7 +18,7 @@ function SideBar({ handleSelectedPage, selectedPage, t }) {
         <div className='flex flex-col justify-around text-center w-[331px] pt-10 h-[80%]'>
           <Image
             className='rounded-full mx-auto'
-            src={profileData?.imageURL || "/images/cat-photo.svg"}
+            src={profileData?.profileImg?.url || "/images/cat-photo.svg"}
             alt='...'
             width={171}
             height={171}
