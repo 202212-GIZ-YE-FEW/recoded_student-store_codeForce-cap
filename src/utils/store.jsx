@@ -44,7 +44,7 @@ export const useAuth = () => {
   }
 }
 
-export const useProfileData = async () => {
+export const useProfileData = () => {
   const { user } = useAuth()
   const [profileData, setProfileData] = useState(null)
 
