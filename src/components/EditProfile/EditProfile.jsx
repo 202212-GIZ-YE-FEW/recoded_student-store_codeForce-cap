@@ -1,5 +1,9 @@
 // ! The libraries that been used in this code
-import { updateEmail, updatePassword } from "firebase/auth"
+import {
+  EmailAuthProvider,
+  reauthenticateWithCredential,
+  updateEmail,
+} from "firebase/auth"
 import { doc, updateDoc } from "firebase/firestore"
 import { getDownloadURL, ref, uploadBytes } from "firebase/storage"
 import { withTranslation } from "next-i18next"
@@ -93,10 +97,29 @@ function EditProfile({ t }) {
             const user = auth.currentUser
             const userId = user.uid
             if (formData.email !== "" && formData.email !== user.email) {
-              await updateEmail(user, formData.email)
-            }
-            if (formData.password !== "") {
-              await updatePassword(user, formData.password)
+              try {
+                await updateEmail(user, formData.email)
+              } catch (error) {
+                if (error.code === "auth/requires-recent-login") {
+                  // Prompt the user to re-enter their email and password
+                  const email = prompt("Please re-enter your email")
+                  const password = prompt("Please re-enter your password")
+
+                  // Create the credential object
+                  const credential = EmailAuthProvider.credential(
+                    email,
+                    password
+                  )
+
+                  // Reauthenticate the user
+                  await reauthenticateWithCredential(user, credential)
+
+                  // Retry the email update
+                  await updateEmail(user, formData.email)
+                } else {
+                  console.error("Unhandled error:", error)
+                }
+              }
             }
             const docRef = doc(db, "users", userId)
             const updatedForm = {
