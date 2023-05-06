@@ -39,7 +39,7 @@ function EditProfile({ t }) {
     password: "",
     confirmPassword: "",
     address: "",
-    profileImg: { file: null, url: "/images/cat-photo.svg" },
+    profileImg: { file: null, url: "" },
   })
 
   // * Browser image uploader
@@ -166,7 +166,7 @@ function EditProfile({ t }) {
             password: "",
             confirmPassword: "",
             address: "",
-            profileImg: { file: null, url: "/images/cat-photo.svg" },
+            profileImg: { file: null, url: "" },
           })
         })
     } catch (error) {
@@ -187,7 +187,7 @@ function EditProfile({ t }) {
         >
           <Image
             className='rounded-full mx-auto mb-10'
-            src={profile?.profileImg.url || formData.profileImg.url}
+            src={profile?.profileImg.url || "/images/cat-photo.svg"}
             alt='...'
             width={274}
             height={275}
