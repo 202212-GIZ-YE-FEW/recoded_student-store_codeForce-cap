@@ -69,6 +69,7 @@ export const useProfileData = async () => {
 export const useGeneralListings = () => {
   const [data, setData] = useState([])
   const [error, setError] = useState(null)
+  const [loading, setLoading] = useState(true)
 
   useEffect(() => {
     const generalCollection = collection(db, "generalListings")
@@ -80,37 +81,39 @@ export const useGeneralListings = () => {
           ...doc.data(),
         }))
         setData(fetchedData)
+        setLoading(false)
       },
-      (error) => {
-        setError(error)
-      }
+      (error) => setError(error)
     )
 
     return () => unsubscribe()
   }, [])
 
-  return { data, error }
+  return { data, error, loading }
 }
 
 export const useUserListings = () => {
   const [data, setData] = useState([])
+  const [error, setError] = useState(null)
   const [loading, setLoading] = useState(true)
   const user = auth.currentUser
   const userId = user.uid
   useEffect(() => {
     const userCollection = collection(db, "users", userId, "userListings")
     const q = query(userCollection)
-    const unsubscribe = onSnapshot(q, (snapshot) => {
-      const fetchedListings = snapshot.docs.map((doc) => ({
-        id: doc.id,
-        ...doc.data(),
-      }))
-      setData(fetchedListings)
-      setLoading(false)
-    })
-    return () => {
-      unsubscribe()
-    }
+    const unsubscribe = onSnapshot(
+      q,
+      (snapshot) => {
+        const fetchedListings = snapshot.docs.map((doc) => ({
+          id: doc.id,
+          ...doc.data(),
+        }))
+        setData(fetchedListings)
+        setLoading(false)
+      },
+      (error) => setError(error)
+    )
+    return () => unsubscribe()
   }, [userId])
-  return { data, loading }
+  return { data, loading, error }
 }
