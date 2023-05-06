@@ -18,11 +18,11 @@ function UserListings({ t }) {
     )
   }
 
+  // Convert the firebase timestamp to extract the date from it
   const formatDate = (timestamp) => {
     const date = timestamp.toDate()
     return new Intl.DateTimeFormat("en-GB").format(date)
   }
-  console.log(data, formatDate)
 
   return (
     <section
@@ -63,7 +63,6 @@ function UserListings({ t }) {
                 <div>
                   <p>
                     <span className='font-extrabold'>{t("listing-date")}</span>{" "}
-                    {/* {new Date(product.createdAt.toDate()).toLocaleDateString()} */}
                     {formatDate(product.createdAt)}
                   </p>
                   <p>
