@@ -202,7 +202,7 @@ function EditProfile({ t }) {
     <form onSubmit={handleSubmit}>
       <ToastContainer />
       <div
-        className='grid lg:grid-cols-2 lg:ml-36 w-[86%] overflow-y-auto gap-x-12 mt-10 lg:mt-28 mx-auto h-[577px] md:h-[744px] lg:h-[100%]'
+        className='grid lg:grid-cols-2 lg:ml-36 w-[86%] overflow-y-auto gap-x-12 mt-10 lg:mt-28 mx-auto'
         // dir={t("language") === "ar" ? "rtl" : "ltr"}
       >
         <label
@@ -300,7 +300,6 @@ function EditProfile({ t }) {
             }
           />
           <Input
-            className='lg:hidden block'
             name='address'
             type='text'
             placeholder={profile?.address || t("address")}

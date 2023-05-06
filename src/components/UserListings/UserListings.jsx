@@ -14,7 +14,7 @@ function UserListings({ t }) {
       <section className='relative flex flex-col lg:flex-row h-[617px] md:h-[784px] lg:h-[100%] overflow-x-hidden lg:bg-gradient-to-l from-zinc-800 to-slate-300'>
         <h1 className='lg:text-white font-extrabold flex flex-col text-center gap-5 absolute lg:top-96 top-48 sm:right-36 lg:right-96 cursor-pointer'>
           Ohh you didn&apos;t list anything ?, don&apos;t worry you can{" "}
-          <span className='hover:underline text-2xl lg:text-slate-200 font-poppins cart-animation'>
+          <span className='underline text-2xl lg:text-slate-200 font-poppins cart-animation hover:underline-offset-8'>
             <Link href='/listing'>List a new item</Link>{" "}
           </span>
         </h1>

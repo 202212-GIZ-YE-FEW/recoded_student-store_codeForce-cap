@@ -97,8 +97,12 @@ export const useUserListings = () => {
   const [error, setError] = useState(null)
   const [loading, setLoading] = useState(true)
   const user = auth.currentUser
-  const userId = user.uid
+  const userId = user ? user.uid : null
   useEffect(() => {
+    if (!userId) {
+      setLoading(false)
+      return
+    }
     const userCollection = collection(db, "users", userId, "userListings")
     const q = query(userCollection)
     const unsubscribe = onSnapshot(

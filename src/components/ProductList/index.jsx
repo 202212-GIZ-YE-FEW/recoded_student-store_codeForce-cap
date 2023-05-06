@@ -57,8 +57,8 @@ function ProductList({ selectedFilter, t }) {
             </div>
             <div className='mx-3 text-center'>
               <div className='info flex justify-between my-4 mx-3'>
-                <div className='text-left'>
-                  <h2 className='font-semibold'>
+                <div className='text-left w-[70%] overflow-hidden'>
+                  <h2 className='font-semibold truncate'>
                     {product?.productName || "No name"}
                   </h2>
                   <p className='font-extralight text-xs rtl:text-right'>
