@@ -2,7 +2,7 @@ import { withTranslation } from "next-i18next"
 import Image from "next/image"
 import Link from "next/link"
 import { useRouter } from "next/router"
-import { useState } from "react"
+import { useEffect, useState } from "react"
 import { BsFacebook, BsGoogle, BsTwitter } from "react-icons/bs"
 import { ToastContainer, toast } from "react-toastify"
 
@@ -24,6 +24,15 @@ function Signin({ t }) {
   })
 
   const [errors, setErrors] = useState({})
+  useEffect(() => {
+    const user = JSON.parse(localStorage.getItem("user"))
+
+    if (user) {
+      router.replace("/").then(() => {
+        toast.success("Welcome back!")
+      })
+    }
+  }, [router])
 
   const handleChange = (event) => {
     const { name, value } = event.target
@@ -135,7 +144,6 @@ function Signin({ t }) {
         <div className='mb-4 text-xl text-[#647581]'>
           <p>{t("dont-have-an-account")}</p>
         </div>
-        {/* <Button className='orangeSignIn ' text='Sign-up' /> */}
         <Link
           href='/signup'
           className='h-10 w-40 lg:w-48 lg:px-5 p-1 px-4 rounded-lg border-1 bg-pumpkin text-md font-normal text-white shadow-sm text-center'
