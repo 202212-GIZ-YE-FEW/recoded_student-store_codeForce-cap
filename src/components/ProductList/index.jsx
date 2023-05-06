@@ -5,10 +5,16 @@ import { AiOutlineHeart } from "react-icons/ai"
 import { useGeneralListings } from "@/utils/store"
 
 function ProductList({ selectedFilter, t }) {
-  const { data, error } = useGeneralListings()
+  const { data, error, loading } = useGeneralListings()
   // Remove duplicates from the products array
   if (error) {
     return <div>Error: {error.message}</div>
+  }
+  if (loading) {
+    return <h1>Loading...</h1>
+  }
+  if (data.length === 0) {
+    return <h1>No data</h1>
   }
   const uniqueProducts =
     data && Array.isArray(data)
@@ -32,13 +38,13 @@ function ProductList({ selectedFilter, t }) {
       >
         {categoryFilter.map((product) => (
           <div
-            key={product.uid}
+            key={product?.uid}
             className='mx-3 mb-10 border rounded-lg cart-animation flex flex-col justify-between'
           >
             <div className='relative overflow-hidden'>
               <Image
-                src={product.primaryImage.url}
-                alt={product.productName}
+                src={product?.primaryImage.url || "/images/emptyImage.png"}
+                alt={product?.productName || "No Image"}
                 width={258}
                 height={250}
                 className='rounded-t-lg shadow-lg w-full bg-white'
@@ -52,14 +58,20 @@ function ProductList({ selectedFilter, t }) {
             <div className='mx-3 text-center'>
               <div className='info flex justify-between my-4 mx-3'>
                 <div className='text-left'>
-                  <h2 className='font-semibold'>{product.productName}</h2>
+                  <h2 className='font-semibold'>
+                    {product?.productName || "No name"}
+                  </h2>
                   <p className='font-extralight text-xs rtl:text-right'>
-                    {product.category}
+                    {product?.category || "No category"}
                   </p>
                 </div>
                 <div>
-                  <h2 className='font-extrabold text-xl'>${product.price}</h2>
-                  <p className='font-extralight text-xs'>{product.location}</p>
+                  <h2 className='font-extrabold text-xl'>
+                    ${product?.price || "No price"}
+                  </h2>
+                  <p className='font-extralight text-xs'>
+                    {product?.location || "No price"}
+                  </p>
                 </div>
               </div>
             </div>
