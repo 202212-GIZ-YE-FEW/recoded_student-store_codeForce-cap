@@ -69,7 +69,10 @@ function ListingItems() {
     }
     const image = formData[imageField]
     const productName = formData.productName.toLowerCase().replace(/\s+/g, "-")
-    const storageRef = ref(storage, `images/${productName}/${image.file.name}`)
+    const storageRef = ref(
+      storage,
+      `products/${productName}/${image.file.name}`
+    )
     await uploadBytes(storageRef, image.file)
     const downloadURL = await getDownloadURL(storageRef)
     return downloadURL
