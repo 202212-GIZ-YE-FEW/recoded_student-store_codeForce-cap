@@ -1,9 +1,7 @@
 import { collection, doc, getDoc, onSnapshot, query } from "firebase/firestore"
-import { getDownloadURL, ref } from "firebase/storage"
 import { createContext, useContext, useEffect, useState } from "react"
-import { toast } from "react-toastify"
 
-import { auth, db, storage } from "./firebase/config"
+import { auth, db } from "./firebase/config"
 
 export const StoreContext = createContext()
 
@@ -46,7 +44,7 @@ export const useAuth = () => {
   }
 }
 
-export const useProfileData = () => {
+export const useProfileData = async () => {
   const { user } = useAuth()
   const [profileData, setProfileData] = useState(null)
 
@@ -58,8 +56,6 @@ export const useProfileData = () => {
 
         if (docSnap.exists()) {
           setProfileData(docSnap.data())
-        } else {
-          toast.error("No such document!")
         }
       }
     }
@@ -68,29 +64,6 @@ export const useProfileData = () => {
   }, [user])
 
   return profileData
-}
-
-async function fetchDefaultImageURL() {
-  const storageRef = ref(
-    storage,
-    "gs://codeforce-student-store.appspot.com/defaultImages/emptyImage.png"
-  )
-  const downloadURL = await getDownloadURL(storageRef)
-  return downloadURL
-}
-
-export function useDefaultImage() {
-  const [defaultImageURL, setDefaultImageURL] = useState("")
-
-  useEffect(() => {
-    const getDefaultImageURL = async () => {
-      const url = await fetchDefaultImageURL()
-      setDefaultImageURL(url)
-    }
-    getDefaultImageURL()
-  }, [])
-
-  return defaultImageURL
 }
 
 export const useGeneralListings = () => {

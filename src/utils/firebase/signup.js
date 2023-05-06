@@ -35,11 +35,16 @@ export default async function signUp(
 
         // Send email verification
         await sendEmailVerification(user)
+          .then(() => {
+            // Save user information to local storage
+            localStorage.setItem("user", JSON.stringify(user))
+          })
+          .then(() => {
+            // Signed in successfully
+            toast.success("Welcome to our website. You are logged in directly")
+          })
         result = { email: user.email, verified: user.emailVerified }
       }
-
-      // Signed in successfully
-      toast.success("Welcome to our website. You are logged in directly")
     } else if (method === "facebook") {
       const user = await signInWithFacebook()
       const userId = user.uid
@@ -49,7 +54,13 @@ export default async function signUp(
         toast.error("Already exists")
       } else {
         await createUserDoc(userId, firstName, surname, user.email, schoolName)
-        toast.success("Welcome to our website. You are logged in directly")
+          .then(() => {
+            toast.success("Welcome to our website. You are logged in directly")
+          })
+          .then(() => {
+            // Save user information to local storage
+            localStorage.setItem("user", JSON.stringify(user))
+          })
       }
     } else if (method === "google") {
       const user = await signInWithGoogle()
@@ -60,7 +71,13 @@ export default async function signUp(
         toast.error("Already exists")
       } else {
         await createUserDoc(userId, firstName, surname, user.email, schoolName)
-        toast.success("Welcome to our website. You are logged in directly")
+          .then(() => {
+            toast.success("Welcome to our website. You are logged in directly")
+          })
+          .then(() => {
+            // Save user information to local storage
+            localStorage.setItem("user", JSON.stringify(user))
+          })
       }
     }
   } catch (e) {
