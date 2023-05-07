@@ -1,7 +1,7 @@
-import { withTranslation } from "next-i18next"
 import Image from "next/image"
 import Link from "next/link"
 import { useRouter } from "next/router"
+import { withTranslation } from "next-i18next"
 import { toast } from "react-toastify"
 
 import { useAuth } from "@/utils/store"

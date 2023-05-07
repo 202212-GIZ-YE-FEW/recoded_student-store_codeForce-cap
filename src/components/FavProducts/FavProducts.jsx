@@ -1,5 +1,5 @@
-import { withTranslation } from "next-i18next"
 import Image from "next/image"
+import { withTranslation } from "next-i18next"
 import { useEffect, useState } from "react"
 import { AiFillHeart } from "react-icons/ai"
 import { HiOutlineChip, HiOutlineX } from "react-icons/hi"
