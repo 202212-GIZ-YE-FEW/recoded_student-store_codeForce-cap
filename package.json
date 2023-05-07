@@ -60,6 +60,7 @@
     "react-phone-input-2": "^2.15.1",
     "react-range": "^1.8.14",
     "react-router-dom": "^6.10.0",
+    "react-spinners": "^0.13.8",
     "react-test-renderer": "^18.2.0",
     "react-toastify": "^9.1.2",
     "yup": "^1.0.2"
