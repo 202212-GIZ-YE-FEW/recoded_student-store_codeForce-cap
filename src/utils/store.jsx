@@ -51,15 +51,18 @@ export const useAuth = () => {
 export const useProfileData = () => {
   const { user } = useAuth()
   const [profileData, setProfileData] = useState(null)
+  const [isLoading, setIsLoading] = useState(false)
 
   useEffect(() => {
     const fetchProfileData = async () => {
       if (user) {
+        setIsLoading(true)
         const docRef = doc(db, "users", user.uid)
         const docSnap = await getDoc(docRef)
 
         if (docSnap.exists()) {
           setProfileData(docSnap.data())
+          setIsLoading(false)
         }
       }
     }
@@ -67,7 +70,7 @@ export const useProfileData = () => {
     fetchProfileData()
   }, [user])
 
-  return profileData
+  return { profileData, isLoading }
 }
 
 export const useGeneralListings = () => {
