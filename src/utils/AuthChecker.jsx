@@ -7,7 +7,7 @@ export const AuthChecker = ({ Component, pageProps }) => {
 
   return (
     <>
-      <NextNProgress />
+      <NextNProgress color='purple' height={5} />
       {initialAuthCheck && <Component {...pageProps} />}
     </>
   )

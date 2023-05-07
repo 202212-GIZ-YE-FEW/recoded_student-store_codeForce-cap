@@ -207,7 +207,12 @@ function ListingItems() {
 
   return (
     <>
-      <ToastContainer pauseOnHover={false} newestOnTop={true} theme='colored' />
+      <ToastContainer
+        pauseOnHover={false}
+        newestOnTop={true}
+        theme='colored'
+        className='z-50'
+      />
       <form onSubmit={submitHandler} className='mx-5 mb-3'>
         {/* Head text */}
         <Highlighter text={`${t("headerText")}`} />

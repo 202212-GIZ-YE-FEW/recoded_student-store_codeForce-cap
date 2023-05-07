@@ -200,7 +200,12 @@ function EditProfile({ t }) {
 
   return (
     <form onSubmit={handleSubmit}>
-      <ToastContainer />
+      <ToastContainer
+        pauseOnHover={false}
+        newestOnTop={true}
+        theme='colored'
+        className='z-50'
+      />
       <div
         className='grid lg:grid-cols-2 lg:ml-36 w-[86%] overflow-y-auto gap-x-12 mt-10 lg:mt-28 mx-auto'
         // dir={t("language") === "ar" ? "rtl" : "ltr"}

@@ -73,7 +73,12 @@ function Signin({ t }) {
 
   return (
     <div className={`flex justify-center  md:flex-row  bg-[#f1f6fa] `}>
-      <ToastContainer pauseOnHover={false} newestOnTop={true} />
+      <ToastContainer
+        pauseOnHover={false}
+        newestOnTop={true}
+        theme='colored'
+        className='z-50'
+      />
       <div className={` ${styles.handbox_background}   w-3/5 `}>
         <div className=' p-20 '>
           <Image

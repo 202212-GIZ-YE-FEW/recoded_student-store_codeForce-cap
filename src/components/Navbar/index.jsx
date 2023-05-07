@@ -61,7 +61,7 @@ function Navbar({ t }) {
 
   return (
     <header
-      className='sticky top-0 z-50'
+      className='sticky top-0 z-40'
       dir={t("language") === "ar" ? "rtl" : "ltr"}
     >
       <div
@@ -193,7 +193,7 @@ function Navbar({ t }) {
                 </Link>
               )}
 
-              <Link href={isLoggedIn ? "/listing" : "/signup"}>
+              <Link href='/listing'>
                 <div className='bg-purple-light py-2 px-5 text-white rounded-3xl text-sm hover:bg-violet-800 transition-all cursor-pointer'>
                   {t("sell-items")}
                 </div>

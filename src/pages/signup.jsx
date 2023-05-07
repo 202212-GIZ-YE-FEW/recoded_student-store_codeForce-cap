@@ -27,7 +27,12 @@ export default function SignUpPage() {
   }, [isLoggedIn, router, userName, t])
   return (
     <RootLayout>
-      <ToastContainer pauseOnHover={false} newestOnTop={true} theme='colored' />
+      <ToastContainer
+        pauseOnHover={false}
+        newestOnTop={true}
+        theme='colored'
+        className='z-50'
+      />
       <Signup />
     </RootLayout>
   )
