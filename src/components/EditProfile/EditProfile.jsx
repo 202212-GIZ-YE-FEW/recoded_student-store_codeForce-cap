@@ -177,10 +177,10 @@ function EditProfile({ t }) {
                     // Retry the email update
                     await updateEmail(user, formData.email)
                   } catch (error) {
-                    console.error("Error during reauthentication:", error)
+                    toast.error("Error during reauthentication:", error)
                   }
                 } else {
-                  console.error("Unhandled error:", error)
+                  toast.error("Unhandled error:", error)
                 }
               }
             }
