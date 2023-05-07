@@ -1,7 +1,7 @@
 import { useTranslation } from "next-i18next"
 import { serverSideTranslations } from "next-i18next/serverSideTranslations"
 import { useRouter } from "next/router"
-import { useEffect, useState } from "react"
+import { useEffect, useRef, useState } from "react"
 import { toast } from "react-toastify"
 
 import EditProfile from "@/components/EditProfile"
@@ -27,6 +27,7 @@ export default function UserPage() {
   function handleSelectedPage(page) {
     setSelectedPage(page)
   }
+  const profileImageInputRef = useRef(null)
   return (
     <RootLayout>
       <div className='lg:flex lg:h-[816.2px]'>
@@ -34,10 +35,13 @@ export default function UserPage() {
           <SideBar
             handleSelectedPage={handleSelectedPage}
             selectedPage={selectedPage}
+            profileImageInputRef={profileImageInputRef}
           />
         </div>
         <div className='w-full'>
-          {selectedPage === "EditProfile" && <EditProfile />}
+          {selectedPage === "EditProfile" && (
+            <EditProfile profileImageInputRef={profileImageInputRef} />
+          )}
           {selectedPage === "UserListings" && <UserListings />}
           {selectedPage === "UserOrders" && <UserOrders />}
         </div>
