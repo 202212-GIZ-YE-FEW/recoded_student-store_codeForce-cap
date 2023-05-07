@@ -193,7 +193,7 @@ function Navbar({ t }) {
                 </Link>
               )}
 
-              <Link href='/listing'>
+              <Link href={isLoggedIn ? "/listing" : "/signup"}>
                 <div className='bg-purple-light py-2 px-5 text-white rounded-3xl text-sm hover:bg-violet-800 transition-all cursor-pointer'>
                   {t("sell-items")}
                 </div>
