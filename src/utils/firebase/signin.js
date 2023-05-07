@@ -16,8 +16,6 @@ export default async function signIn(email, password, method = "email") {
       if (!userDoc.exists()) {
         toast.warn("User not found")
       }
-      // Save user information to local storage
-      localStorage.setItem("user", JSON.stringify(user))
     } else if (method === "facebook") {
       const user = await signInWithFacebook()
       const userId = user.uid

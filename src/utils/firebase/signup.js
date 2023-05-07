@@ -34,15 +34,10 @@ export default async function signUp(
         )
 
         // Send email verification
-        await sendEmailVerification(user)
-          .then(() => {
-            // Save user information to local storage
-            localStorage.setItem("user", JSON.stringify(user))
-          })
-          .then(() => {
-            // Signed in successfully
-            toast.success("Welcome to our website. You are logged in directly")
-          })
+        await sendEmailVerification(user).then(() => {
+          // Signed in successfully
+          toast.success("Welcome to our website. You are logged in directly")
+        })
         result = { email: user.email, verified: user.emailVerified }
       }
     } else if (method === "facebook") {
@@ -53,14 +48,15 @@ export default async function signUp(
       if (userDoc.exists()) {
         toast.error("Already exists")
       } else {
-        await createUserDoc(userId, firstName, surname, user.email, schoolName)
-          .then(() => {
-            toast.success("Welcome to our website. You are logged in directly")
-          })
-          .then(() => {
-            // Save user information to local storage
-            localStorage.setItem("user", JSON.stringify(user))
-          })
+        await createUserDoc(
+          userId,
+          firstName,
+          surname,
+          user.email,
+          schoolName
+        ).then(() => {
+          toast.success("Welcome to our website. You are logged in directly")
+        })
       }
     } else if (method === "google") {
       const user = await signInWithGoogle()
@@ -70,14 +66,15 @@ export default async function signUp(
       if (userDoc.exists()) {
         toast.error("Already exists")
       } else {
-        await createUserDoc(userId, firstName, surname, user.email, schoolName)
-          .then(() => {
-            toast.success("Welcome to our website. You are logged in directly")
-          })
-          .then(() => {
-            // Save user information to local storage
-            localStorage.setItem("user", JSON.stringify(user))
-          })
+        await createUserDoc(
+          userId,
+          firstName,
+          surname,
+          user.email,
+          schoolName
+        ).then(() => {
+          toast.success("Welcome to our website. You are logged in directly")
+        })
       }
     }
   } catch (e) {
