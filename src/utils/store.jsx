@@ -9,12 +9,14 @@ export const StoreProvider = ({ children }) => {
   const [user, setUser] = useState(null)
   const [loading, setLoading] = useState(true)
   const [isLoggedIn, setIsLoggedIn] = useState(false)
+  const [initialAuthCheck, setInitialAuthCheck] = useState(false)
 
   useEffect(() => {
     const unsubscribe = auth.onAuthStateChanged((user) => {
       setUser(user)
       setLoading(false)
       setIsLoggedIn(user !== null)
+      setInitialAuthCheck(true)
     })
 
     return () => unsubscribe()
@@ -23,6 +25,7 @@ export const StoreProvider = ({ children }) => {
   const value = {
     user,
     loading,
+    initialAuthCheck,
   }
 
   return (
@@ -33,7 +36,7 @@ export const StoreProvider = ({ children }) => {
 }
 
 export const useAuth = () => {
-  const { user, loading } = useContext(StoreContext)
+  const { user, loading, initialAuthCheck } = useContext(StoreContext)
 
   const isLoggedIn = user !== null
 
@@ -41,6 +44,7 @@ export const useAuth = () => {
     user,
     loading,
     isLoggedIn,
+    initialAuthCheck,
   }
 }
 
