@@ -1,7 +1,7 @@
 import { useTranslation } from "next-i18next"
 import { serverSideTranslations } from "next-i18next/serverSideTranslations"
 import { useRouter } from "next/router"
-import { useEffect } from "react"
+import { useEffect, useState } from "react"
 import { toast } from "react-toastify"
 
 import Signin from "@/components/Signin"
@@ -14,15 +14,21 @@ export default function SignInPage() {
   const router = useRouter()
   const { isLoggedIn } = useAuth()
   const userName = useProfileData()
+  const [firstSignIn, setFirstSignIn] = useState(
+    localStorage.getItem("firstSignIn") === "true"
+  )
+
   useEffect(() => {
-    if (isLoggedIn) {
+    if (isLoggedIn && firstSignIn) {
       router.replace("/").then(() => {
         toast.info(
           t("hey") + ` ${userName?.firstName || t("you")} ` + t("signed")
         )
       })
+      setFirstSignIn(false)
     }
-  }, [isLoggedIn, router, userName, t])
+  }, [isLoggedIn, router, userName, t, firstSignIn])
+
   return (
     <RootLayout>
       <Signin />
