@@ -4,10 +4,14 @@ import Image from "next/image"
 import { useProfileData } from "@/utils/store"
 
 import Highlighter from "../highlighter"
+import Spinner from "../Spinner/Spinner"
 
 function SideBar({ handleSelectedPage, selectedPage, t }) {
-  const profileData = useProfileData()
+  const { profileData, isLoading } = useProfileData()
 
+  if (isLoading) {
+    return <Spinner text='Pleas wait ...' />
+  }
   return (
     <>
       {/* // * If it is large screen */}
@@ -27,12 +31,12 @@ function SideBar({ handleSelectedPage, selectedPage, t }) {
             <span className='flex font-semibold justify-center gap-1'>
               <h2>Name:</h2>
               <span className='flex gap-1'>
-                <h2> {profileData?.firstName || "User"} </h2>
-                <h2> {profileData?.surname || "Name"} </h2>
+                <h2> {profileData?.firstName || ""} </h2>
+                <h2> {profileData?.surname || ""} </h2>
               </span>
             </span>
-            <p>Email: {profileData?.email || "User Email"}</p>
-            <p>Location: {profileData?.address || "User Location"}</p>
+            <p>Email: {profileData?.email || ""}</p>
+            <p>Location: {profileData?.address || ""}</p>
           </div>
           <button
             aria-label='Edit Profile'
