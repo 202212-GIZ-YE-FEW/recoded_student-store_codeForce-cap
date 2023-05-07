@@ -38,5 +38,9 @@ export default async function signIn(email, password, method = "email") {
     toast(error.message)
   }
 
+  if (!error) {
+    localStorage.setItem("firstSignIn", "true")
+  }
+
   return { result, error }
 }
