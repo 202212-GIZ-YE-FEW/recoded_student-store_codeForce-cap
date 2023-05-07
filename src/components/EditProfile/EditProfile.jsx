@@ -9,7 +9,7 @@ import { getDownloadURL, ref, uploadBytes } from "firebase/storage"
 import { withTranslation } from "next-i18next"
 import dynamic from "next/dynamic"
 import Image from "next/image"
-import { useState } from "react"
+import { useRef, useState } from "react"
 import PhoneInput from "react-phone-input-2"
 import { toast, ToastContainer } from "react-toastify"
 
@@ -31,6 +31,8 @@ const Maps = dynamic(() => import("./Maps"), {
 
 function EditProfile({ t }) {
   const { profileData, isLoading } = useProfileData()
+  const profileImageInputRef = useRef(null)
+
   // * Form data handler
   const [formData, setFormData] = useState({
     firstName: "",
@@ -183,13 +185,6 @@ function EditProfile({ t }) {
               }
             }
             const docRef = doc(db, "users", userId)
-            // const updatedForm = {
-            //   ...formData,
-            //   profileImg: {
-            //     file: null,
-            //     url: profileImgUrl,
-            //   },
-            // }
             updateDoc(docRef, updatedFields)
             resolve({ docRef })
           } catch (err) {
@@ -251,6 +246,14 @@ function EditProfile({ t }) {
         className='grid lg:grid-cols-2 lg:ml-36 w-[86%] overflow-y-auto gap-x-12 mt-10 lg:mt-28 mx-auto'
         // dir={t("language") === "ar" ? "rtl" : "ltr"}
       >
+        <Input
+          className='hidden'
+          type='file'
+          id='profile-image-input'
+          ref={profileImageInputRef}
+          accept='image/*'
+          onChange={uploadedImgHandler}
+        />
         <label
           htmlFor='profileImg'
           className='block lg:hidden cursor-pointer rounded-full'
