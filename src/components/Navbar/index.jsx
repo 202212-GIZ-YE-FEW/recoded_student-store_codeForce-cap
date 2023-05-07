@@ -60,11 +60,10 @@ function Navbar({ t }) {
     return () => window.removeEventListener("scroll", calculateScrollProgress)
   }, [])
 
-  // protect the page from accessing when the user is not signed in
+  // protect the listing page from accessing when the user is not signed in
   const handleloginClick = () => {
     if (!isLoggedIn) {
-      toast.warn("You have to sign in or sign up first")
-      // router.push("/signin")
+      toast.error("Hold on, You have to sign in or sign up first !!")
     } else {
       router.push("/listing")
     }
