@@ -25,7 +25,7 @@ function Navbar({ t }) {
   const [open, setOpen] = useState(false)
   const [user] = useAuthState(auth)
   const [scrollProgress, setScrollProgress] = useState(0)
-  const profile = useProfileData()
+  const { profileData } = useProfileData()
   const { isLoggedIn } = useAuth()
   const router = useRouter()
   // set the activated language key next to the language icon
@@ -164,7 +164,8 @@ function Navbar({ t }) {
                       <Image
                         alt='User'
                         src={
-                          profile?.profileImg?.url || "/images/cat-photo.svg"
+                          profileData?.profileImg?.url ||
+                          "/images/cat-photo.svg"
                         }
                         width={37}
                         height={37}
@@ -178,7 +179,7 @@ function Navbar({ t }) {
                       <div
                         className={`md:absolute top-10 right-0 bg-white md:border border-gray-200 rounded-lg md:shadow-md py-2 ${styles.show}`}
                       >
-                        <p>{profile?.firstName || "user"}</p>
+                        <p>{profileData?.firstName || "user"}</p>
                         <hr className='bg-purple p-[1px]' />
                         <Link
                           href={isLoggedIn ? "/profile" : "/signup"}

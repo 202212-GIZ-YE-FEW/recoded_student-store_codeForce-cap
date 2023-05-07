@@ -11,7 +11,7 @@ import dynamic from "next/dynamic"
 import Image from "next/image"
 import { useState } from "react"
 import PhoneInput from "react-phone-input-2"
-import { ToastContainer, toast } from "react-toastify"
+import { toast, ToastContainer } from "react-toastify"
 
 // ! The phone input default style
 import "react-phone-input-2/lib/style.css"
@@ -23,13 +23,14 @@ import { useProfileData } from "@/utils/store"
 // ! Components import
 import Button from "../button"
 import Input from "../input"
+import Spinner from "../Spinner/Spinner"
 // ! Map dynamic import
 const Maps = dynamic(() => import("./Maps"), {
   ssr: false,
 })
 
 function EditProfile({ t }) {
-  const profile = useProfileData()
+  const { profileData, isLoading } = useProfileData()
   // * Form data handler
   const [formData, setFormData] = useState({
     firstName: "",
@@ -40,6 +41,7 @@ function EditProfile({ t }) {
     confirmPassword: "",
     address: "",
     profileImg: { file: null, url: "/images/cat-photo.svg" },
+    isProfileImgUpdated: true,
   })
 
   // * Browser image uploader
@@ -74,6 +76,29 @@ function EditProfile({ t }) {
     }
   }
 
+  // Check the form to know what is the updated things so that never update everything
+  const getUpdatedFields = (user, formData) => {
+    const updatedFields = {}
+    Object.keys(formData).forEach((key) => {
+      if (key === "profileImg") return
+      if (formData[key] !== "" && formData[key] !== user[key]) {
+        updatedFields[key] = formData[key]
+      }
+    })
+    return updatedFields
+  }
+
+  // Updated profile image checker
+  const ProfileImgChecker = (event) => {
+    const file = event.target.files[0]
+    const url = URL.createObjectURL(file)
+    setFormData((prevState) => ({
+      ...prevState,
+      profileImg: { file, url },
+      isProfileImgUpdated: true,
+    }))
+  }
+
   // * Form submitting handler
   const handleSubmit = async (event) => {
     event.preventDefault()
@@ -93,9 +118,21 @@ function EditProfile({ t }) {
       const uploadPromise = new Promise((resolve, reject) => {
         ;(async () => {
           try {
-            const profileImgUrl = await firebaseImgUploader()
             const user = auth.currentUser
             const userId = user.uid
+            // Get the updated fields
+            const updatedFields = getUpdatedFields(user, formData)
+            // Add the new profile image URL if it has changed
+            let profileImgUrl = formData.profileImg.url
+            if (formData.isProfileImgUpdated) {
+              profileImgUrl = await firebaseImgUploader()
+            }
+            if (formData.isProfileImgUpdated) {
+              updatedFields.profileImg = {
+                file: null,
+                url: profileImgUrl,
+              }
+            }
             if (formData.email !== "" && formData.email !== user.email) {
               try {
                 await updateEmail(user, formData.email)
@@ -146,14 +183,14 @@ function EditProfile({ t }) {
               }
             }
             const docRef = doc(db, "users", userId)
-            const updatedForm = {
-              ...formData,
-              profileImg: {
-                file: null,
-                url: profileImgUrl,
-              },
-            }
-            updateDoc(docRef, updatedForm)
+            // const updatedForm = {
+            //   ...formData,
+            //   profileImg: {
+            //     file: null,
+            //     url: profileImgUrl,
+            //   },
+            // }
+            updateDoc(docRef, updatedFields)
             resolve({ docRef })
           } catch (err) {
             reject(err)
@@ -164,7 +201,7 @@ function EditProfile({ t }) {
 
       toast
         .promise(
-          // the promise it self
+          // The  promise
           uploadPromise,
           {
             // promise progress
@@ -191,11 +228,15 @@ function EditProfile({ t }) {
             confirmPassword: "",
             address: "",
             profileImg: { file: null, url: "/images/cat-photo.svg" },
+            isProfileImgUpdated: false,
           })
         })
     } catch (error) {
       toast.error(error)
     }
+  }
+  if (isLoading) {
+    return <Spinner text='Pleas wait ...' />
   }
 
   return (
@@ -216,7 +257,7 @@ function EditProfile({ t }) {
         >
           <Image
             className='rounded-full mx-auto mb-10'
-            src={profile?.profileImg?.url || formData.profileImg.url}
+            src={profileData?.profileImg?.url || formData.profileImg.url}
             alt='...'
             width={274}
             height={275}
@@ -234,8 +275,7 @@ function EditProfile({ t }) {
           <Input
             name='name'
             type='text'
-            placeholder={profile?.firstName || t("name")}
-            required={true}
+            placeholder={profileData?.firstName || t("name")}
             minLength={2}
             maxLength={50}
             value={formData.firstName}
@@ -247,8 +287,7 @@ function EditProfile({ t }) {
           <Input
             name='surname'
             type='text'
-            placeholder={profile?.surname || t("surname")}
-            required={true}
+            placeholder={profileData?.surname || t("surname")}
             minLength={2}
             maxLength={50}
             value={formData.surname}
@@ -260,8 +299,7 @@ function EditProfile({ t }) {
           <Input
             name='email'
             type='email'
-            placeholder={profile?.email || t("email")}
-            required={true}
+            placeholder={profileData?.email || t("email")}
             maxLength={50}
             pattern='[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}'
             value={formData.email}
@@ -283,7 +321,6 @@ function EditProfile({ t }) {
             name='newPassword'
             type='password'
             placeholder={t("new-password")}
-            required={true}
             minLength={8}
             maxLength={50}
             value={formData.password}
@@ -296,7 +333,6 @@ function EditProfile({ t }) {
             name='confirmNewPassword'
             type='password'
             placeholder={t("new-password-confirm")}
-            required={true}
             minLength={8}
             maxLength={50}
             value={formData.confirmPassword}
@@ -307,8 +343,7 @@ function EditProfile({ t }) {
           <Input
             name='address'
             type='text'
-            placeholder={profile?.address || t("address")}
-            required={true}
+            placeholder={profileData?.address || t("address")}
             value={formData.address}
             onChange={(e) =>
               setFormData({ ...formData, address: e.target.value })
