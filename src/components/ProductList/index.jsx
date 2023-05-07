@@ -4,6 +4,8 @@ import { AiOutlineHeart } from "react-icons/ai"
 
 import { useGeneralListings } from "@/utils/store"
 
+import Spinner from "../Spinner/Spinner"
+
 function ProductList({ selectedFilter, t }) {
   const { data, error, loading } = useGeneralListings()
   // Remove duplicates from the products array
@@ -11,7 +13,7 @@ function ProductList({ selectedFilter, t }) {
     return <div>Error: {error.message}</div>
   }
   if (loading) {
-    return <h1>Loading...</h1>
+    return <Spinner text='Loading best product for you' />
   }
   if (data.length === 0) {
     return <h1>No data</h1>

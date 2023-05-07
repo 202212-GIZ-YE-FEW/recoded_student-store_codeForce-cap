@@ -4,10 +4,12 @@ import Link from "next/link"
 
 import { useUserListings } from "@/utils/store"
 
+import Spinner from "../Spinner/Spinner"
+
 function UserListings({ t }) {
   const { data, loading } = useUserListings()
   if (loading) {
-    return <h2>Loading...</h2>
+    return <Spinner text='Loading your lists Please wait ...' />
   }
   if (data.length === 0) {
     return (
