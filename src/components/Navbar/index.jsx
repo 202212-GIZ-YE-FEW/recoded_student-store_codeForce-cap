@@ -13,6 +13,7 @@ import {
 import { HiHeart } from "react-icons/hi"
 import { RxHamburgerMenu } from "react-icons/rx"
 import { TfiWorld } from "react-icons/tfi"
+import { toast } from "react-toastify"
 
 import styles from "./Navbar.module.css"
 
@@ -58,6 +59,16 @@ function Navbar({ t }) {
     window.addEventListener("scroll", calculateScrollProgress)
     return () => window.removeEventListener("scroll", calculateScrollProgress)
   }, [])
+
+  // protect the page from accessing when the user is not signed in
+  const handleloginClick = () => {
+    if (!isLoggedIn) {
+      toast.warn("You have to sign in or sign up first")
+      // router.push("/signin")
+    } else {
+      router.push("/listing")
+    }
+  }
 
   return (
     <header
@@ -193,11 +204,11 @@ function Navbar({ t }) {
                 </Link>
               )}
 
-              <Link href='/listing'>
+              <button onClick={handleloginClick}>
                 <div className='bg-purple-light py-2 px-5 text-white rounded-3xl text-sm hover:bg-violet-800 transition-all cursor-pointer'>
                   {t("sell-items")}
                 </div>
-              </Link>
+              </button>
             </div>
             <div className='text-2xl text-orange-600 hover:text-orange-700 transition'>
               <Link href='/favorites'>
