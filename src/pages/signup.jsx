@@ -1,8 +1,8 @@
 import { useTranslation } from "next-i18next"
 import { serverSideTranslations } from "next-i18next/serverSideTranslations"
 import { useRouter } from "next/router"
-import { useEffect } from "react"
-import { toast, ToastContainer } from "react-toastify"
+import { useEffect, useState } from "react"
+import { ToastContainer, toast } from "react-toastify"
 
 import "react-toastify/dist/ReactToastify.css"
 
@@ -16,15 +16,22 @@ export default function SignUpPage() {
   const router = useRouter()
   const { isLoggedIn } = useAuth()
   const userName = useProfileData()
+  const [firstSignUp, setFirstSignUp] = useState(
+    localStorage.getItem("firstSignIn") === "true"
+  )
+
   useEffect(() => {
-    if (isLoggedIn) {
+    if (isLoggedIn && firstSignUp) {
       router.replace("/").then(() => {
         toast.info(
           t("hey") + ` ${userName?.firstName || t("you")} ` + t("signed")
         )
       })
+      setFirstSignUp(false)
+    } else {
+      return
     }
-  }, [isLoggedIn, router, userName, t])
+  }, [isLoggedIn, router, userName, t, firstSignUp])
   return (
     <RootLayout>
       <ToastContainer

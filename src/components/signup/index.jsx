@@ -10,7 +10,6 @@ import { toast } from "react-toastify"
 import styles from "./Signup.module.css"
 
 import signUp from "@/utils/firebase/signup"
-import waitForEmailVerification from "@/utils/firebase/waitForEmailVerification"
 import { signupValidation } from "@/utils/schemaValidations/signup"
 
 import Button from "../button"
@@ -69,19 +68,19 @@ function Signup({ t }) {
         schoolName
       )
 
-      if (result) {
-        // Wait for the user to verify their email address
-        await waitForEmailVerification()
-        setIsSuccess(true)
-        toast.success("Sign up successful!")
-        toast.warn(
-          "Email verification sent! Please check your inbox.",
-          "\n email:",
-          result.email,
-          "\n email verification status:",
-          result.verified
-        )
-      }
+      // if (result) {
+      //   // Wait for the user to verify their email address
+      //   await waitForEmailVerification()
+      //   setIsSuccess(true)
+      //   toast.success("Sign up successful!")
+      //   toast.warn(
+      //     "Email verification sent! Please check your inbox.",
+      //     "\n email:",
+      //     result.email,
+      //     "\n email verification status:",
+      //     result.verified
+      //   )
+      // }
 
       if (error) {
         return
@@ -89,7 +88,7 @@ function Signup({ t }) {
 
       // else when successful
       router.replace("/").then(() => {
-        toast.done("Hi")
+        toast.success("Welcome to our website. You are logged in directly")
       })
     } catch (err) {
       const validationErrors = {}

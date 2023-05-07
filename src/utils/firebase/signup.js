@@ -81,6 +81,9 @@ export default async function signUp(
     error = e
     toast.error(error.message, "Your email is already exists")
   }
+  if (!error) {
+    localStorage.setItem("firstSignIn", "true")
+  }
 
   return { result, error }
 }
