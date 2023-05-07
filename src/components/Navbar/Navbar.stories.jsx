@@ -1,6 +1,6 @@
 // Navbar.stories.js
 
-import Navbar from "."
+import Navbar from "./Navbar"
 
 const NavbarStories = {
   title: "Navbar",

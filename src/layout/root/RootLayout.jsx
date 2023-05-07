@@ -2,7 +2,7 @@ import Head from "next/head"
 import { serverSideTranslations } from "next-i18next/serverSideTranslations"
 
 import Footer from "@/components/Footer"
-import Navbar from "@/components/Navbar"
+import Navbar from "@/components/Navbar/Navbar"
 
 export default function RootLayout({ children }) {
   // Put Header or Footer around the children element
