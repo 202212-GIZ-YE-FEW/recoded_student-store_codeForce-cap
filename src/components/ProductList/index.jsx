@@ -13,7 +13,7 @@ function ProductList({ selectedFilter, t }) {
     return <div>Error: {error.message}</div>
   }
   if (loading) {
-    return <Spinner text='Loading best product for you' />
+    return <Spinner text='Loading best product for you ...' />
   }
   if (data.length === 0) {
     return <h1>No data</h1>

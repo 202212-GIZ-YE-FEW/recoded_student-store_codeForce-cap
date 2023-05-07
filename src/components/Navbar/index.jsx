@@ -2,6 +2,7 @@ import ProgressBar from "@ramonak/react-progress-bar"
 import { withTranslation } from "next-i18next"
 import Image from "next/image"
 import Link from "next/link"
+import { useRouter } from "next/router"
 import { useEffect, useState } from "react"
 import { useAuthState } from "react-firebase-hooks/auth"
 import {
@@ -20,13 +21,28 @@ import SignOut from "@/utils/firebase/signout"
 import { useAuth, useProfileData } from "@/utils/store"
 
 function Navbar({ t }) {
-  const [languages, setLanguages] = useState(false)
   const [open, setOpen] = useState(false)
   const [user] = useAuthState(auth)
   const [scrollProgress, setScrollProgress] = useState(0)
   const profile = useProfileData()
   const { isLoggedIn } = useAuth()
+  const router = useRouter()
+  // set the activated language key next to the language icon
+  const [activeLanguage, setActiveLanguage] = useState(router.locale)
 
+  // toggle between the tow languages so that it's not necessary to have a links to chose the language that we need
+  const toggleLanguage = () => {
+    // implement the language locale so that make sure we to set the locale without redirect us to the home page again
+    const currentLocale = router.locale
+    // activated locale checker
+    const newLocale = currentLocale === "en" ? "ar" : "en"
+    // set the toggle to be the second or the first language depends on the activated one
+    setActiveLanguage(newLocale)
+    // set the locale to be the other without redirect to the ome page
+    router.push(router.pathname, router.asPath, { locale: newLocale })
+  }
+
+  // scroll calculator
   const calculateScrollProgress = () => {
     const scrollTop =
       document.documentElement.scrollTop || document.body.scrollTop
@@ -37,6 +53,7 @@ function Navbar({ t }) {
     setScrollProgress(Math.floor(progress))
   }
 
+  // page scroll listener
   useEffect(() => {
     window.addEventListener("scroll", calculateScrollProgress)
     return () => window.removeEventListener("scroll", calculateScrollProgress)
@@ -61,26 +78,13 @@ function Navbar({ t }) {
           />
         </Link>
         {/* ----------- Languages ----------- */}
-        <div className='flex items-end cursor-pointer absolute right-14 top-8 md:static order-2 md:hidden'>
+        <div className='flex items-end cursor-pointer absolute right-14 top-6 md:static order-2 md:hidden'>
           <div
-            className='flex items-end'
-            onClick={() => setLanguages(!languages)}
+            className='flex gap-1 hover:border-purple border-2 p-1 rounded-3xl'
+            onClick={toggleLanguage}
           >
-            <TfiWorld className='text-2xl text-gray-700' />
-          </div>
-          <div className='relative z-50 '>
-            <div
-              className={`absolute left-[-100px] top-2 bg-white capitalize border border-solid border-violet-600 ${
-                languages ? `${styles.show}` : " hidden"
-              }`}
-            >
-              <div className='my-2 px-5 py-2 hover:bg-gray-200 transition-all duration-500'>
-                English
-              </div>
-              <div className='my-2 px-5 py-2 hover:bg-gray-200 transition-all duration-500'>
-                العربية
-              </div>
-            </div>
+            <TfiWorld className='text-3xl text-gray-700' />
+            <span className='text-gray-700'>{activeLanguage}</span>
           </div>
         </div>
         {/* ----------- Burger ----------- */}
@@ -132,28 +136,11 @@ function Navbar({ t }) {
           {/* ----------- Languages ----------- */}
           <div className='md:flex items-end cursor-pointer hidden'>
             <div
-              className='flex items-end'
-              onClick={() => setLanguages(!languages)}
+              className='flex gap-1 hover:border-purple border-2 p-1 rounded-3xl'
+              onClick={toggleLanguage}
             >
-              <TfiWorld className='text-2xl text-gray-700' />
-            </div>
-            <div className='relative'>
-              <div
-                className={`absolute left-[-70px] rtl:left-[-10px] top-5 bg-white capitalize ${
-                  languages ? `${styles.show}` : "hidden"
-                }`}
-              >
-                <div className='my-2 px-5 py-2 hover:bg-gray-200 transition-all duration-500'>
-                  <Link href='' locale='en'>
-                    English
-                  </Link>
-                </div>
-                <div className='my-2 px-5 py-2 hover:bg-gray-200 transition-all duration-500'>
-                  <Link href='' locale='ar'>
-                    العربية
-                  </Link>
-                </div>
-              </div>
+              <TfiWorld className='text-3xl text-gray-700' />
+              <span className='text-gray-700'>{activeLanguage}</span>
             </div>
           </div>
           {/* ----------- Buttons ----------- */}
@@ -162,7 +149,7 @@ function Navbar({ t }) {
               {user ? (
                 // Display user icon if signed in
                 <div className='flex items-center'>
-                  <div className='block md:relative text-center'>
+                  <div className='block md:relative text-center md:border-2 hover:border-purple rounded-full'>
                     <span className='hidden md:flex items-center cursor-pointer'>
                       <Image
                         alt='User'
@@ -206,7 +193,7 @@ function Navbar({ t }) {
                 </Link>
               )}
 
-              <Link href={isLoggedIn ? "/listing" : "/signup"}>
+              <Link href='/listing'>
                 <div className='bg-purple-light py-2 px-5 text-white rounded-3xl text-sm hover:bg-violet-800 transition-all cursor-pointer'>
                   {t("sell-items")}
                 </div>
