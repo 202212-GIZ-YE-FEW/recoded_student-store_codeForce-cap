@@ -3,8 +3,8 @@ import { useState } from "react"
 
 import { SectionWrapper } from "@/components/hoc"
 import PhotosGallery from "@/components/PhotosGallery"
+
 import RootLayout from "@/layout/root/RootLayout"
-import { serverSideTranslations } from "next-i18next/serverSideTranslations"
 
 function SingleProduct() {
   const [photos, setPhotos] = useState([

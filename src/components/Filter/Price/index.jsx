@@ -37,7 +37,12 @@ function PriceFilter({ t }) {
 
   return (
     <div className='flex flex-col items-stretch'>
-      <ToastContainer pauseOnHover={false} newestOnTop={true} theme='colored' />
+      <ToastContainer
+        pauseOnHover={false}
+        newestOnTop={true}
+        theme='colored'
+        className='z-50'
+      />
       <div className='flex justify-around text-2xl text-bubble-gum font-poppins font-extrabold ml-5 md:ml-10'>
         <input
           type='text'

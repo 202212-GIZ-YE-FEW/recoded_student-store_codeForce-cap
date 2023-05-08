@@ -31,6 +31,7 @@
     "build-storybook": "storybook build"
   },
   "dependencies": {
+    "@ramonak/react-progress-bar": "^5.0.3",
     "@zeit/next-css": "^1.0.1",
     "bcrypt": "^5.1.0",
     "bcryptjs": "^2.4.3",
@@ -40,24 +41,26 @@
     "dompurify": "^3.0.1",
     "eslint-plugin-jest": "^27.2.1",
     "express-rate-limit": "^6.7.0",
-    "firebase": "^9.19.1",
+    "firebase": "^9.21.0",
     "firebase-admin": "^11.7.0",
     "i18next": "^22.4.14",
     "keen-slider": "^6.8.5",
     "leaflet": "^1.9.3",
     "next": "^13.2.4",
     "next-i18next": "^13.2.2",
+    "nextjs-progressbar": "^0.0.16",
     "prop-types": "^15.8.1",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-firebase-hooks": "^5.1.1",
     "react-form-hooks": "^1.1.5",
-    "react-i18next": "^12.2.0",
+    "react-i18next": "^12.2.2",
     "react-icons": "^4.8.0",
     "react-leaflet": "^4.2.1",
     "react-phone-input-2": "^2.15.1",
     "react-range": "^1.8.14",
     "react-router-dom": "^6.10.0",
+    "react-spinners": "^0.13.8",
     "react-test-renderer": "^18.2.0",
     "react-toastify": "^9.1.2",
     "yup": "^1.0.2"
@@ -117,10 +120,5 @@
     "commitizen": {
       "path": "./node_modules/cz-conventional-changelog"
     }
-  },
-  "browser": {
-    "fs": false,
-    "path": false,
-    "os": false
   }
 }

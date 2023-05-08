@@ -1,11 +1,14 @@
 import { useState } from "react"
 
 import ProductList from "@/components/ProductList"
-import products from "@/components/ProductList/products"
 
+import { useGeneralListings } from "@/utils/store"
+
+// import products from "@/components/ProductList/products"
 import Buttons from "../Buttons"
 
 function CategoryFilter() {
+  const { data } = useGeneralListings()
   const filters = [
     {
       filter: "Book",
@@ -36,7 +39,7 @@ function CategoryFilter() {
   return (
     <div>
       <Buttons filters={filters} handleCategoryFilter={handleCategoryFilter} />
-      <ProductList selectedFilter={selectedFilter} products={products} />
+      <ProductList selectedFilter={selectedFilter} products={data} />
     </div>
   )
 }
