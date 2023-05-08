@@ -1,10 +1,9 @@
 import {
   createUserWithEmailAndPassword,
-  getAdditionalUserInfo,
-  GoogleAuthProvider,
   signInWithEmailAndPassword,
   signInWithPopup,
 } from "firebase/auth"
+import { toast } from "react-toastify"
 
 import { auth, facebookProvider, googleProvider } from "./config"
 
@@ -29,14 +28,14 @@ export async function signInWithGoogle() {
     const result = await signInWithPopup(auth, googleProvider)
 
     // Get the credential and token from the result
-    const credential = GoogleAuthProvider.credentialFromResult(result)
-    const token = credential.accessToken
+    // const credential = GoogleAuthProvider.credentialFromResult(result)
+    // const token = credential.accessToken
 
     // Get the user info from the result
     const user = result.user
 
     // Get the additional IdP data from the result
-    const additionalInfo = getAdditionalUserInfo(result)
+    // const additionalInfo = getAdditionalUserInfo(result)
 
     // Do something with the user, token and additional info
     // ...
@@ -44,11 +43,12 @@ export async function signInWithGoogle() {
     // Return the user object
     return user
   } catch (error) {
+    toast.error(error)
     // Handle errors here
-    const errorCode = error.code
-    const errorMessage = error.message
-    const email = error.customData.email
-    const credential = GoogleAuthProvider.credentialFromError(error)
+    // const errorCode = error.code
+    // const errorMessage = error.message
+    // const email = error.customData.email
+    // const credential = GoogleAuthProvider.credentialFromError(error)
 
     // Do something with the error info
     // ...

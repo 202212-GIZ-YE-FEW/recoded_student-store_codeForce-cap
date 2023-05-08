@@ -6,9 +6,9 @@ import {
 } from "firebase/auth"
 import { doc, updateDoc } from "firebase/firestore"
 import { getDownloadURL, ref, uploadBytes } from "firebase/storage"
+import { withTranslation } from "next-i18next"
 import dynamic from "next/dynamic"
 import Image from "next/image"
-import { withTranslation } from "next-i18next"
 import { useRef, useState } from "react"
 import PhoneInput from "react-phone-input-2"
 import { toast, ToastContainer } from "react-toastify"
@@ -74,7 +74,7 @@ function EditProfile({ t }) {
       const url = await getDownloadURL(storageRef)
       return url
     } catch (error) {
-      console.error(error)
+      toast.error(error)
       return null
     }
   }
