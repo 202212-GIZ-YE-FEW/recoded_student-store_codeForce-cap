@@ -74,7 +74,7 @@ function EditProfile({ t }) {
       const url = await getDownloadURL(storageRef)
       return url
     } catch (error) {
-      console.error(error)
+      toast.error(error)
       return null
     }
   }
