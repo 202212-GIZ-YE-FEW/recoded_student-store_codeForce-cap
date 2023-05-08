@@ -6,9 +6,9 @@ import {
 } from "firebase/auth"
 import { doc, updateDoc } from "firebase/firestore"
 import { getDownloadURL, ref, uploadBytes } from "firebase/storage"
+import { withTranslation } from "next-i18next"
 import dynamic from "next/dynamic"
 import Image from "next/image"
-import { withTranslation } from "next-i18next"
 import { useRef, useState } from "react"
 import PhoneInput from "react-phone-input-2"
 import { toast, ToastContainer } from "react-toastify"
@@ -43,7 +43,7 @@ function EditProfile({ t }) {
     confirmPassword: "",
     address: "",
     profileImg: { file: null, url: "/images/cat-photo.svg" },
-    isProfileImgUpdated: true,
+    isProfileImgUpdated: false,
   })
 
   // * Browser image uploader
@@ -58,6 +58,7 @@ function EditProfile({ t }) {
           file: file,
           url: reader.result,
         },
+        isProfileImgUpdated: true,
       })) // update the profile image in the form data with the user-uploaded image
     }
   }
@@ -90,17 +91,6 @@ function EditProfile({ t }) {
     return updatedFields
   }
 
-  // Updated profile image checker
-  const ProfileImgChecker = (event) => {
-    const file = event.target.files[0]
-    const url = URL.createObjectURL(file)
-    setFormData((prevState) => ({
-      ...prevState,
-      profileImg: { file, url },
-      isProfileImgUpdated: true,
-    }))
-  }
-
   // * Form submitting handler
   const handleSubmit = async (event) => {
     event.preventDefault()
@@ -128,8 +118,6 @@ function EditProfile({ t }) {
             let profileImgUrl = formData.profileImg.url
             if (formData.isProfileImgUpdated) {
               profileImgUrl = await firebaseImgUploader()
-            }
-            if (formData.isProfileImgUpdated) {
               updatedFields.profileImg = {
                 file: null,
                 url: profileImgUrl,
