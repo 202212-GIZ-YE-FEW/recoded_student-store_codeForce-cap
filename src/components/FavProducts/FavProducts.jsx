@@ -131,7 +131,7 @@ function FavProducts({ t }) {
                 alt={product.productName}
                 width={258}
                 height={250}
-                className='h-48 sm:h-56 md:h-64 w-full object-cover'
+                className='h-48 sm:h-56 md:h-64 w-full object-cover max-h-[250px] min-h-[250px]'
               />
               <div className='absolute top-2 right-2 z-10'>
                 <button
