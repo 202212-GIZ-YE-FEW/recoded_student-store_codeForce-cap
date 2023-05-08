@@ -2,7 +2,6 @@ import { toast } from "react-toastify"
 
 import { createUserDoc, getUserDoc } from "./add-user"
 import { signInWithEmail, signInWithFacebook, signInWithGoogle } from "./auth"
-import SignOut from "./signout"
 
 export default async function signIn(email, password, method = "email") {
   let result = null,
@@ -16,10 +15,6 @@ export default async function signIn(email, password, method = "email") {
 
       if (!userDoc.exists()) {
         toast.warn("User not found")
-      } else {
-        toast.success("User signed in successfully")
-        SignOut()
-        toast.info("Auto sign out triggered.")
       }
     } else if (method === "facebook") {
       const user = await signInWithFacebook()
@@ -29,8 +24,6 @@ export default async function signIn(email, password, method = "email") {
       if (!userDoc.exists()) {
         await createUserDoc(userId, user.displayName, "", user.email, "")
       }
-
-      toast.success("User signed in successfully")
     } else if (method === "google") {
       const user = await signInWithGoogle()
       const userId = user.uid
@@ -39,12 +32,14 @@ export default async function signIn(email, password, method = "email") {
       if (!userDoc.exists()) {
         await createUserDoc(userId, user.displayName, "", user.email, "")
       }
-
-      toast.success("User signed in successfully")
     }
   } catch (e) {
     error = e
     toast(error.message)
+  }
+
+  if (!error) {
+    localStorage.setItem("firstSignIn", "true")
   }
 
   return { result, error }

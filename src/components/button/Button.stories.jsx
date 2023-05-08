@@ -1,3 +1,5 @@
+import { toast } from "react-toastify"
+
 import Button from "./Button"
 
 export default {
@@ -67,5 +69,5 @@ SaveChanges.args = {
   buttonStyle: "saveChanges",
   text: "Save Changes",
   type: "button",
-  handleClick: () => console.log("Changes saved!"),
+  handleClick: () => toast.success("Changes saved!"),
 }

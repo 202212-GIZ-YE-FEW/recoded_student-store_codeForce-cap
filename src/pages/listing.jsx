@@ -1,10 +1,27 @@
+import { useRouter } from "next/router"
+import { useTranslation } from "next-i18next"
 import { serverSideTranslations } from "next-i18next/serverSideTranslations"
+import { useEffect } from "react"
+import { toast } from "react-toastify"
+
+import "react-toastify/dist/ReactToastify.css"
 
 import ListingItems from "@/components/ListingItems"
 
 import RootLayout from "@/layout/root/RootLayout"
+import { useAuth } from "@/utils/store"
 
 function ListingPage() {
+  const { t } = useTranslation("listingItems")
+  const router = useRouter()
+  const { isLoggedIn } = useAuth()
+  useEffect(() => {
+    if (!isLoggedIn) {
+      router.replace("/").then(() => {
+        toast.info(t("hi"))
+      })
+    }
+  }, [isLoggedIn, router, t])
   return (
     <RootLayout>
       <ListingItems />

@@ -1,5 +1,6 @@
 import DOMPurify from "dompurify"
 import { addDoc, collection } from "firebase/firestore"
+import { getDownloadURL, ref, uploadBytes } from "firebase/storage"
 import Image from "next/image"
 import { useTranslation, withTranslation } from "next-i18next"
 import { useState } from "react"
@@ -7,7 +8,7 @@ import { toast, ToastContainer } from "react-toastify"
 
 import "react-toastify/dist/ReactToastify.css"
 
-import { db } from "@/utils/firebase/config"
+import { auth, db, storage, timestamp } from "@/utils/firebase/config"
 import { listingsValidation } from "@/utils/schemaValidations/listingItems"
 
 import Button from "../button"
@@ -15,22 +16,26 @@ import Highlighter from "../highlighter"
 import Input from "../input"
 
 function ListingItems() {
+  // Translation state
   const { t } = useTranslation("listingItems")
-  // Form data handler
+  // Errors state
+  const [errors, setErrors] = useState({})
+  // Form info
   const [formData, setFormData] = useState({
-    primaryImage: { file: null, url: "/images/emptyImage.png" },
-    secondaryImage: { file: null, url: "/images/emptyImage.png" },
-    tertiaryImage: { file: null, url: "/images/emptyImage.png" },
-    quaternaryImage: { file: null, url: "/images/emptyImage.png" },
+    primaryImage: { file: "", url: "/images/emptyImage.png" },
+    secondaryImage: { file: "", url: "/images/emptyImage.png" },
+    tertiaryImage: { file: "", url: "/images/emptyImage.png" },
+    quaternaryImage: { file: "", url: "/images/emptyImage.png" },
     type: "",
     category: "",
     productName: "",
     description: "",
     location: "",
-    price: 0,
+    price: "",
+    createdAt: timestamp,
   })
 
-  // Input handler
+  // Inputs verifier and handler
   const inputsHandler = (event) => {
     const { name, value } = event.target
     setFormData((prevFormData) => ({
@@ -39,8 +44,8 @@ function ListingItems() {
     }))
   }
 
-  // Image upload handler
-  const uploadedImageHandler = (event, imageField) => {
+  // Browser image uploader
+  const imageBrowserUploader = (event, imageField) => {
     const file = event.target.files[0]
     if (file) {
       const reader = new FileReader()
@@ -57,47 +62,157 @@ function ListingItems() {
     }
   }
 
-  // Errors state
-  const [errors, setErrors] = useState({})
+  // firebase Image uploader
+  async function imageFirebaseUploader(imageField) {
+    if (!imageField) {
+      return ""
+    }
+    const image = formData[imageField]
+    const productName = formData.productName.toLowerCase().replace(/\s+/g, "-")
+    const storageRef = ref(
+      storage,
+      `products/${productName}/${image.file.name}`
+    )
+    await uploadBytes(storageRef, image.file)
+    const downloadURL = await getDownloadURL(storageRef)
+    return downloadURL
+  }
 
   // Submit handler
   const submitHandler = async (event) => {
     event.preventDefault()
     try {
+      // wait to the schema validation to complete
       await listingsValidation.validate(formData, { abortEarly: false })
-      toast.info("Pleas wait")
-      // Save the form data to the sellItems collection
-      const docRef = await addDoc(collection(db, "listing Items"), formData)
+      const user = auth.currentUser
+      const uid = user.uid
 
-      toast.success(t("addedAlert"), { toastId: docRef.id })
+      // Uploader confirmation
+      const confirm = window.confirm(t("confirmation"))
+      if (!confirm) {
+        return
+      }
 
-      // Clear the form data
-      setFormData({
-        primaryImage: { file: null, url: "/images/emptyImage.png" },
-        secondaryImage: { file: null, url: "/images/emptyImage.png" },
-        tertiaryImage: { file: null, url: "/images/emptyImage.png" },
-        quaternaryImage: { file: null, url: "/images/emptyImage.png" },
-        type: "",
-        category: "",
-        productName: "",
-        description: "",
-        location: "",
-        price: 0,
+      // promise uploader
+      const uploadPromise = new Promise((resolve, reject) => {
+        ;(async () => {
+          try {
+            //Images urls handlers
+            const primaryImageURL = await imageFirebaseUploader("primaryImage")
+            const secondaryImageURL = await imageFirebaseUploader(
+              "secondaryImage"
+            )
+            const tertiaryImageURL = await imageFirebaseUploader(
+              "tertiaryImage"
+            )
+            const quaternaryImageURL = await imageFirebaseUploader(
+              "quaternaryImage"
+            )
+
+            // new form with the images new urls
+            const newFormWithImagesUrls = {
+              ...formData,
+              primaryImage: { url: primaryImageURL },
+              secondaryImage: { url: secondaryImageURL },
+              tertiaryImage: { url: tertiaryImageURL },
+              quaternaryImage: { url: quaternaryImageURL },
+            }
+            if (primaryImageURL !== "") {
+              newFormWithImagesUrls.primaryImage = { url: primaryImageURL }
+            }
+            if (secondaryImageURL !== "") {
+              newFormWithImagesUrls.secondaryImage = { url: secondaryImageURL }
+            }
+            if (tertiaryImageURL !== "") {
+              newFormWithImagesUrls.tertiaryImage = { url: tertiaryImageURL }
+            }
+            if (quaternaryImageURL !== "") {
+              newFormWithImagesUrls.quaternaryImage = {
+                url: quaternaryImageURL,
+              }
+            }
+            // user collection that will be used to fetch the user listed items
+            const userCollection = collection(db, "users", uid, "userListings")
+            const userDocRef = await addDoc(
+              userCollection,
+              newFormWithImagesUrls
+            )
+
+            // general collection that will be used to fetch the user listed items in the home page
+            const generalCollection = collection(db, "generalListings")
+            const generalDocRef = await addDoc(
+              generalCollection,
+              newFormWithImagesUrls
+            )
+
+            // formate the form after uploading success
+            setFormData({
+              primaryImage: { file: "", url: "/images/emptyImage.png" },
+              secondaryImage: { file: "", url: "/images/emptyImage.png" },
+              tertiaryImage: { file: "", url: "/images/emptyImage.png" },
+              quaternaryImage: { file: "", url: "/images/emptyImage.png" },
+              type: "",
+              category: "",
+              productName: "",
+              description: "",
+              location: "",
+              price: "",
+              createdAt: timestamp,
+            })
+
+            // success promise
+            resolve({ userDocRef, generalDocRef })
+            // promise errors
+          } catch (error) {
+            // error promise
+            reject(error)
+          }
+        })()
       })
+
+      // toast fire promise that shows the promise success or error
+      toast.promise(
+        // the promise it self
+        uploadPromise,
+        {
+          // promise progress
+          pending: t("uploadingMessage"),
+          // promise success
+          success: t("addedAlert"),
+          // promise filer
+          error: t("notAddedAlert"),
+        },
+        {
+          // allows for more complex toast message workflows where subsequent toast messages depend
+          success: ({ userDocRef, generalDocRef }) => ({
+            userToastId: userDocRef.id,
+            generalToastId: generalDocRef.id,
+          }),
+        }
+      )
+      // submit errors
     } catch (error) {
-      // Setting the error to be displayed from the validationErrors
-      toast.error("Oh no There is an error the list doesn't uploaded")
+      // general error message
+      toast.error(t("generalError"))
+      // schema validation errors
       const schemaErrors = {}
+      // aa the schema validation errors to the api errors
       error.inner.forEach((error) => {
         schemaErrors[error.path] = error.message
       })
+      // set the errors in the errors handler
       setErrors(schemaErrors)
     }
   }
 
   return (
     <>
-      <ToastContainer pauseOnHover={false} newestOnTop={true} theme='colored' />
+      <ToastContainer
+        pauseOnHover={false}
+        newestOnTop={true}
+        theme='colored'
+        className='z-50'
+      />
       <form onSubmit={submitHandler} className='mx-5 mb-3'>
         {/* Head text */}
         <Highlighter text={`${t("headerText")}`} />
@@ -122,7 +237,7 @@ function ListingItems() {
                 type='file'
                 accept='image/*'
                 onChange={(event) =>
-                  uploadedImageHandler(event, "primaryImage")
+                  imageBrowserUploader(event, "primaryImage")
                 }
                 className='hidden'
               />
@@ -141,7 +256,7 @@ function ListingItems() {
                   type='file'
                   accept='image/*'
                   onChange={(event) =>
-                    uploadedImageHandler(event, "secondaryImage")
+                    imageBrowserUploader(event, "secondaryImage")
                   }
                   className='hidden'
                 />
@@ -160,7 +275,7 @@ function ListingItems() {
                     type='file'
                     accept='image/*'
                     onChange={(event) =>
-                      uploadedImageHandler(event, "tertiaryImage")
+                      imageBrowserUploader(event, "tertiaryImage")
                     }
                     className='hidden'
                   />
@@ -181,7 +296,7 @@ function ListingItems() {
                     type='file'
                     accept='image/*'
                     onChange={(event) =>
-                      uploadedImageHandler(event, "quaternaryImage")
+                      imageBrowserUploader(event, "quaternaryImage")
                     }
                     className='hidden'
                   />
@@ -200,7 +315,6 @@ function ListingItems() {
                 value={formData.type}
                 onChange={inputsHandler}
                 className='cursor-pointer text-center block py-2.5 w-full text-md text-gray-600 bg-transparent border-0 border-b-2 border-gray-200 dark:text-gray-700 dark:border-gray-700 focus:outline-none focus:ring-0'
-                onError={`${toast.error(errors.type).type}`}
               >
                 <option // * Default value selected
                   value=''
@@ -211,7 +325,6 @@ function ListingItems() {
                 <option value='product'>{t("product")}</option>
                 <option value='service'>{t("service")}</option>
               </select>
-
               {/* //* Category Selector */}
               <select
                 id='categorySelector'
@@ -219,7 +332,6 @@ function ListingItems() {
                 value={formData.category}
                 onChange={inputsHandler}
                 className='cursor-pointer text-center block py-2.5 w-full text-md text-gray-600 bg-transparent border-0 border-b-2 border-gray-200 dark:text-gray-700 dark:border-gray-700 focus:outline-none focus:ring-0'
-                onError={`${toast.error(errors.category).category}`}
               >
                 <option // * Default value selected
                   value=''
@@ -233,6 +345,9 @@ function ListingItems() {
                 <option value='Two-wheeler'>{t("two-wheeler")}</option>
               </select>
             </div>
+            {errors.category}
+            <br />
+            {errors.type}
 
             {/* Product Information Inputs */}
             <div>
@@ -242,8 +357,8 @@ function ListingItems() {
                 type='text'
                 value={formData.productName}
                 onChange={inputsHandler}
-                onError={`${toast.error(errors.productName).productName}`}
               />
+              {errors.productName}
 
               <Input // * Product description input
                 name='description'
@@ -252,8 +367,8 @@ function ListingItems() {
                 type='text'
                 value={formData.description}
                 onChange={inputsHandler}
-                onError={`${toast.error(errors.description).description}`}
               />
+              {errors.description}
 
               <span className='flex gap-4'>
                 <Input // * Product location input
@@ -263,7 +378,6 @@ function ListingItems() {
                   type='text'
                   value={formData.location}
                   onChange={inputsHandler}
-                  onError={`${toast.error(errors.location).location}`}
                 />
 
                 <Input // * Product price input
@@ -273,10 +387,11 @@ function ListingItems() {
                   type='text'
                   value={formData.price}
                   onChange={inputsHandler}
-                  onError={`${toast.error(errors.price)}`}
                 />
               </span>
-
+              {errors.location}
+              <br />
+              {errors.price}
               <span className='flex'>
                 <Button // * Image uploader button
                   buttonStyle='uploadImage'

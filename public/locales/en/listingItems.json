@@ -1,6 +1,9 @@
 {
-  "addedAlert": "Item added",
-  "notAddedAlert": "Error adding item",
+  "confirmation": "Sure to upload ?",
+  "uploadingMessage": "Upload your product Please wait The download speed depends on your internet speed",
+  "addedAlert": "Item upload success 👌",
+  "notAddedAlert": "Upload failed 🤯",
+  "generalError": "Sorry, there is an error product that didn't upload successfully 😢",
   "headerText": "List an Item/Service",
   "primaryImage": "Primary image",
   "secondaryImage": "Secondary image",
@@ -19,5 +22,6 @@
   "location": "Location",
   "price": "Price",
   "uploadImage": "Upload image(s)",
-  "list": "List"
+  "list": "List",
+  "hi": "Hey you i think you have to sign up or sign in first !"
 }

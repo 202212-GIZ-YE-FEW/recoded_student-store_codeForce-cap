@@ -1,9 +1,38 @@
 import Image from "next/image"
 import { withTranslation } from "next-i18next"
 
+import { useProfileData } from "@/utils/store"
+
 import Highlighter from "../highlighter"
+import Spinner from "../Spinner/Spinner"
 
 function SideBar({ handleSelectedPage, selectedPage, t }) {
+  const { profileData, isLoading } = useProfileData()
+
+  if (isLoading) {
+    return <Spinner text='Pleas wait ...' />
+  }
+
+  // Image on click event that will let the image an input filed when the page is edite profile
+  const imageOnClick = () => {
+    if (selectedPage === "EditProfile") {
+      document.getElementById("profile-image-input").click()
+    }
+  }
+
+  // The image that will be displayed in the screen as it is a normal image
+  const imageComponent = (
+    <Image
+      className={`rounded-full mx-auto ${
+        selectedPage === "EditProfile" ? "cursor-pointer" : ""
+      }`}
+      src={profileData?.profileImg?.url || "/images/cat-photo.svg"}
+      alt='...'
+      width={171}
+      height={171}
+      onClick={imageOnClick}
+    />
+  )
   return (
     <>
       {/* // * If it is large screen */}
@@ -12,17 +41,17 @@ function SideBar({ handleSelectedPage, selectedPage, t }) {
         dir={t("language") === "ar" ? "rtl" : "ltr"}
       >
         <div className='flex flex-col justify-around text-center w-[331px] pt-10 h-[80%]'>
-          <Image
-            className='rounded-full mx-auto'
-            src='/productImg.png'
-            alt='...'
-            width={171}
-            height={171}
-          />
-          <div className='text-[22px] op'>
-            <h2 className='font-semibold'>User Name</h2>
-            <p>User Email</p>
-            <p>User Location</p>
+          {imageComponent}
+          <div className='text-[22px]'>
+            <span className='flex font-semibold justify-center gap-1'>
+              <h2>Name:</h2>
+              <span className='flex gap-1'>
+                <h2> {profileData?.firstName || ""} </h2>
+                <h2> {profileData?.surname || ""} </h2>
+              </span>
+            </span>
+            <p>Email: {profileData?.email || ""}</p>
+            <p>Location: {profileData?.address || ""}</p>
           </div>
           <button
             aria-label='Edit Profile'
@@ -64,7 +93,7 @@ function SideBar({ handleSelectedPage, selectedPage, t }) {
           </div>
         </div>
       </section>
-      {/* // * If the expression false */}
+      {/* // * If it is small screen */}
       <section className='block lg:hidden'>
         <div className='grid grid-cols-3 text-[17px] items-center text-purple-dark text-center bg-[#90EEE1] h-[37.5px]'>
           <button
