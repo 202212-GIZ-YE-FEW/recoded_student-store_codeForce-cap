@@ -1,10 +1,10 @@
-import { withTranslation } from "next-i18next"
 import Image from "next/image"
 import Link from "next/link"
 import { useRouter } from "next/router"
+import { withTranslation } from "next-i18next"
 import { useEffect, useState } from "react"
 import { BsFacebook, BsGoogle, BsTwitter } from "react-icons/bs"
-import { ToastContainer, toast } from "react-toastify"
+import { toast, ToastContainer } from "react-toastify"
 
 import "react-toastify/dist/ReactToastify.css"
 import styles from "./Signin.module.css"
@@ -69,6 +69,22 @@ function Signin({ t }) {
       })
       setErrors(validationErrors)
     }
+  }
+
+  const handleGoogleLogin = () => {
+    signIn(null, null, "google").then(() => {
+      router.replace("/").then(() => {
+        toast.success("Welcome Back")
+      })
+    })
+  }
+
+  const handleFacebookLogin = () => {
+    signIn(null, null, "google").then(() => {
+      router.replace("/").then(() => {
+        toast.success("Welcome Back")
+      })
+    })
   }
 
   return (
@@ -137,14 +153,14 @@ function Signin({ t }) {
         <div className='m-1 mb-8 flex flex-row  '>
           <button
             className=' m-1 flex items-center rounded-3xl border border-[#F26F6F] p-1  text-[#F26F6F]'
-            onClick={() => signIn(null, null, "google")}
+            onClick={handleGoogleLogin}
           >
             <BsGoogle color='#F26F6F' size={24} style={{ padding: "1px" }} />
             <p className='mx-2 text-sm md:mx-3'>{t("google")}</p>
           </button>
           <button
             className='color-darkPurple m-1  flex items-center rounded-3xl border border-[#485DCF] p-1 text-[#485DCF]'
-            onClick={() => signIn(null, null, "facebook")}
+            onClick={handleFacebookLogin}
           >
             <BsFacebook color='#485DCF' size={24} style={{ padding: "1px" }} />
             <p className='mx-2 text-sm md:mx-3'>{t("facebook")}</p>
