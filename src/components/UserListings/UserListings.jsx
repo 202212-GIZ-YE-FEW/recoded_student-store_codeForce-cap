@@ -43,7 +43,7 @@ function UserListings({ t }) {
               className='lg:bg-white rounded-lg pb-7 cart-animation'
             >
               <Image
-                className='rounded-t-lg shadow-lg w-full'
+                className='rounded-t-lg shadow-lg w-full max-h-[250px] min-h-[250px]'
                 src={product.primaryImage.url}
                 alt={product.productName}
                 width={1920}

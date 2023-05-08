@@ -49,7 +49,7 @@ function ProductList({ selectedFilter, t }) {
                 alt={product?.productName || "No Image"}
                 width={258}
                 height={250}
-                className='rounded-t-lg shadow-lg w-full bg-white'
+                className='rounded-t-lg shadow-lg w-full bg-white max-h-[250px] min-h-[250px]'
               />
               <div className='absolute bottom-2 right-2 z-10'>
                 <button className='flex items-center justify-center w-8 h-8 bg-white text-red-500 rounded-full shadow-md hover:text-red-500 transition-colors duration-300 ease-in-out'>

@@ -71,6 +71,22 @@ function Signin({ t }) {
     }
   }
 
+  const handleGoogleLogin = () => {
+    signIn(null, null, "google").then(() => {
+      router.replace("/").then(() => {
+        toast.success("Welcome Back")
+      })
+    })
+  }
+
+  const handleFacebookLogin = () => {
+    signIn(null, null, "google").then(() => {
+      router.replace("/").then(() => {
+        toast.success("Welcome Back")
+      })
+    })
+  }
+
   return (
     <div className={`flex justify-center  md:flex-row  bg-[#f1f6fa] `}>
       <ToastContainer
@@ -135,11 +151,17 @@ function Signin({ t }) {
         </div>
         <p className='text-md m-1 text-[#647581]'>{t("sign-in-with")}</p>
         <div className='m-1 mb-8 flex flex-row  '>
-          <button className=' m-1 flex items-center rounded-3xl border border-[#F26F6F] p-1  text-[#F26F6F]'>
+          <button
+            className=' m-1 flex items-center rounded-3xl border border-[#F26F6F] p-1  text-[#F26F6F]'
+            onClick={handleGoogleLogin}
+          >
             <BsGoogle color='#F26F6F' size={24} style={{ padding: "1px" }} />
             <p className='mx-2 text-sm md:mx-3'>{t("google")}</p>
           </button>
-          <button className='color-darkPurple m-1  flex items-center rounded-3xl border border-[#485DCF] p-1 text-[#485DCF]'>
+          <button
+            className='color-darkPurple m-1  flex items-center rounded-3xl border border-[#485DCF] p-1 text-[#485DCF]'
+            onClick={handleFacebookLogin}
+          >
             <BsFacebook color='#485DCF' size={24} style={{ padding: "1px" }} />
             <p className='mx-2 text-sm md:mx-3'>{t("facebook")}</p>
           </button>

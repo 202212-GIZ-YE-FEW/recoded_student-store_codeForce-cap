@@ -16,6 +16,7 @@ import Button from "../button"
 import Input from "../input"
 
 /*
+// Future Note
 //! Define rate limit middleware to prevent brute-force attacks
 const limiter = rateLimit({
   windowMs: 15 * 60 * 1000, // 15 minutes
@@ -35,7 +36,7 @@ function Signup({ t }) {
     passwordConfirm: "",
   })
 
-  const [isSuccess, setIsSuccess] = useState(false)
+  // const [isSuccess, setIsSuccess] = useState(false) // * Note to the future
   // const [errorMessage, setErrorMessage] = useState("") // * Note to the future
   const [errors, setErrors] = useState({})
 
@@ -55,32 +56,16 @@ function Signup({ t }) {
       toast.warning("Pleas wait") // set loading state to true while the API call is in progress
       const { firstName, surname, email, schoolName, password } = formData
 
-      // Hash password using bcrypt
-      // const hashedPassword = await bcrypt.hash(password, 10)
       const hashedPassword = password
 
       // No validation errors, attempt to sign up the user
-      const { result, error } = await signUp(
+      const { error } = await signUp(
         email,
         hashedPassword,
         firstName,
         surname,
         schoolName
       )
-
-      // if (result) {
-      //   // Wait for the user to verify their email address
-      //   await waitForEmailVerification()
-      //   setIsSuccess(true)
-      //   toast.success("Sign up successful!")
-      //   toast.warn(
-      //     "Email verification sent! Please check your inbox.",
-      //     "\n email:",
-      //     result.email,
-      //     "\n email verification status:",
-      //     result.verified
-      //   )
-      // }
 
       if (error) {
         return
@@ -96,6 +81,30 @@ function Signup({ t }) {
         validationErrors[error.path] = error.message
       })
       setErrors(validationErrors)
+    }
+  }
+
+  const handleSocialSignup = async (method) => {
+    try {
+      const { firstName, surname, email, schoolName } = formData
+      const { error } = await signUp(
+        email,
+        null,
+        firstName,
+        surname,
+        schoolName,
+        method
+      )
+
+      if (error) {
+        return
+      }
+
+      router.replace("/").then(() => {
+        toast.success("Welcome to our website. You are logged in directly")
+      })
+    } catch (err) {
+      console.error(err)
     }
   }
 
@@ -211,7 +220,10 @@ function Signup({ t }) {
             </div>
             <p className='text-md m-1 text-[#647581]'>{t("sign-up-with")}</p>
             <div className='m-1 mb-8 flex flex-row  '>
-              <button className=' m-1 flex items-center rounded-3xl border border-[#F26F6F] p-1  text-[#F26F6F]'>
+              <button
+                className=' m-1 flex items-center rounded-3xl border border-[#F26F6F] p-1  text-[#F26F6F]'
+                onClick={() => handleSocialSignup("google")}
+              >
                 <BsGoogle
                   color='#F26F6F'
                   size={24}
@@ -219,7 +231,10 @@ function Signup({ t }) {
                 />
                 <p className='mx-2 text-sm md:mx-3'>{t("google")}</p>
               </button>
-              <button className='color-darkPurple m-1  flex items-center rounded-3xl border border-[#485DCF] p-1 text-[#485DCF]'>
+              <button
+                className='color-darkPurple m-1  flex items-center rounded-3xl border border-[#485DCF] p-1 text-[#485DCF]'
+                onClick={() => handleSocialSignup("facebook")}
+              >
                 <BsFacebook
                   color='#485DCF'
                   size={24}
