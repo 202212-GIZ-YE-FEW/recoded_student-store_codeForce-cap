@@ -33,7 +33,7 @@ export default function SignUpPage() {
     }
   }, [isLoggedIn, router, userName, t, firstSignUp])
   return (
-    <RootLayout>
+    <RootLayout title='Sign up'>
       <ToastContainer
         pauseOnHover={false}
         newestOnTop={true}

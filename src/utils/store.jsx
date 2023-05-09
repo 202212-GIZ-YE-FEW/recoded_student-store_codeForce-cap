@@ -128,3 +128,53 @@ export const useUserListings = () => {
   }, [userId])
   return { data, loading, error }
 }
+
+export const useProduct = (productId) => {
+  const [data, setData] = useState(null)
+  const [error, setError] = useState(null)
+  const [loading, setLoading] = useState(true)
+
+  useEffect(() => {
+    const fetchData = async () => {
+      try {
+        const generalDocRef = doc(db, "generalListings", productId)
+        const generalDocSnapshot = await getDoc(generalDocRef)
+
+        if (generalDocSnapshot.exists()) {
+          setData({ id: generalDocSnapshot.id, ...generalDocSnapshot.data() })
+          setLoading(false)
+        } else {
+          const userId = auth.currentUser?.uid
+
+          if (userId) {
+            const userDocRef = doc(
+              db,
+              "users",
+              userId,
+              "userListings",
+              productId
+            )
+            const userDocSnapshot = await getDoc(userDocRef)
+
+            if (userDocSnapshot.exists()) {
+              setData({ id: userDocSnapshot.id, ...userDocSnapshot.data() })
+            } else {
+              setError("Product not found")
+            }
+          } else {
+            setError("Product not found")
+          }
+
+          setLoading(false)
+        }
+      } catch (error) {
+        setError(error)
+        setLoading(false)
+      }
+    }
+
+    fetchData()
+  }, [productId])
+
+  return { data, error, loading }
+}

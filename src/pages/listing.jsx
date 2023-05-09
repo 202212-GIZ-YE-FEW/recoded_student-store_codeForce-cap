@@ -23,7 +23,7 @@ function ListingPage() {
     }
   }, [isLoggedIn, router, t])
   return (
-    <RootLayout>
+    <RootLayout title='List Product'>
       <ListingItems />
     </RootLayout>
   )
