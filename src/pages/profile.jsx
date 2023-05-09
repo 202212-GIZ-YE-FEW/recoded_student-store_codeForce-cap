@@ -1,6 +1,6 @@
-import { useRouter } from "next/router"
 import { useTranslation } from "next-i18next"
 import { serverSideTranslations } from "next-i18next/serverSideTranslations"
+import { useRouter } from "next/router"
 import { useEffect, useRef, useState } from "react"
 import { toast } from "react-toastify"
 
@@ -10,9 +10,10 @@ import UserListings from "@/components/UserListings"
 import UserOrders from "@/components/UserOrders"
 
 import RootLayout from "@/layout/root/RootLayout"
-import { useAuth } from "@/utils/store"
+import { useAuth, useProfileData } from "@/utils/store"
 
 export default function UserPage() {
+  const { profileData, isLoading } = useProfileData()
   const { t } = useTranslation("signup")
   const [selectedPage, setSelectedPage] = useState("UserOrders")
   const router = useRouter()
@@ -29,7 +30,9 @@ export default function UserPage() {
   }
   const profileImageInputRef = useRef(null)
   return (
-    <RootLayout>
+    <RootLayout
+      title={isLoading ? "Profile" : `${profileData?.firstName} profile`}
+    >
       <div className='lg:flex lg:h-[816.2px]'>
         <div>
           <SideBar
