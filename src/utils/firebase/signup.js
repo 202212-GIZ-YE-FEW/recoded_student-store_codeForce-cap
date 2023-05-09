@@ -45,7 +45,14 @@ export default async function signUp(
       if (userDoc.exists()) {
         toast.error("Already exists")
       } else {
-        await createUserDoc(userId, firstName, surname, user.email, schoolName)
+        await createUserDoc(
+          userId,
+          firstName,
+          surname,
+          user.email,
+          schoolName,
+          null
+        )
       }
     } else if (method === "google") {
       const user = await signInWithGoogle()
@@ -55,7 +62,14 @@ export default async function signUp(
       if (userDoc.exists()) {
         toast.error("Already exists")
       } else {
-        await createUserDoc(userId, firstName, surname, user.email, schoolName)
+        await createUserDoc(
+          userId,
+          firstName,
+          surname,
+          user.email,
+          schoolName,
+          null
+        )
       }
     }
   } catch (e) {
