@@ -1,6 +1,6 @@
-import { useRouter } from "next/router"
 import { useTranslation } from "next-i18next"
 import { serverSideTranslations } from "next-i18next/serverSideTranslations"
+import { useRouter } from "next/router"
 import { useEffect, useState } from "react"
 import { toast } from "react-toastify"
 
@@ -30,7 +30,7 @@ export default function SignInPage() {
   }, [isLoggedIn, router, userName, t, firstSignIn])
 
   return (
-    <RootLayout>
+    <RootLayout title='Sign in'>
       <Signin />
     </RootLayout>
   )
