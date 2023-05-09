@@ -6,6 +6,7 @@ import "keen-slider/keen-slider.min.css"
 import styels from "./Hero.module.css"
 
 import { SectionWrapper } from "@/components/hoc"
+import Link from "next/link"
 
 const images = [
   "/images/student store.png",
@@ -79,14 +80,26 @@ function Hero() {
           className={`${styels.zoom + "-out"} keen-slider px-15`}
         >
           {images.map((src, idx) => (
-            <div key={idx} className='keen-slider__slide w-full h-full'>
+            <div
+              key={idx}
+              className='keen-slider__slide absolute w-full h-full'
+            >
               <div style={scaleStyle(idx)} className='mx-10'>
-                <h1 className='text-3xl font-extrabold text-purple sm:text-5xl'>
-                  {title[idx].lineOne}
-                </h1>
-                <h1 className='block text-2xl font-extrabold sm:text-3xl'>
-                  {title[idx].lineTwo}
-                </h1>
+                <div className=''>
+                  <h1 className='text-3xl font-extrabold text-purple sm:text-5xl'>
+                    {title[idx].lineOne}
+                  </h1>
+                  <h1 className='block text-2xl font-extrabold sm:text-3xl'>
+                    {title[idx].lineTwo}
+                  </h1>
+                  <br />
+                  <Link
+                    href='/listing'
+                    class='w-20 rounded bg-purple px-12 py-3 text-sm font-medium text-white shadow hover:bg-purple-dark focus:outline-none focus:ring active:bg-purple-almostblack sm:w-auto'
+                  >
+                    Get Started
+                  </Link>
+                </div>
                 <Image
                   src={src}
                   width={1123}
