@@ -15,6 +15,8 @@ const images = [
   "/images/student store.png",
 ]
 
+const title = [{ lineOne: "Let's Start", lineTwo: "Selling items📦" }]
+
 function Hero() {
   const [details, setDetails] = useState(null)
 
