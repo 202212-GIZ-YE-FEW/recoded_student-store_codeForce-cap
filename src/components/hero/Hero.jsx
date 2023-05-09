@@ -18,7 +18,10 @@ const images = [
   // "https://images.unsplash.com/photo-1590005176489-db2e714711fc?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&h=500&w=800&q=80",
 ]
 
-const title = [{ lineOne: "Let's Start", lineTwo: "Selling Items📦" }, {}]
+const title = [
+  { lineOne: "Let's Start", lineTwo: "Selling Items 📦" },
+  { lineOne: "Student Store", lineTwo: "Share for Care ❤️" },
+]
 
 function Hero() {
   const [details, setDetails] = useState(null)
@@ -42,7 +45,7 @@ function Hero() {
           clearTimeout(timeout)
           if (mouseOver) return
           timeout = setTimeout(() => {
-            // slider.next()
+            slider.next()
           }, 2000)
         }
         slider.on("created", () => {

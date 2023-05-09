@@ -25,7 +25,7 @@ exports[`renders correctly 1`] = `
           <h1
             className="block text-2xl font-extrabold sm:text-3xl"
           >
-            Selling Items📦
+            Selling Items 📦
           </h1>
           <br />
           <a
@@ -70,10 +70,14 @@ exports[`renders correctly 1`] = `
         >
           <h1
             className="text-3xl font-extrabold text-purple sm:text-5xl"
-          />
+          >
+            Student Store
+          </h1>
           <h1
             className="block text-2xl font-extrabold sm:text-3xl"
-          />
+          >
+            Share for Care ❤️
+          </h1>
           <br />
           <a
             class="hidden w-20 rounded bg-purple px-12 py-4 text-1xl font-medium text-white shadow hover:bg-purple-dark focus:outline-none focus:ring active:bg-purple-almostblack sm:w-auto"
