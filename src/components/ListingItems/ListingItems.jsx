@@ -10,12 +10,15 @@ import "react-toastify/dist/ReactToastify.css"
 
 import { auth, db, storage, timestamp } from "@/utils/firebase/config"
 import { listingsValidation } from "@/utils/schemaValidations/listingItems"
+import { useProfileData } from "@/utils/store"
 
 import Button from "../button"
 import Highlighter from "../highlighter"
 import Input from "../input"
 
 function ListingItems() {
+  // User profile to take the name, email, and location to implement it with the product listing collection
+  const { profileData } = useProfileData()
   // Translation state
   const { t } = useTranslation("listingItems")
   // Errors state
@@ -92,6 +95,12 @@ function ListingItems() {
       if (!confirm) {
         return
       }
+      // Fetch owner name, email, and location from user profile data
+
+      const ownerName = profileData?.firstName + profileData?.surname
+      const ownerEmail = user?.email
+      const ownerLocation = profileData?.address
+      const ownerProfile = profileData?.profileImg?.url
 
       // promise uploader
       const uploadPromise = new Promise((resolve, reject) => {
@@ -116,6 +125,10 @@ function ListingItems() {
               secondaryImage: { url: secondaryImageURL },
               tertiaryImage: { url: tertiaryImageURL },
               quaternaryImage: { url: quaternaryImageURL },
+              ownerName,
+              ownerEmail,
+              ownerLocation,
+              ownerProfile,
             }
             if (primaryImageURL !== "") {
               newFormWithImagesUrls.primaryImage = { url: primaryImageURL }

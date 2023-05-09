@@ -1,4 +1,3 @@
-import { withTranslation } from "next-i18next"
 import { useState } from "react"
 
 import ProductList from "@/components/ProductList"
@@ -45,4 +44,4 @@ function CategoryFilter() {
   )
 }
 
-export default withTranslation("index")(CategoryFilter)
+export default CategoryFilter

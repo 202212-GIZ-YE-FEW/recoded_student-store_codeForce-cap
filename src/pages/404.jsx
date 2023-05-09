@@ -9,7 +9,7 @@ export default function NotFoundPage() {
   const { t } = useTranslation("common")
 
   return (
-    <RootLayout>
+    <RootLayout title='Not Found'>
       <div
         className='container flex flex-col items-center justify-center px-5 mx-auto my-8'
         dir={t("language") === "ar" ? "rtl" : "ltr"}
