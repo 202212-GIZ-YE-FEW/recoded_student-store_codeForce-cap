@@ -6,9 +6,8 @@ import {
 } from "firebase/auth"
 import { doc, updateDoc } from "firebase/firestore"
 import { getDownloadURL, ref, uploadBytes } from "firebase/storage"
-import dynamic from "next/dynamic"
-import Image from "next/image"
 import { withTranslation } from "next-i18next"
+import Image from "next/image"
 import { useRef, useState } from "react"
 import PhoneInput from "react-phone-input-2"
 import { toast, ToastContainer } from "react-toastify"
@@ -24,10 +23,6 @@ import { useProfileData } from "@/utils/store"
 import Button from "../button"
 import Input from "../input"
 import Spinner from "../Spinner/Spinner"
-// ! Map dynamic import
-const Maps = dynamic(() => import("./Maps"), {
-  ssr: false,
-})
 
 function EditProfile({ t }) {
   const { profileData, isLoading } = useProfileData()
@@ -38,7 +33,7 @@ function EditProfile({ t }) {
     firstName: "",
     surname: "",
     email: "",
-    phoneNumber: "967",
+    phoneNumber: "",
     password: "",
     confirmPassword: "",
     address: "",
@@ -58,7 +53,7 @@ function EditProfile({ t }) {
           file: file,
           url: reader.result,
         },
-        isProfileImgUpdated: true,
+        isProfileImgUpdated: true, // New image checker
       })) // update the profile image in the form data with the user-uploaded image
     }
   }
@@ -102,11 +97,11 @@ function EditProfile({ t }) {
       }
 
       // * Confirmation window
-
       const confirmSave = window.confirm("Save changes?")
       if (!confirmSave) {
         return
       }
+      // Uploading promes that will be handeld in the toast promis to display the loading toast
       const uploadPromise = new Promise((resolve, reject) => {
         ;(async () => {
           try {
@@ -184,7 +179,7 @@ function EditProfile({ t }) {
 
       toast
         .promise(
-          // The  promise
+          // Uploading promise
           uploadPromise,
           {
             // promise progress
@@ -202,11 +197,12 @@ function EditProfile({ t }) {
           }
         )
         .then(() => {
+          // Format the form after submit
           setFormData({
             firstName: "",
             surname: "",
             email: "",
-            phoneNumber: "967",
+            phoneNumber: "",
             password: "",
             confirmPassword: "",
             address: "",
@@ -230,10 +226,7 @@ function EditProfile({ t }) {
         theme='colored'
         className='z-50'
       />
-      <div
-        className='grid lg:grid-cols-2 lg:ml-36 w-[86%] overflow-y-auto gap-x-12 mt-10 lg:mt-28 mx-auto'
-        // dir={t("language") === "ar" ? "rtl" : "ltr"}
-      >
+      <div className='grid lg:grid-cols-2 lg:ml-36 w-[86%] overflow-y-auto gap-x-12 mt-10 lg:mt-28 mx-auto'>
         <Input
           className='hidden'
           type='file'
@@ -340,9 +333,6 @@ function EditProfile({ t }) {
               setFormData({ ...formData, address: e.target.value })
             }
           />
-        </span>
-        <span className='mt-3 hidden lg:block'>
-          <Maps />
         </span>
         <span className='mx-auto mt-8'>
           <Button
