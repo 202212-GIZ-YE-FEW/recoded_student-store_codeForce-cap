@@ -44,7 +44,7 @@ export default function SingleProduct() {
               <div className='flex flex-col sm:flex-row lg:flex-col gap-5'>
                 <Image // * First Image
                   className='block border-2 border-slate-700 drop-shadow-2xl lg:w-full max-h-[340px] sm:max-h-[262px] lg:max-h-[405px]'
-                  src={data?.primaryImage?.url}
+                  src={data?.primaryImage?.url || "/images/emptyImage.png"}
                   alt={t("primaryImage")}
                   width={570}
                   height={340}
@@ -52,7 +52,7 @@ export default function SingleProduct() {
                 <div className='flex flex-row sm:flex-col lg:flex-row gap-10 sm:gap-4 lg:gap-20'>
                   <Image // * Second Image
                     className='block border-2 border-slate-700 drop-shadow-2xl sm:w-full lg:w-[190px] max-h-[90px] sm:max-h-[137px] lg:max-h-[105px]'
-                    src={data?.secondaryImage?.url}
+                    src={data?.secondaryImage?.url || "/images/donate.png"}
                     alt={t("secondaryImage")}
                     width={190}
                     height={137}
@@ -60,14 +60,16 @@ export default function SingleProduct() {
                   <div className='flex gap-10 sm:gap-4 lg:gap-20'>
                     <Image // * Third Image
                       className='block border-2 border-slate-700 drop-shadow-2xl max-h-[90px] sm:max-h-[137px] lg:max-h-[105px]'
-                      src={data?.tertiaryImage?.url}
+                      src={data?.tertiaryImage?.url || "/images/emptyImage.png"}
                       alt={t("tertiaryImage")}
                       width={190}
                       height={137}
                     />
                     <Image // * Fourth Image
                       className='block border-2 border-slate-700 drop-shadow-2xl max-h-[90px] sm:max-h-[137px] lg:max-h-[105px]'
-                      src={data?.quaternaryImage?.url}
+                      src={
+                        data?.quaternaryImage?.url || "/images/emptyImage.png"
+                      }
                       alt={t("quaternaryImage")}
                       width={190}
                       height={137}
@@ -123,13 +125,18 @@ export default function SingleProduct() {
                     />
                   </div>
                   <div className='m-auto lg:m-auto font-poppins text-white text-[14px] lg:text-xl md:text-xl'>
-                    <h1 className='font-semibold text-1xl'>Rifik Haspolat</h1>
-                    <h2>
-                      <span className='font-bold'>email:</span> miyav@gmail.com
+                    <h1 className='font-semibold text-1xl'>
+                      {data?.ownerName || "Owner name"}
+                    </h1>
+                    <h2 className='w-[27vh] overflow-hidden'>
+                      <span className='font-bold'>email:</span>{" "}
+                      <span className='truncate'>
+                        {data?.ownerEmail || "Owner email"}
+                      </span>
                     </h2>
                     <h2>
                       <span className='font-bold'>Location:</span>{" "}
-                      istanbul/turkey
+                      {data?.ownerLocation || "Owner location"}
                     </h2>
                   </div>
                 </div>
