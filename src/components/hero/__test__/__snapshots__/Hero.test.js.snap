@@ -11,22 +11,36 @@ exports[`renders correctly 1`] = `
       className="zoom-out keen-slider px-15"
     >
       <div
-        className="keen-slider__slide w-full h-full"
+        className="keen-slider__slide absolute w-full h-full"
       >
         <div
           className="mx-10"
           style={{}}
         >
-          <h1
-            className="text-3xl font-extrabold text-purple sm:text-5xl"
+          <div
+            className=""
           >
-            Let's Start
-          </h1>
-          <h1
-            className="block text-2xl font-extrabold sm:text-3xl"
-          >
-            Selling Items📦
-          </h1>
+            <h1
+              className="text-3xl font-extrabold text-purple sm:text-5xl"
+            >
+              Let's Start
+            </h1>
+            <h1
+              className="block text-2xl font-extrabold sm:text-3xl"
+            >
+              Selling Items📦
+            </h1>
+            <br />
+            <a
+              class="w-20 rounded bg-purple px-12 py-3 text-sm font-medium text-white shadow hover:bg-purple-dark focus:outline-none focus:ring active:bg-purple-almostblack sm:w-auto"
+              href="/listing"
+              onClick={[Function]}
+              onMouseEnter={[Function]}
+              onTouchStart={[Function]}
+            >
+              Get Started
+            </a>
+          </div>
           <img
             alt="..."
             className=" w-full h-full object-cover bg-transparent"
@@ -48,18 +62,32 @@ exports[`renders correctly 1`] = `
         </div>
       </div>
       <div
-        className="keen-slider__slide w-full h-full"
+        className="keen-slider__slide absolute w-full h-full"
       >
         <div
           className="mx-10"
           style={{}}
         >
-          <h1
-            className="text-3xl font-extrabold text-purple sm:text-5xl"
-          />
-          <h1
-            className="block text-2xl font-extrabold sm:text-3xl"
-          />
+          <div
+            className=""
+          >
+            <h1
+              className="text-3xl font-extrabold text-purple sm:text-5xl"
+            />
+            <h1
+              className="block text-2xl font-extrabold sm:text-3xl"
+            />
+            <br />
+            <a
+              class="w-20 rounded bg-purple px-12 py-3 text-sm font-medium text-white shadow hover:bg-purple-dark focus:outline-none focus:ring active:bg-purple-almostblack sm:w-auto"
+              href="/listing"
+              onClick={[Function]}
+              onMouseEnter={[Function]}
+              onTouchStart={[Function]}
+            >
+              Get Started
+            </a>
+          </div>
           <img
             alt="..."
             className=" w-full h-full object-cover bg-transparent"
