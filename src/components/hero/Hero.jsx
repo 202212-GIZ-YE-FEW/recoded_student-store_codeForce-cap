@@ -99,7 +99,7 @@ function Hero() {
                     href='/listing'
                     class={`${
                       idx === 0 ? "inline-block" : "hidden"
-                    } w-20 rounded bg-purple px-12 py-4 text-sm font-medium text-white shadow hover:bg-purple-dark focus:outline-none focus:ring active:bg-purple-almostblack sm:w-auto`}
+                    } w-20 rounded bg-purple px-12 py-4 text-1xl font-medium text-white shadow hover:bg-purple-dark focus:outline-none focus:ring active:bg-purple-almostblack sm:w-auto`}
                   >
                     Get Started
                   </Link>
