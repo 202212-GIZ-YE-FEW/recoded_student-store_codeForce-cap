@@ -77,15 +77,15 @@ function Hero() {
       <div className=''>
         <div
           ref={sliderRef}
-          className={`${styels.zoom + "-out"} keen-slider px-15`}
+          className={`${styels.zoom + "-out"} keen-slider px-15 static`}
         >
           {images.map((src, idx) => (
             <div
               key={idx}
               className='keen-slider__slide absolute w-full h-full'
             >
-              <div style={scaleStyle(idx)} className='mx-10'>
-                <div className=''>
+              <div style={scaleStyle(idx)} className='mx-10 relative'>
+                <div className='absolute mt-52'>
                   <h1 className='text-3xl font-extrabold text-purple sm:text-5xl'>
                     {title[idx].lineOne}
                   </h1>
