@@ -130,7 +130,7 @@ export default function SingleProduct() {
                   <div className='flex flex-row bg-[#585785] w-64 h-20 lg:w-96 lg:h-36 md:w-96 md:h-36 rounded-l-full -mx-1 border-r-4 border-dashed'>
                     <div className='m-auto ml-2'>
                       <Image
-                        src='/images/cat-photo.svg'
+                        src={data?.ownerProfile?.url || "/images/cat-photo.svg"}
                         width={130}
                         height={100}
                         alt='profile'
