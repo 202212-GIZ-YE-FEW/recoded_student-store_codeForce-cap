@@ -8,14 +8,14 @@ import styels from "./Hero.module.css"
 import { SectionWrapper } from "@/components/hoc"
 
 const images = [
-  // "https://images.unsplash.com/photo-1590004953392-5aba2e72269a?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&h=500&w=800&q=80",
+  "/images/student store.png",
+  "https://images.unsplash.com/photo-1590004953392-5aba2e72269a?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&h=500&w=800&q=80",
   // "https://images.unsplash.com/photo-1590004845575-cc18b13d1d0a?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&h=500&w=800&q=80",
   // "https://images.unsplash.com/photo-1590004987778-bece5c9adab6?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&h=500&w=800&q=80",
   // "https://images.unsplash.com/photo-1590005176489-db2e714711fc?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&h=500&w=800&q=80",
-  "/images/student store.png",
 ]
 
-const title = [{ lineOne: "Let's Start", lineTwo: "Selling items📦" }]
+const title = [{ lineOne: "Let's Start", lineTwo: "Selling Items📦" }, {}]
 
 function Hero() {
   const [details, setDetails] = useState(null)
@@ -39,7 +39,7 @@ function Hero() {
           clearTimeout(timeout)
           if (mouseOver) return
           timeout = setTimeout(() => {
-            // slider.next()
+            slider.next()
           }, 2000)
         }
         slider.on("created", () => {
@@ -79,10 +79,7 @@ function Hero() {
           className={`${styels.zoom + "-out"} keen-slider px-15`}
         >
           {images.map((src, idx) => (
-            <div
-              key={idx}
-              className='keen-slider__slide absolute w-full h-full'
-            >
+            <div key={idx} className='keen-slider__slide w-full h-full'>
               <div style={scaleStyle(idx)} className='mx-10'>
                 <h1 className='text-3xl font-extrabold text-purple sm:text-5xl'>
                   {title[idx].lineOne}

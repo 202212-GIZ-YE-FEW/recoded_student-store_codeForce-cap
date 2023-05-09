@@ -17,6 +17,16 @@ exports[`renders correctly 1`] = `
           className="mx-10"
           style={{}}
         >
+          <h1
+            className="text-3xl font-extrabold text-purple sm:text-5xl"
+          >
+            Let's Start
+          </h1>
+          <h1
+            className="block text-2xl font-extrabold sm:text-3xl"
+          >
+            Selling items📦
+          </h1>
           <img
             alt="..."
             className=" w-full h-full object-cover bg-transparent"
