@@ -8,17 +8,17 @@ exports[`renders correctly 1`] = `
     className=""
   >
     <div
-      className="zoom-out keen-slider px-15"
+      className="zoom-out keen-slider px-15 static"
     >
       <div
         className="keen-slider__slide absolute w-full h-full"
       >
         <div
-          className="mx-10"
+          className="mx-10 relative"
           style={{}}
         >
           <div
-            className=""
+            className="absolute mt-52"
           >
             <h1
               className="text-3xl font-extrabold text-purple sm:text-5xl"
@@ -65,11 +65,11 @@ exports[`renders correctly 1`] = `
         className="keen-slider__slide absolute w-full h-full"
       >
         <div
-          className="mx-10"
+          className="mx-10 relative"
           style={{}}
         >
           <div
-            className=""
+            className="absolute mt-52"
           >
             <h1
               className="text-3xl font-extrabold text-purple sm:text-5xl"
