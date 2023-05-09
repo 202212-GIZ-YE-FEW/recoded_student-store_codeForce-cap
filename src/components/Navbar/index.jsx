@@ -61,7 +61,15 @@ function Navbar({ t }) {
   }, [])
 
   // protect the listing page from accessing when the user is not signed in
-  const handleloginClick = () => {
+  const handleLoginClick = () => {
+    if (!isLoggedIn) {
+      toast.error("Hold on, You have to sign in or sign up first !!")
+    } else {
+      router.push("/listing")
+    }
+  }
+  // protect the favorite page from accessing when the user is not signed in
+  const handleFavClick = () => {
     if (!isLoggedIn) {
       toast.error("Hold on, You have to sign in or sign up first !!")
     } else {
@@ -205,17 +213,17 @@ function Navbar({ t }) {
                 </Link>
               )}
 
-              <button onClick={handleloginClick}>
+              <button onClick={handleLoginClick}>
                 <div className='bg-purple-light py-2 px-5 text-white rounded-3xl text-sm hover:bg-violet-800 transition-all cursor-pointer'>
                   {t("sell-items")}
                 </div>
               </button>
             </div>
             <div className='text-2xl text-orange-600 hover:text-orange-700 transition'>
-              <Link href='/favorites'>
+              <button onClick={handleFavClick}>
                 {" "}
                 <HiHeart />{" "}
-              </Link>
+              </button>
             </div>
           </div>
         </div>

@@ -30,7 +30,7 @@ export default function SignInPage() {
   }, [isLoggedIn, router, userName, t, firstSignIn])
 
   return (
-    <RootLayout>
+    <RootLayout title='Sign in'>
       <Signin />
     </RootLayout>
   )

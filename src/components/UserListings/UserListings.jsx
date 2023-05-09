@@ -42,39 +42,41 @@ function UserListings({ t }) {
               key={product.id}
               className='lg:bg-white rounded-lg pb-7 cart-animation'
             >
-              <Image
-                className='rounded-t-lg shadow-lg w-full max-h-[250px] min-h-[250px]'
-                src={product.primaryImage.url}
-                alt={product.productName}
-                width={1920}
-                height={1080}
-              />
+              <Link href={`products/${product?.id}`}>
+                <Image
+                  className='rounded-t-lg shadow-lg w-full max-h-[250px] min-h-[250px]'
+                  src={product?.primaryImage?.url}
+                  alt={product?.productName}
+                  width={1920}
+                  height={1080}
+                />
+              </Link>
               <div className='mx-2'>
                 <div className='flex justify-between my-4'>
                   <div className='text-left'>
-                    <h2 className='font-semibold'>{product.productName}</h2>
+                    <h2 className='font-semibold'>{product?.productName}</h2>
                     <p className='font-extralight text-xs'>
-                      {product.category}
+                      {product?.category}
                     </p>
                   </div>
                   <div>
                     <h2 className='font-extrabold text-xl text-right'>
-                      ${product.price}
+                      ${product?.price}
                     </h2>
                     <p className='font-extralight text-xs'>
-                      {product.made_city}
+                      {product?.made_city}
                     </p>
                   </div>
                 </div>
                 <div>
                   <p>
                     <span className='font-extrabold'>{t("listing-date")}</span>{" "}
-                    {formatDate(product.createdAt)}
+                    {formatDate(product?.createdAt)}
                   </p>
                   <p>
                     <span className='font-extrabold'>{t("category")}</span>{" "}
                     <span className='font-extralight text-xs'>
-                      {product.category}
+                      {product?.category}
                     </span>
                   </p>
                 </div>
