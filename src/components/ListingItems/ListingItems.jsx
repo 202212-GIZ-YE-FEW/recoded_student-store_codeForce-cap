@@ -4,7 +4,7 @@ import { getDownloadURL, ref, uploadBytes } from "firebase/storage"
 import Image from "next/image"
 import { useTranslation, withTranslation } from "next-i18next"
 import { useState } from "react"
-import { toast, ToastContainer } from "react-toastify"
+import { toast,ToastContainer } from "react-toastify"
 
 import "react-toastify/dist/ReactToastify.css"
 
@@ -100,6 +100,7 @@ function ListingItems() {
       const ownerName = profileData?.firstName + profileData?.surname
       const ownerEmail = user?.email
       const ownerLocation = profileData?.address
+      const ownerProfile = profileData?.profileImg?.url
 
       // promise uploader
       const uploadPromise = new Promise((resolve, reject) => {
@@ -127,6 +128,7 @@ function ListingItems() {
               ownerName,
               ownerEmail,
               ownerLocation,
+              ownerProfile,
             }
             if (primaryImageURL !== "") {
               newFormWithImagesUrls.primaryImage = { url: primaryImageURL }
