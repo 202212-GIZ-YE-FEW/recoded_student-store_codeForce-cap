@@ -29,7 +29,7 @@ exports[`renders correctly 1`] = `
           </h1>
           <br />
           <a
-            class="inline-block w-20 rounded bg-purple px-12 py-4 text-sm font-medium text-white shadow hover:bg-purple-dark focus:outline-none focus:ring active:bg-purple-almostblack sm:w-auto"
+            class="inline-block w-20 rounded bg-purple px-12 py-4 text-1xl font-medium text-white shadow hover:bg-purple-dark focus:outline-none focus:ring active:bg-purple-almostblack sm:w-auto"
             href="/listing"
             onClick={[Function]}
             onMouseEnter={[Function]}
@@ -76,7 +76,7 @@ exports[`renders correctly 1`] = `
           />
           <br />
           <a
-            class="hidden w-20 rounded bg-purple px-12 py-4 text-sm font-medium text-white shadow hover:bg-purple-dark focus:outline-none focus:ring active:bg-purple-almostblack sm:w-auto"
+            class="hidden w-20 rounded bg-purple px-12 py-4 text-1xl font-medium text-white shadow hover:bg-purple-dark focus:outline-none focus:ring active:bg-purple-almostblack sm:w-auto"
             href="/listing"
             onClick={[Function]}
             onMouseEnter={[Function]}
