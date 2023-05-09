@@ -4,7 +4,7 @@ import { getDownloadURL, ref, uploadBytes } from "firebase/storage"
 import Image from "next/image"
 import { useTranslation, withTranslation } from "next-i18next"
 import { useState } from "react"
-import { toast,ToastContainer } from "react-toastify"
+import { toast, ToastContainer } from "react-toastify"
 
 import "react-toastify/dist/ReactToastify.css"
 
