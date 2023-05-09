@@ -84,6 +84,12 @@ function Hero() {
               className='keen-slider__slide absolute w-full h-full'
             >
               <div style={scaleStyle(idx)} className='mx-10'>
+                <h1 className='text-3xl font-extrabold text-purple sm:text-5xl'>
+                  {title[idx].lineOne}
+                </h1>
+                <h1 className='block text-2xl font-extrabold sm:text-3xl'>
+                  {title[idx].lineTwo}
+                </h1>
                 <Image
                   src={src}
                   width={1123}
