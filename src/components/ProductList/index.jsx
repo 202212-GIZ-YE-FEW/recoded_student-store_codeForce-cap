@@ -7,9 +7,8 @@ import { useGeneralListings } from "@/utils/store"
 
 import Spinner from "../Spinner/Spinner"
 
-function ProductList({ selectedFilter, t }) {
+function ProductList({ selectedFilter, priceFilter, t }) {
   const { data, error, loading } = useGeneralListings()
-  // Remove duplicates from the products array
   if (error) {
     return <div>Error: {error.message}</div>
   }
@@ -33,13 +32,20 @@ function ProductList({ selectedFilter, t }) {
       )
     : uniqueProducts
 
+  const priceFilteredProducts = categoryFilter.filter((product) => {
+    const price = parseFloat(product.price)
+    const min = parseFloat(priceFilter.min)
+    const max = parseFloat(priceFilter.max)
+    return (isNaN(min) || price >= min) && (isNaN(max) || price <= max)
+  })
+
   return (
     <div>
       <div
         className='grid xl:grid-cols-4 lg:grid-cols-4 md:grid-cols-2 sm:grid-cols-1 m-auto w-full'
         dir={t("language") === "ar" ? "rtl" : "ltr"}
       >
-        {categoryFilter.map((product) => (
+        {priceFilteredProducts.map((product) => (
           <div
             key={product?.uid}
             className='mx-3 mb-10 border rounded-lg cart-animation flex flex-col justify-between'
