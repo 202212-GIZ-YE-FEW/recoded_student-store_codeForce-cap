@@ -1,18 +1,20 @@
 import { t } from "i18next"
 import dynamic from "next/dynamic"
 import Image from "next/image"
+import Link from "next/link"
 import { useRouter } from "next/router"
 
 import Spinner from "@/components/Spinner/Spinner"
 
 import RootLayout from "@/layout/root/RootLayout"
-import { useProduct } from "@/utils/store"
+import { useAuth, useProduct } from "@/utils/store"
 
 const Maps = dynamic(() => import("../../components/Maps"), {
   ssr: false,
 })
 
 export default function SingleProduct() {
+  const { isLoggedIn } = useAuth()
   const router = useRouter()
   const { id } = router.query
   const { data, error, loading } = useProduct(id)
@@ -114,32 +116,44 @@ export default function SingleProduct() {
                 <p>{data?.description}</p>
               </div>
               <div className='mt-10 mb-6 flex select-none mx-auto items-center gap-1 sm:ml-28 lg:ml-0'>
-                <div className='flex flex-row bg-[#585785] w-64 h-20 lg:w-96 lg:h-36 md:w-96 md:h-36 rounded-l-full -mx-1 border-r-4 border-dashed'>
-                  <div className='m-auto ml-2'>
-                    <Image
-                      src='/images/cat-photo.svg'
-                      width={130}
-                      height={100}
-                      alt='profile'
-                      className='w-16 h-16 lg:w-32 lg:h-28 md:w-32 md:h-28'
-                    />
+                {!isLoggedIn ? (
+                  <h1 className='font-extrabold'>
+                    Like this product ? Need to contact Owner ?{" "}
+                    <Link
+                      href='/signin'
+                      className='underline hover:no-underline text-purple'
+                    >
+                      Sign in first 😊
+                    </Link>
+                  </h1>
+                ) : (
+                  <div className='flex flex-row bg-[#585785] w-64 h-20 lg:w-96 lg:h-36 md:w-96 md:h-36 rounded-l-full -mx-1 border-r-4 border-dashed'>
+                    <div className='m-auto ml-2'>
+                      <Image
+                        src='/images/cat-photo.svg'
+                        width={130}
+                        height={100}
+                        alt='profile'
+                        className='w-16 h-16 lg:w-32 lg:h-28 md:w-32 md:h-28'
+                      />
+                    </div>
+                    <div className='m-auto lg:m-auto font-poppins text-white text-[14px] lg:text-xl md:text-xl'>
+                      <h1 className='font-semibold text-1xl'>
+                        {data?.ownerName || "Owner name"}
+                      </h1>
+                      <h2 className='w-[27vh] overflow-hidden'>
+                        <span className='font-bold'>email:</span>{" "}
+                        <span className='truncate'>
+                          {data?.ownerEmail || "Owner email"}
+                        </span>
+                      </h2>
+                      <h2>
+                        <span className='font-bold'>Location:</span>{" "}
+                        {data?.ownerLocation || "Owner location"}
+                      </h2>
+                    </div>
                   </div>
-                  <div className='m-auto lg:m-auto font-poppins text-white text-[14px] lg:text-xl md:text-xl'>
-                    <h1 className='font-semibold text-1xl'>
-                      {data?.ownerName || "Owner name"}
-                    </h1>
-                    <h2 className='w-[27vh] overflow-hidden'>
-                      <span className='font-bold'>email:</span>{" "}
-                      <span className='truncate'>
-                        {data?.ownerEmail || "Owner email"}
-                      </span>
-                    </h2>
-                    <h2>
-                      <span className='font-bold'>Location:</span>{" "}
-                      {data?.ownerLocation || "Owner location"}
-                    </h2>
-                  </div>
-                </div>
+                )}
                 <div className='grid justify-items-center bg-orange-500 w-20 h-20 lg:w-36 lg:h-36 md:w-36 md:h-36'>
                   <h1 className='font-poppins text-white font-semibold text-[14px] lg:text-3xl md:text-3xl m-auto'>
                     {data?.price}
