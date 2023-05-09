@@ -1,11 +1,13 @@
 import { useKeenSlider } from "keen-slider/react"
+
 import Image from "next/image"
+
 import { useState } from "react"
 
 import "keen-slider/keen-slider.min.css"
+
 import styels from "./Hero.module.css"
 
-import { SectionWrapper } from "@/components/hoc"
 import Link from "next/link"
 
 const images = [
@@ -95,7 +97,9 @@ function Hero() {
                   <br />
                   <Link
                     href='/listing'
-                    class='w-20 rounded bg-purple px-12 py-3 text-sm font-medium text-white shadow hover:bg-purple-dark focus:outline-none focus:ring active:bg-purple-almostblack sm:w-auto'
+                    class={`${
+                      idx === 0 ? "inline-block" : "hidden"
+                    } w-20 rounded bg-purple px-12 py-4 text-sm font-medium text-white shadow hover:bg-purple-dark focus:outline-none focus:ring active:bg-purple-almostblack sm:w-auto`}
                   >
                     Get Started
                   </Link>
