@@ -74,10 +74,10 @@ function Hero() {
 
   return (
     <>
-      <div className=''>
+      <div className='mx-[0px] my-[0px] max-w-[1250px] mr-auto ml-auto'>
         <div
           ref={sliderRef}
-          className={`${styels.zoom + "-out"} keen-slider px-15 static`}
+          className={`${styels.zoom + "-out"} keen-slider px-15 static pt-0`}
         >
           {images.map((src, idx) => (
             <div
@@ -115,4 +115,4 @@ function Hero() {
     </>
   )
 }
-export default SectionWrapper(Hero)
+export default Hero
