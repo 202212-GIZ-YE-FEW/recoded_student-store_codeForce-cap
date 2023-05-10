@@ -1,23 +1,85 @@
+import ProgressBar from "@ramonak/react-progress-bar"
 import Image from "next/image"
 import Link from "next/link"
+import { useRouter } from "next/router"
 import { withTranslation } from "next-i18next"
-import { useState } from "react"
-import { AiOutlineClose, AiOutlineSearch } from "react-icons/ai"
+import { useEffect, useState } from "react"
+import { useAuthState } from "react-firebase-hooks/auth"
+import {
+  AiOutlineClose,
+  AiOutlineProfile,
+  AiOutlineSearch,
+} from "react-icons/ai"
 import { HiHeart } from "react-icons/hi"
 import { RxHamburgerMenu } from "react-icons/rx"
-import { TbArrowBadgeDown } from "react-icons/tb"
 import { TfiWorld } from "react-icons/tfi"
+import { toast } from "react-toastify"
 
 import styles from "./Navbar.module.css"
 
+import { auth } from "@/utils/firebase/config"
+import SignOut from "@/utils/firebase/signout"
+import { useAuth, useProfileData } from "@/utils/store"
+
 function Navbar({ t }) {
-  const [languages, setLanguages] = useState(false)
   const [open, setOpen] = useState(false)
-  // const diraction =
+  const [user] = useAuthState(auth)
+  const [scrollProgress, setScrollProgress] = useState(0)
+  const { profileData } = useProfileData()
+  const { isLoggedIn } = useAuth()
+  const router = useRouter()
+  // set the activated language key next to the language icon
+  const [activeLanguage, setActiveLanguage] = useState(router.locale)
+
+  // toggle between the tow languages so that it's not necessary to have a links to chose the language that we need
+  const toggleLanguage = () => {
+    // implement the language locale so that make sure we to set the locale without redirect us to the home page again
+    const currentLocale = router.locale
+    // activated locale checker
+    const newLocale = currentLocale === "en" ? "ar" : "en"
+    // set the toggle to be the second or the first language depends on the activated one
+    setActiveLanguage(newLocale)
+    // set the locale to be the other without redirect to the ome page
+    router.push(router.pathname, router.asPath, { locale: newLocale })
+  }
+
+  // scroll calculator
+  const calculateScrollProgress = () => {
+    const scrollTop =
+      document.documentElement.scrollTop || document.body.scrollTop
+    const scrollHeight =
+      document.documentElement.scrollHeight -
+      document.documentElement.clientHeight
+    const progress = (scrollTop / scrollHeight) * 100
+    setScrollProgress(Math.floor(progress))
+  }
+
+  // page scroll listener
+  useEffect(() => {
+    window.addEventListener("scroll", calculateScrollProgress)
+    return () => window.removeEventListener("scroll", calculateScrollProgress)
+  }, [])
+
+  // protect the listing page from accessing when the user is not signed in
+  const handleLoginClick = () => {
+    if (!isLoggedIn) {
+      toast.error("Hold on, You have to sign in or sign up first !!")
+    } else {
+      router.push("/listing")
+    }
+  }
+  // protect the favorite page from accessing when the user is not signed in
+  const handleFavClick = () => {
+    if (!isLoggedIn) {
+      toast.error("Hold on, You have to sign in or sign up first !!")
+    } else {
+      router.push("/listing")
+    }
+  }
 
   return (
     <header
-      className='sticky top-0 z-50'
+      className='sticky top-0 z-40'
       dir={t("language") === "ar" ? "rtl" : "ltr"}
     >
       <div
@@ -30,31 +92,17 @@ function Navbar({ t }) {
             alt='logo'
             width={130}
             height={130}
-            className='rtl:mr-[180px] rtl:sm:mr-[550px] rtl:lg:mr-[0px]'
+            className='rtl:mr-[180px] rtl:sm:mr-[550px] rtl:md:mr-[0px]'
           />
         </Link>
         {/* ----------- Languages ----------- */}
-        <div className='flex items-end cursor-pointer absolute right-14 top-8 md:static order-2 md:hidden'>
+        <div className='flex items-end cursor-pointer absolute right-14 top-6 md:static order-2 md:hidden'>
           <div
-            className='flex items-end'
-            onClick={() => setLanguages(!languages)}
+            className='flex gap-1 hover:border-purple border-2 p-1 rounded-3xl'
+            onClick={toggleLanguage}
           >
-            <TfiWorld className='text-2xl text-gray-700' />
-            <TbArrowBadgeDown className='text-xl text-violet-700' />
-          </div>
-          <div className='relative z-50 '>
-            <div
-              className={`absolute left-[-70px] rtl:left-[-20px] top-2 bg-white capitalize border border-solid border-violet-600${
-                languages ? `${styles.show}` : " hidden"
-              }`}
-            >
-              <div className='my-2 px-5 py-2 hover:bg-gray-200 transition-all duration-500'>
-                English
-              </div>
-              <div className='my-2 px-5 py-2 hover:bg-gray-200 transition-all duration-500'>
-                العربية
-              </div>
-            </div>
+            <TfiWorld className='text-3xl text-gray-700' />
+            <span className='text-gray-700'>{activeLanguage}</span>
           </div>
         </div>
         {/* ----------- Burger ----------- */}
@@ -106,54 +154,88 @@ function Navbar({ t }) {
           {/* ----------- Languages ----------- */}
           <div className='md:flex items-end cursor-pointer hidden'>
             <div
-              className='flex items-end'
-              onClick={() => setLanguages(!languages)}
+              className='flex gap-1 hover:border-purple border-2 p-1 rounded-3xl'
+              onClick={toggleLanguage}
             >
-              <TfiWorld className='text-2xl text-gray-700' />
-              <TbArrowBadgeDown className='text-xl text-violet-700' />
-            </div>
-            <div className='relative'>
-              <div
-                className={`absolute left-[-70px] rtl:left-[-10px] top-5 bg-white capitalize ${
-                  languages ? `${styles.show}` : "hidden"
-                }`}
-              >
-                <div className='my-2 px-5 py-2 hover:bg-gray-200 transition-all duration-500'>
-                  <Link href='' locale='en'>
-                    English
-                  </Link>
-                </div>
-                <div className='my-2 px-5 py-2 hover:bg-gray-200 transition-all duration-500'>
-                  <Link href='' locale='ar'>
-                    العربية
-                  </Link>
-                </div>
-              </div>
+              <TfiWorld className='text-3xl text-gray-700' />
+              <span className='text-gray-700'>{activeLanguage}</span>
             </div>
           </div>
           {/* ----------- Buttons ----------- */}
           <div className='flex  justify-between items-center gap-5 flex-col md:flex-row '>
-            <div className='flex gap-3 capitalize flex-col md:flex-row'>
-              <Link href='/signin'>
-                <div className='bg-purple-light py-2 px-5 text-white rounded-3xl text-sm hover:bg-violet-800 transition-all cursor-pointer'>
-                  {t("sign-in")}
+            <div className='flex gap-4 capitalize flex-col md:flex-row'>
+              {user ? (
+                // Display user icon if signed in
+                <div className='flex items-center'>
+                  <div className='block md:relative text-center md:border-2 hover:border-purple rounded-full'>
+                    <span className='hidden md:flex items-center cursor-pointer'>
+                      <Image
+                        className='rounded-full  max-w-[37px] max-h-[37px]'
+                        alt='User'
+                        src={
+                          profileData?.profileImg?.url ||
+                          "/images/cat-photo.svg"
+                        }
+                        width={37}
+                        height={37}
+                      />
+                    </span>
+                    <button
+                      onClick={() => setOpen(!open)}
+                      className='hidden md:block absolute top-0 right-0 h-full w-full cursor-pointer'
+                    />
+                    {open && (
+                      <div
+                        className={`md:absolute top-10 right-0 bg-white md:border border-gray-200 rounded-lg md:shadow-md py-2 ${styles.show}`}
+                      >
+                        <p>{profileData?.firstName || "user"}</p>
+                        <hr className='bg-purple p-[1px]' />
+                        <Link
+                          href={isLoggedIn ? "/profile" : "/signup"}
+                          className='block px-4 py-2 hover:bg-gray-100'
+                        >
+                          <span className='flex items-center gap-2'>
+                            {t("profile")}
+                            <AiOutlineProfile />
+                          </span>
+                        </Link>
+                        <SignOut />
+                      </div>
+                    )}
+                  </div>
                 </div>
-              </Link>
-              <Link href='/listing'>
+              ) : (
+                // Display sign-in button if not signed in
+                <Link href='/signin'>
+                  <div className='bg-purple-light py-2 px-5 text-white rounded-3xl text-sm hover:bg-violet-800 transition-all cursor-pointer'>
+                    {t("sign-in")}
+                  </div>
+                </Link>
+              )}
+
+              <button onClick={handleLoginClick}>
                 <div className='bg-purple-light py-2 px-5 text-white rounded-3xl text-sm hover:bg-violet-800 transition-all cursor-pointer'>
                   {t("sell-items")}
                 </div>
-              </Link>
+              </button>
             </div>
             <div className='text-2xl text-orange-600 hover:text-orange-700 transition'>
-              <Link href='/favorites'>
+              <button onClick={handleFavClick}>
                 {" "}
                 <HiHeart />{" "}
-              </Link>
+              </button>
             </div>
           </div>
         </div>
       </div>
+      <ProgressBar
+        transitionDuration='0.3s'
+        transitionTimingFunction='linear'
+        isLabelVisible={false}
+        height='10px'
+        completed={scrollProgress}
+        barContainerClassName='bg-white'
+      />
     </header>
   )
 }

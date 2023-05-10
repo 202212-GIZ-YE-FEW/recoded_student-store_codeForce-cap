@@ -1,46 +1,22 @@
-import bcrypt from "bcryptjs"
 import DOMPurify from "dompurify"
 import Image from "next/image"
 import Link from "next/link"
 import { useRouter } from "next/router"
+import { withTranslation } from "next-i18next"
 import { useState } from "react"
-import { withTranslation } from "react-i18next"
 import { BsFacebook, BsGoogle, BsTwitter } from "react-icons/bs"
-import * as Yup from "yup"
+import { toast } from "react-toastify"
 
 import styles from "./Signup.module.css"
 
 import signUp from "@/utils/firebase/signup"
+import { signupValidation } from "@/utils/schemaValidations/signup"
 
 import Button from "../button"
 import Input from "../input"
 
-// Define validation schema using Yup
-const validationSchema = Yup.object().shape({
-  name: Yup.string().required("Name is required"),
-  surname: Yup.string().required("Surname is required"),
-  email: Yup.string()
-    .email("invalid email")
-    .matches(
-      /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/,
-      "Please enter a valid email address"
-    )
-    .required("Email is required"),
-  schoolName: Yup.string().required("School name is required"),
-  password: Yup.string()
-    .min(8, "Password must be at least 8 characters")
-    .max(64, "Password must be less than 64 characters")
-    .matches(
-      /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[^\da-zA-Z]).{8,}$/,
-      "Password must contain at least one uppercase letter, one lowercase letter, one number, and one special character"
-    )
-    .required("Password is required"),
-  passwordConfirm: Yup.string()
-    .oneOf([Yup.ref("password"), null], "Passwords must match")
-    .required("Password confirm is required"),
-})
-
 /*
+// Future Note
 //! Define rate limit middleware to prevent brute-force attacks
 const limiter = rateLimit({
   windowMs: 15 * 60 * 1000, // 15 minutes
@@ -52,7 +28,7 @@ function Signup({ t }) {
   const router = useRouter()
 
   const [formData, setFormData] = useState({
-    name: "",
+    firstName: "",
     surname: "",
     email: "",
     schoolName: "",
@@ -60,6 +36,8 @@ function Signup({ t }) {
     passwordConfirm: "",
   })
 
+  // const [isSuccess, setIsSuccess] = useState(false) // * Note to the future
+  // const [errorMessage, setErrorMessage] = useState("") // * Note to the future
   const [errors, setErrors] = useState({})
 
   const handleChange = (event) => {
@@ -74,29 +52,29 @@ function Signup({ t }) {
     e.preventDefault()
 
     try {
-      await validationSchema.validate(formData, { abortEarly: false })
+      await signupValidation.validate(formData, { abortEarly: false })
+      toast.warning("Pleas wait") // set loading state to true while the API call is in progress
+      const { firstName, surname, email, schoolName, password } = formData
 
-      const { name, surname, email, schoolName, password } = formData
-
-      // Hash password using bcrypt
-      const hashedPassword = await bcrypt.hash(password, 10)
+      const hashedPassword = password
 
       // No validation errors, attempt to sign up the user
-      const { result, error } = await signUp(
+      const { error } = await signUp(
         email,
         hashedPassword,
-        name,
+        firstName,
         surname,
         schoolName
       )
 
       if (error) {
-        return alert(error)
+        return
       }
 
       // else when successful
-      alert(result)
-      return router.push("/")
+      router.replace("/").then(() => {
+        toast.success("Welcome to our website. You are logged in directly")
+      })
     } catch (err) {
       const validationErrors = {}
       err.inner.forEach((error) => {
@@ -106,12 +84,33 @@ function Signup({ t }) {
     }
   }
 
+  const handleSocialSignup = async (method) => {
+    try {
+      const { firstName, surname, email, schoolName } = formData
+      const { error } = await signUp(
+        email,
+        null,
+        firstName,
+        surname,
+        schoolName,
+        method
+      )
+
+      if (error) {
+        return
+      }
+
+      router.replace("/").then(() => {
+        toast.success("Welcome to our website. You are logged in directly")
+      })
+    } catch (err) {
+      console.error(err)
+    }
+  }
+
   return (
     <div>
-      <div
-        className={`flex justify-center   md:flex-row  bg-[#f1f6fa] `}
-        // dir={t("language") === "ar" ? "rtl" : "ltr"}
-      >
+      <div className={`flex justify-center   md:flex-row  bg-[#f1f6fa] `}>
         <div className={` ${styles.handbox_background}   w-3/6 `}>
           <div className='p-20'>
             <Image
@@ -144,6 +143,7 @@ function Signup({ t }) {
                   onChange={handleChange}
                 />
               </label>
+              {errors.firstName}
               <label htmlFor='surname'>
                 <Input
                   id='surname'
@@ -154,6 +154,7 @@ function Signup({ t }) {
                   onChange={handleChange}
                 />
               </label>
+              {errors.surname}
               <label htmlFor='email'>
                 <Input
                   type='email'
@@ -164,7 +165,7 @@ function Signup({ t }) {
                   onChange={handleChange}
                 />
               </label>
-              {errors.email && <p>{errors.email}</p>}
+              {errors.email}
               <label htmlFor='schoolName'>
                 <Input
                   type='text'
@@ -175,6 +176,7 @@ function Signup({ t }) {
                   onChange={handleChange}
                 />
               </label>
+              {errors.schoolName}
               <label htmlFor='password'>
                 <Input
                   type='password'
@@ -185,7 +187,7 @@ function Signup({ t }) {
                   onChange={handleChange}
                 />
               </label>
-              {errors.password && <p>{errors.password}</p>}
+              {errors.password}
               <Input
                 type='password'
                 id='passwordConfirm'
@@ -194,10 +196,23 @@ function Signup({ t }) {
                 onChange={handleChange}
                 placeholder={t("password-confirm")}
               />
+              {errors.passwordConfirm}
               <div className='flex justify-center'>
-                <Button buttonStyle='purpleSignUp' text={t("sign-up")} />
+                <Button
+                  buttonStyle='purpleSignUp'
+                  text={t("sign-up")}
+                  type='submit'
+                />
               </div>
             </form>
+            <div className='mb-4 text-xl text-[#647581]'>
+              <p>
+                {t("have-an-account")}{" "}
+                <Link href='/signin' className='underline'>
+                  {t("sign-in")}
+                </Link>
+              </p>
+            </div>
             <div className='flex items-center'>
               <div className='my-1 mr-2 h-px mt-[10px] w-[164px] bg-[#9dafbd]'></div>
               <p>{t("or")}</p>
@@ -205,7 +220,10 @@ function Signup({ t }) {
             </div>
             <p className='text-md m-1 text-[#647581]'>{t("sign-up-with")}</p>
             <div className='m-1 mb-8 flex flex-row  '>
-              <button className=' m-1 flex items-center rounded-3xl border border-[#F26F6F] p-1  text-[#F26F6F]'>
+              <button
+                className=' m-1 flex items-center rounded-3xl border border-[#F26F6F] p-1  text-[#F26F6F]'
+                onClick={() => handleSocialSignup("google")}
+              >
                 <BsGoogle
                   color='#F26F6F'
                   size={24}
@@ -213,7 +231,10 @@ function Signup({ t }) {
                 />
                 <p className='mx-2 text-sm md:mx-3'>{t("google")}</p>
               </button>
-              <button className='color-darkPurple m-1  flex items-center rounded-3xl border border-[#485DCF] p-1 text-[#485DCF]'>
+              <button
+                className='color-darkPurple m-1  flex items-center rounded-3xl border border-[#485DCF] p-1 text-[#485DCF]'
+                onClick={() => handleSocialSignup("facebook")}
+              >
                 <BsFacebook
                   color='#485DCF'
                   size={24}
@@ -230,17 +251,6 @@ function Signup({ t }) {
                 <p className='mx-2 text-sm md:mx-3'>{t("twitter")}</p>
               </button>
             </div>
-            <div className='mb-4 text-xl text-[#647581]'>
-              <p>{t("have-an-account")}</p>
-            </div>
-            {/* <Button buttonStyle='purpleSignUp' text='Sign in' /> */}
-            <Link
-              href='/signin'
-              className='h-10 w-40 m-1 p-1 rounded-lg border-2 bg-purple-dark font-light text-[15px] text-white shadow-sm text-center'
-            >
-              {t("sign-in")}
-            </Link>
-            <br />
           </div>
         </div>
       </div>

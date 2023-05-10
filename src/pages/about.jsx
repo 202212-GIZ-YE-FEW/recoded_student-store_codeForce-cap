@@ -6,7 +6,7 @@ import RootLayout from "@/layout/root/RootLayout"
 
 export default function AboutPage() {
   return (
-    <RootLayout>
+    <RootLayout title='About us'>
       <Aboutus />
     </RootLayout>
   )

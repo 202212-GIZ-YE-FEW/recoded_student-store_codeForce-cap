@@ -1,18 +1,18 @@
 import * as Yup from "yup"
 
 export const listingsValidation = Yup.object().shape({
-  primaryImage: Yup.object().shape({
-    file: Yup.mixed().optional(),
-    url: Yup.string().url().optional(),
-  }),
-  secondaryImage: Yup.object().shape({
-    file: Yup.mixed().optional(),
-    url: Yup.string().url().optional(),
-  }),
-  tertiaryImage: Yup.object().shape({
-    file: Yup.mixed().optional(),
-    url: Yup.string().url().optional(),
-  }),
+  // primaryImage: Yup.object().shape({
+  //   file: Yup.mixed().optional(),
+  //   url: Yup.string().url().optional(),
+  // }),
+  // secondaryImage: Yup.object().shape({
+  //   file: Yup.mixed().optional(),
+  //   url: Yup.string().url().optional(),
+  // }),
+  // tertiaryImage: Yup.object().shape({
+  //   file: Yup.mixed().optional(),
+  //   url: Yup.string().url().optional(),
+  // }),
   type: Yup.string().required(
     "Choose a Type the students need to know what you list for them !"
   ),
@@ -22,6 +22,6 @@ export const listingsValidation = Yup.object().shape({
   location: Yup.string().required("Location is required"),
   price: Yup.number()
     .required("How much is it coast ?, pleas add a price")
-    .min(10)
+    .min(3)
     .max(1000),
 })

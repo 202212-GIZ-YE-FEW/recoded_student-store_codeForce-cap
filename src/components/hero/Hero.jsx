@@ -1,20 +1,31 @@
 import { useKeenSlider } from "keen-slider/react"
 import Image from "next/image"
+import { useRouter } from "next/router"
 import { useState } from "react"
+import { toast } from "react-toastify"
 
 import "keen-slider/keen-slider.min.css"
 import styels from "./Hero.module.css"
 
-import { SectionWrapper } from "@/components/hoc"
+import { useAuth } from "@/utils/store"
 
 const images = [
-  "https://images.unsplash.com/photo-1590004953392-5aba2e72269a?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&h=500&w=800&q=80",
-  "https://images.unsplash.com/photo-1590004845575-cc18b13d1d0a?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&h=500&w=800&q=80",
-  "https://images.unsplash.com/photo-1590004987778-bece5c9adab6?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&h=500&w=800&q=80",
-  "https://images.unsplash.com/photo-1590005176489-db2e714711fc?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&h=500&w=800&q=80",
+  "/images/slider1.png",
+  "/images/slider2.png",
+  "/images/slider3.png",
+  "/images/slider4.png",
+]
+
+const title = [
+  { lineOne: "Student Store", lineTwo: "Share for Care ❤️" },
+  { lineOne: "", lineTwo: "" },
+  { lineOne: "", lineTwo: "" },
+  { lineOne: "", lineTwo: "" },
 ]
 
 function Hero() {
+  const { isLoggedIN } = useAuth()
+  const router = useRouter()
   const [details, setDetails] = useState(null)
 
   const [sliderRef] = useKeenSlider(
@@ -36,8 +47,8 @@ function Hero() {
           clearTimeout(timeout)
           if (mouseOver) return
           timeout = setTimeout(() => {
-            // slider.next()
-          }, 2000)
+            slider.next()
+          }, 5000)
         }
         slider.on("created", () => {
           slider.container.addEventListener("mouseover", () => {
@@ -60,6 +71,7 @@ function Hero() {
   function scaleStyle(idx) {
     if (!details) return {}
     const slide = details.slides[idx]
+    if (!slide) return {}
     const scale_size = window.innerWidth < 768 ? 0.5 : 0.7
     const scale = 1 - (scale_size - scale_size * slide.portion)
     return {
@@ -68,9 +80,17 @@ function Hero() {
     }
   }
 
+  const handleClick = () => {
+    if (!isLoggedIN) {
+      router.push("/signin")
+    } else {
+      toast.error("Hey you we think you are logged in before !!")
+    }
+  }
+
   return (
     <>
-      <div className=''>
+      <div>
         <div
           ref={sliderRef}
           className={`${styels.zoom + "-out"} keen-slider px-15`}
@@ -78,15 +98,32 @@ function Hero() {
           {images.map((src, idx) => (
             <div
               key={idx}
-              className='keen-slider__slide absolute w-full h-full'
+              className='keen-slider__slide relative w-full h-full'
             >
-              <div style={scaleStyle(idx)} className='mx-10'>
+              <div style={scaleStyle(idx)} className='relative'>
+                <div className='absolute lg:left-[90px] sm:left-[130px] lg:top-0 left-[35px] z-10'>
+                  <h1 className='lg:text-[80px] sm:text-[40px] text-[25px] font-extrabold text-purple'>
+                    {title[idx].lineOne}
+                  </h1>
+                  <h1 className='lg:text-[45px] sm:text-[21px] font-extrabold'>
+                    {title[idx].lineTwo}
+                  </h1>
+                  <br />
+                  <button
+                    onClick={handleClick}
+                    class={`${
+                      idx === 0 ? "inline-block" : "hidden"
+                    } lg:text-[1.5vw] sm:text-[1vw] text-[2vw] rounded bg-purple font-medium text-white shadow hover:bg-purple-dark px-4 py-2 text-center`}
+                  >
+                    Get Started
+                  </button>
+                </div>
                 <Image
                   src={src}
-                  width={1123}
-                  height={500}
+                  width={1920}
+                  height={1080}
                   alt='...'
-                  className=' w-full h-full object-cover bg-transparent'
+                  className='mx-auto drop-shadow-2xl'
                 />
               </div>
             </div>
@@ -96,4 +133,4 @@ function Hero() {
     </>
   )
 }
-export default SectionWrapper(Hero)
+export default Hero

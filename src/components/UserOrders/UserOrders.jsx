@@ -1,7 +1,4 @@
-import Image from "next/image"
 import { withTranslation } from "next-i18next"
-
-import products from "../ProductList/products"
 
 function UserOrders({ t }) {
   return (
@@ -9,7 +6,7 @@ function UserOrders({ t }) {
       className='flex flex-col lg:flex-row h-[617px] md:h-[784px] lg:h-[100%] overflow-y-auto lg:bg-gradient-to-l from-zinc-800 to-slate-300'
       dir={t("language") === "ar" ? "rtl" : "ltr"}
     >
-      <div className=' w-full'>
+      {/* <div className=' w-full'>
         <div className='grid lg:grid-cols-3 md:grid-cols-2 gap-5 px-8 py-16'>
           {products({ t }).map((product) => (
             <div
@@ -18,7 +15,7 @@ function UserOrders({ t }) {
             >
               <Image
                 className='rounded-t-lg shadow-lg w-full'
-                src='/productImg.png'
+                src='/images/productImg.png'
                 alt='...'
                 width={1920}
                 height={1080}
@@ -59,7 +56,8 @@ function UserOrders({ t }) {
             </div>
           ))}
         </div>
-      </div>
+      </div> */}
+      <h1>Hi</h1>
     </section>
   )
 }

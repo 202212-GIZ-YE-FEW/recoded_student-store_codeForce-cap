@@ -6,7 +6,7 @@ import RootLayout from "@/layout/root/RootLayout"
 
 export default function donation() {
   return (
-    <RootLayout>
+    <RootLayout title='Donate'>
       <Donation />
     </RootLayout>
   )

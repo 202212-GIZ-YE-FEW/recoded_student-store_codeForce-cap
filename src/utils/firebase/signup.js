@@ -22,7 +22,7 @@ export default async function signUp(
       const userDoc = await getUserDoc(userId)
 
       if (userDoc.exists()) {
-        toast.error("User already exists")
+        toast.error("Already exists")
       } else {
         await createUserDoc(
           userId,
@@ -37,21 +37,22 @@ export default async function signUp(
         await sendEmailVerification(user)
         result = { email: user.email, verified: user.emailVerified }
       }
-
-      // Signed in successfully
-      toast.success("User added successfully")
-      // alert("User added successfully")
     } else if (method === "facebook") {
       const user = await signInWithFacebook()
       const userId = user.uid
       const userDoc = await getUserDoc(userId)
 
       if (userDoc.exists()) {
-        toast.error("User already exists")
+        toast.error("Already exists")
       } else {
-        await createUserDoc(userId, firstName, surname, user.email, schoolName)
-        toast.success("User added successfully")
-        // alert("User added successfully")
+        await createUserDoc(
+          userId,
+          firstName,
+          surname,
+          user.email,
+          schoolName,
+          null
+        )
       }
     } else if (method === "google") {
       const user = await signInWithGoogle()
@@ -59,15 +60,24 @@ export default async function signUp(
       const userDoc = await getUserDoc(userId)
 
       if (userDoc.exists()) {
-        toast.error("User already exists")
+        toast.error("Already exists")
       } else {
-        await createUserDoc(userId, firstName, surname, user.email, schoolName)
-        toast.success("User added successfully")
+        await createUserDoc(
+          userId,
+          firstName,
+          surname,
+          user.email,
+          schoolName,
+          null
+        )
       }
     }
   } catch (e) {
     error = e
-    toast.error(error.message, "Your email is already signed in ")
+    toast.error(error.message, "Your email is already exists")
+  }
+  if (!error) {
+    localStorage.setItem("firstSignIn", "true")
   }
 
   return { result, error }

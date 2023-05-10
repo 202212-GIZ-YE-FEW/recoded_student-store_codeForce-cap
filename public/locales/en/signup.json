@@ -19,5 +19,11 @@
   "twitter": "Twitter",
   "have-an-account": "Already have an account?",
   "sign-in": "Sign in",
-  "or": "or"
+  "or": "or",
+  "hey": "Hey",
+  "signed": "we think you already Signed up !",
+  "you": "you",
+  "exist": "Already exist",
+  "welcome": "Welcome to our website. You are logged in directly",
+  "notFound": "we think you don't have a profile so why don't you create one ??"
 }

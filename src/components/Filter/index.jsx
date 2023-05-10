@@ -1,9 +1,11 @@
 import Category from "./Category"
+import { SectionWrapper } from "../hoc"
 
-export default function Filter({ handleCategoryFilter }) {
+function Filter({ handleCategoryFilter }) {
   return (
     <div>
       <Category handleCategoryFilter={handleCategoryFilter} />
     </div>
   )
 }
+export default SectionWrapper(Filter)

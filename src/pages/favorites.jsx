@@ -6,7 +6,7 @@ import RootLayout from "@/layout/root/RootLayout"
 
 export default function favorites() {
   return (
-    <RootLayout>
+    <RootLayout title='Favorites'>
       <FavProducts />
     </RootLayout>
   )

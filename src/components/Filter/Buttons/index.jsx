@@ -5,7 +5,7 @@ import Highlighter from "@/components/highlighter"
 
 import PriceFilter from "../Price"
 
-function Buttons({ filters = [], handleCategoryFilter, t }) {
+function Buttons({ filters = [], handleCategoryFilter, handlePriceFilter, t }) {
   const CategoryFilter = ({ filter, image, alt }) => (
     <button className='ml-4' onClick={() => handleCategoryFilter(filter)}>
       <Image
@@ -44,7 +44,7 @@ function Buttons({ filters = [], handleCategoryFilter, t }) {
           ))}
         </span>
         <span className='w-[70vw] md:w-[40vw] lg:w-[400px] lg:mb-[3vw]'>
-          <PriceFilter />
+          <PriceFilter handlePriceFilter={handlePriceFilter} />
         </span>
       </div>
     </div>

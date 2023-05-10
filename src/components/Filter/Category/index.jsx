@@ -1,30 +1,31 @@
-import { withTranslation } from "next-i18next"
 import { useState } from "react"
 
 import ProductList from "@/components/ProductList"
-import products from "@/components/ProductList/products"
+
+import { useGeneralListings } from "@/utils/store"
 
 import Buttons from "../Buttons"
 
-function CategoryFilter({ t }) {
+export default function CategoryFilter() {
+  const { data } = useGeneralListings()
   const filters = [
     {
-      filter: t("filter-one"),
+      filter: "Book",
       image: "/images/Book.png",
       alt: "Book",
     },
     {
-      filter: t("filter-two"),
+      filter: "Furniture",
       image: "/images/Furniture.png",
       alt: "Furniture",
     },
     {
-      filter: t("filter-three"),
+      filter: "Electronics",
       image: "/images/Electronic.png",
       alt: "Electronics",
     },
     {
-      filter: t("filter-four"),
+      filter: "Two-wheeler",
       image: "/images/Two-wheeler.png",
       alt: "Two-wheeler",
     },
@@ -34,12 +35,24 @@ function CategoryFilter({ t }) {
 
   const handleCategoryFilter = (filter) => setSelectedFilter(filter)
 
+  const [priceFilter, setPriceFilter] = useState({ min: "", max: "" })
+
+  const handlePriceFilter = (min, max) => {
+    setPriceFilter({ min, max })
+  }
+
   return (
     <div>
-      <Buttons filters={filters} handleCategoryFilter={handleCategoryFilter} />
-      <ProductList selectedFilter={selectedFilter} products={products} />
+      <Buttons
+        filters={filters}
+        handleCategoryFilter={handleCategoryFilter}
+        handlePriceFilter={handlePriceFilter}
+      />
+      <ProductList
+        selectedFilter={selectedFilter}
+        products={data}
+        priceFilter={priceFilter}
+      />
     </div>
   )
 }
-
-export default withTranslation("index")(CategoryFilter)
