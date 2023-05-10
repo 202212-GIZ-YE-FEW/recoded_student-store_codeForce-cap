@@ -9,8 +9,6 @@ import styels from "./Hero.module.css"
 
 import { useAuth } from "@/utils/store"
 
-import { SectionWrapper } from "../hoc"
-
 const images = [
   "/images/slider1.png",
   "/images/slider2.png",
@@ -92,7 +90,7 @@ function Hero() {
 
   return (
     <>
-      <div className='mt-8'>
+      <div>
         <div
           ref={sliderRef}
           className={`${styels.zoom + "-out"} keen-slider px-15`}
@@ -122,10 +120,10 @@ function Hero() {
                 </div>
                 <Image
                   src={src}
-                  width={1123}
-                  height={500}
+                  width={1920}
+                  height={1080}
                   alt='...'
-                  className='mx-auto rounded-xl border-2 border-purple drop-shadow-2xl bg-transparent max-w-[345px] max-h-[205px] min-h-[205px] lg:max-w-[1123px] lg:max-h-[350px] lg:min-h-[350px] sm:max-w-[547px] sm:max-h[200px]'
+                  className='mx-auto drop-shadow-2xl'
                 />
               </div>
             </div>
@@ -135,4 +133,4 @@ function Hero() {
     </>
   )
 }
-export default SectionWrapper(Hero)
+export default Hero
