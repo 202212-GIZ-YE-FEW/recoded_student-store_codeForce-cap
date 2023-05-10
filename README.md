@@ -461,6 +461,19 @@ npm run  lint
 
 </details>
 
+<details>
+
+<summary>
+
+- Class Diagram:
+
+</summary>
+
+<img  src="/public/images/class.png"  name="image-name">
+
+</details>
+
+
 ## Project Prototype
 
   
