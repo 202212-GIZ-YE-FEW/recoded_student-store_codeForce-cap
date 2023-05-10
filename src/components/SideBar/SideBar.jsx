@@ -1,5 +1,5 @@
-import Image from "next/image"
 import { withTranslation } from "next-i18next"
+import Image from "next/image"
 
 import { useProfileData } from "@/utils/store"
 
@@ -23,7 +23,7 @@ function SideBar({ handleSelectedPage, selectedPage, t }) {
   // The image that will be displayed in the screen as it is a normal image
   const imageComponent = (
     <Image
-      className={`rounded-full mx-auto ${
+      className={`rounded-full mx-auto max-w-[171px] max-h-[171px] ${
         selectedPage === "EditProfile" ? "cursor-pointer" : ""
       }`}
       src={profileData?.profileImg?.url || "/images/cat-photo.svg"}
