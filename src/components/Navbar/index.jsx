@@ -170,7 +170,7 @@ function Navbar({ t }) {
                   <div className='block md:relative text-center md:border-2 hover:border-purple rounded-full'>
                     <span className='hidden md:flex items-center cursor-pointer'>
                       <Image
-                        className='rounded-full'
+                        className='rounded-full  max-w-[37px] max-h-[37px]'
                         alt='User'
                         src={
                           profileData?.profileImg?.url ||

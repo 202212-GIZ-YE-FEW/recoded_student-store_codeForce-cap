@@ -4,10 +4,9 @@ import ProductList from "@/components/ProductList"
 
 import { useGeneralListings } from "@/utils/store"
 
-// import products from "@/components/ProductList/products"
 import Buttons from "../Buttons"
 
-function CategoryFilter() {
+export default function CategoryFilter() {
   const { data } = useGeneralListings()
   const filters = [
     {
@@ -36,12 +35,24 @@ function CategoryFilter() {
 
   const handleCategoryFilter = (filter) => setSelectedFilter(filter)
 
+  const [priceFilter, setPriceFilter] = useState({ min: "", max: "" })
+
+  const handlePriceFilter = (min, max) => {
+    setPriceFilter({ min, max })
+  }
+
   return (
     <div>
-      <Buttons filters={filters} handleCategoryFilter={handleCategoryFilter} />
-      <ProductList selectedFilter={selectedFilter} products={data} />
+      <Buttons
+        filters={filters}
+        handleCategoryFilter={handleCategoryFilter}
+        handlePriceFilter={handlePriceFilter}
+      />
+      <ProductList
+        selectedFilter={selectedFilter}
+        products={data}
+        priceFilter={priceFilter}
+      />
     </div>
   )
 }
-
-export default CategoryFilter

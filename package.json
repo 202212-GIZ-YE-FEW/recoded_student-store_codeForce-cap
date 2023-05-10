@@ -17,7 +17,6 @@
     "lint": "next lint",
     "lint:fix": "eslint src --fix && npm run format",
     "lint:strict": "eslint src",
-    "prettier": "prettier --write .",
     "prepare": "husky install",
     "test:watch": "jest --watch",
     "test": "jest --passWithNoTests",

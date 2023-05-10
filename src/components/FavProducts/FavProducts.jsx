@@ -77,15 +77,6 @@ function FavProducts({ t }) {
             {t("filter-three")}
             <HiOutlineChip className='text-2xl' />
           </button>
-          {/* <button
-            onClick={() => handleCategoryChange("Cloth")}
-            className={`bg-gray-200 hover:bg-gray-300 text-gray-800 font-bold py-2 px-4 rounded-full mr-4 mb-4 transition-all duration-300 ease-in-out focus:ring-2 focus:ring-offset-2 focus:ring-gray-500 flex justify-around items-center w-32 shadow-md min-w-[110px] max-xs:flex-col ${
-              selectedCategory === "Cloth" &&
-              " bg-purple !text-white hover:!bg-violet-800"
-            }`}
-          >
-            Clothes <GiClothes className='text-2xl' />
-          </button> */}
           <button
             onClick={() => handleCategoryChange("Books")}
             className={`bg-gray-200 hover:bg-gray-300 text-gray-800 font-bold py-2 px-4 rounded-full mr-4 mb-4 transition-all duration-300 ease-in-out focus:ring-2 focus:ring-offset-2 focus:ring-gray-500 flex  justify-around items-center w-32 shadow-md min-w-[110px] ${
