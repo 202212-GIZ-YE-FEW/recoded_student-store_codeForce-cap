@@ -1,6 +1,6 @@
+import { withTranslation } from "next-i18next"
 import Image from "next/image"
 import Link from "next/link"
-import { withTranslation } from "next-i18next"
 import { AiOutlineHeart } from "react-icons/ai"
 
 import { useGeneralListings } from "@/utils/store"
@@ -32,7 +32,7 @@ function ProductList({ selectedFilter, priceFilter, t }) {
       )
     : uniqueProducts
 
-  const priceFilteredProducts = categoryFilter.filter((product) => {
+  const filteredProducts = categoryFilter.filter((product) => {
     const price = parseFloat(product.price)
     const min = parseFloat(priceFilter.min)
     const max = parseFloat(priceFilter.max)
@@ -45,7 +45,7 @@ function ProductList({ selectedFilter, priceFilter, t }) {
         className='sm:grid xl:grid-cols-4 lg:grid-cols-4 sm:grid-cols-2 xs:grid-cols-1'
         dir={t("language") === "ar" ? "rtl" : "ltr"}
       >
-        {priceFilteredProducts.map((product) => (
+        {filteredProducts.map((product) => (
           <div
             key={product?.uid}
             className='mx-3 mb-10 border rounded-lg cart-animation flex flex-col justify-between'
@@ -81,7 +81,7 @@ function ProductList({ selectedFilter, priceFilter, t }) {
                     ${product?.price || "No price"}
                   </h2>
                   <p className='font-extralight text-xs'>
-                    {product?.location || "No price"}
+                    {product?.location || "No Location"}
                   </p>
                 </div>
               </div>

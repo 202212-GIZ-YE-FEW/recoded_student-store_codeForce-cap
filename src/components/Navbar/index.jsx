@@ -1,8 +1,8 @@
 import ProgressBar from "@ramonak/react-progress-bar"
+import { withTranslation } from "next-i18next"
 import Image from "next/image"
 import Link from "next/link"
 import { useRouter } from "next/router"
-import { withTranslation } from "next-i18next"
 import { useEffect, useState } from "react"
 import { useAuthState } from "react-firebase-hooks/auth"
 import {
@@ -37,9 +37,9 @@ function Navbar({ t }) {
     const currentLocale = router.locale
     // activated locale checker
     const newLocale = currentLocale === "en" ? "ar" : "en"
-    // set the toggle to be the second or the first language depends on the activated one
+    // set the toggle to be the second language or the first language depends on the activated one
     setActiveLanguage(newLocale)
-    // set the locale to be the other without redirect to the ome page
+    // set the toggle to be the other language without redirect to the ome page
     router.push(router.pathname, router.asPath, { locale: newLocale })
   }
 
@@ -73,7 +73,7 @@ function Navbar({ t }) {
     if (!isLoggedIn) {
       toast.error("Hold on, You have to sign in or sign up first !!")
     } else {
-      router.push("/listing")
+      router.push("/favorites")
     }
   }
 
@@ -147,7 +147,7 @@ function Navbar({ t }) {
               className={`${styles.search} ${styles.input} w-full text-sm placeholder:text-gray-300 placeholder:capitalize text-gray-600
               `}
             />
-            <div className=''>
+            <div>
               <AiOutlineSearch />
             </div>
           </div>
