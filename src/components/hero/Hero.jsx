@@ -16,12 +16,10 @@ const images = [
   "/images/slider2.png",
   "/images/slider3.png",
   "/images/slider4.png",
-  // "/images/Slider1.png",
 ]
 
 const title = [
   { lineOne: "Student Store", lineTwo: "Share for Care ❤️" },
-  { lineOne: "", lineTwo: "" },
   { lineOne: "", lineTwo: "" },
   { lineOne: "", lineTwo: "" },
   { lineOne: "", lineTwo: "" },
@@ -52,7 +50,7 @@ function Hero() {
           if (mouseOver) return
           timeout = setTimeout(() => {
             slider.next()
-          }, 4000)
+          }, 5000)
         }
         slider.on("created", () => {
           slider.container.addEventListener("mouseover", () => {
@@ -105,7 +103,7 @@ function Hero() {
               className='keen-slider__slide relative w-full h-full'
             >
               <div style={scaleStyle(idx)} className='relative'>
-                <div className='absolute lg:left-[90px] sm:left-[130px] lg:top-0 left-[35px]'>
+                <div className='absolute lg:left-[90px] sm:left-[130px] lg:top-0 left-[35px] z-10'>
                   <h1 className='lg:text-[80px] sm:text-[40px] text-[25px] font-extrabold text-purple'>
                     {title[idx].lineOne}
                   </h1>
@@ -127,7 +125,7 @@ function Hero() {
                   width={1123}
                   height={500}
                   alt='...'
-                  className='mx-auto rounded-xl border-2 border-purple bg-transparent max-w-[345px] max-h-[205px] min-h-[205px] lg:max-w-[1123px] lg:max-h-[527px] lg:min-h-[527px] sm:max-w-[547px] sm:max-h[200px] '
+                  className='mx-auto rounded-xl border-2 border-purple drop-shadow-2xl bg-transparent max-w-[345px] max-h-[205px] min-h-[205px] lg:max-w-[1123px] lg:max-h-[350px] lg:min-h-[350px] sm:max-w-[547px] sm:max-h[200px]'
                 />
               </div>
             </div>
