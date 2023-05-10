@@ -42,7 +42,7 @@ function ProductList({ selectedFilter, priceFilter, t }) {
   return (
     <div>
       <div
-        className='grid xl:grid-cols-4 lg:grid-cols-4 md:grid-cols-2 sm:grid-cols-1 m-auto w-full'
+        className='sm:grid xl:grid-cols-4 lg:grid-cols-4 md:grid-cols-2 sm:grid-cols-1'
         dir={t("language") === "ar" ? "rtl" : "ltr"}
       >
         {priceFilteredProducts.map((product) => (
