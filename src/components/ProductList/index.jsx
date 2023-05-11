@@ -1,16 +1,13 @@
 import Image from "next/image"
 import Link from "next/link"
 import { withTranslation } from "next-i18next"
-import { AiFillHeart, AiOutlineHeart } from "react-icons/ai"
+import { AiOutlineHeart } from "react-icons/ai"
 
-import { auth } from "@/utils/firebase/config"
-import { useFavProducts, useGeneralListings } from "@/utils/store"
+import { useGeneralListings } from "@/utils/store"
 
 import Spinner from "../Spinner/Spinner"
 
 function ProductList({ selectedFilter, priceFilter, t }) {
-  const userId = auth.currentUser.uid
-  const { addFavProduct, isProductAdded } = useFavProducts(userId)
   const { data, error, loading } = useGeneralListings()
   if (error) {
     return <div>Error: {error.message}</div>
@@ -35,16 +32,12 @@ function ProductList({ selectedFilter, priceFilter, t }) {
       )
     : uniqueProducts
 
-  const filteredProducts = categoryFilter.filter((product) => {
+  const priceFilteredProducts = categoryFilter.filter((product) => {
     const price = parseFloat(product.price)
     const min = parseFloat(priceFilter.min)
     const max = parseFloat(priceFilter.max)
     return (isNaN(min) || price >= min) && (isNaN(max) || price <= max)
   })
-
-  const handleFavProducts = (product) => {
-    addFavProduct(product)
-  }
 
   return (
     <div>
@@ -52,7 +45,7 @@ function ProductList({ selectedFilter, priceFilter, t }) {
         className='sm:grid xl:grid-cols-4 lg:grid-cols-4 sm:grid-cols-2 xs:grid-cols-1'
         dir={t("language") === "ar" ? "rtl" : "ltr"}
       >
-        {filteredProducts.map((product) => (
+        {priceFilteredProducts.map((product) => (
           <div
             key={product?.uid}
             className='mx-3 mb-10 border rounded-lg cart-animation flex flex-col justify-between'
@@ -68,11 +61,8 @@ function ProductList({ selectedFilter, priceFilter, t }) {
                 />
               </Link>
               <div className='absolute bottom-2 right-2 z-10'>
-                <button
-                  onClick={() => handleFavProducts(product)}
-                  className='flex items-center justify-center w-8 h-8 bg-white text-red-500 rounded-full shadow-md hover:text-red-500 transition-colors duration-300 ease-in-out'
-                >
-                  {isProductAdded ? <AiFillHeart /> : <AiOutlineHeart />}
+                <button className='flex items-center justify-center w-8 h-8 bg-white text-red-500 rounded-full shadow-md hover:text-red-500 transition-colors duration-300 ease-in-out'>
+                  <AiOutlineHeart />
                 </button>
               </div>
             </div>
@@ -91,7 +81,7 @@ function ProductList({ selectedFilter, priceFilter, t }) {
                     ${product?.price || "No price"}
                   </h2>
                   <p className='font-extralight text-xs'>
-                    {product?.location || "No Location"}
+                    {product?.location || "No price"}
                   </p>
                 </div>
               </div>

@@ -3,34 +3,21 @@ import dynamic from "next/dynamic"
 import Image from "next/image"
 import Link from "next/link"
 import { useRouter } from "next/router"
-import { toast } from "react-toastify"
 
 import Spinner from "@/components/Spinner/Spinner"
 
 import RootLayout from "@/layout/root/RootLayout"
-import { useAuth, useFavProducts, useProduct } from "@/utils/store"
+import { useAuth, useProduct } from "@/utils/store"
 
 const Maps = dynamic(() => import("../../components/Maps"), {
   ssr: false,
 })
 
 export default function SingleProduct() {
-  const { isLoggedIn, user } = useAuth()
+  const { isLoggedIn } = useAuth()
   const router = useRouter()
   const { id } = router.query
   const { data, error, loading } = useProduct(id)
-
-  const { addFavProduct, isProductAdded, textLoading } = useFavProducts(
-    user?.uid
-  )
-
-  const handleFavorites = () => {
-    if (isLoggedIn) {
-      addFavProduct(data)
-    } else {
-      toast.error("Pleas sign in first !!")
-    }
-  }
 
   if (error) {
     return <div>Error: {error.message}</div>
@@ -120,24 +107,9 @@ export default function SingleProduct() {
                   </p>
                 </span>
               </div>
-              <span className='flex justify-between mx-4 mt-8'>
-                <h2 className='font-poppins text-[#585785] text-2xl'>
-                  Details:
-                </h2>
-                {isLoggedIn ? (
-                  <button
-                    onClick={handleFavorites}
-                    className='bg-[#585785] shadow-lg text-white px-2 rounded-lg'
-                  >
-                    {textLoading
-                      ? "Pleas wait"
-                      : !isProductAdded
-                      ? "Add to favorite"
-                      : "Remove from favorites "}
-                  </button>
-                ) : null}
-              </span>
-              <br />
+              <h2 className='mt-8 font-poppins text-[#585785] text-2xl pl-4'>
+                Details:
+              </h2>
               <hr className='border-2 ml-4 bg-[#7874F2]' />
               <div className='flex flex-col text-[#585785] items-center justify-between space-y-4 py-4 sm:flex-row sm:space-y-0'></div>
               <div className='font-poppins text-[#585785] text-1xl pl-4 h-28 overflow-y-scroll'>
