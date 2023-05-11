@@ -73,7 +73,7 @@ function Navbar({ t }) {
     if (!isLoggedIn) {
       toast.error("Hold on, You have to sign in or sign up first !!")
     } else {
-      router.push("/listing")
+      router.push("/favorites")
     }
   }
 

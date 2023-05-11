@@ -1,4 +1,5 @@
 import Image from "next/image"
+import Link from "next/link"
 import { withTranslation } from "next-i18next"
 import { useEffect, useState } from "react"
 import { AiFillHeart } from "react-icons/ai"
@@ -6,27 +7,29 @@ import { HiOutlineChip, HiOutlineX } from "react-icons/hi"
 import { MdTwoWheeler } from "react-icons/md"
 import { TbBook, TbSofa } from "react-icons/tb"
 
-import { useGeneralListings } from "@/utils/store"
+import { auth } from "@/utils/firebase/config"
+import { useFavProducts } from "@/utils/store"
 
 import Highlighter from "../highlighter"
+import Spinner from "../Spinner/Spinner"
 
 function FavProducts({ t }) {
-  const { data } = useGeneralListings()
+  const userId = auth.currentUser.uid
+  const { favProducts, removeFavProduct, loading } = useFavProducts(userId)
   // Define state variables for favorite products and selected category test
   const [FavProducts, setFavoriteProducts] = useState([])
   useEffect(() => {
-    if (data) {
-      setFavoriteProducts(data)
+    if (favProducts) {
+      setFavoriteProducts(favProducts)
     }
-  }, [data])
+  }, [favProducts])
 
   const [selectedCategory, setSelectedCategory] = useState("All")
 
   // Function to remove a product from the favorite products list
-  const handleRemoveProduct = (id) => {
-    // Filter the favorite products list to exclude the product with the specified id
+  const handleRemoveProduct = async (id) => {
+    await removeFavProduct(id) // Call removeFavProduct from useFavProducts hook
     const updatedProducts = FavProducts.filter((product) => product.id !== id)
-    // Set the state of the favorite products list to the updated list
     setFavoriteProducts(updatedProducts)
   }
 
@@ -36,15 +39,35 @@ function FavProducts({ t }) {
     setSelectedCategory(category)
     if (category === "All") {
       // If the new category is "All", set the state of the favorite products list to the original list of products
-      setFavoriteProducts(data)
+      setFavoriteProducts(favProducts)
     } else {
       // Otherwise, filter the original list of products to include only those in the selected category
-      const filteredProducts = data.filter(
+      const filteredProducts = favProducts.filter(
         (product) => product.category === category
       )
       // Set the state of the favorite products list to the filtered list of products
       setFavoriteProducts(filteredProducts)
     }
+  }
+  if (loading) {
+    return <Spinner text='Getting your favorites' />
+  }
+  if (favProducts.length === 0) {
+    return (
+      <div className='h-64 bg-gradient-to-l from-zinc-800 to-slate-300 text-center text-3xl text-white font-bold flex flex-col justify-around'>
+        <h1>
+          Sorry for that but you didn&apos;t add any favorite why don&apos;t you
+          go to
+        </h1>
+        <Link
+          href='/'
+          className='underline font-extrabold transition hover:scale-90'
+        >
+          {" "}
+          add some ?
+        </Link>
+      </div>
+    )
   }
 
   return (
@@ -110,26 +133,28 @@ function FavProducts({ t }) {
         </div>
       </div>
 
-      <div className='grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8'>
+      <div className='grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5'>
         {FavProducts.map((product) => (
           <div
             key={product.id}
             className='relative flex flex-col justify-between bg-white rounded-lg overflow-hidden shadow-md group transform transition-all duration-300 ease-in-out hover:scale-95'
           >
             <div className='relative overflow-hidden'>
-              <Image
-                src={product.primaryImage.url}
-                alt={product.productName}
-                width={258}
-                height={250}
-                className='h-48 sm:h-56 md:h-64 w-full object-cover max-h-[250px] min-h-[250px]'
-              />
+              <Link href={`products/${product?.id}`}>
+                <Image
+                  src={product?.primaryImage?.url}
+                  alt={product?.productName}
+                  width={258}
+                  height={250}
+                  className='h-48 sm:h-56 md:h-64 w-full object-cover max-h-[250px] min-h-[250px]'
+                />
+              </Link>
               <div className='absolute top-2 right-2 z-10'>
                 <button
                   className='flex items-center justify-center w-8 h-8 bg-white text-red-500 rounded-full shadow-md hover:bg-red-500 hover:text-white transition-colors duration-300 ease-in-out'
                   onClick={() => handleRemoveProduct(product.id)}
                 >
-                  <HiOutlineX className='' />
+                  <HiOutlineX />
                 </button>
               </div>
               <div className='absolute bottom-2 right-2 z-10'>
@@ -141,14 +166,14 @@ function FavProducts({ t }) {
             <div className='mx-3 text-center'>
               <div className='info flex justify-between my-4 mx-3'>
                 <div className='text-left'>
-                  <h2 className='font-semibold'>{product.productName}</h2>
+                  <h2 className='font-semibold'>{product?.productName}</h2>
                   <p className='font-extralight text-xs rtl:text-right'>
-                    {product.category}
+                    {product?.category}
                   </p>
                 </div>
                 <div>
-                  <h2 className='font-extrabold text-xl'>${product.price}</h2>
-                  <p className='font-extralight text-xs'>{product.location}</p>
+                  <h2 className='font-extrabold text-xl'>${product?.price}</h2>
+                  <p className='font-extralight text-xs'>{product?.location}</p>
                 </div>
               </div>
             </div>
