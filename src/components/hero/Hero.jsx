@@ -10,16 +10,16 @@ import styels from "./Hero.module.css"
 import { useAuth } from "@/utils/store"
 
 const images = [
-  "/images/slider1.png",
+  "/images/Slider1.png",
   "/images/slider2.png",
   "/images/slider3.png",
-  "/images/slider4.png",
+  // "/images/slider4.png",
 ]
 
 const title = [
   { lineOne: "Student Store", lineTwo: "Share for Care ❤️" },
-  { lineOne: "", lineTwo: "" },
-  { lineOne: "", lineTwo: "" },
+  { lineOne: "Let's Start", lineTwo: "Sell Items 📦" },
+  { lineOne: "Give a little,", lineTwo: "help a lot ❤️" },
   { lineOne: "", lineTwo: "" },
 ]
 
@@ -101,7 +101,7 @@ function Hero() {
               className='keen-slider__slide relative w-full h-full'
             >
               <div style={scaleStyle(idx)} className='relative'>
-                <div className='absolute lg:left-[90px] sm:left-[130px] lg:top-0 left-[35px] z-10'>
+                <div className='absolute lg:left-[100px] sm:left-[130px] lg:top-40 left-[35px] z-10'>
                   <h1 className='lg:text-[80px] sm:text-[40px] text-[25px] font-extrabold text-purple'>
                     {title[idx].lineOne}
                   </h1>
