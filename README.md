@@ -1471,8 +1471,9 @@ This project currently has 3 tags.
 
 ## Credits and Acknowledgements
 
-  
 
-  
+> Thank you to Re:Coded for giving our team the opportunity to participate in this program and for providing us with the resources and support needed to grow as developers. We are grateful for the guidance and feedback provided by our mentors and instructors throughout the program, which helped us to improve our skills and gain valuable insights into the industry.
 
-Thank you to Re:Coded for this opportunity, thank you to my mentors and instructors for their guidance and feedback, thank you to my teammates for their collaboration and support, etc.
+> We would also like to thank our teammates for their collaboration and support, which made the learning process more enjoyable and productive. Working together as a team has taught us the importance of teamwork and communication in achieving shared goals.
+
+> Overall, we are grateful for this experience and look forward to applying the skills and knowledge we have gained to future projects. Thank you again to Re:Coded, our mentors and instructors, and our teammates for making this journey a memorable and enriching one.
