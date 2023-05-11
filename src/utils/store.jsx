@@ -155,7 +155,7 @@ export const useProduct = (productId) => {
           setData({ id: generalDocSnapshot.id, ...generalDocSnapshot.data() })
           setLoading(false)
         } else {
-          const userId = auth.currentUser?.uid
+          const userId = auth?.currentUser?.uid
 
           if (userId) {
             const userDocRef = doc(
@@ -198,38 +198,42 @@ export function useFavProducts(userId) {
   const [isProductAdded, setIsProductAdded] = useState(false)
 
   useEffect(() => {
-    const userRef = doc(db, "users", userId)
-    const favProductsRef = collection(userRef, "favProducts")
-    const q = query(favProductsRef)
+    try {
+      const userRef = doc(db, "users", userId)
+      const favProductsRef = collection(userRef, "favProducts")
+      const q = query(favProductsRef)
 
-    const unsubscribe = onSnapshot(q, (querySnapshot) => {
-      const products = []
-      querySnapshot.forEach((doc) => {
-        products.push({ id: doc.id, ...doc.data() })
+      const unsubscribe = onSnapshot(q, (querySnapshot) => {
+        const products = []
+        querySnapshot.forEach((doc) => {
+          products.push({ id: doc.id, ...doc.data() })
+        })
+
+        setFavProducts(products)
+        setLoading(false)
       })
 
-      setFavProducts(products)
-      setLoading(false)
-    })
+      const onError = () => {
+        setError("An error occurred while fetching the data.")
+        setLoading(false)
+      }
 
-    const onError = () => {
-      setError("An error occurred while fetching the data.")
-      setLoading(false)
-    }
+      const unsubscribeOnError = onSnapshot(q, onError, (querySnapshot) => {
+        const products = []
+        querySnapshot.forEach((doc) => {
+          products.push({ id: doc.id, ...doc.data() })
+        })
 
-    const unsubscribeOnError = onSnapshot(q, onError, (querySnapshot) => {
-      const products = []
-      querySnapshot.forEach((doc) => {
-        products.push({ id: doc.id, ...doc.data() })
+        setFavProducts(products)
+        setLoading(false)
       })
 
-      setFavProducts(products)
-      setLoading(false)
-    })
-
-    return () => {
-      unsubscribe()
-      unsubscribeOnError()
+      return () => {
+        unsubscribe()
+        unsubscribeOnError()
+      }
+    } catch (err) {
+      console.log(err)
     }
   }, [userId])
 

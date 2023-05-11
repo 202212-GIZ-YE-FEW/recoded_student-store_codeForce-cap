@@ -14,7 +14,7 @@ import Highlighter from "../highlighter"
 import Spinner from "../Spinner/Spinner"
 
 function FavProducts({ t }) {
-  const userId = auth.currentUser.uid
+  const userId = auth?.currentUser?.uid
   const { favProducts, removeFavProduct, loading } = useFavProducts(userId)
   // Define state variables for favorite products and selected category test
   const [FavProducts, setFavoriteProducts] = useState([])

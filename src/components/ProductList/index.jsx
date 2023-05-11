@@ -9,7 +9,7 @@ import { useFavProducts, useGeneralListings } from "@/utils/store"
 import Spinner from "../Spinner/Spinner"
 
 function ProductList({ selectedFilter, priceFilter, t }) {
-  const userId = auth.currentUser.uid
+  const userId = auth?.currentUser?.uid
   const { addFavProduct, isProductAdded } = useFavProducts(userId)
   const { data, error, loading } = useGeneralListings()
   if (error) {
@@ -60,7 +60,7 @@ function ProductList({ selectedFilter, priceFilter, t }) {
             <div className='relative overflow-hidden'>
               <Link href={`products/${product?.id}`}>
                 <Image
-                  src={product?.primaryImage.url || "/images/emptyImage.png"}
+                  src={product?.primaryImage?.url || "/images/emptyImage.png"}
                   alt={product?.productName || "No Image"}
                   width={258}
                   height={250}
