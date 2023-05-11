@@ -805,6 +805,7 @@ npm run  lint
   
 
   
+10. About Us page: The page contains project data such as our mission, history, goals, and team.
 
 ## Project Screenshots
 
@@ -1009,8 +1010,25 @@ npm run  lint
 </details>
 
   
+<details>
 
   
+
+  
+
+<summary>10. About Us page:</summary>
+
+  
+
+  
+
+<img  src="https://user-images.githubusercontent.com/75049983/236683152-67b295b6-62c3-4d89-96d0-2e6bde8d1a63.png"  name="image-name">
+
+  
+
+  
+
+</details>
 
 ## Project License
 
