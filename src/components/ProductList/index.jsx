@@ -1,6 +1,6 @@
-import { withTranslation } from "next-i18next"
 import Image from "next/image"
 import Link from "next/link"
+import { withTranslation } from "next-i18next"
 import { AiFillHeart, AiOutlineHeart } from "react-icons/ai"
 
 import { auth } from "@/utils/firebase/config"

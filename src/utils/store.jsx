@@ -1,4 +1,3 @@
-import "firebase/firestore"
 import {
   addDoc,
   collection,
@@ -11,6 +10,7 @@ import {
   where,
 } from "firebase/firestore"
 import { createContext, useContext, useEffect, useState } from "react"
+import "firebase/firestore"
 
 import { auth, db } from "./firebase/config"
 
