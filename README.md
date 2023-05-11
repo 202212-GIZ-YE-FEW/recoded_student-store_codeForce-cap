@@ -737,7 +737,7 @@ This project currently has an install size of 1.7G.
 
   
 
-[![Issues](https://img.shields.io/badge/Issues-3-blue.svg)](https://img.shields.io/badge/Issues-3-blue.svg)
+[![Issues](https://img.shields.io/badge/Issues-78-blue.svg)](https://img.shields.io/badge/Issues-78-blue.svg)
 
   
 
