@@ -238,7 +238,8 @@ Student Store
 
   
 
--  **Mohammed Al-Qershi:** I learned how to use Next.js and Tailwind CSS to build a responsive web application. I also learned how to use the i18next library to add internationalization to the application. I also learned how to use the Husky tool to run Prettier and ESLint before committing changes to the repository.
+-  **Mohammed Al-Qershi:** As a user front-end developer, I gained extensive experience in using Next.js and Tailwind CSS to build responsive web applications. Throughout my work, I also learned how to use the i18next library to implement internationalization in the application. Additionally, I honed my skills in utilizing the Husky tool to ensure that Prettier and ESLint run smoothly before committing any changes to the repository. Working with these tools has helped me to create high-quality, robust, and user-friendly web applications that meet the needs of the end users. I have also gained a deep understanding of the importance of accessibility and user experience in developing web applications and the best practices to follow to ensure that the applications are accessible to everyone.
+Overall, my experience as a specialist user front-end developer has taught me how to create cutting-edge web applications that are not only visually appealing but also highly functional and accessible to all users.
 
   
 
