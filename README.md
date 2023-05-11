@@ -680,9 +680,8 @@ By contributing to the Student Store project, you agree to license your contribu
 
 [![Project Status: Inactive](https://www.repostatus.org/badges/latest/inactive.svg)](https://www.repostatus.org/#inactive)
 
-  
+The project has been successfully completed, and all project requirements have been met. The software is live and being used by its intended users.
 
-This project is currently inactive.
 
   
 
