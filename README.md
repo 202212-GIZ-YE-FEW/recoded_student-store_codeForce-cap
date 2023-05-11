@@ -741,7 +741,8 @@ This project currently has an install size of 1.7G.
 
   
 
-This project currently has 128 issues.
+This project currently has 78 issues.
+
 Summary of Issues:
 - Good first issue by @nabily4e-dev in #2
 - Fixing the removal of all things Storybook! finally!! by @nabily4e-dev in #8
@@ -782,7 +783,7 @@ Summary of Issues:
 - Update deployment domain by @BkrTech101-InnovaMind in #102
 - Hidden website Arabic i18 next translator by @messam10 in #99
 
-These issues include bug fixes, feature requests, and design improvements for the Student Store project. Please refer to the GitHub issues for more information on each issue and its current status.
+These issues include bug fixes, feature requests, and design improvements for the Student Store project. Please refer to the GitHub issues for (more)[https://github.com/202212-GIZ-YE-FEW/recoded_student-store_codeForce-cap/issues] information on each issue and its current status.
   
 
 ## Project Pull Requests
