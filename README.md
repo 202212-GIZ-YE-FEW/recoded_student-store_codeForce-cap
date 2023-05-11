@@ -1,5 +1,9 @@
 
+  
+
 <!-- PROJECT LOGO -->
+
+  
 
   
 
@@ -7,7 +11,11 @@
 
   
 
+  
+
 <div  align="center">
+
+  
 
   
 
@@ -15,11 +23,17 @@
 
   
 
+  
+
 <img  src="https://user-images.githubusercontent.com/75049983/236488639-c22de330-f6c3-4bfe-a4a5-23a7c4da5476.png"  alt="Logo"  width="150"  height="150">
 
   
 
+  
+
 </a>
+
+  
 
   
 
@@ -27,7 +41,11 @@
 
   
 
+  
+
 Student Store
+
+  
 
   
 
@@ -35,7 +53,11 @@ Student Store
 
   
 
+  
+
 <p  align="center">
+
+  
 
   
 
@@ -43,23 +65,39 @@ Student Store
 
   
 
+  
+
 </p>
 
   
 
+  
+
 </div>
+
+  
 
   
 
 <div  align="center"  style="max-height: 40px;">
 
+  
+
 <a  href="https://codeforce-student-store.vercel.app/">
+
+  
 
 <img  src="/public/images/view project.png"  height="40">
 
+  
+
 </a>
 
+  
+
 </div>
+
+  
 
   
 
@@ -67,7 +105,11 @@ Student Store
 
   
 
+  
+
 <br>
+
+  
 
   
 
@@ -75,11 +117,17 @@ Student Store
 
   
 
+  
+
 > The Student Store is a non-profit marketplace for students in Yemen to sell, buy, or borrow affordable used products like electronics, games, and study books. It aims to provide essential eCommerce experience and support for students.
 
   
 
+  
+
 >
+
+  
 
   
 
@@ -87,7 +135,11 @@ Student Store
 
   
 
+  
+
 >
+
+  
 
   
 
@@ -95,7 +147,11 @@ Student Store
 
   
 
+  
+
 <br>
+
+  
 
   
 
@@ -103,7 +159,11 @@ Student Store
 
   
 
+  
+
 -  **Authentication:** Users can sign in and sign up to the platform using their email address and password. Users can also sign in using their Google account.
+
+  
 
   
 
@@ -111,7 +171,11 @@ Student Store
 
   
 
+  
+
 -  **Responsive Design:** The platform is responsive and can be viewed on mobile, tablet, and desktop devices.
+
+  
 
   
 
@@ -119,7 +183,11 @@ Student Store
 
   
 
+  
+
 -  **Product Search:** Users can search for products by name or category.
+
+  
 
   
 
@@ -127,21 +195,34 @@ Student Store
 
   
 
+  
+
 ## Project Team
 
   
 
+  
+  
 
-| Name | Role | Email | 
-| :------------------| :---------------| :-----------------| 
-| Abdulrahman Aljohani| Front-end  developer| abdobas770@gmail.com | 
-| Abobakr Mahdi | Front-end  developer| zabobaker7355@gmail.com  | 
-| Marwan Bazghifan | Front-end  developer| mail@gmail.com | 
-| Mohammed Al-Qershi | Front-end  developer| malqershi98@gmail.com | 
-| Nabil Al Ashbat | Front-end  developer| nbl.dev21@gmail.com |
+| Name | Role | Email |
+
+| :------------------| :---------------| :-----------------|
+
+| Abdulrahman Aljohani| Front-end developer| abdobas770@gmail.com |
+
+| Abobakr Mahdi | Front-end developer| zabobaker7355@gmail.com |
+
+| Marwan Bazghifan | Front-end developer| mail@gmail.com |
+
+| Mohammed Al-Qershi | Front-end developer| malqershi98@gmail.com |
+
+| Nabil Al Ashbat | Front-end developer| nbl.dev21@gmail.com |
+
   
 
 ## Challenges and Learnings from the Project
+
+  
 
   
 
@@ -149,7 +230,11 @@ Student Store
 
   
 
+  
+
 -  **Abobakr Mahdi:** I learned how to use Next.js and Tailwind CSS to build a responsive web application. I also learned how to use the i18next library to add internationalization to the application. I also learned how to use the Husky tool to run Prettier and ESLint before committing changes to the repository.
+
+  
 
   
 
@@ -157,7 +242,11 @@ Student Store
 
   
 
+  
+
 -  **Mohammed Al-Qershi:** I learned how to use Next.js and Tailwind CSS to build a responsive web application. I also learned how to use the i18next library to add internationalization to the application. I also learned how to use the Husky tool to run Prettier and ESLint before committing changes to the repository.
+
+  
 
   
 
@@ -165,7 +254,11 @@ Student Store
 
   
 
+  
+
 <br>
+
+  
 
   
 
@@ -173,7 +266,11 @@ Student Store
 
   
 
+  
+
 ### Technologies
+
+  
 
   
 
@@ -181,39 +278,59 @@ Student Store
 
   
 
+  
+
 ### Libraries
+
+  
 
   
 
 ![Jest](https://img.shields.io/badge/Jest-%23C21325.svg?style=for-the-badge&logo=Jest&logoColor=white)
 
+  
+
 ![next-sitemap](https://img.shields.io/badge/next--sitemap-%23000000.svg?style=for-the-badge&logo=Next.js&logoColor=white)
+
+  
 
 ![clsx](https://img.shields.io/badge/clsx-%23FBAB60.svg?style=for-the-badge&logo=React&logoColor=white)
 
+  
+
 ![dompurify](https://img.shields.io/badge/dompurify-%23CB3837.svg?style=for-the-badge&logo=JavaScript&logoColor=white)
+
+  
 
 ![keen-slider](https://img.shields.io/badge/keen--slider-%23F2686F.svg?style=for-the-badge&logo=JavaScript&logoColor=white)
 
+  
+
 ![Yup](https://img.shields.io/badge/Yup-%23161616.svg?style=for-the-badge&logo=Yup&logoColor=white)
 
+  
+
 ![react-toastify](https://img.shields.io/badge/react-toastify-%2332424E.svg?style=for-the-badge&logo=React&logoColor=white)
+
+  
 
   
 
 <!-- ## Project Structure
 
   
-  
+
   
 
 The project is structured as follows:
 
   
-  
+
   
 
 - **.storybook:** This directory contains the configuration files for Storybook.
+
+  
 
   
 
@@ -221,7 +338,11 @@ The project is structured as follows:
 
   
 
+  
+
 - **config:** This directory contains the configuration files for the project.
+
+  
 
   
 
@@ -229,7 +350,11 @@ The project is structured as follows:
 
   
 
+  
+
 - **i18n:** This directory contains the translation files for the project.
+
+  
 
   
 
@@ -237,7 +362,11 @@ The project is structured as follows:
 
   
 
+  
+
 - **public:** This directory contains the public assets for the project.
+
+  
 
   
 
@@ -245,7 +374,11 @@ The project is structured as follows:
 
   
 
+  
+
 - **.commitlintrc.json:** This file contains the configuration for Commit Linter.
+
+  
 
   
 
@@ -253,7 +386,11 @@ The project is structured as follows:
 
   
 
+  
+
 - **.eslintrc.json:** This file contains the configuration for ESLint.
+
+  
 
   
 
@@ -261,7 +398,11 @@ The project is structured as follows:
 
   
 
+  
+
 - **.huskyrc.json:** This file contains the configuration for Husky.
+
+  
 
   
 
@@ -269,7 +410,11 @@ The project is structured as follows:
 
   
 
+  
+
 - **.storybook-main.js:** This file contains the configuration for Storybook.
+
+  
 
   
 
@@ -277,7 +422,11 @@ The project is structured as follows:
 
   
 
+  
+
 - **.storybook/manager.js:** This file contains the configuration for Storybook.
+
+  
 
   
 
@@ -285,7 +434,11 @@ The project is structured as follows:
 
   
 
+  
+
 - **.storybook/webpack.config.js:** This file contains the configuration for Storybook.
+
+  
 
   
 
@@ -293,7 +446,11 @@ The project is structured as follows:
 
   
 
+  
+
 - **next.config.js:** This file contains the configuration for Next.js.
+
+  
 
   
 
@@ -301,7 +458,11 @@ The project is structured as follows:
 
   
 
+  
+
 - **README.md:** This file contains the documentation for the project. -->
+
+  
 
   
 
@@ -309,9 +470,15 @@ The project is structured as follows:
 
   
 
+  
+
 ```shell
 
+  
+
 npm install  -g  commitizen  //  Installs  Commitizen  globally (Commitizen is  used  to  create  Conventional  Commits)
+
+  
 
   
 
@@ -319,13 +486,21 @@ npm install  //  Installs  the  Node  modules  required  for  the  project  to  
 
   
 
+  
+
 npx husky  install  //  Installs  Husky  if  it  is  not  already  installed (Husky is  used  to  run  the  Prettier  and  ESLint  tools  before  committing  changes)
+
+  
 
   
 
 chmod ug+x  .husky/*  //  Gives  Husky  executable  extension  permissions (this command  is  run  in  the  root  directory  of  the  project)
 
+  
+
 ```
+
+  
 
   
 
@@ -333,7 +508,11 @@ chmod ug+x  .husky/*  //  Gives  Husky  executable  extension  permissions (this
 
   
 
+  
+
 To contribute to this project, follow the steps below:
+
+  
 
   
 
@@ -341,11 +520,19 @@ To contribute to this project, follow the steps below:
 
   
 
+  
+
 ```bash
+
+  
 
 git clone  https://github.com/your-username/student-store.git
 
+  
+
 ```
+
+  
 
   
 
@@ -353,11 +540,19 @@ git clone  https://github.com/your-username/student-store.git
 
   
 
+  
+
 ```bash
+
+  
 
 npm install
 
+  
+
 ```
+
+  
 
   
 
@@ -365,11 +560,19 @@ npm install
 
   
 
+  
+
 ```bash
+
+  
 
 git checkout  -b <branch-name>
 
+  
+
 ```
+
+  
 
   
 
@@ -377,11 +580,19 @@ git checkout  -b <branch-name>
 
   
 
+  
+
 ```bash
+
+  
 
 git add  . && git cz
 
+  
+
 ```
+
+  
 
   
 
@@ -389,15 +600,25 @@ This will prompt you to fill in the necessary details for your commit message.
 
   
 
+  
+
 5. Push your changes to your forked repository:
+
+  
 
   
 
 ```bash
 
+  
+
 git push  origin <branch-name>
 
+  
+
 ```
+
+  
 
   
 
@@ -405,19 +626,31 @@ git push  origin <branch-name>
 
   
 
+  
+
 Note: Before committing your changes, make sure to run the Prettier and ESLint tools to ensure that your code follows the project's coding style guidelines. You can run these tools using the following commands:
+
+  
 
   
 
 ```bash
 
+  
+
 npm run  prettier
+
+  
 
   
 
 npm run  lint
 
+  
+
 ```
+
+  
 
   
 
@@ -425,7 +658,11 @@ npm run  lint
 
   
 
+  
+
 > The program project was managed using an agile methodology, with sprints of two weeks each. Project milestones were defined and tracked using the project management tool, and resource allocation was managed to ensure the project was completed on time.
+
+  
 
   
 
@@ -433,48 +670,90 @@ npm run  lint
 
   
 
+  
+
 ## Project Diagrams
+
+  
 
   
 
 <details>
 
+  
+
 <summary>
+
+  
 
 - Diagram of component content plotting for the homepage:
 
+  
+
 </summary>
+
+  
 
 <img  src="/public/images/homepage.png"  name="image-name">
 
+  
+
 </details>
+
+  
 
 <details>
 
+  
+
 <summary>
+
+  
 
 - Use Case Diagram:
 
+  
+
 </summary>
+
+  
 
 <img  src="/public/images/use case.png"  name="image-name">
 
+  
+
 </details>
+
+  
 
 <details>
 
+  
+
 <summary>
+
+  
 
 - Class Diagram:
 
+  
+
 </summary>
+
+  
 
 <img  src="/public/images/class.png"  name="image-name">
 
+  
+
 </details>
 
+  
+  
 
 ## Project Prototype
+
+  
 
   
 
@@ -482,7 +761,11 @@ npm run  lint
 
   
 
+  
+
 2. Login page: The login page allows users to enter their email address and password to access their accounts. Users can also log in with their Google, Facebook, or Twitter accounts.
+
+  
 
   
 
@@ -490,7 +773,11 @@ npm run  lint
 
   
 
+  
+
 4. Single product page: Clicking on a product takes the user to a page that displays detailed information about the product, including a larger and more image, a longer description, and a product title. Users can add the product to the cart.
+
+  
 
   
 
@@ -498,7 +785,11 @@ npm run  lint
 
   
 
+  
+
 6. Donation page: The donation page allows users to make a donation to support the Student Store. Users can select the amount they wish to donate and select a payment method.
+
+  
 
   
 
@@ -506,7 +797,11 @@ npm run  lint
 
   
 
+  
+
 8. My Lists page: The My Lists page allows users to view their product listings, including product names, categories, and prices. Users can also edit or delete their listings.
+
+  
 
   
 
@@ -514,11 +809,17 @@ npm run  lint
 
   
 
+  
+
 ## Project Screenshots
 
   
 
+  
+
 <details>
+
+  
 
   
 
@@ -526,13 +827,21 @@ npm run  lint
 
   
 
+  
+
 <img  src="https://user-images.githubusercontent.com/75049983/236683152-67b295b6-62c3-4d89-96d0-2e6bde8d1a63.png"  name="image-name">
+
+  
 
   
 
 </details>
 
+  
+
 <details>
+
+  
 
   
 
@@ -540,13 +849,21 @@ npm run  lint
 
   
 
+  
+
 <img  src="https://user-images.githubusercontent.com/75049983/236683152-67b295b6-62c3-4d89-96d0-2e6bde8d1a63.png"  name="image-name">
+
+  
 
   
 
 </details>
 
+  
+
 <details>
+
+  
 
   
 
@@ -554,13 +871,21 @@ npm run  lint
 
   
 
+  
+
 <img  src="https://user-images.githubusercontent.com/75049983/236683152-67b295b6-62c3-4d89-96d0-2e6bde8d1a63.png"  name="image-name">
+
+  
 
   
 
 </details>
 
+  
+
 <details>
+
+  
 
   
 
@@ -568,13 +893,21 @@ npm run  lint
 
   
 
+  
+
 <img  src="https://user-images.githubusercontent.com/75049983/236683152-67b295b6-62c3-4d89-96d0-2e6bde8d1a63.png"  name="image-name">
+
+  
 
   
 
 </details>
 
+  
+
 <details>
+
+  
 
   
 
@@ -582,13 +915,21 @@ npm run  lint
 
   
 
+  
+
 <img  src="https://user-images.githubusercontent.com/75049983/236683152-67b295b6-62c3-4d89-96d0-2e6bde8d1a63.png"  name="image-name">
+
+  
 
   
 
 </details>
 
+  
+
 <details>
+
+  
 
   
 
@@ -596,13 +937,21 @@ npm run  lint
 
   
 
+  
+
 <img  src="https://user-images.githubusercontent.com/75049983/236683152-67b295b6-62c3-4d89-96d0-2e6bde8d1a63.png"  name="image-name">
+
+  
 
   
 
 </details>
 
+  
+
 <details>
+
+  
 
   
 
@@ -610,13 +959,21 @@ npm run  lint
 
   
 
+  
+
 <img  src="https://user-images.githubusercontent.com/75049983/236683152-67b295b6-62c3-4d89-96d0-2e6bde8d1a63.png"  name="image-name">
+
+  
 
   
 
 </details>
 
+  
+
 <details>
+
+  
 
   
 
@@ -624,13 +981,21 @@ npm run  lint
 
   
 
+  
+
 <img  src="https://user-images.githubusercontent.com/75049983/236683152-67b295b6-62c3-4d89-96d0-2e6bde8d1a63.png"  name="image-name">
+
+  
 
   
 
 </details>
 
+  
+
 <details>
+
+  
 
   
 
@@ -638,7 +1003,11 @@ npm run  lint
 
   
 
+  
+
 <img  src="https://user-images.githubusercontent.com/75049983/236683152-67b295b6-62c3-4d89-96d0-2e6bde8d1a63.png"  name="image-name">
+
+  
 
   
 
@@ -646,31 +1015,57 @@ npm run  lint
 
   
 
+  
+
 ## Project License
+
+  
 
   
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
+  
+
 The Student Store code is licensed under the Apache License, Version 2.0, and the documentation is licensed under Creative Commons (CC-BY-SA-3.0). The copyright is owned by CodeForce Team and contributors (see LICENSE)
+
+  
 
 By contributing to the Student Store project, you agree that your contributions will be licensed under the Apache License, Version 2.0. This license grants users the freedom to use, modify, and distribute the software, as long as they adhere to certain conditions.
 
+  
+
 Under the Apache License, Version 2.0, users are free to:
 
+  
+
 - Use the software for any purpose
+
 - Modify the software and create derivative works
+
 - Distribute the software, either as the original or as a modified version
+
 - Use the software for commercial purposes
+
+  
 
 However, the Apache License, Version 2.0 also has some conditions that users must adhere to. These include:
 
+  
+
 - Including the copyright notice and license in all copies or substantial portions of the software
+
 - Not using any trademarks or logos associated with the software without permission
+
 - Not using the name of the software or its contributors to endorse or promote products derived from the software without permission
+
 - Not holding the software or its contributors liable for any damages or liabilities arising from the use of the software
 
+  
+
 By contributing to the Student Store project, you agree to license your contributions under the Apache License, Version 2.0 and to adhere to the conditions of this license. This helps to ensure that the software remains open and accessible to all, and that the contributions of all contributors are protected and respected.
+
+  
 
   
 
@@ -678,10 +1073,16 @@ By contributing to the Student Store project, you agree to license your contribu
 
   
 
+  
+
 [![Project Status: Inactive](https://www.repostatus.org/badges/latest/inactive.svg)](https://www.repostatus.org/#inactive)
+
+  
 
 The project has been successfully completed, and all project requirements have been met. The software is live and being used by its intended users.
 
+  
+  
 
   
 
@@ -689,7 +1090,11 @@ The project has been successfully completed, and all project requirements have b
 
   
 
+  
+
 [![Version](https://img.shields.io/badge/Version-0.1-blue.svg)](https://img.shields.io/badge/Version-0.1-blue.svg)
+
+  
 
   
 
@@ -697,7 +1102,11 @@ This project is currently version 0.1.
 
   
 
+  
+
 ## Project Dependencies
+
+  
 
   
 
@@ -705,7 +1114,11 @@ This project is currently version 0.1.
 
   
 
+  
+
 This project currently has 3 dependencies.
+
+  
 
   
 
@@ -713,7 +1126,11 @@ This project currently has 3 dependencies.
 
   
 
+  
+
 [![Dev Dependencies](https://img.shields.io/badge/Dev%20Dependencies-3-blue.svg)](https://img.shields.io/badge/Dev%20Dependencies-3-blue.svg)
+
+  
 
   
 
@@ -721,7 +1138,11 @@ This project currently has 3 dev dependencies.
 
   
 
+  
+
 ## Project Install Size
+
+  
 
   
 
@@ -729,7 +1150,11 @@ This project currently has 3 dev dependencies.
 
   
 
+  
+
 This project currently has an install size of 1.7G.
+
+  
 
   
 
@@ -737,64 +1162,147 @@ This project currently has an install size of 1.7G.
 
   
 
+  
+
 [![Issues](https://img.shields.io/badge/Issues-78-blue.svg)](https://img.shields.io/badge/Issues-78-blue.svg)
+
+  
 
   
 
 This project currently has 78 issues.
 
+  
+
 Summary of Issues:
+
 - Good first issue by @nabily4e-dev in #2
+
 - Fixing the removal of all things Storybook! finally!! by @nabily4e-dev in #8
+
 - Implement responsive grid using Tailwind CSS by @BkrTech101-InnovaMind in #13
+
 - Implement responsive header/hero component by @nabily4e-dev in #12
+
 - Footer component design by @messam10 in #23
+
 - Creating navbar component by @AASB7 in #14
+
 - Donation component design by @nabily4e-dev in #32
+
 - Sign up component design by @AASB7 in #24
+
 - Product filter component design by @BkrTech101-InnovaMind in #33
+
 - Single product component design by @messam10 in #41
+
 - Create and design a dynamic button component by @nabily4e-dev in #45
+
 - Create and design a dynamic input component by @AASB7 in #43
+
 - Create and design a dynamic highlighter by @BkrTech101-InnovaMind in #47
+
 - Sign in component design by @AASB7 in #54
+
 - Create and design a dynamic sidebar component by @BkrTech101-InnovaMind in #49
+
 - Apply dynamic input to all inputs inside signup component by @AASB7 in #53
+
 - Create and design a dynamic photo gallery component by @messam10 in #48
+
 - User orders component design by @BkrTech101-InnovaMind in #55
+
 - Firebase services by @nabily4e-dev in #56
+
 - About us component design by @AASB7 in #57
+
 - Add user orders test files by @AASB7 in #62
+
 - Our team component design by @messam10 in #60
+
 - Fix signup style by @AASB7 in #64
+
 - User listings component design by @BkrTech101-InnovaMind in #61
+
 - Profile edit component design by @BkrTech101-InnovaMind in #65
+
 - Rename userOrders to be UserOrders by @BkrTech101-InnovaMind in #67
+
 - Story view orders listings edit by @BkrTech101-InnovaMind in #68
+
 - Not found page feature by @messam10 in #86
+
 - Routing pages by @BkrTech101-InnovaMind in #87
+
 - Fix absolute navbar by @messam10 in #88
+
 - Fix navbar search styling by @BkrTech101-InnovaMind in #90
+
 - Fix products animation by @BkrTech101-InnovaMind in #93
+
 - Fix tap displayed name and logo by @BkrTech101-InnovaMind in #92
+
 - List product component design by @BkrTech101-InnovaMind in #91
+
 - Change about page us name by @BkrTech101-InnovaMind in #98
+
 - Favorited product component design by @MarwanBz in #96
+
 - Update deployment domain by @BkrTech101-InnovaMind in #102
+
 - Hidden website Arabic i18 next translator by @messam10 in #99
 
+  
+
 These issues include bug fixes, feature requests, and design improvements for the Student Store project. Please refer to the GitHub issues for [more](https://github.com/202212-GIZ-YE-FEW/recoded_student-store_codeForce-cap/issues) information on each issue and its current status.
+
   
 
 ## Project Pull Requests
 
   
 
-[![Pull Requests](https://img.shields.io/badge/Pull%20Requests-3-blue.svg)](https://img.shields.io/badge/Pull%20Requests-3-blue.svg)
-
   
 
-This project currently has 3 pull requests.
+[![Pull Requests](https://img.shields.io/badge/Pull%20Requests-50-blue.svg)](https://img.shields.io/badge/Pull%20Requests-50-blue.svg)
+
+  
+This project currently has 50 Pull Requests.
+
+
+Summary of Pull Requests:
+```
+- Revert "121 feat add to cart" #128 merged 1 hour ago
+- 121 feat add to cart #127 merged 2 hours ago
+- 122 feat pricecategory filter #126 merged 17 hours ago
+- 75 fix hero section #125 merged 2 days ago
+- 103 single product #124 merged 2 days ago
+- 107 feat additional Firebase authentication providers #123 merged 3 days ago
+- [Feat] State management with the necessary functionality to the rest of the components #100 merged 3 days ago
+- Hidden website Arabic i18 next translator #99 merged last week
+- Update deployment domain #102 merged last week
+- Favorited product component design #96 merged last week
+- Change About Us page US name #98 merged last week
+- List product component design #91 merged 2 weeks ago
+- Fix tap displayed name and logo #92 merged 2 weeks ago
+- Fix products animation #93 merged 2 weeks ago
+- Fix navbar search styling #90 merged 2 weeks ago
+- Fix absolute navbar #88 merged 3 weeks ago
+- Routing pages #87 merged 3 weeks ago
+- Not found page feature #86 merged 3 weeks ago
+- Story view orders listings edit #68 merged last month
+- Rename userOrders to be UserOrders #67 merged last month
+- Profile edit component design #65 merged last month
+- User listings component design #61 merged last month
+- Fix signup style #64 merged last month
+- Our team component design #60 merged last month
+- Add user orders test files #62 merged last month
+- About us component design #57 merged last month
+- Firebase services #56 merged last month
+
+These pull requests include code changes, feature additions, and design improvements for the Student Store project. Please refer to the GitHub pull requests for [more](https://github.com/202212-GIZ-YE-FEW/recoded_student-store_codeForce-cap/pulls) information on each pull request, its associated issue, and its changes.
+```
+  
 
   
 
@@ -802,7 +1310,11 @@ This project currently has 3 pull requests.
 
   
 
+  
+
 [![Commits](https://img.shields.io/badge/Commits-3-blue.svg)](https://img.shields.io/badge/Commits-3-blue.svg)
+
+  
 
   
 
@@ -810,7 +1322,11 @@ This project currently has 3 commits.
 
   
 
+  
+
 ## Project Branches
+
+  
 
   
 
@@ -818,7 +1334,11 @@ This project currently has 3 commits.
 
   
 
+  
+
 This project currently has 3 branches.
+
+  
 
   
 
@@ -826,7 +1346,11 @@ This project currently has 3 branches.
 
   
 
+  
+
 [![Releases](https://img.shields.io/badge/Releases-3-blue.svg)](https://img.shields.io/badge/Releases-3-blue.svg)
+
+  
 
   
 
@@ -834,7 +1358,11 @@ This project currently has 3 releases.
 
   
 
+  
+
 ## Project Tags
+
+  
 
   
 
@@ -842,7 +1370,11 @@ This project currently has 3 releases.
 
   
 
+  
+
 This project currently has 3 tags.
+
+  
 
   
 
@@ -850,7 +1382,11 @@ This project currently has 3 tags.
 
   
 
+  
+
 - [ ] Future Improvement 1
+
+  
 
   
 
@@ -858,7 +1394,11 @@ This project currently has 3 tags.
 
   
 
+  
+
 - [ ] Future Improvement 3
+
+  
 
   
 
@@ -866,7 +1406,11 @@ This project currently has 3 tags.
 
   
 
+  
+
 - [Reference 1](https://www.reference1.com)
+
+  
 
   
 
@@ -874,7 +1418,11 @@ This project currently has 3 tags.
 
   
 
+  
+
 - [Reference 3](https://www.reference3.com)
+
+  
 
   
 
@@ -882,7 +1430,11 @@ This project currently has 3 tags.
 
   
 
+  
+
 - [Resource 1](https://www.resource1.com)
+
+  
 
   
 
@@ -890,7 +1442,11 @@ This project currently has 3 tags.
 
   
 
+  
+
 - [Resource 3](https://www.resource3.com)
+
+  
 
   
 
@@ -898,7 +1454,11 @@ This project currently has 3 tags.
 
   
 
+  
+
 - [Link 1](https://www.link1.com)
+
+  
 
   
 
@@ -906,11 +1466,17 @@ This project currently has 3 tags.
 
   
 
+  
+
 - [Link 3](https://www.link3.com)
 
   
 
+  
+
 ## Credits and Acknowledgements
+
+  
 
   
 
