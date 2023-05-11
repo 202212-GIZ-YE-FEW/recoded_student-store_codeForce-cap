@@ -1271,7 +1271,7 @@ This project currently has 50 Pull Requests.
 
 
 Summary of Pull Requests:
-```
+
 - Revert "121 feat add to cart" #128 merged 1 hour ago
 - 121 feat add to cart #127 merged 2 hours ago
 - 122 feat pricecategory filter #126 merged 17 hours ago
@@ -1301,7 +1301,7 @@ Summary of Pull Requests:
 - Firebase services #56 merged last month
 
 These pull requests include code changes, feature additions, and design improvements for the Student Store project. Please refer to the GitHub pull requests for [more](https://github.com/202212-GIZ-YE-FEW/recoded_student-store_codeForce-cap/pulls) information on each pull request, its associated issue, and its changes.
-```
+
   
 
   
