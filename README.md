@@ -134,11 +134,11 @@ Student Store
 
 | Name | Role | Email | 
 | :------------------| :---------------| :-----------------| 
-| Abdulrahman Aljohani| CodeForce member| mail@gmail.com | 
-| Abobakr Mahdi | CodeForce member| mail@gmail.com | 
-| Marwan Bazghifan | CodeForce member| mail@gmail.com | 
-| Mohammed Al-Qershi | CodeForce member| mail@gmail.com | 
-| Nabil Al Ashbat | CodeForce member| mail@gmail.com |
+| Abdulrahman Aljohani| Front-end  developer| abdobas770@gmail.com | 
+| Abobakr Mahdi | Front-end  developer| zabobaker7355@gmail.com  | 
+| Marwan Bazghifan | Front-end  developer| mail@gmail.com | 
+| Mohammed Al-Qershi | Front-end  developer| malqershi98@gmail.com | 
+| Nabil Al Ashbat | Front-end  developer| nbl.dev21@gmail.com |
   
 
 ## Challenges and Learnings from the Project
@@ -725,7 +725,7 @@ This project currently has 3 dev dependencies.
 
   
 
-[![Install Size](https://img.shields.io/badge/Install%20Size-3-blue.svg)](https://img.shields.io/badge/Install%20Size-3-blue.svg)
+[![Install Size](https://img.shields.io/badge/Install%20Size-1.7-blue.svg)](https://img.shields.io/badge/Install%20Size-1.7-blue.svg)
 
   
 
