@@ -652,9 +652,9 @@ npm run  lint
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
-The Student Store software code is licensed under the Apache License, Version 2.0, and the documentation is licensed under Creative Commons (CC-BY-SA-3.0). The copyright is owned by CodeForce Team and contributors (see LICENSE)
+The Student Store code is licensed under the Apache License, Version 2.0, and the documentation is licensed under Creative Commons (CC-BY-SA-3.0). The copyright is owned by CodeForce Team and contributors (see LICENSE)
 
-By contributing to the Student Store software project, you agree that your contributions will be licensed under the Apache License, Version 2.0. This license grants users the freedom to use, modify, and distribute the software, as long as they adhere to certain conditions.
+By contributing to the Student Store project, you agree that your contributions will be licensed under the Apache License, Version 2.0. This license grants users the freedom to use, modify, and distribute the software, as long as they adhere to certain conditions.
 
 Under the Apache License, Version 2.0, users are free to:
 
@@ -670,7 +670,7 @@ However, the Apache License, Version 2.0 also has some conditions that users mus
 - Not using the name of the software or its contributors to endorse or promote products derived from the software without permission
 - Not holding the software or its contributors liable for any damages or liabilities arising from the use of the software
 
-By contributing to the Student Store software project, you agree to license your contributions under the Apache License, Version 2.0 and to adhere to the conditions of this license. This helps to ensure that the software remains open and accessible to all, and that the contributions of all contributors are protected and respected.
+By contributing to the Student Store project, you agree to license your contributions under the Apache License, Version 2.0 and to adhere to the conditions of this license. This helps to ensure that the software remains open and accessible to all, and that the contributions of all contributors are protected and respected.
 
   
 
