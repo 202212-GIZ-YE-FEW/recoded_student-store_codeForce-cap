@@ -468,31 +468,16 @@ The project is structured as follows:
   
 
 ```shell
-
-  
-
 npm install  -g  commitizen  //  Installs  Commitizen  globally (Commitizen is  used  to  create  Conventional  Commits)
 
-  
-
-  
 
 npm install  //  Installs  the  Node  modules  required  for  the  project  to  run (this command  is  run  in  the  root  directory  of  the  project)
 
-  
-
-  
 
 npx husky  install  //  Installs  Husky  if  it  is  not  already  installed (Husky is  used  to  run  the  Prettier  and  ESLint  tools  before  committing  changes)
 
-  
-
-  
 
 chmod ug+x  .husky/*  //  Gives  Husky  executable  extension  permissions (this command  is  run  in  the  root  directory  of  the  project)
-
-  
-
 ```
 
   
@@ -518,13 +503,7 @@ To contribute to this project, follow the steps below:
   
 
 ```bash
-
-  
-
 git clone  https://github.com/your-username/student-store.git
-
-  
-
 ```
 
   
@@ -538,13 +517,7 @@ git clone  https://github.com/your-username/student-store.git
   
 
 ```bash
-
-  
-
 npm install
-
-  
-
 ```
 
   
@@ -558,13 +531,7 @@ npm install
   
 
 ```bash
-
-  
-
 git checkout  -b <branch-name>
-
-  
-
 ```
 
   
@@ -578,13 +545,7 @@ git checkout  -b <branch-name>
   
 
 ```bash
-
-  
-
 git add  . && git cz
-
-  
-
 ```
 
   
@@ -604,13 +565,7 @@ This will prompt you to fill in the necessary details for your commit message.
   
 
 ```bash
-
-  
-
 git push  origin <branch-name>
-
-  
-
 ```
 
   
@@ -630,19 +585,10 @@ Note: Before committing your changes, make sure to run the Prettier and ESLint t
   
 
 ```bash
-
-  
-
 npm run  prettier
 
-  
-
-  
 
 npm run  lint
-
-  
-
 ```
 
   
@@ -1495,3 +1441,17 @@ This project currently has 3 tags.
 > We would also like to thank our teammates for their collaboration and support, which made the learning process more enjoyable and productive. Working together as a team has taught us the importance of teamwork and communication in achieving shared goals.
 
 > Overall, we are grateful for this experience and look forward to applying the skills and knowledge we have gained to future projects. Thank you again to Re:Coded, our mentors and instructors, and our teammates for making this journey a memorable and enriching one.
+
+<p  align="center">
+
+  
+
+  
+
+<em>Made with 💕</em>  <br/>
+
+  
+
+  
+
+</p>
