@@ -204,19 +204,13 @@ Student Store
   
   
 
-| Name | Role | Email |
-
-| :------------------| :---------------| :-----------------|
-
-| Abdulrahman Aljohani| Front-end developer| abdobas770@gmail.com |
-
-| Abobakr Mahdi | Front-end developer| zabobaker7355@gmail.com |
-
-| Marwan Bazghifan | Front-end developer| mail@gmail.com |
-
-| Mohammed Al-Qershi | Front-end developer| malqershi98@gmail.com |
-
-| Nabil Al Ashbat | Front-end developer| nbl.dev21@gmail.com |
+| Name                | Role                 | Email                    |
+| :------------------| :-------------------| :-----------------------|
+| Abdulrahman Aljohani| Front-end developer | abdobas770@gmail.com    |
+| Abobakr Mahdi       | Front-end developer | zabobaker7355@gmail.com |
+| Marwan Bazghifan    | Front-end developer | mail@gmail.com          |
+| Mohammed Al-Qershi  | Front-end developer | malqershi98@gmail.com   |
+| Nabil Al Ashbat     | Front-end developer | nbl.dev21@gmail.com      |
 
   
 
