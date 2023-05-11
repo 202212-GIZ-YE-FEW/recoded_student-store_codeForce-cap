@@ -1,5 +1,16 @@
-import { collection, doc, getDoc, onSnapshot, query } from "firebase/firestore"
+import {
+  addDoc,
+  collection,
+  deleteDoc,
+  doc,
+  getDoc,
+  getDocs,
+  onSnapshot,
+  query,
+  where,
+} from "firebase/firestore"
 import { createContext, useContext, useEffect, useState } from "react"
+import "firebase/firestore"
 
 import { auth, db } from "./firebase/config"
 
@@ -144,7 +155,7 @@ export const useProduct = (productId) => {
           setData({ id: generalDocSnapshot.id, ...generalDocSnapshot.data() })
           setLoading(false)
         } else {
-          const userId = auth.currentUser?.uid
+          const userId = auth?.currentUser?.uid
 
           if (userId) {
             const userDocRef = doc(
@@ -177,4 +188,100 @@ export const useProduct = (productId) => {
   }, [productId])
 
   return { data, error, loading }
+}
+
+export function useFavProducts(userId) {
+  const [favProducts, setFavProducts] = useState([])
+  const [loading, setLoading] = useState(true)
+  const [error, setError] = useState(null)
+  const [textLoading, setTextLoading] = useState(false)
+  const [isProductAdded, setIsProductAdded] = useState(false)
+
+  useEffect(() => {
+    try {
+      const userRef = doc(db, "users", userId)
+      const favProductsRef = collection(userRef, "favProducts")
+      const q = query(favProductsRef)
+
+      const unsubscribe = onSnapshot(q, (querySnapshot) => {
+        const products = []
+        querySnapshot.forEach((doc) => {
+          products.push({ id: doc.id, ...doc.data() })
+        })
+
+        setFavProducts(products)
+        setLoading(false)
+      })
+
+      const onError = () => {
+        setError("An error occurred while fetching the data.")
+        setLoading(false)
+      }
+
+      const unsubscribeOnError = onSnapshot(q, onError, (querySnapshot) => {
+        const products = []
+        querySnapshot.forEach((doc) => {
+          products.push({ id: doc.id, ...doc.data() })
+        })
+
+        setFavProducts(products)
+        setLoading(false)
+      })
+
+      return () => {
+        unsubscribe()
+        unsubscribeOnError()
+      }
+    } catch (err) {
+      console.log(err)
+    }
+  }, [userId])
+
+  const addFavProduct = async (product) => {
+    const userRef = doc(db, "users", userId)
+    const favProductsRef = collection(userRef, "favProducts")
+
+    // Check if the product already exists in the favorites
+    const existingProductQuery = query(
+      favProductsRef,
+      where("id", "==", product.id)
+    )
+    const existingProductSnapshot = await getDocs(existingProductQuery)
+
+    if (existingProductSnapshot.empty) {
+      // If the product doesn't exist in the favorites, add it
+      setTextLoading(true)
+      await addDoc(favProductsRef, product)
+      setIsProductAdded(true)
+      setTextLoading(false)
+    } else {
+      // If the product already exists, you can handle it accordingly
+      setTextLoading(true)
+      await removeFavProduct(product.id)
+      setIsProductAdded(false)
+      setTextLoading(false)
+    }
+  }
+
+  const removeFavProduct = async (product) => {
+    const q = query(
+      collection(db, "users", userId, "favProducts"),
+      where("id", "==", product)
+    )
+    const querySnapshot = await getDocs(q)
+
+    querySnapshot.forEach(async (doc) => {
+      await deleteDoc(doc.ref)
+    })
+  }
+
+  return {
+    isProductAdded,
+    favProducts,
+    loading,
+    error,
+    addFavProduct,
+    removeFavProduct,
+    textLoading,
+  }
 }

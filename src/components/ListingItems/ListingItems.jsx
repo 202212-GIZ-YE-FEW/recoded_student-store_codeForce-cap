@@ -97,10 +97,10 @@ function ListingItems() {
       }
       // Fetch owner name, email, and location from user profile data
 
-      const ownerName = profileData?.firstName + profileData?.surname
-      const ownerEmail = user?.email
-      const ownerLocation = profileData?.address
-      const ownerProfile = profileData?.profileImg?.url
+      const ownerName = profileData?.firstName + profileData?.surname || ""
+      const ownerEmail = user?.email || ""
+      const ownerLocation = profileData?.address || ""
+      const ownerProfile = profileData?.profileImg?.url || ""
 
       // promise uploader
       const uploadPromise = new Promise((resolve, reject) => {
