@@ -1,7 +1,7 @@
 import { withTranslation } from "next-i18next"
 import Image from "next/image"
 import Link from "next/link"
-import { AiOutlineHeart } from "react-icons/ai"
+import { AiFillHeart, AiOutlineHeart } from "react-icons/ai"
 
 import { auth } from "@/utils/firebase/config"
 import { useFavProducts, useGeneralListings } from "@/utils/store"
@@ -10,7 +10,7 @@ import Spinner from "../Spinner/Spinner"
 
 function ProductList({ selectedFilter, priceFilter, t }) {
   const userId = auth.currentUser.uid
-  const { addFavProduct } = useFavProducts(userId)
+  const { addFavProduct, isProductAdded } = useFavProducts(userId)
   const { data, error, loading } = useGeneralListings()
   if (error) {
     return <div>Error: {error.message}</div>
@@ -72,7 +72,7 @@ function ProductList({ selectedFilter, priceFilter, t }) {
                   onClick={() => handleFavProducts(product)}
                   className='flex items-center justify-center w-8 h-8 bg-white text-red-500 rounded-full shadow-md hover:text-red-500 transition-colors duration-300 ease-in-out'
                 >
-                  <AiOutlineHeart />
+                  {isProductAdded ? <AiFillHeart /> : <AiOutlineHeart />}
                 </button>
               </div>
             </div>

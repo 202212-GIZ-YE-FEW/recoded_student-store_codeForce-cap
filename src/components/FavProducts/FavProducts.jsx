@@ -154,7 +154,7 @@ function FavProducts({ t }) {
                   className='flex items-center justify-center w-8 h-8 bg-white text-red-500 rounded-full shadow-md hover:bg-red-500 hover:text-white transition-colors duration-300 ease-in-out'
                   onClick={() => handleRemoveProduct(product.id)}
                 >
-                  <HiOutlineX className='' />
+                  <HiOutlineX />
                 </button>
               </div>
               <div className='absolute bottom-2 right-2 z-10'>
