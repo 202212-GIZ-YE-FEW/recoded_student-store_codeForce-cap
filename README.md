@@ -741,8 +741,48 @@ This project currently has an install size of 1.7G.
 
   
 
-This project currently has 3 issues.
+This project currently has 128 issues.
+Summary of Issues:
+- Good first issue by @nabily4e-dev in #2
+- Fixing the removal of all things Storybook! finally!! by @nabily4e-dev in #8
+- Implement responsive grid using Tailwind CSS by @BkrTech101-InnovaMind in #13
+- Implement responsive header/hero component by @nabily4e-dev in #12
+- Footer component design by @messam10 in #23
+- Creating navbar component by @AASB7 in #14
+- Donation component design by @nabily4e-dev in #32
+- Sign up component design by @AASB7 in #24
+- Product filter component design by @BkrTech101-InnovaMind in #33
+- Single product component design by @messam10 in #41
+- Create and design a dynamic button component by @nabily4e-dev in #45
+- Create and design a dynamic input component by @AASB7 in #43
+- Create and design a dynamic highlighter by @BkrTech101-InnovaMind in #47
+- Sign in component design by @AASB7 in #54
+- Create and design a dynamic sidebar component by @BkrTech101-InnovaMind in #49
+- Apply dynamic input to all inputs inside signup component by @AASB7 in #53
+- Create and design a dynamic photo gallery component by @messam10 in #48
+- User orders component design by @BkrTech101-InnovaMind in #55
+- Firebase services by @nabily4e-dev in #56
+- About us component design by @AASB7 in #57
+- Add user orders test files by @AASB7 in #62
+- Our team component design by @messam10 in #60
+- Fix signup style by @AASB7 in #64
+- User listings component design by @BkrTech101-InnovaMind in #61
+- Profile edit component design by @BkrTech101-InnovaMind in #65
+- Rename userOrders to be UserOrders by @BkrTech101-InnovaMind in #67
+- Story view orders listings edit by @BkrTech101-InnovaMind in #68
+- Not found page feature by @messam10 in #86
+- Routing pages by @BkrTech101-InnovaMind in #87
+- Fix absolute navbar by @messam10 in #88
+- Fix navbar search styling by @BkrTech101-InnovaMind in #90
+- Fix products animation by @BkrTech101-InnovaMind in #93
+- Fix tap displayed name and logo by @BkrTech101-InnovaMind in #92
+- List product component design by @BkrTech101-InnovaMind in #91
+- Change about page us name by @BkrTech101-InnovaMind in #98
+- Favorited product component design by @MarwanBz in #96
+- Update deployment domain by @BkrTech101-InnovaMind in #102
+- Hidden website Arabic i18 next translator by @messam10 in #99
 
+These issues include bug fixes, feature requests, and design improvements for the Student Store project. Please refer to the GitHub issues for more information on each issue and its current status.
   
 
 ## Project Pull Requests
