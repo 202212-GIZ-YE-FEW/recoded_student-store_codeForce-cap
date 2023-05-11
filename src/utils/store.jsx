@@ -194,6 +194,8 @@ export function useFavProducts(userId) {
   const [favProducts, setFavProducts] = useState([])
   const [loading, setLoading] = useState(true)
   const [error, setError] = useState(null)
+  const [textLoading, setTextLoading] = useState(false)
+  const [isProductAdded, setIsProductAdded] = useState(false)
 
   useEffect(() => {
     const userRef = doc(db, "users", userId)
@@ -244,10 +246,16 @@ export function useFavProducts(userId) {
 
     if (existingProductSnapshot.empty) {
       // If the product doesn't exist in the favorites, add it
+      setTextLoading(true)
       await addDoc(favProductsRef, product)
+      setIsProductAdded(true)
+      setTextLoading(false)
     } else {
       // If the product already exists, you can handle it accordingly
+      setTextLoading(true)
       await removeFavProduct(product.id)
+      setIsProductAdded(false)
+      setTextLoading(false)
     }
   }
 
@@ -263,5 +271,13 @@ export function useFavProducts(userId) {
     })
   }
 
-  return { favProducts, loading, error, addFavProduct, removeFavProduct }
+  return {
+    isProductAdded,
+    favProducts,
+    loading,
+    error,
+    addFavProduct,
+    removeFavProduct,
+    textLoading,
+  }
 }
