@@ -729,7 +729,7 @@ This project currently has 3 dev dependencies.
 
   
 
-This project currently has an install size of 3.
+This project currently has an install size of 1.7G.
 
   
 
