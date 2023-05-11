@@ -986,7 +986,7 @@ npm run  lint
 
   
 
-The Student Store code is licensed under the Apache License, Version 2.0, and the documentation is licensed under Creative Commons (CC-BY-SA-3.0). The copyright is owned by CodeForce Team and contributors (see LICENSE)
+The Student Store code is licensed under the Apache License, Version 2.0, and the documentation is licensed under Creative Commons (CC-BY-SA-3.0). The copyright is owned by CodeForce Team and contributors (see [LICENSE](LICENSE))
 
   
 
