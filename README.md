@@ -783,7 +783,7 @@ Summary of Issues:
 - Update deployment domain by @BkrTech101-InnovaMind in #102
 - Hidden website Arabic i18 next translator by @messam10 in #99
 
-These issues include bug fixes, feature requests, and design improvements for the Student Store project. Please refer to the GitHub issues for (more)[https://github.com/202212-GIZ-YE-FEW/recoded_student-store_codeForce-cap/issues] information on each issue and its current status.
+These issues include bug fixes, feature requests, and design improvements for the Student Store project. Please refer to the GitHub issues for [more](https://github.com/202212-GIZ-YE-FEW/recoded_student-store_codeForce-cap/issues) information on each issue and its current status.
   
 
 ## Project Pull Requests
